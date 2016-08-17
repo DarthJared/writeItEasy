@@ -1,0 +1,8 @@
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe.config
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.pdb
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Form1.resources
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Properties.Resources.resources
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csproj.GenerateResource.Cache
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.exe
+C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteMeEasy-WindowsFormsApplication\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.pdb
