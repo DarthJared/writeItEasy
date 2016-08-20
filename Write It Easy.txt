@@ -1,0 +1,93 @@
+Write It Easy! 
+ 
+General 
+------
+Title of Paper?
+APA/MLA?
+Include a title page?
+Include a sumary?
+Include an abstract?
+Include a header?
+Include a footer?
+Include a conclusion?
+Include a references page?
+Font??????
+
+Title Page
+----------
+Put title on title page? Enter (Auto fill to Title written in general)
+Include Name? Enter (Font, Font Size, Font Weight, Color, Position)
+Include Class? Enter (Font, Font Size, Font Weight, Color, Position)
+Include Professor? Enter (Font, Font Size, Font Weight, Color, Position)
+Include Date? Enter (Font, Font Size, Font Weight, Color, Position)
+Reorder Lines
+How far down the page
+
+Summary
+-------
+On Its Own Page?
+Include title? Enter (Font, Font Size, Font Weight, Color, Position) (default to Summary)
+Sections and Subsections (Default to 1 section and no subsections)
+Enter Content (Font, Font Size, Font Weight, Color, Position, Align)
+
+Abstract
+-------
+On Its Own Page?
+Include title? Enter (Font, Font Size, Font Weight, Color, Position) (default to Abstract)
+Sections and Subsections? (Default to 1 section and no subsections)
+Enter Content (Font, Font Size, Font Weight, Color, Position, Align)
+
+Header
+------
+Different on first page?
+Use Running head on first page?
+3 inputs (left, center, right)
+possibles:
+	page numbers
+	paper title
+	enter content
+---Style Content (Font, Font Size, Font Weight, Color)
+
+Footer
+------
+Different on first page?
+Use Running head on first page?
+3 inputs (left, center, right)
+possibles:
+	page numbers
+	paper title
+	enter content
+---Style Content (Font, Font Size, Font Weight, Color)
+
+Sections
+--------
+Include Section Labels?
+Position Section Labels? (Bulletted, Inline, Line Before)
+Style Section Labels? (Font, Font Size, Font Weight, Color)
+Extra Blank Line After Each Section
+Add sections and subsections as desired
+Each Section / Subsection:
+	Input Section Label
+	Input Section Content
+	Style Section Content (Font, Font Size, Font Weight, Color, Align)
+	Add Images (Not sure how I will do this yet)(Possible stretch goal)
+	Add Quote (styled according to MLA/APA selected, input needed information, generate block/normal quote with citation, generate reference for references page)(warn if references page is not included)
+
+Conclusion
+----------
+On Its Own Page?
+Include title? Enter (Font, Font Size, Font Weight, Color, Position) (default to Conclusion)
+---Sections and Subsections? (Default to 1 section and no subsections)
+Enter Content (Font, Font Size, Font Weight, Color, Position, Align)
+
+References
+---------
+Include title? Enter (Font, Font Size, Font Weight, Color, Position) (default to References)
+Hanging Indent each reference? (How many tabs?)
+Extra Empty Line Between References?
+Order Alphabetically / In Order of Use?
+
+Preview
+------
+Stretch Goal
+Update as each option is changed
