@@ -1,61 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
-        string[] sections;
+        private SortedDictionary<string,int> sections = new SortedDictionary<string, int>();
+        private bool titlePageActive;
+        private bool summaryActive;
+        private bool abstractActive;
+        private bool headerActive;
+        private bool footerActive;
+        private bool conclusionActive;
+        private bool referencesActive;
+        private SortedDictionary<string, int> titlePageOrder = new SortedDictionary<string, int>();
+        private SortedDictionary<int, string> orderTitlePage = new SortedDictionary<int, string>();
 
         public Form1()
         {
             InitializeComponent();
             Height = 600;
             Width = 1000;
-            sections = new string[7] {
-                "TITLE_PAGE",
-                "SUMMARY",
-                "ABSTRACT",
-                "HEADER",
-                "SECTIONS",
-                "CONCLUSION",
-                "REFERENCES"
-            };
+
+            sections.Add("GENERAL", 590);
+            sections.Add("TITLE_PAGE", 475);
+            sections.Add("SUMMARY", 545);
+            sections.Add("ABSTRACT", 545);
+            sections.Add("HEADER", 825);
+            sections.Add("FOOTER", 825);
+            sections.Add("SECTIONS", 865);
+            sections.Add("CONCLUSION", 545);
+            sections.Add("REFERENCES", 407);
+
+            titlePageOrder.Add("TITLE", 1);
+            titlePageOrder.Add("NAME", 2);
+            titlePageOrder.Add("CLASS", 3);
+            titlePageOrder.Add("PROFESSOR", 4);
+            titlePageOrder.Add("SCHOOL", 5);
+            titlePageOrder.Add("DATE", 6);
+
+            orderTitlePage.Add(1, "TITLE");
+            orderTitlePage.Add(2, "NAME");
+            orderTitlePage.Add(3, "CLASS");
+            orderTitlePage.Add(4, "PROFESSOR");
+            orderTitlePage.Add(5, "SCHOOL");
+            orderTitlePage.Add(6, "DATE");
+
+            titlePageActive = false;
+            summaryActive = false;
+            abstractActive = false;
+            headerActive = false;
+            footerActive = false;
+            conclusionActive = false;
+            referencesActive = false;
+
+            titlePagePanel.Visible = false;
+            summaryPanel.Visible = false;
+            abstractPanel.Visible = false;
+            headerPanel.Visible = false;
+            footerPanel.Visible = false;
+            conclusionPanel.Visible = false;
+            referencesPanel.Visible = false;
+
+            sectionsPanel.Location = new Point(0, generalPanel.Location.Y + generalPanel.Height);
         }
-
-        private void titlePageIncludeCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (titlePageIncludeCheck.Checked)
-            //{
-            //    //Lower the rest and add the elements
-            //    generalPanel.Height += 100;
-            //    lowerSections(100, "TITLE_PAGE");
-
-            //}
-            //else
-            //{
-            //    //raise the rest and remove the elements                
-            //    raiseSections(100, "TITLE_PAGE");
-            //    generalPanel.Height -= 100;
-            //}
-        }
-
-        //private void testLower(object sender, EventArgs e)
-        //{
-        //    lowerSections(100, "HEADER");
-        //}
-
-        //private void testRaise(object sender, EventArgs e)
-        //{
-        //    raiseSections(100, "HEADER");
-        //}
 
         private void resizeEvent(object sender, EventArgs e)
         {
@@ -140,126 +150,811 @@ namespace WriteMeEasy_WindowsFormsApplication
             writeButton.Location = new Point(finalizePanel.Width - 125, 8);
         }
 
-        //private void lowerSections(int numPixels, string sectionName)
-        //{
-        //    if (sectionName.Equals("TITLE_PAGE"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            summaryPanel.Location = new Point(0, summaryPanel.Location.Y + 2);
-        //            abstractPanel.Location = new Point(0, abstractPanel.Location.Y + 2);
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y + 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("SUMMARY"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            abstractPanel.Location = new Point(0, abstractPanel.Location.Y + 2);
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y + 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("ABSTRACT"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y + 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("HEADER"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("SECTIONS"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("CONCLUSION"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y + 2);
-        //        }
-        //    }
-        //}
+        private void lowerSection(int pixelsDown, string startSection)
+        {
+            if (startSection.Equals("GENERAL"))
+            {
+                if (titlePageActive)
+                {
+                    titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y + pixelsDown);                                              
+                }
+                if (summaryActive)
+                {
+                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y + pixelsDown);
+                }
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y + pixelsDown);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("TITLE_PAGE"))
+            {
+                if (summaryActive)
+                {
+                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y + pixelsDown);
+                }
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y + pixelsDown);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("SUMMARY"))
+            {
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y + pixelsDown);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("ABSTRACT"))
+            {
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("HEADER"))
+            {
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("FOOTER"))
+            {
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("SECTIONS"))
+            {
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+            else if (startSection.Equals("CONCLUSION"))
+            {
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
+                }
+            }
+        }
 
-        //private void raiseSections(int numPixels, string sectionName)
-        //{
-        //    if (sectionName.Equals("TITLE_PAGE"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            summaryPanel.Location = new Point(0, summaryPanel.Location.Y - 2);
-        //            abstractPanel.Location = new Point(0, abstractPanel.Location.Y - 2);
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y - 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("SUMMARY"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            abstractPanel.Location = new Point(0, abstractPanel.Location.Y - 2);
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y - 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("ABSTRACT"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            headerPanel.Location = new Point(0, headerPanel.Location.Y - 2);
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("HEADER"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - 2);
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("SECTIONS"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - 2);
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //    else if (sectionName.Equals("CONCLUSION"))
-        //    {
-        //        for (int i = 0; i < numPixels; i += 2)
-        //        {
-        //            referencesPanel.Location = new Point(0, referencesPanel.Location.Y - 2);
-        //        }
-        //    }
-        //}
+        private void raiseSection(int pixelsUp, string startSection)
+        {
+            if (startSection.Equals("GENERAL"))
+            {
+                if (titlePageActive)
+                {
+                    titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y - pixelsUp);
+                }
+                if (summaryActive)
+                {
+                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y - pixelsUp);
+                }
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y - pixelsUp);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("TITLE_PAGE"))
+            {
+                if (summaryActive)
+                {
+                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y - pixelsUp);
+                }
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y - pixelsUp);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("SUMMARY"))
+            {
+                if (abstractActive)
+                {
+                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y - pixelsUp);
+                }
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("ABSTRACT"))
+            {
+                if (headerActive)
+                {
+                    headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
+                }
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("HEADER"))
+            {
+                if (footerActive)
+                {
+                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
+                }
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("FOOTER"))
+            {
+                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("SECTIONS"))
+            {
+                if (conclusionActive)
+                {
+                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
+                }
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+            else if (startSection.Equals("CONCLUSION"))
+            {
+                if (referencesActive)
+                {
+                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
+                }
+            }
+        }
+
+        private void titlePageIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("TITLE_PAGE", out sectionHeight)) { }
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int genY = generalPanel.Location.Y;
+            titlePagePanel.Location = new Point(0, generalSectionHeight + genY);
+
+            /*Checked*/
+            if (titlePageIncludeCheck.Checked)
+            {
+                titlePagePanel.Visible = true;
+                lowerSection(sectionHeight, "TITLE_PAGE");
+                titlePageActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                titlePagePanel.Visible = false;
+                raiseSection(sectionHeight, "TITLE_PAGE");
+                titlePageActive = false;
+            }
+        }
+
+        private void summaryIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("SUMMARY", out sectionHeight)) { }
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }            
+
+            int genY = generalPanel.Location.Y;
+            summaryPanel.Location = new Point(0, 
+                generalSectionHeight + 
+                titlePageSectionHeight + 
+                genY);
+
+            /*Checked*/
+            if (summaryIncludeCheck.Checked)
+            {
+                summaryPanel.Visible = true;
+                lowerSection(sectionHeight, "SUMMARY");
+                summaryActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                summaryPanel.Visible = false;
+                raiseSection(sectionHeight, "SUMMARY");
+                summaryActive = false;
+            }
+        }
+
+        private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("ABSTRACT", out sectionHeight)) { }
+
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }
+            int summarySectionHeight = 0;
+            if (summaryActive)
+            {
+                if (sections.TryGetValue("SUMMARY", out summarySectionHeight)) { }
+            }
+
+            int genY = generalPanel.Location.Y;
+            abstractPanel.Location = new Point(0, 
+                generalSectionHeight + 
+                titlePageSectionHeight + 
+                summarySectionHeight + 
+                genY);
+
+            /*Checked*/
+            if (abstractIncludeCheck.Checked)
+            {
+                abstractPanel.Visible = true;
+                lowerSection(sectionHeight, "ABSTRACT");
+                abstractActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                abstractPanel.Visible = false;
+                raiseSection(sectionHeight, "ABSTRACT");
+                abstractActive = false;
+            }
+        }
+
+        private void headerIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("HEADER", out sectionHeight)) { }
+
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }
+            int summarySectionHeight = 0;
+            if (summaryActive)
+            {
+                if (sections.TryGetValue("SUMMARY", out summarySectionHeight)) { }
+            }
+            int abstractSectionHeight = 0;
+            if (abstractActive)
+            {
+                if (sections.TryGetValue("ABSTRACT", out abstractSectionHeight)) { }
+            }
+
+            int genY = generalPanel.Location.Y;
+            headerPanel.Location = new Point(0, 
+                generalSectionHeight + 
+                titlePageSectionHeight + 
+                summarySectionHeight + 
+                abstractSectionHeight + 
+                genY);
+
+            /*Checked*/
+            if (headerIncludeCheck.Checked)
+            {
+                headerPanel.Visible = true;
+                lowerSection(sectionHeight, "HEADER");
+                headerActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                headerPanel.Visible = false;
+                raiseSection(sectionHeight, "HEADER");
+                headerActive = false;
+            }
+        }
+
+        private void footerIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("FOOTER", out sectionHeight)) { }
+
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }
+            int summarySectionHeight = 0;
+            if (summaryActive)
+            {
+                if (sections.TryGetValue("SUMMARY", out summarySectionHeight)) { }
+            }
+            int abstractSectionHeight = 0;
+            if (abstractActive)
+            {
+                if (sections.TryGetValue("ABSTRACT", out abstractSectionHeight)) { }
+            }
+            int headerSectionHeight = 0;
+            if (headerActive)
+            {
+                if (sections.TryGetValue("HEADER", out headerSectionHeight)) { }
+            }
+
+            int genY = generalPanel.Location.Y;
+            footerPanel.Location = new Point(0, 
+                generalSectionHeight + 
+                titlePageSectionHeight + 
+                summarySectionHeight + 
+                abstractSectionHeight + 
+                headerSectionHeight + 
+                genY);
+
+            /*Checked*/
+            if (footerIncludeCheck.Checked)
+            {
+                footerPanel.Visible = true;
+                lowerSection(sectionHeight, "FOOTER");
+                footerActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                footerPanel.Visible = false;
+                raiseSection(sectionHeight, "FOOTER");
+                footerActive = false;
+            }
+        }
+
+        private void conclusionIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("CONCLUSION", out sectionHeight)) { }
+
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }
+            int summarySectionHeight = 0;
+            if (summaryActive)
+            {
+                if (sections.TryGetValue("SUMMARY", out summarySectionHeight)) { }
+            }
+            int abstractSectionHeight = 0;
+            if (abstractActive)
+            {
+                if (sections.TryGetValue("ABSTRACT", out abstractSectionHeight)) { }
+            }
+            int headerSectionHeight = 0;
+            if (headerActive)
+            {
+                if (sections.TryGetValue("HEADER", out headerSectionHeight)) { }
+            }
+            int footerSectionHeight = 0;
+            if (footerActive)
+            {
+                if (sections.TryGetValue("FOOTER", out footerSectionHeight)) { }
+            }
+            int sectionsSectionHeight;
+            if (sections.TryGetValue("SECTIONS", out sectionsSectionHeight)) { }
+
+            int genY = generalPanel.Location.Y;
+            conclusionPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
+                summarySectionHeight +
+                abstractSectionHeight +
+                headerSectionHeight +
+                footerSectionHeight +
+                sectionsSectionHeight +
+                genY);
+
+            /*Checked*/
+            if (conclusionIncludeCheck.Checked)
+            {
+                conclusionPanel.Visible = true;
+                lowerSection(sectionHeight, "CONCLUSION");
+                conclusionActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                conclusionPanel.Visible = false;
+                raiseSection(sectionHeight, "CONCLUSION");
+                conclusionActive = false;
+            }
+        }
+
+        private void referencesIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            int sectionHeight;
+            if (sections.TryGetValue("REFERENCES", out sectionHeight)) { }
+
+            int generalSectionHeight;
+            if (sections.TryGetValue("GENERAL", out generalSectionHeight)) { }
+            int titlePageSectionHeight = 0;
+            if (titlePageActive)
+            {
+                if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
+            }
+            int summarySectionHeight = 0;
+            if (summaryActive)
+            {
+                if (sections.TryGetValue("SUMMARY", out summarySectionHeight)) { }
+            }
+            int abstractSectionHeight = 0;
+            if (abstractActive)
+            {
+                if (sections.TryGetValue("ABSTRACT", out abstractSectionHeight)) { }
+            }
+            int headerSectionHeight = 0;
+            if (headerActive)
+            {
+                if (sections.TryGetValue("HEADER", out headerSectionHeight)) { }
+            }
+            int footerSectionHeight = 0;
+            if (footerActive)
+            {
+                if (sections.TryGetValue("FOOTER", out footerSectionHeight)) { }
+            }
+            int sectionsSectionHeight;
+            if (sections.TryGetValue("SECTIONS", out sectionsSectionHeight)) { }
+            int conclusionSectionHeight = 0;
+            if (conclusionActive)
+            {
+                if (sections.TryGetValue("CONCLUSION", out conclusionSectionHeight)) { }
+            }
+
+            int genY = generalPanel.Location.Y;
+            referencesPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
+                summarySectionHeight +
+                abstractSectionHeight +
+                headerSectionHeight +
+                footerSectionHeight +
+                sectionsSectionHeight +
+                conclusionSectionHeight +
+                genY);
+
+            /*Checked*/
+            if (referencesIncludeCheck.Checked)
+            {
+                referencesPanel.Visible = true;
+                lowerSection(sectionHeight, "REFERENCES");
+                referencesActive = true;
+            }
+            /*Unchecked*/
+            else
+            {
+                referencesPanel.Visible = false;
+                raiseSection(sectionHeight, "REFERENCES");
+                referencesActive = false;
+            }
+        }
+
+        private void apaMla_Changed(object sender, EventArgs e)
+        {
+            string newButtonText;
+            if (apaRadio.Checked)
+            {
+                newButtonText = "APA Defaults";
+            }
+            else
+            {
+                newButtonText = "MLA Defaults";
+            }
+            generalDefaultButton.Text = newButtonText;
+            titlePageDefaultButton.Text = newButtonText;
+            summaryDefaultButton.Text = newButtonText;
+            abstractDefaultButton.Text = newButtonText;
+            headerDefaultButton.Text = newButtonText;
+            footerDefaultButton.Text = newButtonText;
+            sectionsDefaultButton.Text = newButtonText;
+            conclusionDefaultButton.Text = newButtonText;
+            referencesDefaultButton.Text = newButtonText;
+        }
+
+        private void titleUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("TITLE");
+        }
+
+        private void nameUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("NAME");
+        }
+
+        private void classUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("CLASS");
+        }
+
+        private void professorUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("PROFESSOR");
+        }
+
+        private void schoolUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("SCHOOL");
+        }
+
+        private void dateUpButton_Click(object sender, EventArgs e)
+        {
+            titlePageUp("DATE");
+        }
+
+        private void titleDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("TITLE");
+        }
+
+        private void nameDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("NAME");
+        }
+
+        private void classDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("CLASS");
+        }
+
+        private void professorDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("PROFESSOR");
+        }
+
+        private void schoolDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("SCHOOL");
+        }
+
+        private void dateDownButton_Click(object sender, EventArgs e)
+        {
+            titlePageDown("DATE");
+        }
+
+        private void titlePageDown(string option)
+        {
+            int index;
+            if (titlePageOrder.TryGetValue(option, out index)) { }
+            if (index < 6)
+            {
+                string oneMore;
+                if (orderTitlePage.TryGetValue(index + 1, out oneMore)) { }
+                titlePageOrder[oneMore] = index;
+                titlePageOrder[option] = index + 1;
+                orderTitlePage[index] = oneMore;
+                orderTitlePage[index + 1] = option;
+            }
+            reOrderTitlePage();
+        }
+
+        private void titlePageUp(string option)
+        {
+            int index;
+            if (titlePageOrder.TryGetValue(option, out index)) { }
+            if (index > 1)
+            {
+                string oneLess;
+                if (orderTitlePage.TryGetValue(index - 1, out oneLess)) { }
+                titlePageOrder[oneLess] = index;
+                titlePageOrder[option] = index - 1;
+                orderTitlePage[index] = oneLess;
+                orderTitlePage[index - 1] = option;
+            }
+            reOrderTitlePage();
+        }
+
+        private void reOrderTitlePage()
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                int yOffset = 23 * (i - 1);
+                string toPosition;
+                if (orderTitlePage.TryGetValue(i, out toPosition)) { }
+                switch (toPosition)
+                {
+                    case "TITLE":
+                        titleUpButton.Location = new Point(9, 19 + yOffset);
+                        titleDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageTitleCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageTitleLabel.Location = new Point(176, 20 + yOffset);
+                        titlePageTitleEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                    case "NAME":
+                        nameUpButton.Location = new Point(9, 19 + yOffset);
+                        nameDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageNameCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageNameLabel.Location = new Point(168, 20 + yOffset);
+                        titlePageNameEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                    case "CLASS":
+                        classUpButton.Location = new Point(9, 19 + yOffset);
+                        classDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageClassCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageClassLabel.Location = new Point(171, 20 + yOffset);
+                        titlePageClassEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                    case "PROFESSOR":
+                        professorUpButton.Location = new Point(9, 19 + yOffset);
+                        professorDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageProfessorCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageProfessorLabel.Location = new Point(152, 20 + yOffset);
+                        titlePageProfessorEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                    case "SCHOOL":
+                        schoolUpButton.Location = new Point(9, 19 + yOffset);
+                        schoolDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageSchoolCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageSchoolLabel.Location = new Point(162, 20 + yOffset);
+                        titlePageSchoolEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                    case "DATE":
+                        dateUpButton.Location = new Point(9, 19 + yOffset);
+                        dateDownButton.Location = new Point(9, 28 + yOffset);
+                        titlePageDateCheck.Location = new Point(41, 19 + yOffset);
+                        titlePageDateLabel.Location = new Point(172, 20 + yOffset);
+                        titlePageDateEnter.Location = new Point(212, 17 + yOffset);
+                        break;
+                }
+            }
+        }
     }
 }
