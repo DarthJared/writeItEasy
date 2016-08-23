@@ -65,11 +65,43 @@ namespace WriteMeEasy_WindowsFormsApplication
             referencesPanel.Visible = false;
 
             sectionsPanel.Location = new Point(0, generalPanel.Location.Y + generalPanel.Height);
+
+            summaryTitleGroupBox.Height = 45;
+            summaryDefaultButton.Location = new Point(9, 93);
+            summaryOptionsGroupBox.Height = 125;
+            summaryContentGroupBox.Location = new Point(9, 174);
+            summaryPanel.Height = 440;
+            sections["SUMMARY"] = 440;
+            abstractTitleGroupBox.Height = 45;
+            abstractDefaultButton.Location = new Point(9, 93);
+            abstractOptionsGroupBox.Height = 125;
+            abstractContentGroupBox.Location = new Point(9, 174);
+            abstractPanel.Height = 440;
+            sections["ABSTRACT"] = 440;
         }
 
         private void resizeEvent(object sender, EventArgs e)
         {
-            int sectionWidth = sectionPanel.Width - 17;
+            TableLayoutPanelCellPosition rightPos = tableLayoutPanel1.GetCellPosition(tableLayoutPanel2);
+            int rightPanelWidth = tableLayoutPanel1.GetColumnWidths()[rightPos.Column];
+            int rightPanelHeight = tableLayoutPanel1.GetRowHeights()[rightPos.Row];
+            tableLayoutPanel2.Width = rightPanelWidth - 6;
+            tableLayoutPanel2.Height = rightPanelHeight - 6;
+
+            previewPanel.Width = rightPanelWidth - 12;
+            TableLayoutPanelCellPosition innerPos = tableLayoutPanel2.GetCellPosition(previewPanel);
+            int innerHeight = tableLayoutPanel2.GetRowHeights()[innerPos.Row];
+            previewPanel.Height = innerHeight - 6;
+
+            finalizePanel.Width = rightPanelWidth - 12;
+
+            TableLayoutPanelCellPosition leftPos = tableLayoutPanel1.GetCellPosition(sectionPanel);
+            int panelWidth = tableLayoutPanel1.GetColumnWidths()[leftPos.Column];
+            int panelHeight = tableLayoutPanel1.GetRowHeights()[leftPos.Row];
+            sectionPanel.Width = panelWidth - 6;
+            sectionPanel.Height = panelHeight - 6;
+
+            int sectionWidth = panelWidth - 23;
             int sectionWidth1In = sectionWidth - 25;
             int sectionWidth2In = sectionWidth1In - 18;
             int sectionWidth3In = sectionWidth2In - 18;
@@ -484,7 +516,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         }
 
         private void summaryIncludeCheck_CheckedChanged(object sender, EventArgs e)
-        {
+        {            
             int sectionHeight;
             if (sections.TryGetValue("SUMMARY", out sectionHeight)) { }
             int generalSectionHeight;
@@ -954,6 +986,178 @@ namespace WriteMeEasy_WindowsFormsApplication
                         titlePageDateEnter.Location = new Point(212, 17 + yOffset);
                         break;
                 }
+            }
+        }
+
+        private void titlePageTitleCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageTitleCheck.Checked)
+            {
+                titlePageTitleLabel.Visible = true;
+                titlePageTitleEnter.Visible = true;
+            }
+            else
+            {
+                titlePageTitleLabel.Visible = false;
+                titlePageTitleEnter.Visible = false;
+            }
+        }
+
+        private void titlePageNameCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageNameCheck.Checked)
+            {
+                titlePageNameLabel.Visible = true;
+                titlePageNameEnter.Visible = true;
+            }
+            else
+            {
+                titlePageNameLabel.Visible = false;
+                titlePageNameEnter.Visible = false;
+            }
+        }
+
+        private void titlePageClassCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageClassCheck.Checked)
+            {
+                titlePageClassLabel.Visible = true;
+                titlePageClassEnter.Visible = true;
+            }
+            else
+            {
+                titlePageClassLabel.Visible = false;
+                titlePageClassEnter.Visible = false;
+            }
+        }
+
+        private void titlePageProfessorCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageProfessorCheck.Checked)
+            {
+                titlePageProfessorLabel.Visible = true;
+                titlePageProfessorEnter.Visible = true;
+            }
+            else
+            {
+                titlePageProfessorLabel.Visible = false;
+                titlePageProfessorEnter.Visible = false;
+            }
+        }
+
+        private void titlePageSchoolCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageSchoolCheck.Checked)
+            {
+                titlePageSchoolLabel.Visible = true;
+                titlePageSchoolEnter.Visible = true;
+            }
+            else
+            {
+                titlePageSchoolLabel.Visible = false;
+                titlePageSchoolEnter.Visible = false;
+            }
+        }
+
+        private void titlePageDateCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (titlePageDateCheck.Checked)
+            {
+                titlePageDateLabel.Visible = true;
+                titlePageDateEnter.Visible = true;
+            }
+            else
+            {
+                titlePageDateLabel.Visible = false;
+                titlePageDateEnter.Visible = false;
+            }
+        }
+
+        private void summaryIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (summaryIncludeTitleCheck.Checked)
+            {
+                summaryTitleGroupBox.Height = 150;
+                summaryDefaultButton.Location = new Point(9, 198);
+                summaryOptionsGroupBox.Height = 230;
+                summaryContentGroupBox.Location = new Point(9, 279);
+                summaryPanel.Height = 545;
+                summaryTitleTextLabel.Visible = true;
+                summaryTitleText.Visible = true;
+                summaryTitleBoldCheck.Visible = true;
+                summaryTitleFontLabel.Visible = true;
+                summaryTitleFontChoose.Visible = true;
+                summaryTitleSizeLabel.Visible = true;
+                summaryTitleSizeChoose.Visible = true;
+                summaryTitleColorLabel.Visible = true;
+                summaryTitleColorText.Visible = true;
+                summaryTitleColorButton.Visible = true;
+                lowerSection(105, "SUMMARY");
+                sections["SUMMARY"] = 545;
+            }
+            else
+            {                
+                summaryTitleTextLabel.Visible = false;
+                summaryTitleText.Visible = false;
+                summaryTitleBoldCheck.Visible = false;
+                summaryTitleFontLabel.Visible = false;
+                summaryTitleFontChoose.Visible = false;
+                summaryTitleSizeLabel.Visible = false;
+                summaryTitleSizeChoose.Visible = false;
+                summaryTitleColorLabel.Visible = false;
+                summaryTitleColorText.Visible = false;
+                summaryTitleColorButton.Visible = false;
+                summaryTitleGroupBox.Height = 45;
+                summaryDefaultButton.Location = new Point(9, 93);
+                summaryOptionsGroupBox.Height = 125;
+                summaryContentGroupBox.Location = new Point(9, 174);
+                summaryPanel.Height = 440;
+                raiseSection(105, "SUMMARY");
+                sections["SUMMARY"] = 440;
+            }
+        }
+
+        private void abstractIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (abstractIncludeTitleCheck.Checked)
+            {
+                abstractTitleGroupBox.Height = 150;
+                abstractDefaultButton.Location = new Point(9, 198);
+                abstractOptionsGroupBox.Height = 230;
+                abstractContentGroupBox.Location = new Point(9, 279);
+                abstractPanel.Height = 545;
+                abstractTitleLabel.Visible = true;
+                abstractTitleText.Visible = true;
+                abstractTitleBoldCheck.Visible = true;
+                abstractTitleFontLabel.Visible = true;
+                abstractTitleFontChoose.Visible = true;
+                abstractTitleSizeLabel.Visible = true;
+                abstractTitleSizeChoose.Visible = true;
+                abstractTitleColorLabel.Visible = true;
+                abstractTitleColorText.Visible = true;
+                abstractTitleColorButton.Visible = true;
+                lowerSection(105, "ABSTRACT");
+                sections["ABSTRACT"] = 545;
+            }
+            else
+            {
+                abstractTitleLabel.Visible = false;
+                abstractTitleText.Visible = false;
+                abstractTitleBoldCheck.Visible = false;
+                abstractTitleFontLabel.Visible = false;
+                abstractTitleFontChoose.Visible = false;
+                abstractTitleSizeLabel.Visible = false;
+                abstractTitleSizeChoose.Visible = false;
+                abstractTitleColorLabel.Visible = false;
+                abstractTitleColorText.Visible = false;
+                abstractTitleColorButton.Visible = false;
+                abstractTitleGroupBox.Height = 45;
+                abstractDefaultButton.Location = new Point(9, 93);
+                abstractOptionsGroupBox.Height = 125;
+                abstractContentGroupBox.Location = new Point(9, 174);
+                abstractPanel.Height = 440;
+                raiseSection(105, "ABSTRACT");
+                sections["ABSTRACT"] = 440;
             }
         }
     }
