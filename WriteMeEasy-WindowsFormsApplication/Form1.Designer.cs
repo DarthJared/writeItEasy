@@ -43,6 +43,7 @@
             this.footerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.footerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
             this.footerFirstPageRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerFirstRightTitleEnter = new System.Windows.Forms.TextBox();
             this.footerFirstRightTitleLabel = new System.Windows.Forms.Label();
             this.footerFirstRightNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -53,6 +54,7 @@
             this.footerFirstRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.footerFirstRightOtherEnter = new System.Windows.Forms.TextBox();
             this.footerFirstPageCenterGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerFirstCenterTitleEnter = new System.Windows.Forms.TextBox();
             this.footerFirstCenterTitleLabel = new System.Windows.Forms.Label();
             this.footerFirstCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -63,6 +65,7 @@
             this.footerFirstCenterTitleRadio = new System.Windows.Forms.RadioButton();
             this.footerFirstCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.footerFirstPageLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerFirstLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.footerFirstLeftTitleLabel = new System.Windows.Forms.Label();
             this.footerFirstLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -76,6 +79,7 @@
             this.footerFirstPageDiffCheck = new System.Windows.Forms.CheckBox();
             this.footerFirstPageUseRunningHeadCheck = new System.Windows.Forms.CheckBox();
             this.footerRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerRightTitleEnter = new System.Windows.Forms.TextBox();
             this.footerRightTitleLabel = new System.Windows.Forms.Label();
             this.footerRightNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -86,6 +90,7 @@
             this.footerRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.footerRightOtherEnter = new System.Windows.Forms.TextBox();
             this.footerCenterGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerCenterTitleEnter = new System.Windows.Forms.TextBox();
             this.footerCenterTitleLabel = new System.Windows.Forms.Label();
             this.footerCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -96,6 +101,7 @@
             this.footerCenterTitleRadio = new System.Windows.Forms.RadioButton();
             this.footerCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.footerLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.footerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.footerLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.footerLeftTitleLabel = new System.Windows.Forms.Label();
             this.footerLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -111,6 +117,7 @@
             this.headerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightTitleEnter = new System.Windows.Forms.TextBox();
             this.headerFirstRightTitleLabel = new System.Windows.Forms.Label();
             this.headerFirstRightNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -121,6 +128,7 @@
             this.headerFirstRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightOtherEnter = new System.Windows.Forms.TextBox();
             this.headerFirstPageCenterGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstCenterTitleEnter = new System.Windows.Forms.TextBox();
             this.headerFirstCenterTitleLabel = new System.Windows.Forms.Label();
             this.headerFirstCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -131,6 +139,7 @@
             this.headerFirstCenterTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerFirstPageLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.headerFirstLeftTitleLabel = new System.Windows.Forms.Label();
             this.headerFirstLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -144,6 +153,7 @@
             this.headerDiffFirstPageCheck = new System.Windows.Forms.CheckBox();
             this.headerFirstPageUseRunningHeadCheck = new System.Windows.Forms.CheckBox();
             this.headerRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerRightTitleEnter = new System.Windows.Forms.TextBox();
             this.headerRightTitleLabel = new System.Windows.Forms.Label();
             this.headerRightNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -154,6 +164,7 @@
             this.headerRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerRightOtherEnter = new System.Windows.Forms.TextBox();
             this.headerCenterGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerCenterTitleEnter = new System.Windows.Forms.TextBox();
             this.headerCenterTitleLabel = new System.Windows.Forms.Label();
             this.headerCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -164,6 +175,7 @@
             this.headerCenterTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.headerLeftTitleLabel = new System.Windows.Forms.Label();
             this.headerLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
@@ -335,7 +347,6 @@
             this.section1ContentPanel = new System.Windows.Forms.Panel();
             this.section1ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.section1Content = new System.Windows.Forms.RichTextBox();
-            this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.section1AddSubsectionButton = new System.Windows.Forms.Button();
             this.section1contentLabel = new System.Windows.Forms.Label();
             this.sectionsHeader = new System.Windows.Forms.Label();
@@ -369,18 +380,7 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.headerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerRightEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.footerRightEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -666,6 +666,19 @@
             this.footerFirstPageRightGroupBox.Text = "First Page Right";
             this.footerFirstPageRightGroupBox.Visible = false;
             // 
+            // footerFirstRightEmptyRadio
+            // 
+            this.footerFirstRightEmptyRadio.AutoSize = true;
+            this.footerFirstRightEmptyRadio.Checked = true;
+            this.footerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstRightEmptyRadio.Name = "footerFirstRightEmptyRadio";
+            this.footerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstRightEmptyRadio.TabIndex = 32;
+            this.footerFirstRightEmptyRadio.TabStop = true;
+            this.footerFirstRightEmptyRadio.Text = "Empty";
+            this.footerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
+            // 
             // footerFirstRightTitleEnter
             // 
             this.footerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -779,6 +792,19 @@
             this.footerFirstPageCenterGroupBox.Text = "First Page Center";
             this.footerFirstPageCenterGroupBox.Visible = false;
             // 
+            // footerFirstCenterEmptyRadio
+            // 
+            this.footerFirstCenterEmptyRadio.AutoSize = true;
+            this.footerFirstCenterEmptyRadio.Checked = true;
+            this.footerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstCenterEmptyRadio.Name = "footerFirstCenterEmptyRadio";
+            this.footerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstCenterEmptyRadio.TabIndex = 32;
+            this.footerFirstCenterEmptyRadio.TabStop = true;
+            this.footerFirstCenterEmptyRadio.Text = "Empty";
+            this.footerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
+            // 
             // footerFirstCenterTitleEnter
             // 
             this.footerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -891,6 +917,19 @@
             this.footerFirstPageLeftGroupBox.TabStop = false;
             this.footerFirstPageLeftGroupBox.Text = "First Page Left";
             this.footerFirstPageLeftGroupBox.Visible = false;
+            // 
+            // footerFirstLeftEmptyRadio
+            // 
+            this.footerFirstLeftEmptyRadio.AutoSize = true;
+            this.footerFirstLeftEmptyRadio.Checked = true;
+            this.footerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstLeftEmptyRadio.Name = "footerFirstLeftEmptyRadio";
+            this.footerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstLeftEmptyRadio.TabIndex = 31;
+            this.footerFirstLeftEmptyRadio.TabStop = true;
+            this.footerFirstLeftEmptyRadio.Text = "Empty";
+            this.footerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
             // 
             // footerFirstLeftTitleEnter
             // 
@@ -1041,6 +1080,19 @@
             this.footerRightGroupBox.TabStop = false;
             this.footerRightGroupBox.Text = "Right";
             // 
+            // footerRightEmptyRadio
+            // 
+            this.footerRightEmptyRadio.AutoSize = true;
+            this.footerRightEmptyRadio.Checked = true;
+            this.footerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerRightEmptyRadio.Name = "footerRightEmptyRadio";
+            this.footerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerRightEmptyRadio.TabIndex = 32;
+            this.footerRightEmptyRadio.TabStop = true;
+            this.footerRightEmptyRadio.Text = "Empty";
+            this.footerRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
+            // 
             // footerRightTitleEnter
             // 
             this.footerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1153,6 +1205,19 @@
             this.footerCenterGroupBox.TabStop = false;
             this.footerCenterGroupBox.Text = "Center";
             // 
+            // footerCenterEmptyRadio
+            // 
+            this.footerCenterEmptyRadio.AutoSize = true;
+            this.footerCenterEmptyRadio.Checked = true;
+            this.footerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerCenterEmptyRadio.Name = "footerCenterEmptyRadio";
+            this.footerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerCenterEmptyRadio.TabIndex = 32;
+            this.footerCenterEmptyRadio.TabStop = true;
+            this.footerCenterEmptyRadio.Text = "Empty";
+            this.footerCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
+            // 
             // footerCenterTitleEnter
             // 
             this.footerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1264,6 +1329,19 @@
             this.footerLeftGroupBox.TabIndex = 20;
             this.footerLeftGroupBox.TabStop = false;
             this.footerLeftGroupBox.Text = "Left";
+            // 
+            // footerLeftEmptyRadio
+            // 
+            this.footerLeftEmptyRadio.AutoSize = true;
+            this.footerLeftEmptyRadio.Checked = true;
+            this.footerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerLeftEmptyRadio.Name = "footerLeftEmptyRadio";
+            this.footerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerLeftEmptyRadio.TabIndex = 31;
+            this.footerLeftEmptyRadio.TabStop = true;
+            this.footerLeftEmptyRadio.Text = "Empty";
+            this.footerLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
             // 
             // footerLeftTitleEnter
             // 
@@ -1443,6 +1521,19 @@
             this.headerFirstPageRightGroupBox.Text = "First Page Right";
             this.headerFirstPageRightGroupBox.Visible = false;
             // 
+            // headerFirstRightEmptyRadio
+            // 
+            this.headerFirstRightEmptyRadio.AutoSize = true;
+            this.headerFirstRightEmptyRadio.Checked = true;
+            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstRightEmptyRadio.Name = "headerFirstRightEmptyRadio";
+            this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstRightEmptyRadio.TabIndex = 30;
+            this.headerFirstRightEmptyRadio.TabStop = true;
+            this.headerFirstRightEmptyRadio.Text = "Empty";
+            this.headerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
+            // 
             // headerFirstRightTitleEnter
             // 
             this.headerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1556,6 +1647,19 @@
             this.headerFirstPageCenterGroupBox.Text = "First Page Center";
             this.headerFirstPageCenterGroupBox.Visible = false;
             // 
+            // headerFirstCenterEmptyRadio
+            // 
+            this.headerFirstCenterEmptyRadio.AutoSize = true;
+            this.headerFirstCenterEmptyRadio.Checked = true;
+            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstCenterEmptyRadio.Name = "headerFirstCenterEmptyRadio";
+            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstCenterEmptyRadio.TabIndex = 30;
+            this.headerFirstCenterEmptyRadio.TabStop = true;
+            this.headerFirstCenterEmptyRadio.Text = "Empty";
+            this.headerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
+            // 
             // headerFirstCenterTitleEnter
             // 
             this.headerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1668,6 +1772,19 @@
             this.headerFirstPageLeftGroupBox.TabStop = false;
             this.headerFirstPageLeftGroupBox.Text = "First Page Left";
             this.headerFirstPageLeftGroupBox.Visible = false;
+            // 
+            // headerFirstLeftEmptyRadio
+            // 
+            this.headerFirstLeftEmptyRadio.AutoSize = true;
+            this.headerFirstLeftEmptyRadio.Checked = true;
+            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstLeftEmptyRadio.Name = "headerFirstLeftEmptyRadio";
+            this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstLeftEmptyRadio.TabIndex = 30;
+            this.headerFirstLeftEmptyRadio.TabStop = true;
+            this.headerFirstLeftEmptyRadio.Text = "Empty";
+            this.headerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
             // 
             // headerFirstLeftTitleEnter
             // 
@@ -1818,6 +1935,18 @@
             this.headerRightGroupBox.TabStop = false;
             this.headerRightGroupBox.Text = "Right";
             // 
+            // headerRightEmptyRadio
+            // 
+            this.headerRightEmptyRadio.AutoSize = true;
+            this.headerRightEmptyRadio.Checked = true;
+            this.headerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerRightEmptyRadio.Name = "headerRightEmptyRadio";
+            this.headerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerRightEmptyRadio.TabIndex = 30;
+            this.headerRightEmptyRadio.TabStop = true;
+            this.headerRightEmptyRadio.Text = "Empty";
+            this.headerRightEmptyRadio.UseVisualStyleBackColor = true;
+            // 
             // headerRightTitleEnter
             // 
             this.headerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1930,6 +2059,18 @@
             this.headerCenterGroupBox.TabStop = false;
             this.headerCenterGroupBox.Text = "Center";
             // 
+            // headerCenterEmptyRadio
+            // 
+            this.headerCenterEmptyRadio.AutoSize = true;
+            this.headerCenterEmptyRadio.Checked = true;
+            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerCenterEmptyRadio.Name = "headerCenterEmptyRadio";
+            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerCenterEmptyRadio.TabIndex = 30;
+            this.headerCenterEmptyRadio.TabStop = true;
+            this.headerCenterEmptyRadio.Text = "Empty";
+            this.headerCenterEmptyRadio.UseVisualStyleBackColor = true;
+            // 
             // headerCenterTitleEnter
             // 
             this.headerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2041,6 +2182,18 @@
             this.headerLeftGroupBox.TabIndex = 20;
             this.headerLeftGroupBox.TabStop = false;
             this.headerLeftGroupBox.Text = "Left";
+            // 
+            // headerLeftEmptyRadio
+            // 
+            this.headerLeftEmptyRadio.AutoSize = true;
+            this.headerLeftEmptyRadio.Checked = true;
+            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerLeftEmptyRadio.Name = "headerLeftEmptyRadio";
+            this.headerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerLeftEmptyRadio.TabIndex = 28;
+            this.headerLeftEmptyRadio.TabStop = true;
+            this.headerLeftEmptyRadio.Text = "Empty";
+            this.headerLeftEmptyRadio.UseVisualStyleBackColor = true;
             // 
             // headerLeftTitleEnter
             // 
@@ -3915,16 +4068,19 @@
             this.section1groupBox.Size = new System.Drawing.Size(615, 288);
             this.section1groupBox.TabIndex = 9;
             this.section1groupBox.TabStop = false;
+            this.section1groupBox.Tag = "1";
             this.section1groupBox.Text = "Section 1";
             // 
             // section1LabelLabel
             // 
             this.section1LabelLabel.AutoSize = true;
+            this.section1LabelLabel.BackColor = System.Drawing.Color.Transparent;
             this.section1LabelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section1LabelLabel.Location = new System.Drawing.Point(6, 22);
             this.section1LabelLabel.Name = "section1LabelLabel";
             this.section1LabelLabel.Size = new System.Drawing.Size(75, 13);
             this.section1LabelLabel.TabIndex = 10;
+            this.section1LabelLabel.Tag = "1";
             this.section1LabelLabel.Text = "Section Label:";
             this.section1LabelLabel.Visible = false;
             // 
@@ -3935,6 +4091,7 @@
             this.section1LabelEnter.Name = "section1LabelEnter";
             this.section1LabelEnter.Size = new System.Drawing.Size(185, 20);
             this.section1LabelEnter.TabIndex = 9;
+            this.section1LabelEnter.Tag = "1";
             this.section1LabelEnter.Visible = false;
             // 
             // section1ContentPanel
@@ -3971,15 +4128,6 @@
             this.section1Content.TabIndex = 0;
             this.section1Content.Text = "";
             // 
-            // section1ToolStrip
-            // 
-            this.section1ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.section1ToolStrip.Location = new System.Drawing.Point(3, 0);
-            this.section1ToolStrip.Name = "section1ToolStrip";
-            this.section1ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.section1ToolStrip.Size = new System.Drawing.Size(111, 25);
-            this.section1ToolStrip.TabIndex = 0;
-            // 
             // section1AddSubsectionButton
             // 
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3987,8 +4135,10 @@
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
             this.section1AddSubsectionButton.Size = new System.Drawing.Size(130, 23);
             this.section1AddSubsectionButton.TabIndex = 7;
+            this.section1AddSubsectionButton.Tag = "1";
             this.section1AddSubsectionButton.Text = "Add Subsection";
             this.section1AddSubsectionButton.UseVisualStyleBackColor = true;
+            this.section1AddSubsectionButton.Click += new System.EventHandler(this.sectionAddSubsectionButton_Click);
             // 
             // section1contentLabel
             // 
@@ -3998,6 +4148,7 @@
             this.section1contentLabel.Name = "section1contentLabel";
             this.section1contentLabel.Size = new System.Drawing.Size(47, 13);
             this.section1contentLabel.TabIndex = 5;
+            this.section1contentLabel.Tag = "1";
             this.section1contentLabel.Text = "Content:";
             // 
             // sectionsHeader
@@ -4348,158 +4499,14 @@
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
             // 
-            // headerLeftEmptyRadio
+            // section1ToolStrip
             // 
-            this.headerLeftEmptyRadio.AutoSize = true;
-            this.headerLeftEmptyRadio.Checked = true;
-            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerLeftEmptyRadio.Name = "headerLeftEmptyRadio";
-            this.headerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerLeftEmptyRadio.TabIndex = 28;
-            this.headerLeftEmptyRadio.TabStop = true;
-            this.headerLeftEmptyRadio.Text = "Empty";
-            this.headerLeftEmptyRadio.UseVisualStyleBackColor = true;
-            // 
-            // headerCenterEmptyRadio
-            // 
-            this.headerCenterEmptyRadio.AutoSize = true;
-            this.headerCenterEmptyRadio.Checked = true;
-            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerCenterEmptyRadio.Name = "headerCenterEmptyRadio";
-            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerCenterEmptyRadio.TabIndex = 30;
-            this.headerCenterEmptyRadio.TabStop = true;
-            this.headerCenterEmptyRadio.Text = "Empty";
-            this.headerCenterEmptyRadio.UseVisualStyleBackColor = true;
-            // 
-            // headerRightEmptyRadio
-            // 
-            this.headerRightEmptyRadio.AutoSize = true;
-            this.headerRightEmptyRadio.Checked = true;
-            this.headerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerRightEmptyRadio.Name = "headerRightEmptyRadio";
-            this.headerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerRightEmptyRadio.TabIndex = 30;
-            this.headerRightEmptyRadio.TabStop = true;
-            this.headerRightEmptyRadio.Text = "Empty";
-            this.headerRightEmptyRadio.UseVisualStyleBackColor = true;
-            // 
-            // headerFirstLeftEmptyRadio
-            // 
-            this.headerFirstLeftEmptyRadio.AutoSize = true;
-            this.headerFirstLeftEmptyRadio.Checked = true;
-            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerFirstLeftEmptyRadio.Name = "headerFirstLeftEmptyRadio";
-            this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerFirstLeftEmptyRadio.TabIndex = 30;
-            this.headerFirstLeftEmptyRadio.TabStop = true;
-            this.headerFirstLeftEmptyRadio.Text = "Empty";
-            this.headerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
-            this.headerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
-            // 
-            // headerFirstCenterEmptyRadio
-            // 
-            this.headerFirstCenterEmptyRadio.AutoSize = true;
-            this.headerFirstCenterEmptyRadio.Checked = true;
-            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerFirstCenterEmptyRadio.Name = "headerFirstCenterEmptyRadio";
-            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerFirstCenterEmptyRadio.TabIndex = 30;
-            this.headerFirstCenterEmptyRadio.TabStop = true;
-            this.headerFirstCenterEmptyRadio.Text = "Empty";
-            this.headerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
-            this.headerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
-            // 
-            // headerFirstRightEmptyRadio
-            // 
-            this.headerFirstRightEmptyRadio.AutoSize = true;
-            this.headerFirstRightEmptyRadio.Checked = true;
-            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.headerFirstRightEmptyRadio.Name = "headerFirstRightEmptyRadio";
-            this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.headerFirstRightEmptyRadio.TabIndex = 30;
-            this.headerFirstRightEmptyRadio.TabStop = true;
-            this.headerFirstRightEmptyRadio.Text = "Empty";
-            this.headerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
-            this.headerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
-            // 
-            // footerFirstLeftEmptyRadio
-            // 
-            this.footerFirstLeftEmptyRadio.AutoSize = true;
-            this.footerFirstLeftEmptyRadio.Checked = true;
-            this.footerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerFirstLeftEmptyRadio.Name = "footerFirstLeftEmptyRadio";
-            this.footerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerFirstLeftEmptyRadio.TabIndex = 31;
-            this.footerFirstLeftEmptyRadio.TabStop = true;
-            this.footerFirstLeftEmptyRadio.Text = "Empty";
-            this.footerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
-            // 
-            // footerFirstCenterEmptyRadio
-            // 
-            this.footerFirstCenterEmptyRadio.AutoSize = true;
-            this.footerFirstCenterEmptyRadio.Checked = true;
-            this.footerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerFirstCenterEmptyRadio.Name = "footerFirstCenterEmptyRadio";
-            this.footerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerFirstCenterEmptyRadio.TabIndex = 32;
-            this.footerFirstCenterEmptyRadio.TabStop = true;
-            this.footerFirstCenterEmptyRadio.Text = "Empty";
-            this.footerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
-            // 
-            // footerFirstRightEmptyRadio
-            // 
-            this.footerFirstRightEmptyRadio.AutoSize = true;
-            this.footerFirstRightEmptyRadio.Checked = true;
-            this.footerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerFirstRightEmptyRadio.Name = "footerFirstRightEmptyRadio";
-            this.footerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerFirstRightEmptyRadio.TabIndex = 32;
-            this.footerFirstRightEmptyRadio.TabStop = true;
-            this.footerFirstRightEmptyRadio.Text = "Empty";
-            this.footerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
-            // 
-            // footerLeftEmptyRadio
-            // 
-            this.footerLeftEmptyRadio.AutoSize = true;
-            this.footerLeftEmptyRadio.Checked = true;
-            this.footerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerLeftEmptyRadio.Name = "footerLeftEmptyRadio";
-            this.footerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerLeftEmptyRadio.TabIndex = 31;
-            this.footerLeftEmptyRadio.TabStop = true;
-            this.footerLeftEmptyRadio.Text = "Empty";
-            this.footerLeftEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
-            // 
-            // footerCenterEmptyRadio
-            // 
-            this.footerCenterEmptyRadio.AutoSize = true;
-            this.footerCenterEmptyRadio.Checked = true;
-            this.footerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerCenterEmptyRadio.Name = "footerCenterEmptyRadio";
-            this.footerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerCenterEmptyRadio.TabIndex = 32;
-            this.footerCenterEmptyRadio.TabStop = true;
-            this.footerCenterEmptyRadio.Text = "Empty";
-            this.footerCenterEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
-            // 
-            // footerRightEmptyRadio
-            // 
-            this.footerRightEmptyRadio.AutoSize = true;
-            this.footerRightEmptyRadio.Checked = true;
-            this.footerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
-            this.footerRightEmptyRadio.Name = "footerRightEmptyRadio";
-            this.footerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
-            this.footerRightEmptyRadio.TabIndex = 32;
-            this.footerRightEmptyRadio.TabStop = true;
-            this.footerRightEmptyRadio.Text = "Empty";
-            this.footerRightEmptyRadio.UseVisualStyleBackColor = true;
-            this.footerRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
+            this.section1ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.section1ToolStrip.Location = new System.Drawing.Point(3, 0);
+            this.section1ToolStrip.Name = "section1ToolStrip";
+            this.section1ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.section1ToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.section1ToolStrip.TabIndex = 0;
             // 
             // Form1
             // 
@@ -4803,7 +4810,6 @@
         private System.Windows.Forms.Panel section1ContentPanel;
         private System.Windows.Forms.ToolStripContainer section1ToolStripContainer;
         private System.Windows.Forms.RichTextBox section1Content;
-        private System.Windows.Forms.ToolStrip section1ToolStrip;
         private System.Windows.Forms.GroupBox paperFormattingGroupBox;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox7;
@@ -5007,6 +5013,7 @@
         private System.Windows.Forms.RadioButton footerRightEmptyRadio;
         private System.Windows.Forms.RadioButton footerCenterEmptyRadio;
         private System.Windows.Forms.RadioButton footerLeftEmptyRadio;
+        private System.Windows.Forms.ToolStrip section1ToolStrip;
     }
 }
 
