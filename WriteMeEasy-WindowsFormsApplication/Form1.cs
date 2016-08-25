@@ -7,7 +7,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
-        private SortedDictionary<string,int> sections = new SortedDictionary<string, int>();
+        private SortedDictionary<string, int> sections = new SortedDictionary<string, int>();
         private bool titlePageActive;
         private bool summaryActive;
         private bool abstractActive;
@@ -23,6 +23,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             InitializeComponent();
             Height = 600;
             Width = 1000;
+            WindowState = FormWindowState.Maximized;
 
             sections.Add("GENERAL", 590);
             sections.Add("TITLE_PAGE", 475);
@@ -72,12 +73,52 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryContentGroupBox.Location = new Point(9, 174);
             summaryPanel.Height = 440;
             sections["SUMMARY"] = 440;
+
             abstractTitleGroupBox.Height = 45;
             abstractDefaultButton.Location = new Point(9, 93);
             abstractOptionsGroupBox.Height = 125;
             abstractContentGroupBox.Location = new Point(9, 174);
             abstractPanel.Height = 440;
             sections["ABSTRACT"] = 440;
+
+            headerFirstPageGroupBox.Height = 40;
+            headerOptionsGroupBox.Height = 494;
+            headerDefaultButton.Location = new Point(9, 535);
+            headerPanel.Height = 571;
+            sections["HEADER"] = 571;
+
+            footerFirstPageGroupBox.Height = 40;
+            footerOptionsGroupBox.Height = 494;
+            footerDefaultButton.Location = new Point(9, 535);
+            footerPanel.Height = 571;
+            sections["FOOTER"] = 571;
+
+            sectionLabelGroupBox.Height = 45;
+            sectionsDefaultButton.Location = new Point(9, 179);
+            sectionsOptionsGroupBox.Height = 212;
+            section1groupBox.Location = new Point(9, 268);
+            section1contentLabel.Location = new Point(6, 22);
+            section1ContentPanel.Location = new Point(9, 40);
+            section1AddSubsectionButton.Location = new Point(9, 259);
+            section1groupBox.Height = 292;
+            addSectionButton.Location = new Point(9, 562);
+            sectionsPanel.Height = 595;
+            sections["SECTIONS"] = 595;
+
+            conclusionTitleGroupBox.Height = 45;
+            conclusionDefaultButton.Location = new Point(9, 93);
+            conclusionOptionsGroupBox.Height = 125;
+            conclusionContentGroupBox.Location = new Point(9, 174);
+            conclusionPanel.Height = 440;
+            sections["CONCLUSION"] = 440;
+
+            referencesDefaultButton.Location = new Point(9, 233);
+            referencesOptionsGroupBox.Height = 185;
+            referencesOrderChoose.Location = new Point(44, 152);
+            referencesOrderLabel.Location = new Point(6, 155);
+            referencesEmptyLineBetweenCheck.Location = new Point(9, 129);
+            referencesPanel.Height = 270;
+            sections["REFERENCES"] = 270;
         }
 
         private void resizeEvent(object sender, EventArgs e)
@@ -188,7 +229,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (titlePageActive)
                 {
-                    titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y + pixelsDown);                                              
+                    titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y + pixelsDown);
                 }
                 if (summaryActive)
                 {
@@ -516,7 +557,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         }
 
         private void summaryIncludeCheck_CheckedChanged(object sender, EventArgs e)
-        {            
+        {
             int sectionHeight;
             if (sections.TryGetValue("SUMMARY", out sectionHeight)) { }
             int generalSectionHeight;
@@ -525,12 +566,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             if (titlePageActive)
             {
                 if (sections.TryGetValue("TITLE_PAGE", out titlePageSectionHeight)) { }
-            }            
+            }
 
             int genY = generalPanel.Location.Y;
-            summaryPanel.Location = new Point(0, 
-                generalSectionHeight + 
-                titlePageSectionHeight + 
+            summaryPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
                 genY);
 
             /*Checked*/
@@ -568,10 +609,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
 
             int genY = generalPanel.Location.Y;
-            abstractPanel.Location = new Point(0, 
-                generalSectionHeight + 
-                titlePageSectionHeight + 
-                summarySectionHeight + 
+            abstractPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
+                summarySectionHeight +
                 genY);
 
             /*Checked*/
@@ -614,11 +655,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
 
             int genY = generalPanel.Location.Y;
-            headerPanel.Location = new Point(0, 
-                generalSectionHeight + 
-                titlePageSectionHeight + 
-                summarySectionHeight + 
-                abstractSectionHeight + 
+            headerPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
+                summarySectionHeight +
+                abstractSectionHeight +
                 genY);
 
             /*Checked*/
@@ -666,12 +707,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
 
             int genY = generalPanel.Location.Y;
-            footerPanel.Location = new Point(0, 
-                generalSectionHeight + 
-                titlePageSectionHeight + 
-                summarySectionHeight + 
-                abstractSectionHeight + 
-                headerSectionHeight + 
+            footerPanel.Location = new Point(0,
+                generalSectionHeight +
+                titlePageSectionHeight +
+                summarySectionHeight +
+                abstractSectionHeight +
+                headerSectionHeight +
                 genY);
 
             /*Checked*/
@@ -1096,7 +1137,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sections["SUMMARY"] = 545;
             }
             else
-            {                
+            {
                 summaryTitleTextLabel.Visible = false;
                 summaryTitleText.Visible = false;
                 summaryTitleBoldCheck.Visible = false;
@@ -1158,6 +1199,866 @@ namespace WriteMeEasy_WindowsFormsApplication
                 abstractPanel.Height = 440;
                 raiseSection(105, "ABSTRACT");
                 sections["ABSTRACT"] = 440;
+            }
+        }
+
+        private void headerFirstPageMoreCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (headerFirstPageMoreCheck.Checked)
+            {
+                lowerSection(384, "HEADER");
+                sections["HEADER"] = 1005;
+                headerPanel.Height = 1005;
+                headerDefaultButton.Location = new Point(9, 969);
+                headerOptionsGroupBox.Height = 928;
+                headerFirstPageGroupBox.Height = 474;
+                headerFirstPageLeftGroupBox.Visible = true;
+                headerFirstPageCenterGroupBox.Visible = true;
+                headerFirstPageRightGroupBox.Visible = true;
+            }
+            else
+            {
+                headerFirstPageLeftGroupBox.Visible = false;
+                headerFirstPageCenterGroupBox.Visible = false;
+                headerFirstPageRightGroupBox.Visible = false;
+                headerFirstPageGroupBox.Height = 90;
+                headerOptionsGroupBox.Height = 544;
+                headerDefaultButton.Location = new Point(9, 585);
+                headerPanel.Height = 621;
+                sections["HEADER"] = 621;
+                raiseSection(384, "HEADER");
+            }
+        }
+
+        private void headerDiffFirstPageCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (headerDiffFirstPageCheck.Checked)
+            {
+                if (headerFirstPageMoreCheck.Checked)
+                {
+                    lowerSection(434, "HEADER");
+                    sections["HEADER"] = 1005;
+                    headerPanel.Height = 1005;
+                    headerDefaultButton.Location = new Point(9, 969);
+                    headerOptionsGroupBox.Height = 928;
+                    headerFirstPageGroupBox.Height = 474;
+                    headerFirstPageLeftGroupBox.Visible = true;
+                    headerFirstPageCenterGroupBox.Visible = true;
+                    headerFirstPageRightGroupBox.Visible = true;
+                }
+                else
+                {
+                    lowerSection(50, "HEADER");
+                    sections["HEADER"] = 621;
+                    headerPanel.Height = 621;
+                    headerDefaultButton.Location = new Point(9, 585);
+                    headerOptionsGroupBox.Height = 544;
+                    headerFirstPageGroupBox.Height = 90;
+                }
+                headerFirstPageUseRunningHeadCheck.Visible = true;
+                headerFirstPageMoreCheck.Visible = true;
+            }
+            else
+            {
+                if (headerFirstPageMoreCheck.Checked)
+                {
+                    headerFirstPageLeftGroupBox.Visible = false;
+                    headerFirstPageCenterGroupBox.Visible = false;
+                    headerFirstPageRightGroupBox.Visible = false;
+                    raiseSection(434, "HEADER");
+                }
+                else
+                {
+                    raiseSection(50, "HEADER");
+                }
+                headerFirstPageUseRunningHeadCheck.Visible = false;
+                headerFirstPageMoreCheck.Visible = false;
+                headerFirstPageGroupBox.Height = 40;
+                headerOptionsGroupBox.Height = 494;
+                headerDefaultButton.Location = new Point(9, 535);
+                headerPanel.Height = 571;
+                sections["HEADER"] = 571;
+            }
+        }
+
+        private void headerLeftChanged(object sender, EventArgs e)
+        {
+            if (headerLeftTitleRadio.Checked)
+            {
+                headerLeftTitleLabel.Visible = true;
+                headerLeftTitleEnter.Visible = true;
+                headerLeftNumberLabel.Visible = false;
+                headerLeftNumberEnter.Visible = false;
+                headerLeftOtherLabel.Visible = false;
+                headerLeftOtherEnter.Visible = false;
+            }
+            else if (headerLeftNumberRadio.Checked)
+            {
+                headerLeftTitleLabel.Visible = false;
+                headerLeftTitleEnter.Visible = false;
+                headerLeftNumberLabel.Visible = true;
+                headerLeftNumberEnter.Visible = true;
+                headerLeftOtherLabel.Visible = false;
+                headerLeftOtherEnter.Visible = false;
+            }
+            else if (headerLeftOtherRadio.Checked)
+            {
+                headerLeftTitleLabel.Visible = false;
+                headerLeftTitleEnter.Visible = false;
+                headerLeftNumberLabel.Visible = false;
+                headerLeftNumberEnter.Visible = false;
+                headerLeftOtherLabel.Visible = true;
+                headerLeftOtherEnter.Visible = true;
+            }
+            else if (headerLeftEmptyRadio.Checked)
+            {
+                headerLeftTitleLabel.Visible = false;
+                headerLeftTitleEnter.Visible = false;
+                headerLeftNumberLabel.Visible = false;
+                headerLeftNumberEnter.Visible = false;
+                headerLeftOtherLabel.Visible = false;
+                headerLeftOtherEnter.Visible = false;
+            }
+        }
+
+        private void headerCenterChanged(object sender, EventArgs e)
+        {
+            if (headerCenterTitleRadio.Checked)
+            {
+                headerCenterTitleLabel.Visible = true;
+                headerCenterTitleEnter.Visible = true;
+                headerCenterNumberLabel.Visible = false;
+                headerCenterNumberEnter.Visible = false;
+                headerCenterOtherLabel.Visible = false;
+                headerCenterOtherEnter.Visible = false;
+            }
+            else if (headerCenterNumberRadio.Checked)
+            {
+                headerCenterTitleLabel.Visible = false;
+                headerCenterTitleEnter.Visible = false;
+                headerCenterNumberLabel.Visible = true;
+                headerCenterNumberEnter.Visible = true;
+                headerCenterOtherLabel.Visible = false;
+                headerCenterOtherEnter.Visible = false;
+            }
+            else if (headerCenterOtherRadio.Checked)
+            {
+                headerCenterTitleLabel.Visible = false;
+                headerCenterTitleEnter.Visible = false;
+                headerCenterNumberLabel.Visible = false;
+                headerCenterNumberEnter.Visible = false;
+                headerCenterOtherLabel.Visible = true;
+                headerCenterOtherEnter.Visible = true;
+            }
+            else if (headerCenterEmptyRadio.Checked)
+            {
+                headerCenterTitleLabel.Visible = false;
+                headerCenterTitleEnter.Visible = false;
+                headerCenterNumberLabel.Visible = false;
+                headerCenterNumberEnter.Visible = false;
+                headerCenterOtherLabel.Visible = false;
+                headerCenterOtherEnter.Visible = false;
+            }
+        }
+
+        private void headerRightChanged(object sender, EventArgs e)
+        {
+            if (headerRightTitleRadio.Checked)
+            {
+                headerRightTitleLabel.Visible = true;
+                headerRightTitleEnter.Visible = true;
+                headerRightNumberLabel.Visible = false;
+                headerRightNumberEnter.Visible = false;
+                headerRightOtherLabel.Visible = false;
+                headerRightOtherEnter.Visible = false;
+            }
+            else if (headerRightNumberRadio.Checked)
+            {
+                headerRightTitleLabel.Visible = false;
+                headerRightTitleEnter.Visible = false;
+                headerRightNumberLabel.Visible = true;
+                headerRightNumberEnter.Visible = true;
+                headerRightOtherLabel.Visible = false;
+                headerRightOtherEnter.Visible = false;
+            }
+            else if (headerRightOtherRadio.Checked)
+            {
+                headerRightTitleLabel.Visible = false;
+                headerRightTitleEnter.Visible = false;
+                headerRightNumberLabel.Visible = false;
+                headerRightNumberEnter.Visible = false;
+                headerRightOtherLabel.Visible = true;
+                headerRightOtherEnter.Visible = true;
+            }
+            else if (headerRightEmptyRadio.Checked)
+            {
+                headerRightTitleLabel.Visible = false;
+                headerRightTitleEnter.Visible = false;
+                headerRightNumberLabel.Visible = false;
+                headerRightNumberEnter.Visible = false;
+                headerRightOtherLabel.Visible = false;
+                headerRightOtherEnter.Visible = false;
+            }
+        }
+
+        private void headerFirstLeftChanged(object sender, EventArgs e)
+        {
+            if (headerFirstLeftTitleRadio.Checked)
+            {
+                headerFirstLeftTitleLabel.Visible = true;
+                headerFirstLeftTitleEnter.Visible = true;
+                headerFirstLeftNumberLabel.Visible = false;
+                headerFirstLeftNumberEnter.Visible = false;
+                headerFirstLeftOtherLabel.Visible = false;
+                headerFirstLeftOtherEnter.Visible = false;
+            }
+            else if (headerFirstLeftNumberRadio.Checked)
+            {
+                headerFirstLeftTitleLabel.Visible = false;
+                headerFirstLeftTitleEnter.Visible = false;
+                headerFirstLeftNumberLabel.Visible = true;
+                headerFirstLeftNumberEnter.Visible = true;
+                headerFirstLeftOtherLabel.Visible = false;
+                headerFirstLeftOtherEnter.Visible = false;
+            }
+            else if (headerFirstLeftOtherRadio.Checked)
+            {
+                headerFirstLeftTitleLabel.Visible = false;
+                headerFirstLeftTitleEnter.Visible = false;
+                headerFirstLeftNumberLabel.Visible = false;
+                headerFirstLeftNumberEnter.Visible = false;
+                headerFirstLeftOtherLabel.Visible = true;
+                headerFirstLeftOtherEnter.Visible = true;
+            }
+            else if (headerFirstLeftEmptyRadio.Checked)
+            {
+                headerFirstLeftTitleLabel.Visible = false;
+                headerFirstLeftTitleEnter.Visible = false;
+                headerFirstLeftNumberLabel.Visible = false;
+                headerFirstLeftNumberEnter.Visible = false;
+                headerFirstLeftOtherLabel.Visible = false;
+                headerFirstLeftOtherEnter.Visible = false;
+            }
+        }
+
+        private void headerFirstCenterChanged(object sender, EventArgs e)
+        {
+            if (headerFirstCenterTitleRadio.Checked)
+            {
+                headerFirstCenterTitleLabel.Visible = true;
+                headerFirstCenterTitleEnter.Visible = true;
+                headerFirstCenterNumberLabel.Visible = false;
+                headerFirstCenterNumberEnter.Visible = false;
+                headerFirstCenterOtherLabel.Visible = false;
+                headerFirstCenterOtherEnter.Visible = false;
+            }
+            else if (headerFirstCenterNumberRadio.Checked)
+            {
+                headerFirstCenterTitleLabel.Visible = false;
+                headerFirstCenterTitleEnter.Visible = false;
+                headerFirstCenterNumberLabel.Visible = true;
+                headerFirstCenterNumberEnter.Visible = true;
+                headerFirstCenterOtherLabel.Visible = false;
+                headerFirstCenterOtherEnter.Visible = false;
+            }
+            else if (headerFirstCenterOtherRadio.Checked)
+            {
+                headerFirstCenterTitleLabel.Visible = false;
+                headerFirstCenterTitleEnter.Visible = false;
+                headerFirstCenterNumberLabel.Visible = false;
+                headerFirstCenterNumberEnter.Visible = false;
+                headerFirstCenterOtherLabel.Visible = true;
+                headerFirstCenterOtherEnter.Visible = true;
+            }
+            else if (headerFirstCenterEmptyRadio.Checked)
+            {
+                headerFirstCenterTitleLabel.Visible = false;
+                headerFirstCenterTitleEnter.Visible = false;
+                headerFirstCenterNumberLabel.Visible = false;
+                headerFirstCenterNumberEnter.Visible = false;
+                headerFirstCenterOtherLabel.Visible = false;
+                headerFirstCenterOtherEnter.Visible = false;
+            }
+        }
+
+        private void headerFirstRightChanged(object sender, EventArgs e)
+        {
+            if (headerFirstRightTitleRadio.Checked)
+            {
+                headerFirstRightTitleLabel.Visible = true;
+                headerFirstRightTitleEnter.Visible = true;
+                headerFirstRightNumberLabel.Visible = false;
+                headerFirstRightNumberEnter.Visible = false;
+                headerFirstRightOtherLabel.Visible = false;
+                headerFirstRightOtherEnter.Visible = false;
+            }
+            else if (headerFirstRightNumberRadio.Checked)
+            {
+                headerFirstRightTitleLabel.Visible = false;
+                headerFirstRightTitleEnter.Visible = false;
+                headerFirstRightNumberLabel.Visible = true;
+                headerFirstRightNumberEnter.Visible = true;
+                headerFirstRightOtherLabel.Visible = false;
+                headerFirstRightOtherEnter.Visible = false;
+            }
+            else if (headerFirstRightOtherRadio.Checked)
+            {
+                headerFirstRightTitleLabel.Visible = false;
+                headerFirstRightTitleEnter.Visible = false;
+                headerFirstRightNumberLabel.Visible = false;
+                headerFirstRightNumberEnter.Visible = false;
+                headerFirstRightOtherLabel.Visible = true;
+                headerFirstRightOtherEnter.Visible = true;
+            }
+            else if (headerFirstRightEmptyRadio.Checked)
+            {
+                headerFirstRightTitleLabel.Visible = false;
+                headerFirstRightTitleEnter.Visible = false;
+                headerFirstRightNumberLabel.Visible = false;
+                headerFirstRightNumberEnter.Visible = false;
+                headerFirstRightOtherLabel.Visible = false;
+                headerFirstRightOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerLeftChanged(object sender, EventArgs e)
+        {
+            if (footerLeftTitleRadio.Checked)
+            {
+                footerLeftTitleLabel.Visible = true;
+                footerLeftTitleEnter.Visible = true;
+                footerLeftNumberLabel.Visible = false;
+                footerLeftNumberEnter.Visible = false;
+                footerLeftOtherLabel.Visible = false;
+                footerLeftOtherEnter.Visible = false;
+            }
+            else if (footerLeftNumberRadio.Checked)
+            {
+                footerLeftTitleLabel.Visible = false;
+                footerLeftTitleEnter.Visible = false;
+                footerLeftNumberLabel.Visible = true;
+                footerLeftNumberEnter.Visible = true;
+                footerLeftOtherLabel.Visible = false;
+                footerLeftOtherEnter.Visible = false;
+            }
+            else if (footerLeftOtherRadio.Checked)
+            {
+                footerLeftTitleLabel.Visible = false;
+                footerLeftTitleEnter.Visible = false;
+                footerLeftNumberLabel.Visible = false;
+                footerLeftNumberEnter.Visible = false;
+                footerLeftOtherLabel.Visible = true;
+                footerLeftOtherEnter.Visible = true;
+            }
+            else if (footerLeftEmptyRadio.Checked)
+            {
+                footerLeftTitleLabel.Visible = false;
+                footerLeftTitleEnter.Visible = false;
+                footerLeftNumberLabel.Visible = false;
+                footerLeftNumberEnter.Visible = false;
+                footerLeftOtherLabel.Visible = false;
+                footerLeftOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerCenterChanged(object sender, EventArgs e)
+        {
+            if (footerCenterTitleRadio.Checked)
+            {
+                footerCenterTitleLabel.Visible = true;
+                footerCenterTitleEnter.Visible = true;
+                footerCenterNumberLabel.Visible = false;
+                footerCenterNumberEnter.Visible = false;
+                footerCenterOtherLabel.Visible = false;
+                footerCenterOtherEnter.Visible = false;
+            }
+            else if (footerCenterNumberRadio.Checked)
+            {
+                footerCenterTitleLabel.Visible = false;
+                footerCenterTitleEnter.Visible = false;
+                footerCenterNumberLabel.Visible = true;
+                footerCenterNumberEnter.Visible = true;
+                footerCenterOtherLabel.Visible = false;
+                footerCenterOtherEnter.Visible = false;
+            }
+            else if (footerCenterOtherRadio.Checked)
+            {
+                footerCenterTitleLabel.Visible = false;
+                footerCenterTitleEnter.Visible = false;
+                footerCenterNumberLabel.Visible = false;
+                footerCenterNumberEnter.Visible = false;
+                footerCenterOtherLabel.Visible = true;
+                footerCenterOtherEnter.Visible = true;
+            }
+            else if (footerCenterEmptyRadio.Checked)
+            {
+                footerCenterTitleLabel.Visible = false;
+                footerCenterTitleEnter.Visible = false;
+                footerCenterNumberLabel.Visible = false;
+                footerCenterNumberEnter.Visible = false;
+                footerCenterOtherLabel.Visible = false;
+                footerCenterOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerRightChanged(object sender, EventArgs e)
+        {
+            if (footerRightTitleRadio.Checked)
+            {
+                footerRightTitleLabel.Visible = true;
+                footerRightTitleEnter.Visible = true;
+                footerRightNumberLabel.Visible = false;
+                footerRightNumberEnter.Visible = false;
+                footerRightOtherLabel.Visible = false;
+                footerRightOtherEnter.Visible = false;
+            }
+            else if (footerRightNumberRadio.Checked)
+            {
+                footerRightTitleLabel.Visible = false;
+                footerRightTitleEnter.Visible = false;
+                footerRightNumberLabel.Visible = true;
+                footerRightNumberEnter.Visible = true;
+                footerRightOtherLabel.Visible = false;
+                footerRightOtherEnter.Visible = false;
+            }
+            else if (footerRightOtherRadio.Checked)
+            {
+                footerRightTitleLabel.Visible = false;
+                footerRightTitleEnter.Visible = false;
+                footerRightNumberLabel.Visible = false;
+                footerRightNumberEnter.Visible = false;
+                footerRightOtherLabel.Visible = true;
+                footerRightOtherEnter.Visible = true;
+            }
+            else if (footerRightEmptyRadio.Checked)
+            {
+                footerRightTitleLabel.Visible = false;
+                footerRightTitleEnter.Visible = false;
+                footerRightNumberLabel.Visible = false;
+                footerRightNumberEnter.Visible = false;
+                footerRightOtherLabel.Visible = false;
+                footerRightOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerFirstLeftChanged(object sender, EventArgs e)
+        {
+            if (footerFirstLeftTitleRadio.Checked)
+            {
+                footerFirstLeftTitleLabel.Visible = true;
+                footerFirstLeftTitleEnter.Visible = true;
+                footerFirstLeftNumberLabel.Visible = false;
+                footerFirstLeftNumberEnter.Visible = false;
+                footerFirstLeftOtherLabel.Visible = false;
+                footerFirstLeftOtherEnter.Visible = false;
+            }
+            else if (footerFirstLeftNumberRadio.Checked)
+            {
+                footerFirstLeftTitleLabel.Visible = false;
+                footerFirstLeftTitleEnter.Visible = false;
+                footerFirstLeftNumberLabel.Visible = true;
+                footerFirstLeftNumberEnter.Visible = true;
+                footerFirstLeftOtherLabel.Visible = false;
+                footerFirstLeftOtherEnter.Visible = false;
+            }
+            else if (footerFirstLeftOtherRadio.Checked)
+            {
+                footerFirstLeftTitleLabel.Visible = false;
+                footerFirstLeftTitleEnter.Visible = false;
+                footerFirstLeftNumberLabel.Visible = false;
+                footerFirstLeftNumberEnter.Visible = false;
+                footerFirstLeftOtherLabel.Visible = true;
+                footerFirstLeftOtherEnter.Visible = true;
+            }
+            else if (footerFirstLeftEmptyRadio.Checked)
+            {
+                footerFirstLeftTitleLabel.Visible = false;
+                footerFirstLeftTitleEnter.Visible = false;
+                footerFirstLeftNumberLabel.Visible = false;
+                footerFirstLeftNumberEnter.Visible = false;
+                footerFirstLeftOtherLabel.Visible = false;
+                footerFirstLeftOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerFirstCenterChanged(object sender, EventArgs e)
+        {
+            if (footerFirstCenterTitleRadio.Checked)
+            {
+                footerFirstCenterTitleLabel.Visible = true;
+                footerFirstCenterTitleEnter.Visible = true;
+                footerFirstCenterNumberLabel.Visible = false;
+                footerFirstCenterNumberEnter.Visible = false;
+                footerFirstCenterOtherLabel.Visible = false;
+                footerFirstCenterOtherEnter.Visible = false;
+            }
+            else if (footerFirstCenterNumberRadio.Checked)
+            {
+                footerFirstCenterTitleLabel.Visible = false;
+                footerFirstCenterTitleEnter.Visible = false;
+                footerFirstCenterNumberLabel.Visible = true;
+                footerFirstCenterNumberEnter.Visible = true;
+                footerFirstCenterOtherLabel.Visible = false;
+                footerFirstCenterOtherEnter.Visible = false;
+            }
+            else if (footerFirstCenterOtherRadio.Checked)
+            {
+                footerFirstCenterTitleLabel.Visible = false;
+                footerFirstCenterTitleEnter.Visible = false;
+                footerFirstCenterNumberLabel.Visible = false;
+                footerFirstCenterNumberEnter.Visible = false;
+                footerFirstCenterOtherLabel.Visible = true;
+                footerFirstCenterOtherEnter.Visible = true;
+            }
+            else if (footerFirstCenterEmptyRadio.Checked)
+            {
+                footerFirstCenterTitleLabel.Visible = false;
+                footerFirstCenterTitleEnter.Visible = false;
+                footerFirstCenterNumberLabel.Visible = false;
+                footerFirstCenterNumberEnter.Visible = false;
+                footerFirstCenterOtherLabel.Visible = false;
+                footerFirstCenterOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerFirstRightChanged(object sender, EventArgs e)
+        {
+            if (footerFirstRightTitleRadio.Checked)
+            {
+                footerFirstRightTitleLabel.Visible = true;
+                footerFirstRightTitleEnter.Visible = true;
+                footerFirstRightNumberLabel.Visible = false;
+                footerFirstRightNumberEnter.Visible = false;
+                footerFirstRightOtherLabel.Visible = false;
+                footerFirstRightOtherEnter.Visible = false;
+            }
+            else if (footerFirstRightNumberRadio.Checked)
+            {
+                footerFirstRightTitleLabel.Visible = false;
+                footerFirstRightTitleEnter.Visible = false;
+                footerFirstRightNumberLabel.Visible = true;
+                footerFirstRightNumberEnter.Visible = true;
+                footerFirstRightOtherLabel.Visible = false;
+                footerFirstRightOtherEnter.Visible = false;
+            }
+            else if (footerFirstRightOtherRadio.Checked)
+            {
+                footerFirstRightTitleLabel.Visible = false;
+                footerFirstRightTitleEnter.Visible = false;
+                footerFirstRightNumberLabel.Visible = false;
+                footerFirstRightNumberEnter.Visible = false;
+                footerFirstRightOtherLabel.Visible = true;
+                footerFirstRightOtherEnter.Visible = true;
+            }
+            else if (footerFirstRightEmptyRadio.Checked)
+            {
+                footerFirstRightTitleLabel.Visible = false;
+                footerFirstRightTitleEnter.Visible = false;
+                footerFirstRightNumberLabel.Visible = false;
+                footerFirstRightNumberEnter.Visible = false;
+                footerFirstRightOtherLabel.Visible = false;
+                footerFirstRightOtherEnter.Visible = false;
+            }
+        }
+
+        private void footerFirstPageUseMoreCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (footerFirstPageUseMoreCheck.Checked)
+            {
+                lowerSection(384, "FOOTER");
+                sections["FOOTER"] = 1005;
+                footerPanel.Height = 1005;
+                footerDefaultButton.Location = new Point(9, 969);
+                footerOptionsGroupBox.Height = 928;
+                footerFirstPageGroupBox.Height = 474;
+                footerFirstPageLeftGroupBox.Visible = true;
+                footerFirstPageCenterGroupBox.Visible = true;
+                footerFirstPageRightGroupBox.Visible = true;
+            }
+            else
+            {
+                footerFirstPageLeftGroupBox.Visible = false;
+                footerFirstPageCenterGroupBox.Visible = false;
+                footerFirstPageRightGroupBox.Visible = false;
+                footerFirstPageGroupBox.Height = 90;
+                footerOptionsGroupBox.Height = 544;
+                footerDefaultButton.Location = new Point(9, 585);
+                footerPanel.Height = 621;
+                sections["FOOTER"] = 621;
+                raiseSection(384, "FOOTER");
+            }
+        }
+
+        private void footerFirstPageDiffCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (footerFirstPageDiffCheck.Checked)
+            {
+                if (footerFirstPageUseMoreCheck.Checked)
+                {
+                    lowerSection(434, "FOOTER");
+                    sections["FOOTER"] = 1005;
+                    footerPanel.Height = 1005;
+                    footerDefaultButton.Location = new Point(9, 969);
+                    footerOptionsGroupBox.Height = 928;
+                    footerFirstPageGroupBox.Height = 474;
+                    footerFirstPageLeftGroupBox.Visible = true;
+                    footerFirstPageCenterGroupBox.Visible = true;
+                    footerFirstPageRightGroupBox.Visible = true;
+                }
+                else
+                {
+                    lowerSection(50, "FOOTER");
+                    sections["FOOTER"] = 621;
+                    footerPanel.Height = 621;
+                    footerDefaultButton.Location = new Point(9, 585);
+                    footerOptionsGroupBox.Height = 544;
+                    footerFirstPageGroupBox.Height = 90;
+                }
+                footerFirstPageUseRunningHeadCheck.Visible = true;
+                footerFirstPageUseMoreCheck.Visible = true;
+            }
+            else
+            {
+                if (footerFirstPageUseMoreCheck.Checked)
+                {
+                    footerFirstPageLeftGroupBox.Visible = false;
+                    footerFirstPageCenterGroupBox.Visible = false;
+                    footerFirstPageRightGroupBox.Visible = false;
+                    raiseSection(434, "FOOTER");
+                }
+                else
+                {
+                    raiseSection(50, "FOOTER");
+                }
+                footerFirstPageUseRunningHeadCheck.Visible = false;
+                footerFirstPageUseMoreCheck.Visible = false;
+                footerFirstPageGroupBox.Height = 40;
+                footerOptionsGroupBox.Height = 494;
+                footerDefaultButton.Location = new Point(9, 535);
+                footerPanel.Height = 571;
+                sections["FOOTER"] = 571;
+            }
+        }
+
+        private void includeSectionLabelsCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (includeSectionLabelsCheck.Checked)
+            {
+                lowerSection(270, "SECTIONS");
+                sections["SECTIONS"] = 865;
+                sectionsPanel.Height = 865;
+                addSectionButton.Location = new Point(9, 832);
+                section1AddSubsectionButton.Location = new Point(9, 282);
+                section1ContentPanel.Location = new Point(9, 67);
+                section1contentLabel.Location = new Point(6, 49);
+                section1groupBox.Height = 315;
+                section1groupBox.Location = new Point(9, 511);
+                sectionsOptionsGroupBox.Height = 455;
+                sectionsDefaultButton.Location = new Point(9, 422);
+                sectionLabelGroupBox.Height = 288;
+                sectionLabelLocationGroupBox.Visible = true;
+                sectionLabelStyleGroupBox.Visible = true;
+                section1LabelLabel.Visible = true;
+                section1LabelEnter.Visible = true;
+            }
+            else
+            {
+                sectionLabelLocationGroupBox.Visible = false;
+                sectionLabelStyleGroupBox.Visible = false;
+                section1LabelLabel.Visible = false;
+                section1LabelEnter.Visible = false;
+                sectionLabelGroupBox.Height = 45;
+                sectionsDefaultButton.Location = new Point(9, 179);
+                sectionsOptionsGroupBox.Height = 212;
+                section1groupBox.Location = new Point(9, 268);
+                section1contentLabel.Location = new Point(6, 22);
+                section1ContentPanel.Location = new Point(9, 40);
+                section1AddSubsectionButton.Location = new Point(9, 259);
+                section1groupBox.Height = 292;
+                addSectionButton.Location = new Point(9, 562);
+                sectionsPanel.Height = 595;
+                sections["SECTIONS"] = 595;
+                raiseSection(270, "SECTIONS");
+            }
+        }
+
+        private void conclusionIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (conclusionIncludeTitleCheck.Checked)
+            {
+                lowerSection(105, "CONCLUSION");
+                sections["CONCLUSION"] = 545;
+                conclusionPanel.Height = 545;
+                conclusionContentGroupBox.Location = new Point(9, 279);
+                conclusionDefaultButton.Location = new Point(9, 198);
+                conclusionOptionsGroupBox.Height = 230;
+                conclusionTitleGroupBox.Height = 150;
+                conclusionTitleLabel.Visible = true;
+                conclusionTitleEnter.Visible = true;
+                conclusionTitleBoldCheck.Visible = true;
+                conclusionTitleFontLabel.Visible = true;
+                conclusionTitleFontChoose.Visible = true;
+                conclusionTitleSizeLabel.Visible = true;
+                conclusionTitleSizeChoose.Visible = true;
+                conclusionTitleColorLabel.Visible = true;
+                conclusionTitleColorText.Visible = true;
+                conclusionTitleColorButton.Visible = true;
+            }
+            else
+            {
+                conclusionTitleLabel.Visible = false;
+                conclusionTitleEnter.Visible = false;
+                conclusionTitleBoldCheck.Visible = false;
+                conclusionTitleFontLabel.Visible = false;
+                conclusionTitleFontChoose.Visible = false;
+                conclusionTitleSizeLabel.Visible = false;
+                conclusionTitleSizeChoose.Visible = false;
+                conclusionTitleColorLabel.Visible = false;
+                conclusionTitleColorText.Visible = false;
+                conclusionTitleColorButton.Visible = false;
+                conclusionTitleGroupBox.Height = 45;
+                conclusionDefaultButton.Location = new Point(9, 93);
+                conclusionOptionsGroupBox.Height = 125;
+                conclusionContentGroupBox.Location = new Point(9, 174);
+                conclusionPanel.Height = 440;
+                sections["CONCLUSION"] = 440;
+                raiseSection(105, "CONCLUSION");
+            }
+        }
+
+        private void referencesTitleIncludeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (referencesTitleIncludeCheck.Checked)
+            {
+                lowerSection(105, "REFERENCES");
+
+                referencesIndentationGroupBox.Location = new Point(9, 178);
+                referencesTitleGroupBox.Height = 150;
+                referencesTitleLabel.Visible = true;
+                referencesTitleEnter.Visible = true;
+                referencesTitleBoldCheck.Visible = true;
+                referencesTitleFontLabel.Visible = true;
+                referencesTitleFontChoose.Visible = true;
+                referencesTitleSizeLabel.Visible = true;
+                referencesTitleSizeChoose.Visible = true;
+                referencesTitleColorLabel.Visible = true;
+                referencesTitleColorText.Visible = true;
+                referencesTitleColorButton.Visible = true;
+                if (referencesHangingIndentCheck.Checked)
+                {
+                    referencesDefaultButton.Location = new Point(9, 365);
+                    referencesOptionsGroupBox.Height = 317;
+                    referencesOrderChoose.Location = new Point(44, 284);
+                    referencesOrderLabel.Location = new Point(6, 287);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 261);
+                    referencesPanel.Height = 407;
+                    sections["REFERENCES"] = 407;
+                }
+                else
+                {
+                    referencesDefaultButton.Location = new Point(9, 338);
+                    referencesOptionsGroupBox.Height = 290;
+                    referencesOrderChoose.Location = new Point(44, 257);
+                    referencesOrderLabel.Location = new Point(6, 260);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 234);
+                    referencesPanel.Height = 375;
+                    sections["REFERENCES"] = 375;
+                }
+
+            }
+            else
+            {
+                if (referencesHangingIndentCheck.Checked)
+                {
+                    referencesDefaultButton.Location = new Point(9, 260);
+                    referencesOptionsGroupBox.Height = 212;
+                    referencesOrderChoose.Location = new Point(44, 179);
+                    referencesOrderLabel.Location = new Point(6, 182);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 156);
+                    referencesPanel.Height = 302;
+                    sections["REFERENCES"] = 302;
+                }
+                else
+                {
+                    referencesDefaultButton.Location = new Point(9, 233);
+                    referencesOptionsGroupBox.Height = 185;
+                    referencesOrderChoose.Location = new Point(44, 152);
+                    referencesOrderLabel.Location = new Point(6, 155);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 129);
+                    referencesPanel.Height = 270;
+                    sections["REFERENCES"] = 270;
+                }
+                raiseSection(105, "REFERENCES");
+                referencesTitleLabel.Visible = false;
+                referencesTitleEnter.Visible = false;
+                referencesTitleBoldCheck.Visible = false;
+                referencesTitleFontLabel.Visible = false;
+                referencesTitleFontChoose.Visible = false;
+                referencesTitleSizeLabel.Visible = false;
+                referencesTitleSizeChoose.Visible = false;
+                referencesTitleColorLabel.Visible = false;
+                referencesTitleColorText.Visible = false;
+                referencesTitleColorButton.Visible = false;
+                referencesTitleGroupBox.Height = 45;
+                referencesIndentationGroupBox.Location = new Point(9, 73);
+            }
+        }
+
+        private void referencesHangingIndentCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (referencesHangingIndentCheck.Checked)
+            {
+                referencesIndentationGroupBox.Height = 77;
+                referencesIndentTabsLabel.Visible = true;
+                referencesIndentTabsEnter.Visible = true;
+                lowerSection(32, "REFERENCES");
+                if (referencesTitleIncludeCheck.Checked)
+                {
+                    referencesDefaultButton.Location = new Point(9, 365);
+                    referencesOptionsGroupBox.Height = 317;
+                    referencesOrderChoose.Location = new Point(44, 284);
+                    referencesOrderLabel.Location = new Point(6, 287);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 261);
+                    referencesPanel.Height = 407;
+                    sections["REFERENCES"] = 407;
+                }
+                else
+                {
+                    referencesDefaultButton.Location = new Point(9, 260);
+                    referencesOptionsGroupBox.Height = 212;
+                    referencesOrderChoose.Location = new Point(44, 179);
+                    referencesOrderLabel.Location = new Point(6, 182);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 156);
+                    referencesPanel.Height = 302;
+                    sections["REFERENCES"] = 302;
+                }
+            }
+            else
+            {
+                referencesIndentTabsLabel.Visible = false;
+                referencesIndentTabsEnter.Visible = false;
+                referencesIndentationGroupBox.Height = 45;
+                raiseSection(32, "REFERENCES");
+                if (referencesTitleIncludeCheck.Checked)
+                {
+                    referencesDefaultButton.Location = new Point(9, 338);
+                    referencesOptionsGroupBox.Height = 290;
+                    referencesOrderChoose.Location = new Point(44, 257);
+                    referencesOrderLabel.Location = new Point(6, 260);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 234);
+                    referencesPanel.Height = 375;
+                    sections["REFERENCES"] = 375;
+                }
+                else
+                {
+                    referencesDefaultButton.Location = new Point(9, 233);
+                    referencesOptionsGroupBox.Height = 185;
+                    referencesOrderChoose.Location = new Point(44, 152);
+                    referencesOrderLabel.Location = new Point(6, 155);
+                    referencesEmptyLineBetweenCheck.Location = new Point(9, 129);
+                    referencesPanel.Height = 270;
+                    sections["REFERENCES"] = 270;
+                }
             }
         }
     }

@@ -46,6 +46,7 @@ possibles:
 	page numbers
 	paper title
 	enter content
+	nothing!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ---Style Content (Font, Font Size, Font Weight, Color)
 
 Footer
@@ -57,6 +58,7 @@ possibles:
 	page numbers
 	paper title
 	enter content
+	nothing!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ---Style Content (Font, Font Size, Font Weight, Color)
 
 Sections

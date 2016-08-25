@@ -43,136 +43,136 @@
             this.footerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.footerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
             this.footerFirstPageRightGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.footerFirstRightTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerFirstRightTitleLabel = new System.Windows.Forms.Label();
+            this.footerFirstRightNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerFirstRightNumberLabel = new System.Windows.Forms.Label();
+            this.footerFirstRightOtherLabel = new System.Windows.Forms.Label();
+            this.footerFirstRightOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstRightNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstRightTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstRightOtherEnter = new System.Windows.Forms.TextBox();
             this.footerFirstPageCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.footerFirstCenterTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerFirstCenterTitleLabel = new System.Windows.Forms.Label();
+            this.footerFirstCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerFirstCenterNumberLabel = new System.Windows.Forms.Label();
+            this.footerFirstCenterOtherLabel = new System.Windows.Forms.Label();
+            this.footerFirstCenterOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstCenterNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstCenterTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.footerFirstPageLeftGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.radioButton27 = new System.Windows.Forms.RadioButton();
-            this.radioButton28 = new System.Windows.Forms.RadioButton();
-            this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.footerFirstLeftTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerFirstLeftTitleLabel = new System.Windows.Forms.Label();
+            this.footerFirstLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerFirstLeftNumberLabel = new System.Windows.Forms.Label();
+            this.footerFirstLeftOtherLabel = new System.Windows.Forms.Label();
+            this.footerFirstLeftOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstLeftNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstLeftTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstLeftOtherEnter = new System.Windows.Forms.TextBox();
+            this.footerFirstPageUseMoreCheck = new System.Windows.Forms.CheckBox();
+            this.footerFirstPageDiffCheck = new System.Windows.Forms.CheckBox();
+            this.footerFirstPageUseRunningHeadCheck = new System.Windows.Forms.CheckBox();
             this.footerRightGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label59 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.radioButton30 = new System.Windows.Forms.RadioButton();
-            this.radioButton31 = new System.Windows.Forms.RadioButton();
-            this.radioButton32 = new System.Windows.Forms.RadioButton();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.footerRightTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerRightTitleLabel = new System.Windows.Forms.Label();
+            this.footerRightNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerRightNumberLabel = new System.Windows.Forms.Label();
+            this.footerRightOtherLabel = new System.Windows.Forms.Label();
+            this.footerRightOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerRightNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerRightTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerRightOtherEnter = new System.Windows.Forms.TextBox();
             this.footerCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.radioButton33 = new System.Windows.Forms.RadioButton();
-            this.radioButton34 = new System.Windows.Forms.RadioButton();
-            this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.footerCenterTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerCenterTitleLabel = new System.Windows.Forms.Label();
+            this.footerCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerCenterNumberLabel = new System.Windows.Forms.Label();
+            this.footerCenterOtherLabel = new System.Windows.Forms.Label();
+            this.footerCenterOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerCenterNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerCenterTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.footerLeftGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.radioButton36 = new System.Windows.Forms.RadioButton();
-            this.radioButton37 = new System.Windows.Forms.RadioButton();
-            this.radioButton38 = new System.Windows.Forms.RadioButton();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.footerLeftTitleEnter = new System.Windows.Forms.TextBox();
+            this.footerLeftTitleLabel = new System.Windows.Forms.Label();
+            this.footerLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.footerLeftNumberLabel = new System.Windows.Forms.Label();
+            this.footerLeftOtherLabel = new System.Windows.Forms.Label();
+            this.footerLeftOtherRadio = new System.Windows.Forms.RadioButton();
+            this.footerLeftNumberRadio = new System.Windows.Forms.RadioButton();
+            this.footerLeftTitleRadio = new System.Windows.Forms.RadioButton();
+            this.footerLeftOtherEnter = new System.Windows.Forms.TextBox();
             this.footerHeader = new System.Windows.Forms.Label();
             this.footerDefaultButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageRightGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.headerFirstRightTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstRightTitleLabel = new System.Windows.Forms.Label();
+            this.headerFirstRightNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerFirstRightNumberLabel = new System.Windows.Forms.Label();
+            this.headerFirstRightOtherLabel = new System.Windows.Forms.Label();
+            this.headerFirstRightOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstRightNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstRightTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstRightOtherEnter = new System.Windows.Forms.TextBox();
             this.headerFirstPageCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.headerFirstCenterTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstCenterTitleLabel = new System.Windows.Forms.Label();
+            this.headerFirstCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerFirstCenterNumberLabel = new System.Windows.Forms.Label();
+            this.headerFirstCenterOtherLabel = new System.Windows.Forms.Label();
+            this.headerFirstCenterOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstCenterNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstCenterTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerFirstPageLeftGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.headerFirstLeftTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstLeftTitleLabel = new System.Windows.Forms.Label();
+            this.headerFirstLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerFirstLeftNumberLabel = new System.Windows.Forms.Label();
+            this.headerFirstLeftOtherLabel = new System.Windows.Forms.Label();
+            this.headerFirstLeftOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstLeftNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstLeftTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstLeftOtherEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstPageMoreCheck = new System.Windows.Forms.CheckBox();
+            this.headerDiffFirstPageCheck = new System.Windows.Forms.CheckBox();
+            this.headerFirstPageUseRunningHeadCheck = new System.Windows.Forms.CheckBox();
             this.headerRightGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.headerRightTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerRightTitleLabel = new System.Windows.Forms.Label();
+            this.headerRightNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerRightNumberLabel = new System.Windows.Forms.Label();
+            this.headerRightOtherLabel = new System.Windows.Forms.Label();
+            this.headerRightOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerRightNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerRightTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerRightOtherEnter = new System.Windows.Forms.TextBox();
             this.headerCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.headerCenterTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerCenterTitleLabel = new System.Windows.Forms.Label();
+            this.headerCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerCenterNumberLabel = new System.Windows.Forms.Label();
+            this.headerCenterOtherLabel = new System.Windows.Forms.Label();
+            this.headerCenterOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerCenterNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerCenterTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerLeftGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.headerLeftTitleEnter = new System.Windows.Forms.TextBox();
+            this.headerLeftTitleLabel = new System.Windows.Forms.Label();
+            this.headerLeftNumberEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerLeftNumberLabel = new System.Windows.Forms.Label();
+            this.headerLeftOtherLabel = new System.Windows.Forms.Label();
+            this.headerLeftOtherRadio = new System.Windows.Forms.RadioButton();
+            this.headerLeftNumberRadio = new System.Windows.Forms.RadioButton();
+            this.headerLeftTitleRadio = new System.Windows.Forms.RadioButton();
+            this.headerLeftOtherEnter = new System.Windows.Forms.TextBox();
             this.headerHeader = new System.Windows.Forms.Label();
             this.headerDefaultButton = new System.Windows.Forms.Button();
             this.abstractPanel = new System.Windows.Forms.Panel();
@@ -228,40 +228,40 @@
             this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.conclusionDefaultButton = new System.Windows.Forms.Button();
             this.conclusionTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
+            this.conclusionTitleColorButton = new System.Windows.Forms.Button();
+            this.conclusionTitleColorText = new System.Windows.Forms.TextBox();
+            this.conclusionTitleColorLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleSizeChoose = new System.Windows.Forms.ComboBox();
+            this.conclusionTitleSizeLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleFontLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleFontChoose = new System.Windows.Forms.ComboBox();
+            this.conclusionTitleBoldCheck = new System.Windows.Forms.CheckBox();
+            this.conclusionIncludeTitleCheck = new System.Windows.Forms.CheckBox();
+            this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
+            this.conclusionTitleLabel = new System.Windows.Forms.Label();
             this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.conclusionHeader = new System.Windows.Forms.Label();
             this.referencesPanel = new System.Windows.Forms.Panel();
             this.referencesOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
+            this.referencesOrderChoose = new System.Windows.Forms.ComboBox();
+            this.referencesOrderLabel = new System.Windows.Forms.Label();
+            this.referencesEmptyLineBetweenCheck = new System.Windows.Forms.CheckBox();
             this.referencesIndentationGroupBox = new System.Windows.Forms.GroupBox();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label48 = new System.Windows.Forms.Label();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
+            this.referencesIndentTabsEnter = new System.Windows.Forms.NumericUpDown();
+            this.referencesIndentTabsLabel = new System.Windows.Forms.Label();
+            this.referencesHangingIndentCheck = new System.Windows.Forms.CheckBox();
             this.referencesTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
+            this.referencesTitleColorButton = new System.Windows.Forms.Button();
+            this.referencesTitleColorText = new System.Windows.Forms.TextBox();
+            this.referencesTitleColorLabel = new System.Windows.Forms.Label();
+            this.referencesTitleSizeChoose = new System.Windows.Forms.ComboBox();
+            this.referencesTitleSizeLabel = new System.Windows.Forms.Label();
+            this.referencesTitleFontLabel = new System.Windows.Forms.Label();
+            this.referencesTitleFontChoose = new System.Windows.Forms.ComboBox();
+            this.referencesTitleBoldCheck = new System.Windows.Forms.CheckBox();
+            this.referencesTitleIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.referencesTitleEnter = new System.Windows.Forms.TextBox();
+            this.referencesTitleLabel = new System.Windows.Forms.Label();
             this.referencesHeader = new System.Windows.Forms.Label();
             this.referencesDefaultButton = new System.Windows.Forms.Button();
             this.titlePagePanel = new System.Windows.Forms.Panel();
@@ -330,8 +330,8 @@
             this.newPageForEachSectionRadio = new System.Windows.Forms.RadioButton();
             this.blankLineBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
             this.section1groupBox = new System.Windows.Forms.GroupBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.section1LabelLabel = new System.Windows.Forms.Label();
+            this.section1LabelEnter = new System.Windows.Forms.TextBox();
             this.section1ContentPanel = new System.Windows.Forms.Panel();
             this.section1ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.section1Content = new System.Windows.Forms.RichTextBox();
@@ -369,6 +369,18 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.headerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.headerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.headerRightEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.headerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
+            this.footerRightEmptyRadio = new System.Windows.Forms.RadioButton();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -383,32 +395,32 @@
             this.footerOptionsGroupBox.SuspendLayout();
             this.footerFirstPageGroupBox.SuspendLayout();
             this.footerFirstPageRightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstRightNumberEnter)).BeginInit();
             this.footerFirstPageCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstCenterNumberEnter)).BeginInit();
             this.footerFirstPageLeftGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstLeftNumberEnter)).BeginInit();
             this.footerRightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerRightNumberEnter)).BeginInit();
             this.footerCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerCenterNumberEnter)).BeginInit();
             this.footerLeftGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerLeftNumberEnter)).BeginInit();
             this.headerPanel.SuspendLayout();
             this.headerOptionsGroupBox.SuspendLayout();
             this.headerFirstPageGroupBox.SuspendLayout();
             this.headerFirstPageRightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightNumberEnter)).BeginInit();
             this.headerFirstPageCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstCenterNumberEnter)).BeginInit();
             this.headerFirstPageLeftGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftNumberEnter)).BeginInit();
             this.headerRightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerRightNumberEnter)).BeginInit();
             this.headerCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerCenterNumberEnter)).BeginInit();
             this.headerLeftGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).BeginInit();
             this.abstractPanel.SuspendLayout();
             this.abstractContentGroupBox.SuspendLayout();
             this.abstractContentPanel.SuspendLayout();
@@ -436,7 +448,7 @@
             this.referencesPanel.SuspendLayout();
             this.referencesOptionsGroupBox.SuspendLayout();
             this.referencesIndentationGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).BeginInit();
             this.referencesTitleGroupBox.SuspendLayout();
             this.titlePagePanel.SuspendLayout();
             this.titlePagePositionGroupBox.SuspendLayout();
@@ -463,8 +475,10 @@
             // 
             // generalHeader
             // 
+            generalHeader.BackColor = System.Drawing.Color.MidnightBlue;
             generalHeader.Dock = System.Windows.Forms.DockStyle.Top;
             generalHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            generalHeader.ForeColor = System.Drawing.SystemColors.Control;
             generalHeader.Location = new System.Drawing.Point(0, 0);
             generalHeader.Name = "generalHeader";
             generalHeader.Size = new System.Drawing.Size(638, 30);
@@ -596,9 +610,9 @@
             this.footerPanel.Controls.Add(this.footerOptionsGroupBox);
             this.footerPanel.Controls.Add(this.footerHeader);
             this.footerPanel.Controls.Add(this.footerDefaultButton);
-            this.footerPanel.Location = new System.Drawing.Point(0, 2770);
+            this.footerPanel.Location = new System.Drawing.Point(0, 2516);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(640, 825);
+            this.footerPanel.Size = new System.Drawing.Size(640, 571);
             this.footerPanel.TabIndex = 10;
             // 
             // footerOptionsGroupBox
@@ -610,7 +624,7 @@
             this.footerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.footerOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.footerOptionsGroupBox.Name = "footerOptionsGroupBox";
-            this.footerOptionsGroupBox.Size = new System.Drawing.Size(615, 749);
+            this.footerOptionsGroupBox.Size = new System.Drawing.Size(615, 495);
             this.footerOptionsGroupBox.TabIndex = 2;
             this.footerOptionsGroupBox.TabStop = false;
             this.footerOptionsGroupBox.Text = "Options";
@@ -620,666 +634,735 @@
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageRightGroupBox);
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageCenterGroupBox);
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageLeftGroupBox);
-            this.footerFirstPageGroupBox.Controls.Add(this.checkBox14);
-            this.footerFirstPageGroupBox.Controls.Add(this.checkBox15);
-            this.footerFirstPageGroupBox.Controls.Add(this.checkBox16);
+            this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageUseMoreCheck);
+            this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageDiffCheck);
+            this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageUseRunningHeadCheck);
             this.footerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(9, 353);
+            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(9, 443);
             this.footerFirstPageGroupBox.Name = "footerFirstPageGroupBox";
-            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(597, 384);
+            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(597, 40);
             this.footerFirstPageGroupBox.TabIndex = 27;
             this.footerFirstPageGroupBox.TabStop = false;
             this.footerFirstPageGroupBox.Text = "First Page";
             // 
             // footerFirstPageRightGroupBox
             // 
-            this.footerFirstPageRightGroupBox.Controls.Add(this.textBox36);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.label62);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.numericUpDown7);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.label28);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.label29);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.radioButton21);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.radioButton22);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.radioButton23);
-            this.footerFirstPageRightGroupBox.Controls.Add(this.textBox14);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightEmptyRadio);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightTitleEnter);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightTitleLabel);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightNumberEnter);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightNumberLabel);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightOtherLabel);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightOtherRadio);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightNumberRadio);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightTitleRadio);
+            this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightOtherEnter);
             this.footerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 282);
+            this.footerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 342);
             this.footerFirstPageRightGroupBox.Name = "footerFirstPageRightGroupBox";
-            this.footerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.footerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageRightGroupBox.TabIndex = 26;
             this.footerFirstPageRightGroupBox.TabStop = false;
             this.footerFirstPageRightGroupBox.Text = "First Page Right";
+            this.footerFirstPageRightGroupBox.Visible = false;
             // 
-            // textBox36
+            // footerFirstRightTitleEnter
             // 
-            this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(196, 18);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(140, 20);
-            this.textBox36.TabIndex = 29;
+            this.footerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstRightTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.footerFirstRightTitleEnter.Name = "footerFirstRightTitleEnter";
+            this.footerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstRightTitleEnter.TabIndex = 29;
+            this.footerFirstRightTitleEnter.Visible = false;
             // 
-            // label62
+            // footerFirstRightTitleLabel
             // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(162, 21);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(30, 13);
-            this.label62.TabIndex = 28;
-            this.label62.Text = "Title:";
+            this.footerFirstRightTitleLabel.AutoSize = true;
+            this.footerFirstRightTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.footerFirstRightTitleLabel.Name = "footerFirstRightTitleLabel";
+            this.footerFirstRightTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerFirstRightTitleLabel.TabIndex = 28;
+            this.footerFirstRightTitleLabel.Text = "Title:";
+            this.footerFirstRightTitleLabel.Visible = false;
             // 
-            // numericUpDown7
+            // footerFirstRightNumberEnter
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown7.TabIndex = 25;
+            this.footerFirstRightNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerFirstRightNumberEnter.Name = "footerFirstRightNumberEnter";
+            this.footerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstRightNumberEnter.TabIndex = 25;
+            this.footerFirstRightNumberEnter.Visible = false;
             // 
-            // label28
+            // footerFirstRightNumberLabel
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(100, 44);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(92, 13);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "1st Page Number:";
+            this.footerFirstRightNumberLabel.AutoSize = true;
+            this.footerFirstRightNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerFirstRightNumberLabel.Name = "footerFirstRightNumberLabel";
+            this.footerFirstRightNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerFirstRightNumberLabel.TabIndex = 24;
+            this.footerFirstRightNumberLabel.Text = "1st Page Number:";
+            this.footerFirstRightNumberLabel.Visible = false;
             // 
-            // label29
+            // footerFirstRightOtherLabel
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(161, 67);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(31, 13);
-            this.label29.TabIndex = 23;
-            this.label29.Text = "Text:";
+            this.footerFirstRightOtherLabel.AutoSize = true;
+            this.footerFirstRightOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerFirstRightOtherLabel.Name = "footerFirstRightOtherLabel";
+            this.footerFirstRightOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerFirstRightOtherLabel.TabIndex = 23;
+            this.footerFirstRightOtherLabel.Text = "Text:";
+            this.footerFirstRightOtherLabel.Visible = false;
             // 
-            // radioButton21
+            // footerFirstRightOtherRadio
             // 
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(9, 65);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(75, 17);
-            this.radioButton21.TabIndex = 22;
-            this.radioButton21.TabStop = true;
-            this.radioButton21.Text = "Other Text";
-            this.radioButton21.UseVisualStyleBackColor = true;
+            this.footerFirstRightOtherRadio.AutoSize = true;
+            this.footerFirstRightOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerFirstRightOtherRadio.Name = "footerFirstRightOtherRadio";
+            this.footerFirstRightOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerFirstRightOtherRadio.TabIndex = 22;
+            this.footerFirstRightOtherRadio.TabStop = true;
+            this.footerFirstRightOtherRadio.Text = "Other Text";
+            this.footerFirstRightOtherRadio.UseVisualStyleBackColor = true;
+            this.footerFirstRightOtherRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
             // 
-            // radioButton22
+            // footerFirstRightNumberRadio
             // 
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(9, 42);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(90, 17);
-            this.radioButton22.TabIndex = 21;
-            this.radioButton22.TabStop = true;
-            this.radioButton22.Text = "Page Number";
-            this.radioButton22.UseVisualStyleBackColor = true;
+            this.footerFirstRightNumberRadio.AutoSize = true;
+            this.footerFirstRightNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerFirstRightNumberRadio.Name = "footerFirstRightNumberRadio";
+            this.footerFirstRightNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerFirstRightNumberRadio.TabIndex = 21;
+            this.footerFirstRightNumberRadio.TabStop = true;
+            this.footerFirstRightNumberRadio.Text = "Page Number";
+            this.footerFirstRightNumberRadio.UseVisualStyleBackColor = true;
+            this.footerFirstRightNumberRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
             // 
-            // radioButton23
+            // footerFirstRightTitleRadio
             // 
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Location = new System.Drawing.Point(9, 19);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(76, 17);
-            this.radioButton23.TabIndex = 20;
-            this.radioButton23.TabStop = true;
-            this.radioButton23.Text = "Paper Title";
-            this.radioButton23.UseVisualStyleBackColor = true;
+            this.footerFirstRightTitleRadio.AutoSize = true;
+            this.footerFirstRightTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerFirstRightTitleRadio.Name = "footerFirstRightTitleRadio";
+            this.footerFirstRightTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerFirstRightTitleRadio.TabIndex = 20;
+            this.footerFirstRightTitleRadio.TabStop = true;
+            this.footerFirstRightTitleRadio.Text = "Paper Title";
+            this.footerFirstRightTitleRadio.UseVisualStyleBackColor = true;
+            this.footerFirstRightTitleRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
             // 
-            // textBox14
+            // footerFirstRightOtherEnter
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(196, 64);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(140, 20);
-            this.textBox14.TabIndex = 19;
+            this.footerFirstRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstRightOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerFirstRightOtherEnter.Name = "footerFirstRightOtherEnter";
+            this.footerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstRightOtherEnter.TabIndex = 19;
+            this.footerFirstRightOtherEnter.Visible = false;
             // 
             // footerFirstPageCenterGroupBox
             // 
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.textBox35);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.label61);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.numericUpDown8);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.label30);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.label31);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.radioButton24);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.radioButton25);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.radioButton26);
-            this.footerFirstPageCenterGroupBox.Controls.Add(this.textBox15);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterEmptyRadio);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterTitleEnter);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterTitleLabel);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterNumberEnter);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterNumberLabel);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterOtherLabel);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterOtherRadio);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterNumberRadio);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterTitleRadio);
+            this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterOtherEnter);
             this.footerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 185);
+            this.footerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 215);
             this.footerFirstPageCenterGroupBox.Name = "footerFirstPageCenterGroupBox";
-            this.footerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.footerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageCenterGroupBox.TabIndex = 26;
             this.footerFirstPageCenterGroupBox.TabStop = false;
             this.footerFirstPageCenterGroupBox.Text = "First Page Center";
+            this.footerFirstPageCenterGroupBox.Visible = false;
             // 
-            // textBox35
+            // footerFirstCenterTitleEnter
             // 
-            this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(196, 18);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(140, 20);
-            this.textBox35.TabIndex = 29;
+            this.footerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.footerFirstCenterTitleEnter.Name = "footerFirstCenterTitleEnter";
+            this.footerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstCenterTitleEnter.TabIndex = 29;
+            this.footerFirstCenterTitleEnter.Visible = false;
             // 
-            // label61
+            // footerFirstCenterTitleLabel
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(162, 21);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(30, 13);
-            this.label61.TabIndex = 28;
-            this.label61.Text = "Title:";
+            this.footerFirstCenterTitleLabel.AutoSize = true;
+            this.footerFirstCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.footerFirstCenterTitleLabel.Name = "footerFirstCenterTitleLabel";
+            this.footerFirstCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerFirstCenterTitleLabel.TabIndex = 28;
+            this.footerFirstCenterTitleLabel.Text = "Title:";
+            this.footerFirstCenterTitleLabel.Visible = false;
             // 
-            // numericUpDown8
+            // footerFirstCenterNumberEnter
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown8.TabIndex = 25;
+            this.footerFirstCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerFirstCenterNumberEnter.Name = "footerFirstCenterNumberEnter";
+            this.footerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstCenterNumberEnter.TabIndex = 25;
+            this.footerFirstCenterNumberEnter.Visible = false;
             // 
-            // label30
+            // footerFirstCenterNumberLabel
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(100, 44);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(92, 13);
-            this.label30.TabIndex = 24;
-            this.label30.Text = "1st Page Number:";
+            this.footerFirstCenterNumberLabel.AutoSize = true;
+            this.footerFirstCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerFirstCenterNumberLabel.Name = "footerFirstCenterNumberLabel";
+            this.footerFirstCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerFirstCenterNumberLabel.TabIndex = 24;
+            this.footerFirstCenterNumberLabel.Text = "1st Page Number:";
+            this.footerFirstCenterNumberLabel.Visible = false;
             // 
-            // label31
+            // footerFirstCenterOtherLabel
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(161, 67);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(31, 13);
-            this.label31.TabIndex = 23;
-            this.label31.Text = "Text:";
+            this.footerFirstCenterOtherLabel.AutoSize = true;
+            this.footerFirstCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerFirstCenterOtherLabel.Name = "footerFirstCenterOtherLabel";
+            this.footerFirstCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerFirstCenterOtherLabel.TabIndex = 23;
+            this.footerFirstCenterOtherLabel.Text = "Text:";
+            this.footerFirstCenterOtherLabel.Visible = false;
             // 
-            // radioButton24
+            // footerFirstCenterOtherRadio
             // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(9, 65);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(75, 17);
-            this.radioButton24.TabIndex = 22;
-            this.radioButton24.TabStop = true;
-            this.radioButton24.Text = "Other Text";
-            this.radioButton24.UseVisualStyleBackColor = true;
+            this.footerFirstCenterOtherRadio.AutoSize = true;
+            this.footerFirstCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerFirstCenterOtherRadio.Name = "footerFirstCenterOtherRadio";
+            this.footerFirstCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerFirstCenterOtherRadio.TabIndex = 22;
+            this.footerFirstCenterOtherRadio.TabStop = true;
+            this.footerFirstCenterOtherRadio.Text = "Other Text";
+            this.footerFirstCenterOtherRadio.UseVisualStyleBackColor = true;
+            this.footerFirstCenterOtherRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
             // 
-            // radioButton25
+            // footerFirstCenterNumberRadio
             // 
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(9, 42);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(90, 17);
-            this.radioButton25.TabIndex = 21;
-            this.radioButton25.TabStop = true;
-            this.radioButton25.Text = "Page Number";
-            this.radioButton25.UseVisualStyleBackColor = true;
+            this.footerFirstCenterNumberRadio.AutoSize = true;
+            this.footerFirstCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerFirstCenterNumberRadio.Name = "footerFirstCenterNumberRadio";
+            this.footerFirstCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerFirstCenterNumberRadio.TabIndex = 21;
+            this.footerFirstCenterNumberRadio.TabStop = true;
+            this.footerFirstCenterNumberRadio.Text = "Page Number";
+            this.footerFirstCenterNumberRadio.UseVisualStyleBackColor = true;
+            this.footerFirstCenterNumberRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
             // 
-            // radioButton26
+            // footerFirstCenterTitleRadio
             // 
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(9, 19);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(76, 17);
-            this.radioButton26.TabIndex = 20;
-            this.radioButton26.TabStop = true;
-            this.radioButton26.Text = "Paper Title";
-            this.radioButton26.UseVisualStyleBackColor = true;
+            this.footerFirstCenterTitleRadio.AutoSize = true;
+            this.footerFirstCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerFirstCenterTitleRadio.Name = "footerFirstCenterTitleRadio";
+            this.footerFirstCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerFirstCenterTitleRadio.TabIndex = 20;
+            this.footerFirstCenterTitleRadio.TabStop = true;
+            this.footerFirstCenterTitleRadio.Text = "Paper Title";
+            this.footerFirstCenterTitleRadio.UseVisualStyleBackColor = true;
+            this.footerFirstCenterTitleRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
             // 
-            // textBox15
+            // footerFirstCenterOtherEnter
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(196, 64);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(140, 20);
-            this.textBox15.TabIndex = 19;
+            this.footerFirstCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerFirstCenterOtherEnter.Name = "footerFirstCenterOtherEnter";
+            this.footerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstCenterOtherEnter.TabIndex = 19;
+            this.footerFirstCenterOtherEnter.Visible = false;
             // 
             // footerFirstPageLeftGroupBox
             // 
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.textBox34);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.label60);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.numericUpDown9);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.label32);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.label33);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.radioButton27);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.radioButton28);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.radioButton29);
-            this.footerFirstPageLeftGroupBox.Controls.Add(this.textBox16);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftEmptyRadio);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftTitleEnter);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftTitleLabel);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftNumberEnter);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftNumberLabel);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftOtherLabel);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftOtherRadio);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftNumberRadio);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftTitleRadio);
+            this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftOtherEnter);
             this.footerFirstPageLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.footerFirstPageLeftGroupBox.Location = new System.Drawing.Point(9, 88);
             this.footerFirstPageLeftGroupBox.Name = "footerFirstPageLeftGroupBox";
-            this.footerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.footerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageLeftGroupBox.TabIndex = 21;
             this.footerFirstPageLeftGroupBox.TabStop = false;
             this.footerFirstPageLeftGroupBox.Text = "First Page Left";
+            this.footerFirstPageLeftGroupBox.Visible = false;
             // 
-            // textBox34
+            // footerFirstLeftTitleEnter
             // 
-            this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(194, 18);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(140, 20);
-            this.textBox34.TabIndex = 29;
+            this.footerFirstLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstLeftTitleEnter.Location = new System.Drawing.Point(194, 18);
+            this.footerFirstLeftTitleEnter.Name = "footerFirstLeftTitleEnter";
+            this.footerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstLeftTitleEnter.TabIndex = 29;
+            this.footerFirstLeftTitleEnter.Visible = false;
             // 
-            // label60
+            // footerFirstLeftTitleLabel
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(160, 21);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(30, 13);
-            this.label60.TabIndex = 28;
-            this.label60.Text = "Title:";
+            this.footerFirstLeftTitleLabel.AutoSize = true;
+            this.footerFirstLeftTitleLabel.Location = new System.Drawing.Point(160, 21);
+            this.footerFirstLeftTitleLabel.Name = "footerFirstLeftTitleLabel";
+            this.footerFirstLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerFirstLeftTitleLabel.TabIndex = 28;
+            this.footerFirstLeftTitleLabel.Text = "Title:";
+            this.footerFirstLeftTitleLabel.Visible = false;
             // 
-            // numericUpDown9
+            // footerFirstLeftNumberEnter
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown9.TabIndex = 25;
+            this.footerFirstLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerFirstLeftNumberEnter.Name = "footerFirstLeftNumberEnter";
+            this.footerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstLeftNumberEnter.TabIndex = 25;
+            this.footerFirstLeftNumberEnter.Visible = false;
             // 
-            // label32
+            // footerFirstLeftNumberLabel
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(100, 44);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(92, 13);
-            this.label32.TabIndex = 24;
-            this.label32.Text = "1st Page Number:";
+            this.footerFirstLeftNumberLabel.AutoSize = true;
+            this.footerFirstLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerFirstLeftNumberLabel.Name = "footerFirstLeftNumberLabel";
+            this.footerFirstLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerFirstLeftNumberLabel.TabIndex = 24;
+            this.footerFirstLeftNumberLabel.Text = "1st Page Number:";
+            this.footerFirstLeftNumberLabel.Visible = false;
             // 
-            // label33
+            // footerFirstLeftOtherLabel
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(161, 67);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(31, 13);
-            this.label33.TabIndex = 23;
-            this.label33.Text = "Text:";
+            this.footerFirstLeftOtherLabel.AutoSize = true;
+            this.footerFirstLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerFirstLeftOtherLabel.Name = "footerFirstLeftOtherLabel";
+            this.footerFirstLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerFirstLeftOtherLabel.TabIndex = 23;
+            this.footerFirstLeftOtherLabel.Text = "Text:";
+            this.footerFirstLeftOtherLabel.Visible = false;
             // 
-            // radioButton27
+            // footerFirstLeftOtherRadio
             // 
-            this.radioButton27.AutoSize = true;
-            this.radioButton27.Location = new System.Drawing.Point(9, 65);
-            this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(75, 17);
-            this.radioButton27.TabIndex = 22;
-            this.radioButton27.TabStop = true;
-            this.radioButton27.Text = "Other Text";
-            this.radioButton27.UseVisualStyleBackColor = true;
+            this.footerFirstLeftOtherRadio.AutoSize = true;
+            this.footerFirstLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerFirstLeftOtherRadio.Name = "footerFirstLeftOtherRadio";
+            this.footerFirstLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerFirstLeftOtherRadio.TabIndex = 22;
+            this.footerFirstLeftOtherRadio.TabStop = true;
+            this.footerFirstLeftOtherRadio.Text = "Other Text";
+            this.footerFirstLeftOtherRadio.UseVisualStyleBackColor = true;
+            this.footerFirstLeftOtherRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
             // 
-            // radioButton28
+            // footerFirstLeftNumberRadio
             // 
-            this.radioButton28.AutoSize = true;
-            this.radioButton28.Location = new System.Drawing.Point(9, 42);
-            this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(90, 17);
-            this.radioButton28.TabIndex = 21;
-            this.radioButton28.TabStop = true;
-            this.radioButton28.Text = "Page Number";
-            this.radioButton28.UseVisualStyleBackColor = true;
+            this.footerFirstLeftNumberRadio.AutoSize = true;
+            this.footerFirstLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerFirstLeftNumberRadio.Name = "footerFirstLeftNumberRadio";
+            this.footerFirstLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerFirstLeftNumberRadio.TabIndex = 21;
+            this.footerFirstLeftNumberRadio.TabStop = true;
+            this.footerFirstLeftNumberRadio.Text = "Page Number";
+            this.footerFirstLeftNumberRadio.UseVisualStyleBackColor = true;
+            this.footerFirstLeftNumberRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
             // 
-            // radioButton29
+            // footerFirstLeftTitleRadio
             // 
-            this.radioButton29.AutoSize = true;
-            this.radioButton29.Location = new System.Drawing.Point(9, 19);
-            this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(76, 17);
-            this.radioButton29.TabIndex = 20;
-            this.radioButton29.TabStop = true;
-            this.radioButton29.Text = "Paper Title";
-            this.radioButton29.UseVisualStyleBackColor = true;
+            this.footerFirstLeftTitleRadio.AutoSize = true;
+            this.footerFirstLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerFirstLeftTitleRadio.Name = "footerFirstLeftTitleRadio";
+            this.footerFirstLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerFirstLeftTitleRadio.TabIndex = 20;
+            this.footerFirstLeftTitleRadio.TabStop = true;
+            this.footerFirstLeftTitleRadio.Text = "Paper Title";
+            this.footerFirstLeftTitleRadio.UseVisualStyleBackColor = true;
+            this.footerFirstLeftTitleRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
             // 
-            // textBox16
+            // footerFirstLeftOtherEnter
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(196, 64);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(140, 20);
-            this.textBox16.TabIndex = 19;
+            this.footerFirstLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerFirstLeftOtherEnter.Name = "footerFirstLeftOtherEnter";
+            this.footerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerFirstLeftOtherEnter.TabIndex = 19;
+            this.footerFirstLeftOtherEnter.Visible = false;
             // 
-            // checkBox14
+            // footerFirstPageUseMoreCheck
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox14.Location = new System.Drawing.Point(9, 65);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(89, 17);
-            this.checkBox14.TabIndex = 3;
-            this.checkBox14.Text = "More Options";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.footerFirstPageUseMoreCheck.AutoSize = true;
+            this.footerFirstPageUseMoreCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstPageUseMoreCheck.Location = new System.Drawing.Point(9, 65);
+            this.footerFirstPageUseMoreCheck.Name = "footerFirstPageUseMoreCheck";
+            this.footerFirstPageUseMoreCheck.Size = new System.Drawing.Size(111, 17);
+            this.footerFirstPageUseMoreCheck.TabIndex = 3;
+            this.footerFirstPageUseMoreCheck.Text = "Use More Options";
+            this.footerFirstPageUseMoreCheck.UseVisualStyleBackColor = true;
+            this.footerFirstPageUseMoreCheck.Visible = false;
+            this.footerFirstPageUseMoreCheck.CheckedChanged += new System.EventHandler(this.footerFirstPageUseMoreCheck_CheckedChanged);
             // 
-            // checkBox15
+            // footerFirstPageDiffCheck
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox15.Location = new System.Drawing.Point(9, 19);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(133, 17);
-            this.checkBox15.TabIndex = 1;
-            this.checkBox15.Text = "Different On First Page";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.footerFirstPageDiffCheck.AutoSize = true;
+            this.footerFirstPageDiffCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstPageDiffCheck.Location = new System.Drawing.Point(9, 19);
+            this.footerFirstPageDiffCheck.Name = "footerFirstPageDiffCheck";
+            this.footerFirstPageDiffCheck.Size = new System.Drawing.Size(133, 17);
+            this.footerFirstPageDiffCheck.TabIndex = 1;
+            this.footerFirstPageDiffCheck.Text = "Different On First Page";
+            this.footerFirstPageDiffCheck.UseVisualStyleBackColor = true;
+            this.footerFirstPageDiffCheck.CheckedChanged += new System.EventHandler(this.footerFirstPageDiffCheck_CheckedChanged);
             // 
-            // checkBox16
+            // footerFirstPageUseRunningHeadCheck
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox16.Location = new System.Drawing.Point(9, 42);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(128, 17);
-            this.checkBox16.TabIndex = 2;
-            this.checkBox16.Text = "Use \"Running head:\"";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.footerFirstPageUseRunningHeadCheck.AutoSize = true;
+            this.footerFirstPageUseRunningHeadCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(9, 42);
+            this.footerFirstPageUseRunningHeadCheck.Name = "footerFirstPageUseRunningHeadCheck";
+            this.footerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(128, 17);
+            this.footerFirstPageUseRunningHeadCheck.TabIndex = 2;
+            this.footerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
+            this.footerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
+            this.footerFirstPageUseRunningHeadCheck.Visible = false;
             // 
             // footerRightGroupBox
             // 
-            this.footerRightGroupBox.Controls.Add(this.textBox33);
-            this.footerRightGroupBox.Controls.Add(this.label59);
-            this.footerRightGroupBox.Controls.Add(this.numericUpDown10);
-            this.footerRightGroupBox.Controls.Add(this.label34);
-            this.footerRightGroupBox.Controls.Add(this.label35);
-            this.footerRightGroupBox.Controls.Add(this.radioButton30);
-            this.footerRightGroupBox.Controls.Add(this.radioButton31);
-            this.footerRightGroupBox.Controls.Add(this.radioButton32);
-            this.footerRightGroupBox.Controls.Add(this.textBox17);
+            this.footerRightGroupBox.Controls.Add(this.footerRightEmptyRadio);
+            this.footerRightGroupBox.Controls.Add(this.footerRightTitleEnter);
+            this.footerRightGroupBox.Controls.Add(this.footerRightTitleLabel);
+            this.footerRightGroupBox.Controls.Add(this.footerRightNumberEnter);
+            this.footerRightGroupBox.Controls.Add(this.footerRightNumberLabel);
+            this.footerRightGroupBox.Controls.Add(this.footerRightOtherLabel);
+            this.footerRightGroupBox.Controls.Add(this.footerRightOtherRadio);
+            this.footerRightGroupBox.Controls.Add(this.footerRightNumberRadio);
+            this.footerRightGroupBox.Controls.Add(this.footerRightTitleRadio);
+            this.footerRightGroupBox.Controls.Add(this.footerRightOtherEnter);
             this.footerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerRightGroupBox.Location = new System.Drawing.Point(9, 240);
+            this.footerRightGroupBox.Location = new System.Drawing.Point(9, 300);
             this.footerRightGroupBox.Name = "footerRightGroupBox";
-            this.footerRightGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.footerRightGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerRightGroupBox.TabIndex = 26;
             this.footerRightGroupBox.TabStop = false;
             this.footerRightGroupBox.Text = "Right";
             // 
-            // textBox33
+            // footerRightTitleEnter
             // 
-            this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(196, 18);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(140, 20);
-            this.textBox33.TabIndex = 29;
+            this.footerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerRightTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.footerRightTitleEnter.Name = "footerRightTitleEnter";
+            this.footerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerRightTitleEnter.TabIndex = 29;
+            this.footerRightTitleEnter.Visible = false;
             // 
-            // label59
+            // footerRightTitleLabel
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(162, 21);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(30, 13);
-            this.label59.TabIndex = 28;
-            this.label59.Text = "Title:";
+            this.footerRightTitleLabel.AutoSize = true;
+            this.footerRightTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.footerRightTitleLabel.Name = "footerRightTitleLabel";
+            this.footerRightTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerRightTitleLabel.TabIndex = 28;
+            this.footerRightTitleLabel.Text = "Title:";
+            this.footerRightTitleLabel.Visible = false;
             // 
-            // numericUpDown10
+            // footerRightNumberEnter
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown10.TabIndex = 25;
+            this.footerRightNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerRightNumberEnter.Name = "footerRightNumberEnter";
+            this.footerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerRightNumberEnter.TabIndex = 25;
+            this.footerRightNumberEnter.Visible = false;
             // 
-            // label34
+            // footerRightNumberLabel
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(100, 44);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(92, 13);
-            this.label34.TabIndex = 24;
-            this.label34.Text = "1st Page Number:";
+            this.footerRightNumberLabel.AutoSize = true;
+            this.footerRightNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerRightNumberLabel.Name = "footerRightNumberLabel";
+            this.footerRightNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerRightNumberLabel.TabIndex = 24;
+            this.footerRightNumberLabel.Text = "1st Page Number:";
+            this.footerRightNumberLabel.Visible = false;
             // 
-            // label35
+            // footerRightOtherLabel
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(161, 67);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(31, 13);
-            this.label35.TabIndex = 23;
-            this.label35.Text = "Text:";
+            this.footerRightOtherLabel.AutoSize = true;
+            this.footerRightOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerRightOtherLabel.Name = "footerRightOtherLabel";
+            this.footerRightOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerRightOtherLabel.TabIndex = 23;
+            this.footerRightOtherLabel.Text = "Text:";
+            this.footerRightOtherLabel.Visible = false;
             // 
-            // radioButton30
+            // footerRightOtherRadio
             // 
-            this.radioButton30.AutoSize = true;
-            this.radioButton30.Location = new System.Drawing.Point(9, 65);
-            this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(75, 17);
-            this.radioButton30.TabIndex = 22;
-            this.radioButton30.TabStop = true;
-            this.radioButton30.Text = "Other Text";
-            this.radioButton30.UseVisualStyleBackColor = true;
+            this.footerRightOtherRadio.AutoSize = true;
+            this.footerRightOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerRightOtherRadio.Name = "footerRightOtherRadio";
+            this.footerRightOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerRightOtherRadio.TabIndex = 22;
+            this.footerRightOtherRadio.TabStop = true;
+            this.footerRightOtherRadio.Text = "Other Text";
+            this.footerRightOtherRadio.UseVisualStyleBackColor = true;
+            this.footerRightOtherRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
             // 
-            // radioButton31
+            // footerRightNumberRadio
             // 
-            this.radioButton31.AutoSize = true;
-            this.radioButton31.Location = new System.Drawing.Point(9, 42);
-            this.radioButton31.Name = "radioButton31";
-            this.radioButton31.Size = new System.Drawing.Size(90, 17);
-            this.radioButton31.TabIndex = 21;
-            this.radioButton31.TabStop = true;
-            this.radioButton31.Text = "Page Number";
-            this.radioButton31.UseVisualStyleBackColor = true;
+            this.footerRightNumberRadio.AutoSize = true;
+            this.footerRightNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerRightNumberRadio.Name = "footerRightNumberRadio";
+            this.footerRightNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerRightNumberRadio.TabIndex = 21;
+            this.footerRightNumberRadio.TabStop = true;
+            this.footerRightNumberRadio.Text = "Page Number";
+            this.footerRightNumberRadio.UseVisualStyleBackColor = true;
+            this.footerRightNumberRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
             // 
-            // radioButton32
+            // footerRightTitleRadio
             // 
-            this.radioButton32.AutoSize = true;
-            this.radioButton32.Location = new System.Drawing.Point(9, 19);
-            this.radioButton32.Name = "radioButton32";
-            this.radioButton32.Size = new System.Drawing.Size(76, 17);
-            this.radioButton32.TabIndex = 20;
-            this.radioButton32.TabStop = true;
-            this.radioButton32.Text = "Paper Title";
-            this.radioButton32.UseVisualStyleBackColor = true;
+            this.footerRightTitleRadio.AutoSize = true;
+            this.footerRightTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerRightTitleRadio.Name = "footerRightTitleRadio";
+            this.footerRightTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerRightTitleRadio.TabIndex = 20;
+            this.footerRightTitleRadio.TabStop = true;
+            this.footerRightTitleRadio.Text = "Paper Title";
+            this.footerRightTitleRadio.UseVisualStyleBackColor = true;
+            this.footerRightTitleRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
             // 
-            // textBox17
+            // footerRightOtherEnter
             // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(196, 64);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(140, 20);
-            this.textBox17.TabIndex = 19;
+            this.footerRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerRightOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerRightOtherEnter.Name = "footerRightOtherEnter";
+            this.footerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerRightOtherEnter.TabIndex = 19;
+            this.footerRightOtherEnter.Visible = false;
             // 
             // footerCenterGroupBox
             // 
-            this.footerCenterGroupBox.Controls.Add(this.textBox32);
-            this.footerCenterGroupBox.Controls.Add(this.label58);
-            this.footerCenterGroupBox.Controls.Add(this.numericUpDown11);
-            this.footerCenterGroupBox.Controls.Add(this.label36);
-            this.footerCenterGroupBox.Controls.Add(this.label37);
-            this.footerCenterGroupBox.Controls.Add(this.radioButton33);
-            this.footerCenterGroupBox.Controls.Add(this.radioButton34);
-            this.footerCenterGroupBox.Controls.Add(this.radioButton35);
-            this.footerCenterGroupBox.Controls.Add(this.textBox18);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterEmptyRadio);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterTitleEnter);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterTitleLabel);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterNumberEnter);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterNumberLabel);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterOtherLabel);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterOtherRadio);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterNumberRadio);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterTitleRadio);
+            this.footerCenterGroupBox.Controls.Add(this.footerCenterOtherEnter);
             this.footerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerCenterGroupBox.Location = new System.Drawing.Point(9, 127);
+            this.footerCenterGroupBox.Location = new System.Drawing.Point(9, 157);
             this.footerCenterGroupBox.Name = "footerCenterGroupBox";
-            this.footerCenterGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.footerCenterGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerCenterGroupBox.TabIndex = 26;
             this.footerCenterGroupBox.TabStop = false;
             this.footerCenterGroupBox.Text = "Center";
             // 
-            // textBox32
+            // footerCenterTitleEnter
             // 
-            this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(196, 18);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(140, 20);
-            this.textBox32.TabIndex = 29;
+            this.footerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.footerCenterTitleEnter.Name = "footerCenterTitleEnter";
+            this.footerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerCenterTitleEnter.TabIndex = 29;
+            this.footerCenterTitleEnter.Visible = false;
             // 
-            // label58
+            // footerCenterTitleLabel
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(162, 21);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(30, 13);
-            this.label58.TabIndex = 28;
-            this.label58.Text = "Title:";
+            this.footerCenterTitleLabel.AutoSize = true;
+            this.footerCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.footerCenterTitleLabel.Name = "footerCenterTitleLabel";
+            this.footerCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerCenterTitleLabel.TabIndex = 28;
+            this.footerCenterTitleLabel.Text = "Title:";
+            this.footerCenterTitleLabel.Visible = false;
             // 
-            // numericUpDown11
+            // footerCenterNumberEnter
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown11.TabIndex = 25;
+            this.footerCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerCenterNumberEnter.Name = "footerCenterNumberEnter";
+            this.footerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerCenterNumberEnter.TabIndex = 25;
+            this.footerCenterNumberEnter.Visible = false;
             // 
-            // label36
+            // footerCenterNumberLabel
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(100, 44);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(92, 13);
-            this.label36.TabIndex = 24;
-            this.label36.Text = "1st Page Number:";
+            this.footerCenterNumberLabel.AutoSize = true;
+            this.footerCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerCenterNumberLabel.Name = "footerCenterNumberLabel";
+            this.footerCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerCenterNumberLabel.TabIndex = 24;
+            this.footerCenterNumberLabel.Text = "1st Page Number:";
+            this.footerCenterNumberLabel.Visible = false;
             // 
-            // label37
+            // footerCenterOtherLabel
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(161, 67);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(31, 13);
-            this.label37.TabIndex = 23;
-            this.label37.Text = "Text:";
+            this.footerCenterOtherLabel.AutoSize = true;
+            this.footerCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerCenterOtherLabel.Name = "footerCenterOtherLabel";
+            this.footerCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerCenterOtherLabel.TabIndex = 23;
+            this.footerCenterOtherLabel.Text = "Text:";
+            this.footerCenterOtherLabel.Visible = false;
             // 
-            // radioButton33
+            // footerCenterOtherRadio
             // 
-            this.radioButton33.AutoSize = true;
-            this.radioButton33.Location = new System.Drawing.Point(9, 65);
-            this.radioButton33.Name = "radioButton33";
-            this.radioButton33.Size = new System.Drawing.Size(75, 17);
-            this.radioButton33.TabIndex = 22;
-            this.radioButton33.TabStop = true;
-            this.radioButton33.Text = "Other Text";
-            this.radioButton33.UseVisualStyleBackColor = true;
+            this.footerCenterOtherRadio.AutoSize = true;
+            this.footerCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerCenterOtherRadio.Name = "footerCenterOtherRadio";
+            this.footerCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerCenterOtherRadio.TabIndex = 22;
+            this.footerCenterOtherRadio.TabStop = true;
+            this.footerCenterOtherRadio.Text = "Other Text";
+            this.footerCenterOtherRadio.UseVisualStyleBackColor = true;
+            this.footerCenterOtherRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
             // 
-            // radioButton34
+            // footerCenterNumberRadio
             // 
-            this.radioButton34.AutoSize = true;
-            this.radioButton34.Location = new System.Drawing.Point(9, 42);
-            this.radioButton34.Name = "radioButton34";
-            this.radioButton34.Size = new System.Drawing.Size(90, 17);
-            this.radioButton34.TabIndex = 21;
-            this.radioButton34.TabStop = true;
-            this.radioButton34.Text = "Page Number";
-            this.radioButton34.UseVisualStyleBackColor = true;
+            this.footerCenterNumberRadio.AutoSize = true;
+            this.footerCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerCenterNumberRadio.Name = "footerCenterNumberRadio";
+            this.footerCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerCenterNumberRadio.TabIndex = 21;
+            this.footerCenterNumberRadio.TabStop = true;
+            this.footerCenterNumberRadio.Text = "Page Number";
+            this.footerCenterNumberRadio.UseVisualStyleBackColor = true;
+            this.footerCenterNumberRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
             // 
-            // radioButton35
+            // footerCenterTitleRadio
             // 
-            this.radioButton35.AutoSize = true;
-            this.radioButton35.Location = new System.Drawing.Point(9, 19);
-            this.radioButton35.Name = "radioButton35";
-            this.radioButton35.Size = new System.Drawing.Size(76, 17);
-            this.radioButton35.TabIndex = 20;
-            this.radioButton35.TabStop = true;
-            this.radioButton35.Text = "Paper Title";
-            this.radioButton35.UseVisualStyleBackColor = true;
+            this.footerCenterTitleRadio.AutoSize = true;
+            this.footerCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerCenterTitleRadio.Name = "footerCenterTitleRadio";
+            this.footerCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerCenterTitleRadio.TabIndex = 20;
+            this.footerCenterTitleRadio.TabStop = true;
+            this.footerCenterTitleRadio.Text = "Paper Title";
+            this.footerCenterTitleRadio.UseVisualStyleBackColor = true;
+            this.footerCenterTitleRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
             // 
-            // textBox18
+            // footerCenterOtherEnter
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(196, 64);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(140, 20);
-            this.textBox18.TabIndex = 19;
+            this.footerCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerCenterOtherEnter.Name = "footerCenterOtherEnter";
+            this.footerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerCenterOtherEnter.TabIndex = 19;
+            this.footerCenterOtherEnter.Visible = false;
             // 
             // footerLeftGroupBox
             // 
-            this.footerLeftGroupBox.Controls.Add(this.textBox31);
-            this.footerLeftGroupBox.Controls.Add(this.label57);
-            this.footerLeftGroupBox.Controls.Add(this.numericUpDown12);
-            this.footerLeftGroupBox.Controls.Add(this.label38);
-            this.footerLeftGroupBox.Controls.Add(this.label39);
-            this.footerLeftGroupBox.Controls.Add(this.radioButton36);
-            this.footerLeftGroupBox.Controls.Add(this.radioButton37);
-            this.footerLeftGroupBox.Controls.Add(this.radioButton38);
-            this.footerLeftGroupBox.Controls.Add(this.textBox19);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftEmptyRadio);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftTitleEnter);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftTitleLabel);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftNumberEnter);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftNumberLabel);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftOtherLabel);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftOtherRadio);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftNumberRadio);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftTitleRadio);
+            this.footerLeftGroupBox.Controls.Add(this.footerLeftOtherEnter);
             this.footerLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.footerLeftGroupBox.Location = new System.Drawing.Point(9, 19);
             this.footerLeftGroupBox.Name = "footerLeftGroupBox";
-            this.footerLeftGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.footerLeftGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerLeftGroupBox.TabIndex = 20;
             this.footerLeftGroupBox.TabStop = false;
             this.footerLeftGroupBox.Text = "Left";
             // 
-            // textBox31
+            // footerLeftTitleEnter
             // 
-            this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(196, 18);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(140, 20);
-            this.textBox31.TabIndex = 29;
+            this.footerLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.footerLeftTitleEnter.Name = "footerLeftTitleEnter";
+            this.footerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerLeftTitleEnter.TabIndex = 29;
+            this.footerLeftTitleEnter.Visible = false;
             // 
-            // label57
+            // footerLeftTitleLabel
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(162, 21);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(30, 13);
-            this.label57.TabIndex = 28;
-            this.label57.Text = "Title:";
+            this.footerLeftTitleLabel.AutoSize = true;
+            this.footerLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.footerLeftTitleLabel.Name = "footerLeftTitleLabel";
+            this.footerLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.footerLeftTitleLabel.TabIndex = 28;
+            this.footerLeftTitleLabel.Text = "Title:";
+            this.footerLeftTitleLabel.Visible = false;
             // 
-            // numericUpDown12
+            // footerLeftNumberEnter
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown12.TabIndex = 25;
+            this.footerLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.footerLeftNumberEnter.Name = "footerLeftNumberEnter";
+            this.footerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerLeftNumberEnter.TabIndex = 25;
+            this.footerLeftNumberEnter.Visible = false;
             // 
-            // label38
+            // footerLeftNumberLabel
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(100, 44);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(92, 13);
-            this.label38.TabIndex = 24;
-            this.label38.Text = "1st Page Number:";
+            this.footerLeftNumberLabel.AutoSize = true;
+            this.footerLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.footerLeftNumberLabel.Name = "footerLeftNumberLabel";
+            this.footerLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.footerLeftNumberLabel.TabIndex = 24;
+            this.footerLeftNumberLabel.Text = "1st Page Number:";
+            this.footerLeftNumberLabel.Visible = false;
             // 
-            // label39
+            // footerLeftOtherLabel
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(161, 67);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(31, 13);
-            this.label39.TabIndex = 23;
-            this.label39.Text = "Text:";
+            this.footerLeftOtherLabel.AutoSize = true;
+            this.footerLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.footerLeftOtherLabel.Name = "footerLeftOtherLabel";
+            this.footerLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.footerLeftOtherLabel.TabIndex = 23;
+            this.footerLeftOtherLabel.Text = "Text:";
+            this.footerLeftOtherLabel.Visible = false;
             // 
-            // radioButton36
+            // footerLeftOtherRadio
             // 
-            this.radioButton36.AutoSize = true;
-            this.radioButton36.Location = new System.Drawing.Point(9, 65);
-            this.radioButton36.Name = "radioButton36";
-            this.radioButton36.Size = new System.Drawing.Size(75, 17);
-            this.radioButton36.TabIndex = 22;
-            this.radioButton36.TabStop = true;
-            this.radioButton36.Text = "Other Text";
-            this.radioButton36.UseVisualStyleBackColor = true;
+            this.footerLeftOtherRadio.AutoSize = true;
+            this.footerLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.footerLeftOtherRadio.Name = "footerLeftOtherRadio";
+            this.footerLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.footerLeftOtherRadio.TabIndex = 22;
+            this.footerLeftOtherRadio.TabStop = true;
+            this.footerLeftOtherRadio.Text = "Other Text";
+            this.footerLeftOtherRadio.UseVisualStyleBackColor = true;
+            this.footerLeftOtherRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
             // 
-            // radioButton37
+            // footerLeftNumberRadio
             // 
-            this.radioButton37.AutoSize = true;
-            this.radioButton37.Location = new System.Drawing.Point(9, 42);
-            this.radioButton37.Name = "radioButton37";
-            this.radioButton37.Size = new System.Drawing.Size(90, 17);
-            this.radioButton37.TabIndex = 21;
-            this.radioButton37.TabStop = true;
-            this.radioButton37.Text = "Page Number";
-            this.radioButton37.UseVisualStyleBackColor = true;
+            this.footerLeftNumberRadio.AutoSize = true;
+            this.footerLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.footerLeftNumberRadio.Name = "footerLeftNumberRadio";
+            this.footerLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.footerLeftNumberRadio.TabIndex = 21;
+            this.footerLeftNumberRadio.TabStop = true;
+            this.footerLeftNumberRadio.Text = "Page Number";
+            this.footerLeftNumberRadio.UseVisualStyleBackColor = true;
+            this.footerLeftNumberRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
             // 
-            // radioButton38
+            // footerLeftTitleRadio
             // 
-            this.radioButton38.AutoSize = true;
-            this.radioButton38.Location = new System.Drawing.Point(9, 19);
-            this.radioButton38.Name = "radioButton38";
-            this.radioButton38.Size = new System.Drawing.Size(76, 17);
-            this.radioButton38.TabIndex = 20;
-            this.radioButton38.TabStop = true;
-            this.radioButton38.Text = "Paper Title";
-            this.radioButton38.UseVisualStyleBackColor = true;
+            this.footerLeftTitleRadio.AutoSize = true;
+            this.footerLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.footerLeftTitleRadio.Name = "footerLeftTitleRadio";
+            this.footerLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.footerLeftTitleRadio.TabIndex = 20;
+            this.footerLeftTitleRadio.TabStop = true;
+            this.footerLeftTitleRadio.Text = "Paper Title";
+            this.footerLeftTitleRadio.UseVisualStyleBackColor = true;
+            this.footerLeftTitleRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
             // 
-            // textBox19
+            // footerLeftOtherEnter
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(196, 64);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(140, 20);
-            this.textBox19.TabIndex = 19;
+            this.footerLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.footerLeftOtherEnter.Name = "footerLeftOtherEnter";
+            this.footerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.footerLeftOtherEnter.TabIndex = 19;
+            this.footerLeftOtherEnter.Visible = false;
             // 
             // footerHeader
             // 
+            this.footerHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.footerHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.footerHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.footerHeader.Location = new System.Drawing.Point(0, 0);
             this.footerHeader.Name = "footerHeader";
             this.footerHeader.Size = new System.Drawing.Size(638, 30);
@@ -1290,7 +1373,7 @@
             // footerDefaultButton
             // 
             this.footerDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerDefaultButton.Location = new System.Drawing.Point(9, 790);
+            this.footerDefaultButton.Location = new System.Drawing.Point(9, 536);
             this.footerDefaultButton.Name = "footerDefaultButton";
             this.footerDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.footerDefaultButton.TabIndex = 15;
@@ -1306,7 +1389,7 @@
             this.headerPanel.Controls.Add(this.headerDefaultButton);
             this.headerPanel.Location = new System.Drawing.Point(0, 1945);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(640, 825);
+            this.headerPanel.Size = new System.Drawing.Size(640, 571);
             this.headerPanel.TabIndex = 10;
             // 
             // headerOptionsGroupBox
@@ -1318,7 +1401,7 @@
             this.headerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.headerOptionsGroupBox.Name = "headerOptionsGroupBox";
-            this.headerOptionsGroupBox.Size = new System.Drawing.Size(615, 748);
+            this.headerOptionsGroupBox.Size = new System.Drawing.Size(615, 494);
             this.headerOptionsGroupBox.TabIndex = 1;
             this.headerOptionsGroupBox.TabStop = false;
             this.headerOptionsGroupBox.Text = "Options";
@@ -1328,666 +1411,732 @@
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageRightGroupBox);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageCenterGroupBox);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageLeftGroupBox);
-            this.headerFirstPageGroupBox.Controls.Add(this.checkBox11);
-            this.headerFirstPageGroupBox.Controls.Add(this.checkBox12);
-            this.headerFirstPageGroupBox.Controls.Add(this.checkBox13);
+            this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageMoreCheck);
+            this.headerFirstPageGroupBox.Controls.Add(this.headerDiffFirstPageCheck);
+            this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageUseRunningHeadCheck);
             this.headerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(9, 353);
+            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(9, 440);
             this.headerFirstPageGroupBox.Name = "headerFirstPageGroupBox";
-            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(597, 384);
+            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(597, 43);
             this.headerFirstPageGroupBox.TabIndex = 27;
             this.headerFirstPageGroupBox.TabStop = false;
             this.headerFirstPageGroupBox.Text = "First Page";
             // 
             // headerFirstPageRightGroupBox
             // 
-            this.headerFirstPageRightGroupBox.Controls.Add(this.textBox30);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.label56);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.numericUpDown6);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.label26);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.label27);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.radioButton18);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.radioButton19);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.radioButton20);
-            this.headerFirstPageRightGroupBox.Controls.Add(this.textBox13);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightEmptyRadio);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleEnter);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleLabel);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightNumberEnter);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightNumberLabel);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightOtherLabel);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightOtherRadio);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightNumberRadio);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleRadio);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightOtherEnter);
             this.headerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 282);
+            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 342);
             this.headerFirstPageRightGroupBox.Name = "headerFirstPageRightGroupBox";
-            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageRightGroupBox.TabIndex = 26;
             this.headerFirstPageRightGroupBox.TabStop = false;
             this.headerFirstPageRightGroupBox.Text = "First Page Right";
+            this.headerFirstPageRightGroupBox.Visible = false;
             // 
-            // textBox30
+            // headerFirstRightTitleEnter
             // 
-            this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(196, 18);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(140, 20);
-            this.textBox30.TabIndex = 29;
+            this.headerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstRightTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerFirstRightTitleEnter.Name = "headerFirstRightTitleEnter";
+            this.headerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstRightTitleEnter.TabIndex = 29;
+            this.headerFirstRightTitleEnter.Visible = false;
             // 
-            // label56
+            // headerFirstRightTitleLabel
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(162, 21);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(30, 13);
-            this.label56.TabIndex = 28;
-            this.label56.Text = "Title:";
+            this.headerFirstRightTitleLabel.AutoSize = true;
+            this.headerFirstRightTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerFirstRightTitleLabel.Name = "headerFirstRightTitleLabel";
+            this.headerFirstRightTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerFirstRightTitleLabel.TabIndex = 28;
+            this.headerFirstRightTitleLabel.Text = "Title:";
+            this.headerFirstRightTitleLabel.Visible = false;
             // 
-            // numericUpDown6
+            // headerFirstRightNumberEnter
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown6.TabIndex = 25;
+            this.headerFirstRightNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerFirstRightNumberEnter.Name = "headerFirstRightNumberEnter";
+            this.headerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstRightNumberEnter.TabIndex = 25;
+            this.headerFirstRightNumberEnter.Visible = false;
             // 
-            // label26
+            // headerFirstRightNumberLabel
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(100, 44);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(92, 13);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "1st Page Number:";
+            this.headerFirstRightNumberLabel.AutoSize = true;
+            this.headerFirstRightNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerFirstRightNumberLabel.Name = "headerFirstRightNumberLabel";
+            this.headerFirstRightNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerFirstRightNumberLabel.TabIndex = 24;
+            this.headerFirstRightNumberLabel.Text = "1st Page Number:";
+            this.headerFirstRightNumberLabel.Visible = false;
             // 
-            // label27
+            // headerFirstRightOtherLabel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(161, 67);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(31, 13);
-            this.label27.TabIndex = 23;
-            this.label27.Text = "Text:";
+            this.headerFirstRightOtherLabel.AutoSize = true;
+            this.headerFirstRightOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerFirstRightOtherLabel.Name = "headerFirstRightOtherLabel";
+            this.headerFirstRightOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerFirstRightOtherLabel.TabIndex = 23;
+            this.headerFirstRightOtherLabel.Text = "Text:";
+            this.headerFirstRightOtherLabel.Visible = false;
             // 
-            // radioButton18
+            // headerFirstRightOtherRadio
             // 
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Location = new System.Drawing.Point(9, 65);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(75, 17);
-            this.radioButton18.TabIndex = 22;
-            this.radioButton18.TabStop = true;
-            this.radioButton18.Text = "Other Text";
-            this.radioButton18.UseVisualStyleBackColor = true;
+            this.headerFirstRightOtherRadio.AutoSize = true;
+            this.headerFirstRightOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerFirstRightOtherRadio.Name = "headerFirstRightOtherRadio";
+            this.headerFirstRightOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerFirstRightOtherRadio.TabIndex = 22;
+            this.headerFirstRightOtherRadio.TabStop = true;
+            this.headerFirstRightOtherRadio.Text = "Other Text";
+            this.headerFirstRightOtherRadio.UseVisualStyleBackColor = true;
+            this.headerFirstRightOtherRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
             // 
-            // radioButton19
+            // headerFirstRightNumberRadio
             // 
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Location = new System.Drawing.Point(9, 42);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(90, 17);
-            this.radioButton19.TabIndex = 21;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.Text = "Page Number";
-            this.radioButton19.UseVisualStyleBackColor = true;
+            this.headerFirstRightNumberRadio.AutoSize = true;
+            this.headerFirstRightNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerFirstRightNumberRadio.Name = "headerFirstRightNumberRadio";
+            this.headerFirstRightNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerFirstRightNumberRadio.TabIndex = 21;
+            this.headerFirstRightNumberRadio.TabStop = true;
+            this.headerFirstRightNumberRadio.Text = "Page Number";
+            this.headerFirstRightNumberRadio.UseVisualStyleBackColor = true;
+            this.headerFirstRightNumberRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
             // 
-            // radioButton20
+            // headerFirstRightTitleRadio
             // 
-            this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(9, 19);
-            this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(76, 17);
-            this.radioButton20.TabIndex = 20;
-            this.radioButton20.TabStop = true;
-            this.radioButton20.Text = "Paper Title";
-            this.radioButton20.UseVisualStyleBackColor = true;
+            this.headerFirstRightTitleRadio.AutoSize = true;
+            this.headerFirstRightTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerFirstRightTitleRadio.Name = "headerFirstRightTitleRadio";
+            this.headerFirstRightTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerFirstRightTitleRadio.TabIndex = 20;
+            this.headerFirstRightTitleRadio.TabStop = true;
+            this.headerFirstRightTitleRadio.Text = "Paper Title";
+            this.headerFirstRightTitleRadio.UseVisualStyleBackColor = true;
+            this.headerFirstRightTitleRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
             // 
-            // textBox13
+            // headerFirstRightOtherEnter
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(196, 64);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(140, 20);
-            this.textBox13.TabIndex = 19;
+            this.headerFirstRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstRightOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerFirstRightOtherEnter.Name = "headerFirstRightOtherEnter";
+            this.headerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstRightOtherEnter.TabIndex = 19;
+            this.headerFirstRightOtherEnter.Visible = false;
             // 
             // headerFirstPageCenterGroupBox
             // 
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.textBox29);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.label55);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.numericUpDown5);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.label24);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.label25);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.radioButton15);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.radioButton16);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.radioButton17);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.textBox12);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterEmptyRadio);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleEnter);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleLabel);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberEnter);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberLabel);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherLabel);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherRadio);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberRadio);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleRadio);
+            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherEnter);
             this.headerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 185);
+            this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 215);
             this.headerFirstPageCenterGroupBox.Name = "headerFirstPageCenterGroupBox";
-            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageCenterGroupBox.TabIndex = 26;
             this.headerFirstPageCenterGroupBox.TabStop = false;
             this.headerFirstPageCenterGroupBox.Text = "First Page Center";
+            this.headerFirstPageCenterGroupBox.Visible = false;
             // 
-            // textBox29
+            // headerFirstCenterTitleEnter
             // 
-            this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(196, 18);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(140, 20);
-            this.textBox29.TabIndex = 29;
+            this.headerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerFirstCenterTitleEnter.Name = "headerFirstCenterTitleEnter";
+            this.headerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstCenterTitleEnter.TabIndex = 29;
+            this.headerFirstCenterTitleEnter.Visible = false;
             // 
-            // label55
+            // headerFirstCenterTitleLabel
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(162, 21);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(30, 13);
-            this.label55.TabIndex = 28;
-            this.label55.Text = "Title:";
+            this.headerFirstCenterTitleLabel.AutoSize = true;
+            this.headerFirstCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerFirstCenterTitleLabel.Name = "headerFirstCenterTitleLabel";
+            this.headerFirstCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerFirstCenterTitleLabel.TabIndex = 28;
+            this.headerFirstCenterTitleLabel.Text = "Title:";
+            this.headerFirstCenterTitleLabel.Visible = false;
             // 
-            // numericUpDown5
+            // headerFirstCenterNumberEnter
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown5.TabIndex = 25;
+            this.headerFirstCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerFirstCenterNumberEnter.Name = "headerFirstCenterNumberEnter";
+            this.headerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstCenterNumberEnter.TabIndex = 25;
+            this.headerFirstCenterNumberEnter.Visible = false;
             // 
-            // label24
+            // headerFirstCenterNumberLabel
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(100, 44);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(92, 13);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "1st Page Number:";
+            this.headerFirstCenterNumberLabel.AutoSize = true;
+            this.headerFirstCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerFirstCenterNumberLabel.Name = "headerFirstCenterNumberLabel";
+            this.headerFirstCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerFirstCenterNumberLabel.TabIndex = 24;
+            this.headerFirstCenterNumberLabel.Text = "1st Page Number:";
+            this.headerFirstCenterNumberLabel.Visible = false;
             // 
-            // label25
+            // headerFirstCenterOtherLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(161, 67);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 13);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "Text:";
+            this.headerFirstCenterOtherLabel.AutoSize = true;
+            this.headerFirstCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerFirstCenterOtherLabel.Name = "headerFirstCenterOtherLabel";
+            this.headerFirstCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerFirstCenterOtherLabel.TabIndex = 23;
+            this.headerFirstCenterOtherLabel.Text = "Text:";
+            this.headerFirstCenterOtherLabel.Visible = false;
             // 
-            // radioButton15
+            // headerFirstCenterOtherRadio
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(9, 65);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(75, 17);
-            this.radioButton15.TabIndex = 22;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "Other Text";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.headerFirstCenterOtherRadio.AutoSize = true;
+            this.headerFirstCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerFirstCenterOtherRadio.Name = "headerFirstCenterOtherRadio";
+            this.headerFirstCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerFirstCenterOtherRadio.TabIndex = 22;
+            this.headerFirstCenterOtherRadio.TabStop = true;
+            this.headerFirstCenterOtherRadio.Text = "Other Text";
+            this.headerFirstCenterOtherRadio.UseVisualStyleBackColor = true;
+            this.headerFirstCenterOtherRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
             // 
-            // radioButton16
+            // headerFirstCenterNumberRadio
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(9, 42);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(90, 17);
-            this.radioButton16.TabIndex = 21;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Page Number";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.headerFirstCenterNumberRadio.AutoSize = true;
+            this.headerFirstCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerFirstCenterNumberRadio.Name = "headerFirstCenterNumberRadio";
+            this.headerFirstCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerFirstCenterNumberRadio.TabIndex = 21;
+            this.headerFirstCenterNumberRadio.TabStop = true;
+            this.headerFirstCenterNumberRadio.Text = "Page Number";
+            this.headerFirstCenterNumberRadio.UseVisualStyleBackColor = true;
+            this.headerFirstCenterNumberRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
             // 
-            // radioButton17
+            // headerFirstCenterTitleRadio
             // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(9, 19);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(76, 17);
-            this.radioButton17.TabIndex = 20;
-            this.radioButton17.TabStop = true;
-            this.radioButton17.Text = "Paper Title";
-            this.radioButton17.UseVisualStyleBackColor = true;
+            this.headerFirstCenterTitleRadio.AutoSize = true;
+            this.headerFirstCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerFirstCenterTitleRadio.Name = "headerFirstCenterTitleRadio";
+            this.headerFirstCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerFirstCenterTitleRadio.TabIndex = 20;
+            this.headerFirstCenterTitleRadio.TabStop = true;
+            this.headerFirstCenterTitleRadio.Text = "Paper Title";
+            this.headerFirstCenterTitleRadio.UseVisualStyleBackColor = true;
+            this.headerFirstCenterTitleRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
             // 
-            // textBox12
+            // headerFirstCenterOtherEnter
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(196, 64);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(140, 20);
-            this.textBox12.TabIndex = 19;
+            this.headerFirstCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerFirstCenterOtherEnter.Name = "headerFirstCenterOtherEnter";
+            this.headerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstCenterOtherEnter.TabIndex = 19;
+            this.headerFirstCenterOtherEnter.Visible = false;
             // 
             // headerFirstPageLeftGroupBox
             // 
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.textBox28);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.label54);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.numericUpDown4);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.label22);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.label23);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.radioButton12);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.radioButton13);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.radioButton14);
-            this.headerFirstPageLeftGroupBox.Controls.Add(this.textBox11);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftEmptyRadio);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleEnter);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleLabel);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftNumberEnter);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftNumberLabel);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftOtherLabel);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftOtherRadio);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftNumberRadio);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleRadio);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftOtherEnter);
             this.headerFirstPageLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerFirstPageLeftGroupBox.Location = new System.Drawing.Point(9, 88);
             this.headerFirstPageLeftGroupBox.Name = "headerFirstPageLeftGroupBox";
-            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 91);
+            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageLeftGroupBox.TabIndex = 21;
             this.headerFirstPageLeftGroupBox.TabStop = false;
             this.headerFirstPageLeftGroupBox.Text = "First Page Left";
+            this.headerFirstPageLeftGroupBox.Visible = false;
             // 
-            // textBox28
+            // headerFirstLeftTitleEnter
             // 
-            this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(196, 18);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(140, 20);
-            this.textBox28.TabIndex = 29;
+            this.headerFirstLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerFirstLeftTitleEnter.Name = "headerFirstLeftTitleEnter";
+            this.headerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstLeftTitleEnter.TabIndex = 29;
+            this.headerFirstLeftTitleEnter.Visible = false;
             // 
-            // label54
+            // headerFirstLeftTitleLabel
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(162, 21);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(30, 13);
-            this.label54.TabIndex = 28;
-            this.label54.Text = "Title:";
+            this.headerFirstLeftTitleLabel.AutoSize = true;
+            this.headerFirstLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerFirstLeftTitleLabel.Name = "headerFirstLeftTitleLabel";
+            this.headerFirstLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerFirstLeftTitleLabel.TabIndex = 28;
+            this.headerFirstLeftTitleLabel.Text = "Title:";
+            this.headerFirstLeftTitleLabel.Visible = false;
             // 
-            // numericUpDown4
+            // headerFirstLeftNumberEnter
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown4.TabIndex = 25;
+            this.headerFirstLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerFirstLeftNumberEnter.Name = "headerFirstLeftNumberEnter";
+            this.headerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstLeftNumberEnter.TabIndex = 25;
+            this.headerFirstLeftNumberEnter.Visible = false;
             // 
-            // label22
+            // headerFirstLeftNumberLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(100, 44);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(92, 13);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "1st Page Number:";
+            this.headerFirstLeftNumberLabel.AutoSize = true;
+            this.headerFirstLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerFirstLeftNumberLabel.Name = "headerFirstLeftNumberLabel";
+            this.headerFirstLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerFirstLeftNumberLabel.TabIndex = 24;
+            this.headerFirstLeftNumberLabel.Text = "1st Page Number:";
+            this.headerFirstLeftNumberLabel.Visible = false;
             // 
-            // label23
+            // headerFirstLeftOtherLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(161, 67);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 13);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Text:";
+            this.headerFirstLeftOtherLabel.AutoSize = true;
+            this.headerFirstLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerFirstLeftOtherLabel.Name = "headerFirstLeftOtherLabel";
+            this.headerFirstLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerFirstLeftOtherLabel.TabIndex = 23;
+            this.headerFirstLeftOtherLabel.Text = "Text:";
+            this.headerFirstLeftOtherLabel.Visible = false;
             // 
-            // radioButton12
+            // headerFirstLeftOtherRadio
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(9, 65);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(75, 17);
-            this.radioButton12.TabIndex = 22;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Other Text";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.headerFirstLeftOtherRadio.AutoSize = true;
+            this.headerFirstLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerFirstLeftOtherRadio.Name = "headerFirstLeftOtherRadio";
+            this.headerFirstLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerFirstLeftOtherRadio.TabIndex = 22;
+            this.headerFirstLeftOtherRadio.TabStop = true;
+            this.headerFirstLeftOtherRadio.Text = "Other Text";
+            this.headerFirstLeftOtherRadio.UseVisualStyleBackColor = true;
+            this.headerFirstLeftOtherRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
             // 
-            // radioButton13
+            // headerFirstLeftNumberRadio
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(9, 42);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(90, 17);
-            this.radioButton13.TabIndex = 21;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Page Number";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.headerFirstLeftNumberRadio.AutoSize = true;
+            this.headerFirstLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerFirstLeftNumberRadio.Name = "headerFirstLeftNumberRadio";
+            this.headerFirstLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerFirstLeftNumberRadio.TabIndex = 21;
+            this.headerFirstLeftNumberRadio.TabStop = true;
+            this.headerFirstLeftNumberRadio.Text = "Page Number";
+            this.headerFirstLeftNumberRadio.UseVisualStyleBackColor = true;
+            this.headerFirstLeftNumberRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
             // 
-            // radioButton14
+            // headerFirstLeftTitleRadio
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(9, 19);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(76, 17);
-            this.radioButton14.TabIndex = 20;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Paper Title";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.headerFirstLeftTitleRadio.AutoSize = true;
+            this.headerFirstLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerFirstLeftTitleRadio.Name = "headerFirstLeftTitleRadio";
+            this.headerFirstLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerFirstLeftTitleRadio.TabIndex = 20;
+            this.headerFirstLeftTitleRadio.TabStop = true;
+            this.headerFirstLeftTitleRadio.Text = "Paper Title";
+            this.headerFirstLeftTitleRadio.UseVisualStyleBackColor = true;
+            this.headerFirstLeftTitleRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
             // 
-            // textBox11
+            // headerFirstLeftOtherEnter
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(196, 64);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(140, 20);
-            this.textBox11.TabIndex = 19;
+            this.headerFirstLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerFirstLeftOtherEnter.Name = "headerFirstLeftOtherEnter";
+            this.headerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerFirstLeftOtherEnter.TabIndex = 19;
+            this.headerFirstLeftOtherEnter.Visible = false;
             // 
-            // checkBox11
+            // headerFirstPageMoreCheck
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(9, 65);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(89, 17);
-            this.checkBox11.TabIndex = 3;
-            this.checkBox11.Text = "More Options";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.headerFirstPageMoreCheck.AutoSize = true;
+            this.headerFirstPageMoreCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstPageMoreCheck.Location = new System.Drawing.Point(9, 65);
+            this.headerFirstPageMoreCheck.Name = "headerFirstPageMoreCheck";
+            this.headerFirstPageMoreCheck.Size = new System.Drawing.Size(111, 17);
+            this.headerFirstPageMoreCheck.TabIndex = 3;
+            this.headerFirstPageMoreCheck.Text = "Use More Options";
+            this.headerFirstPageMoreCheck.UseVisualStyleBackColor = true;
+            this.headerFirstPageMoreCheck.Visible = false;
+            this.headerFirstPageMoreCheck.CheckedChanged += new System.EventHandler(this.headerFirstPageMoreCheck_CheckedChanged);
             // 
-            // checkBox12
+            // headerDiffFirstPageCheck
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.Location = new System.Drawing.Point(9, 19);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(133, 17);
-            this.checkBox12.TabIndex = 1;
-            this.checkBox12.Text = "Different On First Page";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.headerDiffFirstPageCheck.AutoSize = true;
+            this.headerDiffFirstPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerDiffFirstPageCheck.Location = new System.Drawing.Point(9, 19);
+            this.headerDiffFirstPageCheck.Name = "headerDiffFirstPageCheck";
+            this.headerDiffFirstPageCheck.Size = new System.Drawing.Size(133, 17);
+            this.headerDiffFirstPageCheck.TabIndex = 1;
+            this.headerDiffFirstPageCheck.Text = "Different On First Page";
+            this.headerDiffFirstPageCheck.UseVisualStyleBackColor = true;
+            this.headerDiffFirstPageCheck.CheckedChanged += new System.EventHandler(this.headerDiffFirstPageCheck_CheckedChanged);
             // 
-            // checkBox13
+            // headerFirstPageUseRunningHeadCheck
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.Location = new System.Drawing.Point(9, 42);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(128, 17);
-            this.checkBox13.TabIndex = 2;
-            this.checkBox13.Text = "Use \"Running head:\"";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.headerFirstPageUseRunningHeadCheck.AutoSize = true;
+            this.headerFirstPageUseRunningHeadCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(9, 42);
+            this.headerFirstPageUseRunningHeadCheck.Name = "headerFirstPageUseRunningHeadCheck";
+            this.headerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(128, 17);
+            this.headerFirstPageUseRunningHeadCheck.TabIndex = 2;
+            this.headerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
+            this.headerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
+            this.headerFirstPageUseRunningHeadCheck.Visible = false;
             // 
             // headerRightGroupBox
             // 
-            this.headerRightGroupBox.Controls.Add(this.textBox27);
-            this.headerRightGroupBox.Controls.Add(this.label53);
-            this.headerRightGroupBox.Controls.Add(this.numericUpDown3);
-            this.headerRightGroupBox.Controls.Add(this.label20);
-            this.headerRightGroupBox.Controls.Add(this.label21);
-            this.headerRightGroupBox.Controls.Add(this.radioButton9);
-            this.headerRightGroupBox.Controls.Add(this.radioButton10);
-            this.headerRightGroupBox.Controls.Add(this.radioButton11);
-            this.headerRightGroupBox.Controls.Add(this.textBox10);
+            this.headerRightGroupBox.Controls.Add(this.headerRightEmptyRadio);
+            this.headerRightGroupBox.Controls.Add(this.headerRightTitleEnter);
+            this.headerRightGroupBox.Controls.Add(this.headerRightTitleLabel);
+            this.headerRightGroupBox.Controls.Add(this.headerRightNumberEnter);
+            this.headerRightGroupBox.Controls.Add(this.headerRightNumberLabel);
+            this.headerRightGroupBox.Controls.Add(this.headerRightOtherLabel);
+            this.headerRightGroupBox.Controls.Add(this.headerRightOtherRadio);
+            this.headerRightGroupBox.Controls.Add(this.headerRightNumberRadio);
+            this.headerRightGroupBox.Controls.Add(this.headerRightTitleRadio);
+            this.headerRightGroupBox.Controls.Add(this.headerRightOtherEnter);
             this.headerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightGroupBox.Location = new System.Drawing.Point(9, 240);
+            this.headerRightGroupBox.Location = new System.Drawing.Point(9, 300);
             this.headerRightGroupBox.Name = "headerRightGroupBox";
-            this.headerRightGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.headerRightGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerRightGroupBox.TabIndex = 26;
             this.headerRightGroupBox.TabStop = false;
             this.headerRightGroupBox.Text = "Right";
             // 
-            // textBox27
+            // headerRightTitleEnter
             // 
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(196, 18);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(140, 20);
-            this.textBox27.TabIndex = 29;
+            this.headerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerRightTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerRightTitleEnter.Name = "headerRightTitleEnter";
+            this.headerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerRightTitleEnter.TabIndex = 29;
+            this.headerRightTitleEnter.Visible = false;
             // 
-            // label53
+            // headerRightTitleLabel
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(162, 21);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(30, 13);
-            this.label53.TabIndex = 28;
-            this.label53.Text = "Title:";
+            this.headerRightTitleLabel.AutoSize = true;
+            this.headerRightTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerRightTitleLabel.Name = "headerRightTitleLabel";
+            this.headerRightTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerRightTitleLabel.TabIndex = 28;
+            this.headerRightTitleLabel.Text = "Title:";
+            this.headerRightTitleLabel.Visible = false;
             // 
-            // numericUpDown3
+            // headerRightNumberEnter
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown3.TabIndex = 25;
+            this.headerRightNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerRightNumberEnter.Name = "headerRightNumberEnter";
+            this.headerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerRightNumberEnter.TabIndex = 25;
+            this.headerRightNumberEnter.Visible = false;
             // 
-            // label20
+            // headerRightNumberLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(100, 44);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 13);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "1st Page Number:";
+            this.headerRightNumberLabel.AutoSize = true;
+            this.headerRightNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerRightNumberLabel.Name = "headerRightNumberLabel";
+            this.headerRightNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerRightNumberLabel.TabIndex = 24;
+            this.headerRightNumberLabel.Text = "1st Page Number:";
+            this.headerRightNumberLabel.Visible = false;
             // 
-            // label21
+            // headerRightOtherLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(161, 67);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "Text:";
+            this.headerRightOtherLabel.AutoSize = true;
+            this.headerRightOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerRightOtherLabel.Name = "headerRightOtherLabel";
+            this.headerRightOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerRightOtherLabel.TabIndex = 23;
+            this.headerRightOtherLabel.Text = "Text:";
+            this.headerRightOtherLabel.Visible = false;
             // 
-            // radioButton9
+            // headerRightOtherRadio
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(9, 65);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(75, 17);
-            this.radioButton9.TabIndex = 22;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Other Text";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.headerRightOtherRadio.AutoSize = true;
+            this.headerRightOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerRightOtherRadio.Name = "headerRightOtherRadio";
+            this.headerRightOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerRightOtherRadio.TabIndex = 22;
+            this.headerRightOtherRadio.TabStop = true;
+            this.headerRightOtherRadio.Text = "Other Text";
+            this.headerRightOtherRadio.UseVisualStyleBackColor = true;
+            this.headerRightOtherRadio.CheckedChanged += new System.EventHandler(this.headerRightChanged);
             // 
-            // radioButton10
+            // headerRightNumberRadio
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(9, 42);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(90, 17);
-            this.radioButton10.TabIndex = 21;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Page Number";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.headerRightNumberRadio.AutoSize = true;
+            this.headerRightNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerRightNumberRadio.Name = "headerRightNumberRadio";
+            this.headerRightNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerRightNumberRadio.TabIndex = 21;
+            this.headerRightNumberRadio.TabStop = true;
+            this.headerRightNumberRadio.Text = "Page Number";
+            this.headerRightNumberRadio.UseVisualStyleBackColor = true;
+            this.headerRightNumberRadio.CheckedChanged += new System.EventHandler(this.headerRightChanged);
             // 
-            // radioButton11
+            // headerRightTitleRadio
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(9, 19);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(76, 17);
-            this.radioButton11.TabIndex = 20;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Paper Title";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.headerRightTitleRadio.AutoSize = true;
+            this.headerRightTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerRightTitleRadio.Name = "headerRightTitleRadio";
+            this.headerRightTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerRightTitleRadio.TabIndex = 20;
+            this.headerRightTitleRadio.TabStop = true;
+            this.headerRightTitleRadio.Text = "Paper Title";
+            this.headerRightTitleRadio.UseVisualStyleBackColor = true;
+            this.headerRightTitleRadio.CheckedChanged += new System.EventHandler(this.headerRightChanged);
             // 
-            // textBox10
+            // headerRightOtherEnter
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(196, 64);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(140, 20);
-            this.textBox10.TabIndex = 19;
+            this.headerRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerRightOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerRightOtherEnter.Name = "headerRightOtherEnter";
+            this.headerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerRightOtherEnter.TabIndex = 19;
+            this.headerRightOtherEnter.Visible = false;
             // 
             // headerCenterGroupBox
             // 
-            this.headerCenterGroupBox.Controls.Add(this.textBox26);
-            this.headerCenterGroupBox.Controls.Add(this.label52);
-            this.headerCenterGroupBox.Controls.Add(this.numericUpDown2);
-            this.headerCenterGroupBox.Controls.Add(this.label18);
-            this.headerCenterGroupBox.Controls.Add(this.label19);
-            this.headerCenterGroupBox.Controls.Add(this.radioButton6);
-            this.headerCenterGroupBox.Controls.Add(this.radioButton7);
-            this.headerCenterGroupBox.Controls.Add(this.radioButton8);
-            this.headerCenterGroupBox.Controls.Add(this.textBox9);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterEmptyRadio);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleEnter);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleLabel);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberEnter);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberLabel);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherLabel);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherRadio);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberRadio);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleRadio);
+            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherEnter);
             this.headerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterGroupBox.Location = new System.Drawing.Point(9, 127);
+            this.headerCenterGroupBox.Location = new System.Drawing.Point(9, 157);
             this.headerCenterGroupBox.Name = "headerCenterGroupBox";
-            this.headerCenterGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.headerCenterGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerCenterGroupBox.TabIndex = 26;
             this.headerCenterGroupBox.TabStop = false;
             this.headerCenterGroupBox.Text = "Center";
             // 
-            // textBox26
+            // headerCenterTitleEnter
             // 
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(196, 18);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(140, 20);
-            this.textBox26.TabIndex = 29;
+            this.headerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerCenterTitleEnter.Name = "headerCenterTitleEnter";
+            this.headerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerCenterTitleEnter.TabIndex = 29;
+            this.headerCenterTitleEnter.Visible = false;
             // 
-            // label52
+            // headerCenterTitleLabel
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(162, 21);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(30, 13);
-            this.label52.TabIndex = 28;
-            this.label52.Text = "Title:";
+            this.headerCenterTitleLabel.AutoSize = true;
+            this.headerCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerCenterTitleLabel.Name = "headerCenterTitleLabel";
+            this.headerCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerCenterTitleLabel.TabIndex = 28;
+            this.headerCenterTitleLabel.Text = "Title:";
+            this.headerCenterTitleLabel.Visible = false;
             // 
-            // numericUpDown2
+            // headerCenterNumberEnter
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown2.TabIndex = 25;
+            this.headerCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerCenterNumberEnter.Name = "headerCenterNumberEnter";
+            this.headerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerCenterNumberEnter.TabIndex = 25;
+            this.headerCenterNumberEnter.Visible = false;
             // 
-            // label18
+            // headerCenterNumberLabel
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(100, 44);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(92, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "1st Page Number:";
+            this.headerCenterNumberLabel.AutoSize = true;
+            this.headerCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerCenterNumberLabel.Name = "headerCenterNumberLabel";
+            this.headerCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerCenterNumberLabel.TabIndex = 24;
+            this.headerCenterNumberLabel.Text = "1st Page Number:";
+            this.headerCenterNumberLabel.Visible = false;
             // 
-            // label19
+            // headerCenterOtherLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(161, 67);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 13);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Text:";
+            this.headerCenterOtherLabel.AutoSize = true;
+            this.headerCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerCenterOtherLabel.Name = "headerCenterOtherLabel";
+            this.headerCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerCenterOtherLabel.TabIndex = 23;
+            this.headerCenterOtherLabel.Text = "Text:";
+            this.headerCenterOtherLabel.Visible = false;
             // 
-            // radioButton6
+            // headerCenterOtherRadio
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(9, 65);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(75, 17);
-            this.radioButton6.TabIndex = 22;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Other Text";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.headerCenterOtherRadio.AutoSize = true;
+            this.headerCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerCenterOtherRadio.Name = "headerCenterOtherRadio";
+            this.headerCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerCenterOtherRadio.TabIndex = 22;
+            this.headerCenterOtherRadio.TabStop = true;
+            this.headerCenterOtherRadio.Text = "Other Text";
+            this.headerCenterOtherRadio.UseVisualStyleBackColor = true;
+            this.headerCenterOtherRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
             // 
-            // radioButton7
+            // headerCenterNumberRadio
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(9, 42);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(90, 17);
-            this.radioButton7.TabIndex = 21;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Page Number";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.headerCenterNumberRadio.AutoSize = true;
+            this.headerCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerCenterNumberRadio.Name = "headerCenterNumberRadio";
+            this.headerCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerCenterNumberRadio.TabIndex = 21;
+            this.headerCenterNumberRadio.TabStop = true;
+            this.headerCenterNumberRadio.Text = "Page Number";
+            this.headerCenterNumberRadio.UseVisualStyleBackColor = true;
+            this.headerCenterNumberRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
             // 
-            // radioButton8
+            // headerCenterTitleRadio
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(9, 19);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(76, 17);
-            this.radioButton8.TabIndex = 20;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Paper Title";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.headerCenterTitleRadio.AutoSize = true;
+            this.headerCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerCenterTitleRadio.Name = "headerCenterTitleRadio";
+            this.headerCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerCenterTitleRadio.TabIndex = 20;
+            this.headerCenterTitleRadio.TabStop = true;
+            this.headerCenterTitleRadio.Text = "Paper Title";
+            this.headerCenterTitleRadio.UseVisualStyleBackColor = true;
+            this.headerCenterTitleRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
             // 
-            // textBox9
+            // headerCenterOtherEnter
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(196, 64);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 20);
-            this.textBox9.TabIndex = 19;
+            this.headerCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerCenterOtherEnter.Name = "headerCenterOtherEnter";
+            this.headerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerCenterOtherEnter.TabIndex = 19;
+            this.headerCenterOtherEnter.Visible = false;
             // 
             // headerLeftGroupBox
             // 
-            this.headerLeftGroupBox.Controls.Add(this.textBox25);
-            this.headerLeftGroupBox.Controls.Add(this.label51);
-            this.headerLeftGroupBox.Controls.Add(this.numericUpDown1);
-            this.headerLeftGroupBox.Controls.Add(this.label17);
-            this.headerLeftGroupBox.Controls.Add(this.label16);
-            this.headerLeftGroupBox.Controls.Add(this.radioButton5);
-            this.headerLeftGroupBox.Controls.Add(this.radioButton4);
-            this.headerLeftGroupBox.Controls.Add(this.radioButton3);
-            this.headerLeftGroupBox.Controls.Add(this.textBox8);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftEmptyRadio);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleEnter);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleLabel);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftNumberEnter);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftNumberLabel);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftOtherLabel);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftOtherRadio);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftNumberRadio);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleRadio);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftOtherEnter);
             this.headerLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLeftGroupBox.Location = new System.Drawing.Point(9, 19);
             this.headerLeftGroupBox.Name = "headerLeftGroupBox";
-            this.headerLeftGroupBox.Size = new System.Drawing.Size(597, 91);
+            this.headerLeftGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerLeftGroupBox.TabIndex = 20;
             this.headerLeftGroupBox.TabStop = false;
             this.headerLeftGroupBox.Text = "Left";
             // 
-            // textBox25
+            // headerLeftTitleEnter
             // 
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(196, 18);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(140, 20);
-            this.textBox25.TabIndex = 27;
+            this.headerLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
+            this.headerLeftTitleEnter.Name = "headerLeftTitleEnter";
+            this.headerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerLeftTitleEnter.TabIndex = 27;
+            this.headerLeftTitleEnter.Visible = false;
             // 
-            // label51
+            // headerLeftTitleLabel
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(162, 21);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(30, 13);
-            this.label51.TabIndex = 26;
-            this.label51.Text = "Title:";
+            this.headerLeftTitleLabel.AutoSize = true;
+            this.headerLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
+            this.headerLeftTitleLabel.Name = "headerLeftTitleLabel";
+            this.headerLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.headerLeftTitleLabel.TabIndex = 26;
+            this.headerLeftTitleLabel.Text = "Title:";
+            this.headerLeftTitleLabel.Visible = false;
             // 
-            // numericUpDown1
+            // headerLeftNumberEnter
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(196, 42);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(140, 20);
-            this.numericUpDown1.TabIndex = 25;
+            this.headerLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
+            this.headerLeftNumberEnter.Name = "headerLeftNumberEnter";
+            this.headerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerLeftNumberEnter.TabIndex = 25;
+            this.headerLeftNumberEnter.Visible = false;
             // 
-            // label17
+            // headerLeftNumberLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(100, 44);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(92, 13);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "1st Page Number:";
+            this.headerLeftNumberLabel.AutoSize = true;
+            this.headerLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
+            this.headerLeftNumberLabel.Name = "headerLeftNumberLabel";
+            this.headerLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
+            this.headerLeftNumberLabel.TabIndex = 24;
+            this.headerLeftNumberLabel.Text = "1st Page Number:";
+            this.headerLeftNumberLabel.Visible = false;
             // 
-            // label16
+            // headerLeftOtherLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(161, 67);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Text:";
+            this.headerLeftOtherLabel.AutoSize = true;
+            this.headerLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
+            this.headerLeftOtherLabel.Name = "headerLeftOtherLabel";
+            this.headerLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
+            this.headerLeftOtherLabel.TabIndex = 23;
+            this.headerLeftOtherLabel.Text = "Text:";
+            this.headerLeftOtherLabel.Visible = false;
             // 
-            // radioButton5
+            // headerLeftOtherRadio
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(9, 65);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(75, 17);
-            this.radioButton5.TabIndex = 22;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Other Text";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.headerLeftOtherRadio.AutoSize = true;
+            this.headerLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
+            this.headerLeftOtherRadio.Name = "headerLeftOtherRadio";
+            this.headerLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
+            this.headerLeftOtherRadio.TabIndex = 22;
+            this.headerLeftOtherRadio.Text = "Other Text";
+            this.headerLeftOtherRadio.UseVisualStyleBackColor = true;
+            this.headerLeftOtherRadio.CheckedChanged += new System.EventHandler(this.headerLeftChanged);
             // 
-            // radioButton4
+            // headerLeftNumberRadio
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(9, 42);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(90, 17);
-            this.radioButton4.TabIndex = 21;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Page Number";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.headerLeftNumberRadio.AutoSize = true;
+            this.headerLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
+            this.headerLeftNumberRadio.Name = "headerLeftNumberRadio";
+            this.headerLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
+            this.headerLeftNumberRadio.TabIndex = 21;
+            this.headerLeftNumberRadio.Text = "Page Number";
+            this.headerLeftNumberRadio.UseVisualStyleBackColor = true;
+            this.headerLeftNumberRadio.CheckedChanged += new System.EventHandler(this.headerLeftChanged);
             // 
-            // radioButton3
+            // headerLeftTitleRadio
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(9, 19);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(76, 17);
-            this.radioButton3.TabIndex = 20;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Paper Title";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.headerLeftTitleRadio.AutoSize = true;
+            this.headerLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
+            this.headerLeftTitleRadio.Name = "headerLeftTitleRadio";
+            this.headerLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
+            this.headerLeftTitleRadio.TabIndex = 20;
+            this.headerLeftTitleRadio.Text = "Paper Title";
+            this.headerLeftTitleRadio.UseVisualStyleBackColor = true;
+            this.headerLeftTitleRadio.CheckedChanged += new System.EventHandler(this.headerLeftChanged);
             // 
-            // textBox8
+            // headerLeftOtherEnter
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(196, 64);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(140, 20);
-            this.textBox8.TabIndex = 19;
+            this.headerLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
+            this.headerLeftOtherEnter.Name = "headerLeftOtherEnter";
+            this.headerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
+            this.headerLeftOtherEnter.TabIndex = 19;
+            this.headerLeftOtherEnter.Visible = false;
             // 
             // headerHeader
             // 
+            this.headerHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.headerHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.headerHeader.Location = new System.Drawing.Point(0, 0);
             this.headerHeader.Name = "headerHeader";
             this.headerHeader.Size = new System.Drawing.Size(638, 30);
@@ -1998,7 +2147,7 @@
             // headerDefaultButton
             // 
             this.headerDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerDefaultButton.Location = new System.Drawing.Point(9, 789);
+            this.headerDefaultButton.Location = new System.Drawing.Point(9, 535);
             this.headerDefaultButton.Name = "headerDefaultButton";
             this.headerDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.headerDefaultButton.TabIndex = 15;
@@ -2237,8 +2386,10 @@
             // 
             // abstractHeader
             // 
+            this.abstractHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.abstractHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.abstractHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.abstractHeader.Location = new System.Drawing.Point(0, 0);
             this.abstractHeader.Name = "abstractHeader";
             this.abstractHeader.Size = new System.Drawing.Size(638, 30);
@@ -2478,8 +2629,10 @@
             // 
             // summaryHeader
             // 
+            this.summaryHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.summaryHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.summaryHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.summaryHeader.Location = new System.Drawing.Point(0, 0);
             this.summaryHeader.Name = "summaryHeader";
             this.summaryHeader.Size = new System.Drawing.Size(638, 30);
@@ -2494,16 +2647,16 @@
             this.conclusionPanel.Controls.Add(this.conclusionContentGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 4460);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 3682);
             this.conclusionPanel.Name = "conclusionPanel";
-            this.conclusionPanel.Size = new System.Drawing.Size(640, 545);
+            this.conclusionPanel.Size = new System.Drawing.Size(640, 440);
             this.conclusionPanel.TabIndex = 7;
             // 
             // conclusionContentGroupBox
             // 
             this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
             this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 279);
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 174);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
             this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 242);
             this.conclusionContentGroupBox.TabIndex = 12;
@@ -2561,7 +2714,7 @@
             this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
-            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 230);
+            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
             this.conclusionOptionsGroupBox.TabIndex = 3;
             this.conclusionOptionsGroupBox.TabStop = false;
             this.conclusionOptionsGroupBox.Text = "Options";
@@ -2569,7 +2722,7 @@
             // conclusionDefaultButton
             // 
             this.conclusionDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionDefaultButton.Location = new System.Drawing.Point(9, 198);
+            this.conclusionDefaultButton.Location = new System.Drawing.Point(9, 93);
             this.conclusionDefaultButton.Name = "conclusionDefaultButton";
             this.conclusionDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.conclusionDefaultButton.TabIndex = 14;
@@ -2578,122 +2731,133 @@
             // 
             // conclusionTitleGroupBox
             // 
-            this.conclusionTitleGroupBox.Controls.Add(this.button12);
-            this.conclusionTitleGroupBox.Controls.Add(this.textBox20);
-            this.conclusionTitleGroupBox.Controls.Add(this.label40);
-            this.conclusionTitleGroupBox.Controls.Add(this.comboBox10);
-            this.conclusionTitleGroupBox.Controls.Add(this.label41);
-            this.conclusionTitleGroupBox.Controls.Add(this.label42);
-            this.conclusionTitleGroupBox.Controls.Add(this.comboBox11);
-            this.conclusionTitleGroupBox.Controls.Add(this.checkBox17);
-            this.conclusionTitleGroupBox.Controls.Add(this.checkBox18);
-            this.conclusionTitleGroupBox.Controls.Add(this.textBox21);
-            this.conclusionTitleGroupBox.Controls.Add(this.label43);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorButton);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorText);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeChoose);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontChoose);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleBoldCheck);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionIncludeTitleCheck);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleEnter);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleLabel);
             this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
-            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 150);
+            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.conclusionTitleGroupBox.TabIndex = 4;
             this.conclusionTitleGroupBox.TabStop = false;
             this.conclusionTitleGroupBox.Text = "Conclusion Title";
             // 
-            // button12
+            // conclusionTitleColorButton
             // 
-            this.button12.Location = new System.Drawing.Point(141, 114);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(73, 23);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "Choose";
-            this.button12.UseVisualStyleBackColor = true;
+            this.conclusionTitleColorButton.Location = new System.Drawing.Point(141, 114);
+            this.conclusionTitleColorButton.Name = "conclusionTitleColorButton";
+            this.conclusionTitleColorButton.Size = new System.Drawing.Size(73, 23);
+            this.conclusionTitleColorButton.TabIndex = 13;
+            this.conclusionTitleColorButton.Text = "Choose";
+            this.conclusionTitleColorButton.UseVisualStyleBackColor = true;
+            this.conclusionTitleColorButton.Visible = false;
             // 
-            // textBox20
+            // conclusionTitleColorText
             // 
-            this.textBox20.Location = new System.Drawing.Point(70, 116);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(72, 20);
-            this.textBox20.TabIndex = 14;
+            this.conclusionTitleColorText.Location = new System.Drawing.Point(70, 116);
+            this.conclusionTitleColorText.Name = "conclusionTitleColorText";
+            this.conclusionTitleColorText.Size = new System.Drawing.Size(72, 20);
+            this.conclusionTitleColorText.TabIndex = 14;
+            this.conclusionTitleColorText.Visible = false;
             // 
-            // label40
+            // conclusionTitleColorLabel
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(3, 119);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(57, 13);
-            this.label40.TabIndex = 19;
-            this.label40.Text = "Title Color:";
+            this.conclusionTitleColorLabel.AutoSize = true;
+            this.conclusionTitleColorLabel.Location = new System.Drawing.Point(3, 119);
+            this.conclusionTitleColorLabel.Name = "conclusionTitleColorLabel";
+            this.conclusionTitleColorLabel.Size = new System.Drawing.Size(57, 13);
+            this.conclusionTitleColorLabel.TabIndex = 19;
+            this.conclusionTitleColorLabel.Text = "Title Color:";
+            this.conclusionTitleColorLabel.Visible = false;
             // 
-            // comboBox10
+            // conclusionTitleSizeChoose
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(70, 90);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(144, 21);
-            this.comboBox10.TabIndex = 18;
+            this.conclusionTitleSizeChoose.FormattingEnabled = true;
+            this.conclusionTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
+            this.conclusionTitleSizeChoose.Name = "conclusionTitleSizeChoose";
+            this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
+            this.conclusionTitleSizeChoose.TabIndex = 18;
+            this.conclusionTitleSizeChoose.Visible = false;
             // 
-            // label41
+            // conclusionTitleSizeLabel
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(3, 93);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(53, 13);
-            this.label41.TabIndex = 17;
-            this.label41.Text = "Title Size:";
+            this.conclusionTitleSizeLabel.AutoSize = true;
+            this.conclusionTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
+            this.conclusionTitleSizeLabel.Name = "conclusionTitleSizeLabel";
+            this.conclusionTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
+            this.conclusionTitleSizeLabel.TabIndex = 17;
+            this.conclusionTitleSizeLabel.Text = "Title Size:";
+            this.conclusionTitleSizeLabel.Visible = false;
             // 
-            // label42
+            // conclusionTitleFontLabel
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(3, 67);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(54, 13);
-            this.label42.TabIndex = 16;
-            this.label42.Text = "Title Font:";
+            this.conclusionTitleFontLabel.AutoSize = true;
+            this.conclusionTitleFontLabel.Location = new System.Drawing.Point(3, 67);
+            this.conclusionTitleFontLabel.Name = "conclusionTitleFontLabel";
+            this.conclusionTitleFontLabel.Size = new System.Drawing.Size(54, 13);
+            this.conclusionTitleFontLabel.TabIndex = 16;
+            this.conclusionTitleFontLabel.Text = "Title Font:";
+            this.conclusionTitleFontLabel.Visible = false;
             // 
-            // comboBox11
+            // conclusionTitleFontChoose
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(70, 64);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(144, 21);
-            this.comboBox11.TabIndex = 15;
+            this.conclusionTitleFontChoose.FormattingEnabled = true;
+            this.conclusionTitleFontChoose.Location = new System.Drawing.Point(70, 64);
+            this.conclusionTitleFontChoose.Name = "conclusionTitleFontChoose";
+            this.conclusionTitleFontChoose.Size = new System.Drawing.Size(144, 21);
+            this.conclusionTitleFontChoose.TabIndex = 15;
+            this.conclusionTitleFontChoose.Visible = false;
             // 
-            // checkBox17
+            // conclusionTitleBoldCheck
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(6, 42);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(70, 17);
-            this.checkBox17.TabIndex = 11;
-            this.checkBox17.Text = "Bold Title";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.conclusionTitleBoldCheck.AutoSize = true;
+            this.conclusionTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
+            this.conclusionTitleBoldCheck.Name = "conclusionTitleBoldCheck";
+            this.conclusionTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
+            this.conclusionTitleBoldCheck.TabIndex = 11;
+            this.conclusionTitleBoldCheck.Text = "Bold Title";
+            this.conclusionTitleBoldCheck.UseVisualStyleBackColor = true;
+            this.conclusionTitleBoldCheck.Visible = false;
             // 
-            // checkBox18
+            // conclusionIncludeTitleCheck
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox18.Location = new System.Drawing.Point(6, 19);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(84, 17);
-            this.checkBox18.TabIndex = 1;
-            this.checkBox18.Text = "Include Title";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.conclusionIncludeTitleCheck.AutoSize = true;
+            this.conclusionIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
+            this.conclusionIncludeTitleCheck.Name = "conclusionIncludeTitleCheck";
+            this.conclusionIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
+            this.conclusionIncludeTitleCheck.TabIndex = 1;
+            this.conclusionIncludeTitleCheck.Text = "Include Title";
+            this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
+            this.conclusionIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeTitleCheck_CheckedChanged);
             // 
-            // textBox21
+            // conclusionTitleEnter
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(123, 17);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(159, 20);
-            this.textBox21.TabIndex = 2;
+            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleEnter.Location = new System.Drawing.Point(123, 17);
+            this.conclusionTitleEnter.Name = "conclusionTitleEnter";
+            this.conclusionTitleEnter.Size = new System.Drawing.Size(159, 20);
+            this.conclusionTitleEnter.TabIndex = 2;
+            this.conclusionTitleEnter.Visible = false;
             // 
-            // label43
+            // conclusionTitleLabel
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(94, 20);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(30, 13);
-            this.label43.TabIndex = 3;
-            this.label43.Text = "Title:";
+            this.conclusionTitleLabel.AutoSize = true;
+            this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleLabel.Location = new System.Drawing.Point(94, 20);
+            this.conclusionTitleLabel.Name = "conclusionTitleLabel";
+            this.conclusionTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.conclusionTitleLabel.TabIndex = 3;
+            this.conclusionTitleLabel.Text = "Title:";
+            this.conclusionTitleLabel.Visible = false;
             // 
             // checkBox19
             // 
@@ -2708,8 +2872,10 @@
             // 
             // conclusionHeader
             // 
+            this.conclusionHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.conclusionHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.conclusionHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.conclusionHeader.Location = new System.Drawing.Point(0, 0);
             this.conclusionHeader.Name = "conclusionHeader";
             this.conclusionHeader.Size = new System.Drawing.Size(638, 30);
@@ -2724,219 +2890,234 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 5005);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 4122);
             this.referencesPanel.Name = "referencesPanel";
-            this.referencesPanel.Size = new System.Drawing.Size(640, 407);
+            this.referencesPanel.Size = new System.Drawing.Size(640, 270);
             this.referencesPanel.TabIndex = 6;
             // 
             // referencesOptionsGroupBox
             // 
-            this.referencesOptionsGroupBox.Controls.Add(this.comboBox14);
-            this.referencesOptionsGroupBox.Controls.Add(this.label49);
-            this.referencesOptionsGroupBox.Controls.Add(this.checkBox23);
+            this.referencesOptionsGroupBox.Controls.Add(this.referencesOrderChoose);
+            this.referencesOptionsGroupBox.Controls.Add(this.referencesOrderLabel);
+            this.referencesOptionsGroupBox.Controls.Add(this.referencesEmptyLineBetweenCheck);
             this.referencesOptionsGroupBox.Controls.Add(this.referencesIndentationGroupBox);
             this.referencesOptionsGroupBox.Controls.Add(this.referencesTitleGroupBox);
             this.referencesOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.referencesOptionsGroupBox.Name = "referencesOptionsGroupBox";
-            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(615, 317);
+            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(615, 185);
             this.referencesOptionsGroupBox.TabIndex = 4;
             this.referencesOptionsGroupBox.TabStop = false;
             this.referencesOptionsGroupBox.Text = "Options";
             // 
-            // comboBox14
+            // referencesOrderChoose
             // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(44, 284);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(144, 21);
-            this.comboBox14.TabIndex = 23;
+            this.referencesOrderChoose.Location = new System.Drawing.Point(44, 152);
+            this.referencesOrderChoose.Name = "referencesOrderChoose";
+            this.referencesOrderChoose.Size = new System.Drawing.Size(144, 21);
+            this.referencesOrderChoose.TabIndex = 23;
             // 
-            // label49
+            // referencesOrderLabel
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(6, 287);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(36, 13);
-            this.label49.TabIndex = 22;
-            this.label49.Text = "Order:";
+            this.referencesOrderLabel.AutoSize = true;
+            this.referencesOrderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesOrderLabel.Location = new System.Drawing.Point(6, 155);
+            this.referencesOrderLabel.Name = "referencesOrderLabel";
+            this.referencesOrderLabel.Size = new System.Drawing.Size(36, 13);
+            this.referencesOrderLabel.TabIndex = 22;
+            this.referencesOrderLabel.Text = "Order:";
             // 
-            // checkBox23
+            // referencesEmptyLineBetweenCheck
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox23.Location = new System.Drawing.Point(9, 261);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(226, 17);
-            this.checkBox23.TabIndex = 21;
-            this.checkBox23.Text = "Add Empty Line Between Each Reference";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.referencesEmptyLineBetweenCheck.AutoSize = true;
+            this.referencesEmptyLineBetweenCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesEmptyLineBetweenCheck.Location = new System.Drawing.Point(9, 129);
+            this.referencesEmptyLineBetweenCheck.Name = "referencesEmptyLineBetweenCheck";
+            this.referencesEmptyLineBetweenCheck.Size = new System.Drawing.Size(226, 17);
+            this.referencesEmptyLineBetweenCheck.TabIndex = 21;
+            this.referencesEmptyLineBetweenCheck.Text = "Add Empty Line Between Each Reference";
+            this.referencesEmptyLineBetweenCheck.UseVisualStyleBackColor = true;
             // 
             // referencesIndentationGroupBox
             // 
-            this.referencesIndentationGroupBox.Controls.Add(this.numericUpDown13);
-            this.referencesIndentationGroupBox.Controls.Add(this.label48);
-            this.referencesIndentationGroupBox.Controls.Add(this.checkBox22);
+            this.referencesIndentationGroupBox.Controls.Add(this.referencesIndentTabsEnter);
+            this.referencesIndentationGroupBox.Controls.Add(this.referencesIndentTabsLabel);
+            this.referencesIndentationGroupBox.Controls.Add(this.referencesHangingIndentCheck);
             this.referencesIndentationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIndentationGroupBox.Location = new System.Drawing.Point(9, 178);
+            this.referencesIndentationGroupBox.Location = new System.Drawing.Point(9, 73);
             this.referencesIndentationGroupBox.Name = "referencesIndentationGroupBox";
-            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(597, 77);
+            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(597, 45);
             this.referencesIndentationGroupBox.TabIndex = 20;
             this.referencesIndentationGroupBox.TabStop = false;
             this.referencesIndentationGroupBox.Text = "Indentation";
             // 
-            // numericUpDown13
+            // referencesIndentTabsEnter
             // 
-            this.numericUpDown13.Location = new System.Drawing.Point(137, 42);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown13.TabIndex = 17;
+            this.referencesIndentTabsEnter.Location = new System.Drawing.Point(137, 42);
+            this.referencesIndentTabsEnter.Name = "referencesIndentTabsEnter";
+            this.referencesIndentTabsEnter.Size = new System.Drawing.Size(120, 20);
+            this.referencesIndentTabsEnter.TabIndex = 17;
+            this.referencesIndentTabsEnter.Visible = false;
             // 
-            // label48
+            // referencesIndentTabsLabel
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(3, 44);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(133, 13);
-            this.label48.TabIndex = 16;
-            this.label48.Text = "Number Of Tabs Indented:";
+            this.referencesIndentTabsLabel.AutoSize = true;
+            this.referencesIndentTabsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesIndentTabsLabel.Location = new System.Drawing.Point(3, 44);
+            this.referencesIndentTabsLabel.Name = "referencesIndentTabsLabel";
+            this.referencesIndentTabsLabel.Size = new System.Drawing.Size(133, 13);
+            this.referencesIndentTabsLabel.TabIndex = 16;
+            this.referencesIndentTabsLabel.Text = "Number Of Tabs Indented:";
+            this.referencesIndentTabsLabel.Visible = false;
             // 
-            // checkBox22
+            // referencesHangingIndentCheck
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox22.Location = new System.Drawing.Point(6, 19);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(195, 17);
-            this.checkBox22.TabIndex = 15;
-            this.checkBox22.Text = "Add Hanging Indent To References";
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.referencesHangingIndentCheck.AutoSize = true;
+            this.referencesHangingIndentCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesHangingIndentCheck.Location = new System.Drawing.Point(6, 19);
+            this.referencesHangingIndentCheck.Name = "referencesHangingIndentCheck";
+            this.referencesHangingIndentCheck.Size = new System.Drawing.Size(195, 17);
+            this.referencesHangingIndentCheck.TabIndex = 15;
+            this.referencesHangingIndentCheck.Text = "Add Hanging Indent To References";
+            this.referencesHangingIndentCheck.UseVisualStyleBackColor = true;
+            this.referencesHangingIndentCheck.CheckedChanged += new System.EventHandler(this.referencesHangingIndentCheck_CheckedChanged);
             // 
             // referencesTitleGroupBox
             // 
-            this.referencesTitleGroupBox.Controls.Add(this.button14);
-            this.referencesTitleGroupBox.Controls.Add(this.textBox22);
-            this.referencesTitleGroupBox.Controls.Add(this.label44);
-            this.referencesTitleGroupBox.Controls.Add(this.comboBox12);
-            this.referencesTitleGroupBox.Controls.Add(this.label45);
-            this.referencesTitleGroupBox.Controls.Add(this.label46);
-            this.referencesTitleGroupBox.Controls.Add(this.comboBox13);
-            this.referencesTitleGroupBox.Controls.Add(this.checkBox20);
-            this.referencesTitleGroupBox.Controls.Add(this.checkBox21);
-            this.referencesTitleGroupBox.Controls.Add(this.textBox23);
-            this.referencesTitleGroupBox.Controls.Add(this.label47);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorButton);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorText);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorLabel);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleSizeChoose);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleSizeLabel);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleFontLabel);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleFontChoose);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleBoldCheck);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleIncludeCheck);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleEnter);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleLabel);
             this.referencesTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesTitleGroupBox.Location = new System.Drawing.Point(9, 19);
             this.referencesTitleGroupBox.Name = "referencesTitleGroupBox";
-            this.referencesTitleGroupBox.Size = new System.Drawing.Size(597, 150);
+            this.referencesTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.referencesTitleGroupBox.TabIndex = 4;
             this.referencesTitleGroupBox.TabStop = false;
             this.referencesTitleGroupBox.Text = "References Title";
             // 
-            // button14
+            // referencesTitleColorButton
             // 
-            this.button14.Location = new System.Drawing.Point(141, 114);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(73, 23);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "Choose";
-            this.button14.UseVisualStyleBackColor = true;
+            this.referencesTitleColorButton.Location = new System.Drawing.Point(141, 114);
+            this.referencesTitleColorButton.Name = "referencesTitleColorButton";
+            this.referencesTitleColorButton.Size = new System.Drawing.Size(73, 23);
+            this.referencesTitleColorButton.TabIndex = 13;
+            this.referencesTitleColorButton.Text = "Choose";
+            this.referencesTitleColorButton.UseVisualStyleBackColor = true;
+            this.referencesTitleColorButton.Visible = false;
             // 
-            // textBox22
+            // referencesTitleColorText
             // 
-            this.textBox22.Location = new System.Drawing.Point(70, 116);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(72, 20);
-            this.textBox22.TabIndex = 14;
+            this.referencesTitleColorText.Location = new System.Drawing.Point(70, 116);
+            this.referencesTitleColorText.Name = "referencesTitleColorText";
+            this.referencesTitleColorText.Size = new System.Drawing.Size(72, 20);
+            this.referencesTitleColorText.TabIndex = 14;
+            this.referencesTitleColorText.Visible = false;
             // 
-            // label44
+            // referencesTitleColorLabel
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(3, 119);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(57, 13);
-            this.label44.TabIndex = 19;
-            this.label44.Text = "Title Color:";
+            this.referencesTitleColorLabel.AutoSize = true;
+            this.referencesTitleColorLabel.Location = new System.Drawing.Point(3, 119);
+            this.referencesTitleColorLabel.Name = "referencesTitleColorLabel";
+            this.referencesTitleColorLabel.Size = new System.Drawing.Size(57, 13);
+            this.referencesTitleColorLabel.TabIndex = 19;
+            this.referencesTitleColorLabel.Text = "Title Color:";
+            this.referencesTitleColorLabel.Visible = false;
             // 
-            // comboBox12
+            // referencesTitleSizeChoose
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(70, 90);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(144, 21);
-            this.comboBox12.TabIndex = 18;
+            this.referencesTitleSizeChoose.FormattingEnabled = true;
+            this.referencesTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
+            this.referencesTitleSizeChoose.Name = "referencesTitleSizeChoose";
+            this.referencesTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
+            this.referencesTitleSizeChoose.TabIndex = 18;
+            this.referencesTitleSizeChoose.Visible = false;
             // 
-            // label45
+            // referencesTitleSizeLabel
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(3, 93);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(53, 13);
-            this.label45.TabIndex = 17;
-            this.label45.Text = "Title Size:";
+            this.referencesTitleSizeLabel.AutoSize = true;
+            this.referencesTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
+            this.referencesTitleSizeLabel.Name = "referencesTitleSizeLabel";
+            this.referencesTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
+            this.referencesTitleSizeLabel.TabIndex = 17;
+            this.referencesTitleSizeLabel.Text = "Title Size:";
+            this.referencesTitleSizeLabel.Visible = false;
             // 
-            // label46
+            // referencesTitleFontLabel
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(3, 67);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(54, 13);
-            this.label46.TabIndex = 16;
-            this.label46.Text = "Title Font:";
+            this.referencesTitleFontLabel.AutoSize = true;
+            this.referencesTitleFontLabel.Location = new System.Drawing.Point(3, 67);
+            this.referencesTitleFontLabel.Name = "referencesTitleFontLabel";
+            this.referencesTitleFontLabel.Size = new System.Drawing.Size(54, 13);
+            this.referencesTitleFontLabel.TabIndex = 16;
+            this.referencesTitleFontLabel.Text = "Title Font:";
+            this.referencesTitleFontLabel.Visible = false;
             // 
-            // comboBox13
+            // referencesTitleFontChoose
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(70, 64);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(144, 21);
-            this.comboBox13.TabIndex = 15;
+            this.referencesTitleFontChoose.FormattingEnabled = true;
+            this.referencesTitleFontChoose.Location = new System.Drawing.Point(70, 64);
+            this.referencesTitleFontChoose.Name = "referencesTitleFontChoose";
+            this.referencesTitleFontChoose.Size = new System.Drawing.Size(144, 21);
+            this.referencesTitleFontChoose.TabIndex = 15;
+            this.referencesTitleFontChoose.Visible = false;
             // 
-            // checkBox20
+            // referencesTitleBoldCheck
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(6, 42);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(70, 17);
-            this.checkBox20.TabIndex = 11;
-            this.checkBox20.Text = "Bold Title";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.referencesTitleBoldCheck.AutoSize = true;
+            this.referencesTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
+            this.referencesTitleBoldCheck.Name = "referencesTitleBoldCheck";
+            this.referencesTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
+            this.referencesTitleBoldCheck.TabIndex = 11;
+            this.referencesTitleBoldCheck.Text = "Bold Title";
+            this.referencesTitleBoldCheck.UseVisualStyleBackColor = true;
+            this.referencesTitleBoldCheck.Visible = false;
             // 
-            // checkBox21
+            // referencesTitleIncludeCheck
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox21.Location = new System.Drawing.Point(6, 19);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(84, 17);
-            this.checkBox21.TabIndex = 1;
-            this.checkBox21.Text = "Include Title";
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.referencesTitleIncludeCheck.AutoSize = true;
+            this.referencesTitleIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesTitleIncludeCheck.Location = new System.Drawing.Point(6, 19);
+            this.referencesTitleIncludeCheck.Name = "referencesTitleIncludeCheck";
+            this.referencesTitleIncludeCheck.Size = new System.Drawing.Size(84, 17);
+            this.referencesTitleIncludeCheck.TabIndex = 1;
+            this.referencesTitleIncludeCheck.Text = "Include Title";
+            this.referencesTitleIncludeCheck.UseVisualStyleBackColor = true;
+            this.referencesTitleIncludeCheck.CheckedChanged += new System.EventHandler(this.referencesTitleIncludeCheck_CheckedChanged);
             // 
-            // textBox23
+            // referencesTitleEnter
             // 
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(123, 17);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(159, 20);
-            this.textBox23.TabIndex = 2;
+            this.referencesTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesTitleEnter.Location = new System.Drawing.Point(123, 17);
+            this.referencesTitleEnter.Name = "referencesTitleEnter";
+            this.referencesTitleEnter.Size = new System.Drawing.Size(159, 20);
+            this.referencesTitleEnter.TabIndex = 2;
+            this.referencesTitleEnter.Visible = false;
             // 
-            // label47
+            // referencesTitleLabel
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(94, 20);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(30, 13);
-            this.label47.TabIndex = 3;
-            this.label47.Text = "Title:";
+            this.referencesTitleLabel.AutoSize = true;
+            this.referencesTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesTitleLabel.Location = new System.Drawing.Point(94, 20);
+            this.referencesTitleLabel.Name = "referencesTitleLabel";
+            this.referencesTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.referencesTitleLabel.TabIndex = 3;
+            this.referencesTitleLabel.Text = "Title:";
+            this.referencesTitleLabel.Visible = false;
             // 
             // referencesHeader
             // 
+            this.referencesHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.referencesHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.referencesHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.referencesHeader.Location = new System.Drawing.Point(0, 0);
             this.referencesHeader.Name = "referencesHeader";
             this.referencesHeader.Size = new System.Drawing.Size(638, 30);
@@ -2947,7 +3128,7 @@
             // referencesDefaultButton
             // 
             this.referencesDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesDefaultButton.Location = new System.Drawing.Point(9, 365);
+            this.referencesDefaultButton.Location = new System.Drawing.Point(9, 233);
             this.referencesDefaultButton.Name = "referencesDefaultButton";
             this.referencesDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.referencesDefaultButton.TabIndex = 14;
@@ -3462,8 +3643,10 @@
             // 
             // titlePageSectionLabel
             // 
+            this.titlePageSectionLabel.BackColor = System.Drawing.Color.MidnightBlue;
             this.titlePageSectionLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.titlePageSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageSectionLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.titlePageSectionLabel.Location = new System.Drawing.Point(0, 0);
             this.titlePageSectionLabel.Name = "titlePageSectionLabel";
             this.titlePageSectionLabel.Size = new System.Drawing.Size(638, 30);
@@ -3479,14 +3662,14 @@
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.section1groupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(0, 3595);
+            this.sectionsPanel.Location = new System.Drawing.Point(0, 3087);
             this.sectionsPanel.Name = "sectionsPanel";
-            this.sectionsPanel.Size = new System.Drawing.Size(640, 865);
+            this.sectionsPanel.Size = new System.Drawing.Size(640, 595);
             this.sectionsPanel.TabIndex = 4;
             // 
             // addSectionButton
             // 
-            this.addSectionButton.Location = new System.Drawing.Point(9, 832);
+            this.addSectionButton.Location = new System.Drawing.Point(9, 562);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(130, 23);
             this.addSectionButton.TabIndex = 11;
@@ -3501,7 +3684,7 @@
             this.sectionsOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(9, 36);
             this.sectionsOptionsGroupBox.Name = "sectionsOptionsGroupBox";
-            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 455);
+            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 212);
             this.sectionsOptionsGroupBox.TabIndex = 10;
             this.sectionsOptionsGroupBox.TabStop = false;
             this.sectionsOptionsGroupBox.Text = "Section Options";
@@ -3514,7 +3697,7 @@
             this.sectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionLabelGroupBox.Location = new System.Drawing.Point(9, 128);
             this.sectionLabelGroupBox.Name = "sectionLabelGroupBox";
-            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 288);
+            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
             this.sectionLabelGroupBox.TabIndex = 7;
             this.sectionLabelGroupBox.TabStop = false;
             this.sectionLabelGroupBox.Text = "Section Labels";
@@ -3536,6 +3719,7 @@
             this.sectionLabelStyleGroupBox.TabIndex = 5;
             this.sectionLabelStyleGroupBox.TabStop = false;
             this.sectionLabelStyleGroupBox.Text = "Style";
+            this.sectionLabelStyleGroupBox.Visible = false;
             // 
             // button3
             // 
@@ -3626,6 +3810,7 @@
             this.sectionLabelLocationGroupBox.TabIndex = 4;
             this.sectionLabelLocationGroupBox.TabStop = false;
             this.sectionLabelLocationGroupBox.Text = "Location";
+            this.sectionLabelLocationGroupBox.Visible = false;
             // 
             // radioButton1
             // 
@@ -3659,11 +3844,12 @@
             this.includeSectionLabelsCheck.TabIndex = 0;
             this.includeSectionLabelsCheck.Text = "Include Section Labels";
             this.includeSectionLabelsCheck.UseVisualStyleBackColor = true;
+            this.includeSectionLabelsCheck.CheckedChanged += new System.EventHandler(this.includeSectionLabelsCheck_CheckedChanged);
             // 
             // sectionsDefaultButton
             // 
             this.sectionsDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsDefaultButton.Location = new System.Drawing.Point(9, 422);
+            this.sectionsDefaultButton.Location = new System.Drawing.Point(9, 179);
             this.sectionsDefaultButton.Name = "sectionsDefaultButton";
             this.sectionsDefaultButton.Size = new System.Drawing.Size(126, 23);
             this.sectionsDefaultButton.TabIndex = 6;
@@ -3718,41 +3904,43 @@
             // 
             // section1groupBox
             // 
-            this.section1groupBox.Controls.Add(this.label50);
-            this.section1groupBox.Controls.Add(this.textBox24);
+            this.section1groupBox.Controls.Add(this.section1LabelLabel);
+            this.section1groupBox.Controls.Add(this.section1LabelEnter);
             this.section1groupBox.Controls.Add(this.section1ContentPanel);
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
             this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(9, 511);
+            this.section1groupBox.Location = new System.Drawing.Point(9, 268);
             this.section1groupBox.Name = "section1groupBox";
-            this.section1groupBox.Size = new System.Drawing.Size(615, 315);
+            this.section1groupBox.Size = new System.Drawing.Size(615, 288);
             this.section1groupBox.TabIndex = 9;
             this.section1groupBox.TabStop = false;
             this.section1groupBox.Text = "Section 1";
             // 
-            // label50
+            // section1LabelLabel
             // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(6, 22);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(75, 13);
-            this.label50.TabIndex = 10;
-            this.label50.Text = "Section Label:";
+            this.section1LabelLabel.AutoSize = true;
+            this.section1LabelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1LabelLabel.Location = new System.Drawing.Point(6, 22);
+            this.section1LabelLabel.Name = "section1LabelLabel";
+            this.section1LabelLabel.Size = new System.Drawing.Size(75, 13);
+            this.section1LabelLabel.TabIndex = 10;
+            this.section1LabelLabel.Text = "Section Label:";
+            this.section1LabelLabel.Visible = false;
             // 
-            // textBox24
+            // section1LabelEnter
             // 
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(81, 19);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(185, 20);
-            this.textBox24.TabIndex = 9;
+            this.section1LabelEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1LabelEnter.Location = new System.Drawing.Point(81, 19);
+            this.section1LabelEnter.Name = "section1LabelEnter";
+            this.section1LabelEnter.Size = new System.Drawing.Size(185, 20);
+            this.section1LabelEnter.TabIndex = 9;
+            this.section1LabelEnter.Visible = false;
             // 
             // section1ContentPanel
             // 
             this.section1ContentPanel.Controls.Add(this.section1ToolStripContainer);
-            this.section1ContentPanel.Location = new System.Drawing.Point(9, 67);
+            this.section1ContentPanel.Location = new System.Drawing.Point(9, 40);
             this.section1ContentPanel.Name = "section1ContentPanel";
             this.section1ContentPanel.Size = new System.Drawing.Size(597, 210);
             this.section1ContentPanel.TabIndex = 8;
@@ -3795,7 +3983,7 @@
             // section1AddSubsectionButton
             // 
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 282);
+            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 255);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
             this.section1AddSubsectionButton.Size = new System.Drawing.Size(130, 23);
             this.section1AddSubsectionButton.TabIndex = 7;
@@ -3806,7 +3994,7 @@
             // 
             this.section1contentLabel.AutoSize = true;
             this.section1contentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1contentLabel.Location = new System.Drawing.Point(6, 49);
+            this.section1contentLabel.Location = new System.Drawing.Point(6, 22);
             this.section1contentLabel.Name = "section1contentLabel";
             this.section1contentLabel.Size = new System.Drawing.Size(47, 13);
             this.section1contentLabel.TabIndex = 5;
@@ -3814,8 +4002,10 @@
             // 
             // sectionsHeader
             // 
+            this.sectionsHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.sectionsHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.sectionsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionsHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.sectionsHeader.Location = new System.Drawing.Point(0, 0);
             this.sectionsHeader.Name = "sectionsHeader";
             this.sectionsHeader.Size = new System.Drawing.Size(638, 30);
@@ -4158,6 +4348,159 @@
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
             // 
+            // headerLeftEmptyRadio
+            // 
+            this.headerLeftEmptyRadio.AutoSize = true;
+            this.headerLeftEmptyRadio.Checked = true;
+            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerLeftEmptyRadio.Name = "headerLeftEmptyRadio";
+            this.headerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerLeftEmptyRadio.TabIndex = 28;
+            this.headerLeftEmptyRadio.TabStop = true;
+            this.headerLeftEmptyRadio.Text = "Empty";
+            this.headerLeftEmptyRadio.UseVisualStyleBackColor = true;
+            // 
+            // headerCenterEmptyRadio
+            // 
+            this.headerCenterEmptyRadio.AutoSize = true;
+            this.headerCenterEmptyRadio.Checked = true;
+            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerCenterEmptyRadio.Name = "headerCenterEmptyRadio";
+            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerCenterEmptyRadio.TabIndex = 30;
+            this.headerCenterEmptyRadio.TabStop = true;
+            this.headerCenterEmptyRadio.Text = "Empty";
+            this.headerCenterEmptyRadio.UseVisualStyleBackColor = true;
+            // 
+            // headerRightEmptyRadio
+            // 
+            this.headerRightEmptyRadio.AutoSize = true;
+            this.headerRightEmptyRadio.Checked = true;
+            this.headerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerRightEmptyRadio.Name = "headerRightEmptyRadio";
+            this.headerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerRightEmptyRadio.TabIndex = 30;
+            this.headerRightEmptyRadio.TabStop = true;
+            this.headerRightEmptyRadio.Text = "Empty";
+            this.headerRightEmptyRadio.UseVisualStyleBackColor = true;
+            // 
+            // headerFirstLeftEmptyRadio
+            // 
+            this.headerFirstLeftEmptyRadio.AutoSize = true;
+            this.headerFirstLeftEmptyRadio.Checked = true;
+            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstLeftEmptyRadio.Name = "headerFirstLeftEmptyRadio";
+            this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstLeftEmptyRadio.TabIndex = 30;
+            this.headerFirstLeftEmptyRadio.TabStop = true;
+            this.headerFirstLeftEmptyRadio.Text = "Empty";
+            this.headerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstLeftChanged);
+            // 
+            // headerFirstCenterEmptyRadio
+            // 
+            this.headerFirstCenterEmptyRadio.AutoSize = true;
+            this.headerFirstCenterEmptyRadio.Checked = true;
+            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstCenterEmptyRadio.Name = "headerFirstCenterEmptyRadio";
+            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstCenterEmptyRadio.TabIndex = 30;
+            this.headerFirstCenterEmptyRadio.TabStop = true;
+            this.headerFirstCenterEmptyRadio.Text = "Empty";
+            this.headerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
+            // 
+            // headerFirstRightEmptyRadio
+            // 
+            this.headerFirstRightEmptyRadio.AutoSize = true;
+            this.headerFirstRightEmptyRadio.Checked = true;
+            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.headerFirstRightEmptyRadio.Name = "headerFirstRightEmptyRadio";
+            this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.headerFirstRightEmptyRadio.TabIndex = 30;
+            this.headerFirstRightEmptyRadio.TabStop = true;
+            this.headerFirstRightEmptyRadio.Text = "Empty";
+            this.headerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.headerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstRightChanged);
+            // 
+            // footerFirstLeftEmptyRadio
+            // 
+            this.footerFirstLeftEmptyRadio.AutoSize = true;
+            this.footerFirstLeftEmptyRadio.Checked = true;
+            this.footerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstLeftEmptyRadio.Name = "footerFirstLeftEmptyRadio";
+            this.footerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstLeftEmptyRadio.TabIndex = 31;
+            this.footerFirstLeftEmptyRadio.TabStop = true;
+            this.footerFirstLeftEmptyRadio.Text = "Empty";
+            this.footerFirstLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstLeftChanged);
+            // 
+            // footerFirstCenterEmptyRadio
+            // 
+            this.footerFirstCenterEmptyRadio.AutoSize = true;
+            this.footerFirstCenterEmptyRadio.Checked = true;
+            this.footerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstCenterEmptyRadio.Name = "footerFirstCenterEmptyRadio";
+            this.footerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstCenterEmptyRadio.TabIndex = 32;
+            this.footerFirstCenterEmptyRadio.TabStop = true;
+            this.footerFirstCenterEmptyRadio.Text = "Empty";
+            this.footerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstCenterChanged);
+            // 
+            // footerFirstRightEmptyRadio
+            // 
+            this.footerFirstRightEmptyRadio.AutoSize = true;
+            this.footerFirstRightEmptyRadio.Checked = true;
+            this.footerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerFirstRightEmptyRadio.Name = "footerFirstRightEmptyRadio";
+            this.footerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerFirstRightEmptyRadio.TabIndex = 32;
+            this.footerFirstRightEmptyRadio.TabStop = true;
+            this.footerFirstRightEmptyRadio.Text = "Empty";
+            this.footerFirstRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerFirstRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerFirstRightChanged);
+            // 
+            // footerLeftEmptyRadio
+            // 
+            this.footerLeftEmptyRadio.AutoSize = true;
+            this.footerLeftEmptyRadio.Checked = true;
+            this.footerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerLeftEmptyRadio.Name = "footerLeftEmptyRadio";
+            this.footerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerLeftEmptyRadio.TabIndex = 31;
+            this.footerLeftEmptyRadio.TabStop = true;
+            this.footerLeftEmptyRadio.Text = "Empty";
+            this.footerLeftEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerLeftEmptyRadio.CheckedChanged += new System.EventHandler(this.footerLeftChanged);
+            // 
+            // footerCenterEmptyRadio
+            // 
+            this.footerCenterEmptyRadio.AutoSize = true;
+            this.footerCenterEmptyRadio.Checked = true;
+            this.footerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerCenterEmptyRadio.Name = "footerCenterEmptyRadio";
+            this.footerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerCenterEmptyRadio.TabIndex = 32;
+            this.footerCenterEmptyRadio.TabStop = true;
+            this.footerCenterEmptyRadio.Text = "Empty";
+            this.footerCenterEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.footerCenterChanged);
+            // 
+            // footerRightEmptyRadio
+            // 
+            this.footerRightEmptyRadio.AutoSize = true;
+            this.footerRightEmptyRadio.Checked = true;
+            this.footerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
+            this.footerRightEmptyRadio.Name = "footerRightEmptyRadio";
+            this.footerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
+            this.footerRightEmptyRadio.TabIndex = 32;
+            this.footerRightEmptyRadio.TabStop = true;
+            this.footerRightEmptyRadio.Text = "Empty";
+            this.footerRightEmptyRadio.UseVisualStyleBackColor = true;
+            this.footerRightEmptyRadio.CheckedChanged += new System.EventHandler(this.footerRightChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -4189,44 +4532,44 @@
             this.footerFirstPageGroupBox.PerformLayout();
             this.footerFirstPageRightGroupBox.ResumeLayout(false);
             this.footerFirstPageRightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstRightNumberEnter)).EndInit();
             this.footerFirstPageCenterGroupBox.ResumeLayout(false);
             this.footerFirstPageCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstCenterNumberEnter)).EndInit();
             this.footerFirstPageLeftGroupBox.ResumeLayout(false);
             this.footerFirstPageLeftGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerFirstLeftNumberEnter)).EndInit();
             this.footerRightGroupBox.ResumeLayout(false);
             this.footerRightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerRightNumberEnter)).EndInit();
             this.footerCenterGroupBox.ResumeLayout(false);
             this.footerCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerCenterNumberEnter)).EndInit();
             this.footerLeftGroupBox.ResumeLayout(false);
             this.footerLeftGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerLeftNumberEnter)).EndInit();
             this.headerPanel.ResumeLayout(false);
             this.headerOptionsGroupBox.ResumeLayout(false);
             this.headerFirstPageGroupBox.ResumeLayout(false);
             this.headerFirstPageGroupBox.PerformLayout();
             this.headerFirstPageRightGroupBox.ResumeLayout(false);
             this.headerFirstPageRightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightNumberEnter)).EndInit();
             this.headerFirstPageCenterGroupBox.ResumeLayout(false);
             this.headerFirstPageCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstCenterNumberEnter)).EndInit();
             this.headerFirstPageLeftGroupBox.ResumeLayout(false);
             this.headerFirstPageLeftGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftNumberEnter)).EndInit();
             this.headerRightGroupBox.ResumeLayout(false);
             this.headerRightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerRightNumberEnter)).EndInit();
             this.headerCenterGroupBox.ResumeLayout(false);
             this.headerCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerCenterNumberEnter)).EndInit();
             this.headerLeftGroupBox.ResumeLayout(false);
             this.headerLeftGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).EndInit();
             this.abstractPanel.ResumeLayout(false);
             this.abstractContentGroupBox.ResumeLayout(false);
             this.abstractContentPanel.ResumeLayout(false);
@@ -4268,7 +4611,7 @@
             this.referencesOptionsGroupBox.PerformLayout();
             this.referencesIndentationGroupBox.ResumeLayout(false);
             this.referencesIndentationGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).EndInit();
             this.referencesTitleGroupBox.ResumeLayout(false);
             this.referencesTitleGroupBox.PerformLayout();
             this.titlePagePanel.ResumeLayout(false);
@@ -4479,112 +4822,112 @@
         private System.Windows.Forms.Label titlePageSchoolLabel;
         private System.Windows.Forms.GroupBox headerOptionsGroupBox;
         private System.Windows.Forms.GroupBox headerLeftGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.NumericUpDown headerLeftNumberEnter;
+        private System.Windows.Forms.Label headerLeftNumberLabel;
+        private System.Windows.Forms.Label headerLeftOtherLabel;
+        private System.Windows.Forms.RadioButton headerLeftOtherRadio;
+        private System.Windows.Forms.RadioButton headerLeftNumberRadio;
+        private System.Windows.Forms.RadioButton headerLeftTitleRadio;
+        private System.Windows.Forms.TextBox headerLeftOtherEnter;
         private System.Windows.Forms.Button headerDefaultButton;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox headerFirstPageUseRunningHeadCheck;
+        private System.Windows.Forms.CheckBox headerDiffFirstPageCheck;
         private System.Windows.Forms.GroupBox footerOptionsGroupBox;
         private System.Windows.Forms.GroupBox footerFirstPageGroupBox;
         private System.Windows.Forms.GroupBox footerFirstPageRightGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.NumericUpDown footerFirstRightNumberEnter;
+        private System.Windows.Forms.Label footerFirstRightNumberLabel;
+        private System.Windows.Forms.Label footerFirstRightOtherLabel;
+        private System.Windows.Forms.RadioButton footerFirstRightOtherRadio;
+        private System.Windows.Forms.RadioButton footerFirstRightNumberRadio;
+        private System.Windows.Forms.RadioButton footerFirstRightTitleRadio;
+        private System.Windows.Forms.TextBox footerFirstRightOtherEnter;
         private System.Windows.Forms.GroupBox footerFirstPageCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.NumericUpDown footerFirstCenterNumberEnter;
+        private System.Windows.Forms.Label footerFirstCenterNumberLabel;
+        private System.Windows.Forms.Label footerFirstCenterOtherLabel;
+        private System.Windows.Forms.RadioButton footerFirstCenterOtherRadio;
+        private System.Windows.Forms.RadioButton footerFirstCenterNumberRadio;
+        private System.Windows.Forms.RadioButton footerFirstCenterTitleRadio;
+        private System.Windows.Forms.TextBox footerFirstCenterOtherEnter;
         private System.Windows.Forms.GroupBox footerFirstPageLeftGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.RadioButton radioButton27;
-        private System.Windows.Forms.RadioButton radioButton28;
-        private System.Windows.Forms.RadioButton radioButton29;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.NumericUpDown footerFirstLeftNumberEnter;
+        private System.Windows.Forms.Label footerFirstLeftNumberLabel;
+        private System.Windows.Forms.Label footerFirstLeftOtherLabel;
+        private System.Windows.Forms.RadioButton footerFirstLeftOtherRadio;
+        private System.Windows.Forms.RadioButton footerFirstLeftNumberRadio;
+        private System.Windows.Forms.RadioButton footerFirstLeftTitleRadio;
+        private System.Windows.Forms.TextBox footerFirstLeftOtherEnter;
+        private System.Windows.Forms.CheckBox footerFirstPageUseMoreCheck;
+        private System.Windows.Forms.CheckBox footerFirstPageDiffCheck;
+        private System.Windows.Forms.CheckBox footerFirstPageUseRunningHeadCheck;
         private System.Windows.Forms.GroupBox footerRightGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.RadioButton radioButton30;
-        private System.Windows.Forms.RadioButton radioButton31;
-        private System.Windows.Forms.RadioButton radioButton32;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.NumericUpDown footerRightNumberEnter;
+        private System.Windows.Forms.Label footerRightNumberLabel;
+        private System.Windows.Forms.Label footerRightOtherLabel;
+        private System.Windows.Forms.RadioButton footerRightOtherRadio;
+        private System.Windows.Forms.RadioButton footerRightNumberRadio;
+        private System.Windows.Forms.RadioButton footerRightTitleRadio;
+        private System.Windows.Forms.TextBox footerRightOtherEnter;
         private System.Windows.Forms.GroupBox footerCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.RadioButton radioButton33;
-        private System.Windows.Forms.RadioButton radioButton34;
-        private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.NumericUpDown footerCenterNumberEnter;
+        private System.Windows.Forms.Label footerCenterNumberLabel;
+        private System.Windows.Forms.Label footerCenterOtherLabel;
+        private System.Windows.Forms.RadioButton footerCenterOtherRadio;
+        private System.Windows.Forms.RadioButton footerCenterNumberRadio;
+        private System.Windows.Forms.RadioButton footerCenterTitleRadio;
+        private System.Windows.Forms.TextBox footerCenterOtherEnter;
         private System.Windows.Forms.GroupBox footerLeftGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.RadioButton radioButton36;
-        private System.Windows.Forms.RadioButton radioButton37;
-        private System.Windows.Forms.RadioButton radioButton38;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.NumericUpDown footerLeftNumberEnter;
+        private System.Windows.Forms.Label footerLeftNumberLabel;
+        private System.Windows.Forms.Label footerLeftOtherLabel;
+        private System.Windows.Forms.RadioButton footerLeftOtherRadio;
+        private System.Windows.Forms.RadioButton footerLeftNumberRadio;
+        private System.Windows.Forms.RadioButton footerLeftTitleRadio;
+        private System.Windows.Forms.TextBox footerLeftOtherEnter;
         private System.Windows.Forms.Button footerDefaultButton;
         private System.Windows.Forms.GroupBox headerFirstPageGroupBox;
         private System.Windows.Forms.GroupBox headerFirstPageRightGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.RadioButton radioButton18;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton20;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.NumericUpDown headerFirstRightNumberEnter;
+        private System.Windows.Forms.Label headerFirstRightNumberLabel;
+        private System.Windows.Forms.Label headerFirstRightOtherLabel;
+        private System.Windows.Forms.RadioButton headerFirstRightOtherRadio;
+        private System.Windows.Forms.RadioButton headerFirstRightNumberRadio;
+        private System.Windows.Forms.RadioButton headerFirstRightTitleRadio;
+        private System.Windows.Forms.TextBox headerFirstRightOtherEnter;
         private System.Windows.Forms.GroupBox headerFirstPageCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.NumericUpDown headerFirstCenterNumberEnter;
+        private System.Windows.Forms.Label headerFirstCenterNumberLabel;
+        private System.Windows.Forms.Label headerFirstCenterOtherLabel;
+        private System.Windows.Forms.RadioButton headerFirstCenterOtherRadio;
+        private System.Windows.Forms.RadioButton headerFirstCenterNumberRadio;
+        private System.Windows.Forms.RadioButton headerFirstCenterTitleRadio;
+        private System.Windows.Forms.TextBox headerFirstCenterOtherEnter;
         private System.Windows.Forms.GroupBox headerFirstPageLeftGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.NumericUpDown headerFirstLeftNumberEnter;
+        private System.Windows.Forms.Label headerFirstLeftNumberLabel;
+        private System.Windows.Forms.Label headerFirstLeftOtherLabel;
+        private System.Windows.Forms.RadioButton headerFirstLeftOtherRadio;
+        private System.Windows.Forms.RadioButton headerFirstLeftNumberRadio;
+        private System.Windows.Forms.RadioButton headerFirstLeftTitleRadio;
+        private System.Windows.Forms.TextBox headerFirstLeftOtherEnter;
+        private System.Windows.Forms.CheckBox headerFirstPageMoreCheck;
         private System.Windows.Forms.GroupBox headerRightGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.NumericUpDown headerRightNumberEnter;
+        private System.Windows.Forms.Label headerRightNumberLabel;
+        private System.Windows.Forms.Label headerRightOtherLabel;
+        private System.Windows.Forms.RadioButton headerRightOtherRadio;
+        private System.Windows.Forms.RadioButton headerRightNumberRadio;
+        private System.Windows.Forms.RadioButton headerRightTitleRadio;
+        private System.Windows.Forms.TextBox headerRightOtherEnter;
         private System.Windows.Forms.GroupBox headerCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.NumericUpDown headerCenterNumberEnter;
+        private System.Windows.Forms.Label headerCenterNumberLabel;
+        private System.Windows.Forms.Label headerCenterOtherLabel;
+        private System.Windows.Forms.RadioButton headerCenterOtherRadio;
+        private System.Windows.Forms.RadioButton headerCenterNumberRadio;
+        private System.Windows.Forms.RadioButton headerCenterTitleRadio;
+        private System.Windows.Forms.TextBox headerCenterOtherEnter;
         private System.Windows.Forms.GroupBox conclusionContentGroupBox;
         private System.Windows.Forms.Panel conclusionContentPanel;
         private System.Windows.Forms.ToolStripContainer conclusionToolStripContainer;
@@ -4593,65 +4936,77 @@
         private System.Windows.Forms.GroupBox conclusionOptionsGroupBox;
         private System.Windows.Forms.Button conclusionDefaultButton;
         private System.Windows.Forms.GroupBox conclusionTitleGroupBox;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Button conclusionTitleColorButton;
+        private System.Windows.Forms.TextBox conclusionTitleColorText;
+        private System.Windows.Forms.Label conclusionTitleColorLabel;
+        private System.Windows.Forms.ComboBox conclusionTitleSizeChoose;
+        private System.Windows.Forms.Label conclusionTitleSizeLabel;
+        private System.Windows.Forms.Label conclusionTitleFontLabel;
+        private System.Windows.Forms.ComboBox conclusionTitleFontChoose;
+        private System.Windows.Forms.CheckBox conclusionTitleBoldCheck;
+        private System.Windows.Forms.CheckBox conclusionIncludeTitleCheck;
+        private System.Windows.Forms.TextBox conclusionTitleEnter;
+        private System.Windows.Forms.Label conclusionTitleLabel;
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.GroupBox referencesOptionsGroupBox;
-        private System.Windows.Forms.CheckBox checkBox22;
+        private System.Windows.Forms.CheckBox referencesHangingIndentCheck;
         private System.Windows.Forms.Button referencesDefaultButton;
         private System.Windows.Forms.GroupBox referencesTitleGroupBox;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button referencesTitleColorButton;
+        private System.Windows.Forms.TextBox referencesTitleColorText;
+        private System.Windows.Forms.Label referencesTitleColorLabel;
+        private System.Windows.Forms.ComboBox referencesTitleSizeChoose;
+        private System.Windows.Forms.Label referencesTitleSizeLabel;
+        private System.Windows.Forms.Label referencesTitleFontLabel;
+        private System.Windows.Forms.ComboBox referencesTitleFontChoose;
+        private System.Windows.Forms.CheckBox referencesTitleBoldCheck;
+        private System.Windows.Forms.CheckBox referencesTitleIncludeCheck;
+        private System.Windows.Forms.TextBox referencesTitleEnter;
+        private System.Windows.Forms.Label referencesTitleLabel;
         private System.Windows.Forms.GroupBox referencesIndentationGroupBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.NumericUpDown referencesIndentTabsEnter;
+        private System.Windows.Forms.Label referencesIndentTabsLabel;
+        private System.Windows.Forms.ComboBox referencesOrderChoose;
+        private System.Windows.Forms.Label referencesOrderLabel;
+        private System.Windows.Forms.CheckBox referencesEmptyLineBetweenCheck;
+        private System.Windows.Forms.Label section1LabelLabel;
+        private System.Windows.Forms.TextBox section1LabelEnter;
+        private System.Windows.Forms.TextBox footerFirstRightTitleEnter;
+        private System.Windows.Forms.Label footerFirstRightTitleLabel;
+        private System.Windows.Forms.TextBox footerFirstCenterTitleEnter;
+        private System.Windows.Forms.Label footerFirstCenterTitleLabel;
+        private System.Windows.Forms.TextBox footerFirstLeftTitleEnter;
+        private System.Windows.Forms.Label footerFirstLeftTitleLabel;
+        private System.Windows.Forms.TextBox footerRightTitleEnter;
+        private System.Windows.Forms.Label footerRightTitleLabel;
+        private System.Windows.Forms.TextBox footerCenterTitleEnter;
+        private System.Windows.Forms.Label footerCenterTitleLabel;
+        private System.Windows.Forms.TextBox footerLeftTitleEnter;
+        private System.Windows.Forms.Label footerLeftTitleLabel;
+        private System.Windows.Forms.TextBox headerFirstRightTitleEnter;
+        private System.Windows.Forms.Label headerFirstRightTitleLabel;
+        private System.Windows.Forms.TextBox headerFirstCenterTitleEnter;
+        private System.Windows.Forms.Label headerFirstCenterTitleLabel;
+        private System.Windows.Forms.TextBox headerFirstLeftTitleEnter;
+        private System.Windows.Forms.Label headerFirstLeftTitleLabel;
+        private System.Windows.Forms.TextBox headerRightTitleEnter;
+        private System.Windows.Forms.Label headerRightTitleLabel;
+        private System.Windows.Forms.TextBox headerCenterTitleEnter;
+        private System.Windows.Forms.Label headerCenterTitleLabel;
+        private System.Windows.Forms.TextBox headerLeftTitleEnter;
+        private System.Windows.Forms.Label headerLeftTitleLabel;
+        private System.Windows.Forms.RadioButton headerRightEmptyRadio;
+        private System.Windows.Forms.RadioButton headerCenterEmptyRadio;
+        private System.Windows.Forms.RadioButton headerLeftEmptyRadio;
+        private System.Windows.Forms.RadioButton headerFirstRightEmptyRadio;
+        private System.Windows.Forms.RadioButton headerFirstCenterEmptyRadio;
+        private System.Windows.Forms.RadioButton headerFirstLeftEmptyRadio;
+        private System.Windows.Forms.RadioButton footerFirstRightEmptyRadio;
+        private System.Windows.Forms.RadioButton footerFirstCenterEmptyRadio;
+        private System.Windows.Forms.RadioButton footerFirstLeftEmptyRadio;
+        private System.Windows.Forms.RadioButton footerRightEmptyRadio;
+        private System.Windows.Forms.RadioButton footerCenterEmptyRadio;
+        private System.Windows.Forms.RadioButton footerLeftEmptyRadio;
     }
 }
 
