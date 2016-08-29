@@ -2068,10 +2068,9 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void sectionAddSubsectionButton_Click(object sender, EventArgs e)
         {
             SubSection subSectionToAdd = new SubSection();
-            
+
             int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
             int subsectionIndex = 0;
-
             foreach (Section section in contentSections)
             {
                 if (section.index == sectionIndex)
@@ -2082,52 +2081,82 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
 
-            GroupBox subSectionToAddGroupBox = new GroupBox();
-            subSectionToAddGroupBox.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
-            subSectionToAddGroupBox.Text = "Subsection " + subsectionIndex;            
 
-            GroupBox sectionToAddTo = (GroupBox)this.Controls.Find("section" + sectionIndex + "groupBox", true)[0];
-            sectionToAddTo.Controls.Add(subSectionToAddGroupBox);
-            subSectionToAddGroupBox.Height = 260;
-            subSectionToAddGroupBox.Width = sectionToAddTo.Width - 18;
-            subSectionToAddGroupBox.Font = new Font(subSectionToAddGroupBox.Font, FontStyle.Regular);
+            //SubSection subSectionToAdd = new SubSection();
 
-            Label subsectionContentLabel = new Label();
-            subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
-            subsectionContentLabel.Text = "Content:";
-            subsectionContentLabel.Size = new Size(47, 13);
-            subSectionToAddGroupBox.Controls.Add(subsectionContentLabel);
-            subsectionContentLabel.Location = new Point(6, 22);
+            //int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
+            //int subsectionIndex = 0;
 
-            Panel subsectionContentPanel = new Panel();
-            subsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentPanel";
-            subsectionContentPanel.Height = 210;
-            subsectionContentPanel.Width = subSectionToAddGroupBox.Width - 18;
-            subSectionToAddGroupBox.Controls.Add(subsectionContentPanel);
-            subsectionContentPanel.Location = new Point(9, 40);
+            //foreach (Section section in contentSections)
+            //{
+            //    if (section.index == sectionIndex)
+            //    {
+            //        subsectionIndex = section.subSections.Count + 1;
+            //        subSectionToAdd.index = subsectionIndex;
+            //        section.subSections.Add(subSectionToAdd);
+            //    }
+            //}
 
-            ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
-            subsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ToolStripContainer";
-            subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+            //GroupBox subSectionToAddGroupBox = new GroupBox();
+            //subSectionToAddGroupBox.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
+            //subSectionToAddGroupBox.Text = "Subsection " + subsectionIndex;            
 
-            ToolStrip subsectionToolStrip = new ToolStrip();
-            subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
-            subsectionToolStrip.Size = new Size(43, 25);
-            subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
-            subsectionContentPanel.Controls.Add(subsectionToolStripContainer);
+            //GroupBox sectionToAddTo = (GroupBox)this.Controls.Find("section" + sectionIndex + "groupBox", true)[0];
+            //sectionToAddTo.Controls.Add(subSectionToAddGroupBox);
+            //subSectionToAddGroupBox.Height = 260;
+            //subSectionToAddGroupBox.Width = sectionToAddTo.Width - 18;
+            //subSectionToAddGroupBox.Font = new Font(subSectionToAddGroupBox.Font, FontStyle.Regular);
 
-            RichTextBox subsectionContent = new RichTextBox();
-            subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
-            subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
-            subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
-            subsectionContent.Location = new Point(0, 0);
+            //Label subsectionContentLabel = new Label();
+            //subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
+            //subsectionContentLabel.Text = "Content:";
+            //subsectionContentLabel.Size = new Size(47, 13);
+            //subSectionToAddGroupBox.Controls.Add(subsectionContentLabel);
+            //subsectionContentLabel.Location = new Point(6, 22);
 
-            lowerSection(265, "SECTIONS");
-            sectionsPanel.Height = sectionsPanel.Height + 265;
-            addSectionButton.Location = new Point(9, addSectionButton.Location.Y + 265);
-            sectionToAddTo.Height = sectionToAddTo.Height + 265;
-            ((Button)sender).Location = new Point(9, ((Button)sender).Location.Y + 265);
-            subSectionToAddGroupBox.Location = new Point(9, 255 + ((subsectionIndex - 1) * 265));
+            //Panel subsectionContentPanel = new Panel();
+            //subsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentPanel";
+            //subsectionContentPanel.Height = 210;
+            //subsectionContentPanel.Width = subSectionToAddGroupBox.Width - 18;
+            //subSectionToAddGroupBox.Controls.Add(subsectionContentPanel);
+            //subsectionContentPanel.Location = new Point(9, 40);
+
+            //ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
+            //subsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ToolStripContainer";
+            //subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+
+            //ToolStrip subsectionToolStrip = new ToolStrip();
+            //subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
+            //subsectionToolStrip.Size = new Size(43, 25);
+            //subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
+            //subsectionContentPanel.Controls.Add(subsectionToolStripContainer);
+
+            //RichTextBox subsectionContent = new RichTextBox();
+            //subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
+            //subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
+            //subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
+            //subsectionContent.Location = new Point(0, 0);
+
+            //lowerSection(265, "SECTIONS");
+            //sectionsPanel.Height = sectionsPanel.Height + 265;
+            //addSectionButton.Location = new Point(9, addSectionButton.Location.Y + 265);
+            //sectionToAddTo.Height = sectionToAddTo.Height + 265;
+            //((Button)sender).Location = new Point(9, ((Button)sender).Location.Y + 265);
+            //subSectionToAddGroupBox.Location = new Point(9, 255 + ((subsectionIndex - 1) * 265));
+        }
+
+        /* startDropName - Highest object that needs to be lowered
+         * totalHeightIncrease - Height that everything needs to be adjusted
+         * panelName - 
+            */
+        public void addSpace(string startDropName, int totalHeightIncrease, string panelName, string dictionaryName)
+        {
+            Control starter = Controls.Find(startDropName, true)[0];
+            int topDropHeight = starter.Location.Y;
+            Control starterparent = starter.Parent;
+
+            lowerSection(totalHeightIncrease, dictionaryName);
+            Control outerMost = Controls.Find(panelName, true)[0];
         }
     }
 }
