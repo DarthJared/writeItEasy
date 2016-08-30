@@ -2081,7 +2081,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
 
-
+            addSpace("section1AddSubsectionButton", 100, "sectionsPanel", "SECTIONS");
             //SubSection subSectionToAdd = new SubSection();
 
             //int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
@@ -2147,16 +2147,41 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         /* startDropName - Highest object that needs to be lowered
          * totalHeightIncrease - Height that everything needs to be adjusted
-         * panelName - 
-            */
+         * panelName - Name of part of write it easy being added to
+         * dictionaryName - Name of part of write it easy stored in sorted dictionary
+         */
         public void addSpace(string startDropName, int totalHeightIncrease, string panelName, string dictionaryName)
         {
             Control starter = Controls.Find(startDropName, true)[0];
-            int topDropHeight = starter.Location.Y;
-            Control starterparent = starter.Parent;
-
+            loopParents(starter, totalHeightIncrease, panelName, true);
+            sections[dictionaryName] += totalHeightIncrease;
             lowerSection(totalHeightIncrease, dictionaryName);
-            Control outerMost = Controls.Find(panelName, true)[0];
+
+            //Control.ControlCollection children = outerMost.Controls;
+            //foreach (Control child in outerMost.Controls)
+            //{
+            //    //Console.WriteLine(child.Name);
+                
+            //}
+        }
+
+        public void loopParents(Control highestControl, int heightChange, string nameCheck, bool changeHighest)
+        {
+            Control parent = highestControl.Parent;
+            parent.Height += heightChange;
+            int checkY = highestControl.Location.Y;
+            foreach (Control childControl in parent.Controls)
+            {
+                if ((changeHighest && childControl.Location.Y >= checkY) || 
+                    (!changeHighest && childControl.Location.Y > checkY))
+                {
+                    childControl.Location = new Point(childControl.Location.X, childControl.Location.Y + heightChange);
+                }
+            }
+            if (!parent.Name.Equals(nameCheck))
+            {
+                loopParents(parent, heightChange, nameCheck, false);
+            }
         }
     }
 }
