@@ -347,6 +347,7 @@
             this.section1ContentPanel = new System.Windows.Forms.Panel();
             this.section1ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.section1Content = new System.Windows.Forms.RichTextBox();
+            this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.section1AddSubsectionButton = new System.Windows.Forms.Button();
             this.section1contentLabel = new System.Windows.Forms.Label();
             this.sectionsHeader = new System.Windows.Forms.Label();
@@ -380,7 +381,6 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -3828,6 +3828,7 @@
             this.addSectionButton.TabIndex = 11;
             this.addSectionButton.Text = "Add Section";
             this.addSectionButton.UseVisualStyleBackColor = true;
+            this.addSectionButton.Click += new System.EventHandler(this.addSectionButton_Click);
             // 
             // sectionsOptionsGroupBox
             // 
@@ -4127,6 +4128,15 @@
             this.section1Content.Size = new System.Drawing.Size(594, 182);
             this.section1Content.TabIndex = 0;
             this.section1Content.Text = "";
+            // 
+            // section1ToolStrip
+            // 
+            this.section1ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.section1ToolStrip.Location = new System.Drawing.Point(3, 0);
+            this.section1ToolStrip.Name = "section1ToolStrip";
+            this.section1ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.section1ToolStrip.Size = new System.Drawing.Size(111, 25);
+            this.section1ToolStrip.TabIndex = 0;
             // 
             // section1AddSubsectionButton
             // 
@@ -4498,15 +4508,6 @@
             this.settingsButton.Size = new System.Drawing.Size(34, 37);
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
-            // 
-            // section1ToolStrip
-            // 
-            this.section1ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.section1ToolStrip.Location = new System.Drawing.Point(3, 0);
-            this.section1ToolStrip.Name = "section1ToolStrip";
-            this.section1ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.section1ToolStrip.Size = new System.Drawing.Size(111, 25);
-            this.section1ToolStrip.TabIndex = 0;
             // 
             // Form1
             // 

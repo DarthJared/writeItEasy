@@ -7,3 +7,12 @@ C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteItEasy\WriteMeEasy
 C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csproj.GenerateResource.Cache
 C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.exe
 C:\Users\Jbeag_000\Documents\Visual Studio 2015\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.pdb
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe.config
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.exe
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.pdb
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.pdb
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csprojResolveAssemblyReference.cache
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Form1.resources
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Properties.Resources.resources
+C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csproj.GenerateResource.Cache

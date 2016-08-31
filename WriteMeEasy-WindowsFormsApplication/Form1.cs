@@ -2081,68 +2081,77 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
 
-            addSpace("section1AddSubsectionButton", 100, "sectionsPanel", "SECTIONS");
-            //SubSection subSectionToAdd = new SubSection();
+            GroupBox sectionToAddTo = (GroupBox)this.Controls.Find("section" + sectionIndex + "groupBox", true)[0];
+            Control starter = Controls.Find("section1AddSubsectionButton", true)[0];
+            GroupBox subsectionToAdd = new GroupBox();
+            subsectionToAdd.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
+            subsectionToAdd.Text = "Subsection " + subsectionIndex;
+            sectionToAddTo.Controls.Add(subsectionToAdd);
 
-            //int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
-            //int subsectionIndex = 0;
+            Label subsectionLabelLabel = new Label();
+            subsectionLabelLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "LabelLabel";
+            subsectionLabelLabel.Text = "Subsection Label:";
+            subsectionToAdd.Controls.Add(subsectionLabelLabel);
+            subsectionLabelLabel.Location = new Point(6, 22);
 
-            //foreach (Section section in contentSections)
-            //{
-            //    if (section.index == sectionIndex)
-            //    {
-            //        subsectionIndex = section.subSections.Count + 1;
-            //        subSectionToAdd.index = subsectionIndex;
-            //        section.subSections.Add(subSectionToAdd);
-            //    }
-            //}
+            TextBox subsectionLabelEnter = new TextBox();
+            subsectionLabelEnter.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "LabelEnter";
+            subsectionToAdd.Controls.Add(subsectionLabelEnter);
+            subsectionLabelEnter.Location = new Point(110, 19);
+            subsectionLabelEnter.Width = 185;
 
-            //GroupBox subSectionToAddGroupBox = new GroupBox();
-            //subSectionToAddGroupBox.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
-            //subSectionToAddGroupBox.Text = "Subsection " + subsectionIndex;            
+            Label subsectionContentLabel = new Label();
+            subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
+            subsectionContentLabel.Text = "Content:";            
+            subsectionToAdd.Controls.Add(subsectionContentLabel);
+            subsectionContentLabel.BackColor = Color.Transparent;
+            Console.WriteLine(subsectionContentLabel.BackColor);
 
-            //GroupBox sectionToAddTo = (GroupBox)this.Controls.Find("section" + sectionIndex + "groupBox", true)[0];
-            //sectionToAddTo.Controls.Add(subSectionToAddGroupBox);
-            //subSectionToAddGroupBox.Height = 260;
-            //subSectionToAddGroupBox.Width = sectionToAddTo.Width - 18;
-            //subSectionToAddGroupBox.Font = new Font(subSectionToAddGroupBox.Font, FontStyle.Regular);
+            Panel subsectionContentPanel = new Panel();
+            subsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentPanel";            
+            subsectionToAdd.Controls.Add(subsectionContentPanel);
 
-            //Label subsectionContentLabel = new Label();
-            //subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
-            //subsectionContentLabel.Text = "Content:";
-            //subsectionContentLabel.Size = new Size(47, 13);
-            //subSectionToAddGroupBox.Controls.Add(subsectionContentLabel);
-            //subsectionContentLabel.Location = new Point(6, 22);
+            ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
+            subsectionToolStripContainer.Name = "section" + sectionIndex + "subsection" + subsectionIndex + "toolstripcontainer";            
 
-            //Panel subsectionContentPanel = new Panel();
-            //subsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentPanel";
-            //subsectionContentPanel.Height = 210;
-            //subsectionContentPanel.Width = subSectionToAddGroupBox.Width - 18;
-            //subSectionToAddGroupBox.Controls.Add(subsectionContentPanel);
-            //subsectionContentPanel.Location = new Point(9, 40);
+            ToolStrip subsectionToolStrip = new ToolStrip();
+            subsectionToolStrip.Name = "section" + sectionIndex + "subsection" + subsectionIndex + "toolstrip";
+            subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
+            subsectionToolStrip.Size = new Size(43, 25);
+            subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
+            subsectionContentPanel.Controls.Add(subsectionToolStripContainer);
 
-            //ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
-            //subsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ToolStripContainer";
-            //subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+            RichTextBox subsectionContent = new RichTextBox();
+            subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";            
+            subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
+            subsectionContent.Location = new Point(0, 0);
 
-            //ToolStrip subsectionToolStrip = new ToolStrip();
-            //subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
-            //subsectionToolStrip.Size = new Size(43, 25);
-            //subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
-            //subsectionContentPanel.Controls.Add(subsectionToolStripContainer);
-
-            //RichTextBox subsectionContent = new RichTextBox();
-            //subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
-            //subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
-            //subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
-            //subsectionContent.Location = new Point(0, 0);
-
-            //lowerSection(265, "SECTIONS");
-            //sectionsPanel.Height = sectionsPanel.Height + 265;
-            //addSectionButton.Location = new Point(9, addSectionButton.Location.Y + 265);
-            //sectionToAddTo.Height = sectionToAddTo.Height + 265;
-            //((Button)sender).Location = new Point(9, ((Button)sender).Location.Y + 265);
-            //subSectionToAddGroupBox.Location = new Point(9, 255 + ((subsectionIndex - 1) * 265));
+            if (includeSectionLabelsCheck.Checked)
+            {
+                addSpace("section1AddSubsectionButton", 282, "sectionsPanel", "SECTIONS");       
+                subsectionToAdd.Location = new Point(9, starter.Location.Y - 277);
+                subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 272);
+                subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
+                subsectionContentLabel.Location = new Point(6, 49);
+                subsectionContentPanel.Location = new Point(9, 73);
+                subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
+                subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+                subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
+            }
+            else
+            {
+                addSpace("section1AddSubsectionButton", 255, "sectionsPanel", "SECTIONS");  
+                subsectionToAdd.Location = new Point(9, starter.Location.Y - 250);
+                subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 245);
+                subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
+                subsectionLabelLabel.Visible = false;
+                subsectionLabelEnter.Visible = false;
+                subsectionContentLabel.Location = new Point(6, 22);
+                subsectionContentPanel.Location = new Point(9, 46);
+                subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
+                subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+                subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
+            }
         }
 
         /* startDropName - Highest object that needs to be lowered
@@ -2156,13 +2165,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             loopParents(starter, totalHeightIncrease, panelName, true);
             sections[dictionaryName] += totalHeightIncrease;
             lowerSection(totalHeightIncrease, dictionaryName);
-
-            //Control.ControlCollection children = outerMost.Controls;
-            //foreach (Control child in outerMost.Controls)
-            //{
-            //    //Console.WriteLine(child.Name);
-                
-            //}
         }
 
         public void loopParents(Control highestControl, int heightChange, string nameCheck, bool changeHighest)
@@ -2181,6 +2183,29 @@ namespace WriteMeEasy_WindowsFormsApplication
             if (!parent.Name.Equals(nameCheck))
             {
                 loopParents(parent, heightChange, nameCheck, false);
+            }
+        }
+
+        private void addSectionButton_Click(object sender, EventArgs e)
+        {
+            Section newSection = new Section();
+            newSection.index = contentSections.Count + 1;
+            contentSections.Add(newSection);
+
+            GroupBox newSectioGroupBox = new GroupBox();
+            newSectioGroupBox.Name = "section" + newSection.index + "groupBox";
+            sectionsPanel.Controls.Add(newSectioGroupBox);
+
+            if (includeSectionLabelsCheck.Checked)
+            {
+                newSectioGroupBox.Size = new Size(615, 311);
+                newSectioGroupBox.Location = new Point(9, addSectionButton.Location.Y - 317);
+            }
+            else
+            {
+                newSectioGroupBox.Size = new Size(615, 288);
+                newSectioGroupBox.Location = new Point(9, addSectionButton.Location.Y - 294);
+
             }
         }
     }
