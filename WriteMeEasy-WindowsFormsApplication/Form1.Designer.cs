@@ -591,10 +591,13 @@
             // 
             this.sectionTabControl.Controls.Add(this.formattingTab);
             this.sectionTabControl.Controls.Add(this.contentTab);
+            this.sectionTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionTabControl.ItemSize = new System.Drawing.Size(325, 25);
             this.sectionTabControl.Location = new System.Drawing.Point(3, 3);
             this.sectionTabControl.Name = "sectionTabControl";
             this.sectionTabControl.SelectedIndex = 0;
             this.sectionTabControl.Size = new System.Drawing.Size(660, 670);
+            this.sectionTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.sectionTabControl.TabIndex = 1;
             // 
             // formattingTab
@@ -609,12 +612,12 @@
             this.formattingTab.Controls.Add(this.abstractPanel);
             this.formattingTab.Controls.Add(this.generalPanel);
             this.formattingTab.Controls.Add(this.referencesPanel);
-            this.formattingTab.Location = new System.Drawing.Point(4, 22);
+            this.formattingTab.Location = new System.Drawing.Point(4, 29);
             this.formattingTab.Name = "formattingTab";
             this.formattingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.formattingTab.Size = new System.Drawing.Size(652, 644);
+            this.formattingTab.Size = new System.Drawing.Size(652, 637);
             this.formattingTab.TabIndex = 0;
-            this.formattingTab.Text = "Formatting";
+            this.formattingTab.Text = "FORMATTING";
             this.formattingTab.UseVisualStyleBackColor = true;
             // 
             // conclusionPanel
@@ -1812,6 +1815,7 @@
             // 
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton5);
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton6);
+            this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
             this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
@@ -1826,7 +1830,7 @@
             this.radioButton5.Checked = true;
             this.radioButton5.Location = new System.Drawing.Point(7, 18);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(106, 17);
+            this.radioButton5.Size = new System.Drawing.Size(123, 17);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "In Line With Text";
@@ -1837,7 +1841,7 @@
             this.radioButton6.AutoSize = true;
             this.radioButton6.Location = new System.Drawing.Point(7, 41);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(186, 17);
+            this.radioButton6.Size = new System.Drawing.Size(218, 17);
             this.radioButton6.TabIndex = 2;
             this.radioButton6.Text = "On Separate Line Before Sections";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -2243,6 +2247,7 @@
             // 
             // titlePageDefaultButton
             // 
+            this.titlePageDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePageDefaultButton.Location = new System.Drawing.Point(9, 436);
             this.titlePageDefaultButton.Name = "titlePageDefaultButton";
             this.titlePageDefaultButton.Size = new System.Drawing.Size(126, 23);
@@ -4092,6 +4097,7 @@
             // 
             // generalDefaultButton
             // 
+            this.generalDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generalDefaultButton.Location = new System.Drawing.Point(9, 545);
             this.generalDefaultButton.Name = "generalDefaultButton";
             this.generalDefaultButton.Size = new System.Drawing.Size(126, 23);
@@ -4513,12 +4519,12 @@
             // 
             this.contentTab.AutoScroll = true;
             this.contentTab.Controls.Add(this.contentPanel);
-            this.contentTab.Location = new System.Drawing.Point(4, 22);
+            this.contentTab.Location = new System.Drawing.Point(4, 25);
             this.contentTab.Name = "contentTab";
             this.contentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.contentTab.Size = new System.Drawing.Size(652, 644);
+            this.contentTab.Size = new System.Drawing.Size(652, 641);
             this.contentTab.TabIndex = 1;
-            this.contentTab.Text = "Content";
+            this.contentTab.Text = "CONTENT";
             this.contentTab.UseVisualStyleBackColor = true;
             // 
             // contentPanel
@@ -4754,6 +4760,7 @@
             // 
             // addSectionButton
             // 
+            this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addSectionButton.Location = new System.Drawing.Point(9, 885);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(130, 23);

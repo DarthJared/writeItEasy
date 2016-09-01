@@ -249,8 +249,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                     subsectionContent.Width = sectionWidth4InTextBox;
                 }
             }
+            sectionTabControl.ItemSize = new Size((sectionTabControl.Width - 10) / 2, 25);
+
+            checkContentPanelHeight();
 
             writeButton.Location = new Point(finalizePanel.Width - 125, 8);
+        }
+
+        private void checkContentPanelHeight()
+        {
+            int newHeight = 0;
+            foreach (Control control in contentPanel.Controls)
+            {
+                if (control.Location.Y + control.Height + 20 > newHeight && control.Visible)
+                {
+                    newHeight = control.Location.Y + control.Height + 20;
+                }
+            }
+            if (newHeight <= sectionTabControl.Height - 30)
+            {
+                newHeight = sectionTabControl.Height - 30;
+            }  
+            contentPanel.Height = newHeight;
+        }
+
+        private void fixContentPanelHeight()
+        {
+            
         }
 
         private void lowerSection(int pixelsDown, string startSection)
@@ -639,6 +664,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 raiseSection(sectionHeight, "SUMMARY");
                 summaryActive = false;
             }
+            checkContentPanelHeight();
         }
 
         private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
@@ -687,6 +713,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 raiseSection(sectionHeight, "ABSTRACT");
                 abstractActive = false;
             }
+            checkContentPanelHeight();
         }
 
         private void headerIncludeCheck_CheckedChanged(object sender, EventArgs e)
@@ -857,6 +884,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 raiseSection(sectionHeight, "CONCLUSION");
                 conclusionActive = false;
             }
+            checkContentPanelHeight();
         }
 
         private void referencesIncludeCheck_CheckedChanged(object sender, EventArgs e)
@@ -2206,6 +2234,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
             subsectionToolStripContainer.Size = subsectionContentPanel.Size;
             subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
+            checkContentPanelHeight();
         }
 
         /* startDropName - Highest object that needs to be lowered
@@ -2321,6 +2350,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionToolStripContainer.Size = newSectionContentPanel.Size;
             newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
             newSectionAddSubsectionButton.Location = new Point(9, 282);
+            checkContentPanelHeight();
         }
 
         private void includeSubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
