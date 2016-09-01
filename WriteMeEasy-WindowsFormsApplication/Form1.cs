@@ -71,16 +71,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryTitleGroupBox.Height = 45;
             summaryDefaultButton.Location = new Point(9, 93);
             summaryOptionsGroupBox.Height = 125;
-            summaryContentGroupBox.Location = new Point(9, 174);
-            summaryPanel.Height = 440;
-            sections["SUMMARY"] = 440;
+            summaryPanel.Height = 174;
+            sections["SUMMARY"] = 174;
 
             abstractTitleGroupBox.Height = 45;
             abstractDefaultButton.Location = new Point(9, 93);
             abstractOptionsGroupBox.Height = 125;
-            abstractContentGroupBox.Location = new Point(9, 174);
-            abstractPanel.Height = 440;
-            sections["ABSTRACT"] = 440;
+            abstractPanel.Height = 174;
+            sections["ABSTRACT"] = 174;
 
             headerFirstPageGroupBox.Height = 40;
             headerOptionsGroupBox.Height = 494;
@@ -97,21 +95,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             sectionLabelGroupBox.Height = 45;
             sectionsDefaultButton.Location = new Point(9, 179);
             sectionsOptionsGroupBox.Height = 212;
-            section1groupBox.Location = new Point(9, 268);
-            section1contentLabel.Location = new Point(6, 22);
-            section1ContentPanel.Location = new Point(9, 40);
-            section1AddSubsectionButton.Location = new Point(9, 259);
-            section1groupBox.Height = 292;
-            addSectionButton.Location = new Point(9, 562);
-            sectionsPanel.Height = 595;
-            sections["SECTIONS"] = 595;
+            sectionsPanel.Height = 266;
+            sections["SECTIONS"] = 266;
 
             conclusionTitleGroupBox.Height = 45;
             conclusionDefaultButton.Location = new Point(9, 93);
-            conclusionOptionsGroupBox.Height = 125;
-            conclusionContentGroupBox.Location = new Point(9, 174);
-            conclusionPanel.Height = 440;
-            sections["CONCLUSION"] = 440;
+            conclusionOptionsGroupBox.Height = 125;            
+            conclusionPanel.Height = 172;
+            sections["CONCLUSION"] = 172;
 
             referencesDefaultButton.Location = new Point(9, 233);
             referencesOptionsGroupBox.Height = 185;
@@ -120,6 +111,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             referencesEmptyLineBetweenCheck.Location = new Point(9, 129);
             referencesPanel.Height = 270;
             sections["REFERENCES"] = 270;
+            
+            section1groupBox.Location = new Point(9, 33);
+            section1contentLabel.Location = new Point(6, 49);
+            section1ContentPanel.Location = new Point(9, 67);
+            section1AddSubsectionButton.Location = new Point(9, 282);
+            section1groupBox.Height = 315;
+            addSectionButton.Location = new Point(9, 353);
+            contentPanel.Height = 404;
 
             contentSections.Add(new Section(new List<SubSection>(), "", "", 1));
         }
@@ -139,13 +138,13 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             finalizePanel.Width = rightPanelWidth - 12;
 
-            TableLayoutPanelCellPosition leftPos = tableLayoutPanel1.GetCellPosition(sectionPanel);
+            TableLayoutPanelCellPosition leftPos = tableLayoutPanel1.GetCellPosition(sectionTabControl);
             int panelWidth = tableLayoutPanel1.GetColumnWidths()[leftPos.Column];
             int panelHeight = tableLayoutPanel1.GetRowHeights()[leftPos.Row];
-            sectionPanel.Width = panelWidth - 6;
-            sectionPanel.Height = panelHeight - 6;
+            sectionTabControl.Width = panelWidth - 6;
+            sectionTabControl.Height = panelHeight - 6;
 
-            int sectionWidth = panelWidth - 23;
+            int sectionWidth = panelWidth - 31;
             int sectionWidth1In = sectionWidth - 25;
             int sectionWidth2In = sectionWidth1In - 18;
             int sectionWidth3In = sectionWidth2In - 18;
@@ -580,6 +579,17 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (summaryIncludeCheck.Checked)
             {
+                if (abstractIncludeCheck.Checked)
+                {
+                    addSpace("abstractContentGroupBox", 262, "contentPanel", "CONTENT");
+                }
+                else
+                {
+                    addSpace("section1GroupBox", 262, "contentPanel", "CONTENT");
+                }
+                summaryContentGroupBox.Location = new Point(9, 36);
+                summaryContentGroupBox.Visible = true;
+
                 summaryPanel.Visible = true;
                 lowerSection(sectionHeight, "SUMMARY");
                 summaryActive = true;
@@ -587,6 +597,16 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                if (abstractIncludeCheck.Checked)
+                {
+                    addSpace("abstractContentGroupBox", -262, "contentPanel", "CONTENT");
+                }
+                else
+                {
+                    addSpace("section1GroupBox", -262, "contentPanel", "CONTENT");
+                }
+                summaryContentGroupBox.Visible = false;
+
                 summaryPanel.Visible = false;
                 raiseSection(sectionHeight, "SUMMARY");
                 summaryActive = false;
@@ -621,6 +641,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (abstractIncludeCheck.Checked)
             {
+                addSpace("section1GroupBox", 262, "contentPanel", "CONTENT");
+                abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 262);
+                abstractContentGroupBox.Visible = true;
+
                 abstractPanel.Visible = true;
                 lowerSection(sectionHeight, "ABSTRACT");
                 abstractActive = true;
@@ -628,6 +652,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                addSpace("section1GroupBox", -262, "contentPanel", "CONTENT");
+                abstractContentGroupBox.Visible = false;
+
                 abstractPanel.Visible = false;
                 raiseSection(sectionHeight, "ABSTRACT");
                 abstractActive = false;
@@ -783,6 +810,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (conclusionIncludeCheck.Checked)
             {
+                contentPanel.Height += 262;
+                int newY = addSectionButton.Location.Y + addSectionButton.Height + 20;
+                conclusionContentGroupBox.Location = new Point(9, newY);
+                conclusionContentGroupBox.Visible = true;
+
                 conclusionPanel.Visible = true;
                 lowerSection(sectionHeight, "CONCLUSION");
                 conclusionActive = true;
@@ -790,6 +822,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                contentPanel.Height -= 262;
+                conclusionContentGroupBox.Visible = false;
+
                 conclusionPanel.Visible = false;
                 raiseSection(sectionHeight, "CONCLUSION");
                 conclusionActive = false;
@@ -1123,9 +1158,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 summaryTitleGroupBox.Height = 150;
                 summaryDefaultButton.Location = new Point(9, 198);
-                summaryOptionsGroupBox.Height = 230;
-                summaryContentGroupBox.Location = new Point(9, 279);
-                summaryPanel.Height = 545;
+                summaryOptionsGroupBox.Height += 105;
+                summaryPanel.Height += 105;
                 summaryTitleTextLabel.Visible = true;
                 summaryTitleText.Visible = true;
                 summaryTitleBoldCheck.Visible = true;
@@ -1137,7 +1171,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 summaryTitleColorText.Visible = true;
                 summaryTitleColorButton.Visible = true;
                 lowerSection(105, "SUMMARY");
-                sections["SUMMARY"] = 545;
+                sections["SUMMARY"] += 105;
             }
             else
             {
@@ -1154,10 +1188,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 summaryTitleGroupBox.Height = 45;
                 summaryDefaultButton.Location = new Point(9, 93);
                 summaryOptionsGroupBox.Height = 125;
-                summaryContentGroupBox.Location = new Point(9, 174);
-                summaryPanel.Height = 440;
+                summaryPanel.Height -= 105;
                 raiseSection(105, "SUMMARY");
-                sections["SUMMARY"] = 440;
+                sections["SUMMARY"] -=105;
             }
         }
 
@@ -1167,9 +1200,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 abstractTitleGroupBox.Height = 150;
                 abstractDefaultButton.Location = new Point(9, 198);
-                abstractOptionsGroupBox.Height = 230;
-                abstractContentGroupBox.Location = new Point(9, 279);
-                abstractPanel.Height = 545;
+                abstractOptionsGroupBox.Height += 105;
+                abstractPanel.Height += 105;
                 abstractTitleLabel.Visible = true;
                 abstractTitleText.Visible = true;
                 abstractTitleBoldCheck.Visible = true;
@@ -1181,7 +1213,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 abstractTitleColorText.Visible = true;
                 abstractTitleColorButton.Visible = true;
                 lowerSection(105, "ABSTRACT");
-                sections["ABSTRACT"] = 545;
+                sections["ABSTRACT"] += 105;
             }
             else
             {
@@ -1198,10 +1230,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 abstractTitleGroupBox.Height = 45;
                 abstractDefaultButton.Location = new Point(9, 93);
                 abstractOptionsGroupBox.Height = 125;
-                abstractContentGroupBox.Location = new Point(9, 174);
-                abstractPanel.Height = 440;
+                abstractPanel.Height -= 105;
                 raiseSection(105, "ABSTRACT");
-                sections["ABSTRACT"] = 440;
+                sections["ABSTRACT"] -= 105;
             }
         }
 
@@ -1845,44 +1876,46 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void includeSectionLabelsCheck_CheckedChanged(object sender, EventArgs e)
         {
+            int numSections = contentSections.Count;
+            int sectionMult = numSections * 27;
+            int totalSpace = 243 + sectionMult;
             if (includeSectionLabelsCheck.Checked)
             {
-                lowerSection(270, "SECTIONS");
-                sections["SECTIONS"] = 865;
-                sectionsPanel.Height = 865;
-                addSectionButton.Location = new Point(9, 832);
-                section1AddSubsectionButton.Location = new Point(9, 282);
-                section1ContentPanel.Location = new Point(9, 67);
-                section1contentLabel.Location = new Point(6, 49);
-                section1groupBox.Height = 315;
-                section1groupBox.Location = new Point(9, 511);
-                sectionsOptionsGroupBox.Height = 455;
-                sectionsDefaultButton.Location = new Point(9, 422);
+                lowerSection(243, "SECTIONS");
+                sections["SECTIONS"] += 243;
+
+                for (int i = 1; i <= numSections; i++)
+                {
+                    Label sectionLabelLabel = (Label)Controls.Find("section" + i + "LabelLabel", true)[0];
+                    sectionLabelLabel.Enabled = true;
+                    TextBox sectionLabelEnter = (TextBox)Controls.Find("section" + i + "LabelEnter", true)[0];
+                    sectionLabelEnter.Enabled = true;
+                }
+
+                addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");     
                 sectionLabelGroupBox.Height = 288;
                 sectionLabelLocationGroupBox.Visible = true;
                 sectionLabelStyleGroupBox.Visible = true;
-                section1LabelLabel.Visible = true;
-                section1LabelEnter.Visible = true;
             }
             else
             {
+                raiseSection(243, "SECTIONS");
+                sections["SECTIONS"] -= 243;
+
+                for (int i = 1; i <= numSections; i++)
+                {
+                    Label sectionLabelLabel = (Label)Controls.Find("section" + i + "LabelLabel", true)[0];
+                    sectionLabelLabel.Enabled = false;
+                    TextBox sectionLabelEnter = (TextBox)Controls.Find("section" + i + "LabelEnter", true)[0];
+                    sectionLabelEnter.Enabled = false;
+                }
+
+                addSpace("sectionsDefaultButton", -243, "sectionsPanel", "SECTIONS");
+                sectionLabelGroupBox.Height = 45;
                 sectionLabelLocationGroupBox.Visible = false;
                 sectionLabelStyleGroupBox.Visible = false;
-                section1LabelLabel.Visible = false;
-                section1LabelEnter.Visible = false;
-                sectionLabelGroupBox.Height = 45;
-                sectionsDefaultButton.Location = new Point(9, 179);
-                sectionsOptionsGroupBox.Height = 212;
-                section1groupBox.Location = new Point(9, 268);
-                section1contentLabel.Location = new Point(6, 22);
-                section1ContentPanel.Location = new Point(9, 40);
-                section1AddSubsectionButton.Location = new Point(9, 255);
-                section1groupBox.Height = 288;
-                addSectionButton.Location = new Point(9, 562);
-                sectionsPanel.Height = 595;
-                sections["SECTIONS"] = 595;
-                raiseSection(270, "SECTIONS");
             }
+            subsectionLabelGroupBox.Location = new Point(9, sectionLabelGroupBox.Location.Y + sectionLabelGroupBox.Height + 13);
         }
 
         private void conclusionIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
@@ -1890,9 +1923,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             if (conclusionIncludeTitleCheck.Checked)
             {
                 lowerSection(105, "CONCLUSION");
-                sections["CONCLUSION"] = 545;
-                conclusionPanel.Height = 545;
-                conclusionContentGroupBox.Location = new Point(9, 279);
+                sections["CONCLUSION"] += 105;
+                conclusionPanel.Height += 105;
                 conclusionDefaultButton.Location = new Point(9, 198);
                 conclusionOptionsGroupBox.Height = 230;
                 conclusionTitleGroupBox.Height = 150;
@@ -1922,9 +1954,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 conclusionTitleGroupBox.Height = 45;
                 conclusionDefaultButton.Location = new Point(9, 93);
                 conclusionOptionsGroupBox.Height = 125;
-                conclusionContentGroupBox.Location = new Point(9, 174);
-                conclusionPanel.Height = 440;
-                sections["CONCLUSION"] = 440;
+                conclusionPanel.Height -= 105;
+                sections["CONCLUSION"] -= 105;
                 raiseSection(105, "CONCLUSION");
             }
         }
@@ -2067,6 +2098,12 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void sectionAddSubsectionButton_Click(object sender, EventArgs e)
         {
+            if (!subsectionLabelGroupBox.Visible)
+            {
+                addSpace("sectionsDefaultButton", 56, "sectionsPanel", "SECTIONS");
+                subsectionLabelGroupBox.Location = new Point(9, sectionLabelGroupBox.Location.Y + sectionLabelGroupBox.Height + 8);
+                subsectionLabelGroupBox.Visible = true;
+            }
             SubSection subSectionToAdd = new SubSection();
 
             int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
@@ -2081,7 +2118,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
 
-            GroupBox sectionToAddTo = (GroupBox)this.Controls.Find("section" + sectionIndex + "groupBox", true)[0];
+            GroupBox sectionToAddTo = (GroupBox)Controls.Find("section" + sectionIndex + "groupBox", true)[0];
             Control starter = Controls.Find("section" + sectionIndex + "AddSubsectionButton", true)[0];
             GroupBox subsectionToAdd = new GroupBox();
             subsectionToAdd.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
@@ -2100,6 +2137,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionLabelEnter.Location = new Point(110, 19);
             subsectionLabelEnter.Width = 185;
 
+            if (!includeSubsectionLabelCheck.Checked)
+            {
+                subsectionLabelLabel.Enabled = false;
+                subsectionLabelEnter.Enabled = false;
+            }
+
             Label subsectionContentLabel = new Label();
             subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
             subsectionContentLabel.Text = "Content:";            
@@ -2112,10 +2155,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionToAdd.Controls.Add(subsectionContentPanel);
 
             ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
-            subsectionToolStripContainer.Name = "section" + sectionIndex + "subsection" + subsectionIndex + "toolstripcontainer";            
+            subsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "toolstripcontainer";            
 
             ToolStrip subsectionToolStrip = new ToolStrip();
-            subsectionToolStrip.Name = "section" + sectionIndex + "subsection" + subsectionIndex + "toolstrip";
+            subsectionToolStrip.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "toolstrip";
             subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
             subsectionToolStrip.Size = new Size(43, 25);
             subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
@@ -2125,33 +2168,16 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";            
             subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
             subsectionContent.Location = new Point(0, 0);
-
-            if (includeSectionLabelsCheck.Checked)
-            {
-                addSpace("section" + sectionIndex + "AddSubsectionButton", 282, "sectionsPanel", "SECTIONS");       
-                subsectionToAdd.Location = new Point(9, starter.Location.Y - 277);
-                subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 272);
-                subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
-                subsectionContentLabel.Location = new Point(6, 49);
-                subsectionContentPanel.Location = new Point(9, 73);
-                subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
-                subsectionToolStripContainer.Size = subsectionContentPanel.Size;
-                subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
-            }
-            else
-            {
-                addSpace("section" + sectionIndex + "AddSubsectionButton", 255, "sectionsPanel", "SECTIONS");  
-                subsectionToAdd.Location = new Point(9, starter.Location.Y - 250);
-                subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 245);
-                subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
-                subsectionLabelLabel.Visible = false;
-                subsectionLabelEnter.Visible = false;
-                subsectionContentLabel.Location = new Point(6, 22);
-                subsectionContentPanel.Location = new Point(9, 46);
-                subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
-                subsectionToolStripContainer.Size = subsectionContentPanel.Size;
-                subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
-            }
+            
+            addSpace("section" + sectionIndex + "AddSubsectionButton", 282, "contentPanel", "CONTENT");       
+            subsectionToAdd.Location = new Point(9, starter.Location.Y - 277);
+            subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 272);
+            subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
+            subsectionContentLabel.Location = new Point(6, 49);
+            subsectionContentPanel.Location = new Point(9, 73);
+            subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
+            subsectionToolStripContainer.Size = subsectionContentPanel.Size;
+            subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
         }
 
         /* startDropName - Highest object that needs to be lowered
@@ -2163,8 +2189,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             Control starter = Controls.Find(startDropName, true)[0];
             loopParents(starter, totalHeightIncrease, panelName, true);
-            sections[dictionaryName] += totalHeightIncrease;
-            lowerSection(totalHeightIncrease, dictionaryName);
+            //sections[dictionaryName] += totalHeightIncrease;
+            //lowerSection(totalHeightIncrease, dictionaryName);
         }
 
         public void loopParents(Control highestControl, int heightChange, string nameCheck, bool changeHighest)
@@ -2196,7 +2222,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionGroupBox.Name = "section" + newSection.index + "groupBox";
             newSectionGroupBox.Text = "Section " + newSection.index;
             newSectionGroupBox.Font = new Font(newSectionGroupBox.Font, FontStyle.Bold);
-            sectionsPanel.Controls.Add(newSectionGroupBox);
+            contentPanel.Controls.Add(newSectionGroupBox);
 
             Label newSectionLabelLabel = new Label();
             newSectionLabelLabel.Name = "section" + newSection.index + "LabelLabel";
@@ -2208,6 +2234,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionGroupBox.Controls.Add(newSectionLabelEnter);
             newSectionLabelEnter.Font = new Font(newSectionLabelEnter.Font, FontStyle.Regular);
             newSectionLabelEnter.Location = new Point(81, 19);
+
+            if (!includeSectionLabelsCheck.Checked)
+            {
+                newSectionLabelLabel.Enabled = false;
+                newSectionLabelEnter.Enabled = false;
+            }
 
             newSectionGroupBox.Controls.Add(newSectionLabelLabel);
             newSectionLabelLabel.Font = new Font(newSectionLabelLabel.Font, FontStyle.Regular);
@@ -2250,36 +2282,55 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Tag = newSection.index;
             newSectionAddSubsectionButton.Click += new EventHandler(sectionAddSubsectionButton_Click);
 
-            if (includeSectionLabelsCheck.Checked)
-            {
-                addSpace("addSectionButton", 335, "sectionsPanel", "SECTIONS");
-                newSectionGroupBox.Size = new Size(615, 315);
-                newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 321);
-                newSectionLabelLabel.Visible = true;
-                newSectionLabelEnter.Visible = true;
-                newSectionContentLabel.Location = new Point(6, 49);
-                newSectionContentPanel.Size = new Size(newSectionGroupBox.Width - 18, 210);
-                newSectionContentPanel.Location = new Point(9, 67);
-                newSectionToolStripContainer.Size = newSectionContentPanel.Size;
-                newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
-                newSectionAddSubsectionButton.Location = new Point(9, 282);
+            addSpace("addSectionButton", 335, "contentPanel", "CONTENT");
+            newSectionGroupBox.Size = new Size(615, 315);
+            newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 321);
+            newSectionLabelLabel.Visible = true;
+            newSectionLabelEnter.Visible = true;
+            newSectionContentLabel.Location = new Point(6, 49);
+            newSectionContentPanel.Size = new Size(newSectionGroupBox.Width - 18, 210);
+            newSectionContentPanel.Location = new Point(9, 67);
+            newSectionToolStripContainer.Size = newSectionContentPanel.Size;
+            newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
+            newSectionAddSubsectionButton.Location = new Point(9, 282);
+        }
 
+        private void includeSubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (includeSubsectionLabelCheck.Checked)
+            {
+                addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");
+                subsectionLabelGroupBox.Height = 288;
+                subsectionLabelLocationGroupBox.Visible = true;
+                subsectionLabelStyleGroupBox.Visible = true;
+                for (int i = 1; i <= contentSections.Count; i++)
+                {
+                    for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                    {
+                        Label subsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "LabelLabel", true)[0];
+                        subsectionLabelLabel.Enabled = true;
+                        TextBox subsectionLabelTextBox = (TextBox)Controls.Find("section" + i + "Subsection" + j + "LabelEnter", true)[0];
+                        subsectionLabelTextBox.Enabled = true;
+                    }
+                }
             }
             else
             {
-                addSpace("addSectionButton", 308, "sectionsPanel", "SECTIONS");
-                newSectionGroupBox.Size = new Size(615, 288);
-                newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 294);
-                newSectionLabelLabel.Visible = false;
-                newSectionLabelEnter.Visible = false;
-                newSectionContentLabel.Location = new Point(6, 22);
-                newSectionContentPanel.Size = new Size(newSectionGroupBox.Width - 18, 210);
-                newSectionContentPanel.Location = new Point(9, 40);
-                newSectionToolStripContainer.Size = newSectionContentPanel.Size;
-                newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
-                newSectionAddSubsectionButton.Location = new Point(9, 255);
+                addSpace("sectionsDefaultButton", -243, "sectionsPanel", "SECTIONS");
+                subsectionLabelGroupBox.Height = 45;
+                subsectionLabelLocationGroupBox.Visible = false;
+                subsectionLabelStyleGroupBox.Visible = false;
+                for (int i = 1; i <= contentSections.Count; i++)
+                {
+                    for (int j = 1; j <= contentSections[i].subSections.Count; j++)
+                    {
+                        Label subsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "LabelLabel", true)[0];
+                        subsectionLabelLabel.Enabled = false;
+                        TextBox subsectionLabelTextBox = (TextBox)Controls.Find("section" + i + "Subsection" + j + "LabelEnter", true)[0];
+                        subsectionLabelTextBox.Enabled = false;
+                    }
+                }
             }
-            
         }
     }
 }
