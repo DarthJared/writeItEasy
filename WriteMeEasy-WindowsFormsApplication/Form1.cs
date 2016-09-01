@@ -150,6 +150,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             int sectionWidth3In = sectionWidth2In - 18;
             int sectionWidth4In = sectionWidth3In - 18;
             int sectionWidth3InTextBox = sectionWidth2In - 3;
+            int sectionWidth4InTextBox = sectionWidth3In - 3;
 
             generalPanel.Width = sectionWidth;
             paperTitleGroupBox.Width = sectionWidth1In;
@@ -165,18 +166,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryPanel.Width = sectionWidth;
             summaryOptionsGroupBox.Width = sectionWidth1In;
             summaryTitleGroupBox.Width = sectionWidth2In;
-            summaryContentGroupBox.Width = sectionWidth1In;
-            summaryContentPanel.Width = sectionWidth2In;
-            summaryToolStripContainer.Width = sectionWidth2In;
-            summaryContent.Width = sectionWidth3InTextBox;
-
+            
             abstractPanel.Width = sectionWidth;
             abstractOptionsGroupBox.Width = sectionWidth1In;
-            abstractTitleGroupBox.Width = sectionWidth2In;
-            abstractContentGroupBox.Width = sectionWidth1In;
-            abstractContentPanel.Width = sectionWidth2In;
-            abstractContentToolStripContainer.Width = sectionWidth2In;
-            abstractContent.Width = sectionWidth3InTextBox;
+            abstractTitleGroupBox.Width = sectionWidth2In;            
 
             headerPanel.Width = sectionWidth;
             headerOptionsGroupBox.Width = sectionWidth1In;
@@ -199,28 +192,63 @@ namespace WriteMeEasy_WindowsFormsApplication
             footerFirstPageRightGroupBox.Width = sectionWidth3In;
 
             sectionsPanel.Width = sectionWidth;
-            sectionsOptionsGroupBox.Width = sectionWidth1In;
-            section1groupBox.Width = sectionWidth1In;
-            section1ContentPanel.Width = sectionWidth2In;
-            section1ToolStripContainer.Width = sectionWidth2In;
-            section1Content.Width = sectionWidth3InTextBox;
+            sectionsOptionsGroupBox.Width = sectionWidth1In;            
             betweenSectionsGroupBox.Width = sectionWidth2In;
             sectionLabelGroupBox.Width = sectionWidth2In;
             sectionLabelLocationGroupBox.Width = sectionWidth3In;
             sectionLabelStyleGroupBox.Width = sectionWidth3In;
+            subsectionLabelGroupBox.Width = sectionWidth2In;
+            subsectionLabelLocationGroupBox.Width = sectionWidth3In;
+            subsectionLabelStyleGroupBox.Width = sectionWidth3In;
+            subsubsectionLabelGroupBox.Width = sectionWidth2In;
+            subsubsectionLabelLocationGroupBox.Width = sectionWidth3In;
+            subsubsectionLabelStyleGroupBox.Width = sectionWidth3In;
 
             conclusionPanel.Width = sectionWidth;
             conclusionOptionsGroupBox.Width = sectionWidth1In;
             conclusionTitleGroupBox.Width = sectionWidth2In;
-            conclusionContentGroupBox.Width = sectionWidth1In;
-            conclusionContentPanel.Width = sectionWidth2In;
-            conclusionToolStripContainer.Width = sectionWidth2In;
-            conclusionContent.Width = sectionWidth3InTextBox;
 
             referencesPanel.Width = sectionWidth;
             referencesOptionsGroupBox.Width = sectionWidth1In;
             referencesTitleGroupBox.Width = sectionWidth2In;
             referencesIndentationGroupBox.Width = sectionWidth2In;
+
+            contentPanel.Width = sectionWidth;
+            summaryContentGroupBox.Width = sectionWidth1In;
+            summaryContentPanel.Width = sectionWidth2In;
+            summaryToolStripContainer.Width = sectionWidth2In;
+            summaryContent.Width = sectionWidth3InTextBox;
+            abstractContentGroupBox.Width = sectionWidth1In;
+            abstractContentPanel.Width = sectionWidth2In;
+            abstractContentToolStripContainer.Width = sectionWidth2In;
+            abstractContent.Width = sectionWidth3InTextBox;
+            conclusionContentGroupBox.Width = sectionWidth1In;
+            conclusionContentPanel.Width = sectionWidth2In;
+            conclusionToolStripContainer.Width = sectionWidth2In;
+            conclusionContent.Width = sectionWidth3InTextBox;
+
+            for (int i = 1; i <= contentSections.Count; i++)
+            {
+                GroupBox sectionGroupBox = (GroupBox)Controls.Find("section" + i + "groupBox", true)[0];
+                sectionGroupBox.Width = sectionWidth1In;
+                Panel sectionContentPanel = (Panel)Controls.Find("section" + i + "ContentPanel", true)[0];
+                sectionContentPanel.Width = sectionWidth2In;
+                ToolStripContainer sectionToolStripContainer = (ToolStripContainer)Controls.Find("section" + i + "ToolStripContainer", true)[0];
+                sectionToolStripContainer.Width = sectionWidth2In;
+                RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + i + "Content", true)[0];
+                sectionContent.Width = sectionWidth3InTextBox;
+                for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                {
+                    GroupBox subsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "GroupBox", true)[0];
+                    subsectionGroupBox.Width = sectionWidth2In;
+                    Panel subsectionContentPanel = (Panel)Controls.Find("section" + i + "Subsection" + j + "ContentPanel", true)[0];
+                    subsectionContentPanel.Width = sectionWidth3In;
+                    ToolStripContainer subsectionToolStripContainer = (ToolStripContainer)Controls.Find("section" + i + "Subsection" + j + "ToolStripContainer", true)[0];
+                    subsectionToolStripContainer.Width = sectionWidth3In;
+                    RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + i + "Subsection" + j + "Content", true)[0];
+                    subsectionContent.Width = sectionWidth4InTextBox;
+                }
+            }
 
             writeButton.Location = new Point(finalizePanel.Width - 125, 8);
         }
@@ -2322,7 +2350,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelStyleGroupBox.Visible = false;
                 for (int i = 1; i <= contentSections.Count; i++)
                 {
-                    for (int j = 1; j <= contentSections[i].subSections.Count; j++)
+                    for (int j = 1; j <= contentSections[i -1].subSections.Count; j++)
                     {
                         Label subsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "LabelLabel", true)[0];
                         subsectionLabelLabel.Enabled = false;

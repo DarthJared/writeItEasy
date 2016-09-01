@@ -141,7 +141,7 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.subsubsectionLocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsubsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.includeSubsubsectionLabelCheck = new System.Windows.Forms.CheckBox();
@@ -446,7 +446,7 @@
             this.sectionsOptionsGroupBox.SuspendLayout();
             this.subsubsectionLabelGroupBox.SuspendLayout();
             this.subsubsectionLabelStyleGroupBox.SuspendLayout();
-            this.subsubsectionLocationGroupBox.SuspendLayout();
+            this.subsubsectionLabelLocationGroupBox.SuspendLayout();
             this.subsectionLabelGroupBox.SuspendLayout();
             this.subsectionLabelStyleGroupBox.SuspendLayout();
             this.subsectionLabelLocationGroupBox.SuspendLayout();
@@ -1699,7 +1699,7 @@
             // subsubsectionLabelGroupBox
             // 
             this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelStyleGroupBox);
-            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLocationGroupBox);
+            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelLocationGroupBox);
             this.subsubsectionLabelGroupBox.Controls.Add(this.includeSubsubsectionLabelCheck);
             this.subsubsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(9, 244);
@@ -1808,17 +1808,17 @@
             this.checkBox6.Text = "Bold";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // subsubsectionLocationGroupBox
+            // subsubsectionLabelLocationGroupBox
             // 
-            this.subsubsectionLocationGroupBox.Controls.Add(this.radioButton5);
-            this.subsubsectionLocationGroupBox.Controls.Add(this.radioButton6);
-            this.subsubsectionLocationGroupBox.Location = new System.Drawing.Point(9, 42);
-            this.subsubsectionLocationGroupBox.Name = "subsubsectionLocationGroupBox";
-            this.subsubsectionLocationGroupBox.Size = new System.Drawing.Size(579, 73);
-            this.subsubsectionLocationGroupBox.TabIndex = 4;
-            this.subsubsectionLocationGroupBox.TabStop = false;
-            this.subsubsectionLocationGroupBox.Text = "Location";
-            this.subsubsectionLocationGroupBox.Visible = false;
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton5);
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton6);
+            this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
+            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.subsubsectionLabelLocationGroupBox.TabIndex = 4;
+            this.subsubsectionLabelLocationGroupBox.TabStop = false;
+            this.subsubsectionLabelLocationGroupBox.Text = "Location";
+            this.subsubsectionLabelLocationGroupBox.Visible = false;
             // 
             // radioButton5
             // 
@@ -4978,8 +4978,8 @@
             this.subsubsectionLabelGroupBox.PerformLayout();
             this.subsubsectionLabelStyleGroupBox.ResumeLayout(false);
             this.subsubsectionLabelStyleGroupBox.PerformLayout();
-            this.subsubsectionLocationGroupBox.ResumeLayout(false);
-            this.subsubsectionLocationGroupBox.PerformLayout();
+            this.subsubsectionLabelLocationGroupBox.ResumeLayout(false);
+            this.subsubsectionLabelLocationGroupBox.PerformLayout();
             this.subsectionLabelGroupBox.ResumeLayout(false);
             this.subsectionLabelGroupBox.PerformLayout();
             this.subsectionLabelStyleGroupBox.ResumeLayout(false);
@@ -5466,7 +5466,7 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.GroupBox subsubsectionLocationGroupBox;
+        private System.Windows.Forms.GroupBox subsubsectionLabelLocationGroupBox;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.CheckBox includeSubsubsectionLabelCheck;
