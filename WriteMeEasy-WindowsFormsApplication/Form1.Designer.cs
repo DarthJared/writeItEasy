@@ -4140,6 +4140,7 @@
             // 
             // section1AddSubsectionButton
             // 
+            this.section1AddSubsectionButton.BackColor = System.Drawing.Color.Gainsboro;
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 255);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
@@ -4147,7 +4148,7 @@
             this.section1AddSubsectionButton.TabIndex = 7;
             this.section1AddSubsectionButton.Tag = "1";
             this.section1AddSubsectionButton.Text = "Add Subsection";
-            this.section1AddSubsectionButton.UseVisualStyleBackColor = true;
+            this.section1AddSubsectionButton.UseVisualStyleBackColor = false;
             this.section1AddSubsectionButton.Click += new System.EventHandler(this.sectionAddSubsectionButton_Click);
             // 
             // section1contentLabel
