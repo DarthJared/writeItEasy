@@ -8,14 +8,14 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public class SubSection
     {
-        public List<SubSubSection> subSections;
+        public List<SubSubSection> subsubSections;
         public string content;
         public string title;
         public int index;
 
         public SubSection()
         {
-            this.subSections = new List<SubSubSection>();
+            this.subsubSections = new List<SubSubSection>();
             this.content = "";
             this.title = "";
             this.index = 0;
@@ -23,7 +23,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public SubSection(List<SubSubSection> subSubSection, string content, string title, int index)
         {
-            this.subSections = subSubSection;
+            this.subsubSections = subSubSection;
             this.content = content;
             this.title = title;
             this.index = index;

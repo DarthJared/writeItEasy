@@ -49,8 +49,6 @@
             this.conclusionTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.conclusionTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.conclusionIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
-            this.conclusionTitleLabel = new System.Windows.Forms.Label();
             this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.conclusionHeader = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
@@ -309,8 +307,6 @@
             this.summaryTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.summaryTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.summaryIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.summaryTitleText = new System.Windows.Forms.TextBox();
-            this.summaryTitleTextLabel = new System.Windows.Forms.Label();
             this.summaryOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.summaryHeader = new System.Windows.Forms.Label();
             this.abstractPanel = new System.Windows.Forms.Panel();
@@ -326,21 +322,9 @@
             this.abstractTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.abstractTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.abstractIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.abstractTitleText = new System.Windows.Forms.TextBox();
-            this.abstractTitleLabel = new System.Windows.Forms.Label();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.abstractHeader = new System.Windows.Forms.Label();
             this.generalPanel = new System.Windows.Forms.Panel();
-            this.paperFormattingGroupBox = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.generalDefaultButton = new System.Windows.Forms.Button();
             this.includeInPapeGroupBox = new System.Windows.Forms.GroupBox();
             this.referencesIncludeCheck = new System.Windows.Forms.CheckBox();
@@ -381,6 +365,9 @@
             this.contentTab = new System.Windows.Forms.TabPage();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.conclusionContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.conclusionTitleLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.conclusionContentPanel = new System.Windows.Forms.Panel();
             this.conclusionToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.conclusionContent = new System.Windows.Forms.RichTextBox();
@@ -395,12 +382,18 @@
             this.section1AddSubsectionButton = new System.Windows.Forms.Button();
             this.section1contentLabel = new System.Windows.Forms.Label();
             this.abstractContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.abstractTitleLabel = new System.Windows.Forms.Label();
+            this.abstractTitleText = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.abstractContentPanel = new System.Windows.Forms.Panel();
             this.abstractContentToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.abstractContent = new System.Windows.Forms.RichTextBox();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.addSectionButton = new System.Windows.Forms.Button();
             this.summaryContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.summaryTitleTextLabel = new System.Windows.Forms.Label();
+            this.summaryTitleText = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.summaryContentPanel = new System.Windows.Forms.Panel();
             this.summaryToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.summaryContent = new System.Windows.Forms.RichTextBox();
@@ -480,7 +473,6 @@
             this.abstractOptionsGroupBox.SuspendLayout();
             this.abstractTitleGroupBox.SuspendLayout();
             this.generalPanel.SuspendLayout();
-            this.paperFormattingGroupBox.SuspendLayout();
             this.includeInPapeGroupBox.SuspendLayout();
             this.paperTitleGroupBox.SuspendLayout();
             this.apaMlaGroupBox.SuspendLayout();
@@ -599,6 +591,7 @@
             this.sectionTabControl.Size = new System.Drawing.Size(660, 670);
             this.sectionTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.sectionTabControl.TabIndex = 1;
+            this.sectionTabControl.SelectedIndexChanged += new System.EventHandler(this.sectionTabControl_Change);
             // 
             // formattingTab
             // 
@@ -626,7 +619,7 @@
             this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 2821);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 2671);
             this.conclusionPanel.Name = "conclusionPanel";
             this.conclusionPanel.Size = new System.Drawing.Size(635, 172);
             this.conclusionPanel.TabIndex = 7;
@@ -665,8 +658,6 @@
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontChoose);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleBoldCheck);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionIncludeTitleCheck);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleEnter);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleLabel);
             this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
@@ -764,26 +755,6 @@
             this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.conclusionIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeTitleCheck_CheckedChanged);
             // 
-            // conclusionTitleEnter
-            // 
-            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleEnter.Location = new System.Drawing.Point(123, 17);
-            this.conclusionTitleEnter.Name = "conclusionTitleEnter";
-            this.conclusionTitleEnter.Size = new System.Drawing.Size(159, 20);
-            this.conclusionTitleEnter.TabIndex = 2;
-            this.conclusionTitleEnter.Visible = false;
-            // 
-            // conclusionTitleLabel
-            // 
-            this.conclusionTitleLabel.AutoSize = true;
-            this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleLabel.Location = new System.Drawing.Point(94, 20);
-            this.conclusionTitleLabel.Name = "conclusionTitleLabel";
-            this.conclusionTitleLabel.Size = new System.Drawing.Size(30, 13);
-            this.conclusionTitleLabel.TabIndex = 3;
-            this.conclusionTitleLabel.Text = "Title:";
-            this.conclusionTitleLabel.Visible = false;
-            // 
             // checkBox19
             // 
             this.checkBox19.AutoSize = true;
@@ -815,7 +786,7 @@
             this.footerPanel.Controls.Add(this.footerOptionsGroupBox);
             this.footerPanel.Controls.Add(this.footerHeader);
             this.footerPanel.Controls.Add(this.footerDefaultButton);
-            this.footerPanel.Location = new System.Drawing.Point(0, 1984);
+            this.footerPanel.Location = new System.Drawing.Point(0, 1834);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(635, 571);
             this.footerPanel.TabIndex = 10;
@@ -1669,7 +1640,7 @@
             this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(0, 2555);
+            this.sectionsPanel.Location = new System.Drawing.Point(0, 2405);
             this.sectionsPanel.Name = "sectionsPanel";
             this.sectionsPanel.Size = new System.Drawing.Size(635, 266);
             this.sectionsPanel.TabIndex = 4;
@@ -1815,7 +1786,7 @@
             // 
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton5);
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton6);
-            this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
             this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
@@ -1830,7 +1801,7 @@
             this.radioButton5.Checked = true;
             this.radioButton5.Location = new System.Drawing.Point(7, 18);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(123, 17);
+            this.radioButton5.Size = new System.Drawing.Size(106, 17);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "In Line With Text";
@@ -1841,7 +1812,7 @@
             this.radioButton6.AutoSize = true;
             this.radioButton6.Location = new System.Drawing.Point(7, 41);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(218, 17);
+            this.radioButton6.Size = new System.Drawing.Size(186, 17);
             this.radioButton6.TabIndex = 2;
             this.radioButton6.Text = "On Separate Line Before Sections";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -1852,10 +1823,11 @@
             this.includeSubsubsectionLabelCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.includeSubsubsectionLabelCheck.Location = new System.Drawing.Point(9, 19);
             this.includeSubsubsectionLabelCheck.Name = "includeSubsubsectionLabelCheck";
-            this.includeSubsubsectionLabelCheck.Size = new System.Drawing.Size(151, 17);
+            this.includeSubsubsectionLabelCheck.Size = new System.Drawing.Size(168, 17);
             this.includeSubsubsectionLabelCheck.TabIndex = 0;
-            this.includeSubsubsectionLabelCheck.Text = "Include Subsection Labels";
+            this.includeSubsubsectionLabelCheck.Text = "Include Subsubsection Labels";
             this.includeSubsubsectionLabelCheck.UseVisualStyleBackColor = true;
+            this.includeSubsubsectionLabelCheck.CheckedChanged += new System.EventHandler(this.includeSubsubsectionLabelCheck_CheckedChanged);
             // 
             // subsectionLabelGroupBox
             // 
@@ -2240,7 +2212,7 @@
             this.titlePagePanel.Controls.Add(this.titlePageAllignGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageIncludeGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
-            this.titlePagePanel.Location = new System.Drawing.Point(0, 590);
+            this.titlePagePanel.Location = new System.Drawing.Point(0, 440);
             this.titlePagePanel.Name = "titlePagePanel";
             this.titlePagePanel.Size = new System.Drawing.Size(635, 475);
             this.titlePagePanel.TabIndex = 5;
@@ -2758,7 +2730,7 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 1413);
+            this.headerPanel.Location = new System.Drawing.Point(0, 1263);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(635, 571);
             this.headerPanel.TabIndex = 10;
@@ -3606,7 +3578,7 @@
             this.summaryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.summaryPanel.Controls.Add(this.summaryOptionsGroupBox);
             this.summaryPanel.Controls.Add(this.summaryHeader);
-            this.summaryPanel.Location = new System.Drawing.Point(0, 1065);
+            this.summaryPanel.Location = new System.Drawing.Point(0, 915);
             this.summaryPanel.Name = "summaryPanel";
             this.summaryPanel.Size = new System.Drawing.Size(635, 174);
             this.summaryPanel.TabIndex = 8;
@@ -3645,8 +3617,6 @@
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleFontChoose);
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleBoldCheck);
             this.summaryTitleGroupBox.Controls.Add(this.summaryIncludeTitleCheck);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleText);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleTextLabel);
             this.summaryTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.summaryTitleGroupBox.Name = "summaryTitleGroupBox";
@@ -3744,26 +3714,6 @@
             this.summaryIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.summaryIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeTitleCheck_CheckedChanged);
             // 
-            // summaryTitleText
-            // 
-            this.summaryTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleText.Location = new System.Drawing.Point(123, 17);
-            this.summaryTitleText.Name = "summaryTitleText";
-            this.summaryTitleText.Size = new System.Drawing.Size(159, 20);
-            this.summaryTitleText.TabIndex = 2;
-            this.summaryTitleText.Visible = false;
-            // 
-            // summaryTitleTextLabel
-            // 
-            this.summaryTitleTextLabel.AutoSize = true;
-            this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleTextLabel.Location = new System.Drawing.Point(94, 20);
-            this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
-            this.summaryTitleTextLabel.Size = new System.Drawing.Size(30, 13);
-            this.summaryTitleTextLabel.TabIndex = 3;
-            this.summaryTitleTextLabel.Text = "Title:";
-            this.summaryTitleTextLabel.Visible = false;
-            // 
             // summaryOwnPageCheck
             // 
             this.summaryOwnPageCheck.AutoSize = true;
@@ -3794,7 +3744,7 @@
             this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
             this.abstractPanel.Controls.Add(this.abstractHeader);
-            this.abstractPanel.Location = new System.Drawing.Point(0, 1239);
+            this.abstractPanel.Location = new System.Drawing.Point(0, 1089);
             this.abstractPanel.Name = "abstractPanel";
             this.abstractPanel.Size = new System.Drawing.Size(635, 174);
             this.abstractPanel.TabIndex = 9;
@@ -3833,8 +3783,6 @@
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleFontChoose);
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleBoldCheck);
             this.abstractTitleGroupBox.Controls.Add(this.abstractIncludeTitleCheck);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleText);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleLabel);
             this.abstractTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abstractTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.abstractTitleGroupBox.Name = "abstractTitleGroupBox";
@@ -3932,26 +3880,6 @@
             this.abstractIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.abstractIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeTitleCheck_CheckedChanged);
             // 
-            // abstractTitleText
-            // 
-            this.abstractTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleText.Location = new System.Drawing.Point(123, 17);
-            this.abstractTitleText.Name = "abstractTitleText";
-            this.abstractTitleText.Size = new System.Drawing.Size(159, 20);
-            this.abstractTitleText.TabIndex = 2;
-            this.abstractTitleText.Visible = false;
-            // 
-            // abstractTitleLabel
-            // 
-            this.abstractTitleLabel.AutoSize = true;
-            this.abstractTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleLabel.Location = new System.Drawing.Point(94, 20);
-            this.abstractTitleLabel.Name = "abstractTitleLabel";
-            this.abstractTitleLabel.Size = new System.Drawing.Size(30, 13);
-            this.abstractTitleLabel.TabIndex = 3;
-            this.abstractTitleLabel.Text = "Title:";
-            this.abstractTitleLabel.Visible = false;
-            // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
@@ -3980,7 +3908,6 @@
             // 
             this.generalPanel.BackColor = System.Drawing.Color.White;
             this.generalPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.generalPanel.Controls.Add(this.paperFormattingGroupBox);
             this.generalPanel.Controls.Add(this.generalDefaultButton);
             this.generalPanel.Controls.Add(this.includeInPapeGroupBox);
             this.generalPanel.Controls.Add(this.paperTitleGroupBox);
@@ -3988,117 +3915,13 @@
             this.generalPanel.Controls.Add(generalHeader);
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(635, 590);
+            this.generalPanel.Size = new System.Drawing.Size(635, 440);
             this.generalPanel.TabIndex = 0;
-            // 
-            // paperFormattingGroupBox
-            // 
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox9);
-            this.paperFormattingGroupBox.Controls.Add(this.label15);
-            this.paperFormattingGroupBox.Controls.Add(this.button8);
-            this.paperFormattingGroupBox.Controls.Add(this.textBox7);
-            this.paperFormattingGroupBox.Controls.Add(this.label12);
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox7);
-            this.paperFormattingGroupBox.Controls.Add(this.label13);
-            this.paperFormattingGroupBox.Controls.Add(this.label14);
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox8);
-            this.paperFormattingGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paperFormattingGroupBox.Location = new System.Drawing.Point(9, 401);
-            this.paperFormattingGroupBox.Name = "paperFormattingGroupBox";
-            this.paperFormattingGroupBox.Size = new System.Drawing.Size(615, 129);
-            this.paperFormattingGroupBox.TabIndex = 20;
-            this.paperFormattingGroupBox.TabStop = false;
-            this.paperFormattingGroupBox.Text = "Style";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(61, 96);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(144, 21);
-            this.comboBox9.TabIndex = 28;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 99);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Spacing:";
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(132, 68);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(73, 23);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Choose";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(61, 70);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(72, 20);
-            this.textBox7.TabIndex = 21;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 73);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Color:";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(61, 43);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(144, 21);
-            this.comboBox7.TabIndex = 25;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 46);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Size:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "Font:";
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(61, 16);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(144, 21);
-            this.comboBox8.TabIndex = 22;
             // 
             // generalDefaultButton
             // 
             this.generalDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generalDefaultButton.Location = new System.Drawing.Point(9, 545);
+            this.generalDefaultButton.Location = new System.Drawing.Point(9, 399);
             this.generalDefaultButton.Name = "generalDefaultButton";
             this.generalDefaultButton.Size = new System.Drawing.Size(126, 23);
             this.generalDefaultButton.TabIndex = 19;
@@ -4270,7 +4093,7 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 2993);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 2843);
             this.referencesPanel.Name = "referencesPanel";
             this.referencesPanel.Size = new System.Drawing.Size(635, 270);
             this.referencesPanel.TabIndex = 6;
@@ -4519,10 +4342,10 @@
             // 
             this.contentTab.AutoScroll = true;
             this.contentTab.Controls.Add(this.contentPanel);
-            this.contentTab.Location = new System.Drawing.Point(4, 25);
+            this.contentTab.Location = new System.Drawing.Point(4, 29);
             this.contentTab.Name = "contentTab";
             this.contentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.contentTab.Size = new System.Drawing.Size(652, 641);
+            this.contentTab.Size = new System.Drawing.Size(652, 637);
             this.contentTab.TabIndex = 1;
             this.contentTab.Text = "CONTENT";
             this.contentTab.UseVisualStyleBackColor = true;
@@ -4539,25 +4362,62 @@
             this.contentPanel.Controls.Add(this.label23);
             this.contentPanel.Location = new System.Drawing.Point(0, 0);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(635, 1190);
+            this.contentPanel.Size = new System.Drawing.Size(635, 1390);
             this.contentPanel.TabIndex = 10;
             // 
             // conclusionContentGroupBox
             // 
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleLabel);
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleEnter);
+            this.conclusionContentGroupBox.Controls.Add(this.label19);
             this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
-            this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 928);
+            this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 1028);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
-            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 242);
+            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.conclusionContentGroupBox.TabIndex = 12;
             this.conclusionContentGroupBox.TabStop = false;
             this.conclusionContentGroupBox.Text = "Conclusion";
             this.conclusionContentGroupBox.Visible = false;
             // 
+            // conclusionTitleLabel
+            // 
+            this.conclusionTitleLabel.AutoSize = true;
+            this.conclusionTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.conclusionTitleLabel.Enabled = false;
+            this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleLabel.Location = new System.Drawing.Point(6, 22);
+            this.conclusionTitleLabel.Name = "conclusionTitleLabel";
+            this.conclusionTitleLabel.Size = new System.Drawing.Size(85, 13);
+            this.conclusionTitleLabel.TabIndex = 13;
+            this.conclusionTitleLabel.Tag = "1";
+            this.conclusionTitleLabel.Text = "Conclusion Title:";
+            // 
+            // conclusionTitleEnter
+            // 
+            this.conclusionTitleEnter.Enabled = false;
+            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleEnter.Location = new System.Drawing.Point(95, 19);
+            this.conclusionTitleEnter.Name = "conclusionTitleEnter";
+            this.conclusionTitleEnter.Size = new System.Drawing.Size(185, 20);
+            this.conclusionTitleEnter.TabIndex = 12;
+            this.conclusionTitleEnter.Tag = "1";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 49);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Tag = "1";
+            this.label19.Text = "Content:";
+            // 
             // conclusionContentPanel
             // 
             this.conclusionContentPanel.Controls.Add(this.conclusionToolStripContainer);
-            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 19);
+            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 69);
             this.conclusionContentPanel.Name = "conclusionContentPanel";
             this.conclusionContentPanel.Size = new System.Drawing.Size(597, 210);
             this.conclusionContentPanel.TabIndex = 6;
@@ -4604,8 +4464,8 @@
             this.section1groupBox.Controls.Add(this.section1ContentPanel);
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
-            this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(9, 560);
+            this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1groupBox.Location = new System.Drawing.Point(9, 660);
             this.section1groupBox.Name = "section1groupBox";
             this.section1groupBox.Size = new System.Drawing.Size(615, 315);
             this.section1groupBox.TabIndex = 9;
@@ -4705,20 +4565,57 @@
             // 
             // abstractContentGroupBox
             // 
+            this.abstractContentGroupBox.Controls.Add(this.abstractTitleLabel);
+            this.abstractContentGroupBox.Controls.Add(this.abstractTitleText);
+            this.abstractContentGroupBox.Controls.Add(this.label17);
             this.abstractContentGroupBox.Controls.Add(this.abstractContentPanel);
-            this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 298);
+            this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 348);
             this.abstractContentGroupBox.Name = "abstractContentGroupBox";
-            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 242);
+            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.abstractContentGroupBox.TabIndex = 11;
             this.abstractContentGroupBox.TabStop = false;
             this.abstractContentGroupBox.Text = "Abstract";
             this.abstractContentGroupBox.Visible = false;
             // 
+            // abstractTitleLabel
+            // 
+            this.abstractTitleLabel.AutoSize = true;
+            this.abstractTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.abstractTitleLabel.Enabled = false;
+            this.abstractTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleLabel.Location = new System.Drawing.Point(6, 22);
+            this.abstractTitleLabel.Name = "abstractTitleLabel";
+            this.abstractTitleLabel.Size = new System.Drawing.Size(72, 13);
+            this.abstractTitleLabel.TabIndex = 13;
+            this.abstractTitleLabel.Tag = "1";
+            this.abstractTitleLabel.Text = "Abstract Title:";
+            // 
+            // abstractTitleText
+            // 
+            this.abstractTitleText.Enabled = false;
+            this.abstractTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleText.Location = new System.Drawing.Point(95, 19);
+            this.abstractTitleText.Name = "abstractTitleText";
+            this.abstractTitleText.Size = new System.Drawing.Size(185, 20);
+            this.abstractTitleText.TabIndex = 12;
+            this.abstractTitleText.Tag = "1";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(6, 49);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 13);
+            this.label17.TabIndex = 11;
+            this.label17.Tag = "1";
+            this.label17.Text = "Content:";
+            // 
             // abstractContentPanel
             // 
             this.abstractContentPanel.Controls.Add(this.abstractContentToolStripContainer);
-            this.abstractContentPanel.Location = new System.Drawing.Point(9, 19);
+            this.abstractContentPanel.Location = new System.Drawing.Point(9, 69);
             this.abstractContentPanel.Name = "abstractContentPanel";
             this.abstractContentPanel.Size = new System.Drawing.Size(597, 210);
             this.abstractContentPanel.TabIndex = 6;
@@ -4761,7 +4658,7 @@
             // addSectionButton
             // 
             this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSectionButton.Location = new System.Drawing.Point(9, 885);
+            this.addSectionButton.Location = new System.Drawing.Point(9, 985);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(130, 23);
             this.addSectionButton.TabIndex = 11;
@@ -4771,20 +4668,57 @@
             // 
             // summaryContentGroupBox
             // 
+            this.summaryContentGroupBox.Controls.Add(this.summaryTitleTextLabel);
+            this.summaryContentGroupBox.Controls.Add(this.summaryTitleText);
+            this.summaryContentGroupBox.Controls.Add(this.label11);
             this.summaryContentGroupBox.Controls.Add(this.summaryContentPanel);
-            this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryContentGroupBox.Location = new System.Drawing.Point(9, 36);
             this.summaryContentGroupBox.Name = "summaryContentGroupBox";
-            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 242);
+            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.summaryContentGroupBox.TabIndex = 10;
             this.summaryContentGroupBox.TabStop = false;
             this.summaryContentGroupBox.Text = "Summary";
             this.summaryContentGroupBox.Visible = false;
             // 
+            // summaryTitleTextLabel
+            // 
+            this.summaryTitleTextLabel.AutoSize = true;
+            this.summaryTitleTextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.summaryTitleTextLabel.Enabled = false;
+            this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryTitleTextLabel.Location = new System.Drawing.Point(6, 22);
+            this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
+            this.summaryTitleTextLabel.Size = new System.Drawing.Size(76, 13);
+            this.summaryTitleTextLabel.TabIndex = 13;
+            this.summaryTitleTextLabel.Tag = "1";
+            this.summaryTitleTextLabel.Text = "Summary Title:";
+            // 
+            // summaryTitleText
+            // 
+            this.summaryTitleText.Enabled = false;
+            this.summaryTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryTitleText.Location = new System.Drawing.Point(95, 19);
+            this.summaryTitleText.Name = "summaryTitleText";
+            this.summaryTitleText.Size = new System.Drawing.Size(185, 20);
+            this.summaryTitleText.TabIndex = 12;
+            this.summaryTitleText.Tag = "1";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Tag = "1";
+            this.label11.Text = "Content:";
+            // 
             // summaryContentPanel
             // 
             this.summaryContentPanel.Controls.Add(this.summaryToolStripContainer);
-            this.summaryContentPanel.Location = new System.Drawing.Point(9, 19);
+            this.summaryContentPanel.Location = new System.Drawing.Point(9, 69);
             this.summaryContentPanel.Name = "summaryContentPanel";
             this.summaryContentPanel.Size = new System.Drawing.Size(597, 210);
             this.summaryContentPanel.TabIndex = 6;
@@ -5041,8 +4975,6 @@
             this.abstractTitleGroupBox.ResumeLayout(false);
             this.abstractTitleGroupBox.PerformLayout();
             this.generalPanel.ResumeLayout(false);
-            this.paperFormattingGroupBox.ResumeLayout(false);
-            this.paperFormattingGroupBox.PerformLayout();
             this.includeInPapeGroupBox.ResumeLayout(false);
             this.includeInPapeGroupBox.PerformLayout();
             this.paperTitleGroupBox.ResumeLayout(false);
@@ -5060,6 +4992,7 @@
             this.contentTab.ResumeLayout(false);
             this.contentPanel.ResumeLayout(false);
             this.conclusionContentGroupBox.ResumeLayout(false);
+            this.conclusionContentGroupBox.PerformLayout();
             this.conclusionContentPanel.ResumeLayout(false);
             this.conclusionToolStripContainer.ContentPanel.ResumeLayout(false);
             this.conclusionToolStripContainer.TopToolStripPanel.ResumeLayout(false);
@@ -5075,6 +5008,7 @@
             this.section1ToolStripContainer.ResumeLayout(false);
             this.section1ToolStripContainer.PerformLayout();
             this.abstractContentGroupBox.ResumeLayout(false);
+            this.abstractContentGroupBox.PerformLayout();
             this.abstractContentPanel.ResumeLayout(false);
             this.abstractContentToolStripContainer.ContentPanel.ResumeLayout(false);
             this.abstractContentToolStripContainer.TopToolStripPanel.ResumeLayout(false);
@@ -5082,6 +5016,7 @@
             this.abstractContentToolStripContainer.ResumeLayout(false);
             this.abstractContentToolStripContainer.PerformLayout();
             this.summaryContentGroupBox.ResumeLayout(false);
+            this.summaryContentGroupBox.PerformLayout();
             this.summaryContentPanel.ResumeLayout(false);
             this.summaryToolStripContainer.ContentPanel.ResumeLayout(false);
             this.summaryToolStripContainer.TopToolStripPanel.ResumeLayout(false);
@@ -5217,8 +5152,6 @@
         private System.Windows.Forms.ComboBox abstractTitleFontChoose;
         private System.Windows.Forms.CheckBox abstractTitleBoldCheck;
         private System.Windows.Forms.CheckBox abstractIncludeTitleCheck;
-        private System.Windows.Forms.TextBox abstractTitleText;
-        private System.Windows.Forms.Label abstractTitleLabel;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.GroupBox summaryContentGroupBox;
         private System.Windows.Forms.Panel summaryContentPanel;
@@ -5237,22 +5170,10 @@
         private System.Windows.Forms.ComboBox summaryTitleFontChoose;
         private System.Windows.Forms.CheckBox summaryTitleBoldCheck;
         private System.Windows.Forms.CheckBox summaryIncludeTitleCheck;
-        private System.Windows.Forms.TextBox summaryTitleText;
-        private System.Windows.Forms.Label summaryTitleTextLabel;
         private System.Windows.Forms.CheckBox summaryOwnPageCheck;
         private System.Windows.Forms.Panel section1ContentPanel;
         private System.Windows.Forms.ToolStripContainer section1ToolStripContainer;
         private System.Windows.Forms.RichTextBox section1Content;
-        private System.Windows.Forms.GroupBox paperFormattingGroupBox;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button dateUpButton;
         private System.Windows.Forms.Button dateDownButton;
         private System.Windows.Forms.CheckBox titlePageDateCheck;
@@ -5384,8 +5305,6 @@
         private System.Windows.Forms.ComboBox conclusionTitleFontChoose;
         private System.Windows.Forms.CheckBox conclusionTitleBoldCheck;
         private System.Windows.Forms.CheckBox conclusionIncludeTitleCheck;
-        private System.Windows.Forms.TextBox conclusionTitleEnter;
-        private System.Windows.Forms.Label conclusionTitleLabel;
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.GroupBox referencesOptionsGroupBox;
         private System.Windows.Forms.CheckBox referencesHangingIndentCheck;
@@ -5483,6 +5402,15 @@
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Button addSectionButton;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label conclusionTitleLabel;
+        private System.Windows.Forms.TextBox conclusionTitleEnter;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label abstractTitleLabel;
+        private System.Windows.Forms.TextBox abstractTitleText;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label summaryTitleTextLabel;
+        private System.Windows.Forms.TextBox summaryTitleText;
+        private System.Windows.Forms.Label label11;
     }
 }
 
