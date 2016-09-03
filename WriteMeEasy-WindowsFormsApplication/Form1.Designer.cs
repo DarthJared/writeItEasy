@@ -4528,7 +4528,9 @@
             this.section1Content.Name = "section1Content";
             this.section1Content.Size = new System.Drawing.Size(594, 182);
             this.section1Content.TabIndex = 0;
+            this.section1Content.Tag = "1";
             this.section1Content.Text = "";
+            this.section1Content.TextChanged += new System.EventHandler(this.sectionTextChanged);
             // 
             // section1ToolStrip
             // 
@@ -4804,6 +4806,7 @@
             this.writeButton.TabIndex = 0;
             this.writeButton.Text = "Write It!";
             this.writeButton.UseVisualStyleBackColor = true;
+            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
             // 
             // previewPanel
             // 

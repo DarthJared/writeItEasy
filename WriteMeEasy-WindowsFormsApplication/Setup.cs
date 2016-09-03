@@ -108,7 +108,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             addSectionButton.Location = new Point(9, 353);
             contentPanel.Height = 404;
 
-            contentSections.Add(new Section(new List<SubSection>(), "", "", 1));
+            myPaper.sections.Add(new Section(new List<SubSection>(), "", "", 1));
         }
 
         private void resizeEvent(object sender, EventArgs e)
@@ -215,7 +215,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             conclusionToolStripContainer.Width = sectionWidth2In;
             conclusionContent.Width = sectionWidth3InTextBox;
 
-            for (int i = 1; i <= contentSections.Count; i++)
+            for (int i = 1; i <= myPaper.sections.Count; i++)
             {
                 GroupBox sectionGroupBox = (GroupBox)Controls.Find("section" + i + "groupBox", true)[0];
                 sectionGroupBox.Width = sectionWidth1In;
@@ -225,7 +225,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionToolStripContainer.Width = sectionWidth2In;
                 RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + i + "Content", true)[0];
                 sectionContent.Width = sectionWidth3InTextBox;
-                for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                 {
                     GroupBox subsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "GroupBox", true)[0];
                     subsectionGroupBox.Width = sectionWidth2In;
@@ -235,7 +235,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     subsectionToolStripContainer.Width = sectionWidth3In;
                     RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + i + "Subsection" + j + "Content", true)[0];
                     subsectionContent.Width = sectionWidth4InTextBox;
-                    for (int k = 1; k <= contentSections[i - 1].subSections[j - 1].subsubSections.Count; k++)
+                    for (int k = 1; k <= myPaper.sections[i - 1].subSections[j - 1].subsubSections.Count; k++)
                     {
                         GroupBox subsubsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "Subsubsection" + k + "GroupBox", true)[0];
                         subsubsectionGroupBox.Width = sectionWidth3In;

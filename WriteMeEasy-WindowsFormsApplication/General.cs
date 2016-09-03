@@ -7,5 +7,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
+
     }
 }

@@ -9,14 +9,11 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void includeSectionLabelsCheck_CheckedChanged(object sender, EventArgs e)
         {
-            int numSections = contentSections.Count;
+            int numSections = myPaper.sections.Count;
             int sectionMult = numSections * 27;
             int totalSpace = 243 + sectionMult;
             if (includeSectionLabelsCheck.Checked)
             {
-                lowerSection(243, "SECTIONS");
-                sections["SECTIONS"] += 243;
-
                 for (int i = 1; i <= numSections; i++)
                 {
                     Label sectionLabelLabel = (Label)Controls.Find("section" + i + "LabelLabel", true)[0];
@@ -32,9 +29,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
-                raiseSection(243, "SECTIONS");
-                sections["SECTIONS"] -= 243;
-
                 for (int i = 1; i <= numSections; i++)
                 {
                     Label sectionLabelLabel = (Label)Controls.Find("section" + i + "LabelLabel", true)[0];
@@ -60,9 +54,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelGroupBox.Height = 288;
                 subsectionLabelLocationGroupBox.Visible = true;
                 subsectionLabelStyleGroupBox.Visible = true;
-                for (int i = 1; i <= contentSections.Count; i++)
+                for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
-                    for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                    for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                     {
                         Label subsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "LabelLabel", true)[0];
                         subsectionLabelLabel.Enabled = true;
@@ -77,9 +71,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelGroupBox.Height = 45;
                 subsectionLabelLocationGroupBox.Visible = false;
                 subsectionLabelStyleGroupBox.Visible = false;
-                for (int i = 1; i <= contentSections.Count; i++)
+                for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
-                    for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                    for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                     {
                         Label subsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "LabelLabel", true)[0];
                         subsectionLabelLabel.Enabled = false;
@@ -99,11 +93,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelGroupBox.Height = 288;
                 subsubsectionLabelLocationGroupBox.Visible = true;
                 subsubsectionLabelStyleGroupBox.Visible = true;
-                for (int i = 1; i <= contentSections.Count; i++)
+                for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
-                    for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                    for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                     {
-                        for (int k = 1; k <= contentSections[i - 1].subSections[j - 1].subsubSections.Count; k++)
+                        for (int k = 1; k <= myPaper.sections[i - 1].subSections[j - 1].subsubSections.Count; k++)
                         {
                             Label subsubsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "Subsubsection" + k + "LabelLabel", true)[0];
                             subsubsectionLabelLabel.Enabled = true;
@@ -119,11 +113,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelGroupBox.Height = 45;
                 subsubsectionLabelLocationGroupBox.Visible = false;
                 subsubsectionLabelStyleGroupBox.Visible = false;
-                for (int i = 1; i <= contentSections.Count; i++)
+                for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
-                    for (int j = 1; j <= contentSections[i - 1].subSections.Count; j++)
+                    for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                     {
-                        for (int k = 1; k <= contentSections[i - 1].subSections[j - 1].subsubSections.Count; k++)
+                        for (int k = 1; k <= myPaper.sections[i - 1].subSections[j - 1].subsubSections.Count; k++)
                         {
                             Label subsubsectionLabelLabel = (Label)Controls.Find("section" + i + "Subsection" + j + "Subsubsection" + k + "LabelLabel", true)[0];
                             subsubsectionLabelLabel.Enabled = false;
@@ -138,8 +132,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void addSectionButton_Click(object sender, EventArgs e)
         {
             Section newSection = new Section();
-            newSection.index = contentSections.Count + 1;
-            contentSections.Add(newSection);
+            newSection.index = myPaper.sections.Count + 1;
+            myPaper.sections.Add(newSection);
 
             GroupBox newSectionGroupBox = new GroupBox();
             newSectionGroupBox.Name = "section" + newSection.index + "groupBox";
@@ -193,6 +187,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionToolStripContainer.ContentPanel.Controls.Add(newSectionContent);
             newSectionContent.Location = new Point(0, 0);
             newSectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            newSectionContent.Tag = newSection.index;
+            newSectionContent.TextChanged += new EventHandler(sectionTextChanged);
 
             Button newSectionAddSubsectionButton = new Button();
             newSectionAddSubsectionButton.Name = "section" + newSection.index + "AddSubsectionButton";
@@ -231,7 +227,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             int sectionIndex = Convert.ToInt32(((Button)sender).Tag);
             int subsectionIndex = 0;
-            foreach (Section section in contentSections)
+            foreach (Section section in myPaper.sections)
             {
                 if (section.index == sectionIndex)
                 {
@@ -294,6 +290,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
             subsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsectionContent.Location = new Point(0, 0);
+            subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
+            subsectionContent.TextChanged += new EventHandler(subsectionTextChanged);
 
             Button addSubsubsectionButton = new Button();
             addSubsubsectionButton.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton";
@@ -334,7 +332,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             int sectionIndex = Convert.ToInt32(indexes[0]);
             int subsectionIndex = Convert.ToInt32(indexes[1]);
             int subsubsectionIndex = 0;
-            foreach (Section section in contentSections)
+            foreach (Section section in myPaper.sections)
             {
                 if (section.index == sectionIndex)
                 {
@@ -404,8 +402,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionToolStripContainer.ContentPanel.Controls.Add(subsubsectionContent);
             subsubsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsubsectionContent.Location = new Point(0, 0);
+            subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
+            subsubsectionContent.TextChanged += new EventHandler(subsubsectionTextChanged);
 
-            addSpace("section" + sectionIndex + "Subsection" + subsubsectionIndex + "AddSubsubsectionButton", 282, "contentPanel", "CONTENT");
+            addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 282, "contentPanel", "CONTENT");
             subsubsectionToAdd.Location = new Point(9, starter.Location.Y - 277);
             subsubsectionToAdd.Size = new Size(subsectionToAddTo.Width - 18, 272);
             subsubsectionToAdd.Font = new Font(subsubsectionToAdd.Font, FontStyle.Regular);
@@ -415,8 +415,73 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionToolStripContainer.Size = subsubsectionContentPanel.Size;
             subsubsectionContent.Size = new Size(subsubsectionToolStripContainer.ContentPanel.Width - 3, subsubsectionToolStripContainer.ContentPanel.Height - 3);
             checkContentPanelHeight();
+        }
 
-            Console.WriteLine(subsubsectionLabelLabel.Text);
+        private void sectionTextChanged(object sender, EventArgs e)
+        {
+            int sectionIndex = Convert.ToInt32(((RichTextBox)sender).Tag);
+            RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Content", true)[0];
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    section.content = sectionContent.Text;
+                }
+            }
+        }
+
+        private void subsectionTextChanged(object sender, EventArgs e)
+        {
+            string tag = (string)((RichTextBox)sender).Tag;
+            string[] indexes = tag.Split(',');
+            int sectionIndex = Convert.ToInt32(indexes[0]);
+            int subsectionIndex = Convert.ToInt32(indexes[1]);
+            RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Content", true)[0];
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            subsection.content = subsectionContent.Text;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void subsubsectionTextChanged(object sender, EventArgs e)
+        {
+            string tag = (string)((RichTextBox)sender).Tag;
+            string[] indexes = tag.Split(',');
+            int sectionIndex = Convert.ToInt32(indexes[0]);
+            int subsectionIndex = Convert.ToInt32(indexes[1]);
+            int subsubsectionIndex = Convert.ToInt32(indexes[2]);
+            RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content", true)[0];
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            foreach (SubSubSection subsubsection in subsection.subsubSections)
+                            {
+                                if (subsubsection.index == subsubsectionIndex)
+                                {
+                                    subsubsection.content = subsubsectionContent.Text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
