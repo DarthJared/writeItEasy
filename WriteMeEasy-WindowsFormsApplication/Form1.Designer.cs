@@ -4495,6 +4495,7 @@
             this.section1LabelEnter.Size = new System.Drawing.Size(185, 20);
             this.section1LabelEnter.TabIndex = 9;
             this.section1LabelEnter.Tag = "1";
+            this.section1LabelEnter.TextChanged += new System.EventHandler(this.sectionTitleChanged);
             // 
             // section1ContentPanel
             // 
@@ -4543,7 +4544,7 @@
             // 
             // section1AddSubsectionButton
             // 
-            this.section1AddSubsectionButton.BackColor = System.Drawing.Color.Gainsboro;
+            this.section1AddSubsectionButton.BackColor = System.Drawing.Color.White;
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 282);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
@@ -4551,7 +4552,7 @@
             this.section1AddSubsectionButton.TabIndex = 7;
             this.section1AddSubsectionButton.Tag = "1";
             this.section1AddSubsectionButton.Text = "Add Subsection";
-            this.section1AddSubsectionButton.UseVisualStyleBackColor = false;
+            this.section1AddSubsectionButton.UseVisualStyleBackColor = true;
             this.section1AddSubsectionButton.Click += new System.EventHandler(this.sectionAddSubsectionButton_Click);
             // 
             // section1contentLabel
@@ -4601,7 +4602,7 @@
             this.abstractTitleText.Name = "abstractTitleText";
             this.abstractTitleText.Size = new System.Drawing.Size(185, 20);
             this.abstractTitleText.TabIndex = 12;
-            this.abstractTitleText.Tag = "1";
+            this.abstractTitleText.Tag = "abstract";
             // 
             // label17
             // 
@@ -4704,7 +4705,7 @@
             this.summaryTitleText.Name = "summaryTitleText";
             this.summaryTitleText.Size = new System.Drawing.Size(185, 20);
             this.summaryTitleText.TabIndex = 12;
-            this.summaryTitleText.Tag = "1";
+            this.summaryTitleText.Tag = "summary";
             // 
             // label11
             // 

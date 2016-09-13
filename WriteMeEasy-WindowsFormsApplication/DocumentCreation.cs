@@ -41,36 +41,64 @@ namespace WriteMeEasy_WindowsFormsApplication
                 object missing = System.Reflection.Missing.Value;
 
                 Document document = wordApp.Documents.Add(ref missing, ref missing, ref missing, ref missing);
-                foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
-                {
-                    Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
-                    headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                    headerRange.Font.ColorIndex = WdColorIndex.wdBlue;
-                    headerRange.Font.Size = 10;
-                    headerRange.Text = "Header text goes here";
-                }
+                //foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
+                //{
+                //    Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                //    headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                //    headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                //    headerRange.Font.ColorIndex = WdColorIndex.wdBlue;
+                //    headerRange.Font.Size = 10;
+                //    headerRange.Text = "Header text goes here";
+                //}
 
-                foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
-                {
-                    Range footerRange = wordSection.Footers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    footerRange.Font.ColorIndex = WdColorIndex.wdDarkRed;
-                    footerRange.Font.Size = 10;
-                    footerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                    footerRange.Text = "Footer text goes here";
-                }
+                //foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
+                //{
+                //    Range footerRange = wordSection.Footers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                //    footerRange.Font.ColorIndex = WdColorIndex.wdDarkRed;
+                //    footerRange.Font.Size = 10;
+                //    footerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                //    footerRange.Text = "Footer text goes here";
+                //}
 
-                document.Content.SetRange(0, 0);
-                document.Content.Text = "This is test document " + Environment.NewLine;
+                //document.Content.SetRange(0, 0);
+                //document.Content.Text = "This is test document " + Environment.NewLine;
 
                 foreach(Section section in myPaper.sections)
                 {
-                    string[] paragraphs = section.content.Split(new string[] { "\n" }, StringSplitOptions.None);
-                    foreach (string paragraph in paragraphs)
+                    if (includeSectionLabelsCheck.Checked)
                     {
-                        Paragraph paraToAdd = document.Content.Paragraphs.Add(ref missing);
-                        paraToAdd.Range.Text = paragraph;
-                        paraToAdd.Range.InsertParagraphAfter();
+                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                        labelText.Range.Text = section.title;
+                        labelText.Range.InsertParagraphAfter();
+                    }
+                    Paragraph sectionText = document.Content.Paragraphs.Add(ref missing);
+                    sectionText.Range.Text = section.content;
+                    sectionText.Range.InsertParagraphAfter();
+                    
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (includeSubsectionLabelCheck.Checked)
+                        {
+                            Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                            labelText.Range.Text = subsection.title;
+                            labelText.Range.InsertParagraphAfter();
+                        }
+                        Paragraph subsectionText = document.Content.Paragraphs.Add(ref missing);
+                        subsectionText.Range.Text = subsection.content;
+                        subsectionText.Range.InsertParagraphAfter();
+
+                        foreach (SubSubSection subsubsection in subsection.subsubSections)
+                        {
+                            if (includeSubsubsectionLabelCheck.Checked)
+                            {
+                                Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                                labelText.Range.Text = subsubsection.title;
+                                labelText.Range.InsertParagraphAfter();
+                            }
+                            Paragraph subsubsectionText = document.Content.Paragraphs.Add(ref missing);
+                            subsubsectionText.Range.Text = subsubsection.content;
+                            subsubsectionText.Range.InsertParagraphAfter();
+                        }
                     }
                 }
 
@@ -86,7 +114,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 //para2.Range.Text = "Para 2 text";
                 //para2.Range.InsertParagraphAfter();
 
-                object filename = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
+                object filename = @"C:\Users\Jbeagle\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
                 document.Close(ref missing, ref missing, ref missing);
                 document = null;

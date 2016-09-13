@@ -161,6 +161,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionGroupBox.Controls.Add(newSectionLabelLabel);
             newSectionLabelLabel.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             newSectionLabelLabel.Location = new Point(6, 22);
+            newSectionLabelEnter.Tag = newSection.index;
+            newSectionLabelEnter.TextChanged += new EventHandler(sectionTitleChanged);
 
             Label newSectionContentLabel = new Label();
             newSectionContentLabel.Name = "section" + newSection.index + "contentLabel";
@@ -194,7 +196,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Name = "section" + newSection.index + "AddSubsectionButton";
             newSectionAddSubsectionButton.Text = "Add Subsection";
             newSectionAddSubsectionButton.Size = new Size(130, 23);
-            newSectionAddSubsectionButton.BackColor = Color.Gainsboro;
+            newSectionAddSubsectionButton.UseVisualStyleBackColor = true;//Color.Gainsboro;
             newSectionGroupBox.Controls.Add(newSectionAddSubsectionButton);
             newSectionGroupBox.Controls.Add(newSectionContentLabel);
             newSectionAddSubsectionButton.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
@@ -264,6 +266,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelEnter.Enabled = false;
             }
 
+            subsectionLabelEnter.Tag = sectionIndex + "," + subsectionIndex;
+            subsectionLabelEnter.TextChanged += new EventHandler(subsectionTitleChanged);
+
             Label subsectionContentLabel = new Label();
             subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
             subsectionContentLabel.Text = "Content:";
@@ -297,7 +302,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             addSubsubsectionButton.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton";
             addSubsubsectionButton.Text = "Add Subsubsection";
             addSubsubsectionButton.Size = new Size(130, 23);
-            addSubsubsectionButton.BackColor = Color.Gainsboro;
+            addSubsubsectionButton.UseVisualStyleBackColor = true;// Color.Gainsboro;
             addSubsubsectionButton.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             addSubsubsectionButton.Tag = sectionIndex + "," + subsectionIndex;
             addSubsubsectionButton.Click += new EventHandler(subsectionAddSubsubsectionButton_Click);
@@ -376,6 +381,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelEnter.Enabled = false;
             }
 
+            subsubsectionLabelEnter.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
+            subsubsectionLabelEnter.TextChanged += new EventHandler(subsubsectionTitleChanged);
+
             Label subsubsectionContentLabel = new Label();
             subsubsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "ContentLabel";
             subsubsectionContentLabel.Text = "Content:";
@@ -427,6 +435,73 @@ namespace WriteMeEasy_WindowsFormsApplication
                 if (section.index == sectionIndex)
                 {
                     section.content = sectionContent.Text;
+                }
+            }
+        }
+
+        private void sectionTitleChanged(object sender, EventArgs e)
+        {
+            int sectionIndex = Convert.ToInt32(((TextBox)sender).Tag);
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "LabelEnter", true)[0];
+                    section.title = titleText.Text;
+                }
+            }
+        }
+
+        private void subsectionTitleChanged(object sender, EventArgs e)
+        {
+            string tagText = ((TextBox)sender).Tag.ToString();
+            string[] tags = tagText.Split(',');
+            int sectionIndex = Convert.ToInt32(tags[0]);
+            int subsectionIndex = Convert.ToInt32(tags[1]);
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "LabelEnter", true)[0];
+                            subsection.title = titleText.Text;
+                        }
+                    }                    
+                }
+            }
+        }
+
+        private void subsubsectionTitleChanged(object sender, EventArgs e)
+        {
+            string tagText = ((TextBox)sender).Tag.ToString();
+            string[] tags = tagText.Split(',');
+            int sectionIndex = Convert.ToInt32(tags[0]);
+            int subsectionIndex = Convert.ToInt32(tags[1]);
+            int subsubsectionIndex = Convert.ToInt32(tags[2]);
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            foreach (SubSubSection subsubsection in subsection.subsubSections)
+                            {
+                                if (subsubsection.index == subsubsectionIndex)
+                                {
+                                    TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "LabelEnter", true)[0];
+                                    subsubsection.title = titleText.Text;
+                                }
+                            }                                
+                        }
+                    }
                 }
             }
         }
