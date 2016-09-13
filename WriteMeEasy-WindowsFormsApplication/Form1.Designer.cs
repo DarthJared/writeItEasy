@@ -34,11 +34,23 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.finalizePanel = new System.Windows.Forms.Panel();
-            this.writeButton = new System.Windows.Forms.Button();
-            this.previewPanel = new System.Windows.Forms.Panel();
-            this.sectionPanel = new System.Windows.Forms.Panel();
+            this.sectionTabControl = new System.Windows.Forms.TabControl();
+            this.formattingTab = new System.Windows.Forms.TabPage();
+            this.conclusionPanel = new System.Windows.Forms.Panel();
+            this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.conclusionDefaultButton = new System.Windows.Forms.Button();
+            this.conclusionTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.conclusionTitleColorButton = new System.Windows.Forms.Button();
+            this.conclusionTitleColorText = new System.Windows.Forms.TextBox();
+            this.conclusionTitleColorLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleSizeChoose = new System.Windows.Forms.ComboBox();
+            this.conclusionTitleSizeLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleFontLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleFontChoose = new System.Windows.Forms.ComboBox();
+            this.conclusionTitleBoldCheck = new System.Windows.Forms.CheckBox();
+            this.conclusionIncludeTitleCheck = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.conclusionHeader = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.footerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.footerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
@@ -113,6 +125,101 @@
             this.footerLeftOtherEnter = new System.Windows.Forms.TextBox();
             this.footerHeader = new System.Windows.Forms.Label();
             this.footerDefaultButton = new System.Windows.Forms.Button();
+            this.sectionsPanel = new System.Windows.Forms.Panel();
+            this.sectionsOptionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.sectionsDefaultButton = new System.Windows.Forms.Button();
+            this.subsubsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsubsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.subsubsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.includeSubsubsectionLabelCheck = new System.Windows.Forms.CheckBox();
+            this.subsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.subsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.includeSubsectionLabelCheck = new System.Windows.Forms.CheckBox();
+            this.sectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.includeSectionLabelsCheck = new System.Windows.Forms.CheckBox();
+            this.betweenSectionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.noSpaceBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
+            this.newPageForEachSectionRadio = new System.Windows.Forms.RadioButton();
+            this.blankLineBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
+            this.sectionsHeader = new System.Windows.Forms.Label();
+            this.titlePagePanel = new System.Windows.Forms.Panel();
+            this.titlePageDefaultButton = new System.Windows.Forms.Button();
+            this.titlePagePositionGroupBox = new System.Windows.Forms.GroupBox();
+            this.titlePageMiddleRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageBottomRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageTopRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageAllignGroupBox = new System.Windows.Forms.GroupBox();
+            this.titlePageRightAllignRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageCenterRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageLeftAllignRadio = new System.Windows.Forms.RadioButton();
+            this.titlePageIncludeGroupBox = new System.Windows.Forms.GroupBox();
+            this.titlePageDateLabel = new System.Windows.Forms.Label();
+            this.titlePageSchoolLabel = new System.Windows.Forms.Label();
+            this.dateUpButton = new System.Windows.Forms.Button();
+            this.dateDownButton = new System.Windows.Forms.Button();
+            this.titlePageDateCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageSchoolEnter = new System.Windows.Forms.TextBox();
+            this.schoolUpButton = new System.Windows.Forms.Button();
+            this.professorUpButton = new System.Windows.Forms.Button();
+            this.classUpButton = new System.Windows.Forms.Button();
+            this.nameUpButton = new System.Windows.Forms.Button();
+            this.schoolDownButton = new System.Windows.Forms.Button();
+            this.professorDownButton = new System.Windows.Forms.Button();
+            this.classDownButton = new System.Windows.Forms.Button();
+            this.nameDownButton = new System.Windows.Forms.Button();
+            this.titleUpButton = new System.Windows.Forms.Button();
+            this.titleDownButton = new System.Windows.Forms.Button();
+            this.titlePageProfessorLabel = new System.Windows.Forms.Label();
+            this.titlePageClassLabel = new System.Windows.Forms.Label();
+            this.titlePageDateEnter = new System.Windows.Forms.DateTimePicker();
+            this.titlePageProfessorEnter = new System.Windows.Forms.TextBox();
+            this.titlePageClassEnter = new System.Windows.Forms.TextBox();
+            this.titlePageNameEnter = new System.Windows.Forms.TextBox();
+            this.titlePageNameLabel = new System.Windows.Forms.Label();
+            this.titlePageTitleLabel = new System.Windows.Forms.Label();
+            this.titlePageTitleEnter = new System.Windows.Forms.TextBox();
+            this.titlePageSchoolCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageProfessorCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageClassCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageNameCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageTitleCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageSectionLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.headerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
@@ -187,34 +294,7 @@
             this.headerLeftOtherEnter = new System.Windows.Forms.TextBox();
             this.headerHeader = new System.Windows.Forms.Label();
             this.headerDefaultButton = new System.Windows.Forms.Button();
-            this.abstractPanel = new System.Windows.Forms.Panel();
-            this.abstractContentGroupBox = new System.Windows.Forms.GroupBox();
-            this.abstractContentPanel = new System.Windows.Forms.Panel();
-            this.abstractContentToolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.abstractContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.abstractOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.abstractDefaultButton = new System.Windows.Forms.Button();
-            this.abstractTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.abstractTitleColorButton = new System.Windows.Forms.Button();
-            this.abstractTitleColorText = new System.Windows.Forms.TextBox();
-            this.abstractTitleColorLabel = new System.Windows.Forms.Label();
-            this.abstractTitleSizeChoose = new System.Windows.Forms.ComboBox();
-            this.abstractTitleSizeLabel = new System.Windows.Forms.Label();
-            this.abstractTitleFontLabel = new System.Windows.Forms.Label();
-            this.abstractTitleFontChoose = new System.Windows.Forms.ComboBox();
-            this.abstractTitleBoldCheck = new System.Windows.Forms.CheckBox();
-            this.abstractIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.abstractTitleText = new System.Windows.Forms.TextBox();
-            this.abstractTitleLabel = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.abstractHeader = new System.Windows.Forms.Label();
             this.summaryPanel = new System.Windows.Forms.Panel();
-            this.summaryContentGroupBox = new System.Windows.Forms.GroupBox();
-            this.summaryContentPanel = new System.Windows.Forms.Panel();
-            this.summaryToolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.summaryContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.summaryOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.summaryDefaultButton = new System.Windows.Forms.Button();
             this.summaryTitleGroupBox = new System.Windows.Forms.GroupBox();
@@ -227,32 +307,38 @@
             this.summaryTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.summaryTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.summaryIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.summaryTitleText = new System.Windows.Forms.TextBox();
-            this.summaryTitleTextLabel = new System.Windows.Forms.Label();
             this.summaryOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.summaryHeader = new System.Windows.Forms.Label();
-            this.conclusionPanel = new System.Windows.Forms.Panel();
-            this.conclusionContentGroupBox = new System.Windows.Forms.GroupBox();
-            this.conclusionContentPanel = new System.Windows.Forms.Panel();
-            this.conclusionToolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.conclusionContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
-            this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.conclusionDefaultButton = new System.Windows.Forms.Button();
-            this.conclusionTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.conclusionTitleColorButton = new System.Windows.Forms.Button();
-            this.conclusionTitleColorText = new System.Windows.Forms.TextBox();
-            this.conclusionTitleColorLabel = new System.Windows.Forms.Label();
-            this.conclusionTitleSizeChoose = new System.Windows.Forms.ComboBox();
-            this.conclusionTitleSizeLabel = new System.Windows.Forms.Label();
-            this.conclusionTitleFontLabel = new System.Windows.Forms.Label();
-            this.conclusionTitleFontChoose = new System.Windows.Forms.ComboBox();
-            this.conclusionTitleBoldCheck = new System.Windows.Forms.CheckBox();
-            this.conclusionIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
-            this.conclusionTitleLabel = new System.Windows.Forms.Label();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.conclusionHeader = new System.Windows.Forms.Label();
+            this.abstractPanel = new System.Windows.Forms.Panel();
+            this.abstractOptionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.abstractDefaultButton = new System.Windows.Forms.Button();
+            this.abstractTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.abstractTitleColorButton = new System.Windows.Forms.Button();
+            this.abstractTitleColorText = new System.Windows.Forms.TextBox();
+            this.abstractTitleColorLabel = new System.Windows.Forms.Label();
+            this.abstractTitleSizeChoose = new System.Windows.Forms.ComboBox();
+            this.abstractTitleSizeLabel = new System.Windows.Forms.Label();
+            this.abstractTitleFontLabel = new System.Windows.Forms.Label();
+            this.abstractTitleFontChoose = new System.Windows.Forms.ComboBox();
+            this.abstractTitleBoldCheck = new System.Windows.Forms.CheckBox();
+            this.abstractIncludeTitleCheck = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.abstractHeader = new System.Windows.Forms.Label();
+            this.generalPanel = new System.Windows.Forms.Panel();
+            this.generalDefaultButton = new System.Windows.Forms.Button();
+            this.includeInPapeGroupBox = new System.Windows.Forms.GroupBox();
+            this.referencesIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.conclusionIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.footerIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.headerIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.abstractIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.summaryIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.titlePageIncludeCheck = new System.Windows.Forms.CheckBox();
+            this.paperTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.apaMlaGroupBox = new System.Windows.Forms.GroupBox();
+            this.mlaRadio = new System.Windows.Forms.RadioButton();
+            this.apaRadio = new System.Windows.Forms.RadioButton();
             this.referencesPanel = new System.Windows.Forms.Panel();
             this.referencesOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.referencesOrderChoose = new System.Windows.Forms.ComboBox();
@@ -276,71 +362,16 @@
             this.referencesTitleLabel = new System.Windows.Forms.Label();
             this.referencesHeader = new System.Windows.Forms.Label();
             this.referencesDefaultButton = new System.Windows.Forms.Button();
-            this.titlePagePanel = new System.Windows.Forms.Panel();
-            this.titlePageDefaultButton = new System.Windows.Forms.Button();
-            this.titlePagePositionGroupBox = new System.Windows.Forms.GroupBox();
-            this.titlePageMiddleRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageBottomRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageTopRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageAllignGroupBox = new System.Windows.Forms.GroupBox();
-            this.titlePageRightAllignRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageCenterRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageLeftAllignRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageIncludeGroupBox = new System.Windows.Forms.GroupBox();
-            this.titlePageDateLabel = new System.Windows.Forms.Label();
-            this.titlePageSchoolLabel = new System.Windows.Forms.Label();
-            this.dateUpButton = new System.Windows.Forms.Button();
-            this.dateDownButton = new System.Windows.Forms.Button();
-            this.titlePageDateCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageSchoolEnter = new System.Windows.Forms.TextBox();
-            this.schoolUpButton = new System.Windows.Forms.Button();
-            this.professorUpButton = new System.Windows.Forms.Button();
-            this.classUpButton = new System.Windows.Forms.Button();
-            this.nameUpButton = new System.Windows.Forms.Button();
-            this.schoolDownButton = new System.Windows.Forms.Button();
-            this.professorDownButton = new System.Windows.Forms.Button();
-            this.classDownButton = new System.Windows.Forms.Button();
-            this.nameDownButton = new System.Windows.Forms.Button();
-            this.titleUpButton = new System.Windows.Forms.Button();
-            this.titleDownButton = new System.Windows.Forms.Button();
-            this.titlePageProfessorLabel = new System.Windows.Forms.Label();
-            this.titlePageClassLabel = new System.Windows.Forms.Label();
-            this.titlePageDateEnter = new System.Windows.Forms.DateTimePicker();
-            this.titlePageProfessorEnter = new System.Windows.Forms.TextBox();
-            this.titlePageClassEnter = new System.Windows.Forms.TextBox();
-            this.titlePageNameEnter = new System.Windows.Forms.TextBox();
-            this.titlePageNameLabel = new System.Windows.Forms.Label();
-            this.titlePageTitleLabel = new System.Windows.Forms.Label();
-            this.titlePageTitleEnter = new System.Windows.Forms.TextBox();
-            this.titlePageSchoolCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageProfessorCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageClassCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageNameCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageTitleCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageSectionLabel = new System.Windows.Forms.Label();
-            this.sectionsPanel = new System.Windows.Forms.Panel();
-            this.addSectionButton = new System.Windows.Forms.Button();
-            this.sectionsOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.sectionLabelGroupBox = new System.Windows.Forms.GroupBox();
-            this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.sectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.includeSectionLabelsCheck = new System.Windows.Forms.CheckBox();
-            this.sectionsDefaultButton = new System.Windows.Forms.Button();
-            this.betweenSectionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.noSpaceBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
-            this.newPageForEachSectionRadio = new System.Windows.Forms.RadioButton();
-            this.blankLineBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
+            this.contentTab = new System.Windows.Forms.TabPage();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.conclusionContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.conclusionTitleLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.conclusionContentPanel = new System.Windows.Forms.Panel();
+            this.conclusionToolStripContainer = new System.Windows.Forms.ToolStripContainer();
+            this.conclusionContent = new System.Windows.Forms.RichTextBox();
+            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.section1groupBox = new System.Windows.Forms.GroupBox();
             this.section1LabelLabel = new System.Windows.Forms.Label();
             this.section1LabelEnter = new System.Windows.Forms.TextBox();
@@ -350,32 +381,28 @@
             this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.section1AddSubsectionButton = new System.Windows.Forms.Button();
             this.section1contentLabel = new System.Windows.Forms.Label();
-            this.sectionsHeader = new System.Windows.Forms.Label();
-            this.generalPanel = new System.Windows.Forms.Panel();
-            this.paperFormattingGroupBox = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.generalDefaultButton = new System.Windows.Forms.Button();
-            this.includeInPapeGroupBox = new System.Windows.Forms.GroupBox();
-            this.referencesIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.conclusionIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.footerIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.headerIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.abstractIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.summaryIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.titlePageIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.paperTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.apaMlaGroupBox = new System.Windows.Forms.GroupBox();
-            this.mlaRadio = new System.Windows.Forms.RadioButton();
-            this.apaRadio = new System.Windows.Forms.RadioButton();
+            this.abstractContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.abstractTitleLabel = new System.Windows.Forms.Label();
+            this.abstractTitleText = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.abstractContentPanel = new System.Windows.Forms.Panel();
+            this.abstractContentToolStripContainer = new System.Windows.Forms.ToolStripContainer();
+            this.abstractContent = new System.Windows.Forms.RichTextBox();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.addSectionButton = new System.Windows.Forms.Button();
+            this.summaryContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.summaryTitleTextLabel = new System.Windows.Forms.Label();
+            this.summaryTitleText = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.summaryContentPanel = new System.Windows.Forms.Panel();
+            this.summaryToolStripContainer = new System.Windows.Forms.ToolStripContainer();
+            this.summaryContent = new System.Windows.Forms.RichTextBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.finalizePanel = new System.Windows.Forms.Panel();
+            this.writeButton = new System.Windows.Forms.Button();
+            this.previewPanel = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveButton = new System.Windows.Forms.ToolStripButton();
             this.openButton = new System.Windows.Forms.ToolStripButton();
@@ -388,9 +415,11 @@
             this.toolStripContainer1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.finalizePanel.SuspendLayout();
-            this.sectionPanel.SuspendLayout();
+            this.sectionTabControl.SuspendLayout();
+            this.formattingTab.SuspendLayout();
+            this.conclusionPanel.SuspendLayout();
+            this.conclusionOptionsGroupBox.SuspendLayout();
+            this.conclusionTitleGroupBox.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.footerOptionsGroupBox.SuspendLayout();
             this.footerFirstPageGroupBox.SuspendLayout();
@@ -406,6 +435,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.footerCenterNumberEnter)).BeginInit();
             this.footerLeftGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerLeftNumberEnter)).BeginInit();
+            this.sectionsPanel.SuspendLayout();
+            this.sectionsOptionsGroupBox.SuspendLayout();
+            this.subsubsectionLabelGroupBox.SuspendLayout();
+            this.subsubsectionLabelStyleGroupBox.SuspendLayout();
+            this.subsubsectionLabelLocationGroupBox.SuspendLayout();
+            this.subsectionLabelGroupBox.SuspendLayout();
+            this.subsectionLabelStyleGroupBox.SuspendLayout();
+            this.subsectionLabelLocationGroupBox.SuspendLayout();
+            this.sectionLabelGroupBox.SuspendLayout();
+            this.sectionLabelStyleGroupBox.SuspendLayout();
+            this.sectionLabelLocationGroupBox.SuspendLayout();
+            this.betweenSectionsGroupBox.SuspendLayout();
+            this.titlePagePanel.SuspendLayout();
+            this.titlePagePositionGroupBox.SuspendLayout();
+            this.titlePageAllignGroupBox.SuspendLayout();
+            this.titlePageIncludeGroupBox.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.headerOptionsGroupBox.SuspendLayout();
             this.headerFirstPageGroupBox.SuspendLayout();
@@ -421,55 +466,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.headerCenterNumberEnter)).BeginInit();
             this.headerLeftGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).BeginInit();
-            this.abstractPanel.SuspendLayout();
-            this.abstractContentGroupBox.SuspendLayout();
-            this.abstractContentPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.ContentPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.SuspendLayout();
-            this.abstractOptionsGroupBox.SuspendLayout();
-            this.abstractTitleGroupBox.SuspendLayout();
             this.summaryPanel.SuspendLayout();
-            this.summaryContentGroupBox.SuspendLayout();
-            this.summaryContentPanel.SuspendLayout();
-            this.summaryToolStripContainer.ContentPanel.SuspendLayout();
-            this.summaryToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.summaryToolStripContainer.SuspendLayout();
             this.summaryOptionsGroupBox.SuspendLayout();
             this.summaryTitleGroupBox.SuspendLayout();
-            this.conclusionPanel.SuspendLayout();
-            this.conclusionContentGroupBox.SuspendLayout();
-            this.conclusionContentPanel.SuspendLayout();
-            this.conclusionToolStripContainer.ContentPanel.SuspendLayout();
-            this.conclusionToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.conclusionToolStripContainer.SuspendLayout();
-            this.conclusionOptionsGroupBox.SuspendLayout();
-            this.conclusionTitleGroupBox.SuspendLayout();
+            this.abstractPanel.SuspendLayout();
+            this.abstractOptionsGroupBox.SuspendLayout();
+            this.abstractTitleGroupBox.SuspendLayout();
+            this.generalPanel.SuspendLayout();
+            this.includeInPapeGroupBox.SuspendLayout();
+            this.paperTitleGroupBox.SuspendLayout();
+            this.apaMlaGroupBox.SuspendLayout();
             this.referencesPanel.SuspendLayout();
             this.referencesOptionsGroupBox.SuspendLayout();
             this.referencesIndentationGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).BeginInit();
             this.referencesTitleGroupBox.SuspendLayout();
-            this.titlePagePanel.SuspendLayout();
-            this.titlePagePositionGroupBox.SuspendLayout();
-            this.titlePageAllignGroupBox.SuspendLayout();
-            this.titlePageIncludeGroupBox.SuspendLayout();
-            this.sectionsPanel.SuspendLayout();
-            this.sectionsOptionsGroupBox.SuspendLayout();
-            this.sectionLabelGroupBox.SuspendLayout();
-            this.sectionLabelStyleGroupBox.SuspendLayout();
-            this.sectionLabelLocationGroupBox.SuspendLayout();
-            this.betweenSectionsGroupBox.SuspendLayout();
+            this.contentTab.SuspendLayout();
+            this.contentPanel.SuspendLayout();
+            this.conclusionContentGroupBox.SuspendLayout();
+            this.conclusionContentPanel.SuspendLayout();
+            this.conclusionToolStripContainer.ContentPanel.SuspendLayout();
+            this.conclusionToolStripContainer.TopToolStripPanel.SuspendLayout();
+            this.conclusionToolStripContainer.SuspendLayout();
             this.section1groupBox.SuspendLayout();
             this.section1ContentPanel.SuspendLayout();
             this.section1ToolStripContainer.ContentPanel.SuspendLayout();
             this.section1ToolStripContainer.TopToolStripPanel.SuspendLayout();
             this.section1ToolStripContainer.SuspendLayout();
-            this.generalPanel.SuspendLayout();
-            this.paperFormattingGroupBox.SuspendLayout();
-            this.includeInPapeGroupBox.SuspendLayout();
-            this.paperTitleGroupBox.SuspendLayout();
-            this.apaMlaGroupBox.SuspendLayout();
+            this.abstractContentGroupBox.SuspendLayout();
+            this.abstractContentPanel.SuspendLayout();
+            this.abstractContentToolStripContainer.ContentPanel.SuspendLayout();
+            this.abstractContentToolStripContainer.TopToolStripPanel.SuspendLayout();
+            this.abstractContentToolStripContainer.SuspendLayout();
+            this.summaryContentGroupBox.SuspendLayout();
+            this.summaryContentPanel.SuspendLayout();
+            this.summaryToolStripContainer.ContentPanel.SuspendLayout();
+            this.summaryToolStripContainer.TopToolStripPanel.SuspendLayout();
+            this.summaryToolStripContainer.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.finalizePanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -481,7 +516,7 @@
             generalHeader.ForeColor = System.Drawing.SystemColors.Control;
             generalHeader.Location = new System.Drawing.Point(0, 0);
             generalHeader.Name = "generalHeader";
-            generalHeader.Size = new System.Drawing.Size(638, 30);
+            generalHeader.Size = new System.Drawing.Size(633, 30);
             generalHeader.TabIndex = 0;
             generalHeader.Text = "GENERAL";
             generalHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -532,8 +567,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.9721F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.0279F));
+            this.tableLayoutPanel1.Controls.Add(this.sectionTabControl, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.sectionPanel, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(80, 0);
@@ -544,64 +579,205 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1362, 679);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // sectionTabControl
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(669, 3);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 40);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(690, 673);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.sectionTabControl.Controls.Add(this.formattingTab);
+            this.sectionTabControl.Controls.Add(this.contentTab);
+            this.sectionTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionTabControl.ItemSize = new System.Drawing.Size(325, 25);
+            this.sectionTabControl.Location = new System.Drawing.Point(3, 3);
+            this.sectionTabControl.Name = "sectionTabControl";
+            this.sectionTabControl.SelectedIndex = 0;
+            this.sectionTabControl.Size = new System.Drawing.Size(660, 670);
+            this.sectionTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.sectionTabControl.TabIndex = 1;
+            this.sectionTabControl.SelectedIndexChanged += new System.EventHandler(this.sectionTabControl_Change);
             // 
-            // finalizePanel
+            // formattingTab
             // 
-            this.finalizePanel.Controls.Add(this.writeButton);
-            this.finalizePanel.Location = new System.Drawing.Point(3, 626);
-            this.finalizePanel.Name = "finalizePanel";
-            this.finalizePanel.Size = new System.Drawing.Size(684, 44);
-            this.finalizePanel.TabIndex = 1;
+            this.formattingTab.AutoScroll = true;
+            this.formattingTab.Controls.Add(this.conclusionPanel);
+            this.formattingTab.Controls.Add(this.footerPanel);
+            this.formattingTab.Controls.Add(this.sectionsPanel);
+            this.formattingTab.Controls.Add(this.titlePagePanel);
+            this.formattingTab.Controls.Add(this.headerPanel);
+            this.formattingTab.Controls.Add(this.summaryPanel);
+            this.formattingTab.Controls.Add(this.abstractPanel);
+            this.formattingTab.Controls.Add(this.generalPanel);
+            this.formattingTab.Controls.Add(this.referencesPanel);
+            this.formattingTab.Location = new System.Drawing.Point(4, 29);
+            this.formattingTab.Name = "formattingTab";
+            this.formattingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.formattingTab.Size = new System.Drawing.Size(652, 637);
+            this.formattingTab.TabIndex = 0;
+            this.formattingTab.Text = "FORMATTING";
+            this.formattingTab.UseVisualStyleBackColor = true;
             // 
-            // writeButton
+            // conclusionPanel
             // 
-            this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeButton.Location = new System.Drawing.Point(564, 8);
-            this.writeButton.Name = "writeButton";
-            this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.writeButton.Size = new System.Drawing.Size(114, 28);
-            this.writeButton.TabIndex = 0;
-            this.writeButton.Text = "Write It!";
-            this.writeButton.UseVisualStyleBackColor = true;
+            this.conclusionPanel.BackColor = System.Drawing.Color.White;
+            this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
+            this.conclusionPanel.Controls.Add(this.conclusionHeader);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 2671);
+            this.conclusionPanel.Name = "conclusionPanel";
+            this.conclusionPanel.Size = new System.Drawing.Size(635, 172);
+            this.conclusionPanel.TabIndex = 7;
             // 
-            // previewPanel
+            // conclusionOptionsGroupBox
             // 
-            this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.previewPanel.Location = new System.Drawing.Point(3, 3);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(684, 617);
-            this.previewPanel.TabIndex = 0;
+            this.conclusionOptionsGroupBox.Controls.Add(this.conclusionDefaultButton);
+            this.conclusionOptionsGroupBox.Controls.Add(this.conclusionTitleGroupBox);
+            this.conclusionOptionsGroupBox.Controls.Add(this.checkBox19);
+            this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
+            this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
+            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
+            this.conclusionOptionsGroupBox.TabIndex = 3;
+            this.conclusionOptionsGroupBox.TabStop = false;
+            this.conclusionOptionsGroupBox.Text = "Options";
             // 
-            // sectionPanel
+            // conclusionDefaultButton
             // 
-            this.sectionPanel.AutoScroll = true;
-            this.sectionPanel.Controls.Add(this.footerPanel);
-            this.sectionPanel.Controls.Add(this.headerPanel);
-            this.sectionPanel.Controls.Add(this.abstractPanel);
-            this.sectionPanel.Controls.Add(this.summaryPanel);
-            this.sectionPanel.Controls.Add(this.conclusionPanel);
-            this.sectionPanel.Controls.Add(this.referencesPanel);
-            this.sectionPanel.Controls.Add(this.titlePagePanel);
-            this.sectionPanel.Controls.Add(this.sectionsPanel);
-            this.sectionPanel.Controls.Add(this.generalPanel);
-            this.sectionPanel.Location = new System.Drawing.Point(3, 3);
-            this.sectionPanel.Name = "sectionPanel";
-            this.sectionPanel.Size = new System.Drawing.Size(660, 673);
-            this.sectionPanel.TabIndex = 2;
+            this.conclusionDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionDefaultButton.Location = new System.Drawing.Point(9, 93);
+            this.conclusionDefaultButton.Name = "conclusionDefaultButton";
+            this.conclusionDefaultButton.Size = new System.Drawing.Size(94, 23);
+            this.conclusionDefaultButton.TabIndex = 14;
+            this.conclusionDefaultButton.Text = "APA Default";
+            this.conclusionDefaultButton.UseVisualStyleBackColor = true;
+            // 
+            // conclusionTitleGroupBox
+            // 
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorButton);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorText);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeChoose);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontChoose);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleBoldCheck);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionIncludeTitleCheck);
+            this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
+            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.conclusionTitleGroupBox.TabIndex = 4;
+            this.conclusionTitleGroupBox.TabStop = false;
+            this.conclusionTitleGroupBox.Text = "Conclusion Title";
+            // 
+            // conclusionTitleColorButton
+            // 
+            this.conclusionTitleColorButton.Location = new System.Drawing.Point(141, 114);
+            this.conclusionTitleColorButton.Name = "conclusionTitleColorButton";
+            this.conclusionTitleColorButton.Size = new System.Drawing.Size(73, 23);
+            this.conclusionTitleColorButton.TabIndex = 13;
+            this.conclusionTitleColorButton.Text = "Choose";
+            this.conclusionTitleColorButton.UseVisualStyleBackColor = true;
+            this.conclusionTitleColorButton.Visible = false;
+            // 
+            // conclusionTitleColorText
+            // 
+            this.conclusionTitleColorText.Location = new System.Drawing.Point(70, 116);
+            this.conclusionTitleColorText.Name = "conclusionTitleColorText";
+            this.conclusionTitleColorText.Size = new System.Drawing.Size(72, 20);
+            this.conclusionTitleColorText.TabIndex = 14;
+            this.conclusionTitleColorText.Visible = false;
+            // 
+            // conclusionTitleColorLabel
+            // 
+            this.conclusionTitleColorLabel.AutoSize = true;
+            this.conclusionTitleColorLabel.Location = new System.Drawing.Point(3, 119);
+            this.conclusionTitleColorLabel.Name = "conclusionTitleColorLabel";
+            this.conclusionTitleColorLabel.Size = new System.Drawing.Size(57, 13);
+            this.conclusionTitleColorLabel.TabIndex = 19;
+            this.conclusionTitleColorLabel.Text = "Title Color:";
+            this.conclusionTitleColorLabel.Visible = false;
+            // 
+            // conclusionTitleSizeChoose
+            // 
+            this.conclusionTitleSizeChoose.FormattingEnabled = true;
+            this.conclusionTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
+            this.conclusionTitleSizeChoose.Name = "conclusionTitleSizeChoose";
+            this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
+            this.conclusionTitleSizeChoose.TabIndex = 18;
+            this.conclusionTitleSizeChoose.Visible = false;
+            // 
+            // conclusionTitleSizeLabel
+            // 
+            this.conclusionTitleSizeLabel.AutoSize = true;
+            this.conclusionTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
+            this.conclusionTitleSizeLabel.Name = "conclusionTitleSizeLabel";
+            this.conclusionTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
+            this.conclusionTitleSizeLabel.TabIndex = 17;
+            this.conclusionTitleSizeLabel.Text = "Title Size:";
+            this.conclusionTitleSizeLabel.Visible = false;
+            // 
+            // conclusionTitleFontLabel
+            // 
+            this.conclusionTitleFontLabel.AutoSize = true;
+            this.conclusionTitleFontLabel.Location = new System.Drawing.Point(3, 67);
+            this.conclusionTitleFontLabel.Name = "conclusionTitleFontLabel";
+            this.conclusionTitleFontLabel.Size = new System.Drawing.Size(54, 13);
+            this.conclusionTitleFontLabel.TabIndex = 16;
+            this.conclusionTitleFontLabel.Text = "Title Font:";
+            this.conclusionTitleFontLabel.Visible = false;
+            // 
+            // conclusionTitleFontChoose
+            // 
+            this.conclusionTitleFontChoose.FormattingEnabled = true;
+            this.conclusionTitleFontChoose.Location = new System.Drawing.Point(70, 64);
+            this.conclusionTitleFontChoose.Name = "conclusionTitleFontChoose";
+            this.conclusionTitleFontChoose.Size = new System.Drawing.Size(144, 21);
+            this.conclusionTitleFontChoose.TabIndex = 15;
+            this.conclusionTitleFontChoose.Visible = false;
+            // 
+            // conclusionTitleBoldCheck
+            // 
+            this.conclusionTitleBoldCheck.AutoSize = true;
+            this.conclusionTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
+            this.conclusionTitleBoldCheck.Name = "conclusionTitleBoldCheck";
+            this.conclusionTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
+            this.conclusionTitleBoldCheck.TabIndex = 11;
+            this.conclusionTitleBoldCheck.Text = "Bold Title";
+            this.conclusionTitleBoldCheck.UseVisualStyleBackColor = true;
+            this.conclusionTitleBoldCheck.Visible = false;
+            // 
+            // conclusionIncludeTitleCheck
+            // 
+            this.conclusionIncludeTitleCheck.AutoSize = true;
+            this.conclusionIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
+            this.conclusionIncludeTitleCheck.Name = "conclusionIncludeTitleCheck";
+            this.conclusionIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
+            this.conclusionIncludeTitleCheck.TabIndex = 1;
+            this.conclusionIncludeTitleCheck.Text = "Include Title";
+            this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
+            this.conclusionIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeTitleCheck_CheckedChanged);
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox19.Location = new System.Drawing.Point(9, 19);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(107, 17);
+            this.checkBox19.TabIndex = 0;
+            this.checkBox19.Text = "On Its Own Page";
+            this.checkBox19.UseVisualStyleBackColor = true;
+            // 
+            // conclusionHeader
+            // 
+            this.conclusionHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.conclusionHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.conclusionHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionHeader.ForeColor = System.Drawing.SystemColors.Control;
+            this.conclusionHeader.Location = new System.Drawing.Point(0, 0);
+            this.conclusionHeader.Name = "conclusionHeader";
+            this.conclusionHeader.Size = new System.Drawing.Size(633, 30);
+            this.conclusionHeader.TabIndex = 0;
+            this.conclusionHeader.Text = "CONCLUSION";
+            this.conclusionHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // footerPanel
             // 
@@ -610,9 +786,9 @@
             this.footerPanel.Controls.Add(this.footerOptionsGroupBox);
             this.footerPanel.Controls.Add(this.footerHeader);
             this.footerPanel.Controls.Add(this.footerDefaultButton);
-            this.footerPanel.Location = new System.Drawing.Point(0, 2516);
+            this.footerPanel.Location = new System.Drawing.Point(0, 1834);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(640, 571);
+            this.footerPanel.Size = new System.Drawing.Size(635, 571);
             this.footerPanel.TabIndex = 10;
             // 
             // footerOptionsGroupBox
@@ -1443,7 +1619,7 @@
             this.footerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.footerHeader.Location = new System.Drawing.Point(0, 0);
             this.footerHeader.Name = "footerHeader";
-            this.footerHeader.Size = new System.Drawing.Size(638, 30);
+            this.footerHeader.Size = new System.Drawing.Size(633, 30);
             this.footerHeader.TabIndex = 0;
             this.footerHeader.Text = "FOOTER";
             this.footerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1458,6 +1634,1095 @@
             this.footerDefaultButton.Text = "APA Default";
             this.footerDefaultButton.UseVisualStyleBackColor = true;
             // 
+            // sectionsPanel
+            // 
+            this.sectionsPanel.BackColor = System.Drawing.Color.White;
+            this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
+            this.sectionsPanel.Controls.Add(this.sectionsHeader);
+            this.sectionsPanel.Location = new System.Drawing.Point(0, 2405);
+            this.sectionsPanel.Name = "sectionsPanel";
+            this.sectionsPanel.Size = new System.Drawing.Size(635, 266);
+            this.sectionsPanel.TabIndex = 4;
+            // 
+            // sectionsOptionsGroupBox
+            // 
+            this.sectionsOptionsGroupBox.Controls.Add(this.sectionsDefaultButton);
+            this.sectionsOptionsGroupBox.Controls.Add(this.subsubsectionLabelGroupBox);
+            this.sectionsOptionsGroupBox.Controls.Add(this.subsectionLabelGroupBox);
+            this.sectionsOptionsGroupBox.Controls.Add(this.sectionLabelGroupBox);
+            this.sectionsOptionsGroupBox.Controls.Add(this.betweenSectionsGroupBox);
+            this.sectionsOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(9, 36);
+            this.sectionsOptionsGroupBox.Name = "sectionsOptionsGroupBox";
+            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 212);
+            this.sectionsOptionsGroupBox.TabIndex = 10;
+            this.sectionsOptionsGroupBox.TabStop = false;
+            this.sectionsOptionsGroupBox.Text = "Section Options";
+            // 
+            // sectionsDefaultButton
+            // 
+            this.sectionsDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionsDefaultButton.Location = new System.Drawing.Point(9, 181);
+            this.sectionsDefaultButton.Name = "sectionsDefaultButton";
+            this.sectionsDefaultButton.Size = new System.Drawing.Size(126, 23);
+            this.sectionsDefaultButton.TabIndex = 6;
+            this.sectionsDefaultButton.Text = "APA Defaults";
+            this.sectionsDefaultButton.UseVisualStyleBackColor = true;
+            // 
+            // subsubsectionLabelGroupBox
+            // 
+            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelStyleGroupBox);
+            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelLocationGroupBox);
+            this.subsubsectionLabelGroupBox.Controls.Add(this.includeSubsubsectionLabelCheck);
+            this.subsubsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(9, 244);
+            this.subsubsectionLabelGroupBox.Name = "subsubsectionLabelGroupBox";
+            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(597, 40);
+            this.subsubsectionLabelGroupBox.TabIndex = 9;
+            this.subsubsectionLabelGroupBox.TabStop = false;
+            this.subsubsectionLabelGroupBox.Text = "Subsubsection Labels";
+            this.subsubsectionLabelGroupBox.Visible = false;
+            // 
+            // subsubsectionLabelStyleGroupBox
+            // 
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.button2);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.textBox4);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label7);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.comboBox5);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label8);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label9);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.comboBox6);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.checkBox5);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.checkBox6);
+            this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
+            this.subsubsectionLabelStyleGroupBox.Name = "subsubsectionLabelStyleGroupBox";
+            this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.subsubsectionLabelStyleGroupBox.TabIndex = 5;
+            this.subsubsectionLabelStyleGroupBox.TabStop = false;
+            this.subsubsectionLabelStyleGroupBox.Text = "Style";
+            this.subsubsectionLabelStyleGroupBox.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(114, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(73, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Choose";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(43, 115);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(72, 20);
+            this.textBox4.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 118);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Color:";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(43, 89);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(144, 21);
+            this.comboBox5.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Size:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Font:";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(43, 65);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(144, 21);
+            this.comboBox6.TabIndex = 6;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(7, 42);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(67, 17);
+            this.checkBox5.TabIndex = 1;
+            this.checkBox5.Text = "Bulletted";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(7, 19);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(47, 17);
+            this.checkBox6.TabIndex = 0;
+            this.checkBox6.Text = "Bold";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // subsubsectionLabelLocationGroupBox
+            // 
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton5);
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton6);
+            this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
+            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.subsubsectionLabelLocationGroupBox.TabIndex = 4;
+            this.subsubsectionLabelLocationGroupBox.TabStop = false;
+            this.subsubsectionLabelLocationGroupBox.Text = "Location";
+            this.subsubsectionLabelLocationGroupBox.Visible = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Checked = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 18);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(106, 17);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "In Line With Text";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(7, 41);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(186, 17);
+            this.radioButton6.TabIndex = 2;
+            this.radioButton6.Text = "On Separate Line Before Sections";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // includeSubsubsectionLabelCheck
+            // 
+            this.includeSubsubsectionLabelCheck.AutoSize = true;
+            this.includeSubsubsectionLabelCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.includeSubsubsectionLabelCheck.Location = new System.Drawing.Point(9, 19);
+            this.includeSubsubsectionLabelCheck.Name = "includeSubsubsectionLabelCheck";
+            this.includeSubsubsectionLabelCheck.Size = new System.Drawing.Size(168, 17);
+            this.includeSubsubsectionLabelCheck.TabIndex = 0;
+            this.includeSubsubsectionLabelCheck.Text = "Include Subsubsection Labels";
+            this.includeSubsubsectionLabelCheck.UseVisualStyleBackColor = true;
+            this.includeSubsubsectionLabelCheck.CheckedChanged += new System.EventHandler(this.includeSubsubsectionLabelCheck_CheckedChanged);
+            // 
+            // subsectionLabelGroupBox
+            // 
+            this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelStyleGroupBox);
+            this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelLocationGroupBox);
+            this.subsectionLabelGroupBox.Controls.Add(this.includeSubsectionLabelCheck);
+            this.subsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subsectionLabelGroupBox.Location = new System.Drawing.Point(9, 186);
+            this.subsectionLabelGroupBox.Name = "subsectionLabelGroupBox";
+            this.subsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.subsectionLabelGroupBox.TabIndex = 8;
+            this.subsectionLabelGroupBox.TabStop = false;
+            this.subsectionLabelGroupBox.Text = "Subsection Labels";
+            this.subsectionLabelGroupBox.Visible = false;
+            // 
+            // subsectionLabelStyleGroupBox
+            // 
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.button1);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.textBox3);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.label4);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.comboBox3);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.label5);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.label6);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.comboBox4);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.checkBox3);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.checkBox4);
+            this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
+            this.subsectionLabelStyleGroupBox.Name = "subsectionLabelStyleGroupBox";
+            this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.subsectionLabelStyleGroupBox.TabIndex = 5;
+            this.subsectionLabelStyleGroupBox.TabStop = false;
+            this.subsectionLabelStyleGroupBox.Text = "Style";
+            this.subsectionLabelStyleGroupBox.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(114, 113);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Choose";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(43, 115);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(72, 20);
+            this.textBox3.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Color:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(43, 89);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(144, 21);
+            this.comboBox3.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Size:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Font:";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(43, 65);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(144, 21);
+            this.comboBox4.TabIndex = 6;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(7, 42);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(67, 17);
+            this.checkBox3.TabIndex = 1;
+            this.checkBox3.Text = "Bulletted";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(7, 19);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(47, 17);
+            this.checkBox4.TabIndex = 0;
+            this.checkBox4.Text = "Bold";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // subsectionLabelLocationGroupBox
+            // 
+            this.subsectionLabelLocationGroupBox.Controls.Add(this.radioButton3);
+            this.subsectionLabelLocationGroupBox.Controls.Add(this.radioButton4);
+            this.subsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.subsectionLabelLocationGroupBox.Name = "subsectionLabelLocationGroupBox";
+            this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.subsectionLabelLocationGroupBox.TabIndex = 4;
+            this.subsectionLabelLocationGroupBox.TabStop = false;
+            this.subsectionLabelLocationGroupBox.Text = "Location";
+            this.subsectionLabelLocationGroupBox.Visible = false;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 18);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(106, 17);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "In Line With Text";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 41);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(186, 17);
+            this.radioButton4.TabIndex = 2;
+            this.radioButton4.Text = "On Separate Line Before Sections";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // includeSubsectionLabelCheck
+            // 
+            this.includeSubsectionLabelCheck.AutoSize = true;
+            this.includeSubsectionLabelCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.includeSubsectionLabelCheck.Location = new System.Drawing.Point(9, 19);
+            this.includeSubsectionLabelCheck.Name = "includeSubsectionLabelCheck";
+            this.includeSubsectionLabelCheck.Size = new System.Drawing.Size(151, 17);
+            this.includeSubsectionLabelCheck.TabIndex = 0;
+            this.includeSubsectionLabelCheck.Text = "Include Subsection Labels";
+            this.includeSubsectionLabelCheck.UseVisualStyleBackColor = true;
+            this.includeSubsectionLabelCheck.CheckedChanged += new System.EventHandler(this.includeSubsectionLabelCheck_CheckedChanged);
+            // 
+            // sectionLabelGroupBox
+            // 
+            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelStyleGroupBox);
+            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelLocationGroupBox);
+            this.sectionLabelGroupBox.Controls.Add(this.includeSectionLabelsCheck);
+            this.sectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionLabelGroupBox.Location = new System.Drawing.Point(9, 128);
+            this.sectionLabelGroupBox.Name = "sectionLabelGroupBox";
+            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.sectionLabelGroupBox.TabIndex = 7;
+            this.sectionLabelGroupBox.TabStop = false;
+            this.sectionLabelGroupBox.Text = "Section Labels";
+            // 
+            // sectionLabelStyleGroupBox
+            // 
+            this.sectionLabelStyleGroupBox.Controls.Add(this.button3);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.textBox1);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.label3);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox2);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.label2);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.label1);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox1);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox2);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox1);
+            this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
+            this.sectionLabelStyleGroupBox.Name = "sectionLabelStyleGroupBox";
+            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.sectionLabelStyleGroupBox.TabIndex = 5;
+            this.sectionLabelStyleGroupBox.TabStop = false;
+            this.sectionLabelStyleGroupBox.Text = "Style";
+            this.sectionLabelStyleGroupBox.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(114, 113);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Choose";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(43, 115);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(72, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Color:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(43, 89);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(144, 21);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Size:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Font:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(43, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(144, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(7, 42);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(67, 17);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "Bulletted";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(7, 19);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(47, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Bold";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // sectionLabelLocationGroupBox
+            // 
+            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton1);
+            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton2);
+            this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.sectionLabelLocationGroupBox.Name = "sectionLabelLocationGroupBox";
+            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.sectionLabelLocationGroupBox.TabIndex = 4;
+            this.sectionLabelLocationGroupBox.TabStop = false;
+            this.sectionLabelLocationGroupBox.Text = "Location";
+            this.sectionLabelLocationGroupBox.Visible = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 18);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(106, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "In Line With Text";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 41);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(186, 17);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.Text = "On Separate Line Before Sections";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // includeSectionLabelsCheck
+            // 
+            this.includeSectionLabelsCheck.AutoSize = true;
+            this.includeSectionLabelsCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.includeSectionLabelsCheck.Location = new System.Drawing.Point(9, 19);
+            this.includeSectionLabelsCheck.Name = "includeSectionLabelsCheck";
+            this.includeSectionLabelsCheck.Size = new System.Drawing.Size(134, 17);
+            this.includeSectionLabelsCheck.TabIndex = 0;
+            this.includeSectionLabelsCheck.Text = "Include Section Labels";
+            this.includeSectionLabelsCheck.UseVisualStyleBackColor = true;
+            this.includeSectionLabelsCheck.CheckedChanged += new System.EventHandler(this.includeSectionLabelsCheck_CheckedChanged);
+            // 
+            // betweenSectionsGroupBox
+            // 
+            this.betweenSectionsGroupBox.Controls.Add(this.noSpaceBetweenSectionsRadio);
+            this.betweenSectionsGroupBox.Controls.Add(this.newPageForEachSectionRadio);
+            this.betweenSectionsGroupBox.Controls.Add(this.blankLineBetweenSectionsRadio);
+            this.betweenSectionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betweenSectionsGroupBox.Location = new System.Drawing.Point(9, 19);
+            this.betweenSectionsGroupBox.Name = "betweenSectionsGroupBox";
+            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(597, 96);
+            this.betweenSectionsGroupBox.TabIndex = 4;
+            this.betweenSectionsGroupBox.TabStop = false;
+            this.betweenSectionsGroupBox.Text = "Between Sections";
+            // 
+            // noSpaceBetweenSectionsRadio
+            // 
+            this.noSpaceBetweenSectionsRadio.AutoSize = true;
+            this.noSpaceBetweenSectionsRadio.Location = new System.Drawing.Point(9, 65);
+            this.noSpaceBetweenSectionsRadio.Name = "noSpaceBetweenSectionsRadio";
+            this.noSpaceBetweenSectionsRadio.Size = new System.Drawing.Size(162, 17);
+            this.noSpaceBetweenSectionsRadio.TabIndex = 4;
+            this.noSpaceBetweenSectionsRadio.Text = "No Space Between Sections";
+            this.noSpaceBetweenSectionsRadio.UseVisualStyleBackColor = true;
+            // 
+            // newPageForEachSectionRadio
+            // 
+            this.newPageForEachSectionRadio.AutoSize = true;
+            this.newPageForEachSectionRadio.Location = new System.Drawing.Point(9, 42);
+            this.newPageForEachSectionRadio.Name = "newPageForEachSectionRadio";
+            this.newPageForEachSectionRadio.Size = new System.Drawing.Size(160, 17);
+            this.newPageForEachSectionRadio.TabIndex = 3;
+            this.newPageForEachSectionRadio.Text = "New Page For Each Section";
+            this.newPageForEachSectionRadio.UseVisualStyleBackColor = true;
+            // 
+            // blankLineBetweenSectionsRadio
+            // 
+            this.blankLineBetweenSectionsRadio.AutoSize = true;
+            this.blankLineBetweenSectionsRadio.Checked = true;
+            this.blankLineBetweenSectionsRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blankLineBetweenSectionsRadio.Location = new System.Drawing.Point(9, 19);
+            this.blankLineBetweenSectionsRadio.Name = "blankLineBetweenSectionsRadio";
+            this.blankLineBetweenSectionsRadio.Size = new System.Drawing.Size(187, 17);
+            this.blankLineBetweenSectionsRadio.TabIndex = 2;
+            this.blankLineBetweenSectionsRadio.TabStop = true;
+            this.blankLineBetweenSectionsRadio.Text = "Blank Line Between Each Section";
+            this.blankLineBetweenSectionsRadio.UseVisualStyleBackColor = true;
+            // 
+            // sectionsHeader
+            // 
+            this.sectionsHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.sectionsHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sectionsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionsHeader.ForeColor = System.Drawing.SystemColors.Control;
+            this.sectionsHeader.Location = new System.Drawing.Point(0, 0);
+            this.sectionsHeader.Name = "sectionsHeader";
+            this.sectionsHeader.Size = new System.Drawing.Size(633, 30);
+            this.sectionsHeader.TabIndex = 0;
+            this.sectionsHeader.Text = "SECTIONS";
+            this.sectionsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // titlePagePanel
+            // 
+            this.titlePagePanel.BackColor = System.Drawing.Color.White;
+            this.titlePagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.titlePagePanel.Controls.Add(this.titlePageDefaultButton);
+            this.titlePagePanel.Controls.Add(this.titlePagePositionGroupBox);
+            this.titlePagePanel.Controls.Add(this.titlePageAllignGroupBox);
+            this.titlePagePanel.Controls.Add(this.titlePageIncludeGroupBox);
+            this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
+            this.titlePagePanel.Location = new System.Drawing.Point(0, 440);
+            this.titlePagePanel.Name = "titlePagePanel";
+            this.titlePagePanel.Size = new System.Drawing.Size(635, 475);
+            this.titlePagePanel.TabIndex = 5;
+            // 
+            // titlePageDefaultButton
+            // 
+            this.titlePageDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageDefaultButton.Location = new System.Drawing.Point(9, 436);
+            this.titlePageDefaultButton.Name = "titlePageDefaultButton";
+            this.titlePageDefaultButton.Size = new System.Drawing.Size(126, 23);
+            this.titlePageDefaultButton.TabIndex = 5;
+            this.titlePageDefaultButton.Text = "APA Defaults";
+            this.titlePageDefaultButton.UseVisualStyleBackColor = true;
+            // 
+            // titlePagePositionGroupBox
+            // 
+            this.titlePagePositionGroupBox.Controls.Add(this.titlePageMiddleRadio);
+            this.titlePagePositionGroupBox.Controls.Add(this.titlePageBottomRadio);
+            this.titlePagePositionGroupBox.Controls.Add(this.titlePageTopRadio);
+            this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePagePositionGroupBox.Location = new System.Drawing.Point(9, 333);
+            this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
+            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(615, 92);
+            this.titlePagePositionGroupBox.TabIndex = 4;
+            this.titlePagePositionGroupBox.TabStop = false;
+            this.titlePagePositionGroupBox.Text = "Position";
+            // 
+            // titlePageMiddleRadio
+            // 
+            this.titlePageMiddleRadio.AutoSize = true;
+            this.titlePageMiddleRadio.Checked = true;
+            this.titlePageMiddleRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageMiddleRadio.Location = new System.Drawing.Point(9, 42);
+            this.titlePageMiddleRadio.Name = "titlePageMiddleRadio";
+            this.titlePageMiddleRadio.Size = new System.Drawing.Size(96, 17);
+            this.titlePageMiddleRadio.TabIndex = 2;
+            this.titlePageMiddleRadio.TabStop = true;
+            this.titlePageMiddleRadio.Text = "Middle of Page";
+            this.titlePageMiddleRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageBottomRadio
+            // 
+            this.titlePageBottomRadio.AutoSize = true;
+            this.titlePageBottomRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageBottomRadio.Location = new System.Drawing.Point(9, 65);
+            this.titlePageBottomRadio.Name = "titlePageBottomRadio";
+            this.titlePageBottomRadio.Size = new System.Drawing.Size(98, 17);
+            this.titlePageBottomRadio.TabIndex = 1;
+            this.titlePageBottomRadio.Text = "Bottom of Page";
+            this.titlePageBottomRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageTopRadio
+            // 
+            this.titlePageTopRadio.AutoSize = true;
+            this.titlePageTopRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageTopRadio.Location = new System.Drawing.Point(9, 19);
+            this.titlePageTopRadio.Name = "titlePageTopRadio";
+            this.titlePageTopRadio.Size = new System.Drawing.Size(84, 17);
+            this.titlePageTopRadio.TabIndex = 0;
+            this.titlePageTopRadio.Text = "Top of Page";
+            this.titlePageTopRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageAllignGroupBox
+            // 
+            this.titlePageAllignGroupBox.Controls.Add(this.titlePageRightAllignRadio);
+            this.titlePageAllignGroupBox.Controls.Add(this.titlePageCenterRadio);
+            this.titlePageAllignGroupBox.Controls.Add(this.titlePageLeftAllignRadio);
+            this.titlePageAllignGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageAllignGroupBox.Location = new System.Drawing.Point(9, 219);
+            this.titlePageAllignGroupBox.Name = "titlePageAllignGroupBox";
+            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(615, 92);
+            this.titlePageAllignGroupBox.TabIndex = 3;
+            this.titlePageAllignGroupBox.TabStop = false;
+            this.titlePageAllignGroupBox.Text = "Allignment";
+            // 
+            // titlePageRightAllignRadio
+            // 
+            this.titlePageRightAllignRadio.AutoSize = true;
+            this.titlePageRightAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageRightAllignRadio.Location = new System.Drawing.Point(9, 65);
+            this.titlePageRightAllignRadio.Name = "titlePageRightAllignRadio";
+            this.titlePageRightAllignRadio.Size = new System.Drawing.Size(78, 17);
+            this.titlePageRightAllignRadio.TabIndex = 2;
+            this.titlePageRightAllignRadio.Text = "Right Allign";
+            this.titlePageRightAllignRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageCenterRadio
+            // 
+            this.titlePageCenterRadio.AutoSize = true;
+            this.titlePageCenterRadio.Checked = true;
+            this.titlePageCenterRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageCenterRadio.Location = new System.Drawing.Point(9, 42);
+            this.titlePageCenterRadio.Name = "titlePageCenterRadio";
+            this.titlePageCenterRadio.Size = new System.Drawing.Size(56, 17);
+            this.titlePageCenterRadio.TabIndex = 1;
+            this.titlePageCenterRadio.TabStop = true;
+            this.titlePageCenterRadio.Text = "Center";
+            this.titlePageCenterRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageLeftAllignRadio
+            // 
+            this.titlePageLeftAllignRadio.AutoSize = true;
+            this.titlePageLeftAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageLeftAllignRadio.Location = new System.Drawing.Point(9, 19);
+            this.titlePageLeftAllignRadio.Name = "titlePageLeftAllignRadio";
+            this.titlePageLeftAllignRadio.Size = new System.Drawing.Size(71, 17);
+            this.titlePageLeftAllignRadio.TabIndex = 0;
+            this.titlePageLeftAllignRadio.Text = "Left Allign";
+            this.titlePageLeftAllignRadio.UseVisualStyleBackColor = true;
+            // 
+            // titlePageIncludeGroupBox
+            // 
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.dateUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.dateDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateCheck);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.schoolUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.professorUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.classUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.nameUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.schoolDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.professorDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.classDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.nameDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titleUpButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titleDownButton);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleLabel);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleEnter);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolCheck);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorCheck);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassCheck);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameCheck);
+            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleCheck);
+            this.titlePageIncludeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageIncludeGroupBox.Location = new System.Drawing.Point(9, 36);
+            this.titlePageIncludeGroupBox.Name = "titlePageIncludeGroupBox";
+            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(615, 163);
+            this.titlePageIncludeGroupBox.TabIndex = 2;
+            this.titlePageIncludeGroupBox.TabStop = false;
+            this.titlePageIncludeGroupBox.Text = "Include In Title Page";
+            // 
+            // titlePageDateLabel
+            // 
+            this.titlePageDateLabel.AutoSize = true;
+            this.titlePageDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageDateLabel.Location = new System.Drawing.Point(172, 135);
+            this.titlePageDateLabel.Name = "titlePageDateLabel";
+            this.titlePageDateLabel.Size = new System.Drawing.Size(33, 13);
+            this.titlePageDateLabel.TabIndex = 30;
+            this.titlePageDateLabel.Text = "Date:";
+            this.titlePageDateLabel.Visible = false;
+            // 
+            // titlePageSchoolLabel
+            // 
+            this.titlePageSchoolLabel.AutoSize = true;
+            this.titlePageSchoolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageSchoolLabel.Location = new System.Drawing.Point(162, 112);
+            this.titlePageSchoolLabel.Name = "titlePageSchoolLabel";
+            this.titlePageSchoolLabel.Size = new System.Drawing.Size(43, 13);
+            this.titlePageSchoolLabel.TabIndex = 29;
+            this.titlePageSchoolLabel.Text = "School:";
+            this.titlePageSchoolLabel.Visible = false;
+            // 
+            // dateUpButton
+            // 
+            this.dateUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dateUpButton.BackgroundImage")));
+            this.dateUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dateUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateUpButton.ForeColor = System.Drawing.Color.White;
+            this.dateUpButton.Location = new System.Drawing.Point(9, 134);
+            this.dateUpButton.Name = "dateUpButton";
+            this.dateUpButton.Size = new System.Drawing.Size(22, 8);
+            this.dateUpButton.TabIndex = 28;
+            this.dateUpButton.UseVisualStyleBackColor = true;
+            this.dateUpButton.Click += new System.EventHandler(this.dateUpButton_Click);
+            // 
+            // dateDownButton
+            // 
+            this.dateDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dateDownButton.BackgroundImage")));
+            this.dateDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dateDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateDownButton.ForeColor = System.Drawing.Color.White;
+            this.dateDownButton.Location = new System.Drawing.Point(9, 143);
+            this.dateDownButton.Name = "dateDownButton";
+            this.dateDownButton.Size = new System.Drawing.Size(22, 8);
+            this.dateDownButton.TabIndex = 27;
+            this.dateDownButton.UseVisualStyleBackColor = true;
+            // 
+            // titlePageDateCheck
+            // 
+            this.titlePageDateCheck.AutoSize = true;
+            this.titlePageDateCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageDateCheck.Location = new System.Drawing.Point(41, 134);
+            this.titlePageDateCheck.Name = "titlePageDateCheck";
+            this.titlePageDateCheck.Size = new System.Drawing.Size(87, 17);
+            this.titlePageDateCheck.TabIndex = 26;
+            this.titlePageDateCheck.Text = "Include Date";
+            this.titlePageDateCheck.UseVisualStyleBackColor = true;
+            this.titlePageDateCheck.CheckedChanged += new System.EventHandler(this.titlePageDateCheck_CheckedChanged);
+            // 
+            // titlePageSchoolEnter
+            // 
+            this.titlePageSchoolEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageSchoolEnter.Location = new System.Drawing.Point(212, 109);
+            this.titlePageSchoolEnter.Name = "titlePageSchoolEnter";
+            this.titlePageSchoolEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageSchoolEnter.TabIndex = 25;
+            this.titlePageSchoolEnter.Visible = false;
+            // 
+            // schoolUpButton
+            // 
+            this.schoolUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("schoolUpButton.BackgroundImage")));
+            this.schoolUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.schoolUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.schoolUpButton.ForeColor = System.Drawing.Color.White;
+            this.schoolUpButton.Location = new System.Drawing.Point(9, 111);
+            this.schoolUpButton.Name = "schoolUpButton";
+            this.schoolUpButton.Size = new System.Drawing.Size(22, 8);
+            this.schoolUpButton.TabIndex = 24;
+            this.schoolUpButton.UseVisualStyleBackColor = true;
+            this.schoolUpButton.Click += new System.EventHandler(this.schoolUpButton_Click);
+            // 
+            // professorUpButton
+            // 
+            this.professorUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("professorUpButton.BackgroundImage")));
+            this.professorUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.professorUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.professorUpButton.ForeColor = System.Drawing.Color.White;
+            this.professorUpButton.Location = new System.Drawing.Point(9, 88);
+            this.professorUpButton.Name = "professorUpButton";
+            this.professorUpButton.Size = new System.Drawing.Size(22, 8);
+            this.professorUpButton.TabIndex = 23;
+            this.professorUpButton.UseVisualStyleBackColor = true;
+            this.professorUpButton.Click += new System.EventHandler(this.professorUpButton_Click);
+            // 
+            // classUpButton
+            // 
+            this.classUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("classUpButton.BackgroundImage")));
+            this.classUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classUpButton.ForeColor = System.Drawing.Color.White;
+            this.classUpButton.Location = new System.Drawing.Point(9, 65);
+            this.classUpButton.Name = "classUpButton";
+            this.classUpButton.Size = new System.Drawing.Size(22, 8);
+            this.classUpButton.TabIndex = 22;
+            this.classUpButton.UseVisualStyleBackColor = true;
+            this.classUpButton.Click += new System.EventHandler(this.classUpButton_Click);
+            // 
+            // nameUpButton
+            // 
+            this.nameUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nameUpButton.BackgroundImage")));
+            this.nameUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nameUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nameUpButton.ForeColor = System.Drawing.Color.White;
+            this.nameUpButton.Location = new System.Drawing.Point(9, 42);
+            this.nameUpButton.Name = "nameUpButton";
+            this.nameUpButton.Size = new System.Drawing.Size(22, 8);
+            this.nameUpButton.TabIndex = 21;
+            this.nameUpButton.UseVisualStyleBackColor = true;
+            this.nameUpButton.Click += new System.EventHandler(this.nameUpButton_Click);
+            // 
+            // schoolDownButton
+            // 
+            this.schoolDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("schoolDownButton.BackgroundImage")));
+            this.schoolDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.schoolDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.schoolDownButton.ForeColor = System.Drawing.Color.White;
+            this.schoolDownButton.Location = new System.Drawing.Point(9, 120);
+            this.schoolDownButton.Name = "schoolDownButton";
+            this.schoolDownButton.Size = new System.Drawing.Size(22, 8);
+            this.schoolDownButton.TabIndex = 20;
+            this.schoolDownButton.UseVisualStyleBackColor = true;
+            this.schoolDownButton.Click += new System.EventHandler(this.schoolDownButton_Click);
+            // 
+            // professorDownButton
+            // 
+            this.professorDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("professorDownButton.BackgroundImage")));
+            this.professorDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.professorDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.professorDownButton.ForeColor = System.Drawing.Color.White;
+            this.professorDownButton.Location = new System.Drawing.Point(9, 97);
+            this.professorDownButton.Name = "professorDownButton";
+            this.professorDownButton.Size = new System.Drawing.Size(22, 8);
+            this.professorDownButton.TabIndex = 19;
+            this.professorDownButton.UseVisualStyleBackColor = true;
+            this.professorDownButton.Click += new System.EventHandler(this.professorDownButton_Click);
+            // 
+            // classDownButton
+            // 
+            this.classDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("classDownButton.BackgroundImage")));
+            this.classDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classDownButton.ForeColor = System.Drawing.Color.White;
+            this.classDownButton.Location = new System.Drawing.Point(9, 74);
+            this.classDownButton.Name = "classDownButton";
+            this.classDownButton.Size = new System.Drawing.Size(22, 8);
+            this.classDownButton.TabIndex = 18;
+            this.classDownButton.UseVisualStyleBackColor = true;
+            this.classDownButton.Click += new System.EventHandler(this.classDownButton_Click);
+            // 
+            // nameDownButton
+            // 
+            this.nameDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nameDownButton.BackgroundImage")));
+            this.nameDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nameDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nameDownButton.ForeColor = System.Drawing.Color.White;
+            this.nameDownButton.Location = new System.Drawing.Point(9, 51);
+            this.nameDownButton.Name = "nameDownButton";
+            this.nameDownButton.Size = new System.Drawing.Size(22, 8);
+            this.nameDownButton.TabIndex = 17;
+            this.nameDownButton.UseVisualStyleBackColor = true;
+            this.nameDownButton.Click += new System.EventHandler(this.nameDownButton_Click);
+            // 
+            // titleUpButton
+            // 
+            this.titleUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titleUpButton.BackgroundImage")));
+            this.titleUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titleUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titleUpButton.ForeColor = System.Drawing.Color.White;
+            this.titleUpButton.Location = new System.Drawing.Point(9, 19);
+            this.titleUpButton.Name = "titleUpButton";
+            this.titleUpButton.Size = new System.Drawing.Size(22, 8);
+            this.titleUpButton.TabIndex = 16;
+            this.titleUpButton.UseVisualStyleBackColor = true;
+            this.titleUpButton.Click += new System.EventHandler(this.titleUpButton_Click);
+            // 
+            // titleDownButton
+            // 
+            this.titleDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titleDownButton.BackgroundImage")));
+            this.titleDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titleDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titleDownButton.ForeColor = System.Drawing.Color.White;
+            this.titleDownButton.Location = new System.Drawing.Point(9, 28);
+            this.titleDownButton.Name = "titleDownButton";
+            this.titleDownButton.Size = new System.Drawing.Size(22, 8);
+            this.titleDownButton.TabIndex = 15;
+            this.titleDownButton.UseVisualStyleBackColor = true;
+            this.titleDownButton.Click += new System.EventHandler(this.titleDownButton_Click);
+            // 
+            // titlePageProfessorLabel
+            // 
+            this.titlePageProfessorLabel.AutoSize = true;
+            this.titlePageProfessorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageProfessorLabel.Location = new System.Drawing.Point(152, 89);
+            this.titlePageProfessorLabel.Name = "titlePageProfessorLabel";
+            this.titlePageProfessorLabel.Size = new System.Drawing.Size(54, 13);
+            this.titlePageProfessorLabel.TabIndex = 14;
+            this.titlePageProfessorLabel.Text = "Professor:";
+            this.titlePageProfessorLabel.Visible = false;
+            // 
+            // titlePageClassLabel
+            // 
+            this.titlePageClassLabel.AutoSize = true;
+            this.titlePageClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageClassLabel.Location = new System.Drawing.Point(171, 66);
+            this.titlePageClassLabel.Name = "titlePageClassLabel";
+            this.titlePageClassLabel.Size = new System.Drawing.Size(35, 13);
+            this.titlePageClassLabel.TabIndex = 13;
+            this.titlePageClassLabel.Text = "Class:";
+            this.titlePageClassLabel.Visible = false;
+            // 
+            // titlePageDateEnter
+            // 
+            this.titlePageDateEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageDateEnter.Location = new System.Drawing.Point(212, 132);
+            this.titlePageDateEnter.Name = "titlePageDateEnter";
+            this.titlePageDateEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageDateEnter.TabIndex = 12;
+            this.titlePageDateEnter.Visible = false;
+            // 
+            // titlePageProfessorEnter
+            // 
+            this.titlePageProfessorEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageProfessorEnter.Location = new System.Drawing.Point(212, 86);
+            this.titlePageProfessorEnter.Name = "titlePageProfessorEnter";
+            this.titlePageProfessorEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageProfessorEnter.TabIndex = 10;
+            this.titlePageProfessorEnter.Visible = false;
+            // 
+            // titlePageClassEnter
+            // 
+            this.titlePageClassEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageClassEnter.Location = new System.Drawing.Point(212, 63);
+            this.titlePageClassEnter.Name = "titlePageClassEnter";
+            this.titlePageClassEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageClassEnter.TabIndex = 9;
+            this.titlePageClassEnter.Visible = false;
+            // 
+            // titlePageNameEnter
+            // 
+            this.titlePageNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageNameEnter.Location = new System.Drawing.Point(212, 40);
+            this.titlePageNameEnter.Name = "titlePageNameEnter";
+            this.titlePageNameEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageNameEnter.TabIndex = 8;
+            this.titlePageNameEnter.Visible = false;
+            // 
+            // titlePageNameLabel
+            // 
+            this.titlePageNameLabel.AutoSize = true;
+            this.titlePageNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageNameLabel.Location = new System.Drawing.Point(168, 43);
+            this.titlePageNameLabel.Name = "titlePageNameLabel";
+            this.titlePageNameLabel.Size = new System.Drawing.Size(38, 13);
+            this.titlePageNameLabel.TabIndex = 7;
+            this.titlePageNameLabel.Text = "Name:";
+            this.titlePageNameLabel.Visible = false;
+            // 
+            // titlePageTitleLabel
+            // 
+            this.titlePageTitleLabel.AutoSize = true;
+            this.titlePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageTitleLabel.Location = new System.Drawing.Point(176, 20);
+            this.titlePageTitleLabel.Name = "titlePageTitleLabel";
+            this.titlePageTitleLabel.Size = new System.Drawing.Size(30, 13);
+            this.titlePageTitleLabel.TabIndex = 6;
+            this.titlePageTitleLabel.Text = "Title:";
+            this.titlePageTitleLabel.Visible = false;
+            // 
+            // titlePageTitleEnter
+            // 
+            this.titlePageTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageTitleEnter.Location = new System.Drawing.Point(212, 17);
+            this.titlePageTitleEnter.Name = "titlePageTitleEnter";
+            this.titlePageTitleEnter.Size = new System.Drawing.Size(199, 20);
+            this.titlePageTitleEnter.TabIndex = 5;
+            this.titlePageTitleEnter.Visible = false;
+            // 
+            // titlePageSchoolCheck
+            // 
+            this.titlePageSchoolCheck.AutoSize = true;
+            this.titlePageSchoolCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageSchoolCheck.Location = new System.Drawing.Point(41, 111);
+            this.titlePageSchoolCheck.Name = "titlePageSchoolCheck";
+            this.titlePageSchoolCheck.Size = new System.Drawing.Size(97, 17);
+            this.titlePageSchoolCheck.TabIndex = 4;
+            this.titlePageSchoolCheck.Text = "Include School";
+            this.titlePageSchoolCheck.UseVisualStyleBackColor = true;
+            this.titlePageSchoolCheck.CheckedChanged += new System.EventHandler(this.titlePageSchoolCheck_CheckedChanged);
+            // 
+            // titlePageProfessorCheck
+            // 
+            this.titlePageProfessorCheck.AutoSize = true;
+            this.titlePageProfessorCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageProfessorCheck.Location = new System.Drawing.Point(41, 88);
+            this.titlePageProfessorCheck.Name = "titlePageProfessorCheck";
+            this.titlePageProfessorCheck.Size = new System.Drawing.Size(108, 17);
+            this.titlePageProfessorCheck.TabIndex = 3;
+            this.titlePageProfessorCheck.Text = "Include Professor";
+            this.titlePageProfessorCheck.UseVisualStyleBackColor = true;
+            this.titlePageProfessorCheck.CheckedChanged += new System.EventHandler(this.titlePageProfessorCheck_CheckedChanged);
+            // 
+            // titlePageClassCheck
+            // 
+            this.titlePageClassCheck.AutoSize = true;
+            this.titlePageClassCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageClassCheck.Location = new System.Drawing.Point(41, 65);
+            this.titlePageClassCheck.Name = "titlePageClassCheck";
+            this.titlePageClassCheck.Size = new System.Drawing.Size(89, 17);
+            this.titlePageClassCheck.TabIndex = 2;
+            this.titlePageClassCheck.Text = "Include Class";
+            this.titlePageClassCheck.UseVisualStyleBackColor = true;
+            this.titlePageClassCheck.CheckedChanged += new System.EventHandler(this.titlePageClassCheck_CheckedChanged);
+            // 
+            // titlePageNameCheck
+            // 
+            this.titlePageNameCheck.AutoSize = true;
+            this.titlePageNameCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageNameCheck.Location = new System.Drawing.Point(41, 42);
+            this.titlePageNameCheck.Name = "titlePageNameCheck";
+            this.titlePageNameCheck.Size = new System.Drawing.Size(92, 17);
+            this.titlePageNameCheck.TabIndex = 1;
+            this.titlePageNameCheck.Text = "Include Name";
+            this.titlePageNameCheck.UseVisualStyleBackColor = true;
+            this.titlePageNameCheck.CheckedChanged += new System.EventHandler(this.titlePageNameCheck_CheckedChanged);
+            // 
+            // titlePageTitleCheck
+            // 
+            this.titlePageTitleCheck.AutoSize = true;
+            this.titlePageTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageTitleCheck.Location = new System.Drawing.Point(41, 19);
+            this.titlePageTitleCheck.Name = "titlePageTitleCheck";
+            this.titlePageTitleCheck.Size = new System.Drawing.Size(84, 17);
+            this.titlePageTitleCheck.TabIndex = 0;
+            this.titlePageTitleCheck.Text = "Include Title";
+            this.titlePageTitleCheck.UseVisualStyleBackColor = true;
+            this.titlePageTitleCheck.CheckedChanged += new System.EventHandler(this.titlePageTitleCheck_CheckedChanged);
+            // 
+            // titlePageSectionLabel
+            // 
+            this.titlePageSectionLabel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.titlePageSectionLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePageSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageSectionLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.titlePageSectionLabel.Location = new System.Drawing.Point(0, 0);
+            this.titlePageSectionLabel.Name = "titlePageSectionLabel";
+            this.titlePageSectionLabel.Size = new System.Drawing.Size(633, 30);
+            this.titlePageSectionLabel.TabIndex = 1;
+            this.titlePageSectionLabel.Text = "TITLE PAGE";
+            this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.White;
@@ -1465,9 +2730,9 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 1945);
+            this.headerPanel.Location = new System.Drawing.Point(0, 1263);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(640, 571);
+            this.headerPanel.Size = new System.Drawing.Size(635, 571);
             this.headerPanel.TabIndex = 10;
             // 
             // headerOptionsGroupBox
@@ -2292,7 +3557,7 @@
             this.headerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.headerHeader.Location = new System.Drawing.Point(0, 0);
             this.headerHeader.Name = "headerHeader";
-            this.headerHeader.Size = new System.Drawing.Size(638, 30);
+            this.headerHeader.Size = new System.Drawing.Size(633, 30);
             this.headerHeader.TabIndex = 0;
             this.headerHeader.Text = "HEADER";
             this.headerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2307,314 +3572,16 @@
             this.headerDefaultButton.Text = "APA Default";
             this.headerDefaultButton.UseVisualStyleBackColor = true;
             // 
-            // abstractPanel
-            // 
-            this.abstractPanel.BackColor = System.Drawing.Color.White;
-            this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.abstractPanel.Controls.Add(this.abstractContentGroupBox);
-            this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
-            this.abstractPanel.Controls.Add(this.abstractHeader);
-            this.abstractPanel.Location = new System.Drawing.Point(0, 1505);
-            this.abstractPanel.Name = "abstractPanel";
-            this.abstractPanel.Size = new System.Drawing.Size(640, 440);
-            this.abstractPanel.TabIndex = 9;
-            // 
-            // abstractContentGroupBox
-            // 
-            this.abstractContentGroupBox.Controls.Add(this.abstractContentPanel);
-            this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 174);
-            this.abstractContentGroupBox.Name = "abstractContentGroupBox";
-            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 242);
-            this.abstractContentGroupBox.TabIndex = 11;
-            this.abstractContentGroupBox.TabStop = false;
-            this.abstractContentGroupBox.Text = "Content";
-            // 
-            // abstractContentPanel
-            // 
-            this.abstractContentPanel.Controls.Add(this.abstractContentToolStripContainer);
-            this.abstractContentPanel.Location = new System.Drawing.Point(9, 19);
-            this.abstractContentPanel.Name = "abstractContentPanel";
-            this.abstractContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.abstractContentPanel.TabIndex = 6;
-            // 
-            // abstractContentToolStripContainer
-            // 
-            // 
-            // abstractContentToolStripContainer.ContentPanel
-            // 
-            this.abstractContentToolStripContainer.ContentPanel.Controls.Add(this.abstractContent);
-            this.abstractContentToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.abstractContentToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.abstractContentToolStripContainer.Name = "abstractContentToolStripContainer";
-            this.abstractContentToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.abstractContentToolStripContainer.TabIndex = 0;
-            this.abstractContentToolStripContainer.Text = "toolStripContainer3";
-            // 
-            // abstractContentToolStripContainer.TopToolStripPanel
-            // 
-            this.abstractContentToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip3);
-            // 
-            // abstractContent
-            // 
-            this.abstractContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContent.Location = new System.Drawing.Point(0, 0);
-            this.abstractContent.Name = "abstractContent";
-            this.abstractContent.Size = new System.Drawing.Size(594, 182);
-            this.abstractContent.TabIndex = 0;
-            this.abstractContent.Text = "";
-            // 
-            // toolStrip3
-            // 
-            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip3.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip3.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip3.TabIndex = 0;
-            // 
-            // abstractOptionsGroupBox
-            // 
-            this.abstractOptionsGroupBox.Controls.Add(this.abstractDefaultButton);
-            this.abstractOptionsGroupBox.Controls.Add(this.abstractTitleGroupBox);
-            this.abstractOptionsGroupBox.Controls.Add(this.checkBox10);
-            this.abstractOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
-            this.abstractOptionsGroupBox.Name = "abstractOptionsGroupBox";
-            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
-            this.abstractOptionsGroupBox.TabIndex = 2;
-            this.abstractOptionsGroupBox.TabStop = false;
-            this.abstractOptionsGroupBox.Text = "Options";
-            // 
-            // abstractDefaultButton
-            // 
-            this.abstractDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractDefaultButton.Location = new System.Drawing.Point(9, 93);
-            this.abstractDefaultButton.Name = "abstractDefaultButton";
-            this.abstractDefaultButton.Size = new System.Drawing.Size(94, 23);
-            this.abstractDefaultButton.TabIndex = 14;
-            this.abstractDefaultButton.Text = "APA Default";
-            this.abstractDefaultButton.UseVisualStyleBackColor = true;
-            // 
-            // abstractTitleGroupBox
-            // 
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorButton);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorText);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorLabel);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleSizeChoose);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleSizeLabel);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleFontLabel);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleFontChoose);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleBoldCheck);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractIncludeTitleCheck);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleText);
-            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleLabel);
-            this.abstractTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleGroupBox.Location = new System.Drawing.Point(9, 42);
-            this.abstractTitleGroupBox.Name = "abstractTitleGroupBox";
-            this.abstractTitleGroupBox.Size = new System.Drawing.Size(597, 45);
-            this.abstractTitleGroupBox.TabIndex = 4;
-            this.abstractTitleGroupBox.TabStop = false;
-            this.abstractTitleGroupBox.Text = "Abstract Title";
-            // 
-            // abstractTitleColorButton
-            // 
-            this.abstractTitleColorButton.Location = new System.Drawing.Point(141, 114);
-            this.abstractTitleColorButton.Name = "abstractTitleColorButton";
-            this.abstractTitleColorButton.Size = new System.Drawing.Size(73, 23);
-            this.abstractTitleColorButton.TabIndex = 13;
-            this.abstractTitleColorButton.Text = "Choose";
-            this.abstractTitleColorButton.UseVisualStyleBackColor = true;
-            this.abstractTitleColorButton.Visible = false;
-            // 
-            // abstractTitleColorText
-            // 
-            this.abstractTitleColorText.Location = new System.Drawing.Point(70, 116);
-            this.abstractTitleColorText.Name = "abstractTitleColorText";
-            this.abstractTitleColorText.Size = new System.Drawing.Size(72, 20);
-            this.abstractTitleColorText.TabIndex = 14;
-            this.abstractTitleColorText.Visible = false;
-            // 
-            // abstractTitleColorLabel
-            // 
-            this.abstractTitleColorLabel.AutoSize = true;
-            this.abstractTitleColorLabel.Location = new System.Drawing.Point(3, 119);
-            this.abstractTitleColorLabel.Name = "abstractTitleColorLabel";
-            this.abstractTitleColorLabel.Size = new System.Drawing.Size(57, 13);
-            this.abstractTitleColorLabel.TabIndex = 19;
-            this.abstractTitleColorLabel.Text = "Title Color:";
-            this.abstractTitleColorLabel.Visible = false;
-            // 
-            // abstractTitleSizeChoose
-            // 
-            this.abstractTitleSizeChoose.FormattingEnabled = true;
-            this.abstractTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
-            this.abstractTitleSizeChoose.Name = "abstractTitleSizeChoose";
-            this.abstractTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
-            this.abstractTitleSizeChoose.TabIndex = 18;
-            this.abstractTitleSizeChoose.Visible = false;
-            // 
-            // abstractTitleSizeLabel
-            // 
-            this.abstractTitleSizeLabel.AutoSize = true;
-            this.abstractTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
-            this.abstractTitleSizeLabel.Name = "abstractTitleSizeLabel";
-            this.abstractTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
-            this.abstractTitleSizeLabel.TabIndex = 17;
-            this.abstractTitleSizeLabel.Text = "Title Size:";
-            this.abstractTitleSizeLabel.Visible = false;
-            // 
-            // abstractTitleFontLabel
-            // 
-            this.abstractTitleFontLabel.AutoSize = true;
-            this.abstractTitleFontLabel.Location = new System.Drawing.Point(3, 67);
-            this.abstractTitleFontLabel.Name = "abstractTitleFontLabel";
-            this.abstractTitleFontLabel.Size = new System.Drawing.Size(54, 13);
-            this.abstractTitleFontLabel.TabIndex = 16;
-            this.abstractTitleFontLabel.Text = "Title Font:";
-            this.abstractTitleFontLabel.Visible = false;
-            // 
-            // abstractTitleFontChoose
-            // 
-            this.abstractTitleFontChoose.FormattingEnabled = true;
-            this.abstractTitleFontChoose.Location = new System.Drawing.Point(70, 64);
-            this.abstractTitleFontChoose.Name = "abstractTitleFontChoose";
-            this.abstractTitleFontChoose.Size = new System.Drawing.Size(144, 21);
-            this.abstractTitleFontChoose.TabIndex = 15;
-            this.abstractTitleFontChoose.Visible = false;
-            // 
-            // abstractTitleBoldCheck
-            // 
-            this.abstractTitleBoldCheck.AutoSize = true;
-            this.abstractTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
-            this.abstractTitleBoldCheck.Name = "abstractTitleBoldCheck";
-            this.abstractTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
-            this.abstractTitleBoldCheck.TabIndex = 11;
-            this.abstractTitleBoldCheck.Text = "Bold Title";
-            this.abstractTitleBoldCheck.UseVisualStyleBackColor = true;
-            this.abstractTitleBoldCheck.Visible = false;
-            // 
-            // abstractIncludeTitleCheck
-            // 
-            this.abstractIncludeTitleCheck.AutoSize = true;
-            this.abstractIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
-            this.abstractIncludeTitleCheck.Name = "abstractIncludeTitleCheck";
-            this.abstractIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
-            this.abstractIncludeTitleCheck.TabIndex = 1;
-            this.abstractIncludeTitleCheck.Text = "Include Title";
-            this.abstractIncludeTitleCheck.UseVisualStyleBackColor = true;
-            this.abstractIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeTitleCheck_CheckedChanged);
-            // 
-            // abstractTitleText
-            // 
-            this.abstractTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleText.Location = new System.Drawing.Point(123, 17);
-            this.abstractTitleText.Name = "abstractTitleText";
-            this.abstractTitleText.Size = new System.Drawing.Size(159, 20);
-            this.abstractTitleText.TabIndex = 2;
-            this.abstractTitleText.Visible = false;
-            // 
-            // abstractTitleLabel
-            // 
-            this.abstractTitleLabel.AutoSize = true;
-            this.abstractTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleLabel.Location = new System.Drawing.Point(94, 20);
-            this.abstractTitleLabel.Name = "abstractTitleLabel";
-            this.abstractTitleLabel.Size = new System.Drawing.Size(30, 13);
-            this.abstractTitleLabel.TabIndex = 3;
-            this.abstractTitleLabel.Text = "Title:";
-            this.abstractTitleLabel.Visible = false;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(9, 19);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(107, 17);
-            this.checkBox10.TabIndex = 0;
-            this.checkBox10.Text = "On Its Own Page";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // abstractHeader
-            // 
-            this.abstractHeader.BackColor = System.Drawing.Color.MidnightBlue;
-            this.abstractHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.abstractHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.abstractHeader.Location = new System.Drawing.Point(0, 0);
-            this.abstractHeader.Name = "abstractHeader";
-            this.abstractHeader.Size = new System.Drawing.Size(638, 30);
-            this.abstractHeader.TabIndex = 0;
-            this.abstractHeader.Text = "ABSTRACT";
-            this.abstractHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // summaryPanel
             // 
             this.summaryPanel.BackColor = System.Drawing.Color.White;
             this.summaryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.summaryPanel.Controls.Add(this.summaryContentGroupBox);
             this.summaryPanel.Controls.Add(this.summaryOptionsGroupBox);
             this.summaryPanel.Controls.Add(this.summaryHeader);
-            this.summaryPanel.Location = new System.Drawing.Point(0, 1065);
+            this.summaryPanel.Location = new System.Drawing.Point(0, 915);
             this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Size = new System.Drawing.Size(640, 440);
+            this.summaryPanel.Size = new System.Drawing.Size(635, 174);
             this.summaryPanel.TabIndex = 8;
-            // 
-            // summaryContentGroupBox
-            // 
-            this.summaryContentGroupBox.Controls.Add(this.summaryContentPanel);
-            this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContentGroupBox.Location = new System.Drawing.Point(9, 174);
-            this.summaryContentGroupBox.Name = "summaryContentGroupBox";
-            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 242);
-            this.summaryContentGroupBox.TabIndex = 10;
-            this.summaryContentGroupBox.TabStop = false;
-            this.summaryContentGroupBox.Text = "Content";
-            // 
-            // summaryContentPanel
-            // 
-            this.summaryContentPanel.Controls.Add(this.summaryToolStripContainer);
-            this.summaryContentPanel.Location = new System.Drawing.Point(9, 19);
-            this.summaryContentPanel.Name = "summaryContentPanel";
-            this.summaryContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.summaryContentPanel.TabIndex = 6;
-            // 
-            // summaryToolStripContainer
-            // 
-            // 
-            // summaryToolStripContainer.ContentPanel
-            // 
-            this.summaryToolStripContainer.ContentPanel.Controls.Add(this.summaryContent);
-            this.summaryToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.summaryToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.summaryToolStripContainer.Name = "summaryToolStripContainer";
-            this.summaryToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.summaryToolStripContainer.TabIndex = 0;
-            this.summaryToolStripContainer.Text = "toolStripContainer2";
-            // 
-            // summaryToolStripContainer.TopToolStripPanel
-            // 
-            this.summaryToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip2);
-            // 
-            // summaryContent
-            // 
-            this.summaryContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContent.Location = new System.Drawing.Point(0, 0);
-            this.summaryContent.Name = "summaryContent";
-            this.summaryContent.Size = new System.Drawing.Size(594, 182);
-            this.summaryContent.TabIndex = 0;
-            this.summaryContent.Text = "";
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip2.TabIndex = 0;
             // 
             // summaryOptionsGroupBox
             // 
@@ -2650,8 +3617,6 @@
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleFontChoose);
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleBoldCheck);
             this.summaryTitleGroupBox.Controls.Add(this.summaryIncludeTitleCheck);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleText);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleTextLabel);
             this.summaryTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.summaryTitleGroupBox.Name = "summaryTitleGroupBox";
@@ -2749,26 +3714,6 @@
             this.summaryIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.summaryIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeTitleCheck_CheckedChanged);
             // 
-            // summaryTitleText
-            // 
-            this.summaryTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleText.Location = new System.Drawing.Point(123, 17);
-            this.summaryTitleText.Name = "summaryTitleText";
-            this.summaryTitleText.Size = new System.Drawing.Size(159, 20);
-            this.summaryTitleText.TabIndex = 2;
-            this.summaryTitleText.Visible = false;
-            // 
-            // summaryTitleTextLabel
-            // 
-            this.summaryTitleTextLabel.AutoSize = true;
-            this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleTextLabel.Location = new System.Drawing.Point(94, 20);
-            this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
-            this.summaryTitleTextLabel.Size = new System.Drawing.Size(30, 13);
-            this.summaryTitleTextLabel.TabIndex = 3;
-            this.summaryTitleTextLabel.Text = "Title:";
-            this.summaryTitleTextLabel.Visible = false;
-            // 
             // summaryOwnPageCheck
             // 
             this.summaryOwnPageCheck.AutoSize = true;
@@ -2788,253 +3733,358 @@
             this.summaryHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.summaryHeader.Location = new System.Drawing.Point(0, 0);
             this.summaryHeader.Name = "summaryHeader";
-            this.summaryHeader.Size = new System.Drawing.Size(638, 30);
+            this.summaryHeader.Size = new System.Drawing.Size(633, 30);
             this.summaryHeader.TabIndex = 0;
             this.summaryHeader.Text = "SUMMARY";
             this.summaryHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // conclusionPanel
+            // abstractPanel
             // 
-            this.conclusionPanel.BackColor = System.Drawing.Color.White;
-            this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.conclusionPanel.Controls.Add(this.conclusionContentGroupBox);
-            this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
-            this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 3682);
-            this.conclusionPanel.Name = "conclusionPanel";
-            this.conclusionPanel.Size = new System.Drawing.Size(640, 440);
-            this.conclusionPanel.TabIndex = 7;
+            this.abstractPanel.BackColor = System.Drawing.Color.White;
+            this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
+            this.abstractPanel.Controls.Add(this.abstractHeader);
+            this.abstractPanel.Location = new System.Drawing.Point(0, 1089);
+            this.abstractPanel.Name = "abstractPanel";
+            this.abstractPanel.Size = new System.Drawing.Size(635, 174);
+            this.abstractPanel.TabIndex = 9;
             // 
-            // conclusionContentGroupBox
+            // abstractOptionsGroupBox
             // 
-            this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
-            this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 174);
-            this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
-            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 242);
-            this.conclusionContentGroupBox.TabIndex = 12;
-            this.conclusionContentGroupBox.TabStop = false;
-            this.conclusionContentGroupBox.Text = "Content";
+            this.abstractOptionsGroupBox.Controls.Add(this.abstractDefaultButton);
+            this.abstractOptionsGroupBox.Controls.Add(this.abstractTitleGroupBox);
+            this.abstractOptionsGroupBox.Controls.Add(this.checkBox10);
+            this.abstractOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
+            this.abstractOptionsGroupBox.Name = "abstractOptionsGroupBox";
+            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
+            this.abstractOptionsGroupBox.TabIndex = 2;
+            this.abstractOptionsGroupBox.TabStop = false;
+            this.abstractOptionsGroupBox.Text = "Options";
             // 
-            // conclusionContentPanel
+            // abstractDefaultButton
             // 
-            this.conclusionContentPanel.Controls.Add(this.conclusionToolStripContainer);
-            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 19);
-            this.conclusionContentPanel.Name = "conclusionContentPanel";
-            this.conclusionContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.conclusionContentPanel.TabIndex = 6;
+            this.abstractDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractDefaultButton.Location = new System.Drawing.Point(9, 93);
+            this.abstractDefaultButton.Name = "abstractDefaultButton";
+            this.abstractDefaultButton.Size = new System.Drawing.Size(94, 23);
+            this.abstractDefaultButton.TabIndex = 14;
+            this.abstractDefaultButton.Text = "APA Default";
+            this.abstractDefaultButton.UseVisualStyleBackColor = true;
             // 
-            // conclusionToolStripContainer
+            // abstractTitleGroupBox
             // 
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorButton);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorText);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorLabel);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleSizeChoose);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleSizeLabel);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleFontLabel);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleFontChoose);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleBoldCheck);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractIncludeTitleCheck);
+            this.abstractTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleGroupBox.Location = new System.Drawing.Point(9, 42);
+            this.abstractTitleGroupBox.Name = "abstractTitleGroupBox";
+            this.abstractTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.abstractTitleGroupBox.TabIndex = 4;
+            this.abstractTitleGroupBox.TabStop = false;
+            this.abstractTitleGroupBox.Text = "Abstract Title";
             // 
-            // conclusionToolStripContainer.ContentPanel
+            // abstractTitleColorButton
             // 
-            this.conclusionToolStripContainer.ContentPanel.Controls.Add(this.conclusionContent);
-            this.conclusionToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.conclusionToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.conclusionToolStripContainer.Name = "conclusionToolStripContainer";
-            this.conclusionToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.conclusionToolStripContainer.TabIndex = 0;
-            this.conclusionToolStripContainer.Text = "toolStripContainer3";
+            this.abstractTitleColorButton.Location = new System.Drawing.Point(141, 114);
+            this.abstractTitleColorButton.Name = "abstractTitleColorButton";
+            this.abstractTitleColorButton.Size = new System.Drawing.Size(73, 23);
+            this.abstractTitleColorButton.TabIndex = 13;
+            this.abstractTitleColorButton.Text = "Choose";
+            this.abstractTitleColorButton.UseVisualStyleBackColor = true;
+            this.abstractTitleColorButton.Visible = false;
             // 
-            // conclusionToolStripContainer.TopToolStripPanel
+            // abstractTitleColorText
             // 
-            this.conclusionToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip4);
+            this.abstractTitleColorText.Location = new System.Drawing.Point(70, 116);
+            this.abstractTitleColorText.Name = "abstractTitleColorText";
+            this.abstractTitleColorText.Size = new System.Drawing.Size(72, 20);
+            this.abstractTitleColorText.TabIndex = 14;
+            this.abstractTitleColorText.Visible = false;
             // 
-            // conclusionContent
+            // abstractTitleColorLabel
             // 
-            this.conclusionContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContent.Location = new System.Drawing.Point(0, 0);
-            this.conclusionContent.Name = "conclusionContent";
-            this.conclusionContent.Size = new System.Drawing.Size(594, 182);
-            this.conclusionContent.TabIndex = 0;
-            this.conclusionContent.Text = "";
+            this.abstractTitleColorLabel.AutoSize = true;
+            this.abstractTitleColorLabel.Location = new System.Drawing.Point(3, 119);
+            this.abstractTitleColorLabel.Name = "abstractTitleColorLabel";
+            this.abstractTitleColorLabel.Size = new System.Drawing.Size(57, 13);
+            this.abstractTitleColorLabel.TabIndex = 19;
+            this.abstractTitleColorLabel.Text = "Title Color:";
+            this.abstractTitleColorLabel.Visible = false;
             // 
-            // toolStrip4
+            // abstractTitleSizeChoose
             // 
-            this.toolStrip4.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip4.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip4.TabIndex = 0;
+            this.abstractTitleSizeChoose.FormattingEnabled = true;
+            this.abstractTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
+            this.abstractTitleSizeChoose.Name = "abstractTitleSizeChoose";
+            this.abstractTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
+            this.abstractTitleSizeChoose.TabIndex = 18;
+            this.abstractTitleSizeChoose.Visible = false;
             // 
-            // conclusionOptionsGroupBox
+            // abstractTitleSizeLabel
             // 
-            this.conclusionOptionsGroupBox.Controls.Add(this.conclusionDefaultButton);
-            this.conclusionOptionsGroupBox.Controls.Add(this.conclusionTitleGroupBox);
-            this.conclusionOptionsGroupBox.Controls.Add(this.checkBox19);
-            this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
-            this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
-            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
-            this.conclusionOptionsGroupBox.TabIndex = 3;
-            this.conclusionOptionsGroupBox.TabStop = false;
-            this.conclusionOptionsGroupBox.Text = "Options";
+            this.abstractTitleSizeLabel.AutoSize = true;
+            this.abstractTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
+            this.abstractTitleSizeLabel.Name = "abstractTitleSizeLabel";
+            this.abstractTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
+            this.abstractTitleSizeLabel.TabIndex = 17;
+            this.abstractTitleSizeLabel.Text = "Title Size:";
+            this.abstractTitleSizeLabel.Visible = false;
             // 
-            // conclusionDefaultButton
+            // abstractTitleFontLabel
             // 
-            this.conclusionDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionDefaultButton.Location = new System.Drawing.Point(9, 93);
-            this.conclusionDefaultButton.Name = "conclusionDefaultButton";
-            this.conclusionDefaultButton.Size = new System.Drawing.Size(94, 23);
-            this.conclusionDefaultButton.TabIndex = 14;
-            this.conclusionDefaultButton.Text = "APA Default";
-            this.conclusionDefaultButton.UseVisualStyleBackColor = true;
+            this.abstractTitleFontLabel.AutoSize = true;
+            this.abstractTitleFontLabel.Location = new System.Drawing.Point(3, 67);
+            this.abstractTitleFontLabel.Name = "abstractTitleFontLabel";
+            this.abstractTitleFontLabel.Size = new System.Drawing.Size(54, 13);
+            this.abstractTitleFontLabel.TabIndex = 16;
+            this.abstractTitleFontLabel.Text = "Title Font:";
+            this.abstractTitleFontLabel.Visible = false;
             // 
-            // conclusionTitleGroupBox
+            // abstractTitleFontChoose
             // 
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorButton);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorText);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorLabel);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeChoose);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleSizeLabel);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontLabel);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleFontChoose);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleBoldCheck);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionIncludeTitleCheck);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleEnter);
-            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleLabel);
-            this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
-            this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
-            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 45);
-            this.conclusionTitleGroupBox.TabIndex = 4;
-            this.conclusionTitleGroupBox.TabStop = false;
-            this.conclusionTitleGroupBox.Text = "Conclusion Title";
+            this.abstractTitleFontChoose.FormattingEnabled = true;
+            this.abstractTitleFontChoose.Location = new System.Drawing.Point(70, 64);
+            this.abstractTitleFontChoose.Name = "abstractTitleFontChoose";
+            this.abstractTitleFontChoose.Size = new System.Drawing.Size(144, 21);
+            this.abstractTitleFontChoose.TabIndex = 15;
+            this.abstractTitleFontChoose.Visible = false;
             // 
-            // conclusionTitleColorButton
+            // abstractTitleBoldCheck
             // 
-            this.conclusionTitleColorButton.Location = new System.Drawing.Point(141, 114);
-            this.conclusionTitleColorButton.Name = "conclusionTitleColorButton";
-            this.conclusionTitleColorButton.Size = new System.Drawing.Size(73, 23);
-            this.conclusionTitleColorButton.TabIndex = 13;
-            this.conclusionTitleColorButton.Text = "Choose";
-            this.conclusionTitleColorButton.UseVisualStyleBackColor = true;
-            this.conclusionTitleColorButton.Visible = false;
+            this.abstractTitleBoldCheck.AutoSize = true;
+            this.abstractTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
+            this.abstractTitleBoldCheck.Name = "abstractTitleBoldCheck";
+            this.abstractTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
+            this.abstractTitleBoldCheck.TabIndex = 11;
+            this.abstractTitleBoldCheck.Text = "Bold Title";
+            this.abstractTitleBoldCheck.UseVisualStyleBackColor = true;
+            this.abstractTitleBoldCheck.Visible = false;
             // 
-            // conclusionTitleColorText
+            // abstractIncludeTitleCheck
             // 
-            this.conclusionTitleColorText.Location = new System.Drawing.Point(70, 116);
-            this.conclusionTitleColorText.Name = "conclusionTitleColorText";
-            this.conclusionTitleColorText.Size = new System.Drawing.Size(72, 20);
-            this.conclusionTitleColorText.TabIndex = 14;
-            this.conclusionTitleColorText.Visible = false;
+            this.abstractIncludeTitleCheck.AutoSize = true;
+            this.abstractIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
+            this.abstractIncludeTitleCheck.Name = "abstractIncludeTitleCheck";
+            this.abstractIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
+            this.abstractIncludeTitleCheck.TabIndex = 1;
+            this.abstractIncludeTitleCheck.Text = "Include Title";
+            this.abstractIncludeTitleCheck.UseVisualStyleBackColor = true;
+            this.abstractIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeTitleCheck_CheckedChanged);
             // 
-            // conclusionTitleColorLabel
+            // checkBox10
             // 
-            this.conclusionTitleColorLabel.AutoSize = true;
-            this.conclusionTitleColorLabel.Location = new System.Drawing.Point(3, 119);
-            this.conclusionTitleColorLabel.Name = "conclusionTitleColorLabel";
-            this.conclusionTitleColorLabel.Size = new System.Drawing.Size(57, 13);
-            this.conclusionTitleColorLabel.TabIndex = 19;
-            this.conclusionTitleColorLabel.Text = "Title Color:";
-            this.conclusionTitleColorLabel.Visible = false;
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox10.Location = new System.Drawing.Point(9, 19);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(107, 17);
+            this.checkBox10.TabIndex = 0;
+            this.checkBox10.Text = "On Its Own Page";
+            this.checkBox10.UseVisualStyleBackColor = true;
             // 
-            // conclusionTitleSizeChoose
+            // abstractHeader
             // 
-            this.conclusionTitleSizeChoose.FormattingEnabled = true;
-            this.conclusionTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
-            this.conclusionTitleSizeChoose.Name = "conclusionTitleSizeChoose";
-            this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
-            this.conclusionTitleSizeChoose.TabIndex = 18;
-            this.conclusionTitleSizeChoose.Visible = false;
+            this.abstractHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.abstractHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.abstractHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractHeader.ForeColor = System.Drawing.SystemColors.Control;
+            this.abstractHeader.Location = new System.Drawing.Point(0, 0);
+            this.abstractHeader.Name = "abstractHeader";
+            this.abstractHeader.Size = new System.Drawing.Size(633, 30);
+            this.abstractHeader.TabIndex = 0;
+            this.abstractHeader.Text = "ABSTRACT";
+            this.abstractHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // conclusionTitleSizeLabel
+            // generalPanel
             // 
-            this.conclusionTitleSizeLabel.AutoSize = true;
-            this.conclusionTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
-            this.conclusionTitleSizeLabel.Name = "conclusionTitleSizeLabel";
-            this.conclusionTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
-            this.conclusionTitleSizeLabel.TabIndex = 17;
-            this.conclusionTitleSizeLabel.Text = "Title Size:";
-            this.conclusionTitleSizeLabel.Visible = false;
+            this.generalPanel.BackColor = System.Drawing.Color.White;
+            this.generalPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.generalPanel.Controls.Add(this.generalDefaultButton);
+            this.generalPanel.Controls.Add(this.includeInPapeGroupBox);
+            this.generalPanel.Controls.Add(this.paperTitleGroupBox);
+            this.generalPanel.Controls.Add(this.apaMlaGroupBox);
+            this.generalPanel.Controls.Add(generalHeader);
+            this.generalPanel.Location = new System.Drawing.Point(0, 0);
+            this.generalPanel.Name = "generalPanel";
+            this.generalPanel.Size = new System.Drawing.Size(635, 440);
+            this.generalPanel.TabIndex = 0;
             // 
-            // conclusionTitleFontLabel
+            // generalDefaultButton
             // 
-            this.conclusionTitleFontLabel.AutoSize = true;
-            this.conclusionTitleFontLabel.Location = new System.Drawing.Point(3, 67);
-            this.conclusionTitleFontLabel.Name = "conclusionTitleFontLabel";
-            this.conclusionTitleFontLabel.Size = new System.Drawing.Size(54, 13);
-            this.conclusionTitleFontLabel.TabIndex = 16;
-            this.conclusionTitleFontLabel.Text = "Title Font:";
-            this.conclusionTitleFontLabel.Visible = false;
+            this.generalDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generalDefaultButton.Location = new System.Drawing.Point(9, 399);
+            this.generalDefaultButton.Name = "generalDefaultButton";
+            this.generalDefaultButton.Size = new System.Drawing.Size(126, 23);
+            this.generalDefaultButton.TabIndex = 19;
+            this.generalDefaultButton.Text = "APA Defaults";
+            this.generalDefaultButton.UseVisualStyleBackColor = true;
             // 
-            // conclusionTitleFontChoose
+            // includeInPapeGroupBox
             // 
-            this.conclusionTitleFontChoose.FormattingEnabled = true;
-            this.conclusionTitleFontChoose.Location = new System.Drawing.Point(70, 64);
-            this.conclusionTitleFontChoose.Name = "conclusionTitleFontChoose";
-            this.conclusionTitleFontChoose.Size = new System.Drawing.Size(144, 21);
-            this.conclusionTitleFontChoose.TabIndex = 15;
-            this.conclusionTitleFontChoose.Visible = false;
+            this.includeInPapeGroupBox.Controls.Add(this.referencesIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.conclusionIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.footerIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.headerIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.abstractIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.summaryIncludeCheck);
+            this.includeInPapeGroupBox.Controls.Add(this.titlePageIncludeCheck);
+            this.includeInPapeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.includeInPapeGroupBox.Location = new System.Drawing.Point(9, 202);
+            this.includeInPapeGroupBox.Name = "includeInPapeGroupBox";
+            this.includeInPapeGroupBox.Size = new System.Drawing.Size(615, 185);
+            this.includeInPapeGroupBox.TabIndex = 18;
+            this.includeInPapeGroupBox.TabStop = false;
+            this.includeInPapeGroupBox.Text = "Include In Paper";
             // 
-            // conclusionTitleBoldCheck
+            // referencesIncludeCheck
             // 
-            this.conclusionTitleBoldCheck.AutoSize = true;
-            this.conclusionTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
-            this.conclusionTitleBoldCheck.Name = "conclusionTitleBoldCheck";
-            this.conclusionTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
-            this.conclusionTitleBoldCheck.TabIndex = 11;
-            this.conclusionTitleBoldCheck.Text = "Bold Title";
-            this.conclusionTitleBoldCheck.UseVisualStyleBackColor = true;
-            this.conclusionTitleBoldCheck.Visible = false;
+            this.referencesIncludeCheck.AutoSize = true;
+            this.referencesIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesIncludeCheck.Location = new System.Drawing.Point(9, 157);
+            this.referencesIncludeCheck.Name = "referencesIncludeCheck";
+            this.referencesIncludeCheck.Size = new System.Drawing.Size(147, 17);
+            this.referencesIncludeCheck.TabIndex = 14;
+            this.referencesIncludeCheck.Text = "Include References Page";
+            this.referencesIncludeCheck.UseVisualStyleBackColor = true;
+            this.referencesIncludeCheck.CheckedChanged += new System.EventHandler(this.referencesIncludeCheck_CheckedChanged);
             // 
-            // conclusionIncludeTitleCheck
+            // conclusionIncludeCheck
             // 
-            this.conclusionIncludeTitleCheck.AutoSize = true;
-            this.conclusionIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
-            this.conclusionIncludeTitleCheck.Name = "conclusionIncludeTitleCheck";
-            this.conclusionIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
-            this.conclusionIncludeTitleCheck.TabIndex = 1;
-            this.conclusionIncludeTitleCheck.Text = "Include Title";
-            this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
-            this.conclusionIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeTitleCheck_CheckedChanged);
+            this.conclusionIncludeCheck.AutoSize = true;
+            this.conclusionIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionIncludeCheck.Location = new System.Drawing.Point(9, 134);
+            this.conclusionIncludeCheck.Name = "conclusionIncludeCheck";
+            this.conclusionIncludeCheck.Size = new System.Drawing.Size(116, 17);
+            this.conclusionIncludeCheck.TabIndex = 12;
+            this.conclusionIncludeCheck.Text = "Include Conclusion";
+            this.conclusionIncludeCheck.UseVisualStyleBackColor = true;
+            this.conclusionIncludeCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeCheck_CheckedChanged);
             // 
-            // conclusionTitleEnter
+            // footerIncludeCheck
             // 
-            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleEnter.Location = new System.Drawing.Point(123, 17);
-            this.conclusionTitleEnter.Name = "conclusionTitleEnter";
-            this.conclusionTitleEnter.Size = new System.Drawing.Size(159, 20);
-            this.conclusionTitleEnter.TabIndex = 2;
-            this.conclusionTitleEnter.Visible = false;
+            this.footerIncludeCheck.AutoSize = true;
+            this.footerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footerIncludeCheck.Location = new System.Drawing.Point(9, 111);
+            this.footerIncludeCheck.Name = "footerIncludeCheck";
+            this.footerIncludeCheck.Size = new System.Drawing.Size(94, 17);
+            this.footerIncludeCheck.TabIndex = 11;
+            this.footerIncludeCheck.Text = "Include Footer";
+            this.footerIncludeCheck.UseVisualStyleBackColor = true;
+            this.footerIncludeCheck.CheckedChanged += new System.EventHandler(this.footerIncludeCheck_CheckedChanged);
             // 
-            // conclusionTitleLabel
+            // headerIncludeCheck
             // 
-            this.conclusionTitleLabel.AutoSize = true;
-            this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleLabel.Location = new System.Drawing.Point(94, 20);
-            this.conclusionTitleLabel.Name = "conclusionTitleLabel";
-            this.conclusionTitleLabel.Size = new System.Drawing.Size(30, 13);
-            this.conclusionTitleLabel.TabIndex = 3;
-            this.conclusionTitleLabel.Text = "Title:";
-            this.conclusionTitleLabel.Visible = false;
+            this.headerIncludeCheck.AutoSize = true;
+            this.headerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerIncludeCheck.Location = new System.Drawing.Point(9, 88);
+            this.headerIncludeCheck.Name = "headerIncludeCheck";
+            this.headerIncludeCheck.Size = new System.Drawing.Size(99, 17);
+            this.headerIncludeCheck.TabIndex = 10;
+            this.headerIncludeCheck.Text = "Include Header";
+            this.headerIncludeCheck.UseVisualStyleBackColor = true;
+            this.headerIncludeCheck.CheckedChanged += new System.EventHandler(this.headerIncludeCheck_CheckedChanged);
             // 
-            // checkBox19
+            // abstractIncludeCheck
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox19.Location = new System.Drawing.Point(9, 19);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(107, 17);
-            this.checkBox19.TabIndex = 0;
-            this.checkBox19.Text = "On Its Own Page";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.abstractIncludeCheck.AutoSize = true;
+            this.abstractIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractIncludeCheck.Location = new System.Drawing.Point(9, 65);
+            this.abstractIncludeCheck.Name = "abstractIncludeCheck";
+            this.abstractIncludeCheck.Size = new System.Drawing.Size(103, 17);
+            this.abstractIncludeCheck.TabIndex = 9;
+            this.abstractIncludeCheck.Text = "Include Abstract";
+            this.abstractIncludeCheck.UseVisualStyleBackColor = true;
+            this.abstractIncludeCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeCheck_CheckedChanged);
             // 
-            // conclusionHeader
+            // summaryIncludeCheck
             // 
-            this.conclusionHeader.BackColor = System.Drawing.Color.MidnightBlue;
-            this.conclusionHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.conclusionHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.conclusionHeader.Location = new System.Drawing.Point(0, 0);
-            this.conclusionHeader.Name = "conclusionHeader";
-            this.conclusionHeader.Size = new System.Drawing.Size(638, 30);
-            this.conclusionHeader.TabIndex = 0;
-            this.conclusionHeader.Text = "CONCLUSION";
-            this.conclusionHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.summaryIncludeCheck.AutoSize = true;
+            this.summaryIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryIncludeCheck.Location = new System.Drawing.Point(9, 42);
+            this.summaryIncludeCheck.Name = "summaryIncludeCheck";
+            this.summaryIncludeCheck.Size = new System.Drawing.Size(107, 17);
+            this.summaryIncludeCheck.TabIndex = 8;
+            this.summaryIncludeCheck.Text = "Include Summary";
+            this.summaryIncludeCheck.UseVisualStyleBackColor = true;
+            this.summaryIncludeCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeCheck_CheckedChanged);
+            // 
+            // titlePageIncludeCheck
+            // 
+            this.titlePageIncludeCheck.AutoSize = true;
+            this.titlePageIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePageIncludeCheck.Location = new System.Drawing.Point(9, 19);
+            this.titlePageIncludeCheck.Name = "titlePageIncludeCheck";
+            this.titlePageIncludeCheck.Size = new System.Drawing.Size(112, 17);
+            this.titlePageIncludeCheck.TabIndex = 2;
+            this.titlePageIncludeCheck.Text = "Include Title Page";
+            this.titlePageIncludeCheck.UseVisualStyleBackColor = true;
+            this.titlePageIncludeCheck.CheckedChanged += new System.EventHandler(this.titlePageIncludeCheck_CheckedChanged);
+            // 
+            // paperTitleGroupBox
+            // 
+            this.paperTitleGroupBox.Controls.Add(this.textBox2);
+            this.paperTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paperTitleGroupBox.Location = new System.Drawing.Point(9, 36);
+            this.paperTitleGroupBox.Name = "paperTitleGroupBox";
+            this.paperTitleGroupBox.Size = new System.Drawing.Size(615, 55);
+            this.paperTitleGroupBox.TabIndex = 16;
+            this.paperTitleGroupBox.TabStop = false;
+            this.paperTitleGroupBox.Text = "Title of Paper";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(9, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(197, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // apaMlaGroupBox
+            // 
+            this.apaMlaGroupBox.Controls.Add(this.mlaRadio);
+            this.apaMlaGroupBox.Controls.Add(this.apaRadio);
+            this.apaMlaGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apaMlaGroupBox.Location = new System.Drawing.Point(9, 112);
+            this.apaMlaGroupBox.Name = "apaMlaGroupBox";
+            this.apaMlaGroupBox.Size = new System.Drawing.Size(615, 70);
+            this.apaMlaGroupBox.TabIndex = 15;
+            this.apaMlaGroupBox.TabStop = false;
+            this.apaMlaGroupBox.Text = "APA or MLA";
+            // 
+            // mlaRadio
+            // 
+            this.mlaRadio.AutoSize = true;
+            this.mlaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mlaRadio.Location = new System.Drawing.Point(9, 42);
+            this.mlaRadio.Name = "mlaRadio";
+            this.mlaRadio.Size = new System.Drawing.Size(47, 17);
+            this.mlaRadio.TabIndex = 1;
+            this.mlaRadio.Text = "MLA";
+            this.mlaRadio.UseVisualStyleBackColor = true;
+            this.mlaRadio.CheckedChanged += new System.EventHandler(this.apaMla_Changed);
+            // 
+            // apaRadio
+            // 
+            this.apaRadio.AutoSize = true;
+            this.apaRadio.Checked = true;
+            this.apaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apaRadio.Location = new System.Drawing.Point(9, 19);
+            this.apaRadio.Name = "apaRadio";
+            this.apaRadio.Size = new System.Drawing.Size(46, 17);
+            this.apaRadio.TabIndex = 0;
+            this.apaRadio.TabStop = true;
+            this.apaRadio.Text = "APA";
+            this.apaRadio.UseVisualStyleBackColor = true;
+            this.apaRadio.CheckedChanged += new System.EventHandler(this.apaMla_Changed);
             // 
             // referencesPanel
             // 
@@ -3043,9 +4093,9 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 4122);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 2843);
             this.referencesPanel.Name = "referencesPanel";
-            this.referencesPanel.Size = new System.Drawing.Size(640, 270);
+            this.referencesPanel.Size = new System.Drawing.Size(635, 270);
             this.referencesPanel.TabIndex = 6;
             // 
             // referencesOptionsGroupBox
@@ -3273,7 +4323,7 @@
             this.referencesHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.referencesHeader.Location = new System.Drawing.Point(0, 0);
             this.referencesHeader.Name = "referencesHeader";
-            this.referencesHeader.Size = new System.Drawing.Size(638, 30);
+            this.referencesHeader.Size = new System.Drawing.Size(633, 30);
             this.referencesHeader.TabIndex = 0;
             this.referencesHeader.Text = "REFERENCES";
             this.referencesHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3288,773 +4338,124 @@
             this.referencesDefaultButton.Text = "APA Default";
             this.referencesDefaultButton.UseVisualStyleBackColor = true;
             // 
-            // titlePagePanel
-            // 
-            this.titlePagePanel.BackColor = System.Drawing.Color.White;
-            this.titlePagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.titlePagePanel.Controls.Add(this.titlePageDefaultButton);
-            this.titlePagePanel.Controls.Add(this.titlePagePositionGroupBox);
-            this.titlePagePanel.Controls.Add(this.titlePageAllignGroupBox);
-            this.titlePagePanel.Controls.Add(this.titlePageIncludeGroupBox);
-            this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
-            this.titlePagePanel.Location = new System.Drawing.Point(0, 590);
-            this.titlePagePanel.Name = "titlePagePanel";
-            this.titlePagePanel.Size = new System.Drawing.Size(640, 475);
-            this.titlePagePanel.TabIndex = 5;
-            // 
-            // titlePageDefaultButton
-            // 
-            this.titlePageDefaultButton.Location = new System.Drawing.Point(9, 436);
-            this.titlePageDefaultButton.Name = "titlePageDefaultButton";
-            this.titlePageDefaultButton.Size = new System.Drawing.Size(126, 23);
-            this.titlePageDefaultButton.TabIndex = 5;
-            this.titlePageDefaultButton.Text = "APA Defaults";
-            this.titlePageDefaultButton.UseVisualStyleBackColor = true;
-            // 
-            // titlePagePositionGroupBox
-            // 
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageMiddleRadio);
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageBottomRadio);
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageTopRadio);
-            this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePagePositionGroupBox.Location = new System.Drawing.Point(9, 333);
-            this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
-            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(615, 92);
-            this.titlePagePositionGroupBox.TabIndex = 4;
-            this.titlePagePositionGroupBox.TabStop = false;
-            this.titlePagePositionGroupBox.Text = "Position";
-            // 
-            // titlePageMiddleRadio
-            // 
-            this.titlePageMiddleRadio.AutoSize = true;
-            this.titlePageMiddleRadio.Checked = true;
-            this.titlePageMiddleRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageMiddleRadio.Location = new System.Drawing.Point(9, 42);
-            this.titlePageMiddleRadio.Name = "titlePageMiddleRadio";
-            this.titlePageMiddleRadio.Size = new System.Drawing.Size(96, 17);
-            this.titlePageMiddleRadio.TabIndex = 2;
-            this.titlePageMiddleRadio.TabStop = true;
-            this.titlePageMiddleRadio.Text = "Middle of Page";
-            this.titlePageMiddleRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageBottomRadio
-            // 
-            this.titlePageBottomRadio.AutoSize = true;
-            this.titlePageBottomRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageBottomRadio.Location = new System.Drawing.Point(9, 65);
-            this.titlePageBottomRadio.Name = "titlePageBottomRadio";
-            this.titlePageBottomRadio.Size = new System.Drawing.Size(98, 17);
-            this.titlePageBottomRadio.TabIndex = 1;
-            this.titlePageBottomRadio.Text = "Bottom of Page";
-            this.titlePageBottomRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageTopRadio
-            // 
-            this.titlePageTopRadio.AutoSize = true;
-            this.titlePageTopRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTopRadio.Location = new System.Drawing.Point(9, 19);
-            this.titlePageTopRadio.Name = "titlePageTopRadio";
-            this.titlePageTopRadio.Size = new System.Drawing.Size(84, 17);
-            this.titlePageTopRadio.TabIndex = 0;
-            this.titlePageTopRadio.Text = "Top of Page";
-            this.titlePageTopRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageAllignGroupBox
-            // 
-            this.titlePageAllignGroupBox.Controls.Add(this.titlePageRightAllignRadio);
-            this.titlePageAllignGroupBox.Controls.Add(this.titlePageCenterRadio);
-            this.titlePageAllignGroupBox.Controls.Add(this.titlePageLeftAllignRadio);
-            this.titlePageAllignGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageAllignGroupBox.Location = new System.Drawing.Point(9, 219);
-            this.titlePageAllignGroupBox.Name = "titlePageAllignGroupBox";
-            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(615, 92);
-            this.titlePageAllignGroupBox.TabIndex = 3;
-            this.titlePageAllignGroupBox.TabStop = false;
-            this.titlePageAllignGroupBox.Text = "Allignment";
-            // 
-            // titlePageRightAllignRadio
-            // 
-            this.titlePageRightAllignRadio.AutoSize = true;
-            this.titlePageRightAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageRightAllignRadio.Location = new System.Drawing.Point(9, 65);
-            this.titlePageRightAllignRadio.Name = "titlePageRightAllignRadio";
-            this.titlePageRightAllignRadio.Size = new System.Drawing.Size(78, 17);
-            this.titlePageRightAllignRadio.TabIndex = 2;
-            this.titlePageRightAllignRadio.Text = "Right Allign";
-            this.titlePageRightAllignRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageCenterRadio
-            // 
-            this.titlePageCenterRadio.AutoSize = true;
-            this.titlePageCenterRadio.Checked = true;
-            this.titlePageCenterRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageCenterRadio.Location = new System.Drawing.Point(9, 42);
-            this.titlePageCenterRadio.Name = "titlePageCenterRadio";
-            this.titlePageCenterRadio.Size = new System.Drawing.Size(56, 17);
-            this.titlePageCenterRadio.TabIndex = 1;
-            this.titlePageCenterRadio.TabStop = true;
-            this.titlePageCenterRadio.Text = "Center";
-            this.titlePageCenterRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageLeftAllignRadio
-            // 
-            this.titlePageLeftAllignRadio.AutoSize = true;
-            this.titlePageLeftAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageLeftAllignRadio.Location = new System.Drawing.Point(9, 19);
-            this.titlePageLeftAllignRadio.Name = "titlePageLeftAllignRadio";
-            this.titlePageLeftAllignRadio.Size = new System.Drawing.Size(71, 17);
-            this.titlePageLeftAllignRadio.TabIndex = 0;
-            this.titlePageLeftAllignRadio.Text = "Left Allign";
-            this.titlePageLeftAllignRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageIncludeGroupBox
-            // 
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.dateUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.dateDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateCheck);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.schoolUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.professorUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.classUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.nameUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.schoolDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.professorDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.classDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.nameDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titleUpButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titleDownButton);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageDateEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleLabel);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleEnter);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageSchoolCheck);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageProfessorCheck);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageClassCheck);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameCheck);
-            this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleCheck);
-            this.titlePageIncludeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageIncludeGroupBox.Location = new System.Drawing.Point(9, 36);
-            this.titlePageIncludeGroupBox.Name = "titlePageIncludeGroupBox";
-            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(615, 163);
-            this.titlePageIncludeGroupBox.TabIndex = 2;
-            this.titlePageIncludeGroupBox.TabStop = false;
-            this.titlePageIncludeGroupBox.Text = "Include In Title Page";
-            // 
-            // titlePageDateLabel
-            // 
-            this.titlePageDateLabel.AutoSize = true;
-            this.titlePageDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateLabel.Location = new System.Drawing.Point(172, 135);
-            this.titlePageDateLabel.Name = "titlePageDateLabel";
-            this.titlePageDateLabel.Size = new System.Drawing.Size(33, 13);
-            this.titlePageDateLabel.TabIndex = 30;
-            this.titlePageDateLabel.Text = "Date:";
-            this.titlePageDateLabel.Visible = false;
-            // 
-            // titlePageSchoolLabel
-            // 
-            this.titlePageSchoolLabel.AutoSize = true;
-            this.titlePageSchoolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolLabel.Location = new System.Drawing.Point(162, 112);
-            this.titlePageSchoolLabel.Name = "titlePageSchoolLabel";
-            this.titlePageSchoolLabel.Size = new System.Drawing.Size(43, 13);
-            this.titlePageSchoolLabel.TabIndex = 29;
-            this.titlePageSchoolLabel.Text = "School:";
-            this.titlePageSchoolLabel.Visible = false;
-            // 
-            // dateUpButton
-            // 
-            this.dateUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dateUpButton.BackgroundImage")));
-            this.dateUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dateUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dateUpButton.ForeColor = System.Drawing.Color.White;
-            this.dateUpButton.Location = new System.Drawing.Point(9, 134);
-            this.dateUpButton.Name = "dateUpButton";
-            this.dateUpButton.Size = new System.Drawing.Size(22, 8);
-            this.dateUpButton.TabIndex = 28;
-            this.dateUpButton.UseVisualStyleBackColor = true;
-            this.dateUpButton.Click += new System.EventHandler(this.dateUpButton_Click);
-            // 
-            // dateDownButton
-            // 
-            this.dateDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dateDownButton.BackgroundImage")));
-            this.dateDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dateDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dateDownButton.ForeColor = System.Drawing.Color.White;
-            this.dateDownButton.Location = new System.Drawing.Point(9, 143);
-            this.dateDownButton.Name = "dateDownButton";
-            this.dateDownButton.Size = new System.Drawing.Size(22, 8);
-            this.dateDownButton.TabIndex = 27;
-            this.dateDownButton.UseVisualStyleBackColor = true;
-            // 
-            // titlePageDateCheck
-            // 
-            this.titlePageDateCheck.AutoSize = true;
-            this.titlePageDateCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateCheck.Location = new System.Drawing.Point(41, 134);
-            this.titlePageDateCheck.Name = "titlePageDateCheck";
-            this.titlePageDateCheck.Size = new System.Drawing.Size(87, 17);
-            this.titlePageDateCheck.TabIndex = 26;
-            this.titlePageDateCheck.Text = "Include Date";
-            this.titlePageDateCheck.UseVisualStyleBackColor = true;
-            this.titlePageDateCheck.CheckedChanged += new System.EventHandler(this.titlePageDateCheck_CheckedChanged);
-            // 
-            // titlePageSchoolEnter
-            // 
-            this.titlePageSchoolEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolEnter.Location = new System.Drawing.Point(212, 109);
-            this.titlePageSchoolEnter.Name = "titlePageSchoolEnter";
-            this.titlePageSchoolEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageSchoolEnter.TabIndex = 25;
-            this.titlePageSchoolEnter.Visible = false;
-            // 
-            // schoolUpButton
-            // 
-            this.schoolUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("schoolUpButton.BackgroundImage")));
-            this.schoolUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.schoolUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.schoolUpButton.ForeColor = System.Drawing.Color.White;
-            this.schoolUpButton.Location = new System.Drawing.Point(9, 111);
-            this.schoolUpButton.Name = "schoolUpButton";
-            this.schoolUpButton.Size = new System.Drawing.Size(22, 8);
-            this.schoolUpButton.TabIndex = 24;
-            this.schoolUpButton.UseVisualStyleBackColor = true;
-            this.schoolUpButton.Click += new System.EventHandler(this.schoolUpButton_Click);
-            // 
-            // professorUpButton
-            // 
-            this.professorUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("professorUpButton.BackgroundImage")));
-            this.professorUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.professorUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.professorUpButton.ForeColor = System.Drawing.Color.White;
-            this.professorUpButton.Location = new System.Drawing.Point(9, 88);
-            this.professorUpButton.Name = "professorUpButton";
-            this.professorUpButton.Size = new System.Drawing.Size(22, 8);
-            this.professorUpButton.TabIndex = 23;
-            this.professorUpButton.UseVisualStyleBackColor = true;
-            this.professorUpButton.Click += new System.EventHandler(this.professorUpButton_Click);
-            // 
-            // classUpButton
-            // 
-            this.classUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("classUpButton.BackgroundImage")));
-            this.classUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.classUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classUpButton.ForeColor = System.Drawing.Color.White;
-            this.classUpButton.Location = new System.Drawing.Point(9, 65);
-            this.classUpButton.Name = "classUpButton";
-            this.classUpButton.Size = new System.Drawing.Size(22, 8);
-            this.classUpButton.TabIndex = 22;
-            this.classUpButton.UseVisualStyleBackColor = true;
-            this.classUpButton.Click += new System.EventHandler(this.classUpButton_Click);
-            // 
-            // nameUpButton
-            // 
-            this.nameUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nameUpButton.BackgroundImage")));
-            this.nameUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.nameUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nameUpButton.ForeColor = System.Drawing.Color.White;
-            this.nameUpButton.Location = new System.Drawing.Point(9, 42);
-            this.nameUpButton.Name = "nameUpButton";
-            this.nameUpButton.Size = new System.Drawing.Size(22, 8);
-            this.nameUpButton.TabIndex = 21;
-            this.nameUpButton.UseVisualStyleBackColor = true;
-            this.nameUpButton.Click += new System.EventHandler(this.nameUpButton_Click);
-            // 
-            // schoolDownButton
-            // 
-            this.schoolDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("schoolDownButton.BackgroundImage")));
-            this.schoolDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.schoolDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.schoolDownButton.ForeColor = System.Drawing.Color.White;
-            this.schoolDownButton.Location = new System.Drawing.Point(9, 120);
-            this.schoolDownButton.Name = "schoolDownButton";
-            this.schoolDownButton.Size = new System.Drawing.Size(22, 8);
-            this.schoolDownButton.TabIndex = 20;
-            this.schoolDownButton.UseVisualStyleBackColor = true;
-            this.schoolDownButton.Click += new System.EventHandler(this.schoolDownButton_Click);
-            // 
-            // professorDownButton
-            // 
-            this.professorDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("professorDownButton.BackgroundImage")));
-            this.professorDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.professorDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.professorDownButton.ForeColor = System.Drawing.Color.White;
-            this.professorDownButton.Location = new System.Drawing.Point(9, 97);
-            this.professorDownButton.Name = "professorDownButton";
-            this.professorDownButton.Size = new System.Drawing.Size(22, 8);
-            this.professorDownButton.TabIndex = 19;
-            this.professorDownButton.UseVisualStyleBackColor = true;
-            this.professorDownButton.Click += new System.EventHandler(this.professorDownButton_Click);
-            // 
-            // classDownButton
-            // 
-            this.classDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("classDownButton.BackgroundImage")));
-            this.classDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.classDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classDownButton.ForeColor = System.Drawing.Color.White;
-            this.classDownButton.Location = new System.Drawing.Point(9, 74);
-            this.classDownButton.Name = "classDownButton";
-            this.classDownButton.Size = new System.Drawing.Size(22, 8);
-            this.classDownButton.TabIndex = 18;
-            this.classDownButton.UseVisualStyleBackColor = true;
-            this.classDownButton.Click += new System.EventHandler(this.classDownButton_Click);
-            // 
-            // nameDownButton
-            // 
-            this.nameDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nameDownButton.BackgroundImage")));
-            this.nameDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.nameDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nameDownButton.ForeColor = System.Drawing.Color.White;
-            this.nameDownButton.Location = new System.Drawing.Point(9, 51);
-            this.nameDownButton.Name = "nameDownButton";
-            this.nameDownButton.Size = new System.Drawing.Size(22, 8);
-            this.nameDownButton.TabIndex = 17;
-            this.nameDownButton.UseVisualStyleBackColor = true;
-            this.nameDownButton.Click += new System.EventHandler(this.nameDownButton_Click);
-            // 
-            // titleUpButton
-            // 
-            this.titleUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titleUpButton.BackgroundImage")));
-            this.titleUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titleUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titleUpButton.ForeColor = System.Drawing.Color.White;
-            this.titleUpButton.Location = new System.Drawing.Point(9, 19);
-            this.titleUpButton.Name = "titleUpButton";
-            this.titleUpButton.Size = new System.Drawing.Size(22, 8);
-            this.titleUpButton.TabIndex = 16;
-            this.titleUpButton.UseVisualStyleBackColor = true;
-            this.titleUpButton.Click += new System.EventHandler(this.titleUpButton_Click);
-            // 
-            // titleDownButton
-            // 
-            this.titleDownButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titleDownButton.BackgroundImage")));
-            this.titleDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.titleDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titleDownButton.ForeColor = System.Drawing.Color.White;
-            this.titleDownButton.Location = new System.Drawing.Point(9, 28);
-            this.titleDownButton.Name = "titleDownButton";
-            this.titleDownButton.Size = new System.Drawing.Size(22, 8);
-            this.titleDownButton.TabIndex = 15;
-            this.titleDownButton.UseVisualStyleBackColor = true;
-            this.titleDownButton.Click += new System.EventHandler(this.titleDownButton_Click);
-            // 
-            // titlePageProfessorLabel
-            // 
-            this.titlePageProfessorLabel.AutoSize = true;
-            this.titlePageProfessorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorLabel.Location = new System.Drawing.Point(152, 89);
-            this.titlePageProfessorLabel.Name = "titlePageProfessorLabel";
-            this.titlePageProfessorLabel.Size = new System.Drawing.Size(54, 13);
-            this.titlePageProfessorLabel.TabIndex = 14;
-            this.titlePageProfessorLabel.Text = "Professor:";
-            this.titlePageProfessorLabel.Visible = false;
-            // 
-            // titlePageClassLabel
-            // 
-            this.titlePageClassLabel.AutoSize = true;
-            this.titlePageClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassLabel.Location = new System.Drawing.Point(171, 66);
-            this.titlePageClassLabel.Name = "titlePageClassLabel";
-            this.titlePageClassLabel.Size = new System.Drawing.Size(35, 13);
-            this.titlePageClassLabel.TabIndex = 13;
-            this.titlePageClassLabel.Text = "Class:";
-            this.titlePageClassLabel.Visible = false;
-            // 
-            // titlePageDateEnter
-            // 
-            this.titlePageDateEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateEnter.Location = new System.Drawing.Point(212, 132);
-            this.titlePageDateEnter.Name = "titlePageDateEnter";
-            this.titlePageDateEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageDateEnter.TabIndex = 12;
-            this.titlePageDateEnter.Visible = false;
-            // 
-            // titlePageProfessorEnter
-            // 
-            this.titlePageProfessorEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorEnter.Location = new System.Drawing.Point(212, 86);
-            this.titlePageProfessorEnter.Name = "titlePageProfessorEnter";
-            this.titlePageProfessorEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageProfessorEnter.TabIndex = 10;
-            this.titlePageProfessorEnter.Visible = false;
-            // 
-            // titlePageClassEnter
-            // 
-            this.titlePageClassEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassEnter.Location = new System.Drawing.Point(212, 63);
-            this.titlePageClassEnter.Name = "titlePageClassEnter";
-            this.titlePageClassEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageClassEnter.TabIndex = 9;
-            this.titlePageClassEnter.Visible = false;
-            // 
-            // titlePageNameEnter
-            // 
-            this.titlePageNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameEnter.Location = new System.Drawing.Point(212, 40);
-            this.titlePageNameEnter.Name = "titlePageNameEnter";
-            this.titlePageNameEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageNameEnter.TabIndex = 8;
-            this.titlePageNameEnter.Visible = false;
-            // 
-            // titlePageNameLabel
-            // 
-            this.titlePageNameLabel.AutoSize = true;
-            this.titlePageNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameLabel.Location = new System.Drawing.Point(168, 43);
-            this.titlePageNameLabel.Name = "titlePageNameLabel";
-            this.titlePageNameLabel.Size = new System.Drawing.Size(38, 13);
-            this.titlePageNameLabel.TabIndex = 7;
-            this.titlePageNameLabel.Text = "Name:";
-            this.titlePageNameLabel.Visible = false;
-            // 
-            // titlePageTitleLabel
-            // 
-            this.titlePageTitleLabel.AutoSize = true;
-            this.titlePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleLabel.Location = new System.Drawing.Point(176, 20);
-            this.titlePageTitleLabel.Name = "titlePageTitleLabel";
-            this.titlePageTitleLabel.Size = new System.Drawing.Size(30, 13);
-            this.titlePageTitleLabel.TabIndex = 6;
-            this.titlePageTitleLabel.Text = "Title:";
-            this.titlePageTitleLabel.Visible = false;
-            // 
-            // titlePageTitleEnter
-            // 
-            this.titlePageTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleEnter.Location = new System.Drawing.Point(212, 17);
-            this.titlePageTitleEnter.Name = "titlePageTitleEnter";
-            this.titlePageTitleEnter.Size = new System.Drawing.Size(199, 20);
-            this.titlePageTitleEnter.TabIndex = 5;
-            this.titlePageTitleEnter.Visible = false;
-            // 
-            // titlePageSchoolCheck
-            // 
-            this.titlePageSchoolCheck.AutoSize = true;
-            this.titlePageSchoolCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolCheck.Location = new System.Drawing.Point(41, 111);
-            this.titlePageSchoolCheck.Name = "titlePageSchoolCheck";
-            this.titlePageSchoolCheck.Size = new System.Drawing.Size(97, 17);
-            this.titlePageSchoolCheck.TabIndex = 4;
-            this.titlePageSchoolCheck.Text = "Include School";
-            this.titlePageSchoolCheck.UseVisualStyleBackColor = true;
-            this.titlePageSchoolCheck.CheckedChanged += new System.EventHandler(this.titlePageSchoolCheck_CheckedChanged);
-            // 
-            // titlePageProfessorCheck
-            // 
-            this.titlePageProfessorCheck.AutoSize = true;
-            this.titlePageProfessorCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorCheck.Location = new System.Drawing.Point(41, 88);
-            this.titlePageProfessorCheck.Name = "titlePageProfessorCheck";
-            this.titlePageProfessorCheck.Size = new System.Drawing.Size(108, 17);
-            this.titlePageProfessorCheck.TabIndex = 3;
-            this.titlePageProfessorCheck.Text = "Include Professor";
-            this.titlePageProfessorCheck.UseVisualStyleBackColor = true;
-            this.titlePageProfessorCheck.CheckedChanged += new System.EventHandler(this.titlePageProfessorCheck_CheckedChanged);
-            // 
-            // titlePageClassCheck
-            // 
-            this.titlePageClassCheck.AutoSize = true;
-            this.titlePageClassCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassCheck.Location = new System.Drawing.Point(41, 65);
-            this.titlePageClassCheck.Name = "titlePageClassCheck";
-            this.titlePageClassCheck.Size = new System.Drawing.Size(89, 17);
-            this.titlePageClassCheck.TabIndex = 2;
-            this.titlePageClassCheck.Text = "Include Class";
-            this.titlePageClassCheck.UseVisualStyleBackColor = true;
-            this.titlePageClassCheck.CheckedChanged += new System.EventHandler(this.titlePageClassCheck_CheckedChanged);
-            // 
-            // titlePageNameCheck
-            // 
-            this.titlePageNameCheck.AutoSize = true;
-            this.titlePageNameCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameCheck.Location = new System.Drawing.Point(41, 42);
-            this.titlePageNameCheck.Name = "titlePageNameCheck";
-            this.titlePageNameCheck.Size = new System.Drawing.Size(92, 17);
-            this.titlePageNameCheck.TabIndex = 1;
-            this.titlePageNameCheck.Text = "Include Name";
-            this.titlePageNameCheck.UseVisualStyleBackColor = true;
-            this.titlePageNameCheck.CheckedChanged += new System.EventHandler(this.titlePageNameCheck_CheckedChanged);
-            // 
-            // titlePageTitleCheck
-            // 
-            this.titlePageTitleCheck.AutoSize = true;
-            this.titlePageTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleCheck.Location = new System.Drawing.Point(41, 19);
-            this.titlePageTitleCheck.Name = "titlePageTitleCheck";
-            this.titlePageTitleCheck.Size = new System.Drawing.Size(84, 17);
-            this.titlePageTitleCheck.TabIndex = 0;
-            this.titlePageTitleCheck.Text = "Include Title";
-            this.titlePageTitleCheck.UseVisualStyleBackColor = true;
-            this.titlePageTitleCheck.CheckedChanged += new System.EventHandler(this.titlePageTitleCheck_CheckedChanged);
-            // 
-            // titlePageSectionLabel
-            // 
-            this.titlePageSectionLabel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.titlePageSectionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePageSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSectionLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.titlePageSectionLabel.Location = new System.Drawing.Point(0, 0);
-            this.titlePageSectionLabel.Name = "titlePageSectionLabel";
-            this.titlePageSectionLabel.Size = new System.Drawing.Size(638, 30);
-            this.titlePageSectionLabel.TabIndex = 1;
-            this.titlePageSectionLabel.Text = "TITLE PAGE";
-            this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sectionsPanel
-            // 
-            this.sectionsPanel.BackColor = System.Drawing.Color.White;
-            this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sectionsPanel.Controls.Add(this.addSectionButton);
-            this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
-            this.sectionsPanel.Controls.Add(this.section1groupBox);
-            this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(0, 3087);
-            this.sectionsPanel.Name = "sectionsPanel";
-            this.sectionsPanel.Size = new System.Drawing.Size(640, 595);
-            this.sectionsPanel.TabIndex = 4;
-            // 
-            // addSectionButton
-            // 
-            this.addSectionButton.Location = new System.Drawing.Point(9, 562);
-            this.addSectionButton.Name = "addSectionButton";
-            this.addSectionButton.Size = new System.Drawing.Size(130, 23);
-            this.addSectionButton.TabIndex = 11;
-            this.addSectionButton.Text = "Add Section";
-            this.addSectionButton.UseVisualStyleBackColor = true;
-            this.addSectionButton.Click += new System.EventHandler(this.addSectionButton_Click);
-            // 
-            // sectionsOptionsGroupBox
-            // 
-            this.sectionsOptionsGroupBox.Controls.Add(this.sectionLabelGroupBox);
-            this.sectionsOptionsGroupBox.Controls.Add(this.sectionsDefaultButton);
-            this.sectionsOptionsGroupBox.Controls.Add(this.betweenSectionsGroupBox);
-            this.sectionsOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(9, 36);
-            this.sectionsOptionsGroupBox.Name = "sectionsOptionsGroupBox";
-            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 212);
-            this.sectionsOptionsGroupBox.TabIndex = 10;
-            this.sectionsOptionsGroupBox.TabStop = false;
-            this.sectionsOptionsGroupBox.Text = "Section Options";
-            // 
-            // sectionLabelGroupBox
-            // 
-            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelStyleGroupBox);
-            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelLocationGroupBox);
-            this.sectionLabelGroupBox.Controls.Add(this.includeSectionLabelsCheck);
-            this.sectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionLabelGroupBox.Location = new System.Drawing.Point(9, 128);
-            this.sectionLabelGroupBox.Name = "sectionLabelGroupBox";
-            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
-            this.sectionLabelGroupBox.TabIndex = 7;
-            this.sectionLabelGroupBox.TabStop = false;
-            this.sectionLabelGroupBox.Text = "Section Labels";
-            // 
-            // sectionLabelStyleGroupBox
-            // 
-            this.sectionLabelStyleGroupBox.Controls.Add(this.button3);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.textBox1);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.label3);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox2);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.label2);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.label1);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox1);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox2);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox1);
-            this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
-            this.sectionLabelStyleGroupBox.Name = "sectionLabelStyleGroupBox";
-            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
-            this.sectionLabelStyleGroupBox.TabIndex = 5;
-            this.sectionLabelStyleGroupBox.TabStop = false;
-            this.sectionLabelStyleGroupBox.Text = "Style";
-            this.sectionLabelStyleGroupBox.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(114, 113);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Choose";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(43, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Color:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(43, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(144, 21);
-            this.comboBox2.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Size:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Font:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(43, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(67, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Bulletted";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(47, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Bold";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // sectionLabelLocationGroupBox
-            // 
-            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton1);
-            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton2);
-            this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
-            this.sectionLabelLocationGroupBox.Name = "sectionLabelLocationGroupBox";
-            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
-            this.sectionLabelLocationGroupBox.TabIndex = 4;
-            this.sectionLabelLocationGroupBox.TabStop = false;
-            this.sectionLabelLocationGroupBox.Text = "Location";
-            this.sectionLabelLocationGroupBox.Visible = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In Line With Text";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(186, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = "On Separate Line Before Sections";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // includeSectionLabelsCheck
-            // 
-            this.includeSectionLabelsCheck.AutoSize = true;
-            this.includeSectionLabelsCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeSectionLabelsCheck.Location = new System.Drawing.Point(9, 19);
-            this.includeSectionLabelsCheck.Name = "includeSectionLabelsCheck";
-            this.includeSectionLabelsCheck.Size = new System.Drawing.Size(134, 17);
-            this.includeSectionLabelsCheck.TabIndex = 0;
-            this.includeSectionLabelsCheck.Text = "Include Section Labels";
-            this.includeSectionLabelsCheck.UseVisualStyleBackColor = true;
-            this.includeSectionLabelsCheck.CheckedChanged += new System.EventHandler(this.includeSectionLabelsCheck_CheckedChanged);
-            // 
-            // sectionsDefaultButton
-            // 
-            this.sectionsDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsDefaultButton.Location = new System.Drawing.Point(9, 179);
-            this.sectionsDefaultButton.Name = "sectionsDefaultButton";
-            this.sectionsDefaultButton.Size = new System.Drawing.Size(126, 23);
-            this.sectionsDefaultButton.TabIndex = 6;
-            this.sectionsDefaultButton.Text = "APA Defaults";
-            this.sectionsDefaultButton.UseVisualStyleBackColor = true;
-            // 
-            // betweenSectionsGroupBox
-            // 
-            this.betweenSectionsGroupBox.Controls.Add(this.noSpaceBetweenSectionsRadio);
-            this.betweenSectionsGroupBox.Controls.Add(this.newPageForEachSectionRadio);
-            this.betweenSectionsGroupBox.Controls.Add(this.blankLineBetweenSectionsRadio);
-            this.betweenSectionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betweenSectionsGroupBox.Location = new System.Drawing.Point(9, 19);
-            this.betweenSectionsGroupBox.Name = "betweenSectionsGroupBox";
-            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(597, 96);
-            this.betweenSectionsGroupBox.TabIndex = 4;
-            this.betweenSectionsGroupBox.TabStop = false;
-            this.betweenSectionsGroupBox.Text = "Between Sections";
-            // 
-            // noSpaceBetweenSectionsRadio
-            // 
-            this.noSpaceBetweenSectionsRadio.AutoSize = true;
-            this.noSpaceBetweenSectionsRadio.Location = new System.Drawing.Point(9, 65);
-            this.noSpaceBetweenSectionsRadio.Name = "noSpaceBetweenSectionsRadio";
-            this.noSpaceBetweenSectionsRadio.Size = new System.Drawing.Size(162, 17);
-            this.noSpaceBetweenSectionsRadio.TabIndex = 4;
-            this.noSpaceBetweenSectionsRadio.Text = "No Space Between Sections";
-            this.noSpaceBetweenSectionsRadio.UseVisualStyleBackColor = true;
-            // 
-            // newPageForEachSectionRadio
-            // 
-            this.newPageForEachSectionRadio.AutoSize = true;
-            this.newPageForEachSectionRadio.Location = new System.Drawing.Point(9, 42);
-            this.newPageForEachSectionRadio.Name = "newPageForEachSectionRadio";
-            this.newPageForEachSectionRadio.Size = new System.Drawing.Size(160, 17);
-            this.newPageForEachSectionRadio.TabIndex = 3;
-            this.newPageForEachSectionRadio.Text = "New Page For Each Section";
-            this.newPageForEachSectionRadio.UseVisualStyleBackColor = true;
-            // 
-            // blankLineBetweenSectionsRadio
-            // 
-            this.blankLineBetweenSectionsRadio.AutoSize = true;
-            this.blankLineBetweenSectionsRadio.Checked = true;
-            this.blankLineBetweenSectionsRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blankLineBetweenSectionsRadio.Location = new System.Drawing.Point(9, 19);
-            this.blankLineBetweenSectionsRadio.Name = "blankLineBetweenSectionsRadio";
-            this.blankLineBetweenSectionsRadio.Size = new System.Drawing.Size(187, 17);
-            this.blankLineBetweenSectionsRadio.TabIndex = 2;
-            this.blankLineBetweenSectionsRadio.TabStop = true;
-            this.blankLineBetweenSectionsRadio.Text = "Blank Line Between Each Section";
-            this.blankLineBetweenSectionsRadio.UseVisualStyleBackColor = true;
+            // contentTab
+            // 
+            this.contentTab.AutoScroll = true;
+            this.contentTab.Controls.Add(this.contentPanel);
+            this.contentTab.Location = new System.Drawing.Point(4, 29);
+            this.contentTab.Name = "contentTab";
+            this.contentTab.Padding = new System.Windows.Forms.Padding(3);
+            this.contentTab.Size = new System.Drawing.Size(652, 637);
+            this.contentTab.TabIndex = 1;
+            this.contentTab.Text = "CONTENT";
+            this.contentTab.UseVisualStyleBackColor = true;
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.BackColor = System.Drawing.Color.White;
+            this.contentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contentPanel.Controls.Add(this.conclusionContentGroupBox);
+            this.contentPanel.Controls.Add(this.section1groupBox);
+            this.contentPanel.Controls.Add(this.abstractContentGroupBox);
+            this.contentPanel.Controls.Add(this.addSectionButton);
+            this.contentPanel.Controls.Add(this.summaryContentGroupBox);
+            this.contentPanel.Controls.Add(this.label23);
+            this.contentPanel.Location = new System.Drawing.Point(0, 0);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(635, 1390);
+            this.contentPanel.TabIndex = 10;
+            // 
+            // conclusionContentGroupBox
+            // 
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleLabel);
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleEnter);
+            this.conclusionContentGroupBox.Controls.Add(this.label19);
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
+            this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 1028);
+            this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
+            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.conclusionContentGroupBox.TabIndex = 12;
+            this.conclusionContentGroupBox.TabStop = false;
+            this.conclusionContentGroupBox.Text = "Conclusion";
+            this.conclusionContentGroupBox.Visible = false;
+            // 
+            // conclusionTitleLabel
+            // 
+            this.conclusionTitleLabel.AutoSize = true;
+            this.conclusionTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.conclusionTitleLabel.Enabled = false;
+            this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleLabel.Location = new System.Drawing.Point(6, 22);
+            this.conclusionTitleLabel.Name = "conclusionTitleLabel";
+            this.conclusionTitleLabel.Size = new System.Drawing.Size(85, 13);
+            this.conclusionTitleLabel.TabIndex = 13;
+            this.conclusionTitleLabel.Tag = "1";
+            this.conclusionTitleLabel.Text = "Conclusion Title:";
+            // 
+            // conclusionTitleEnter
+            // 
+            this.conclusionTitleEnter.Enabled = false;
+            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleEnter.Location = new System.Drawing.Point(95, 19);
+            this.conclusionTitleEnter.Name = "conclusionTitleEnter";
+            this.conclusionTitleEnter.Size = new System.Drawing.Size(185, 20);
+            this.conclusionTitleEnter.TabIndex = 12;
+            this.conclusionTitleEnter.Tag = "1";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 49);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Tag = "1";
+            this.label19.Text = "Content:";
+            // 
+            // conclusionContentPanel
+            // 
+            this.conclusionContentPanel.Controls.Add(this.conclusionToolStripContainer);
+            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 69);
+            this.conclusionContentPanel.Name = "conclusionContentPanel";
+            this.conclusionContentPanel.Size = new System.Drawing.Size(597, 210);
+            this.conclusionContentPanel.TabIndex = 6;
+            // 
+            // conclusionToolStripContainer
+            // 
+            // 
+            // conclusionToolStripContainer.ContentPanel
+            // 
+            this.conclusionToolStripContainer.ContentPanel.Controls.Add(this.conclusionContent);
+            this.conclusionToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
+            this.conclusionToolStripContainer.Location = new System.Drawing.Point(0, 0);
+            this.conclusionToolStripContainer.Name = "conclusionToolStripContainer";
+            this.conclusionToolStripContainer.Size = new System.Drawing.Size(597, 210);
+            this.conclusionToolStripContainer.TabIndex = 0;
+            this.conclusionToolStripContainer.Text = "toolStripContainer3";
+            // 
+            // conclusionToolStripContainer.TopToolStripPanel
+            // 
+            this.conclusionToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip4);
+            // 
+            // conclusionContent
+            // 
+            this.conclusionContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionContent.Location = new System.Drawing.Point(0, 0);
+            this.conclusionContent.Name = "conclusionContent";
+            this.conclusionContent.Size = new System.Drawing.Size(594, 182);
+            this.conclusionContent.TabIndex = 0;
+            this.conclusionContent.Text = "";
+            // 
+            // toolStrip4
+            // 
+            this.toolStrip4.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip4.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip4.Name = "toolStrip4";
+            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip4.Size = new System.Drawing.Size(111, 25);
+            this.toolStrip4.TabIndex = 0;
             // 
             // section1groupBox
             // 
@@ -4063,10 +4464,10 @@
             this.section1groupBox.Controls.Add(this.section1ContentPanel);
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
-            this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(9, 268);
+            this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1groupBox.Location = new System.Drawing.Point(9, 660);
             this.section1groupBox.Name = "section1groupBox";
-            this.section1groupBox.Size = new System.Drawing.Size(615, 288);
+            this.section1groupBox.Size = new System.Drawing.Size(615, 315);
             this.section1groupBox.TabIndex = 9;
             this.section1groupBox.TabStop = false;
             this.section1groupBox.Tag = "1";
@@ -4076,6 +4477,7 @@
             // 
             this.section1LabelLabel.AutoSize = true;
             this.section1LabelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.section1LabelLabel.Enabled = false;
             this.section1LabelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section1LabelLabel.Location = new System.Drawing.Point(6, 22);
             this.section1LabelLabel.Name = "section1LabelLabel";
@@ -4083,22 +4485,21 @@
             this.section1LabelLabel.TabIndex = 10;
             this.section1LabelLabel.Tag = "1";
             this.section1LabelLabel.Text = "Section Label:";
-            this.section1LabelLabel.Visible = false;
             // 
             // section1LabelEnter
             // 
+            this.section1LabelEnter.Enabled = false;
             this.section1LabelEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.section1LabelEnter.Location = new System.Drawing.Point(81, 19);
             this.section1LabelEnter.Name = "section1LabelEnter";
             this.section1LabelEnter.Size = new System.Drawing.Size(185, 20);
             this.section1LabelEnter.TabIndex = 9;
             this.section1LabelEnter.Tag = "1";
-            this.section1LabelEnter.Visible = false;
             // 
             // section1ContentPanel
             // 
             this.section1ContentPanel.Controls.Add(this.section1ToolStripContainer);
-            this.section1ContentPanel.Location = new System.Drawing.Point(9, 40);
+            this.section1ContentPanel.Location = new System.Drawing.Point(9, 67);
             this.section1ContentPanel.Name = "section1ContentPanel";
             this.section1ContentPanel.Size = new System.Drawing.Size(597, 210);
             this.section1ContentPanel.TabIndex = 8;
@@ -4127,7 +4528,9 @@
             this.section1Content.Name = "section1Content";
             this.section1Content.Size = new System.Drawing.Size(594, 182);
             this.section1Content.TabIndex = 0;
+            this.section1Content.Tag = "1";
             this.section1Content.Text = "";
+            this.section1Content.TextChanged += new System.EventHandler(this.sectionTextChanged);
             // 
             // section1ToolStrip
             // 
@@ -4140,325 +4543,278 @@
             // 
             // section1AddSubsectionButton
             // 
+            this.section1AddSubsectionButton.BackColor = System.Drawing.Color.Gainsboro;
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 255);
+            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 282);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
             this.section1AddSubsectionButton.Size = new System.Drawing.Size(130, 23);
             this.section1AddSubsectionButton.TabIndex = 7;
             this.section1AddSubsectionButton.Tag = "1";
             this.section1AddSubsectionButton.Text = "Add Subsection";
-            this.section1AddSubsectionButton.UseVisualStyleBackColor = true;
+            this.section1AddSubsectionButton.UseVisualStyleBackColor = false;
             this.section1AddSubsectionButton.Click += new System.EventHandler(this.sectionAddSubsectionButton_Click);
             // 
             // section1contentLabel
             // 
             this.section1contentLabel.AutoSize = true;
             this.section1contentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1contentLabel.Location = new System.Drawing.Point(6, 22);
+            this.section1contentLabel.Location = new System.Drawing.Point(6, 49);
             this.section1contentLabel.Name = "section1contentLabel";
             this.section1contentLabel.Size = new System.Drawing.Size(47, 13);
             this.section1contentLabel.TabIndex = 5;
             this.section1contentLabel.Tag = "1";
             this.section1contentLabel.Text = "Content:";
             // 
-            // sectionsHeader
+            // abstractContentGroupBox
             // 
-            this.sectionsHeader.BackColor = System.Drawing.Color.MidnightBlue;
-            this.sectionsHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sectionsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.sectionsHeader.Location = new System.Drawing.Point(0, 0);
-            this.sectionsHeader.Name = "sectionsHeader";
-            this.sectionsHeader.Size = new System.Drawing.Size(638, 30);
-            this.sectionsHeader.TabIndex = 0;
-            this.sectionsHeader.Text = "SECTIONS";
-            this.sectionsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.abstractContentGroupBox.Controls.Add(this.abstractTitleLabel);
+            this.abstractContentGroupBox.Controls.Add(this.abstractTitleText);
+            this.abstractContentGroupBox.Controls.Add(this.label17);
+            this.abstractContentGroupBox.Controls.Add(this.abstractContentPanel);
+            this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 348);
+            this.abstractContentGroupBox.Name = "abstractContentGroupBox";
+            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.abstractContentGroupBox.TabIndex = 11;
+            this.abstractContentGroupBox.TabStop = false;
+            this.abstractContentGroupBox.Text = "Abstract";
+            this.abstractContentGroupBox.Visible = false;
             // 
-            // generalPanel
+            // abstractTitleLabel
             // 
-            this.generalPanel.BackColor = System.Drawing.Color.White;
-            this.generalPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.generalPanel.Controls.Add(this.paperFormattingGroupBox);
-            this.generalPanel.Controls.Add(this.generalDefaultButton);
-            this.generalPanel.Controls.Add(this.includeInPapeGroupBox);
-            this.generalPanel.Controls.Add(this.paperTitleGroupBox);
-            this.generalPanel.Controls.Add(this.apaMlaGroupBox);
-            this.generalPanel.Controls.Add(generalHeader);
-            this.generalPanel.Location = new System.Drawing.Point(0, 0);
-            this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(640, 590);
-            this.generalPanel.TabIndex = 0;
+            this.abstractTitleLabel.AutoSize = true;
+            this.abstractTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.abstractTitleLabel.Enabled = false;
+            this.abstractTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleLabel.Location = new System.Drawing.Point(6, 22);
+            this.abstractTitleLabel.Name = "abstractTitleLabel";
+            this.abstractTitleLabel.Size = new System.Drawing.Size(72, 13);
+            this.abstractTitleLabel.TabIndex = 13;
+            this.abstractTitleLabel.Tag = "1";
+            this.abstractTitleLabel.Text = "Abstract Title:";
             // 
-            // paperFormattingGroupBox
+            // abstractTitleText
             // 
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox9);
-            this.paperFormattingGroupBox.Controls.Add(this.label15);
-            this.paperFormattingGroupBox.Controls.Add(this.button8);
-            this.paperFormattingGroupBox.Controls.Add(this.textBox7);
-            this.paperFormattingGroupBox.Controls.Add(this.label12);
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox7);
-            this.paperFormattingGroupBox.Controls.Add(this.label13);
-            this.paperFormattingGroupBox.Controls.Add(this.label14);
-            this.paperFormattingGroupBox.Controls.Add(this.comboBox8);
-            this.paperFormattingGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paperFormattingGroupBox.Location = new System.Drawing.Point(9, 401);
-            this.paperFormattingGroupBox.Name = "paperFormattingGroupBox";
-            this.paperFormattingGroupBox.Size = new System.Drawing.Size(615, 129);
-            this.paperFormattingGroupBox.TabIndex = 20;
-            this.paperFormattingGroupBox.TabStop = false;
-            this.paperFormattingGroupBox.Text = "Style";
+            this.abstractTitleText.Enabled = false;
+            this.abstractTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleText.Location = new System.Drawing.Point(95, 19);
+            this.abstractTitleText.Name = "abstractTitleText";
+            this.abstractTitleText.Size = new System.Drawing.Size(185, 20);
+            this.abstractTitleText.TabIndex = 12;
+            this.abstractTitleText.Tag = "1";
             // 
-            // comboBox9
+            // label17
             // 
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(61, 96);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(144, 21);
-            this.comboBox9.TabIndex = 28;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(6, 49);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 13);
+            this.label17.TabIndex = 11;
+            this.label17.Tag = "1";
+            this.label17.Text = "Content:";
             // 
-            // label15
+            // abstractContentPanel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 99);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Spacing:";
+            this.abstractContentPanel.Controls.Add(this.abstractContentToolStripContainer);
+            this.abstractContentPanel.Location = new System.Drawing.Point(9, 69);
+            this.abstractContentPanel.Name = "abstractContentPanel";
+            this.abstractContentPanel.Size = new System.Drawing.Size(597, 210);
+            this.abstractContentPanel.TabIndex = 6;
             // 
-            // button8
+            // abstractContentToolStripContainer
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(132, 68);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(73, 23);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Choose";
-            this.button8.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // abstractContentToolStripContainer.ContentPanel
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(61, 70);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(72, 20);
-            this.textBox7.TabIndex = 21;
+            this.abstractContentToolStripContainer.ContentPanel.Controls.Add(this.abstractContent);
+            this.abstractContentToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
+            this.abstractContentToolStripContainer.Location = new System.Drawing.Point(0, 0);
+            this.abstractContentToolStripContainer.Name = "abstractContentToolStripContainer";
+            this.abstractContentToolStripContainer.Size = new System.Drawing.Size(597, 210);
+            this.abstractContentToolStripContainer.TabIndex = 0;
+            this.abstractContentToolStripContainer.Text = "toolStripContainer3";
             // 
-            // label12
+            // abstractContentToolStripContainer.TopToolStripPanel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 73);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Color:";
+            this.abstractContentToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip3);
             // 
-            // comboBox7
+            // abstractContent
             // 
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(61, 43);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(144, 21);
-            this.comboBox7.TabIndex = 25;
+            this.abstractContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractContent.Location = new System.Drawing.Point(0, 0);
+            this.abstractContent.Name = "abstractContent";
+            this.abstractContent.Size = new System.Drawing.Size(594, 182);
+            this.abstractContent.TabIndex = 0;
+            this.abstractContent.Text = "";
             // 
-            // label13
+            // toolStrip3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 46);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Size:";
+            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip3.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip3.Size = new System.Drawing.Size(111, 25);
+            this.toolStrip3.TabIndex = 0;
             // 
-            // label14
+            // addSectionButton
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "Font:";
+            this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSectionButton.Location = new System.Drawing.Point(9, 985);
+            this.addSectionButton.Name = "addSectionButton";
+            this.addSectionButton.Size = new System.Drawing.Size(130, 23);
+            this.addSectionButton.TabIndex = 11;
+            this.addSectionButton.Text = "Add Section";
+            this.addSectionButton.UseVisualStyleBackColor = true;
+            this.addSectionButton.Click += new System.EventHandler(this.addSectionButton_Click);
             // 
-            // comboBox8
+            // summaryContentGroupBox
             // 
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(61, 16);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(144, 21);
-            this.comboBox8.TabIndex = 22;
+            this.summaryContentGroupBox.Controls.Add(this.summaryTitleTextLabel);
+            this.summaryContentGroupBox.Controls.Add(this.summaryTitleText);
+            this.summaryContentGroupBox.Controls.Add(this.label11);
+            this.summaryContentGroupBox.Controls.Add(this.summaryContentPanel);
+            this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryContentGroupBox.Location = new System.Drawing.Point(9, 36);
+            this.summaryContentGroupBox.Name = "summaryContentGroupBox";
+            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.summaryContentGroupBox.TabIndex = 10;
+            this.summaryContentGroupBox.TabStop = false;
+            this.summaryContentGroupBox.Text = "Summary";
+            this.summaryContentGroupBox.Visible = false;
             // 
-            // generalDefaultButton
+            // summaryTitleTextLabel
             // 
-            this.generalDefaultButton.Location = new System.Drawing.Point(9, 545);
-            this.generalDefaultButton.Name = "generalDefaultButton";
-            this.generalDefaultButton.Size = new System.Drawing.Size(126, 23);
-            this.generalDefaultButton.TabIndex = 19;
-            this.generalDefaultButton.Text = "APA Defaults";
-            this.generalDefaultButton.UseVisualStyleBackColor = true;
+            this.summaryTitleTextLabel.AutoSize = true;
+            this.summaryTitleTextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.summaryTitleTextLabel.Enabled = false;
+            this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryTitleTextLabel.Location = new System.Drawing.Point(6, 22);
+            this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
+            this.summaryTitleTextLabel.Size = new System.Drawing.Size(76, 13);
+            this.summaryTitleTextLabel.TabIndex = 13;
+            this.summaryTitleTextLabel.Tag = "1";
+            this.summaryTitleTextLabel.Text = "Summary Title:";
             // 
-            // includeInPapeGroupBox
+            // summaryTitleText
             // 
-            this.includeInPapeGroupBox.Controls.Add(this.referencesIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.conclusionIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.footerIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.headerIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.abstractIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.summaryIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.titlePageIncludeCheck);
-            this.includeInPapeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeInPapeGroupBox.Location = new System.Drawing.Point(9, 202);
-            this.includeInPapeGroupBox.Name = "includeInPapeGroupBox";
-            this.includeInPapeGroupBox.Size = new System.Drawing.Size(615, 185);
-            this.includeInPapeGroupBox.TabIndex = 18;
-            this.includeInPapeGroupBox.TabStop = false;
-            this.includeInPapeGroupBox.Text = "Include In Paper";
+            this.summaryTitleText.Enabled = false;
+            this.summaryTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryTitleText.Location = new System.Drawing.Point(95, 19);
+            this.summaryTitleText.Name = "summaryTitleText";
+            this.summaryTitleText.Size = new System.Drawing.Size(185, 20);
+            this.summaryTitleText.TabIndex = 12;
+            this.summaryTitleText.Tag = "1";
             // 
-            // referencesIncludeCheck
+            // label11
             // 
-            this.referencesIncludeCheck.AutoSize = true;
-            this.referencesIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIncludeCheck.Location = new System.Drawing.Point(9, 157);
-            this.referencesIncludeCheck.Name = "referencesIncludeCheck";
-            this.referencesIncludeCheck.Size = new System.Drawing.Size(147, 17);
-            this.referencesIncludeCheck.TabIndex = 14;
-            this.referencesIncludeCheck.Text = "Include References Page";
-            this.referencesIncludeCheck.UseVisualStyleBackColor = true;
-            this.referencesIncludeCheck.CheckedChanged += new System.EventHandler(this.referencesIncludeCheck_CheckedChanged);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Tag = "1";
+            this.label11.Text = "Content:";
             // 
-            // conclusionIncludeCheck
+            // summaryContentPanel
             // 
-            this.conclusionIncludeCheck.AutoSize = true;
-            this.conclusionIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionIncludeCheck.Location = new System.Drawing.Point(9, 134);
-            this.conclusionIncludeCheck.Name = "conclusionIncludeCheck";
-            this.conclusionIncludeCheck.Size = new System.Drawing.Size(116, 17);
-            this.conclusionIncludeCheck.TabIndex = 12;
-            this.conclusionIncludeCheck.Text = "Include Conclusion";
-            this.conclusionIncludeCheck.UseVisualStyleBackColor = true;
-            this.conclusionIncludeCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeCheck_CheckedChanged);
+            this.summaryContentPanel.Controls.Add(this.summaryToolStripContainer);
+            this.summaryContentPanel.Location = new System.Drawing.Point(9, 69);
+            this.summaryContentPanel.Name = "summaryContentPanel";
+            this.summaryContentPanel.Size = new System.Drawing.Size(597, 210);
+            this.summaryContentPanel.TabIndex = 6;
             // 
-            // footerIncludeCheck
+            // summaryToolStripContainer
             // 
-            this.footerIncludeCheck.AutoSize = true;
-            this.footerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerIncludeCheck.Location = new System.Drawing.Point(9, 111);
-            this.footerIncludeCheck.Name = "footerIncludeCheck";
-            this.footerIncludeCheck.Size = new System.Drawing.Size(94, 17);
-            this.footerIncludeCheck.TabIndex = 11;
-            this.footerIncludeCheck.Text = "Include Footer";
-            this.footerIncludeCheck.UseVisualStyleBackColor = true;
-            this.footerIncludeCheck.CheckedChanged += new System.EventHandler(this.footerIncludeCheck_CheckedChanged);
             // 
-            // headerIncludeCheck
+            // summaryToolStripContainer.ContentPanel
             // 
-            this.headerIncludeCheck.AutoSize = true;
-            this.headerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerIncludeCheck.Location = new System.Drawing.Point(9, 88);
-            this.headerIncludeCheck.Name = "headerIncludeCheck";
-            this.headerIncludeCheck.Size = new System.Drawing.Size(99, 17);
-            this.headerIncludeCheck.TabIndex = 10;
-            this.headerIncludeCheck.Text = "Include Header";
-            this.headerIncludeCheck.UseVisualStyleBackColor = true;
-            this.headerIncludeCheck.CheckedChanged += new System.EventHandler(this.headerIncludeCheck_CheckedChanged);
+            this.summaryToolStripContainer.ContentPanel.Controls.Add(this.summaryContent);
+            this.summaryToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
+            this.summaryToolStripContainer.Location = new System.Drawing.Point(0, 0);
+            this.summaryToolStripContainer.Name = "summaryToolStripContainer";
+            this.summaryToolStripContainer.Size = new System.Drawing.Size(597, 210);
+            this.summaryToolStripContainer.TabIndex = 0;
+            this.summaryToolStripContainer.Text = "toolStripContainer2";
             // 
-            // abstractIncludeCheck
+            // summaryToolStripContainer.TopToolStripPanel
             // 
-            this.abstractIncludeCheck.AutoSize = true;
-            this.abstractIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractIncludeCheck.Location = new System.Drawing.Point(9, 65);
-            this.abstractIncludeCheck.Name = "abstractIncludeCheck";
-            this.abstractIncludeCheck.Size = new System.Drawing.Size(103, 17);
-            this.abstractIncludeCheck.TabIndex = 9;
-            this.abstractIncludeCheck.Text = "Include Abstract";
-            this.abstractIncludeCheck.UseVisualStyleBackColor = true;
-            this.abstractIncludeCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeCheck_CheckedChanged);
+            this.summaryToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip2);
             // 
-            // summaryIncludeCheck
+            // summaryContent
             // 
-            this.summaryIncludeCheck.AutoSize = true;
-            this.summaryIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryIncludeCheck.Location = new System.Drawing.Point(9, 42);
-            this.summaryIncludeCheck.Name = "summaryIncludeCheck";
-            this.summaryIncludeCheck.Size = new System.Drawing.Size(107, 17);
-            this.summaryIncludeCheck.TabIndex = 8;
-            this.summaryIncludeCheck.Text = "Include Summary";
-            this.summaryIncludeCheck.UseVisualStyleBackColor = true;
-            this.summaryIncludeCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeCheck_CheckedChanged);
+            this.summaryContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryContent.Location = new System.Drawing.Point(0, 0);
+            this.summaryContent.Name = "summaryContent";
+            this.summaryContent.Size = new System.Drawing.Size(594, 182);
+            this.summaryContent.TabIndex = 0;
+            this.summaryContent.Text = "";
             // 
-            // titlePageIncludeCheck
+            // toolStrip2
             // 
-            this.titlePageIncludeCheck.AutoSize = true;
-            this.titlePageIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageIncludeCheck.Location = new System.Drawing.Point(9, 19);
-            this.titlePageIncludeCheck.Name = "titlePageIncludeCheck";
-            this.titlePageIncludeCheck.Size = new System.Drawing.Size(112, 17);
-            this.titlePageIncludeCheck.TabIndex = 2;
-            this.titlePageIncludeCheck.Text = "Include Title Page";
-            this.titlePageIncludeCheck.UseVisualStyleBackColor = true;
-            this.titlePageIncludeCheck.CheckedChanged += new System.EventHandler(this.titlePageIncludeCheck_CheckedChanged);
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip2.Size = new System.Drawing.Size(111, 25);
+            this.toolStrip2.TabIndex = 0;
             // 
-            // paperTitleGroupBox
+            // label23
             // 
-            this.paperTitleGroupBox.Controls.Add(this.textBox2);
-            this.paperTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paperTitleGroupBox.Location = new System.Drawing.Point(9, 36);
-            this.paperTitleGroupBox.Name = "paperTitleGroupBox";
-            this.paperTitleGroupBox.Size = new System.Drawing.Size(615, 55);
-            this.paperTitleGroupBox.TabIndex = 16;
-            this.paperTitleGroupBox.TabStop = false;
-            this.paperTitleGroupBox.Text = "Title of Paper";
+            this.label23.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.Control;
+            this.label23.Location = new System.Drawing.Point(0, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(633, 30);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "CONTENT";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // tableLayoutPanel2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(9, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 0;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(669, 3);
+            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 40);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(690, 673);
+            this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // apaMlaGroupBox
+            // finalizePanel
             // 
-            this.apaMlaGroupBox.Controls.Add(this.mlaRadio);
-            this.apaMlaGroupBox.Controls.Add(this.apaRadio);
-            this.apaMlaGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apaMlaGroupBox.Location = new System.Drawing.Point(9, 112);
-            this.apaMlaGroupBox.Name = "apaMlaGroupBox";
-            this.apaMlaGroupBox.Size = new System.Drawing.Size(615, 70);
-            this.apaMlaGroupBox.TabIndex = 15;
-            this.apaMlaGroupBox.TabStop = false;
-            this.apaMlaGroupBox.Text = "APA or MLA";
+            this.finalizePanel.Controls.Add(this.writeButton);
+            this.finalizePanel.Location = new System.Drawing.Point(3, 626);
+            this.finalizePanel.Name = "finalizePanel";
+            this.finalizePanel.Size = new System.Drawing.Size(684, 44);
+            this.finalizePanel.TabIndex = 1;
             // 
-            // mlaRadio
+            // writeButton
             // 
-            this.mlaRadio.AutoSize = true;
-            this.mlaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mlaRadio.Location = new System.Drawing.Point(9, 42);
-            this.mlaRadio.Name = "mlaRadio";
-            this.mlaRadio.Size = new System.Drawing.Size(47, 17);
-            this.mlaRadio.TabIndex = 1;
-            this.mlaRadio.Text = "MLA";
-            this.mlaRadio.UseVisualStyleBackColor = true;
-            this.mlaRadio.CheckedChanged += new System.EventHandler(this.apaMla_Changed);
+            this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.writeButton.Location = new System.Drawing.Point(564, 8);
+            this.writeButton.Name = "writeButton";
+            this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.writeButton.Size = new System.Drawing.Size(114, 28);
+            this.writeButton.TabIndex = 0;
+            this.writeButton.Text = "Write It!";
+            this.writeButton.UseVisualStyleBackColor = true;
+            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
             // 
-            // apaRadio
+            // previewPanel
             // 
-            this.apaRadio.AutoSize = true;
-            this.apaRadio.Checked = true;
-            this.apaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apaRadio.Location = new System.Drawing.Point(9, 19);
-            this.apaRadio.Name = "apaRadio";
-            this.apaRadio.Size = new System.Drawing.Size(46, 17);
-            this.apaRadio.TabIndex = 0;
-            this.apaRadio.TabStop = true;
-            this.apaRadio.Text = "APA";
-            this.apaRadio.UseVisualStyleBackColor = true;
-            this.apaRadio.CheckedChanged += new System.EventHandler(this.apaMla_Changed);
+            this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.previewPanel.Location = new System.Drawing.Point(3, 3);
+            this.previewPanel.Name = "previewPanel";
+            this.previewPanel.Size = new System.Drawing.Size(684, 617);
+            this.previewPanel.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -4531,9 +4887,13 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.finalizePanel.ResumeLayout(false);
-            this.sectionPanel.ResumeLayout(false);
+            this.sectionTabControl.ResumeLayout(false);
+            this.formattingTab.ResumeLayout(false);
+            this.conclusionPanel.ResumeLayout(false);
+            this.conclusionOptionsGroupBox.ResumeLayout(false);
+            this.conclusionOptionsGroupBox.PerformLayout();
+            this.conclusionTitleGroupBox.ResumeLayout(false);
+            this.conclusionTitleGroupBox.PerformLayout();
             this.footerPanel.ResumeLayout(false);
             this.footerOptionsGroupBox.ResumeLayout(false);
             this.footerFirstPageGroupBox.ResumeLayout(false);
@@ -4556,6 +4916,35 @@
             this.footerLeftGroupBox.ResumeLayout(false);
             this.footerLeftGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerLeftNumberEnter)).EndInit();
+            this.sectionsPanel.ResumeLayout(false);
+            this.sectionsOptionsGroupBox.ResumeLayout(false);
+            this.subsubsectionLabelGroupBox.ResumeLayout(false);
+            this.subsubsectionLabelGroupBox.PerformLayout();
+            this.subsubsectionLabelStyleGroupBox.ResumeLayout(false);
+            this.subsubsectionLabelStyleGroupBox.PerformLayout();
+            this.subsubsectionLabelLocationGroupBox.ResumeLayout(false);
+            this.subsubsectionLabelLocationGroupBox.PerformLayout();
+            this.subsectionLabelGroupBox.ResumeLayout(false);
+            this.subsectionLabelGroupBox.PerformLayout();
+            this.subsectionLabelStyleGroupBox.ResumeLayout(false);
+            this.subsectionLabelStyleGroupBox.PerformLayout();
+            this.subsectionLabelLocationGroupBox.ResumeLayout(false);
+            this.subsectionLabelLocationGroupBox.PerformLayout();
+            this.sectionLabelGroupBox.ResumeLayout(false);
+            this.sectionLabelGroupBox.PerformLayout();
+            this.sectionLabelStyleGroupBox.ResumeLayout(false);
+            this.sectionLabelStyleGroupBox.PerformLayout();
+            this.sectionLabelLocationGroupBox.ResumeLayout(false);
+            this.sectionLabelLocationGroupBox.PerformLayout();
+            this.betweenSectionsGroupBox.ResumeLayout(false);
+            this.betweenSectionsGroupBox.PerformLayout();
+            this.titlePagePanel.ResumeLayout(false);
+            this.titlePagePositionGroupBox.ResumeLayout(false);
+            this.titlePagePositionGroupBox.PerformLayout();
+            this.titlePageAllignGroupBox.ResumeLayout(false);
+            this.titlePageAllignGroupBox.PerformLayout();
+            this.titlePageIncludeGroupBox.ResumeLayout(false);
+            this.titlePageIncludeGroupBox.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerOptionsGroupBox.ResumeLayout(false);
             this.headerFirstPageGroupBox.ResumeLayout(false);
@@ -4578,42 +4967,23 @@
             this.headerLeftGroupBox.ResumeLayout(false);
             this.headerLeftGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).EndInit();
-            this.abstractPanel.ResumeLayout(false);
-            this.abstractContentGroupBox.ResumeLayout(false);
-            this.abstractContentPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.abstractContentToolStripContainer.ResumeLayout(false);
-            this.abstractContentToolStripContainer.PerformLayout();
-            this.abstractOptionsGroupBox.ResumeLayout(false);
-            this.abstractOptionsGroupBox.PerformLayout();
-            this.abstractTitleGroupBox.ResumeLayout(false);
-            this.abstractTitleGroupBox.PerformLayout();
             this.summaryPanel.ResumeLayout(false);
-            this.summaryContentGroupBox.ResumeLayout(false);
-            this.summaryContentPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.summaryToolStripContainer.ResumeLayout(false);
-            this.summaryToolStripContainer.PerformLayout();
             this.summaryOptionsGroupBox.ResumeLayout(false);
             this.summaryOptionsGroupBox.PerformLayout();
             this.summaryTitleGroupBox.ResumeLayout(false);
             this.summaryTitleGroupBox.PerformLayout();
-            this.conclusionPanel.ResumeLayout(false);
-            this.conclusionContentGroupBox.ResumeLayout(false);
-            this.conclusionContentPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.conclusionToolStripContainer.ResumeLayout(false);
-            this.conclusionToolStripContainer.PerformLayout();
-            this.conclusionOptionsGroupBox.ResumeLayout(false);
-            this.conclusionOptionsGroupBox.PerformLayout();
-            this.conclusionTitleGroupBox.ResumeLayout(false);
-            this.conclusionTitleGroupBox.PerformLayout();
+            this.abstractPanel.ResumeLayout(false);
+            this.abstractOptionsGroupBox.ResumeLayout(false);
+            this.abstractOptionsGroupBox.PerformLayout();
+            this.abstractTitleGroupBox.ResumeLayout(false);
+            this.abstractTitleGroupBox.PerformLayout();
+            this.generalPanel.ResumeLayout(false);
+            this.includeInPapeGroupBox.ResumeLayout(false);
+            this.includeInPapeGroupBox.PerformLayout();
+            this.paperTitleGroupBox.ResumeLayout(false);
+            this.paperTitleGroupBox.PerformLayout();
+            this.apaMlaGroupBox.ResumeLayout(false);
+            this.apaMlaGroupBox.PerformLayout();
             this.referencesPanel.ResumeLayout(false);
             this.referencesOptionsGroupBox.ResumeLayout(false);
             this.referencesOptionsGroupBox.PerformLayout();
@@ -4622,23 +4992,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).EndInit();
             this.referencesTitleGroupBox.ResumeLayout(false);
             this.referencesTitleGroupBox.PerformLayout();
-            this.titlePagePanel.ResumeLayout(false);
-            this.titlePagePositionGroupBox.ResumeLayout(false);
-            this.titlePagePositionGroupBox.PerformLayout();
-            this.titlePageAllignGroupBox.ResumeLayout(false);
-            this.titlePageAllignGroupBox.PerformLayout();
-            this.titlePageIncludeGroupBox.ResumeLayout(false);
-            this.titlePageIncludeGroupBox.PerformLayout();
-            this.sectionsPanel.ResumeLayout(false);
-            this.sectionsOptionsGroupBox.ResumeLayout(false);
-            this.sectionLabelGroupBox.ResumeLayout(false);
-            this.sectionLabelGroupBox.PerformLayout();
-            this.sectionLabelStyleGroupBox.ResumeLayout(false);
-            this.sectionLabelStyleGroupBox.PerformLayout();
-            this.sectionLabelLocationGroupBox.ResumeLayout(false);
-            this.sectionLabelLocationGroupBox.PerformLayout();
-            this.betweenSectionsGroupBox.ResumeLayout(false);
-            this.betweenSectionsGroupBox.PerformLayout();
+            this.contentTab.ResumeLayout(false);
+            this.contentPanel.ResumeLayout(false);
+            this.conclusionContentGroupBox.ResumeLayout(false);
+            this.conclusionContentGroupBox.PerformLayout();
+            this.conclusionContentPanel.ResumeLayout(false);
+            this.conclusionToolStripContainer.ContentPanel.ResumeLayout(false);
+            this.conclusionToolStripContainer.TopToolStripPanel.ResumeLayout(false);
+            this.conclusionToolStripContainer.TopToolStripPanel.PerformLayout();
+            this.conclusionToolStripContainer.ResumeLayout(false);
+            this.conclusionToolStripContainer.PerformLayout();
             this.section1groupBox.ResumeLayout(false);
             this.section1groupBox.PerformLayout();
             this.section1ContentPanel.ResumeLayout(false);
@@ -4647,15 +5010,24 @@
             this.section1ToolStripContainer.TopToolStripPanel.PerformLayout();
             this.section1ToolStripContainer.ResumeLayout(false);
             this.section1ToolStripContainer.PerformLayout();
-            this.generalPanel.ResumeLayout(false);
-            this.paperFormattingGroupBox.ResumeLayout(false);
-            this.paperFormattingGroupBox.PerformLayout();
-            this.includeInPapeGroupBox.ResumeLayout(false);
-            this.includeInPapeGroupBox.PerformLayout();
-            this.paperTitleGroupBox.ResumeLayout(false);
-            this.paperTitleGroupBox.PerformLayout();
-            this.apaMlaGroupBox.ResumeLayout(false);
-            this.apaMlaGroupBox.PerformLayout();
+            this.abstractContentGroupBox.ResumeLayout(false);
+            this.abstractContentGroupBox.PerformLayout();
+            this.abstractContentPanel.ResumeLayout(false);
+            this.abstractContentToolStripContainer.ContentPanel.ResumeLayout(false);
+            this.abstractContentToolStripContainer.TopToolStripPanel.ResumeLayout(false);
+            this.abstractContentToolStripContainer.TopToolStripPanel.PerformLayout();
+            this.abstractContentToolStripContainer.ResumeLayout(false);
+            this.abstractContentToolStripContainer.PerformLayout();
+            this.summaryContentGroupBox.ResumeLayout(false);
+            this.summaryContentGroupBox.PerformLayout();
+            this.summaryContentPanel.ResumeLayout(false);
+            this.summaryToolStripContainer.ContentPanel.ResumeLayout(false);
+            this.summaryToolStripContainer.TopToolStripPanel.ResumeLayout(false);
+            this.summaryToolStripContainer.TopToolStripPanel.PerformLayout();
+            this.summaryToolStripContainer.ResumeLayout(false);
+            this.summaryToolStripContainer.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.finalizePanel.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -4672,7 +5044,6 @@
         private System.Windows.Forms.ToolStripButton openButton;
         private System.Windows.Forms.ToolStripButton settingsButton;
         public System.Windows.Forms.ToolStripButton saveButton;
-        private System.Windows.Forms.Panel sectionPanel;
         private System.Windows.Forms.Panel generalPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel previewPanel;
@@ -4703,7 +5074,6 @@
         private System.Windows.Forms.Label section1contentLabel;
         private System.Windows.Forms.Button section1AddSubsectionButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button addSectionButton;
         private System.Windows.Forms.Panel titlePagePanel;
         private System.Windows.Forms.GroupBox titlePageIncludeGroupBox;
         private System.Windows.Forms.Label titlePageProfessorLabel;
@@ -4785,8 +5155,6 @@
         private System.Windows.Forms.ComboBox abstractTitleFontChoose;
         private System.Windows.Forms.CheckBox abstractTitleBoldCheck;
         private System.Windows.Forms.CheckBox abstractIncludeTitleCheck;
-        private System.Windows.Forms.TextBox abstractTitleText;
-        private System.Windows.Forms.Label abstractTitleLabel;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.GroupBox summaryContentGroupBox;
         private System.Windows.Forms.Panel summaryContentPanel;
@@ -4805,22 +5173,10 @@
         private System.Windows.Forms.ComboBox summaryTitleFontChoose;
         private System.Windows.Forms.CheckBox summaryTitleBoldCheck;
         private System.Windows.Forms.CheckBox summaryIncludeTitleCheck;
-        private System.Windows.Forms.TextBox summaryTitleText;
-        private System.Windows.Forms.Label summaryTitleTextLabel;
         private System.Windows.Forms.CheckBox summaryOwnPageCheck;
         private System.Windows.Forms.Panel section1ContentPanel;
         private System.Windows.Forms.ToolStripContainer section1ToolStripContainer;
         private System.Windows.Forms.RichTextBox section1Content;
-        private System.Windows.Forms.GroupBox paperFormattingGroupBox;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button dateUpButton;
         private System.Windows.Forms.Button dateDownButton;
         private System.Windows.Forms.CheckBox titlePageDateCheck;
@@ -4952,8 +5308,6 @@
         private System.Windows.Forms.ComboBox conclusionTitleFontChoose;
         private System.Windows.Forms.CheckBox conclusionTitleBoldCheck;
         private System.Windows.Forms.CheckBox conclusionIncludeTitleCheck;
-        private System.Windows.Forms.TextBox conclusionTitleEnter;
-        private System.Windows.Forms.Label conclusionTitleLabel;
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.GroupBox referencesOptionsGroupBox;
         private System.Windows.Forms.CheckBox referencesHangingIndentCheck;
@@ -5015,6 +5369,51 @@
         private System.Windows.Forms.RadioButton footerCenterEmptyRadio;
         private System.Windows.Forms.RadioButton footerLeftEmptyRadio;
         private System.Windows.Forms.ToolStrip section1ToolStrip;
+        private System.Windows.Forms.GroupBox subsectionLabelGroupBox;
+        private System.Windows.Forms.GroupBox subsectionLabelStyleGroupBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.GroupBox subsectionLabelLocationGroupBox;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.CheckBox includeSubsectionLabelCheck;
+        private System.Windows.Forms.GroupBox subsubsectionLabelGroupBox;
+        private System.Windows.Forms.GroupBox subsubsectionLabelStyleGroupBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.GroupBox subsubsectionLabelLocationGroupBox;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.CheckBox includeSubsubsectionLabelCheck;
+        private System.Windows.Forms.TabControl sectionTabControl;
+        private System.Windows.Forms.TabPage formattingTab;
+        private System.Windows.Forms.TabPage contentTab;
+        private System.Windows.Forms.Panel contentPanel;
+        private System.Windows.Forms.Button addSectionButton;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label conclusionTitleLabel;
+        private System.Windows.Forms.TextBox conclusionTitleEnter;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label abstractTitleLabel;
+        private System.Windows.Forms.TextBox abstractTitleText;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label summaryTitleTextLabel;
+        private System.Windows.Forms.TextBox summaryTitleText;
+        private System.Windows.Forms.Label label11;
     }
 }
 
