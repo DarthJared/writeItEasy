@@ -49,7 +49,7 @@
             this.conclusionTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.conclusionTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.conclusionIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.conclusionOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.conclusionHeader = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.footerOptionsGroupBox = new System.Windows.Forms.GroupBox();
@@ -628,7 +628,7 @@
             // 
             this.conclusionOptionsGroupBox.Controls.Add(this.conclusionDefaultButton);
             this.conclusionOptionsGroupBox.Controls.Add(this.conclusionTitleGroupBox);
-            this.conclusionOptionsGroupBox.Controls.Add(this.checkBox19);
+            this.conclusionOptionsGroupBox.Controls.Add(this.conclusionOwnPageCheck);
             this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
@@ -755,16 +755,17 @@
             this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.conclusionIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.conclusionIncludeTitleCheck_CheckedChanged);
             // 
-            // checkBox19
+            // conclusionOwnPageCheck
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox19.Location = new System.Drawing.Point(9, 19);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(107, 17);
-            this.checkBox19.TabIndex = 0;
-            this.checkBox19.Text = "On Its Own Page";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.conclusionOwnPageCheck.AutoSize = true;
+            this.conclusionOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionOwnPageCheck.Location = new System.Drawing.Point(9, 19);
+            this.conclusionOwnPageCheck.Name = "conclusionOwnPageCheck";
+            this.conclusionOwnPageCheck.Size = new System.Drawing.Size(107, 17);
+            this.conclusionOwnPageCheck.TabIndex = 0;
+            this.conclusionOwnPageCheck.Text = "On Its Own Page";
+            this.conclusionOwnPageCheck.UseVisualStyleBackColor = true;
+            this.conclusionOwnPageCheck.CheckedChanged += new System.EventHandler(this.conclusionOwnPageCheck_CheckedChanged);
             // 
             // conclusionHeader
             // 
@@ -5315,7 +5316,7 @@
         private System.Windows.Forms.ComboBox conclusionTitleFontChoose;
         private System.Windows.Forms.CheckBox conclusionTitleBoldCheck;
         private System.Windows.Forms.CheckBox conclusionIncludeTitleCheck;
-        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox conclusionOwnPageCheck;
         private System.Windows.Forms.GroupBox referencesOptionsGroupBox;
         private System.Windows.Forms.CheckBox referencesHangingIndentCheck;
         private System.Windows.Forms.Button referencesDefaultButton;

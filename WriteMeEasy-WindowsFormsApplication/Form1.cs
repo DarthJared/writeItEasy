@@ -36,5 +36,17 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             myPaper.conclusion.conclusionContent = conclusionContent.Text;
         }
+
+        private void conclusionOwnPageCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (conclusionOwnPageCheck.Checked)
+            {
+                myPaper.conclusion.onOwnPage = true;
+            }
+            else
+            {
+                myPaper.conclusion.onOwnPage = false;
+            }
+        }
     }
 }

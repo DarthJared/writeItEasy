@@ -74,10 +74,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
                         labelText.Range.Text = myPaper.summary.title;
+                        labelText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
                         labelText.Range.InsertParagraphAfter();
                     }
                     Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
                     paragraphText.Range.Text = myPaper.summary.content;
+                    paragraphText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     paragraphText.Range.InsertParagraphAfter();
                 }
 
@@ -87,6 +89,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
                         labelText.Range.Text = myPaper.abstractConfig.title;
+                        labelText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
                         labelText.Range.InsertParagraphAfter();
                     }
                     Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
@@ -147,6 +150,11 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeConclusion)
                 {
+                    if (myPaper.conclusion.onOwnPage)
+                    {
+                        Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                        pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                    }
                     if (myPaper.conclusion.includeTitle)
                     {
                         Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
