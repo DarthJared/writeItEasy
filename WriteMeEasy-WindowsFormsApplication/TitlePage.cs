@@ -19,6 +19,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (titlePageIncludeCheck.Checked)
             {
+                myPaper.includeTitlePage = true;
                 titlePagePanel.Visible = true;
                 lowerSection(sectionHeight, "TITLE_PAGE");
                 titlePageActive = true;
@@ -26,6 +27,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeTitlePage = false;
                 titlePagePanel.Visible = false;
                 raiseSection(sectionHeight, "TITLE_PAGE");
                 titlePageActive = false;

@@ -28,6 +28,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (summaryIncludeCheck.Checked)
             {
+                myPaper.includeSummary = true;
                 if (abstractIncludeCheck.Checked)
                 {
                     addSpace("abstractContentGroupBox", 312, "contentPanel", "CONTENT");
@@ -46,6 +47,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeSummary = false;
                 if (abstractIncludeCheck.Checked)
                 {
                     addSpace("abstractContentGroupBox", -312, "contentPanel", "CONTENT");
@@ -91,6 +93,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (abstractIncludeCheck.Checked)
             {
+                myPaper.includeAbstract = true;
                 addSpace("section1GroupBox", 312, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 312);
                 abstractContentGroupBox.Visible = true;
@@ -102,6 +105,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeAbstract = false;
                 addSpace("section1GroupBox", -312, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Visible = false;
 
@@ -116,6 +120,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (summaryIncludeTitleCheck.Checked)
             {
+                myPaper.summary.includeTitle = true;
                 summaryTitleGroupBox.Height = 150;
                 summaryDefaultButton.Location = new Point(9, 198);
                 summaryOptionsGroupBox.Height += 105;
@@ -135,6 +140,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
+                myPaper.summary.includeTitle = false;
                 summaryTitleTextLabel.Enabled = false;
                 summaryTitleText.Enabled = false;
                 summaryTitleBoldCheck.Visible = false;
@@ -158,6 +164,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (abstractIncludeTitleCheck.Checked)
             {
+                myPaper.abstractConfig.includeTitle = true;
                 abstractTitleGroupBox.Height = 150;
                 abstractDefaultButton.Location = new Point(9, 198);
                 abstractOptionsGroupBox.Height += 105;
@@ -177,6 +184,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
+                myPaper.abstractConfig.includeTitle = false;
                 abstractTitleLabel.Enabled = false;
                 abstractTitleText.Enabled = false;
                 abstractTitleBoldCheck.Visible = false;

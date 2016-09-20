@@ -41,6 +41,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (headerIncludeCheck.Checked)
             {
+                myPaper.includeHeader = true;
                 headerPanel.Visible = true;
                 lowerSection(sectionHeight, "HEADER");
                 headerActive = true;
@@ -48,6 +49,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeHeader = false;
                 headerPanel.Visible = false;
                 raiseSection(sectionHeight, "HEADER");
                 headerActive = false;
@@ -94,6 +96,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (footerIncludeCheck.Checked)
             {
+                myPaper.includeFooter = true;
                 footerPanel.Visible = true;
                 lowerSection(sectionHeight, "FOOTER");
                 footerActive = true;
@@ -101,6 +104,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeFooter = false;
                 footerPanel.Visible = false;
                 raiseSection(sectionHeight, "FOOTER");
                 footerActive = false;

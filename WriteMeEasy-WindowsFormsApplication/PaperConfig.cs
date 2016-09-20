@@ -30,7 +30,11 @@ namespace WriteMeEasy_WindowsFormsApplication
         
         public PaperConfig()
         {
+            titlePage = new TitlePageConfig();
+            summary = new SummaryAbstractConfig();
+            abstractConfig = new SummaryAbstractConfig();
             sections = new List<Section>();
+            conclusion = new ConclusionConfig();
         }
     }
 }

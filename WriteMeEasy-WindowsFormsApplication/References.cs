@@ -62,6 +62,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (referencesIncludeCheck.Checked)
             {
+                myPaper.includeReferences = true;
                 referencesPanel.Visible = true;
                 lowerSection(sectionHeight, "REFERENCES");
                 referencesActive = true;
@@ -69,6 +70,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeReferences = false;
                 referencesPanel.Visible = false;
                 raiseSection(sectionHeight, "REFERENCES");
                 referencesActive = false;

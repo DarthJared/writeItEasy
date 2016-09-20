@@ -56,6 +56,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (conclusionIncludeCheck.Checked)
             {
+                myPaper.includeConclusion = true;
                 contentPanel.Height += 312;
                 int newY = addSectionButton.Location.Y + addSectionButton.Height + 20;
                 conclusionContentGroupBox.Location = new Point(9, newY);
@@ -68,6 +69,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
+                myPaper.includeConclusion = false;
                 contentPanel.Height -= 312;
                 conclusionContentGroupBox.Visible = false;
 
@@ -82,6 +84,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (conclusionIncludeTitleCheck.Checked)
             {
+                myPaper.conclusion.includeTitle = true;
                 lowerSection(105, "CONCLUSION");
                 sections["CONCLUSION"] += 105;
                 conclusionPanel.Height += 105;
@@ -101,6 +104,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
+                myPaper.conclusion.includeTitle = false;
                 conclusionTitleLabel.Enabled = false;
                 conclusionTitleEnter.Enabled = false;
                 conclusionTitleBoldCheck.Visible = false;

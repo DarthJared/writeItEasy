@@ -63,6 +63,49 @@ namespace WriteMeEasy_WindowsFormsApplication
                 //document.Content.SetRange(0, 0);
                 //document.Content.Text = "This is test document " + Environment.NewLine;
 
+                if (myPaper.includeTitlePage)
+                {
+
+                }
+
+                if (myPaper.includeSummary)
+                {
+                    if (myPaper.summary.includeTitle)
+                    {
+                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                        labelText.Range.Text = myPaper.summary.title;
+                        labelText.Range.InsertParagraphAfter();
+                    }
+                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
+                    paragraphText.Range.Text = myPaper.summary.content;
+                    paragraphText.Range.InsertParagraphAfter();
+                }
+
+                if (myPaper.includeAbstract)
+                {
+                    if (myPaper.abstractConfig.includeTitle)
+                    {
+                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                        labelText.Range.Text = myPaper.abstractConfig.title;
+                        labelText.Range.InsertParagraphAfter();
+                    }
+                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
+                    paragraphText.Range.Text = myPaper.abstractConfig.content;
+                    paragraphText.Range.InsertParagraphAfter();
+                }
+
+                if (myPaper.includeHeader)
+                {
+
+                }
+
+                if (myPaper.includeFooter)
+                {
+
+                }
+
+                
+
                 foreach(Section section in myPaper.sections)
                 {
                     if (includeSectionLabelsCheck.Checked)
@@ -102,6 +145,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                     }
                 }
 
+                if (myPaper.includeConclusion)
+                {
+                    if (myPaper.conclusion.includeTitle)
+                    {
+                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                        labelText.Range.Text = myPaper.conclusion.title;
+                        labelText.Range.InsertParagraphAfter();
+                    }
+                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
+                    paragraphText.Range.Text = myPaper.conclusion.conclusionContent;
+                    paragraphText.Range.InsertParagraphAfter();
+                }
+
+                if (myPaper.includeReferences)
+                {
+
+                }
+
                 //Paragraph para1 = document.Content.Paragraphs.Add(ref missing);
                 //object styleHeading1 = "Heading 1";
                 //para1.Range.set_Style(ref styleHeading1);
@@ -114,7 +175,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 //para2.Range.Text = "Para 2 text";
                 //para2.Range.InsertParagraphAfter();
 
-                object filename = @"C:\Users\Jbeagle\Desktop\DocXExample.docx";
+                object filename = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
                 document.Close(ref missing, ref missing, ref missing);
                 document = null;

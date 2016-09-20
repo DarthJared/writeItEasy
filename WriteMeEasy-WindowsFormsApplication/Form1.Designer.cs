@@ -4402,6 +4402,7 @@
             this.conclusionTitleEnter.Size = new System.Drawing.Size(185, 20);
             this.conclusionTitleEnter.TabIndex = 12;
             this.conclusionTitleEnter.Tag = "1";
+            this.conclusionTitleEnter.TextChanged += new System.EventHandler(this.conclusionTitleEnter_TextChanged);
             // 
             // label19
             // 
@@ -4447,6 +4448,7 @@
             this.conclusionContent.Size = new System.Drawing.Size(594, 182);
             this.conclusionContent.TabIndex = 0;
             this.conclusionContent.Text = "";
+            this.conclusionContent.TextChanged += new System.EventHandler(this.conclusionContent_TextChanged);
             // 
             // toolStrip4
             // 
@@ -4603,6 +4605,7 @@
             this.abstractTitleText.Size = new System.Drawing.Size(185, 20);
             this.abstractTitleText.TabIndex = 12;
             this.abstractTitleText.Tag = "abstract";
+            this.abstractTitleText.TextChanged += new System.EventHandler(this.abstractTitleText_TextChanged);
             // 
             // label17
             // 
@@ -4648,6 +4651,7 @@
             this.abstractContent.Size = new System.Drawing.Size(594, 182);
             this.abstractContent.TabIndex = 0;
             this.abstractContent.Text = "";
+            this.abstractContent.TextChanged += new System.EventHandler(this.abstractContent_TextChanged);
             // 
             // toolStrip3
             // 
@@ -4706,6 +4710,7 @@
             this.summaryTitleText.Size = new System.Drawing.Size(185, 20);
             this.summaryTitleText.TabIndex = 12;
             this.summaryTitleText.Tag = "summary";
+            this.summaryTitleText.TextChanged += new System.EventHandler(this.summaryTitleText_TextChanged);
             // 
             // label11
             // 
@@ -4751,6 +4756,7 @@
             this.summaryContent.Size = new System.Drawing.Size(594, 182);
             this.summaryContent.TabIndex = 0;
             this.summaryContent.Text = "";
+            this.summaryContent.TextChanged += new System.EventHandler(this.summaryContent_TextChanged);
             // 
             // toolStrip2
             // 
