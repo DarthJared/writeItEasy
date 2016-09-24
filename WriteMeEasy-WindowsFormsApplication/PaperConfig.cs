@@ -35,6 +35,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             abstractConfig = new SummaryAbstractConfig();
             sections = new List<Section>();
             conclusion = new ConclusionConfig();
+            sectionsConfig = new SectionsConfig();
         }
     }
 }

@@ -140,8 +140,8 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.subsubsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.subsubsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
+            this.subsubsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
             this.subsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
@@ -155,8 +155,8 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.subsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.subsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
+            this.subsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
@@ -170,8 +170,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.sectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.sectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
+            this.sectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSectionLabelsCheck = new System.Windows.Forms.CheckBox();
             this.betweenSectionsGroupBox = new System.Windows.Forms.GroupBox();
             this.noSpaceBetweenSectionsRadio = new System.Windows.Forms.RadioButton();
@@ -1785,8 +1785,8 @@
             // 
             // subsubsectionLabelLocationGroupBox
             // 
-            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton5);
-            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.radioButton6);
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.subsubsectionLabelInLineRadio);
+            this.subsubsectionLabelLocationGroupBox.Controls.Add(this.subsubsectionLabelBeforeRadio);
             this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
@@ -1796,27 +1796,29 @@
             this.subsubsectionLabelLocationGroupBox.Text = "Location";
             this.subsubsectionLabelLocationGroupBox.Visible = false;
             // 
-            // radioButton5
+            // subsubsectionLabelInLineRadio
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 18);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(106, 17);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "In Line With Text";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelInLineRadio.AutoSize = true;
+            this.subsubsectionLabelInLineRadio.Checked = true;
+            this.subsubsectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
+            this.subsubsectionLabelInLineRadio.Name = "subsubsectionLabelInLineRadio";
+            this.subsubsectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
+            this.subsubsectionLabelInLineRadio.TabIndex = 1;
+            this.subsubsectionLabelInLineRadio.TabStop = true;
+            this.subsubsectionLabelInLineRadio.Text = "In Line With Text";
+            this.subsubsectionLabelInLineRadio.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelInLineRadio.CheckedChanged += new System.EventHandler(this.subsubsectionLabelInLineRadio_Changed);
             // 
-            // radioButton6
+            // subsubsectionLabelBeforeRadio
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(7, 41);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(186, 17);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.Text = "On Separate Line Before Sections";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBeforeRadio.AutoSize = true;
+            this.subsubsectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
+            this.subsubsectionLabelBeforeRadio.Name = "subsubsectionLabelBeforeRadio";
+            this.subsubsectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
+            this.subsubsectionLabelBeforeRadio.TabIndex = 2;
+            this.subsubsectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
+            this.subsubsectionLabelBeforeRadio.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBeforeRadio.CheckedChanged += new System.EventHandler(this.subsubsectionLabelBeforeRadio_Changed);
             // 
             // includeSubsubsectionLabelCheck
             // 
@@ -1944,8 +1946,8 @@
             // 
             // subsectionLabelLocationGroupBox
             // 
-            this.subsectionLabelLocationGroupBox.Controls.Add(this.radioButton3);
-            this.subsectionLabelLocationGroupBox.Controls.Add(this.radioButton4);
+            this.subsectionLabelLocationGroupBox.Controls.Add(this.subsectionLabelInLineRadio);
+            this.subsectionLabelLocationGroupBox.Controls.Add(this.subsectionLabelBeforeRadio);
             this.subsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsectionLabelLocationGroupBox.Name = "subsectionLabelLocationGroupBox";
             this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
@@ -1954,27 +1956,29 @@
             this.subsectionLabelLocationGroupBox.Text = "Location";
             this.subsectionLabelLocationGroupBox.Visible = false;
             // 
-            // radioButton3
+            // subsectionLabelInLineRadio
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 18);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(106, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "In Line With Text";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.subsectionLabelInLineRadio.AutoSize = true;
+            this.subsectionLabelInLineRadio.Checked = true;
+            this.subsectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
+            this.subsectionLabelInLineRadio.Name = "subsectionLabelInLineRadio";
+            this.subsectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
+            this.subsectionLabelInLineRadio.TabIndex = 1;
+            this.subsectionLabelInLineRadio.TabStop = true;
+            this.subsectionLabelInLineRadio.Text = "In Line With Text";
+            this.subsectionLabelInLineRadio.UseVisualStyleBackColor = true;
+            this.subsectionLabelInLineRadio.CheckedChanged += new System.EventHandler(this.subsectionLabelInLineRadio_Changed);
             // 
-            // radioButton4
+            // subsectionLabelBeforeRadio
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 41);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(186, 17);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.Text = "On Separate Line Before Sections";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.subsectionLabelBeforeRadio.AutoSize = true;
+            this.subsectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
+            this.subsectionLabelBeforeRadio.Name = "subsectionLabelBeforeRadio";
+            this.subsectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
+            this.subsectionLabelBeforeRadio.TabIndex = 2;
+            this.subsectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
+            this.subsectionLabelBeforeRadio.UseVisualStyleBackColor = true;
+            this.subsectionLabelBeforeRadio.CheckedChanged += new System.EventHandler(this.subsectionLabelBeforeRadio_Changed);
             // 
             // includeSubsectionLabelCheck
             // 
@@ -2101,8 +2105,8 @@
             // 
             // sectionLabelLocationGroupBox
             // 
-            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton1);
-            this.sectionLabelLocationGroupBox.Controls.Add(this.radioButton2);
+            this.sectionLabelLocationGroupBox.Controls.Add(this.sectionLabelInLineRadio);
+            this.sectionLabelLocationGroupBox.Controls.Add(this.sectionLabelBeforeRadio);
             this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.sectionLabelLocationGroupBox.Name = "sectionLabelLocationGroupBox";
             this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
@@ -2111,27 +2115,29 @@
             this.sectionLabelLocationGroupBox.Text = "Location";
             this.sectionLabelLocationGroupBox.Visible = false;
             // 
-            // radioButton1
+            // sectionLabelInLineRadio
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In Line With Text";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.sectionLabelInLineRadio.AutoSize = true;
+            this.sectionLabelInLineRadio.Checked = true;
+            this.sectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
+            this.sectionLabelInLineRadio.Name = "sectionLabelInLineRadio";
+            this.sectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
+            this.sectionLabelInLineRadio.TabIndex = 1;
+            this.sectionLabelInLineRadio.TabStop = true;
+            this.sectionLabelInLineRadio.Text = "In Line With Text";
+            this.sectionLabelInLineRadio.UseVisualStyleBackColor = true;
+            this.sectionLabelInLineRadio.CheckedChanged += new System.EventHandler(this.sectionLabelInLineRadio_Changed);
             // 
-            // radioButton2
+            // sectionLabelBeforeRadio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(186, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = "On Separate Line Before Sections";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.sectionLabelBeforeRadio.AutoSize = true;
+            this.sectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
+            this.sectionLabelBeforeRadio.Name = "sectionLabelBeforeRadio";
+            this.sectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
+            this.sectionLabelBeforeRadio.TabIndex = 2;
+            this.sectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
+            this.sectionLabelBeforeRadio.UseVisualStyleBackColor = true;
+            this.sectionLabelBeforeRadio.CheckedChanged += new System.EventHandler(this.sectionLabelBeforeRadio_Changed);
             // 
             // includeSectionLabelsCheck
             // 
@@ -5129,8 +5135,8 @@
         private System.Windows.Forms.Panel referencesPanel;
         private System.Windows.Forms.Label referencesHeader;
         private System.Windows.Forms.GroupBox sectionLabelGroupBox;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton sectionLabelBeforeRadio;
+        private System.Windows.Forms.RadioButton sectionLabelInLineRadio;
         private System.Windows.Forms.GroupBox sectionLabelStyleGroupBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
@@ -5389,8 +5395,8 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.GroupBox subsectionLabelLocationGroupBox;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton subsectionLabelInLineRadio;
+        private System.Windows.Forms.RadioButton subsectionLabelBeforeRadio;
         private System.Windows.Forms.CheckBox includeSubsectionLabelCheck;
         private System.Windows.Forms.GroupBox subsubsectionLabelGroupBox;
         private System.Windows.Forms.GroupBox subsubsectionLabelStyleGroupBox;
@@ -5404,8 +5410,8 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.GroupBox subsubsectionLabelLocationGroupBox;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton subsubsectionLabelInLineRadio;
+        private System.Windows.Forms.RadioButton subsubsectionLabelBeforeRadio;
         private System.Windows.Forms.CheckBox includeSubsubsectionLabelCheck;
         private System.Windows.Forms.TabControl sectionTabControl;
         private System.Windows.Forms.TabPage formattingTab;

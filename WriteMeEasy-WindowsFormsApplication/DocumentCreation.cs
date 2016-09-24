@@ -111,38 +111,75 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 foreach(Section section in myPaper.sections)
                 {
+                    Paragraph sectionText = document.Content.Paragraphs.Add(ref missing);
+                    string sectionTextStr = "";
                     if (includeSectionLabelsCheck.Checked)
                     {
-                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                        labelText.Range.Text = section.title;
-                        labelText.Range.InsertParagraphAfter();
+                        if (myPaper.sectionsConfig.sectionLabelInlineWithText)
+                        {
+                            sectionTextStr += section.title + ". ";
+                        }
+                        else if (myPaper.sectionsConfig.sectionLabelOnOwnLine)
+                        {
+                            Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                            labelText.Range.Text = section.title;
+                            labelText.Range.InsertParagraphAfter();
+                        }  
+                        else
+                        {
+                            sectionTextStr += section.title + ". ";
+                        }                      
                     }
-                    Paragraph sectionText = document.Content.Paragraphs.Add(ref missing);
-                    sectionText.Range.Text = section.content;
+                    
+                    sectionText.Range.Text = sectionTextStr + section.content;
                     sectionText.Range.InsertParagraphAfter();
                     
                     foreach (SubSection subsection in section.subSections)
                     {
+                        Paragraph subsectionText = document.Content.Paragraphs.Add(ref missing);
+                        string subsectionTextStr = "";
                         if (includeSubsectionLabelCheck.Checked)
                         {
-                            Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                            labelText.Range.Text = subsection.title;
-                            labelText.Range.InsertParagraphAfter();
+                            if (myPaper.sectionsConfig.subsectionLabelInlineWithText)
+                            {
+                                subsectionTextStr += subsection.title + ". ";
+                            }
+                            else if (myPaper.sectionsConfig.subsectionLabelOnOwnLine)
+                            {
+                                Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                                labelText.Range.Text = subsection.title;
+                                labelText.Range.InsertParagraphAfter();
+                            }   
+                            else
+                            {
+                                subsectionTextStr += subsection.title + ". ";
+                            }                         
                         }
-                        Paragraph subsectionText = document.Content.Paragraphs.Add(ref missing);
-                        subsectionText.Range.Text = subsection.content;
+                        subsectionText.Range.Text = subsectionTextStr + subsection.content;
                         subsectionText.Range.InsertParagraphAfter();
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
                         {
+                            Paragraph subsubsectionText = document.Content.Paragraphs.Add(ref missing);
+                            string subsubsectionTextStr = "";
                             if (includeSubsubsectionLabelCheck.Checked)
                             {
-                                Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                                labelText.Range.Text = subsubsection.title;
-                                labelText.Range.InsertParagraphAfter();
+                                if (myPaper.sectionsConfig.subsubsectionLabelInlineWithText)
+                                {
+                                    subsubsectionText.Range.Text += subsubsection.title + ". " + subsubsection.content;
+                                }
+                                else if (myPaper.sectionsConfig.subsubsectionLabelOnOwnLine)
+                                {
+                                    Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
+                                    labelText.Range.Text = subsubsection.title;
+                                    labelText.Range.InsertParagraphAfter();
+                                    subsubsectionText.Range.Text = subsubsection.content;
+                                }          
+                                else
+                                {
+                                    subsubsectionTextStr += subsubsection.title + ". " + subsubsection.content;
+                                }                      
                             }
-                            Paragraph subsubsectionText = document.Content.Paragraphs.Add(ref missing);
-                            subsubsectionText.Range.Text = subsubsection.content;
                             subsubsectionText.Range.InsertParagraphAfter();
                         }
                     }
