@@ -112,72 +112,128 @@ namespace WriteMeEasy_WindowsFormsApplication
                 foreach(Section section in myPaper.sections)
                 {
                     Paragraph sectionText = document.Content.Paragraphs.Add(ref missing);
-                    string sectionTextStr = "";
                     if (includeSectionLabelsCheck.Checked)
                     {
                         if (myPaper.sectionsConfig.sectionLabelInlineWithText)
                         {
-                            sectionTextStr += section.title + ". ";
+                            sectionText.Range.Text = section.title + ". " + section.content;
+                            int start = 0;
+                            int end = section.title.Length + 1;
+                            if (myPaper.sectionsConfig.sectionLabelBold)
+                            {
+                                Range rangeToBold = sectionText.Range.Duplicate;
+                                rangeToBold.SetRange(start, end);
+                                rangeToBold.Bold = 1;
+                            }                            
                         }
                         else if (myPaper.sectionsConfig.sectionLabelOnOwnLine)
                         {
                             Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
                             labelText.Range.Text = section.title;
+                            if (myPaper.sectionsConfig.sectionLabelBold)
+                            {
+                                labelText.Range.Bold = 1;
+                            }
                             labelText.Range.InsertParagraphAfter();
+                            sectionText.Range.Text = section.content;
                         }  
                         else
                         {
-                            sectionTextStr += section.title + ". ";
+                            sectionText.Range.Text = section.title + ". " + section.content;
+                            int start = 0;
+                            int end = section.title.Length + 1;
+                            if (myPaper.sectionsConfig.sectionLabelBold)
+                            {
+                                Range rangeToBold = sectionText.Range.Duplicate;
+                                rangeToBold.SetRange(start, end);
+                                rangeToBold.Bold = 1;
+                            }
                         }                      
                     }
-                    
-                    sectionText.Range.Text = sectionTextStr + section.content;
                     sectionText.Range.InsertParagraphAfter();
                     
                     foreach (SubSection subsection in section.subSections)
                     {
                         Paragraph subsectionText = document.Content.Paragraphs.Add(ref missing);
-                        string subsectionTextStr = "";
                         if (includeSubsectionLabelCheck.Checked)
                         {
                             if (myPaper.sectionsConfig.subsectionLabelInlineWithText)
                             {
-                                subsectionTextStr += subsection.title + ". ";
+                                subsectionText.Range.Text = subsection.title + ". " + subsection.content;
+                                int start = 0;
+                                int end = subsection.title.Length + 1;
+                                if (myPaper.sectionsConfig.subsectionLabelBold)
+                                {
+                                    Range rangeToBold = subsectionText.Range.Duplicate;
+                                    rangeToBold.SetRange(start, end);
+                                    rangeToBold.Bold = 1;
+                                }
                             }
                             else if (myPaper.sectionsConfig.subsectionLabelOnOwnLine)
                             {
                                 Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
                                 labelText.Range.Text = subsection.title;
+                                if (myPaper.sectionsConfig.subsectionLabelBold)
+                                {
+                                    labelText.Range.Bold = 1;
+                                }
                                 labelText.Range.InsertParagraphAfter();
+                                subsectionText.Range.Text = subsection.content;
                             }   
                             else
                             {
-                                subsectionTextStr += subsection.title + ". ";
+                                subsectionText.Range.Text = subsection.title + ". " + subsection.content;
+                                int start = 0;
+                                int end = subsection.title.Length + 1;
+                                if (myPaper.sectionsConfig.subsectionLabelBold)
+                                {
+                                    Range rangeToBold = subsectionText.Range.Duplicate;
+                                    rangeToBold.SetRange(start, end);
+                                    rangeToBold.Bold = 1;
+                                }
                             }                         
                         }
-                        subsectionText.Range.Text = subsectionTextStr + subsection.content;
                         subsectionText.Range.InsertParagraphAfter();
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
                         {
                             Paragraph subsubsectionText = document.Content.Paragraphs.Add(ref missing);
-                            string subsubsectionTextStr = "";
                             if (includeSubsubsectionLabelCheck.Checked)
                             {
                                 if (myPaper.sectionsConfig.subsubsectionLabelInlineWithText)
                                 {
-                                    subsubsectionText.Range.Text += subsubsection.title + ". " + subsubsection.content;
+                                    subsubsectionText.Range.Text = subsubsection.title + ". " + subsubsection.content;
+                                    int start = 0;
+                                    int end = subsubsection.title.Length + 1;
+                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                    {
+                                        Range rangeToBold = subsubsectionText.Range.Duplicate;
+                                        rangeToBold.SetRange(start, end);
+                                        rangeToBold.Bold = 1;
+                                    }
                                 }
                                 else if (myPaper.sectionsConfig.subsubsectionLabelOnOwnLine)
                                 {
                                     Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
                                     labelText.Range.Text = subsubsection.title;
+                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                    {
+                                        labelText.Range.Bold = 1;
+                                    }
                                     labelText.Range.InsertParagraphAfter();
                                     subsubsectionText.Range.Text = subsubsection.content;
                                 }          
                                 else
                                 {
-                                    subsubsectionTextStr += subsubsection.title + ". " + subsubsection.content;
+                                    subsubsectionText.Range.Text = subsubsection.title + ". " + subsubsection.content;
+                                    int start = 0;
+                                    int end = subsubsection.title.Length + 1;
+                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                    {
+                                        Range rangeToBold = subsubsectionText.Range.Duplicate;
+                                        rangeToBold.SetRange(start, end);
+                                        rangeToBold.Bold = 1;
+                                    }
                                 }                      
                             }
                             subsubsectionText.Range.InsertParagraphAfter();

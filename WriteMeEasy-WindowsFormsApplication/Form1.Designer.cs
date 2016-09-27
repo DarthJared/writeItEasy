@@ -130,45 +130,45 @@
             this.sectionsDefaultButton = new System.Windows.Forms.Button();
             this.subsubsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
             this.subsubsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.subsubsectionLabelButton = new System.Windows.Forms.Button();
+            this.subsubsectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.subsubsectionLabelSize = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.subsubsectionLabelFont = new System.Windows.Forms.ComboBox();
+            this.subsubsectionLabelBullettedCheck = new System.Windows.Forms.CheckBox();
+            this.subsubsectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.subsubsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.subsubsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
             this.subsubsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
             this.subsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.subsectionLabelColorButton = new System.Windows.Forms.Button();
+            this.subsectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.subsectionLabelSize = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.subsectionLabelFont = new System.Windows.Forms.ComboBox();
+            this.subsectionLabelBulletted = new System.Windows.Forms.CheckBox();
+            this.subsectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.subsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
             this.subsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sectionLabelColorButton = new System.Windows.Forms.Button();
+            this.sectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sectionLabelSize = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sectionLabelFont = new System.Windows.Forms.ComboBox();
+            this.sectionLabelBullettedCheck = new System.Windows.Forms.CheckBox();
+            this.sectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
             this.sectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
@@ -335,7 +335,7 @@
             this.summaryIncludeCheck = new System.Windows.Forms.CheckBox();
             this.titlePageIncludeCheck = new System.Windows.Forms.CheckBox();
             this.paperTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.paperTitleEnter = new System.Windows.Forms.TextBox();
             this.apaMlaGroupBox = new System.Windows.Forms.GroupBox();
             this.mlaRadio = new System.Windows.Forms.RadioButton();
             this.apaRadio = new System.Windows.Forms.RadioButton();
@@ -646,6 +646,7 @@
             this.conclusionDefaultButton.TabIndex = 14;
             this.conclusionDefaultButton.Text = "APA Default";
             this.conclusionDefaultButton.UseVisualStyleBackColor = true;
+            this.conclusionDefaultButton.Click += new System.EventHandler(this.conclusionDefaultButton_Click);
             // 
             // conclusionTitleGroupBox
             // 
@@ -675,6 +676,7 @@
             this.conclusionTitleColorButton.Text = "Choose";
             this.conclusionTitleColorButton.UseVisualStyleBackColor = true;
             this.conclusionTitleColorButton.Visible = false;
+            this.conclusionTitleColorButton.Click += new System.EventHandler(this.conclusionTitleColorButton_Click);
             // 
             // conclusionTitleColorText
             // 
@@ -702,6 +704,7 @@
             this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.conclusionTitleSizeChoose.TabIndex = 18;
             this.conclusionTitleSizeChoose.Visible = false;
+            this.conclusionTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleSizeChoose_SelectedIndexChanged);
             // 
             // conclusionTitleSizeLabel
             // 
@@ -731,6 +734,7 @@
             this.conclusionTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.conclusionTitleFontChoose.TabIndex = 15;
             this.conclusionTitleFontChoose.Visible = false;
+            this.conclusionTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleFontChoose_SelectedIndexChanged);
             // 
             // conclusionTitleBoldCheck
             // 
@@ -742,6 +746,7 @@
             this.conclusionTitleBoldCheck.Text = "Bold Title";
             this.conclusionTitleBoldCheck.UseVisualStyleBackColor = true;
             this.conclusionTitleBoldCheck.Visible = false;
+            this.conclusionTitleBoldCheck.CheckedChanged += new System.EventHandler(this.conclusionTitleBoldCheck_CheckedChanged);
             // 
             // conclusionIncludeTitleCheck
             // 
@@ -815,9 +820,9 @@
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageDiffCheck);
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageUseRunningHeadCheck);
             this.footerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(9, 443);
+            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(9, 440);
             this.footerFirstPageGroupBox.Name = "footerFirstPageGroupBox";
-            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(597, 40);
+            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(597, 43);
             this.footerFirstPageGroupBox.TabIndex = 27;
             this.footerFirstPageGroupBox.TabStop = false;
             this.footerFirstPageGroupBox.Text = "First Page";
@@ -864,6 +869,7 @@
             this.footerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightTitleEnter.TabIndex = 29;
             this.footerFirstRightTitleEnter.Visible = false;
+            this.footerFirstRightTitleEnter.TextChanged += new System.EventHandler(this.footerFirstRightTitleEnter_TextChanged);
             // 
             // footerFirstRightTitleLabel
             // 
@@ -882,6 +888,7 @@
             this.footerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightNumberEnter.TabIndex = 25;
             this.footerFirstRightNumberEnter.Visible = false;
+            this.footerFirstRightNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstRightNumberEnter_ValueChanged);
             // 
             // footerFirstRightNumberLabel
             // 
@@ -947,6 +954,7 @@
             this.footerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightOtherEnter.TabIndex = 19;
             this.footerFirstRightOtherEnter.Visible = false;
+            this.footerFirstRightOtherEnter.TextChanged += new System.EventHandler(this.footerFirstRightOtherEnter_TextChanged);
             // 
             // footerFirstPageCenterGroupBox
             // 
@@ -990,6 +998,7 @@
             this.footerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterTitleEnter.TabIndex = 29;
             this.footerFirstCenterTitleEnter.Visible = false;
+            this.footerFirstCenterTitleEnter.TextChanged += new System.EventHandler(this.footerFirstCenterTitleEnter_TextChanged);
             // 
             // footerFirstCenterTitleLabel
             // 
@@ -1008,6 +1017,7 @@
             this.footerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterNumberEnter.TabIndex = 25;
             this.footerFirstCenterNumberEnter.Visible = false;
+            this.footerFirstCenterNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstCenterNumberEnter_ValueChanged);
             // 
             // footerFirstCenterNumberLabel
             // 
@@ -1073,6 +1083,7 @@
             this.footerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterOtherEnter.TabIndex = 19;
             this.footerFirstCenterOtherEnter.Visible = false;
+            this.footerFirstCenterOtherEnter.TextChanged += new System.EventHandler(this.footerFirstCenterOtherEnter_TextChanged);
             // 
             // footerFirstPageLeftGroupBox
             // 
@@ -1116,6 +1127,7 @@
             this.footerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftTitleEnter.TabIndex = 29;
             this.footerFirstLeftTitleEnter.Visible = false;
+            this.footerFirstLeftTitleEnter.TextChanged += new System.EventHandler(this.footerFirstLeftTitleEnter_TextChanged);
             // 
             // footerFirstLeftTitleLabel
             // 
@@ -1134,6 +1146,7 @@
             this.footerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftNumberEnter.TabIndex = 25;
             this.footerFirstLeftNumberEnter.Visible = false;
+            this.footerFirstLeftNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstLeftNumberEnter_ValueChanged);
             // 
             // footerFirstLeftNumberLabel
             // 
@@ -1199,6 +1212,7 @@
             this.footerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftOtherEnter.TabIndex = 19;
             this.footerFirstLeftOtherEnter.Visible = false;
+            this.footerFirstLeftOtherEnter.TextChanged += new System.EventHandler(this.footerFirstLeftOtherEnter_TextChanged);
             // 
             // footerFirstPageUseMoreCheck
             // 
@@ -1236,6 +1250,7 @@
             this.footerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
             this.footerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
             this.footerFirstPageUseRunningHeadCheck.Visible = false;
+            this.footerFirstPageUseRunningHeadCheck.CheckedChanged += new System.EventHandler(this.footerFirstPageUseRunningHeadCheck_CheckedChanged);
             // 
             // footerRightGroupBox
             // 
@@ -1278,6 +1293,7 @@
             this.footerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightTitleEnter.TabIndex = 29;
             this.footerRightTitleEnter.Visible = false;
+            this.footerRightTitleEnter.TextChanged += new System.EventHandler(this.footerRightTitleEnter_TextChanged);
             // 
             // footerRightTitleLabel
             // 
@@ -1296,6 +1312,7 @@
             this.footerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightNumberEnter.TabIndex = 25;
             this.footerRightNumberEnter.Visible = false;
+            this.footerRightNumberEnter.ValueChanged += new System.EventHandler(this.footerRightNumberEnter_ValueChanged);
             // 
             // footerRightNumberLabel
             // 
@@ -1361,6 +1378,7 @@
             this.footerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightOtherEnter.TabIndex = 19;
             this.footerRightOtherEnter.Visible = false;
+            this.footerRightOtherEnter.TextChanged += new System.EventHandler(this.footerRightOtherEnter_TextChanged);
             // 
             // footerCenterGroupBox
             // 
@@ -1403,6 +1421,7 @@
             this.footerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterTitleEnter.TabIndex = 29;
             this.footerCenterTitleEnter.Visible = false;
+            this.footerCenterTitleEnter.TextChanged += new System.EventHandler(this.footerCenterTitleEnter_TextChanged);
             // 
             // footerCenterTitleLabel
             // 
@@ -1421,6 +1440,7 @@
             this.footerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterNumberEnter.TabIndex = 25;
             this.footerCenterNumberEnter.Visible = false;
+            this.footerCenterNumberEnter.ValueChanged += new System.EventHandler(this.footerCenterNumberEnter_ValueChanged);
             // 
             // footerCenterNumberLabel
             // 
@@ -1486,6 +1506,7 @@
             this.footerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterOtherEnter.TabIndex = 19;
             this.footerCenterOtherEnter.Visible = false;
+            this.footerCenterOtherEnter.TextChanged += new System.EventHandler(this.footerCenterOtherEnter_TextChanged);
             // 
             // footerLeftGroupBox
             // 
@@ -1528,6 +1549,7 @@
             this.footerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftTitleEnter.TabIndex = 29;
             this.footerLeftTitleEnter.Visible = false;
+            this.footerLeftTitleEnter.TextChanged += new System.EventHandler(this.footerLeftTitleEnter_TextChanged);
             // 
             // footerLeftTitleLabel
             // 
@@ -1546,6 +1568,7 @@
             this.footerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftNumberEnter.TabIndex = 25;
             this.footerLeftNumberEnter.Visible = false;
+            this.footerLeftNumberEnter.ValueChanged += new System.EventHandler(this.footerLeftNumberEnter_ValueChanged);
             // 
             // footerLeftNumberLabel
             // 
@@ -1611,6 +1634,7 @@
             this.footerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftOtherEnter.TabIndex = 19;
             this.footerLeftOtherEnter.Visible = false;
+            this.footerLeftOtherEnter.TextChanged += new System.EventHandler(this.footerLeftOtherEnter_TextChanged);
             // 
             // footerHeader
             // 
@@ -1679,7 +1703,7 @@
             this.subsubsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(9, 244);
             this.subsubsectionLabelGroupBox.Name = "subsubsectionLabelGroupBox";
-            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(597, 40);
+            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
             this.subsubsectionLabelGroupBox.TabIndex = 9;
             this.subsubsectionLabelGroupBox.TabStop = false;
             this.subsubsectionLabelGroupBox.Text = "Subsubsection Labels";
@@ -1687,15 +1711,15 @@
             // 
             // subsubsectionLabelStyleGroupBox
             // 
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.button2);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.textBox4);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelButton);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelColorText);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label7);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.comboBox5);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelSize);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label8);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label9);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.comboBox6);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.checkBox5);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.checkBox6);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelFont);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBullettedCheck);
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBoldCheck);
             this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsubsectionLabelStyleGroupBox.Name = "subsubsectionLabelStyleGroupBox";
             this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
@@ -1704,21 +1728,22 @@
             this.subsubsectionLabelStyleGroupBox.Text = "Style";
             this.subsubsectionLabelStyleGroupBox.Visible = false;
             // 
-            // button2
+            // subsubsectionLabelButton
             // 
-            this.button2.Location = new System.Drawing.Point(114, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Choose";
-            this.button2.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelButton.Location = new System.Drawing.Point(114, 113);
+            this.subsubsectionLabelButton.Name = "subsubsectionLabelButton";
+            this.subsubsectionLabelButton.Size = new System.Drawing.Size(73, 23);
+            this.subsubsectionLabelButton.TabIndex = 6;
+            this.subsubsectionLabelButton.Text = "Choose";
+            this.subsubsectionLabelButton.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelButton.Click += new System.EventHandler(this.subsubsectionLabelButton_Click);
             // 
-            // textBox4
+            // subsubsectionLabelColorText
             // 
-            this.textBox4.Location = new System.Drawing.Point(43, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(72, 20);
-            this.textBox4.TabIndex = 6;
+            this.subsubsectionLabelColorText.Location = new System.Drawing.Point(43, 115);
+            this.subsubsectionLabelColorText.Name = "subsubsectionLabelColorText";
+            this.subsubsectionLabelColorText.Size = new System.Drawing.Size(72, 20);
+            this.subsubsectionLabelColorText.TabIndex = 6;
             // 
             // label7
             // 
@@ -1729,13 +1754,14 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Color:";
             // 
-            // comboBox5
+            // subsubsectionLabelSize
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(43, 89);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(144, 21);
-            this.comboBox5.TabIndex = 9;
+            this.subsubsectionLabelSize.FormattingEnabled = true;
+            this.subsubsectionLabelSize.Location = new System.Drawing.Point(43, 89);
+            this.subsubsectionLabelSize.Name = "subsubsectionLabelSize";
+            this.subsubsectionLabelSize.Size = new System.Drawing.Size(144, 21);
+            this.subsubsectionLabelSize.TabIndex = 9;
+            this.subsubsectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelSize_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -1755,33 +1781,36 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "Font:";
             // 
-            // comboBox6
+            // subsubsectionLabelFont
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(43, 65);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(144, 21);
-            this.comboBox6.TabIndex = 6;
+            this.subsubsectionLabelFont.FormattingEnabled = true;
+            this.subsubsectionLabelFont.Location = new System.Drawing.Point(43, 65);
+            this.subsubsectionLabelFont.Name = "subsubsectionLabelFont";
+            this.subsubsectionLabelFont.Size = new System.Drawing.Size(144, 21);
+            this.subsubsectionLabelFont.TabIndex = 6;
+            this.subsubsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelFont_SelectedIndexChanged);
             // 
-            // checkBox5
+            // subsubsectionLabelBullettedCheck
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(7, 42);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(67, 17);
-            this.checkBox5.TabIndex = 1;
-            this.checkBox5.Text = "Bulletted";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBullettedCheck.AutoSize = true;
+            this.subsubsectionLabelBullettedCheck.Location = new System.Drawing.Point(7, 42);
+            this.subsubsectionLabelBullettedCheck.Name = "subsubsectionLabelBullettedCheck";
+            this.subsubsectionLabelBullettedCheck.Size = new System.Drawing.Size(67, 17);
+            this.subsubsectionLabelBullettedCheck.TabIndex = 1;
+            this.subsubsectionLabelBullettedCheck.Text = "Bulletted";
+            this.subsubsectionLabelBullettedCheck.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBullettedCheck.CheckedChanged += new System.EventHandler(this.subsubsectionLabelBullettedCheck_CheckedChanged);
             // 
-            // checkBox6
+            // subsubsectionLabelBoldCheck
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(7, 19);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(47, 17);
-            this.checkBox6.TabIndex = 0;
-            this.checkBox6.Text = "Bold";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBoldCheck.AutoSize = true;
+            this.subsubsectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
+            this.subsubsectionLabelBoldCheck.Name = "subsubsectionLabelBoldCheck";
+            this.subsubsectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
+            this.subsubsectionLabelBoldCheck.TabIndex = 0;
+            this.subsubsectionLabelBoldCheck.Text = "Bold";
+            this.subsubsectionLabelBoldCheck.UseVisualStyleBackColor = true;
+            this.subsubsectionLabelBoldCheck.CheckedChanged += new System.EventHandler(this.subsubsectionLabelBoldCheck_CheckedChanged);
             // 
             // subsubsectionLabelLocationGroupBox
             // 
@@ -1848,15 +1877,15 @@
             // 
             // subsectionLabelStyleGroupBox
             // 
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.button1);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.textBox3);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelColorButton);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelColorText);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label4);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.comboBox3);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelSize);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label5);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label6);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.comboBox4);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.checkBox3);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.checkBox4);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelFont);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBulletted);
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBoldCheck);
             this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsectionLabelStyleGroupBox.Name = "subsectionLabelStyleGroupBox";
             this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
@@ -1865,21 +1894,22 @@
             this.subsectionLabelStyleGroupBox.Text = "Style";
             this.subsectionLabelStyleGroupBox.Visible = false;
             // 
-            // button1
+            // subsectionLabelColorButton
             // 
-            this.button1.Location = new System.Drawing.Point(114, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Choose";
-            this.button1.UseVisualStyleBackColor = true;
+            this.subsectionLabelColorButton.Location = new System.Drawing.Point(114, 113);
+            this.subsectionLabelColorButton.Name = "subsectionLabelColorButton";
+            this.subsectionLabelColorButton.Size = new System.Drawing.Size(73, 23);
+            this.subsectionLabelColorButton.TabIndex = 6;
+            this.subsectionLabelColorButton.Text = "Choose";
+            this.subsectionLabelColorButton.UseVisualStyleBackColor = true;
+            this.subsectionLabelColorButton.Click += new System.EventHandler(this.subsectionLabelColorButton_Click);
             // 
-            // textBox3
+            // subsectionLabelColorText
             // 
-            this.textBox3.Location = new System.Drawing.Point(43, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(72, 20);
-            this.textBox3.TabIndex = 6;
+            this.subsectionLabelColorText.Location = new System.Drawing.Point(43, 115);
+            this.subsectionLabelColorText.Name = "subsectionLabelColorText";
+            this.subsectionLabelColorText.Size = new System.Drawing.Size(72, 20);
+            this.subsectionLabelColorText.TabIndex = 6;
             // 
             // label4
             // 
@@ -1890,13 +1920,14 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Color:";
             // 
-            // comboBox3
+            // subsectionLabelSize
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(43, 89);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(144, 21);
-            this.comboBox3.TabIndex = 9;
+            this.subsectionLabelSize.FormattingEnabled = true;
+            this.subsectionLabelSize.Location = new System.Drawing.Point(43, 89);
+            this.subsectionLabelSize.Name = "subsectionLabelSize";
+            this.subsectionLabelSize.Size = new System.Drawing.Size(144, 21);
+            this.subsectionLabelSize.TabIndex = 9;
+            this.subsectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelSize_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -1916,33 +1947,36 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Font:";
             // 
-            // comboBox4
+            // subsectionLabelFont
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(43, 65);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(144, 21);
-            this.comboBox4.TabIndex = 6;
+            this.subsectionLabelFont.FormattingEnabled = true;
+            this.subsectionLabelFont.Location = new System.Drawing.Point(43, 65);
+            this.subsectionLabelFont.Name = "subsectionLabelFont";
+            this.subsectionLabelFont.Size = new System.Drawing.Size(144, 21);
+            this.subsectionLabelFont.TabIndex = 6;
+            this.subsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelFont_SelectedIndexChanged);
             // 
-            // checkBox3
+            // subsectionLabelBulletted
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 42);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(67, 17);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "Bulletted";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.subsectionLabelBulletted.AutoSize = true;
+            this.subsectionLabelBulletted.Location = new System.Drawing.Point(7, 42);
+            this.subsectionLabelBulletted.Name = "subsectionLabelBulletted";
+            this.subsectionLabelBulletted.Size = new System.Drawing.Size(67, 17);
+            this.subsectionLabelBulletted.TabIndex = 1;
+            this.subsectionLabelBulletted.Text = "Bulletted";
+            this.subsectionLabelBulletted.UseVisualStyleBackColor = true;
+            this.subsectionLabelBulletted.CheckedChanged += new System.EventHandler(this.subsectionLabelBulletted_CheckedChanged);
             // 
-            // checkBox4
+            // subsectionLabelBoldCheck
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(7, 19);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(47, 17);
-            this.checkBox4.TabIndex = 0;
-            this.checkBox4.Text = "Bold";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.subsectionLabelBoldCheck.AutoSize = true;
+            this.subsectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
+            this.subsectionLabelBoldCheck.Name = "subsectionLabelBoldCheck";
+            this.subsectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
+            this.subsectionLabelBoldCheck.TabIndex = 0;
+            this.subsectionLabelBoldCheck.Text = "Bold";
+            this.subsectionLabelBoldCheck.UseVisualStyleBackColor = true;
+            this.subsectionLabelBoldCheck.CheckedChanged += new System.EventHandler(this.subsectionLabelBoldCheck_CheckedChanged);
             // 
             // subsectionLabelLocationGroupBox
             // 
@@ -2007,15 +2041,15 @@
             // 
             // sectionLabelStyleGroupBox
             // 
-            this.sectionLabelStyleGroupBox.Controls.Add(this.button3);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.textBox1);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelColorButton);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelColorText);
             this.sectionLabelStyleGroupBox.Controls.Add(this.label3);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox2);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelSize);
             this.sectionLabelStyleGroupBox.Controls.Add(this.label2);
             this.sectionLabelStyleGroupBox.Controls.Add(this.label1);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.comboBox1);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox2);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.checkBox1);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelFont);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBullettedCheck);
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBoldCheck);
             this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.sectionLabelStyleGroupBox.Name = "sectionLabelStyleGroupBox";
             this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
@@ -2024,21 +2058,22 @@
             this.sectionLabelStyleGroupBox.Text = "Style";
             this.sectionLabelStyleGroupBox.Visible = false;
             // 
-            // button3
+            // sectionLabelColorButton
             // 
-            this.button3.Location = new System.Drawing.Point(114, 113);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Choose";
-            this.button3.UseVisualStyleBackColor = true;
+            this.sectionLabelColorButton.Location = new System.Drawing.Point(114, 113);
+            this.sectionLabelColorButton.Name = "sectionLabelColorButton";
+            this.sectionLabelColorButton.Size = new System.Drawing.Size(73, 23);
+            this.sectionLabelColorButton.TabIndex = 6;
+            this.sectionLabelColorButton.Text = "Choose";
+            this.sectionLabelColorButton.UseVisualStyleBackColor = true;
+            this.sectionLabelColorButton.Click += new System.EventHandler(this.sectionLabelColorButton_Click);
             // 
-            // textBox1
+            // sectionLabelColorText
             // 
-            this.textBox1.Location = new System.Drawing.Point(43, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 20);
-            this.textBox1.TabIndex = 6;
+            this.sectionLabelColorText.Location = new System.Drawing.Point(43, 115);
+            this.sectionLabelColorText.Name = "sectionLabelColorText";
+            this.sectionLabelColorText.Size = new System.Drawing.Size(72, 20);
+            this.sectionLabelColorText.TabIndex = 6;
             // 
             // label3
             // 
@@ -2049,13 +2084,14 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Color:";
             // 
-            // comboBox2
+            // sectionLabelSize
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(43, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(144, 21);
-            this.comboBox2.TabIndex = 9;
+            this.sectionLabelSize.FormattingEnabled = true;
+            this.sectionLabelSize.Location = new System.Drawing.Point(43, 89);
+            this.sectionLabelSize.Name = "sectionLabelSize";
+            this.sectionLabelSize.Size = new System.Drawing.Size(144, 21);
+            this.sectionLabelSize.TabIndex = 9;
+            this.sectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.sectionLabelSize_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -2075,33 +2111,36 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Font:";
             // 
-            // comboBox1
+            // sectionLabelFont
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(43, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 21);
-            this.comboBox1.TabIndex = 6;
+            this.sectionLabelFont.FormattingEnabled = true;
+            this.sectionLabelFont.Location = new System.Drawing.Point(43, 65);
+            this.sectionLabelFont.Name = "sectionLabelFont";
+            this.sectionLabelFont.Size = new System.Drawing.Size(144, 21);
+            this.sectionLabelFont.TabIndex = 6;
+            this.sectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.sectionLabelFont_SelectedIndexChanged);
             // 
-            // checkBox2
+            // sectionLabelBullettedCheck
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(67, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Bulletted";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.sectionLabelBullettedCheck.AutoSize = true;
+            this.sectionLabelBullettedCheck.Location = new System.Drawing.Point(7, 42);
+            this.sectionLabelBullettedCheck.Name = "sectionLabelBullettedCheck";
+            this.sectionLabelBullettedCheck.Size = new System.Drawing.Size(67, 17);
+            this.sectionLabelBullettedCheck.TabIndex = 1;
+            this.sectionLabelBullettedCheck.Text = "Bulletted";
+            this.sectionLabelBullettedCheck.UseVisualStyleBackColor = true;
+            this.sectionLabelBullettedCheck.CheckedChanged += new System.EventHandler(this.sectionLabelBullettedCheck_CheckedChanged);
             // 
-            // checkBox1
+            // sectionLabelBoldCheck
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(47, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Bold";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sectionLabelBoldCheck.AutoSize = true;
+            this.sectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
+            this.sectionLabelBoldCheck.Name = "sectionLabelBoldCheck";
+            this.sectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
+            this.sectionLabelBoldCheck.TabIndex = 0;
+            this.sectionLabelBoldCheck.Text = "Bold";
+            this.sectionLabelBoldCheck.UseVisualStyleBackColor = true;
+            this.sectionLabelBoldCheck.CheckedChanged += new System.EventHandler(this.sectionLabelBoldCheck_CheckedChanged);
             // 
             // sectionLabelLocationGroupBox
             // 
@@ -2173,6 +2212,7 @@
             this.noSpaceBetweenSectionsRadio.TabIndex = 4;
             this.noSpaceBetweenSectionsRadio.Text = "No Space Between Sections";
             this.noSpaceBetweenSectionsRadio.UseVisualStyleBackColor = true;
+            this.noSpaceBetweenSectionsRadio.CheckedChanged += new System.EventHandler(this.noSpaceBetweenSectionsRadio_CheckedChanged);
             // 
             // newPageForEachSectionRadio
             // 
@@ -2183,6 +2223,7 @@
             this.newPageForEachSectionRadio.TabIndex = 3;
             this.newPageForEachSectionRadio.Text = "New Page For Each Section";
             this.newPageForEachSectionRadio.UseVisualStyleBackColor = true;
+            this.newPageForEachSectionRadio.CheckedChanged += new System.EventHandler(this.newPageForEachSectionRadio_CheckedChanged);
             // 
             // blankLineBetweenSectionsRadio
             // 
@@ -2233,6 +2274,7 @@
             this.titlePageDefaultButton.TabIndex = 5;
             this.titlePageDefaultButton.Text = "APA Defaults";
             this.titlePageDefaultButton.UseVisualStyleBackColor = true;
+            this.titlePageDefaultButton.Click += new System.EventHandler(this.titlePageDefaultButton_Click);
             // 
             // titlePagePositionGroupBox
             // 
@@ -2259,6 +2301,7 @@
             this.titlePageMiddleRadio.TabStop = true;
             this.titlePageMiddleRadio.Text = "Middle of Page";
             this.titlePageMiddleRadio.UseVisualStyleBackColor = true;
+            this.titlePageMiddleRadio.CheckedChanged += new System.EventHandler(this.titlePageMiddleRadio_CheckedChanged);
             // 
             // titlePageBottomRadio
             // 
@@ -2270,6 +2313,7 @@
             this.titlePageBottomRadio.TabIndex = 1;
             this.titlePageBottomRadio.Text = "Bottom of Page";
             this.titlePageBottomRadio.UseVisualStyleBackColor = true;
+            this.titlePageBottomRadio.CheckedChanged += new System.EventHandler(this.titlePageBottomRadio_CheckedChanged);
             // 
             // titlePageTopRadio
             // 
@@ -2281,6 +2325,7 @@
             this.titlePageTopRadio.TabIndex = 0;
             this.titlePageTopRadio.Text = "Top of Page";
             this.titlePageTopRadio.UseVisualStyleBackColor = true;
+            this.titlePageTopRadio.CheckedChanged += new System.EventHandler(this.titlePageTopRadio_CheckedChanged);
             // 
             // titlePageAllignGroupBox
             // 
@@ -2305,6 +2350,7 @@
             this.titlePageRightAllignRadio.TabIndex = 2;
             this.titlePageRightAllignRadio.Text = "Right Allign";
             this.titlePageRightAllignRadio.UseVisualStyleBackColor = true;
+            this.titlePageRightAllignRadio.CheckedChanged += new System.EventHandler(this.titlePageRightAllignRadio_CheckedChanged);
             // 
             // titlePageCenterRadio
             // 
@@ -2318,6 +2364,7 @@
             this.titlePageCenterRadio.TabStop = true;
             this.titlePageCenterRadio.Text = "Center";
             this.titlePageCenterRadio.UseVisualStyleBackColor = true;
+            this.titlePageCenterRadio.CheckedChanged += new System.EventHandler(this.titlePageCenterRadio_CheckedChanged);
             // 
             // titlePageLeftAllignRadio
             // 
@@ -2329,6 +2376,7 @@
             this.titlePageLeftAllignRadio.TabIndex = 0;
             this.titlePageLeftAllignRadio.Text = "Left Allign";
             this.titlePageLeftAllignRadio.UseVisualStyleBackColor = true;
+            this.titlePageLeftAllignRadio.CheckedChanged += new System.EventHandler(this.titlePageLeftAllignRadio_CheckedChanged);
             // 
             // titlePageIncludeGroupBox
             // 
@@ -2437,6 +2485,7 @@
             this.titlePageSchoolEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageSchoolEnter.TabIndex = 25;
             this.titlePageSchoolEnter.Visible = false;
+            this.titlePageSchoolEnter.TextChanged += new System.EventHandler(this.titlePageSchoolEnter_TextChanged);
             // 
             // schoolUpButton
             // 
@@ -2598,6 +2647,7 @@
             this.titlePageDateEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageDateEnter.TabIndex = 12;
             this.titlePageDateEnter.Visible = false;
+            this.titlePageDateEnter.ValueChanged += new System.EventHandler(this.titlePageDateEnter_ValueChanged);
             // 
             // titlePageProfessorEnter
             // 
@@ -2607,6 +2657,7 @@
             this.titlePageProfessorEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageProfessorEnter.TabIndex = 10;
             this.titlePageProfessorEnter.Visible = false;
+            this.titlePageProfessorEnter.TextChanged += new System.EventHandler(this.titlePageProfessorEnter_TextChanged);
             // 
             // titlePageClassEnter
             // 
@@ -2616,6 +2667,7 @@
             this.titlePageClassEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageClassEnter.TabIndex = 9;
             this.titlePageClassEnter.Visible = false;
+            this.titlePageClassEnter.TextChanged += new System.EventHandler(this.titlePageClassEnter_TextChanged);
             // 
             // titlePageNameEnter
             // 
@@ -2625,6 +2677,7 @@
             this.titlePageNameEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageNameEnter.TabIndex = 8;
             this.titlePageNameEnter.Visible = false;
+            this.titlePageNameEnter.TextChanged += new System.EventHandler(this.titlePageNameEnter_TextChanged);
             // 
             // titlePageNameLabel
             // 
@@ -2656,6 +2709,7 @@
             this.titlePageTitleEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageTitleEnter.TabIndex = 5;
             this.titlePageTitleEnter.Visible = false;
+            this.titlePageTitleEnter.TextChanged += new System.EventHandler(this.titlePageTitleEnter_TextChanged);
             // 
             // titlePageSchoolCheck
             // 
@@ -2814,6 +2868,7 @@
             this.headerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightTitleEnter.TabIndex = 29;
             this.headerFirstRightTitleEnter.Visible = false;
+            this.headerFirstRightTitleEnter.TextChanged += new System.EventHandler(this.headerFirstRightTitleEnter_TextChanged);
             // 
             // headerFirstRightTitleLabel
             // 
@@ -2832,6 +2887,7 @@
             this.headerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightNumberEnter.TabIndex = 25;
             this.headerFirstRightNumberEnter.Visible = false;
+            this.headerFirstRightNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstRightNumberEnter_ValueChanged);
             // 
             // headerFirstRightNumberLabel
             // 
@@ -2897,6 +2953,7 @@
             this.headerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightOtherEnter.TabIndex = 19;
             this.headerFirstRightOtherEnter.Visible = false;
+            this.headerFirstRightOtherEnter.TextChanged += new System.EventHandler(this.headerFirstRightOtherEnter_TextChanged);
             // 
             // headerFirstPageCenterGroupBox
             // 
@@ -2940,6 +2997,7 @@
             this.headerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterTitleEnter.TabIndex = 29;
             this.headerFirstCenterTitleEnter.Visible = false;
+            this.headerFirstCenterTitleEnter.TextChanged += new System.EventHandler(this.headerFirstCenterTitleEnter_TextChanged);
             // 
             // headerFirstCenterTitleLabel
             // 
@@ -2958,6 +3016,7 @@
             this.headerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterNumberEnter.TabIndex = 25;
             this.headerFirstCenterNumberEnter.Visible = false;
+            this.headerFirstCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstCenterNumberEnter_ValueChanged);
             // 
             // headerFirstCenterNumberLabel
             // 
@@ -3023,6 +3082,7 @@
             this.headerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterOtherEnter.TabIndex = 19;
             this.headerFirstCenterOtherEnter.Visible = false;
+            this.headerFirstCenterOtherEnter.TextChanged += new System.EventHandler(this.headerFirstCenterOtherEnter_TextChanged);
             // 
             // headerFirstPageLeftGroupBox
             // 
@@ -3066,6 +3126,7 @@
             this.headerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftTitleEnter.TabIndex = 29;
             this.headerFirstLeftTitleEnter.Visible = false;
+            this.headerFirstLeftTitleEnter.TextChanged += new System.EventHandler(this.headerFirstLeftTitleEnter_TextChanged);
             // 
             // headerFirstLeftTitleLabel
             // 
@@ -3084,6 +3145,7 @@
             this.headerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftNumberEnter.TabIndex = 25;
             this.headerFirstLeftNumberEnter.Visible = false;
+            this.headerFirstLeftNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstLeftNumberEnter_ValueChanged);
             // 
             // headerFirstLeftNumberLabel
             // 
@@ -3149,6 +3211,7 @@
             this.headerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftOtherEnter.TabIndex = 19;
             this.headerFirstLeftOtherEnter.Visible = false;
+            this.headerFirstLeftOtherEnter.TextChanged += new System.EventHandler(this.headerFirstLeftOtherEnter_TextChanged);
             // 
             // headerFirstPageMoreCheck
             // 
@@ -3186,6 +3249,7 @@
             this.headerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
             this.headerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
             this.headerFirstPageUseRunningHeadCheck.Visible = false;
+            this.headerFirstPageUseRunningHeadCheck.CheckedChanged += new System.EventHandler(this.headerFirstPageUseRunningHeadCheck_CheckedChanged);
             // 
             // headerRightGroupBox
             // 
@@ -3227,6 +3291,7 @@
             this.headerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightTitleEnter.TabIndex = 29;
             this.headerRightTitleEnter.Visible = false;
+            this.headerRightTitleEnter.TextChanged += new System.EventHandler(this.headerRightTitleEnter_TextChanged);
             // 
             // headerRightTitleLabel
             // 
@@ -3245,6 +3310,7 @@
             this.headerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightNumberEnter.TabIndex = 25;
             this.headerRightNumberEnter.Visible = false;
+            this.headerRightNumberEnter.ValueChanged += new System.EventHandler(this.headerRightNumberEnter_ValueChanged);
             // 
             // headerRightNumberLabel
             // 
@@ -3310,6 +3376,7 @@
             this.headerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightOtherEnter.TabIndex = 19;
             this.headerRightOtherEnter.Visible = false;
+            this.headerRightOtherEnter.TextChanged += new System.EventHandler(this.headerRightOtherEnter_TextChanged);
             // 
             // headerCenterGroupBox
             // 
@@ -3351,6 +3418,7 @@
             this.headerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterTitleEnter.TabIndex = 29;
             this.headerCenterTitleEnter.Visible = false;
+            this.headerCenterTitleEnter.TextChanged += new System.EventHandler(this.headerCenterTitleEnter_TextChanged);
             // 
             // headerCenterTitleLabel
             // 
@@ -3369,6 +3437,7 @@
             this.headerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterNumberEnter.TabIndex = 25;
             this.headerCenterNumberEnter.Visible = false;
+            this.headerCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerCenterNumberEnter_ValueChanged);
             // 
             // headerCenterNumberLabel
             // 
@@ -3434,6 +3503,7 @@
             this.headerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterOtherEnter.TabIndex = 19;
             this.headerCenterOtherEnter.Visible = false;
+            this.headerCenterOtherEnter.TextChanged += new System.EventHandler(this.headerCenterOtherEnter_TextChanged);
             // 
             // headerLeftGroupBox
             // 
@@ -3475,6 +3545,7 @@
             this.headerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftTitleEnter.TabIndex = 27;
             this.headerLeftTitleEnter.Visible = false;
+            this.headerLeftTitleEnter.TextChanged += new System.EventHandler(this.headerLeftTitleEnter_TextChanged);
             // 
             // headerLeftTitleLabel
             // 
@@ -3493,6 +3564,7 @@
             this.headerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftNumberEnter.TabIndex = 25;
             this.headerLeftNumberEnter.Visible = false;
+            this.headerLeftNumberEnter.ValueChanged += new System.EventHandler(this.headerLeftNumberEnter_ValueChanged);
             // 
             // headerLeftNumberLabel
             // 
@@ -3555,6 +3627,7 @@
             this.headerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftOtherEnter.TabIndex = 19;
             this.headerLeftOtherEnter.Visible = false;
+            this.headerLeftOtherEnter.TextChanged += new System.EventHandler(this.headerLeftOtherEnter_TextChanged);
             // 
             // headerHeader
             // 
@@ -3578,6 +3651,7 @@
             this.headerDefaultButton.TabIndex = 15;
             this.headerDefaultButton.Text = "APA Default";
             this.headerDefaultButton.UseVisualStyleBackColor = true;
+            this.headerDefaultButton.Click += new System.EventHandler(this.headerDefaultButton_Click);
             // 
             // summaryPanel
             // 
@@ -3612,6 +3686,7 @@
             this.summaryDefaultButton.TabIndex = 14;
             this.summaryDefaultButton.Text = "APA Default";
             this.summaryDefaultButton.UseVisualStyleBackColor = true;
+            this.summaryDefaultButton.Click += new System.EventHandler(this.summaryDefaultButton_Click);
             // 
             // summaryTitleGroupBox
             // 
@@ -3641,6 +3716,7 @@
             this.summaryTitleColorButton.Text = "Choose";
             this.summaryTitleColorButton.UseVisualStyleBackColor = true;
             this.summaryTitleColorButton.Visible = false;
+            this.summaryTitleColorButton.Click += new System.EventHandler(this.summaryTitleColorButton_Click);
             // 
             // summaryTitleColorText
             // 
@@ -3668,6 +3744,7 @@
             this.summaryTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.summaryTitleSizeChoose.TabIndex = 18;
             this.summaryTitleSizeChoose.Visible = false;
+            this.summaryTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleSizeChoose_SelectedIndexChanged);
             // 
             // summaryTitleSizeLabel
             // 
@@ -3697,6 +3774,7 @@
             this.summaryTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.summaryTitleFontChoose.TabIndex = 15;
             this.summaryTitleFontChoose.Visible = false;
+            this.summaryTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleFontChoose_SelectedIndexChanged);
             // 
             // summaryTitleBoldCheck
             // 
@@ -3708,6 +3786,7 @@
             this.summaryTitleBoldCheck.Text = "Bold Title";
             this.summaryTitleBoldCheck.UseVisualStyleBackColor = true;
             this.summaryTitleBoldCheck.Visible = false;
+            this.summaryTitleBoldCheck.CheckedChanged += new System.EventHandler(this.summaryTitleBoldCheck_CheckedChanged);
             // 
             // summaryIncludeTitleCheck
             // 
@@ -3731,6 +3810,7 @@
             this.summaryOwnPageCheck.TabIndex = 0;
             this.summaryOwnPageCheck.Text = "On Its Own Page";
             this.summaryOwnPageCheck.UseVisualStyleBackColor = true;
+            this.summaryOwnPageCheck.CheckedChanged += new System.EventHandler(this.summaryOwnPageCheck_CheckedChanged);
             // 
             // summaryHeader
             // 
@@ -3934,6 +4014,7 @@
             this.generalDefaultButton.TabIndex = 19;
             this.generalDefaultButton.Text = "APA Defaults";
             this.generalDefaultButton.UseVisualStyleBackColor = true;
+            this.generalDefaultButton.Click += new System.EventHandler(this.generalDefaultButton_Click);
             // 
             // includeInPapeGroupBox
             // 
@@ -4038,7 +4119,7 @@
             // 
             // paperTitleGroupBox
             // 
-            this.paperTitleGroupBox.Controls.Add(this.textBox2);
+            this.paperTitleGroupBox.Controls.Add(this.paperTitleEnter);
             this.paperTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paperTitleGroupBox.Location = new System.Drawing.Point(9, 36);
             this.paperTitleGroupBox.Name = "paperTitleGroupBox";
@@ -4047,13 +4128,14 @@
             this.paperTitleGroupBox.TabStop = false;
             this.paperTitleGroupBox.Text = "Title of Paper";
             // 
-            // textBox2
+            // paperTitleEnter
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(9, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 0;
+            this.paperTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paperTitleEnter.Location = new System.Drawing.Point(9, 19);
+            this.paperTitleEnter.Name = "paperTitleEnter";
+            this.paperTitleEnter.Size = new System.Drawing.Size(197, 20);
+            this.paperTitleEnter.TabIndex = 0;
+            this.paperTitleEnter.TextChanged += new System.EventHandler(this.paperTitleEnter_TextChanged);
             // 
             // apaMlaGroupBox
             // 
@@ -4126,6 +4208,7 @@
             this.referencesOrderChoose.Name = "referencesOrderChoose";
             this.referencesOrderChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesOrderChoose.TabIndex = 23;
+            this.referencesOrderChoose.SelectedIndexChanged += new System.EventHandler(this.referencesOrderChoose_SelectedIndexChanged);
             // 
             // referencesOrderLabel
             // 
@@ -4147,6 +4230,7 @@
             this.referencesEmptyLineBetweenCheck.TabIndex = 21;
             this.referencesEmptyLineBetweenCheck.Text = "Add Empty Line Between Each Reference";
             this.referencesEmptyLineBetweenCheck.UseVisualStyleBackColor = true;
+            this.referencesEmptyLineBetweenCheck.CheckedChanged += new System.EventHandler(this.referencesEmptyLineBetweenCheck_CheckedChanged);
             // 
             // referencesIndentationGroupBox
             // 
@@ -4168,6 +4252,7 @@
             this.referencesIndentTabsEnter.Size = new System.Drawing.Size(120, 20);
             this.referencesIndentTabsEnter.TabIndex = 17;
             this.referencesIndentTabsEnter.Visible = false;
+            this.referencesIndentTabsEnter.ValueChanged += new System.EventHandler(this.referencesIndentTabsEnter_ValueChanged);
             // 
             // referencesIndentTabsLabel
             // 
@@ -4222,6 +4307,7 @@
             this.referencesTitleColorButton.Text = "Choose";
             this.referencesTitleColorButton.UseVisualStyleBackColor = true;
             this.referencesTitleColorButton.Visible = false;
+            this.referencesTitleColorButton.Click += new System.EventHandler(this.referencesTitleColorButton_Click);
             // 
             // referencesTitleColorText
             // 
@@ -4249,6 +4335,7 @@
             this.referencesTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesTitleSizeChoose.TabIndex = 18;
             this.referencesTitleSizeChoose.Visible = false;
+            this.referencesTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleSizeChoose_SelectedIndexChanged);
             // 
             // referencesTitleSizeLabel
             // 
@@ -4278,6 +4365,7 @@
             this.referencesTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesTitleFontChoose.TabIndex = 15;
             this.referencesTitleFontChoose.Visible = false;
+            this.referencesTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleFontChoose_SelectedIndexChanged);
             // 
             // referencesTitleBoldCheck
             // 
@@ -4289,6 +4377,7 @@
             this.referencesTitleBoldCheck.Text = "Bold Title";
             this.referencesTitleBoldCheck.UseVisualStyleBackColor = true;
             this.referencesTitleBoldCheck.Visible = false;
+            this.referencesTitleBoldCheck.CheckedChanged += new System.EventHandler(this.referencesTitleBoldCheck_CheckedChanged);
             // 
             // referencesTitleIncludeCheck
             // 
@@ -4310,6 +4399,7 @@
             this.referencesTitleEnter.Size = new System.Drawing.Size(159, 20);
             this.referencesTitleEnter.TabIndex = 2;
             this.referencesTitleEnter.Visible = false;
+            this.referencesTitleEnter.TextChanged += new System.EventHandler(this.referencesTitleEnter_TextChanged);
             // 
             // referencesTitleLabel
             // 
@@ -4344,6 +4434,7 @@
             this.referencesDefaultButton.TabIndex = 14;
             this.referencesDefaultButton.Text = "APA Default";
             this.referencesDefaultButton.UseVisualStyleBackColor = true;
+            this.referencesDefaultButton.Click += new System.EventHandler(this.referencesDefaultButton_Click);
             // 
             // contentTab
             // 
@@ -5069,7 +5160,7 @@
         private System.Windows.Forms.RadioButton mlaRadio;
         private System.Windows.Forms.RadioButton apaRadio;
         private System.Windows.Forms.GroupBox paperTitleGroupBox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox paperTitleEnter;
         private System.Windows.Forms.GroupBox includeInPapeGroupBox;
         private System.Windows.Forms.CheckBox referencesIncludeCheck;
         private System.Windows.Forms.CheckBox conclusionIncludeCheck;
@@ -5138,15 +5229,15 @@
         private System.Windows.Forms.RadioButton sectionLabelBeforeRadio;
         private System.Windows.Forms.RadioButton sectionLabelInLineRadio;
         private System.Windows.Forms.GroupBox sectionLabelStyleGroupBox;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button sectionLabelColorButton;
+        private System.Windows.Forms.TextBox sectionLabelColorText;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox sectionLabelSize;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox sectionLabelFont;
+        private System.Windows.Forms.CheckBox sectionLabelBullettedCheck;
+        private System.Windows.Forms.CheckBox sectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox sectionLabelLocationGroupBox;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label footerHeader;
@@ -5385,30 +5476,30 @@
         private System.Windows.Forms.ToolStrip section1ToolStrip;
         private System.Windows.Forms.GroupBox subsectionLabelGroupBox;
         private System.Windows.Forms.GroupBox subsectionLabelStyleGroupBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button subsectionLabelColorButton;
+        private System.Windows.Forms.TextBox subsectionLabelColorText;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox subsectionLabelSize;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.ComboBox subsectionLabelFont;
+        private System.Windows.Forms.CheckBox subsectionLabelBulletted;
+        private System.Windows.Forms.CheckBox subsectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox subsectionLabelLocationGroupBox;
         private System.Windows.Forms.RadioButton subsectionLabelInLineRadio;
         private System.Windows.Forms.RadioButton subsectionLabelBeforeRadio;
         private System.Windows.Forms.CheckBox includeSubsectionLabelCheck;
         private System.Windows.Forms.GroupBox subsubsectionLabelGroupBox;
         private System.Windows.Forms.GroupBox subsubsectionLabelStyleGroupBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button subsubsectionLabelButton;
+        private System.Windows.Forms.TextBox subsubsectionLabelColorText;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox subsubsectionLabelSize;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.ComboBox subsubsectionLabelFont;
+        private System.Windows.Forms.CheckBox subsubsectionLabelBullettedCheck;
+        private System.Windows.Forms.CheckBox subsubsectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox subsubsectionLabelLocationGroupBox;
         private System.Windows.Forms.RadioButton subsubsectionLabelInLineRadio;
         private System.Windows.Forms.RadioButton subsubsectionLabelBeforeRadio;

@@ -8,7 +8,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public class SummaryAbstractConfig
     {
-        public bool onOwwnPage;
+        public bool onOwnPage;
         public bool includeTitle;
         public string title;
         public bool titleBold;
