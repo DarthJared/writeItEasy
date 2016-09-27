@@ -39,98 +39,43 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void conclusionOwnPageCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (conclusionOwnPageCheck.Checked)
-            {
-                myPaper.conclusion.onOwnPage = true;
-            }
-            else
-            {
-                myPaper.conclusion.onOwnPage = false;
-            }
+            myPaper.conclusion.onOwnPage = conclusionOwnPageCheck.Checked;
         }
 
         private void sectionLabelBeforeRadio_Changed(object sender, EventArgs e)
         {
-            if (sectionLabelBeforeRadio.Checked)
-            {
-                myPaper.sectionsConfig.sectionLabelOnOwnLine = true;
-                myPaper.sectionsConfig.sectionLabelInlineWithText = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.sectionLabelOnOwnLine = false;
-                myPaper.sectionsConfig.sectionLabelInlineWithText = true;
-            }
+            myPaper.sectionsConfig.sectionLabelOnOwnLine = sectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelInlineWithText = !sectionLabelBeforeRadio.Checked;
         }
 
         private void sectionLabelInLineRadio_Changed(object sender, EventArgs e)
         {
-            if (sectionLabelInLineRadio.Checked)
-            {
-                myPaper.sectionsConfig.sectionLabelInlineWithText = true;
-                myPaper.sectionsConfig.sectionLabelOnOwnLine = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.sectionLabelInlineWithText = false;
-                myPaper.sectionsConfig.sectionLabelOnOwnLine = true;
-            }
+            myPaper.sectionsConfig.sectionLabelInlineWithText = sectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelOnOwnLine = !sectionLabelInLineRadio.Checked;
         }
 
         private void subsectionLabelBeforeRadio_Changed(object sender, EventArgs e)
         {
-            if (subsectionLabelBeforeRadio.Checked)
-            {
-                myPaper.sectionsConfig.subsectionLabelOnOwnLine = true;
-                myPaper.sectionsConfig.subsectionLabelInlineWithText = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.subsectionLabelOnOwnLine = false;
-                myPaper.sectionsConfig.subsectionLabelInlineWithText = true;
-            }
+            myPaper.sectionsConfig.subsectionLabelOnOwnLine = subsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelInlineWithText = !subsectionLabelBeforeRadio.Checked;
         }
 
         private void subsectionLabelInLineRadio_Changed(object sender, EventArgs e)
         {
-            if (subsectionLabelInLineRadio.Checked)
-            {
-                myPaper.sectionsConfig.subsectionLabelInlineWithText = true;
-                myPaper.sectionsConfig.subsectionLabelOnOwnLine = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.subsectionLabelInlineWithText = false;
-                myPaper.sectionsConfig.subsectionLabelOnOwnLine = true;
-            }
+            myPaper.sectionsConfig.subsectionLabelInlineWithText = subsectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelOnOwnLine = !subsectionLabelInLineRadio.Checked;
         }
 
         private void subsubsectionLabelBeforeRadio_Changed(object sender, EventArgs e)
         {
-            if (subsubsectionLabelBeforeRadio.Checked)
-            {
-                myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = true;
-                myPaper.sectionsConfig.subsubsectionLabelInlineWithText = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = false;
-                myPaper.sectionsConfig.subsubsectionLabelInlineWithText = true;
-            }
+            myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = subsubsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelInlineWithText = !subsubsectionLabelBeforeRadio.Checked;
         }
 
         private void subsubsectionLabelInLineRadio_Changed(object sender, EventArgs e)
         {
-            if (subsubsectionLabelInLineRadio.Checked)
-            {
-                myPaper.sectionsConfig.subsubsectionLabelInlineWithText = true;
-                myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = false;
-            }
-            else
-            {
-                myPaper.sectionsConfig.subsubsectionLabelInlineWithText = false;
-                myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = true;
-            }
+            myPaper.sectionsConfig.subsubsectionLabelInlineWithText = subsubsectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = !subsubsectionLabelInLineRadio.Checked;
         }
 
         private void paperTitleEnter_TextChanged(object sender, EventArgs e)
@@ -540,72 +485,72 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void conclusionTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.conclusion.boldTitle = conclusionTitleBoldCheck.Checked;
         }
 
         private void conclusionTitleFontChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.conclusion.titleFont = conclusionTitleFontChoose.Text;
         }
 
         private void conclusionTitleSizeChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.conclusion.titleSize = Convert.ToInt32(conclusionTitleSizeChoose.Text);
         }
 
         private void conclusionTitleColorButton_Click(object sender, EventArgs e)
         {
-
+            //Choose Conclusion Label Color
         }
 
         private void conclusionDefaultButton_Click(object sender, EventArgs e)
         {
-
+            //Set default settings for conclusion
         }
 
         private void referencesTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.title = referencesTitleEnter.Text;
         }
 
         private void referencesTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.boldTitle = referencesTitleBoldCheck.Checked;
         }
 
         private void referencesTitleFontChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.titleFont = referencesTitleFontChoose.Text;
         }
 
         private void referencesTitleSizeChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.titleSize = Convert.ToInt32(referencesTitleSizeChoose.Text);
         }
 
         private void referencesTitleColorButton_Click(object sender, EventArgs e)
         {
-
+            //Choose References Label Color
         }
 
         private void referencesIndentTabsEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.tabsHangingIndent = Convert.ToInt32(referencesIndentTabsEnter.Value);
         }
 
         private void referencesEmptyLineBetweenCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.emptyLineBetweenReferences = referencesEmptyLineBetweenCheck.Checked;
         }
 
         private void referencesOrderChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.references.orderBy = referencesOrderChoose.Text;
         }
 
         private void referencesDefaultButton_Click(object sender, EventArgs e)
         {
-
+            //Set default settings for references
         }
     }
 }
