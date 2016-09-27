@@ -9,6 +9,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     public class HeaderFooterConfig
     {
         public bool differentFirstPage;
+        public bool useRunningHead;
 
         public bool leftTitle;
         public bool leftPageNum;

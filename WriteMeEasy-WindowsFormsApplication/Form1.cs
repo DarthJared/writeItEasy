@@ -303,237 +303,239 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void headerFirstPageUseRunningHeadCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.useRunningHead = headerFirstPageUseRunningHeadCheck.Checked;
         }
 
         private void headerFirstLeftTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
         }
 
         private void headerFirstLeftNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
         }
 
         private void headerFirstLeftOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
         }
 
         private void headerFirstCenterTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstCenterTitleText = headerFirstCenterTitleEnter.Text;
         }
 
         private void headerFirstCenterNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
         }
 
         private void headerFirstCenterOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstCenterOtherText = headerFirstCenterOtherEnter.Text;
         }
 
         private void headerFirstRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
         }
 
         private void headerFirstRightNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
         }
 
         private void headerFirstRightOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.header.firstRightOtherText = headerFirstRightOtherEnter.Text;
         }
 
         private void headerDefaultButton_Click(object sender, EventArgs e)
         {
-
+            //Set default settings for header
         }
 
         private void footerLeftTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.leftTitleText = footerLeftTitleEnter.Text;
         }
 
         private void footerLeftNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.leftPageNumStart = Convert.ToInt32(footerLeftNumberEnter.Value);
         }
 
         private void footerLeftOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.rightOtherText = footerLeftOtherEnter.Text;
         }
 
         private void footerCenterTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.centerTitleText = footerCenterTitleEnter.Text;
         }
 
         private void footerCenterNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.centerPageNumStart = Convert.ToInt32(footerCenterNumberEnter.Value);
         }
 
         private void footerCenterOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.centerOtherText = footerCenterOtherEnter.Text;
         }
 
         private void footerRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.rightTitleText = footerRightTitleEnter.Text;
         }
 
         private void footerRightNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.rightPageNumStart = Convert.ToInt32(footerRightNumberEnter.Value);
         }
 
         private void footerRightOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.rightOtherText = footerRightOtherEnter.Text;
         }
 
         private void footerFirstPageUseRunningHeadCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.useRunningHead = footerFirstPageUseRunningHeadCheck.Checked;
         }
 
         private void footerFirstLeftTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstLeftTitleText = footerFirstLeftTitleEnter.Text;
         }
 
         private void footerFirstLeftNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstLeftPageNumStart = Convert.ToInt32(footerFirstLeftNumberEnter.Value);
         }
 
         private void footerFirstLeftOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstLeftOtherText = footerFirstLeftOtherEnter.Text;
         }
 
         private void footerFirstCenterTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstCenterTitleText = footerFirstCenterTitleEnter.Text;
         }
 
         private void footerFirstCenterNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstCenterPageNumStart = Convert.ToInt32(footerFirstCenterNumberEnter.Value);
         }
 
         private void footerFirstCenterOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstCenterOtherText = footerFirstCenterOtherEnter.Text;
         }
 
         private void footerFirstRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstRightTitleText = footerFirstRightTitleEnter.Text;
         }
 
         private void footerFirstRightNumberEnter_ValueChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstRightPageNumStart = Convert.ToInt32(footerFirstRightNumberEnter.Value);
         }
 
         private void footerFirstRightOtherEnter_TextChanged(object sender, EventArgs e)
         {
-
+            myPaper.footer.firstRightOtherText = footerFirstRightOtherEnter.Text;
         }
 
         private void newPageForEachSectionRadio_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.newPageBetween = newPageForEachSectionRadio.Checked;
+            myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
         }
 
         private void noSpaceBetweenSectionsRadio_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.newPageBetween = !newPageForEachSectionRadio.Checked;
+            myPaper.sectionsConfig.noSpaceBetween = newPageForEachSectionRadio.Checked;
         }
 
         private void sectionLabelBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.sectionLabelBold = sectionLabelBoldCheck.Checked;
         }
 
         private void sectionLabelBullettedCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            //Not sure I want to even make this an option
         }
 
         private void sectionLabelFont_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.sectionLabelFont = sectionLabelFont.Text;
         }
 
         private void sectionLabelSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.sectionLabelSize = Convert.ToInt32(sectionLabelSize.Text);
         }
 
         private void sectionLabelColorButton_Click(object sender, EventArgs e)
         {
-
+            //Choose Section Label Color
         }
 
         private void subsectionLabelColorButton_Click(object sender, EventArgs e)
         {
-
+            //Choose Subsection Label Color
         }
 
         private void subsectionLabelSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsectionLabelSize = Convert.ToInt32(subsectionLabelSize.Text);
         }
 
         private void subsectionLabelFont_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsectionLabelFont = subsectionLabelFont.Text;
         }
 
         private void subsectionLabelBulletted_CheckedChanged(object sender, EventArgs e)
         {
-
+            //Not sure I want to even make this an option
         }
 
         private void subsectionLabelBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsectionLabelBold = subsectionLabelBoldCheck.Checked;
         }
 
         private void subsubsectionLabelBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsubsectionLabelBold = subsubsectionLabelBoldCheck.Checked;
         }
 
         private void subsubsectionLabelBullettedCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            //Not sure I want to even make this an option
         }
 
         private void subsubsectionLabelFont_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsubsectionLabelFont = subsubsectionLabelFont.Text;
         }
 
         private void subsubsectionLabelSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myPaper.sectionsConfig.subsubsectionLabelSize = Convert.ToInt32(subsubsectionLabelSize.Text);
         }
 
         private void subsubsectionLabelButton_Click(object sender, EventArgs e)
         {
-
+            //Choose Subsubsection Label Color
         }
 
         private void conclusionTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
