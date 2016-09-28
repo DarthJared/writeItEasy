@@ -30,10 +30,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             //Process.Start("WINWORD.EXE", fileName);
             try
             {
-                
-
-                
-
                 Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
                 wordApp.ShowAnimation = false;
                 wordApp.Visible = false;

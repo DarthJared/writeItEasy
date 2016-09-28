@@ -36,6 +36,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             sections = new List<Section>();
             conclusion = new ConclusionConfig();
             sectionsConfig = new SectionsConfig();
+            header = new HeaderFooterConfig();
+            footer = new HeaderFooterConfig();
+            sections = new List<Section>();
+            references = new ReferencesConfig();
         }
     }
 }
