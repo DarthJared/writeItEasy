@@ -9,6 +9,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void headerIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeHeader = headerIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("HEADER", out sectionHeight)) { }
 
@@ -58,6 +59,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void footerIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeFooter = footerIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("FOOTER", out sectionHeight)) { }
 
@@ -141,6 +143,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void headerDiffFirstPageCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.header.differentFirstPage = headerDiffFirstPageCheck.Checked;
             if (headerDiffFirstPageCheck.Checked)
             {
                 if (headerFirstPageMoreCheck.Checked)
@@ -194,6 +197,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerLeftTitleRadio.Checked)
             {
+                myPaper.header.leftTitle = true;
+                myPaper.header.leftPageNum = false;
+                myPaper.header.leftOther = false;
+
                 headerLeftTitleLabel.Visible = true;
                 headerLeftTitleEnter.Visible = true;
                 headerLeftNumberLabel.Visible = false;
@@ -203,6 +210,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerLeftNumberRadio.Checked)
             {
+                myPaper.header.leftTitle = false;
+                myPaper.header.leftPageNum = true;
+                myPaper.header.leftOther = false;
+
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
                 headerLeftNumberLabel.Visible = true;
@@ -212,6 +223,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerLeftOtherRadio.Checked)
             {
+                myPaper.header.leftTitle = false;
+                myPaper.header.leftPageNum = false;
+                myPaper.header.leftOther = true;
+
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
                 headerLeftNumberLabel.Visible = false;
@@ -221,6 +236,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerLeftEmptyRadio.Checked)
             {
+                myPaper.header.leftTitle = false;
+                myPaper.header.leftPageNum = false;
+                myPaper.header.leftOther = false;
+
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
                 headerLeftNumberLabel.Visible = false;
@@ -234,6 +253,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerCenterTitleRadio.Checked)
             {
+                myPaper.header.centerTitle = true;
+                myPaper.header.centerPageNum = false;
+                myPaper.header.centerOther = false;
+
                 headerCenterTitleLabel.Visible = true;
                 headerCenterTitleEnter.Visible = true;
                 headerCenterNumberLabel.Visible = false;
@@ -243,6 +266,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerCenterNumberRadio.Checked)
             {
+                myPaper.header.centerTitle = false;
+                myPaper.header.centerPageNum = true;
+                myPaper.header.centerOther = false;
+
                 headerCenterTitleLabel.Visible = false;
                 headerCenterTitleEnter.Visible = false;
                 headerCenterNumberLabel.Visible = true;
@@ -252,6 +279,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerCenterOtherRadio.Checked)
             {
+                myPaper.header.centerTitle = false;
+                myPaper.header.centerPageNum = false;
+                myPaper.header.centerOther = true;
+
                 headerCenterTitleLabel.Visible = false;
                 headerCenterTitleEnter.Visible = false;
                 headerCenterNumberLabel.Visible = false;
@@ -261,6 +292,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerCenterEmptyRadio.Checked)
             {
+                myPaper.header.centerTitle = false;
+                myPaper.header.centerPageNum = false;
+                myPaper.header.centerOther = false;
+
                 headerCenterTitleLabel.Visible = false;
                 headerCenterTitleEnter.Visible = false;
                 headerCenterNumberLabel.Visible = false;
@@ -274,6 +309,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerRightTitleRadio.Checked)
             {
+                myPaper.header.rightTitle = true;
+                myPaper.header.rightPageNum = false;
+                myPaper.header.rightOther = false;
+
                 headerRightTitleLabel.Visible = true;
                 headerRightTitleEnter.Visible = true;
                 headerRightNumberLabel.Visible = false;
@@ -283,6 +322,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerRightNumberRadio.Checked)
             {
+                myPaper.header.rightTitle = false;
+                myPaper.header.rightPageNum = true;
+                myPaper.header.rightOther = false;
+
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
                 headerRightNumberLabel.Visible = true;
@@ -292,6 +335,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerRightOtherRadio.Checked)
             {
+                myPaper.header.rightTitle = false;
+                myPaper.header.rightPageNum = false;
+                myPaper.header.rightOther = true;
+
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
                 headerRightNumberLabel.Visible = false;
@@ -301,6 +348,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerRightEmptyRadio.Checked)
             {
+                myPaper.header.rightTitle = false;
+                myPaper.header.rightPageNum = false;
+                myPaper.header.rightOther = false;
+
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
                 headerRightNumberLabel.Visible = false;
@@ -314,6 +365,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerFirstLeftTitleRadio.Checked)
             {
+                myPaper.header.firstLeftTitle = true;
+                myPaper.header.firstLeftPageNum = false;
+                myPaper.header.firstLeftOther = false;
+
                 headerFirstLeftTitleLabel.Visible = true;
                 headerFirstLeftTitleEnter.Visible = true;
                 headerFirstLeftNumberLabel.Visible = false;
@@ -323,6 +378,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstLeftNumberRadio.Checked)
             {
+                myPaper.header.firstLeftTitle = false;
+                myPaper.header.firstLeftPageNum = true;
+                myPaper.header.firstLeftOther = false;
+
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
                 headerFirstLeftNumberLabel.Visible = true;
@@ -332,6 +391,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstLeftOtherRadio.Checked)
             {
+                myPaper.header.firstLeftTitle = false;
+                myPaper.header.firstLeftPageNum = false;
+                myPaper.header.firstLeftOther = true;
+
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
                 headerFirstLeftNumberLabel.Visible = false;
@@ -341,6 +404,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstLeftEmptyRadio.Checked)
             {
+                myPaper.header.firstLeftTitle = false;
+                myPaper.header.firstLeftPageNum = false;
+                myPaper.header.firstLeftOther = false;
+
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
                 headerFirstLeftNumberLabel.Visible = false;
@@ -354,6 +421,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerFirstCenterTitleRadio.Checked)
             {
+                myPaper.header.firstCenterTitle = true;
+                myPaper.header.firstCenterPageNum = false;
+                myPaper.header.firstCenterOther = false;
+
                 headerFirstCenterTitleLabel.Visible = true;
                 headerFirstCenterTitleEnter.Visible = true;
                 headerFirstCenterNumberLabel.Visible = false;
@@ -363,6 +434,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstCenterNumberRadio.Checked)
             {
+                myPaper.header.firstCenterTitle = false;
+                myPaper.header.firstCenterPageNum = true;
+                myPaper.header.firstCenterOther = false;
+
                 headerFirstCenterTitleLabel.Visible = false;
                 headerFirstCenterTitleEnter.Visible = false;
                 headerFirstCenterNumberLabel.Visible = true;
@@ -372,6 +447,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstCenterOtherRadio.Checked)
             {
+                myPaper.header.firstCenterTitle = false;
+                myPaper.header.firstCenterPageNum = false;
+                myPaper.header.firstCenterOther = true;
+
                 headerFirstCenterTitleLabel.Visible = false;
                 headerFirstCenterTitleEnter.Visible = false;
                 headerFirstCenterNumberLabel.Visible = false;
@@ -381,6 +460,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstCenterEmptyRadio.Checked)
             {
+                myPaper.header.firstCenterTitle = false;
+                myPaper.header.firstCenterPageNum = false;
+                myPaper.header.firstCenterOther = false;
+
                 headerFirstCenterTitleLabel.Visible = false;
                 headerFirstCenterTitleEnter.Visible = false;
                 headerFirstCenterNumberLabel.Visible = false;
@@ -394,6 +477,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerFirstRightTitleRadio.Checked)
             {
+                myPaper.header.firstRightTitle = true;
+                myPaper.header.firstRightPageNum = false;
+                myPaper.header.firstRightOther = false;
+
                 headerFirstRightTitleLabel.Visible = true;
                 headerFirstRightTitleEnter.Visible = true;
                 headerFirstRightNumberLabel.Visible = false;
@@ -403,6 +490,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstRightNumberRadio.Checked)
             {
+                myPaper.header.firstRightTitle = false;
+                myPaper.header.firstRightPageNum = true;
+                myPaper.header.firstRightOther = false;
+
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
                 headerFirstRightNumberLabel.Visible = true;
@@ -412,6 +503,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstRightOtherRadio.Checked)
             {
+                myPaper.header.firstRightTitle = false;
+                myPaper.header.firstRightPageNum = false;
+                myPaper.header.firstRightOther = true;
+
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
                 headerFirstRightNumberLabel.Visible = false;
@@ -421,6 +516,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (headerFirstRightEmptyRadio.Checked)
             {
+                myPaper.header.firstRightTitle = false;
+                myPaper.header.firstRightPageNum = false;
+                myPaper.header.firstRightOther = false;
+
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
                 headerFirstRightNumberLabel.Visible = false;

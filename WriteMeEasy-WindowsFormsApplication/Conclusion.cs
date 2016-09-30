@@ -9,6 +9,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void conclusionIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeConclusion = conclusionIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("CONCLUSION", out sectionHeight)) { }
 
@@ -82,9 +83,9 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void conclusionIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.conclusion.includeTitle = conclusionIncludeTitleCheck.Checked;
             if (conclusionIncludeTitleCheck.Checked)
             {
-                myPaper.conclusion.includeTitle = true;
                 lowerSection(105, "CONCLUSION");
                 sections["CONCLUSION"] += 105;
                 conclusionPanel.Height += 105;
@@ -104,7 +105,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
-                myPaper.conclusion.includeTitle = false;
                 conclusionTitleLabel.Enabled = false;
                 conclusionTitleEnter.Enabled = false;
                 conclusionTitleBoldCheck.Visible = false;
