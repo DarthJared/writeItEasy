@@ -108,7 +108,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             reOrderTitlePage();
             myPaper.titlePage.titlePageOrder = new List<string>();
-            for (int i = 0; i < orderTitlePage.Count; i++)
+            for (int i = 1; i <= orderTitlePage.Count; i++)
             {
                 myPaper.titlePage.titlePageOrder.Add(orderTitlePage[i]);
             }
@@ -129,7 +129,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             reOrderTitlePage();
             myPaper.titlePage.titlePageOrder = new List<string>();
-            for (int i = 0; i < orderTitlePage.Count; i++)
+            for (int i = 1; i <= orderTitlePage.Count; i++)
             {
                 myPaper.titlePage.titlePageOrder.Add(orderTitlePage[i]);
             }

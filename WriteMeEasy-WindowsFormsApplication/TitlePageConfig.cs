@@ -29,7 +29,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public TitlePageConfig()
         {
-
+            titlePageOrder = new List<string>();
         }
     }
 }

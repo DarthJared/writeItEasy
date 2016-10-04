@@ -38,6 +38,13 @@ namespace WriteMeEasy_WindowsFormsApplication
             orderTitlePage.Add(5, "SCHOOL");
             orderTitlePage.Add(6, "DATE");
 
+            myPaper.titlePage.titlePageOrder.Add("TITLE");
+            myPaper.titlePage.titlePageOrder.Add("NAME");
+            myPaper.titlePage.titlePageOrder.Add("CLASS");
+            myPaper.titlePage.titlePageOrder.Add("PROFESSOR");
+            myPaper.titlePage.titlePageOrder.Add("SCHOOL");
+            myPaper.titlePage.titlePageOrder.Add("DATE");
+
             titlePageActive = false;
             summaryActive = false;
             abstractActive = false;

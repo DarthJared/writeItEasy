@@ -45,7 +45,58 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeTitlePage)
                 {
+                    Paragraph blankLines1 = document.Content.Paragraphs.Add(ref missing);
+                    blankLines1.Range.InsertParagraphAfter();
+                    Paragraph blankLines2 = document.Content.Paragraphs.Add(ref missing);
+                    blankLines2.Range.InsertParagraphAfter();
+                    Paragraph blankLines3 = document.Content.Paragraphs.Add(ref missing);
+                    blankLines3.Range.InsertParagraphAfter();
+                    Paragraph blankLines4 = document.Content.Paragraphs.Add(ref missing);
+                    blankLines4.Range.InsertParagraphAfter();
+                    Paragraph blankLines5 = document.Content.Paragraphs.Add(ref missing);
+                    blankLines5.Range.InsertParagraphAfter();
+                    foreach (string titleItem in myPaper.titlePage.titlePageOrder)
+                    {
+                        string textToAdd = "";
+                        bool includeChecked = false;
+                        switch(titleItem)
+                        {
+                            case "TITLE":
+                                includeChecked = myPaper.titlePage.includeTitle;
+                                textToAdd = myPaper.titlePage.title;
+                                break;
+                            case "NAME":
+                                includeChecked = myPaper.titlePage.includeName;
+                                textToAdd = myPaper.titlePage.name;
+                                break;
+                            case "CLASS":
+                                includeChecked = myPaper.titlePage.includeClass;
+                                textToAdd = myPaper.titlePage.className;
+                                break;
+                            case "PROFESSOR":
+                                includeChecked = myPaper.titlePage.includeProfessor;
+                                textToAdd = myPaper.titlePage.professor;
+                                break;
+                            case "SCHOOL":
+                                includeChecked = myPaper.titlePage.includeSchool;
+                                textToAdd = myPaper.titlePage.school;
+                                break;
+                            case "DATE":
+                                includeChecked = myPaper.titlePage.includeDate;
+                                textToAdd = myPaper.titlePage.date;
+                                break;
+                        }
 
+                        if (includeChecked)
+                        {
+                            Paragraph lineToAdd = document.Content.Paragraphs.Add(ref missing);
+                            lineToAdd.Range.Text = textToAdd;
+                            lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                            lineToAdd.Range.InsertParagraphAfter();
+                        }                        
+                    }
+                    Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                    pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
                 }
 
                 if (myPaper.includeSummary)
@@ -130,6 +181,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                         }                      
                     }
+                    else
+                    {
+                        sectionText.Range.Text = section.content;
+                    }
                     sectionText.Range.InsertParagraphAfter();
                     
                     foreach (SubSection subsection in section.subSections)
@@ -173,6 +228,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 }
                             }                         
                         }
+                        else
+                        {
+                            subsectionText.Range.Text = subsection.content;
+                        }
                         subsectionText.Range.InsertParagraphAfter();
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
@@ -215,6 +274,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         rangeToBold.Bold = 1;
                                     }
                                 }                      
+                            }
+                            else
+                            {
+                                subsubsectionText.Range.Text = subsubsection.content;
                             }
                             subsubsectionText.Range.InsertParagraphAfter();
                         }
