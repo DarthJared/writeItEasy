@@ -12,22 +12,6 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void writeButton_Click(object sender, EventArgs e)
         {
-            //// Modify to suit your machine:
-            //string fileName = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
-
-            //// Create a document in memory:
-            //var doc = DocX.Create(fileName);
-
-            //// Insert a paragrpah:
-            //doc.InsertParagraph("This is my first paragraph");
-            //doc.InsertSectionPageBreak();
-            //doc.InsertParagraph("This is my second page!");
-
-            //// Save to the output directory:
-            //doc.Save();
-
-            //// Open in Word:
-            //Process.Start("WINWORD.EXE", fileName);
             try
             {
                 Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
