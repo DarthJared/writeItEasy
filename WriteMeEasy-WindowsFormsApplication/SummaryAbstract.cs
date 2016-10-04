@@ -9,6 +9,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void summaryIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeSummary = summaryIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("SUMMARY", out sectionHeight)) { }
             int generalSectionHeight;
@@ -27,8 +28,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             /*Checked*/
             if (summaryIncludeCheck.Checked)
-            {
-                myPaper.includeSummary = true;
+            {                
                 if (abstractIncludeCheck.Checked)
                 {
                     addSpace("abstractContentGroupBox", 312, "contentPanel", "CONTENT");
@@ -47,7 +47,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                myPaper.includeSummary = false;
                 if (abstractIncludeCheck.Checked)
                 {
                     addSpace("abstractContentGroupBox", -312, "contentPanel", "CONTENT");
@@ -67,6 +66,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeAbstract = abstractIncludeTitleCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("ABSTRACT", out sectionHeight)) { }
 
@@ -93,7 +93,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (abstractIncludeCheck.Checked)
             {
-                myPaper.includeAbstract = true;
                 addSpace("section1GroupBox", 312, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 312);
                 abstractContentGroupBox.Visible = true;
@@ -105,7 +104,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                myPaper.includeAbstract = false;
                 addSpace("section1GroupBox", -312, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Visible = false;
 
@@ -118,9 +116,9 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void summaryIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.summary.includeTitle = summaryIncludeTitleCheck.Checked;
             if (summaryIncludeTitleCheck.Checked)
             {
-                myPaper.summary.includeTitle = true;
                 summaryTitleGroupBox.Height = 150;
                 summaryDefaultButton.Location = new Point(9, 198);
                 summaryOptionsGroupBox.Height += 105;
@@ -140,7 +138,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
-                myPaper.summary.includeTitle = false;
                 summaryTitleTextLabel.Enabled = false;
                 summaryTitleText.Enabled = false;
                 summaryTitleBoldCheck.Visible = false;
@@ -162,9 +159,9 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.abstractConfig.includeTitle = abstractIncludeTitleCheck.Checked;
             if (abstractIncludeTitleCheck.Checked)
             {
-                myPaper.abstractConfig.includeTitle = true;
                 abstractTitleGroupBox.Height = 150;
                 abstractDefaultButton.Location = new Point(9, 198);
                 abstractOptionsGroupBox.Height += 105;
@@ -184,7 +181,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
-                myPaper.abstractConfig.includeTitle = false;
                 abstractTitleLabel.Enabled = false;
                 abstractTitleText.Enabled = false;
                 abstractTitleBoldCheck.Visible = false;

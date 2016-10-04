@@ -533,6 +533,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerLeftTitleRadio.Checked)
             {
+                myPaper.footer.leftTitle = true;
+                myPaper.footer.leftPageNum = false;
+                myPaper.footer.leftOther = false;
+
                 footerLeftTitleLabel.Visible = true;
                 footerLeftTitleEnter.Visible = true;
                 footerLeftNumberLabel.Visible = false;
@@ -542,6 +546,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerLeftNumberRadio.Checked)
             {
+                myPaper.footer.leftTitle = false;
+                myPaper.footer.leftPageNum = true;
+                myPaper.footer.leftOther = false;
+
                 footerLeftTitleLabel.Visible = false;
                 footerLeftTitleEnter.Visible = false;
                 footerLeftNumberLabel.Visible = true;
@@ -551,6 +559,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerLeftOtherRadio.Checked)
             {
+                myPaper.footer.leftTitle = false;
+                myPaper.footer.leftPageNum = false;
+                myPaper.footer.leftOther = true;
+
                 footerLeftTitleLabel.Visible = false;
                 footerLeftTitleEnter.Visible = false;
                 footerLeftNumberLabel.Visible = false;
@@ -560,6 +572,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerLeftEmptyRadio.Checked)
             {
+                myPaper.footer.leftTitle = false;
+                myPaper.footer.leftPageNum = false;
+                myPaper.footer.leftOther = false;
+
                 footerLeftTitleLabel.Visible = false;
                 footerLeftTitleEnter.Visible = false;
                 footerLeftNumberLabel.Visible = false;
@@ -573,6 +589,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerCenterTitleRadio.Checked)
             {
+                myPaper.footer.centerTitle = true;
+                myPaper.footer.centerPageNum = false;
+                myPaper.footer.centerOther = false;
+
                 footerCenterTitleLabel.Visible = true;
                 footerCenterTitleEnter.Visible = true;
                 footerCenterNumberLabel.Visible = false;
@@ -582,6 +602,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerCenterNumberRadio.Checked)
             {
+                myPaper.footer.centerTitle = false;
+                myPaper.footer.centerPageNum = true;
+                myPaper.footer.centerOther = false;
+
                 footerCenterTitleLabel.Visible = false;
                 footerCenterTitleEnter.Visible = false;
                 footerCenterNumberLabel.Visible = true;
@@ -591,6 +615,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerCenterOtherRadio.Checked)
             {
+                myPaper.footer.centerTitle = false;
+                myPaper.footer.centerPageNum = false;
+                myPaper.footer.centerOther = true;
+
                 footerCenterTitleLabel.Visible = false;
                 footerCenterTitleEnter.Visible = false;
                 footerCenterNumberLabel.Visible = false;
@@ -600,6 +628,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerCenterEmptyRadio.Checked)
             {
+                myPaper.footer.centerTitle = false;
+                myPaper.footer.centerPageNum = false;
+                myPaper.footer.centerOther = false;
+
                 footerCenterTitleLabel.Visible = false;
                 footerCenterTitleEnter.Visible = false;
                 footerCenterNumberLabel.Visible = false;
@@ -613,6 +645,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerRightTitleRadio.Checked)
             {
+                myPaper.footer.rightTitle = true;
+                myPaper.footer.rightPageNum = false;
+                myPaper.footer.rightOther = false;
+
                 footerRightTitleLabel.Visible = true;
                 footerRightTitleEnter.Visible = true;
                 footerRightNumberLabel.Visible = false;
@@ -622,6 +658,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerRightNumberRadio.Checked)
             {
+                myPaper.footer.rightTitle = false;
+                myPaper.footer.rightPageNum = true;
+                myPaper.footer.rightOther = false;
+
                 footerRightTitleLabel.Visible = false;
                 footerRightTitleEnter.Visible = false;
                 footerRightNumberLabel.Visible = true;
@@ -631,6 +671,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerRightOtherRadio.Checked)
             {
+                myPaper.footer.rightTitle = false;
+                myPaper.footer.rightPageNum = false;
+                myPaper.footer.rightOther = true;
+
                 footerRightTitleLabel.Visible = false;
                 footerRightTitleEnter.Visible = false;
                 footerRightNumberLabel.Visible = false;
@@ -640,6 +684,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerRightEmptyRadio.Checked)
             {
+                myPaper.footer.rightTitle = false;
+                myPaper.footer.rightPageNum = false;
+                myPaper.footer.rightOther = false;
+
                 footerRightTitleLabel.Visible = false;
                 footerRightTitleEnter.Visible = false;
                 footerRightNumberLabel.Visible = false;
@@ -653,6 +701,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerFirstLeftTitleRadio.Checked)
             {
+                myPaper.footer.firstLeftTitle = true;
+                myPaper.footer.firstLeftPageNum = false;
+                myPaper.footer.firstLeftOther = false;
+
                 footerFirstLeftTitleLabel.Visible = true;
                 footerFirstLeftTitleEnter.Visible = true;
                 footerFirstLeftNumberLabel.Visible = false;
@@ -662,6 +714,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstLeftNumberRadio.Checked)
             {
+                myPaper.footer.firstLeftTitle = false;
+                myPaper.footer.firstLeftPageNum = true;
+                myPaper.footer.firstLeftOther = false;
+
                 footerFirstLeftTitleLabel.Visible = false;
                 footerFirstLeftTitleEnter.Visible = false;
                 footerFirstLeftNumberLabel.Visible = true;
@@ -671,6 +727,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstLeftOtherRadio.Checked)
             {
+                myPaper.footer.firstLeftTitle = false;
+                myPaper.footer.firstLeftPageNum = false;
+                myPaper.footer.firstLeftOther = true;
+
                 footerFirstLeftTitleLabel.Visible = false;
                 footerFirstLeftTitleEnter.Visible = false;
                 footerFirstLeftNumberLabel.Visible = false;
@@ -680,6 +740,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstLeftEmptyRadio.Checked)
             {
+                myPaper.footer.firstLeftTitle = false;
+                myPaper.footer.firstLeftPageNum = false;
+                myPaper.footer.firstLeftOther = false;
+
                 footerFirstLeftTitleLabel.Visible = false;
                 footerFirstLeftTitleEnter.Visible = false;
                 footerFirstLeftNumberLabel.Visible = false;
@@ -693,6 +757,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerFirstCenterTitleRadio.Checked)
             {
+                myPaper.footer.firstCenterTitle = true;
+                myPaper.footer.firstCenterPageNum = false;
+                myPaper.footer.firstCenterOther = false;
+
                 footerFirstCenterTitleLabel.Visible = true;
                 footerFirstCenterTitleEnter.Visible = true;
                 footerFirstCenterNumberLabel.Visible = false;
@@ -702,6 +770,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstCenterNumberRadio.Checked)
             {
+                myPaper.footer.firstCenterTitle = false;
+                myPaper.footer.firstCenterPageNum = true;
+                myPaper.footer.firstCenterOther = false;
+
                 footerFirstCenterTitleLabel.Visible = false;
                 footerFirstCenterTitleEnter.Visible = false;
                 footerFirstCenterNumberLabel.Visible = true;
@@ -711,6 +783,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstCenterOtherRadio.Checked)
             {
+                myPaper.footer.firstCenterTitle = false;
+                myPaper.footer.firstCenterPageNum = false;
+                myPaper.footer.firstCenterOther = true;
+
                 footerFirstCenterTitleLabel.Visible = false;
                 footerFirstCenterTitleEnter.Visible = false;
                 footerFirstCenterNumberLabel.Visible = false;
@@ -720,6 +796,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstCenterEmptyRadio.Checked)
             {
+                myPaper.footer.firstCenterTitle = false;
+                myPaper.footer.firstCenterPageNum = false;
+                myPaper.footer.firstCenterOther = false;
+
                 footerFirstCenterTitleLabel.Visible = false;
                 footerFirstCenterTitleEnter.Visible = false;
                 footerFirstCenterNumberLabel.Visible = false;
@@ -733,6 +813,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (footerFirstRightTitleRadio.Checked)
             {
+                myPaper.footer.firstRightTitle = true;
+                myPaper.footer.firstRightPageNum = false;
+                myPaper.footer.firstRightOther = false;
+
                 footerFirstRightTitleLabel.Visible = true;
                 footerFirstRightTitleEnter.Visible = true;
                 footerFirstRightNumberLabel.Visible = false;
@@ -742,6 +826,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstRightNumberRadio.Checked)
             {
+                myPaper.footer.firstRightTitle = false;
+                myPaper.footer.firstRightPageNum = true;
+                myPaper.footer.firstRightOther = false;
+
                 footerFirstRightTitleLabel.Visible = false;
                 footerFirstRightTitleEnter.Visible = false;
                 footerFirstRightNumberLabel.Visible = true;
@@ -751,6 +839,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstRightOtherRadio.Checked)
             {
+                myPaper.footer.firstRightTitle = false;
+                myPaper.footer.firstRightPageNum = false;
+                myPaper.footer.firstRightOther = true;
+
                 footerFirstRightTitleLabel.Visible = false;
                 footerFirstRightTitleEnter.Visible = false;
                 footerFirstRightNumberLabel.Visible = false;
@@ -760,6 +852,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (footerFirstRightEmptyRadio.Checked)
             {
+                myPaper.footer.firstRightTitle = false;
+                myPaper.footer.firstRightPageNum = false;
+                myPaper.footer.firstRightOther = false;
+
                 footerFirstRightTitleLabel.Visible = false;
                 footerFirstRightTitleEnter.Visible = false;
                 footerFirstRightNumberLabel.Visible = false;
@@ -799,6 +895,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void footerFirstPageDiffCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.footer.differentFirstPage = footerFirstPageDiffCheck.Checked;
             if (footerFirstPageDiffCheck.Checked)
             {
                 if (footerFirstPageUseMoreCheck.Checked)

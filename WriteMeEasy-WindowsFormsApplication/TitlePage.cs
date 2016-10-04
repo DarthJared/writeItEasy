@@ -9,6 +9,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void titlePageIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.includeTitlePage = titlePageIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("TITLE_PAGE", out sectionHeight)) { }
             int generalSectionHeight;
@@ -19,7 +20,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (titlePageIncludeCheck.Checked)
             {
-                myPaper.includeTitlePage = true;
                 titlePagePanel.Visible = true;
                 lowerSection(sectionHeight, "TITLE_PAGE");
                 titlePageActive = true;
@@ -27,7 +27,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                myPaper.includeTitlePage = false;
                 titlePagePanel.Visible = false;
                 raiseSection(sectionHeight, "TITLE_PAGE");
                 titlePageActive = false;
@@ -108,6 +107,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 orderTitlePage[index + 1] = option;
             }
             reOrderTitlePage();
+            myPaper.titlePage.titlePageOrder = new List<string>();
+            for (int i = 0; i < orderTitlePage.Count; i++)
+            {
+                myPaper.titlePage.titlePageOrder.Add(orderTitlePage[i]);
+            }
         }
 
         private void titlePageUp(string option)
@@ -124,6 +128,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 orderTitlePage[index - 1] = option;
             }
             reOrderTitlePage();
+            myPaper.titlePage.titlePageOrder = new List<string>();
+            for (int i = 0; i < orderTitlePage.Count; i++)
+            {
+                myPaper.titlePage.titlePageOrder.Add(orderTitlePage[i]);
+            }
         }
 
         private void reOrderTitlePage()
@@ -183,86 +192,44 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void titlePageTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageTitleCheck.Checked)
-            {
-                titlePageTitleLabel.Visible = true;
-                titlePageTitleEnter.Visible = true;
-            }
-            else
-            {
-                titlePageTitleLabel.Visible = false;
-                titlePageTitleEnter.Visible = false;
-            }
+            myPaper.titlePage.includeTitle = titlePageTitleCheck.Checked;
+            titlePageTitleLabel.Visible = titlePageTitleCheck.Checked;
+            titlePageTitleEnter.Visible = titlePageTitleCheck.Checked;
         }
 
         private void titlePageNameCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageNameCheck.Checked)
-            {
-                titlePageNameLabel.Visible = true;
-                titlePageNameEnter.Visible = true;
-            }
-            else
-            {
-                titlePageNameLabel.Visible = false;
-                titlePageNameEnter.Visible = false;
-            }
+            myPaper.titlePage.includeName = titlePageNameCheck.Checked;
+            titlePageNameLabel.Visible = titlePageNameCheck.Checked;
+            titlePageNameEnter.Visible = titlePageNameCheck.Checked;
         }
 
         private void titlePageClassCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageClassCheck.Checked)
-            {
-                titlePageClassLabel.Visible = true;
-                titlePageClassEnter.Visible = true;
-            }
-            else
-            {
-                titlePageClassLabel.Visible = false;
-                titlePageClassEnter.Visible = false;
-            }
+            myPaper.titlePage.includeClass = titlePageClassCheck.Checked;
+            titlePageClassLabel.Visible = titlePageClassCheck.Checked;
+            titlePageClassEnter.Visible = titlePageClassCheck.Checked;
         }
 
         private void titlePageProfessorCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageProfessorCheck.Checked)
-            {
-                titlePageProfessorLabel.Visible = true;
-                titlePageProfessorEnter.Visible = true;
-            }
-            else
-            {
-                titlePageProfessorLabel.Visible = false;
-                titlePageProfessorEnter.Visible = false;
-            }
+            myPaper.titlePage.includeProfessor = titlePageProfessorCheck.Checked;
+            titlePageProfessorLabel.Visible = titlePageProfessorCheck.Checked;
+            titlePageProfessorEnter.Visible = titlePageProfessorCheck.Checked;
         }
 
         private void titlePageSchoolCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageSchoolCheck.Checked)
-            {
-                titlePageSchoolLabel.Visible = true;
-                titlePageSchoolEnter.Visible = true;
-            }
-            else
-            {
-                titlePageSchoolLabel.Visible = false;
-                titlePageSchoolEnter.Visible = false;
-            }
+            myPaper.titlePage.includeSchool = titlePageSchoolCheck.Checked;
+            titlePageSchoolLabel.Visible = titlePageSchoolCheck.Checked;
+            titlePageSchoolEnter.Visible = titlePageSchoolCheck.Checked;
         }
 
         private void titlePageDateCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (titlePageDateCheck.Checked)
-            {
-                titlePageDateLabel.Visible = true;
-                titlePageDateEnter.Visible = true;
-            }
-            else
-            {
-                titlePageDateLabel.Visible = false;
-                titlePageDateEnter.Visible = false;
-            }
+            myPaper.titlePage.includeDate = titlePageDateCheck.Checked;
+            titlePageDateLabel.Visible = titlePageDateCheck.Checked;
+            titlePageDateEnter.Visible = titlePageDateCheck.Checked;
         }
     }
 }

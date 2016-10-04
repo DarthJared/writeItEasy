@@ -9,6 +9,8 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void includeSectionLabelsCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.sectionsConfig.includeSectionLabels = includeSectionLabelsCheck.Checked;
+
             int numSections = myPaper.sections.Count;
             int sectionMult = numSections * 27;
             int totalSpace = 243 + sectionMult;
@@ -48,6 +50,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void includeSubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.sectionsConfig.includeSubsectionLabels = includeSubsectionLabelCheck.Checked;
             if (includeSubsectionLabelCheck.Checked)
             {
                 addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");
@@ -87,6 +90,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void includeSubsubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
         {
+            myPaper.sectionsConfig.includeSubsubsectionLabels = includeSubsubsectionLabelCheck.Checked;
             if (includeSubsubsectionLabelCheck.Checked)
             {
                 addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");
