@@ -322,7 +322,7 @@
             this.abstractTitleFontChoose = new System.Windows.Forms.ComboBox();
             this.abstractTitleBoldCheck = new System.Windows.Forms.CheckBox();
             this.abstractIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.abstractOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.abstractHeader = new System.Windows.Forms.Label();
             this.generalPanel = new System.Windows.Forms.Panel();
             this.generalDefaultButton = new System.Windows.Forms.Button();
@@ -3840,7 +3840,7 @@
             // 
             this.abstractOptionsGroupBox.Controls.Add(this.abstractDefaultButton);
             this.abstractOptionsGroupBox.Controls.Add(this.abstractTitleGroupBox);
-            this.abstractOptionsGroupBox.Controls.Add(this.checkBox10);
+            this.abstractOptionsGroupBox.Controls.Add(this.abstractOwnPageCheck);
             this.abstractOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abstractOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.abstractOptionsGroupBox.Name = "abstractOptionsGroupBox";
@@ -3954,6 +3954,7 @@
             this.abstractTitleBoldCheck.Text = "Bold Title";
             this.abstractTitleBoldCheck.UseVisualStyleBackColor = true;
             this.abstractTitleBoldCheck.Visible = false;
+            this.abstractTitleBoldCheck.CheckStateChanged += new System.EventHandler(this.abstractTitleBoldCheck_CheckedChanged);
             // 
             // abstractIncludeTitleCheck
             // 
@@ -3967,16 +3968,17 @@
             this.abstractIncludeTitleCheck.UseVisualStyleBackColor = true;
             this.abstractIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeTitleCheck_CheckedChanged);
             // 
-            // checkBox10
+            // abstractOwnPageCheck
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(9, 19);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(107, 17);
-            this.checkBox10.TabIndex = 0;
-            this.checkBox10.Text = "On Its Own Page";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.abstractOwnPageCheck.AutoSize = true;
+            this.abstractOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractOwnPageCheck.Location = new System.Drawing.Point(9, 19);
+            this.abstractOwnPageCheck.Name = "abstractOwnPageCheck";
+            this.abstractOwnPageCheck.Size = new System.Drawing.Size(107, 17);
+            this.abstractOwnPageCheck.TabIndex = 0;
+            this.abstractOwnPageCheck.Text = "On Its Own Page";
+            this.abstractOwnPageCheck.UseVisualStyleBackColor = true;
+            this.abstractOwnPageCheck.CheckedChanged += new System.EventHandler(this.abstractOwnPageCheck_CheckedChanged);
             // 
             // abstractHeader
             // 
@@ -5260,7 +5262,7 @@
         private System.Windows.Forms.ComboBox abstractTitleFontChoose;
         private System.Windows.Forms.CheckBox abstractTitleBoldCheck;
         private System.Windows.Forms.CheckBox abstractIncludeTitleCheck;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox abstractOwnPageCheck;
         private System.Windows.Forms.GroupBox summaryContentGroupBox;
         private System.Windows.Forms.Panel summaryContentPanel;
         private System.Windows.Forms.ToolStripContainer summaryToolStripContainer;

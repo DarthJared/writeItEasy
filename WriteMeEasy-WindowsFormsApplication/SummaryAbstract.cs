@@ -66,7 +66,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.includeAbstract = abstractIncludeTitleCheck.Checked;
+            myPaper.includeAbstract = abstractIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("ABSTRACT", out sectionHeight)) { }
 

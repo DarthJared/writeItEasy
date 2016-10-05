@@ -552,5 +552,15 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             //Set default settings for references
         }
+
+        private void abstractTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            myPaper.abstractConfig.titleBold = abstractTitleBoldCheck.Checked;
+        }
+
+        private void abstractOwnPageCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
+        }
     }
 }

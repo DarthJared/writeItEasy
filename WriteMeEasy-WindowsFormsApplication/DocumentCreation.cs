@@ -101,81 +101,93 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeSummary)
                 {
+                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
                     if (myPaper.summary.includeTitle)
-                    {
-                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                        labelText.Range.Text = myPaper.summary.title;
-                        labelText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                        labelText.Range.InsertParagraphAfter();
+                    {                        
+                        if (myPaper.summary.titleBold)
+                        {
+                            text.Range.Bold = 1;
+                        }
+                        text.Range.Text = myPaper.summary.title;
+                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        text.Range.InsertParagraphAfter();
                     }
-                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
-                    paragraphText.Range.Text = myPaper.summary.content;
-                    paragraphText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                    paragraphText.Range.InsertParagraphAfter();
+                    //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
+                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                    text.Range.Bold = 0;
+                    text.Range.Text = myPaper.summary.content;
+                    text.Range.InsertParagraphAfter();
+                    if (myPaper.summary.onOwnPage)
+                    {
+                        Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                        pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                    }
                 }
 
                 if (myPaper.includeAbstract)
                 {
+                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
                     if (myPaper.abstractConfig.includeTitle)
-                    {
-                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                        labelText.Range.Text = myPaper.abstractConfig.title;
-                        labelText.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                        labelText.Range.InsertParagraphAfter();
+                    {                        
+                        if (myPaper.abstractConfig.titleBold)
+                        {
+                            text.Range.Bold = 1;
+                        }
+                        text.Range.Text = myPaper.abstractConfig.title;
+                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        text.Range.InsertParagraphAfter();
                     }
-                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
-                    paragraphText.Range.Text = myPaper.abstractConfig.content;
-                    paragraphText.Range.InsertParagraphAfter();
-                }
-
-                if (myPaper.includeHeader)
-                {
-
-                }
-
-                if (myPaper.includeFooter)
-                {
-
-                }
-
-                
+                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                    text.Range.Bold = 0;
+                    text.Range.Text = myPaper.abstractConfig.content;                    
+                    text.Range.InsertParagraphAfter();
+                    if (myPaper.abstractConfig.onOwnPage)
+                    {
+                        Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                        pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                    }
+                }                
 
                 foreach(Section section in myPaper.sections)
                 {
-                    Paragraph sectionText = document.Content.Paragraphs.Add(ref missing);
+                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
                     if (includeSectionLabelsCheck.Checked)
                     {
                         if (myPaper.sectionsConfig.sectionLabelInlineWithText)
                         {
-                            sectionText.Range.Text = section.title + ". " + section.content;
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Text = section.title + ". " + section.content;                            
                             int start = 0;
                             int end = section.title.Length + 1;
                             if (myPaper.sectionsConfig.sectionLabelBold)
                             {
-                                Range rangeToBold = sectionText.Range.Duplicate;
+                                Range rangeToBold = text.Range.Duplicate;
                                 rangeToBold.SetRange(start, end);
                                 rangeToBold.Bold = 1;
                             }                            
                         }
                         else if (myPaper.sectionsConfig.sectionLabelOnOwnLine)
                         {
-                            Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                            labelText.Range.Text = section.title;
                             if (myPaper.sectionsConfig.sectionLabelBold)
                             {
-                                labelText.Range.Bold = 1;
+                                text.Range.Bold = 1;
                             }
-                            labelText.Range.InsertParagraphAfter();
-                            sectionText.Range.Text = section.content;
+                            text.Range.Text = section.title;
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                            text.Range.InsertParagraphAfter();
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Bold = 0;
+                            text.Range.Text = section.content;
                         }  
                         else
                         {
-                            sectionText.Range.Text = section.title + ". " + section.content;
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Text = section.title + ". " + section.content;                            
                             int start = 0;
                             int end = section.title.Length + 1;
                             if (myPaper.sectionsConfig.sectionLabelBold)
                             {
-                                Range rangeToBold = sectionText.Range.Duplicate;
+                                Range rangeToBold = text.Range.Duplicate;
                                 rangeToBold.SetRange(start, end);
                                 rangeToBold.Bold = 1;
                             }
@@ -183,46 +195,50 @@ namespace WriteMeEasy_WindowsFormsApplication
                     }
                     else
                     {
-                        sectionText.Range.Text = section.content;
+                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        text.Range.Text = section.content;                        
                     }
-                    sectionText.Range.InsertParagraphAfter();
+                    text.Range.InsertParagraphAfter();
                     
                     foreach (SubSection subsection in section.subSections)
                     {
-                        Paragraph subsectionText = document.Content.Paragraphs.Add(ref missing);
                         if (includeSubsectionLabelCheck.Checked)
                         {
                             if (myPaper.sectionsConfig.subsectionLabelInlineWithText)
                             {
-                                subsectionText.Range.Text = subsection.title + ". " + subsection.content;
+                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                text.Range.Text = subsection.title + ". " + subsection.content;
                                 int start = 0;
                                 int end = subsection.title.Length + 1;
                                 if (myPaper.sectionsConfig.subsectionLabelBold)
                                 {
-                                    Range rangeToBold = subsectionText.Range.Duplicate;
+                                    Range rangeToBold = text.Range.Duplicate;
                                     rangeToBold.SetRange(start, end);
                                     rangeToBold.Bold = 1;
                                 }
                             }
                             else if (myPaper.sectionsConfig.subsectionLabelOnOwnLine)
                             {
-                                Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                                labelText.Range.Text = subsection.title;
                                 if (myPaper.sectionsConfig.subsectionLabelBold)
                                 {
-                                    labelText.Range.Bold = 1;
+                                    text.Range.Bold = 1;
                                 }
-                                labelText.Range.InsertParagraphAfter();
-                                subsectionText.Range.Text = subsection.content;
+                                text.Range.Text = subsection.title;
+                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                text.Range.InsertParagraphAfter();
+                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                text.Range.Bold = 0;
+                                text.Range.Text = subsection.content;
                             }   
                             else
                             {
-                                subsectionText.Range.Text = subsection.title + ". " + subsection.content;
+                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                text.Range.Text = subsection.title + ". " + subsection.content;
                                 int start = 0;
                                 int end = subsection.title.Length + 1;
                                 if (myPaper.sectionsConfig.subsectionLabelBold)
                                 {
-                                    Range rangeToBold = subsectionText.Range.Duplicate;
+                                    Range rangeToBold = text.Range.Duplicate;
                                     rangeToBold.SetRange(start, end);
                                     rangeToBold.Bold = 1;
                                 }
@@ -230,46 +246,50 @@ namespace WriteMeEasy_WindowsFormsApplication
                         }
                         else
                         {
-                            subsectionText.Range.Text = subsection.content;
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Text = subsection.content;
                         }
-                        subsectionText.Range.InsertParagraphAfter();
+                        text.Range.InsertParagraphAfter();
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
                         {
-                            Paragraph subsubsectionText = document.Content.Paragraphs.Add(ref missing);
                             if (includeSubsubsectionLabelCheck.Checked)
                             {
                                 if (myPaper.sectionsConfig.subsubsectionLabelInlineWithText)
                                 {
-                                    subsubsectionText.Range.Text = subsubsection.title + ". " + subsubsection.content;
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    text.Range.Text = subsubsection.title + ". " + subsubsection.content;
                                     int start = 0;
                                     int end = subsubsection.title.Length + 1;
                                     if (myPaper.sectionsConfig.subsubsectionLabelBold)
                                     {
-                                        Range rangeToBold = subsubsectionText.Range.Duplicate;
+                                        Range rangeToBold = text.Range.Duplicate;
                                         rangeToBold.SetRange(start, end);
                                         rangeToBold.Bold = 1;
                                     }
                                 }
                                 else if (myPaper.sectionsConfig.subsubsectionLabelOnOwnLine)
                                 {
-                                    Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                                    labelText.Range.Text = subsubsection.title;
                                     if (myPaper.sectionsConfig.subsubsectionLabelBold)
                                     {
-                                        labelText.Range.Bold = 1;
+                                        text.Range.Bold = 1;
                                     }
-                                    labelText.Range.InsertParagraphAfter();
-                                    subsubsectionText.Range.Text = subsubsection.content;
+                                    text.Range.Text = subsubsection.title;
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                    text.Range.InsertParagraphAfter();
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    text.Range.Bold = 0;
+                                    text.Range.Text = subsubsection.content;
                                 }          
                                 else
                                 {
-                                    subsubsectionText.Range.Text = subsubsection.title + ". " + subsubsection.content;
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    text.Range.Text = subsubsection.title + ". " + subsubsection.content;
                                     int start = 0;
                                     int end = subsubsection.title.Length + 1;
                                     if (myPaper.sectionsConfig.subsubsectionLabelBold)
                                     {
-                                        Range rangeToBold = subsubsectionText.Range.Duplicate;
+                                        Range rangeToBold = text.Range.Duplicate;
                                         rangeToBold.SetRange(start, end);
                                         rangeToBold.Bold = 1;
                                     }
@@ -277,9 +297,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                             else
                             {
-                                subsubsectionText.Range.Text = subsubsection.content;
+                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                text.Range.Text = subsubsection.content;
                             }
-                            subsubsectionText.Range.InsertParagraphAfter();
+                            text.Range.InsertParagraphAfter();
                         }
                     }
                 }
@@ -291,18 +312,34 @@ namespace WriteMeEasy_WindowsFormsApplication
                         Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
                         pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
                     }
+                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
                     if (myPaper.conclusion.includeTitle)
                     {
-                        Paragraph labelText = document.Content.Paragraphs.Add(ref missing);
-                        labelText.Range.Text = myPaper.conclusion.title;
-                        labelText.Range.InsertParagraphAfter();
+                        if (myPaper.conclusion.boldTitle)
+                        {
+                            text.Range.Bold = 1;
+                        }
+                        text.Range.Text = myPaper.conclusion.title;
+                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        text.Range.InsertParagraphAfter();
                     }
-                    Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
-                    paragraphText.Range.Text = myPaper.conclusion.conclusionContent;
-                    paragraphText.Range.InsertParagraphAfter();
+                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                    text.Range.Bold = 0;
+                    text.Range.Text = myPaper.conclusion.conclusionContent;
+                    text.Range.InsertParagraphAfter();
                 }
 
                 if (myPaper.includeReferences)
+                {
+
+                }
+
+                if (myPaper.includeHeader)
+                {
+
+                }
+
+                if (myPaper.includeFooter)
                 {
 
                 }
