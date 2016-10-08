@@ -91,7 +91,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             Paragraph lineToAdd = document.Content.Paragraphs.Add(ref missing);
                             lineToAdd.Range.Text = textToAdd;
-                            lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                            if (myPaper.titlePage.alignment == "center")
+                            {
+                                lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                            }
+                            else if (myPaper.titlePage.alignment == "left")
+                            {
+                                lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.titlePage.alignment == "right")
+                            {
+                                lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                            }                            
                             lineToAdd.Range.InsertParagraphAfter();
                         }                        
                     }
@@ -109,7 +120,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                             text.Range.Bold = 1;
                         }
                         text.Range.Text = myPaper.summary.title;
-                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        if (myPaper.summary.titleAlign == "Center")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        }
+                        else if (myPaper.summary.titleAlign == "Right")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                        }
+                        else if (myPaper.summary.titleAlign == "Left")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
                         text.Range.InsertParagraphAfter();
                     }
                     //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
@@ -134,7 +156,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                             text.Range.Bold = 1;
                         }
                         text.Range.Text = myPaper.abstractConfig.title;
-                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        if (myPaper.abstractConfig.titleAlign == "Center")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        }
+                        else if (myPaper.abstractConfig.titleAlign == "Right")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                        }
+                        else if (myPaper.abstractConfig.titleAlign == "Left")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
                         text.Range.InsertParagraphAfter();
                     }
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
@@ -150,157 +183,242 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 foreach(Section section in myPaper.sections)
                 {
-                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
-                    if (includeSectionLabelsCheck.Checked)
+                    string replacedSection = section.content.Replace("\\n", "%19283746564738291%");
+                    string[] splitSection = replacedSection.Split(new string[] { "\n" }, StringSplitOptions.None);
+                    bool isFirstOfPara = true;
+                    foreach(string splitPara in splitSection)
                     {
-                        if (myPaper.sectionsConfig.sectionLabelInlineWithText)
+                        splitPara.Replace("%19283746564738291%", "\\n");
+                        Paragraph sectiontext = document.Content.Paragraphs.Add(ref missing);
+                        if (isFirstOfPara)
                         {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                            text.Range.Text = section.title + ". " + section.content;                            
-                            int start = 0;
-                            int end = section.title.Length + 1;
-                            if (myPaper.sectionsConfig.sectionLabelBold)
+                            isFirstOfPara = false;
+                            if (includeSectionLabelsCheck.Checked)
                             {
-                                Range rangeToBold = text.Range.Duplicate;
-                                rangeToBold.SetRange(start, end);
-                                rangeToBold.Bold = 1;
-                            }                            
-                        }
-                        else if (myPaper.sectionsConfig.sectionLabelOnOwnLine)
-                        {
-                            if (myPaper.sectionsConfig.sectionLabelBold)
-                            {
-                                text.Range.Bold = 1;
+                                if (myPaper.sectionsConfig.sectionLabelInlineWithText)
+                                {
+                                    sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    sectiontext.Range.Text = section.title + ". " + splitPara;
+                                    int start = sectiontext.Range.Start;
+                                    int end = sectiontext.Range.Start + section.title.Length + 1;
+                                    if (myPaper.sectionsConfig.sectionLabelBold)
+                                    {
+                                        Range rangeToBold = sectiontext.Range.Duplicate;
+                                        rangeToBold.SetRange(start, end);
+                                        rangeToBold.Bold = 1;
+                                    }
+                                }
+                                else if (myPaper.sectionsConfig.sectionLabelOnOwnLine)
+                                {
+                                    if (myPaper.sectionsConfig.sectionLabelBold)
+                                    {
+                                        sectiontext.Range.Bold = 1;
+                                    }
+                                    sectiontext.Range.Text = section.title;
+                                    if (myPaper.sectionsConfig.sectionLabelAlignment == "Center")
+                                    {
+                                        sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                    }
+                                    else if (myPaper.sectionsConfig.sectionLabelAlignment == "Right")
+                                    {
+                                        sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                    }
+                                    else if (myPaper.sectionsConfig.sectionLabelAlignment == "Left")
+                                    {
+                                        sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    sectiontext.Range.InsertParagraphAfter();
+                                    sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    sectiontext.Range.Bold = 0;
+                                    sectiontext.Range.Text = splitPara;
+                                }
+                                else
+                                {
+                                    sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                    sectiontext.Range.Text = section.title + ". " + splitPara;
+                                    int start = sectiontext.Range.Start;
+                                    int end = sectiontext.Range.Start + section.title.Length + 1;
+                                    if (myPaper.sectionsConfig.sectionLabelBold)
+                                    {
+                                        Range rangeToBold = sectiontext.Range.Duplicate;
+                                        rangeToBold.SetRange(start, end);
+                                        rangeToBold.Bold = 1;
+                                    }
+                                }
                             }
-                            text.Range.Text = section.title;
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                            text.Range.InsertParagraphAfter();
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                            text.Range.Bold = 0;
-                            text.Range.Text = section.content;
-                        }  
+                            else
+                            {
+                                sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                sectiontext.Range.Text = splitPara;
+                            }
+                            sectiontext.Range.InsertParagraphAfter();
+                        }
                         else
                         {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                            text.Range.Text = section.title + ". " + section.content;                            
-                            int start = 0;
-                            int end = section.title.Length + 1;
-                            if (myPaper.sectionsConfig.sectionLabelBold)
-                            {
-                                Range rangeToBold = text.Range.Duplicate;
-                                rangeToBold.SetRange(start, end);
-                                rangeToBold.Bold = 1;
-                            }
-                        }                      
-                    }
-                    else
-                    {
-                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                        text.Range.Text = section.content;                        
-                    }
-                    text.Range.InsertParagraphAfter();
+                            sectiontext.Range.Text = splitPara;
+                            sectiontext.Range.InsertParagraphAfter();
+                        }
+                    }                   
                     
                     foreach (SubSection subsection in section.subSections)
                     {
-                        if (includeSubsectionLabelCheck.Checked)
+                        string replacedSubsection = subsection.content.Replace("\\n", "%19283746564738291%");
+                        string[] splitSubsection = replacedSubsection.Split(new string[] { "\n" }, StringSplitOptions.None);
+                        bool isFirstOfParaSub = true;
+                        foreach (string splitPara in splitSubsection)
                         {
-                            if (myPaper.sectionsConfig.subsectionLabelInlineWithText)
+                            splitPara.Replace("%19283746564738291%", "\\n");
+                            Paragraph subsectiontext = document.Content.Paragraphs.Add(ref missing);
+                            if (isFirstOfParaSub)
                             {
-                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                text.Range.Text = subsection.title + ". " + subsection.content;
-                                int start = 0;
-                                int end = subsection.title.Length + 1;
-                                if (myPaper.sectionsConfig.subsectionLabelBold)
+                                isFirstOfParaSub = false;
+                                if (includeSubsectionLabelCheck.Checked)
                                 {
-                                    Range rangeToBold = text.Range.Duplicate;
-                                    rangeToBold.SetRange(start, end);
-                                    rangeToBold.Bold = 1;
+                                    if (myPaper.sectionsConfig.subsectionLabelInlineWithText)
+                                    {
+                                        subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                        subsectiontext.Range.Text = subsection.title + ". " + splitPara;
+                                        int start = subsectiontext.Range.Start;
+                                        int end = subsectiontext.Range.Start + subsection.title.Length + 1;
+                                        if (myPaper.sectionsConfig.subsectionLabelBold)
+                                        {
+                                            Range rangeToBold = subsectiontext.Range.Duplicate;
+                                            rangeToBold.SetRange(start, end);
+                                            rangeToBold.Bold = 1;
+                                        }
+                                    }
+                                    else if (myPaper.sectionsConfig.subsectionLabelOnOwnLine)
+                                    {
+                                        if (myPaper.sectionsConfig.subsectionLabelBold)
+                                        {
+                                            subsectiontext.Range.Bold = 1;
+                                        }
+                                        subsectiontext.Range.Text = subsection.title;
+                                        if (myPaper.sectionsConfig.subsectionLabelAlignment == "Center")
+                                        {
+                                            subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                        }
+                                        else if (myPaper.sectionsConfig.subsectionLabelAlignment == "Right")
+                                        {
+                                            subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                        }
+                                        else if (myPaper.sectionsConfig.subsectionLabelAlignment == "Left")
+                                        {
+                                            subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                        }
+                                        subsectiontext.Range.InsertParagraphAfter();
+                                        subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                        subsectiontext.Range.Bold = 0;
+                                        subsectiontext.Range.Text = splitPara;
+                                    }
+                                    else
+                                    {
+                                        subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                        subsectiontext.Range.Text = subsection.title + ". " + splitPara;
+                                        int start = subsectiontext.Range.Start;
+                                        int end = subsectiontext.Range.Start + subsection.title.Length + 1;
+                                        if (myPaper.sectionsConfig.subsectionLabelBold)
+                                        {
+                                            Range rangeToBold = subsectiontext.Range.Duplicate;
+                                            rangeToBold.SetRange(start, end);
+                                            rangeToBold.Bold = 1;
+                                        }
+                                    }
                                 }
+                                else
+                                {
+                                    subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    subsectiontext.Range.Text = splitPara;
+                                }
+                                subsectiontext.Range.InsertParagraphAfter();
                             }
-                            else if (myPaper.sectionsConfig.subsectionLabelOnOwnLine)
-                            {
-                                if (myPaper.sectionsConfig.subsectionLabelBold)
-                                {
-                                    text.Range.Bold = 1;
-                                }
-                                text.Range.Text = subsection.title;
-                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                                text.Range.InsertParagraphAfter();
-                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                text.Range.Bold = 0;
-                                text.Range.Text = subsection.content;
-                            }   
                             else
                             {
-                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                text.Range.Text = subsection.title + ". " + subsection.content;
-                                int start = 0;
-                                int end = subsection.title.Length + 1;
-                                if (myPaper.sectionsConfig.subsectionLabelBold)
-                                {
-                                    Range rangeToBold = text.Range.Duplicate;
-                                    rangeToBold.SetRange(start, end);
-                                    rangeToBold.Bold = 1;
-                                }
-                            }                         
+                                subsectiontext.Range.Text = splitPara;
+                                subsectiontext.Range.InsertParagraphAfter();
+                            }
                         }
-                        else
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                            text.Range.Text = subsection.content;
-                        }
-                        text.Range.InsertParagraphAfter();
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
                         {
-                            if (includeSubsubsectionLabelCheck.Checked)
+                            string replacedSubsubsection = subsection.content.Replace("\\n", "%19283746564738291%");
+                            string[] splitSubsubsection = replacedSubsection.Split(new string[] { "\n" }, StringSplitOptions.None);
+                            bool isFirstOfParaSubSub = true;
+                            foreach (string splitPara in splitSubsubsection)
                             {
-                                if (myPaper.sectionsConfig.subsubsectionLabelInlineWithText)
+                                splitPara.Replace("%19283746564738291%", "\\n");
+                                Paragraph subsubsectiontext = document.Content.Paragraphs.Add(ref missing);
+                                if (isFirstOfParaSubSub)
                                 {
-                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                    text.Range.Text = subsubsection.title + ". " + subsubsection.content;
-                                    int start = 0;
-                                    int end = subsubsection.title.Length + 1;
-                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                    isFirstOfParaSubSub = false;
+
+                                    if (includeSubsubsectionLabelCheck.Checked)
                                     {
-                                        Range rangeToBold = text.Range.Duplicate;
-                                        rangeToBold.SetRange(start, end);
-                                        rangeToBold.Bold = 1;
+                                        if (myPaper.sectionsConfig.subsubsectionLabelInlineWithText)
+                                        {
+                                            subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                            subsubsectiontext.Range.Text = subsubsection.title + ". " + splitPara;
+                                            int start = subsubsectiontext.Range.Start;
+                                            int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
+                                            if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                            {
+                                                Range rangeToBold = subsubsectiontext.Range.Duplicate;
+                                                rangeToBold.SetRange(start, end);
+                                                rangeToBold.Bold = 1;
+                                            }
+                                        }
+                                        else if (myPaper.sectionsConfig.subsubsectionLabelOnOwnLine)
+                                        {
+                                            if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                            {
+                                                subsubsectiontext.Range.Bold = 1;
+                                            }
+                                            subsubsectiontext.Range.Text = subsubsection.title;
+                                            if (myPaper.sectionsConfig.subsubsectionLabelAlignment == "Center")
+                                            {
+                                                subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                            }
+                                            else if (myPaper.sectionsConfig.subsubsectionLabelAlignment == "Right")
+                                            {
+                                                subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                            }
+                                            else if (myPaper.sectionsConfig.subsubsectionLabelAlignment == "Left")
+                                            {
+                                                subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                            }
+                                            subsubsectiontext.Range.InsertParagraphAfter();
+                                            subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                            subsubsectiontext.Range.Bold = 0;
+                                            subsubsectiontext.Range.Text = splitPara;
+                                        }
+                                        else
+                                        {
+                                            subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                            subsubsectiontext.Range.Text = subsubsection.title + ". " + splitPara;
+                                            int start = subsubsectiontext.Range.Start;
+                                            int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
+                                            if (myPaper.sectionsConfig.subsubsectionLabelBold)
+                                            {
+                                                Range rangeToBold = subsubsectiontext.Range.Duplicate;
+                                                rangeToBold.SetRange(start, end);
+                                                rangeToBold.Bold = 1;
+                                            }
+                                        }
                                     }
+                                    else
+                                    {
+                                        subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                        subsubsectiontext.Range.Text = splitPara;
+                                    }
+                                    subsubsectiontext.Range.InsertParagraphAfter();
                                 }
-                                else if (myPaper.sectionsConfig.subsubsectionLabelOnOwnLine)
-                                {
-                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
-                                    {
-                                        text.Range.Bold = 1;
-                                    }
-                                    text.Range.Text = subsubsection.title;
-                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                                    text.Range.InsertParagraphAfter();
-                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                    text.Range.Bold = 0;
-                                    text.Range.Text = subsubsection.content;
-                                }          
                                 else
                                 {
-                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                    text.Range.Text = subsubsection.title + ". " + subsubsection.content;
-                                    int start = 0;
-                                    int end = subsubsection.title.Length + 1;
-                                    if (myPaper.sectionsConfig.subsubsectionLabelBold)
-                                    {
-                                        Range rangeToBold = text.Range.Duplicate;
-                                        rangeToBold.SetRange(start, end);
-                                        rangeToBold.Bold = 1;
-                                    }
-                                }                      
+                                    subsubsectiontext.Range.Text = splitPara;
+                                    subsubsectiontext.Range.InsertParagraphAfter();
+                                }
                             }
-                            else
-                            {
-                                text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                text.Range.Text = subsubsection.content;
-                            }
-                            text.Range.InsertParagraphAfter();
                         }
                     }
                 }
@@ -320,7 +438,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                             text.Range.Bold = 1;
                         }
                         text.Range.Text = myPaper.conclusion.title;
-                        text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        if (myPaper.conclusion.titleAlign == "Center")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        }
+                        else if (myPaper.conclusion.titleAlign == "Right")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                        }
+                        else if (myPaper.conclusion.titleAlign == "Left")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                        
                         text.Range.InsertParagraphAfter();
                     }
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;

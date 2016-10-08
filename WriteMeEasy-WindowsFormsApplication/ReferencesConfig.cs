@@ -10,6 +10,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         public bool includeTitle;
         public string title;
+        public string titleAlign;
         public bool boldTitle;
         public string titleFont;
         public int titleSize;

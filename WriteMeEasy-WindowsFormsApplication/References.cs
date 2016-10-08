@@ -89,6 +89,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 referencesTitleGroupBox.Height = 150;
                 referencesTitleLabel.Visible = true;
                 referencesTitleEnter.Visible = true;
+                referencesTitleAlignChoose.Visible = true;
+                referencesTitleAlignLabel.Visible = true;
                 referencesTitleBoldCheck.Visible = true;
                 referencesTitleFontLabel.Visible = true;
                 referencesTitleFontChoose.Visible = true;

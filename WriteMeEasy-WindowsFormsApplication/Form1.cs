@@ -562,5 +562,40 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
         }
+
+        private void summaryTitleAlignSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.summary.titleAlign = summaryTitleAlignSelect.Text;
+        }
+
+        private void abstractTitleAlignSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.abstractConfig.titleAlign = abstractTitleAlignSelect.Text;
+        }
+
+        private void sectionLabelAlignChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.sectionsConfig.sectionLabelAlignment = sectionLabelAlignChoose.Text;
+        }
+
+        private void subsectionLabelAlignChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.sectionsConfig.subsectionLabelAlignment = subsectionLabelAlignChoose.Text;
+        }
+
+        private void subsubsectionLabelAlignChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.sectionsConfig.subsubsectionLabelAlignment = subsubsectionLabelAlignChoose.Text;
+        }
+
+        private void referencesTitleAlignChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.references.titleAlign = referencesTitleAlignChoose.Text;
+        }
+
+        private void conclusionTitleAlignChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myPaper.conclusion.titleAlign = conclusionTitleAlignChoose.Text;
+        }
     }
 }

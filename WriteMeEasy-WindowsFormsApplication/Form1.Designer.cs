@@ -129,6 +129,8 @@
             this.sectionsOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionsDefaultButton = new System.Windows.Forms.Button();
             this.subsubsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsubsectionLabelAlignLabel = new System.Windows.Forms.Label();
+            this.subsubsectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.subsubsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
             this.subsubsectionLabelButton = new System.Windows.Forms.Button();
             this.subsubsectionLabelColorText = new System.Windows.Forms.TextBox();
@@ -144,6 +146,8 @@
             this.subsubsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsectionLabelAlignLabel = new System.Windows.Forms.Label();
+            this.subsectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.subsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
             this.subsectionLabelColorButton = new System.Windows.Forms.Button();
             this.subsectionLabelColorText = new System.Windows.Forms.TextBox();
@@ -159,6 +163,8 @@
             this.subsectionLabelBeforeRadio = new System.Windows.Forms.RadioButton();
             this.includeSubsectionLabelCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelGroupBox = new System.Windows.Forms.GroupBox();
+            this.sectionLabelAlignLabel = new System.Windows.Forms.Label();
+            this.sectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionLabelColorButton = new System.Windows.Forms.Button();
             this.sectionLabelColorText = new System.Windows.Forms.TextBox();
@@ -298,6 +304,8 @@
             this.summaryOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.summaryDefaultButton = new System.Windows.Forms.Button();
             this.summaryTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.summaryTitleAlignLabel = new System.Windows.Forms.Label();
+            this.summaryTitleAlignSelect = new System.Windows.Forms.ComboBox();
             this.summaryTitleColorButton = new System.Windows.Forms.Button();
             this.summaryTitleColorText = new System.Windows.Forms.TextBox();
             this.summaryTitleColorLabel = new System.Windows.Forms.Label();
@@ -313,6 +321,8 @@
             this.abstractOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.abstractDefaultButton = new System.Windows.Forms.Button();
             this.abstractTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.abstractTitleAlignLabel = new System.Windows.Forms.Label();
+            this.abstractTitleAlignSelect = new System.Windows.Forms.ComboBox();
             this.abstractTitleColorButton = new System.Windows.Forms.Button();
             this.abstractTitleColorText = new System.Windows.Forms.TextBox();
             this.abstractTitleColorLabel = new System.Windows.Forms.Label();
@@ -408,6 +418,10 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.conclusionTitleAlignLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleAlignChoose = new System.Windows.Forms.ComboBox();
+            this.referencesTitleAlignLabel = new System.Windows.Forms.Label();
+            this.referencesTitleAlignChoose = new System.Windows.Forms.ComboBox();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -650,6 +664,8 @@
             // 
             // conclusionTitleGroupBox
             // 
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleAlignLabel);
+            this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleAlignChoose);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorButton);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorText);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleColorLabel);
@@ -1697,6 +1713,8 @@
             // 
             // subsubsectionLabelGroupBox
             // 
+            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelAlignLabel);
+            this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelAlignChoose);
             this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelStyleGroupBox);
             this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelLocationGroupBox);
             this.subsubsectionLabelGroupBox.Controls.Add(this.includeSubsubsectionLabelCheck);
@@ -1708,6 +1726,30 @@
             this.subsubsectionLabelGroupBox.TabStop = false;
             this.subsubsectionLabelGroupBox.Text = "Subsubsection Labels";
             this.subsubsectionLabelGroupBox.Visible = false;
+            // 
+            // subsubsectionLabelAlignLabel
+            // 
+            this.subsubsectionLabelAlignLabel.AutoSize = true;
+            this.subsubsectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
+            this.subsubsectionLabelAlignLabel.Name = "subsubsectionLabelAlignLabel";
+            this.subsubsectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.subsubsectionLabelAlignLabel.TabIndex = 27;
+            this.subsubsectionLabelAlignLabel.Text = "Align:";
+            this.subsubsectionLabelAlignLabel.Visible = false;
+            // 
+            // subsubsectionLabelAlignChoose
+            // 
+            this.subsubsectionLabelAlignChoose.FormattingEnabled = true;
+            this.subsubsectionLabelAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.subsubsectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
+            this.subsubsectionLabelAlignChoose.Name = "subsubsectionLabelAlignChoose";
+            this.subsubsectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.subsubsectionLabelAlignChoose.TabIndex = 26;
+            this.subsubsectionLabelAlignChoose.Visible = false;
+            this.subsubsectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelAlignChoose_SelectedIndexChanged);
             // 
             // subsubsectionLabelStyleGroupBox
             // 
@@ -1863,6 +1905,8 @@
             // 
             // subsectionLabelGroupBox
             // 
+            this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelAlignLabel);
+            this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelAlignChoose);
             this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelStyleGroupBox);
             this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelLocationGroupBox);
             this.subsectionLabelGroupBox.Controls.Add(this.includeSubsectionLabelCheck);
@@ -1874,6 +1918,30 @@
             this.subsectionLabelGroupBox.TabStop = false;
             this.subsectionLabelGroupBox.Text = "Subsection Labels";
             this.subsectionLabelGroupBox.Visible = false;
+            // 
+            // subsectionLabelAlignLabel
+            // 
+            this.subsectionLabelAlignLabel.AutoSize = true;
+            this.subsectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
+            this.subsectionLabelAlignLabel.Name = "subsectionLabelAlignLabel";
+            this.subsectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.subsectionLabelAlignLabel.TabIndex = 27;
+            this.subsectionLabelAlignLabel.Text = "Align:";
+            this.subsectionLabelAlignLabel.Visible = false;
+            // 
+            // subsectionLabelAlignChoose
+            // 
+            this.subsectionLabelAlignChoose.FormattingEnabled = true;
+            this.subsectionLabelAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.subsectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
+            this.subsectionLabelAlignChoose.Name = "subsectionLabelAlignChoose";
+            this.subsectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.subsectionLabelAlignChoose.TabIndex = 26;
+            this.subsectionLabelAlignChoose.Visible = false;
+            this.subsectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelAlignChoose_SelectedIndexChanged);
             // 
             // subsectionLabelStyleGroupBox
             // 
@@ -2028,6 +2096,8 @@
             // 
             // sectionLabelGroupBox
             // 
+            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelAlignLabel);
+            this.sectionLabelGroupBox.Controls.Add(this.sectionLabelAlignChoose);
             this.sectionLabelGroupBox.Controls.Add(this.sectionLabelStyleGroupBox);
             this.sectionLabelGroupBox.Controls.Add(this.sectionLabelLocationGroupBox);
             this.sectionLabelGroupBox.Controls.Add(this.includeSectionLabelsCheck);
@@ -2038,6 +2108,30 @@
             this.sectionLabelGroupBox.TabIndex = 7;
             this.sectionLabelGroupBox.TabStop = false;
             this.sectionLabelGroupBox.Text = "Section Labels";
+            // 
+            // sectionLabelAlignLabel
+            // 
+            this.sectionLabelAlignLabel.AutoSize = true;
+            this.sectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
+            this.sectionLabelAlignLabel.Name = "sectionLabelAlignLabel";
+            this.sectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.sectionLabelAlignLabel.TabIndex = 25;
+            this.sectionLabelAlignLabel.Text = "Align:";
+            this.sectionLabelAlignLabel.Visible = false;
+            // 
+            // sectionLabelAlignChoose
+            // 
+            this.sectionLabelAlignChoose.FormattingEnabled = true;
+            this.sectionLabelAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.sectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
+            this.sectionLabelAlignChoose.Name = "sectionLabelAlignChoose";
+            this.sectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.sectionLabelAlignChoose.TabIndex = 24;
+            this.sectionLabelAlignChoose.Visible = false;
+            this.sectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.sectionLabelAlignChoose_SelectedIndexChanged);
             // 
             // sectionLabelStyleGroupBox
             // 
@@ -3690,6 +3784,8 @@
             // 
             // summaryTitleGroupBox
             // 
+            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleAlignLabel);
+            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleAlignSelect);
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorButton);
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorText);
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorLabel);
@@ -3706,6 +3802,30 @@
             this.summaryTitleGroupBox.TabIndex = 4;
             this.summaryTitleGroupBox.TabStop = false;
             this.summaryTitleGroupBox.Text = "Summary Title";
+            // 
+            // summaryTitleAlignLabel
+            // 
+            this.summaryTitleAlignLabel.AutoSize = true;
+            this.summaryTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
+            this.summaryTitleAlignLabel.Name = "summaryTitleAlignLabel";
+            this.summaryTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.summaryTitleAlignLabel.TabIndex = 23;
+            this.summaryTitleAlignLabel.Text = "Align:";
+            this.summaryTitleAlignLabel.Visible = false;
+            // 
+            // summaryTitleAlignSelect
+            // 
+            this.summaryTitleAlignSelect.FormattingEnabled = true;
+            this.summaryTitleAlignSelect.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.summaryTitleAlignSelect.Location = new System.Drawing.Point(172, 17);
+            this.summaryTitleAlignSelect.Name = "summaryTitleAlignSelect";
+            this.summaryTitleAlignSelect.Size = new System.Drawing.Size(121, 21);
+            this.summaryTitleAlignSelect.TabIndex = 22;
+            this.summaryTitleAlignSelect.Visible = false;
+            this.summaryTitleAlignSelect.SelectedIndexChanged += new System.EventHandler(this.summaryTitleAlignSelect_SelectedIndexChanged);
             // 
             // summaryTitleColorButton
             // 
@@ -3861,6 +3981,8 @@
             // 
             // abstractTitleGroupBox
             // 
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleAlignLabel);
+            this.abstractTitleGroupBox.Controls.Add(this.abstractTitleAlignSelect);
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorButton);
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorText);
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleColorLabel);
@@ -3877,6 +3999,30 @@
             this.abstractTitleGroupBox.TabIndex = 4;
             this.abstractTitleGroupBox.TabStop = false;
             this.abstractTitleGroupBox.Text = "Abstract Title";
+            // 
+            // abstractTitleAlignLabel
+            // 
+            this.abstractTitleAlignLabel.AutoSize = true;
+            this.abstractTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
+            this.abstractTitleAlignLabel.Name = "abstractTitleAlignLabel";
+            this.abstractTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.abstractTitleAlignLabel.TabIndex = 21;
+            this.abstractTitleAlignLabel.Text = "Align:";
+            this.abstractTitleAlignLabel.Visible = false;
+            // 
+            // abstractTitleAlignSelect
+            // 
+            this.abstractTitleAlignSelect.FormattingEnabled = true;
+            this.abstractTitleAlignSelect.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.abstractTitleAlignSelect.Location = new System.Drawing.Point(172, 17);
+            this.abstractTitleAlignSelect.Name = "abstractTitleAlignSelect";
+            this.abstractTitleAlignSelect.Size = new System.Drawing.Size(121, 21);
+            this.abstractTitleAlignSelect.TabIndex = 20;
+            this.abstractTitleAlignSelect.Visible = false;
+            this.abstractTitleAlignSelect.SelectedIndexChanged += new System.EventHandler(this.abstractTitleAlignSelect_SelectedIndexChanged);
             // 
             // abstractTitleColorButton
             // 
@@ -4281,6 +4427,8 @@
             // 
             // referencesTitleGroupBox
             // 
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleAlignLabel);
+            this.referencesTitleGroupBox.Controls.Add(this.referencesTitleAlignChoose);
             this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorButton);
             this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorText);
             this.referencesTitleGroupBox.Controls.Add(this.referencesTitleColorLabel);
@@ -4972,6 +5120,54 @@
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
             // 
+            // conclusionTitleAlignLabel
+            // 
+            this.conclusionTitleAlignLabel.AutoSize = true;
+            this.conclusionTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
+            this.conclusionTitleAlignLabel.Name = "conclusionTitleAlignLabel";
+            this.conclusionTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.conclusionTitleAlignLabel.TabIndex = 27;
+            this.conclusionTitleAlignLabel.Text = "Align:";
+            this.conclusionTitleAlignLabel.Visible = false;
+            // 
+            // conclusionTitleAlignChoose
+            // 
+            this.conclusionTitleAlignChoose.FormattingEnabled = true;
+            this.conclusionTitleAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.conclusionTitleAlignChoose.Location = new System.Drawing.Point(172, 17);
+            this.conclusionTitleAlignChoose.Name = "conclusionTitleAlignChoose";
+            this.conclusionTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.conclusionTitleAlignChoose.TabIndex = 26;
+            this.conclusionTitleAlignChoose.Visible = false;
+            this.conclusionTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleAlignChoose_SelectedIndexChanged);
+            // 
+            // referencesTitleAlignLabel
+            // 
+            this.referencesTitleAlignLabel.AutoSize = true;
+            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(300, 20);
+            this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
+            this.referencesTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.referencesTitleAlignLabel.TabIndex = 27;
+            this.referencesTitleAlignLabel.Text = "Align:";
+            this.referencesTitleAlignLabel.Visible = false;
+            // 
+            // referencesTitleAlignChoose
+            // 
+            this.referencesTitleAlignChoose.FormattingEnabled = true;
+            this.referencesTitleAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(334, 17);
+            this.referencesTitleAlignChoose.Name = "referencesTitleAlignChoose";
+            this.referencesTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.referencesTitleAlignChoose.TabIndex = 26;
+            this.referencesTitleAlignChoose.Visible = false;
+            this.referencesTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleAlignChoose_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -5521,6 +5717,20 @@
         private System.Windows.Forms.Label summaryTitleTextLabel;
         private System.Windows.Forms.TextBox summaryTitleText;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox abstractTitleAlignSelect;
+        private System.Windows.Forms.Label abstractTitleAlignLabel;
+        private System.Windows.Forms.Label summaryTitleAlignLabel;
+        private System.Windows.Forms.ComboBox summaryTitleAlignSelect;
+        private System.Windows.Forms.Label sectionLabelAlignLabel;
+        private System.Windows.Forms.ComboBox sectionLabelAlignChoose;
+        private System.Windows.Forms.Label subsectionLabelAlignLabel;
+        private System.Windows.Forms.ComboBox subsectionLabelAlignChoose;
+        private System.Windows.Forms.Label subsubsectionLabelAlignLabel;
+        private System.Windows.Forms.ComboBox subsubsectionLabelAlignChoose;
+        private System.Windows.Forms.Label conclusionTitleAlignLabel;
+        private System.Windows.Forms.ComboBox conclusionTitleAlignChoose;
+        private System.Windows.Forms.Label referencesTitleAlignLabel;
+        private System.Windows.Forms.ComboBox referencesTitleAlignChoose;
     }
 }
 

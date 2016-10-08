@@ -125,6 +125,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 summaryPanel.Height += 105;
                 summaryTitleTextLabel.Enabled = true;
                 summaryTitleText.Enabled = true;
+                summaryTitleAlignLabel.Visible = true;
+                summaryTitleAlignSelect.Visible = true;
                 summaryTitleBoldCheck.Visible = true;
                 summaryTitleFontLabel.Visible = true;
                 summaryTitleFontChoose.Visible = true;
@@ -140,6 +142,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 summaryTitleTextLabel.Enabled = false;
                 summaryTitleText.Enabled = false;
+                summaryTitleAlignLabel.Visible = false;
+                summaryTitleAlignSelect.Visible = false;
                 summaryTitleBoldCheck.Visible = false;
                 summaryTitleFontLabel.Visible = false;
                 summaryTitleFontChoose.Visible = false;
@@ -168,6 +172,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 abstractPanel.Height += 105;
                 abstractTitleLabel.Enabled = true;
                 abstractTitleText.Enabled = true;
+                abstractTitleAlignLabel.Visible = true;
+                abstractTitleAlignSelect.Visible = true;
                 abstractTitleBoldCheck.Visible = true;
                 abstractTitleFontLabel.Visible = true;
                 abstractTitleFontChoose.Visible = true;
@@ -183,6 +189,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 abstractTitleLabel.Enabled = false;
                 abstractTitleText.Enabled = false;
+                abstractTitleAlignLabel.Visible = false;
+                abstractTitleAlignSelect.Visible = false;
                 abstractTitleBoldCheck.Visible = false;
                 abstractTitleFontLabel.Visible = false;
                 abstractTitleFontChoose.Visible = false;

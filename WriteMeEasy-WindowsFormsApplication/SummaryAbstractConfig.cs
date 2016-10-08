@@ -15,6 +15,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public string titleFont;
         public int titleSize;
         public string titleColor;
+        public string titleAlign;
         public string content;
 
         public SummaryAbstractConfig()

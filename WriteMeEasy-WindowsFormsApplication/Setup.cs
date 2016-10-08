@@ -45,6 +45,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.titlePage.titlePageOrder.Add("SCHOOL");
             myPaper.titlePage.titlePageOrder.Add("DATE");
 
+            myPaper.titlePage.alignment = "center";
+
             titlePageActive = false;
             summaryActive = false;
             abstractActive = false;

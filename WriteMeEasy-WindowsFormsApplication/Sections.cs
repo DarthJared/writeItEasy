@@ -28,6 +28,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionLabelGroupBox.Height = 288;
                 sectionLabelLocationGroupBox.Visible = true;
                 sectionLabelStyleGroupBox.Visible = true;
+                sectionLabelAlignChoose.Visible = true;
+                sectionLabelAlignLabel.Visible = true;
             }
             else
             {
@@ -43,6 +45,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionLabelGroupBox.Height = 45;
                 sectionLabelLocationGroupBox.Visible = false;
                 sectionLabelStyleGroupBox.Visible = false;
+                sectionLabelAlignChoose.Visible = false;
+                sectionLabelAlignLabel.Visible = false;
             }
             subsectionLabelGroupBox.Location = new Point(9, sectionLabelGroupBox.Location.Y + sectionLabelGroupBox.Height + 13);
             subsubsectionLabelGroupBox.Location = new Point(9, subsectionLabelGroupBox.Location.Y + subsectionLabelGroupBox.Height + 13);
@@ -57,6 +61,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelGroupBox.Height = 288;
                 subsectionLabelLocationGroupBox.Visible = true;
                 subsectionLabelStyleGroupBox.Visible = true;
+                subsectionLabelAlignChoose.Visible = true;
+                subsectionLabelAlignLabel.Visible = true;
                 for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
                     for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
@@ -74,6 +80,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelGroupBox.Height = 45;
                 subsectionLabelLocationGroupBox.Visible = false;
                 subsectionLabelStyleGroupBox.Visible = false;
+                subsectionLabelAlignChoose.Visible = false;
+                subsectionLabelAlignLabel.Visible = false;
                 for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
                     for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
@@ -97,6 +105,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelGroupBox.Height = 288;
                 subsubsectionLabelLocationGroupBox.Visible = true;
                 subsubsectionLabelStyleGroupBox.Visible = true;
+                subsubsectionLabelAlignChoose.Visible = true;
+                subsubsectionLabelAlignLabel.Visible = true;
                 for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
                     for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
@@ -117,6 +127,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelGroupBox.Height = 45;
                 subsubsectionLabelLocationGroupBox.Visible = false;
                 subsubsectionLabelStyleGroupBox.Visible = false;
+                subsubsectionLabelAlignChoose.Visible = false;
+                subsubsectionLabelAlignLabel.Visible = false;
                 for (int i = 1; i <= myPaper.sections.Count; i++)
                 {
                     for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)

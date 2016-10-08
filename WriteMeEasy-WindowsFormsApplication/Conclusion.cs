@@ -94,6 +94,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 conclusionTitleGroupBox.Height = 150;
                 conclusionTitleLabel.Enabled = true;
                 conclusionTitleEnter.Enabled = true;
+                conclusionTitleAlignChoose.Visible = true;
+                conclusionTitleAlignLabel.Visible = true;
                 conclusionTitleBoldCheck.Visible = true;
                 conclusionTitleFontLabel.Visible = true;
                 conclusionTitleFontChoose.Visible = true;
@@ -107,6 +109,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 conclusionTitleLabel.Enabled = false;
                 conclusionTitleEnter.Enabled = false;
+                conclusionTitleAlignChoose.Visible = false;
+                conclusionTitleAlignLabel.Visible = false;
                 conclusionTitleBoldCheck.Visible = false;
                 conclusionTitleFontLabel.Visible = false;
                 conclusionTitleFontChoose.Visible = false;
