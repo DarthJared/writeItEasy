@@ -597,5 +597,93 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             myPaper.conclusion.titleAlign = conclusionTitleAlignChoose.Text;
         }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            paperTitleEnter.Text = "Researched Argument: Is the Robot Better than Me?";
+            apaRadio.Checked = true;
+            titlePageIncludeCheck.Checked = true;
+            abstractIncludeCheck.Checked = true;
+            headerIncludeCheck.Checked = true;
+            conclusionIncludeCheck.Checked = true;
+            referencesIncludeCheck.Checked = true;
+
+            titlePageTitleCheck.Checked = true;
+            titlePageNameCheck.Checked = true;
+            titlePageClassCheck.Checked = true;
+            titlePageSchoolCheck.Checked = true;
+            titlePageDateCheck.Checked = true;
+            titlePageTitleEnter.Text = "Researched Argument: Is the Robot Better than Me?";
+            titlePageNameEnter.Text = "Jared Beagley";
+            titlePageClassEnter.Text = "FDENG 201";
+            titlePageSchoolEnter.Text = "Brigham Young University - Idaho";
+            //titlePageDateEnter.Value = new DateTime();
+
+            titlePageLeftAllignRadio.Checked = true;
+            titlePageCenterRadio.Checked = true;
+
+            titlePageTopRadio.Checked = true;
+            titlePageMiddleRadio.Checked = true;
+
+            abstractOwnPageCheck.Checked = true;
+            abstractIncludeTitleCheck.Checked = true;
+            abstractTitleAlignSelect.SelectedIndex = 1;
+            abstractTitleBoldCheck.Checked = true;
+
+            headerCenterEmptyRadio.Checked = true;
+            headerLeftTitleRadio.Checked = true;
+            headerRightNumberRadio.Checked = true;
+            headerLeftTitleEnter.Text = "Researched Argument: Is the Robot Better than Me?";
+            headerRightNumberEnter.Value = 1;
+            headerDiffFirstPageCheck.Checked = true;
+            headerFirstPageUseRunningHeadCheck.Checked = true;
+
+            conclusionOwnPageCheck.Checked = true;
+            conclusionIncludeTitleCheck.Checked = true;
+            conclusionTitleAlignChoose.SelectedIndex = 1;
+            conclusionTitleBoldCheck.Checked = true;
+
+            referencesTitleIncludeCheck.Checked = true;
+            referencesTitleBoldCheck.Checked = true;
+            referencesTitleEnter.Text = "References";
+            referencesHangingIndentCheck.Checked = true;
+
+            abstractTitleText.Text = "Abstract";
+            abstractContent.Text = "";
+            abstractContent.Text = "This paper addresses the question of whether or not the increase in technology and automated equipment is helping or hurting the economy.  It asserts that the increase is helping to create far more jobs than it ever took away, and it is boosting the quality of life tremendously.  It talks about the effects this technological and innovative wave has had in the past with such businesses as the cotton gin, Henry Ford Motor Company, and the various music devices, and how they have helped each generation to have more jobs and a better quality of life.  It also talks about what is projected for the future in technology and automation.  It ends by talking about what experts have projected concerning the amazing effect this upsurge is having.";
+
+            section1LabelEnter.Text = "Section 1";
+            section1Content.Text = "";
+            section1Content.Text = "Throughout all history there have always been those that have been worried about the increase in technology.  This is evident in the last 40 years by movies about robots taking over the world, always leaving that fear in the viewer’s mind.  Yet still we continue progressing and advancing our technology, and it is replacing more and more jobs daily, yet it is also creating more and more different and diverse jobs every day. This then begs the question: “Is this advancement of technology helping or hurting the public workforce as a whole?” In order to understand this, we need to understand not just the numbers of how many jobs are being lost and created, but what kind of jobs they are, and what qualifications are now necessary for said jobs.  In this constantly advancing world, each person must choose where they stand on this issue because it will affect everyone in some way.  Though this increase in technology has replaced some human labor, it has aided the human race in its advancement and educational progress, and it will continue to create more jobs than it could ever take away.";
+            section1AddSubsectionButton.PerformClick();
+            
+            //Button subsection1AddSubsub = (Button)Controls.Find("section1Subsection1AddSubsubsectionButton", true)[0];
+            //subsection1AddSubsub.PerformClick();
+            includeSectionLabelsCheck.Checked = true;
+            sectionLabelAlignChoose.SelectedIndex = 1;
+            sectionLabelBoldCheck.Checked = true;
+            sectionLabelBeforeRadio.Checked = true;
+            includeSubsectionLabelCheck.Checked = true;
+            subsectionLabelAlignChoose.SelectedIndex = 0;
+            subsectionLabelBoldCheck.Checked = true;
+            subsectionLabelBeforeRadio.Checked = true;
+            includeSubsubsectionLabelCheck.Checked = true;
+            subsubsectionLabelBoldCheck.Checked = true;
+            subsubsectionLabelInLineRadio.Checked = true;
+
+            //TextBox subsectionLabelEnter = (TextBox)Controls.Find("section1Subsection1LabelEnter", true)[0];
+            //subsectionLabelEnter.Text = "Subsection 1";
+            //RichTextBox subsectionContent = (RichTextBox)Controls.Find("section1Subsection1Content", true)[0];
+            //subsectionContent.Text = "Let us look first to the past.  In the late 1700’s, cotton was a very valuable produce and many large plantations were growing it.  The problem was that the cotton plant had very sharp edges that could cut the picker’s hands with ease, and it also contained many hard to remove seeds, taking hours to remove one at a time.  According to History.com, “[t]he average cotton picker could remove the seeds from only about one pound of short-staple cotton per day” (2010).  Then along came Eli Whitney.  He patented a revolutionary machine called the cotton gin.  This machine could receive cotton and, in a relatively short amount of time, digest it, removing all of the seeds and producing the clean product.  Did this invention take away some jobs? Absolutely it did.  No longer was it necessary to hire tons of people and use many of the laborers’ hours, which could be spent doing other things, to do the task the machine could do in a fraction of the time.  However, in the end did it benefit everyone?  Of course it did.  This invention made the work so much more efficient that it “could remove the seeds from 50 pounds of cotton in a single day” (history.com, 2010).  Not only were the cotton pickers’ hands better protected, but cotton harvesting and production was far smoother and more effective, causing the price of cotton to drop and the making of clothes to be less expensive. This, in turn, provided jobs for more clothing makers, factory workers, and many, many others.\nNow move forward a few years to the early 1900’s and a man named Henry Ford.Ford worked at an auto shop and eventually owned his own business which he titled Ford Motor Company.  He had many amazing ideas and helped to develop what we now know as an assembly line.  Before this, each car was very expensive because it took so many people and so much time to put them together, but then the idea came to assign each person a specific job dealing with the construction of the car.When they were done with their job, they would then pass it on to the next person so that he or she could do his or her part.This earliest form of an assembly line increased productivity and made the new line of cars less expensive, so even the average man could afford their own automobile.So, did this new way of thinking take some jobs away? You bet!There were less people needed to construct a car and therefore some may have lost their jobs, but in the end far more were gained. Just look at how many jobs it has created!According to CorporateFord.com, Ford’s official site used to print its reports, Ford Motor Company has “166,000 employees and about 70 plants worldwide” (2012).That is not to mention the other auto companies that borrowed off of this idea and all the auto mechanics that are now in business because your average worker could now afford a car.";
+
+            //TextBox subsubsectionLabelEnter = (TextBox)Controls.Find("section1Subsection1Subsubsection1LabelEnter", true)[0];
+            //subsubsectionLabelEnter.Text = "Subsubsection 1";
+            //RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section1Subsection1Subsubsection1Content", true)[0];
+            //subsubsectionContent.Text = "Let us look first to the past.  In the late 1700’s, cotton was a very valuable produce and many large plantations were growing it.  The problem was that the cotton plant had very sharp edges that could cut the picker’s hands with ease, and it also contained many hard to remove seeds, taking hours to remove one at a time.  According to History.com, “[t]he average cotton picker could remove the seeds from only about one pound of short-staple cotton per day” (2010).  Then along came Eli Whitney.  He patented a revolutionary machine called the cotton gin.  This machine could receive cotton and, in a relatively short amount of time, digest it, removing all of the seeds and producing the clean product.  Did this invention take away some jobs? Absolutely it did.  No longer was it necessary to hire tons of people and use many of the laborers’ hours, which could be spent doing other things, to do the task the machine could do in a fraction of the time.  However, in the end did it benefit everyone?  Of course it did.  This invention made the work so much more efficient that it “could remove the seeds from 50 pounds of cotton in a single day” (history.com, 2010).  Not only were the cotton pickers’ hands better protected, but cotton harvesting and production was far smoother and more effective, causing the price of cotton to drop and the making of clothes to be less expensive. This, in turn, provided jobs for more clothing makers, factory workers, and many, many others.\nNow move forward a few years to the early 1900’s and a man named Henry Ford.Ford worked at an auto shop and eventually owned his own business which he titled Ford Motor Company.  He had many amazing ideas and helped to develop what we now know as an assembly line.  Before this, each car was very expensive because it took so many people and so much time to put them together, but then the idea came to assign each person a specific job dealing with the construction of the car.When they were done with their job, they would then pass it on to the next person so that he or she could do his or her part.This earliest form of an assembly line increased productivity and made the new line of cars less expensive, so even the average man could afford their own automobile.So, did this new way of thinking take some jobs away? You bet!There were less people needed to construct a car and therefore some may have lost their jobs, but in the end far more were gained. Just look at how many jobs it has created!According to CorporateFord.com, Ford’s official site used to print its reports, Ford Motor Company has “166,000 employees and about 70 plants worldwide” (2012).That is not to mention the other auto companies that borrowed off of this idea and all the auto mechanics that are now in business because your average worker could now afford a car.";
+
+            conclusionTitleEnter.Text = "Conclusion";
+            conclusionContent.Text = "";
+            conclusionContent.Text = "Through all of this, we see the consistent pattern.  Whether it be the past, or the present, things remain the same.  Though some jobs may be lost, allowing people to continue forward with their ideas and innovations will help the economy, and the public as a whole, far more than it could ever hurt it.  Some may say, “Yes, let’s keep technology increasing. It’s ok as long as it doesn’t take away my job!”  You cannot have it both ways.  Who has the right to say, “I know you’ve come up with a new, more efficient way of doing something, but some people may have to change jobs, so you can’t use it”? Can you imagine what would have happened if Eli Whitney or Henry Ford would have been told that? I am sure we would be having a great time riding our horses to work every day.  Quality of life will improve, and cost of goods will go down. For every job taken by technology, many more are created, and, in this constantly growing world, we need all we can get.";
+        }
     }
 }

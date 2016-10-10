@@ -466,7 +466,15 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeHeader)
                 {
-
+                    foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
+                    {
+                        Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                        headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                        headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        headerRange.Font.Size = 11;
+                        string headerText = constructHeader();
+                        headerRange.Text = headerText;
+                    }
                 }
 
                 if (myPaper.includeFooter)
@@ -474,17 +482,13 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 }
 
-                //Paragraph para1 = document.Content.Paragraphs.Add(ref missing);
-                //object styleHeading1 = "Heading 1";
-                //para1.Range.set_Style(ref styleHeading1);
-                //para1.Range.Text = "Para 1 text";
-                //para1.Range.InsertParagraphAfter();
 
-                //Paragraph para2 = document.Content.Paragraphs.Add(ref missing);
-                //object styleHeading2 = "Heading 2";
-                //para2.Range.set_Style(ref styleHeading2);
-                //para2.Range.Text = "Para 2 text";
-                //para2.Range.InsertParagraphAfter();
+                //TODO Make this dependent upon the setting
+                object beginDoc = document.Content.Start;
+                object endDoc = document.Content.End;
+
+                document.Range(ref beginDoc, ref endDoc).Paragraphs.Space2();
+                document.Range(ref beginDoc, ref endDoc).Paragraphs.SpaceAfter = 0;
 
                 object filename = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
@@ -499,6 +503,54 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public string constructHeader()
+        {
+            string headerText = "";
+
+            if (myPaper.header.leftTitle)
+            {
+                headerText += myPaper.header.leftTitleText;
+            }
+            else if (myPaper.header.leftPageNum)
+            {
+                //add page number
+            }
+            else if (myPaper.header.leftOther)
+            {
+                headerText += myPaper.header.leftOtherText;
+            }
+            headerText += "\t";
+
+            if (myPaper.header.centerTitle)
+            {
+                headerText += myPaper.header.centerTitleText;
+            }
+            else if (myPaper.header.centerPageNum)
+            {
+                //add page number
+            }
+            else if (myPaper.header.centerOther)
+            {
+                headerText += myPaper.header.centerOtherText;
+            }
+            headerText += "\t";
+
+            if (myPaper.header.rightTitle)
+            {
+                headerText += myPaper.header.rightTitleText;
+            }
+            else if (myPaper.header.rightPageNum)
+            {
+                //add page number
+            }
+            else if (myPaper.header.rightOther)
+            {
+                headerText += myPaper.header.rightOtherText;
+            }
+
+            return headerText;
         }
     }
 }

@@ -40,6 +40,8 @@
             this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.conclusionDefaultButton = new System.Windows.Forms.Button();
             this.conclusionTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.conclusionTitleAlignLabel = new System.Windows.Forms.Label();
+            this.conclusionTitleAlignChoose = new System.Windows.Forms.ComboBox();
             this.conclusionTitleColorButton = new System.Windows.Forms.Button();
             this.conclusionTitleColorText = new System.Windows.Forms.TextBox();
             this.conclusionTitleColorLabel = new System.Windows.Forms.Label();
@@ -359,6 +361,8 @@
             this.referencesIndentTabsLabel = new System.Windows.Forms.Label();
             this.referencesHangingIndentCheck = new System.Windows.Forms.CheckBox();
             this.referencesTitleGroupBox = new System.Windows.Forms.GroupBox();
+            this.referencesTitleAlignLabel = new System.Windows.Forms.Label();
+            this.referencesTitleAlignChoose = new System.Windows.Forms.ComboBox();
             this.referencesTitleColorButton = new System.Windows.Forms.Button();
             this.referencesTitleColorText = new System.Windows.Forms.TextBox();
             this.referencesTitleColorLabel = new System.Windows.Forms.Label();
@@ -418,10 +422,6 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.conclusionTitleAlignLabel = new System.Windows.Forms.Label();
-            this.conclusionTitleAlignChoose = new System.Windows.Forms.ComboBox();
-            this.referencesTitleAlignLabel = new System.Windows.Forms.Label();
-            this.referencesTitleAlignChoose = new System.Windows.Forms.ComboBox();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -682,6 +682,30 @@
             this.conclusionTitleGroupBox.TabIndex = 4;
             this.conclusionTitleGroupBox.TabStop = false;
             this.conclusionTitleGroupBox.Text = "Conclusion Title";
+            // 
+            // conclusionTitleAlignLabel
+            // 
+            this.conclusionTitleAlignLabel.AutoSize = true;
+            this.conclusionTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
+            this.conclusionTitleAlignLabel.Name = "conclusionTitleAlignLabel";
+            this.conclusionTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.conclusionTitleAlignLabel.TabIndex = 27;
+            this.conclusionTitleAlignLabel.Text = "Align:";
+            this.conclusionTitleAlignLabel.Visible = false;
+            // 
+            // conclusionTitleAlignChoose
+            // 
+            this.conclusionTitleAlignChoose.FormattingEnabled = true;
+            this.conclusionTitleAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.conclusionTitleAlignChoose.Location = new System.Drawing.Point(172, 17);
+            this.conclusionTitleAlignChoose.Name = "conclusionTitleAlignChoose";
+            this.conclusionTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.conclusionTitleAlignChoose.TabIndex = 26;
+            this.conclusionTitleAlignChoose.Visible = false;
+            this.conclusionTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleAlignChoose_SelectedIndexChanged);
             // 
             // conclusionTitleColorButton
             // 
@@ -4448,6 +4472,30 @@
             this.referencesTitleGroupBox.TabStop = false;
             this.referencesTitleGroupBox.Text = "References Title";
             // 
+            // referencesTitleAlignLabel
+            // 
+            this.referencesTitleAlignLabel.AutoSize = true;
+            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(300, 20);
+            this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
+            this.referencesTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
+            this.referencesTitleAlignLabel.TabIndex = 27;
+            this.referencesTitleAlignLabel.Text = "Align:";
+            this.referencesTitleAlignLabel.Visible = false;
+            // 
+            // referencesTitleAlignChoose
+            // 
+            this.referencesTitleAlignChoose.FormattingEnabled = true;
+            this.referencesTitleAlignChoose.Items.AddRange(new object[] {
+            "Left",
+            "Center",
+            "Right"});
+            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(334, 17);
+            this.referencesTitleAlignChoose.Name = "referencesTitleAlignChoose";
+            this.referencesTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
+            this.referencesTitleAlignChoose.TabIndex = 26;
+            this.referencesTitleAlignChoose.Visible = false;
+            this.referencesTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleAlignChoose_SelectedIndexChanged);
+            // 
             // referencesTitleColorButton
             // 
             this.referencesTitleColorButton.Location = new System.Drawing.Point(141, 114);
@@ -5119,54 +5167,7 @@
             this.settingsButton.Size = new System.Drawing.Size(34, 37);
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
-            // 
-            // conclusionTitleAlignLabel
-            // 
-            this.conclusionTitleAlignLabel.AutoSize = true;
-            this.conclusionTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
-            this.conclusionTitleAlignLabel.Name = "conclusionTitleAlignLabel";
-            this.conclusionTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
-            this.conclusionTitleAlignLabel.TabIndex = 27;
-            this.conclusionTitleAlignLabel.Text = "Align:";
-            this.conclusionTitleAlignLabel.Visible = false;
-            // 
-            // conclusionTitleAlignChoose
-            // 
-            this.conclusionTitleAlignChoose.FormattingEnabled = true;
-            this.conclusionTitleAlignChoose.Items.AddRange(new object[] {
-            "Left",
-            "Center",
-            "Right"});
-            this.conclusionTitleAlignChoose.Location = new System.Drawing.Point(172, 17);
-            this.conclusionTitleAlignChoose.Name = "conclusionTitleAlignChoose";
-            this.conclusionTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
-            this.conclusionTitleAlignChoose.TabIndex = 26;
-            this.conclusionTitleAlignChoose.Visible = false;
-            this.conclusionTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleAlignChoose_SelectedIndexChanged);
-            // 
-            // referencesTitleAlignLabel
-            // 
-            this.referencesTitleAlignLabel.AutoSize = true;
-            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(300, 20);
-            this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
-            this.referencesTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
-            this.referencesTitleAlignLabel.TabIndex = 27;
-            this.referencesTitleAlignLabel.Text = "Align:";
-            this.referencesTitleAlignLabel.Visible = false;
-            // 
-            // referencesTitleAlignChoose
-            // 
-            this.referencesTitleAlignChoose.FormattingEnabled = true;
-            this.referencesTitleAlignChoose.Items.AddRange(new object[] {
-            "Left",
-            "Center",
-            "Right"});
-            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(334, 17);
-            this.referencesTitleAlignChoose.Name = "referencesTitleAlignChoose";
-            this.referencesTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
-            this.referencesTitleAlignChoose.TabIndex = 26;
-            this.referencesTitleAlignChoose.Visible = false;
-            this.referencesTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleAlignChoose_SelectedIndexChanged);
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // Form1
             // 
