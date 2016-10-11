@@ -182,13 +182,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }                
 
                 foreach(Section section in myPaper.sections)
-                {
-                    string replacedSection = section.content.Replace("\\n", "%19283746564738291%");
-                    string[] splitSection = replacedSection.Split(new string[] { "\n" }, StringSplitOptions.None);
+               { 
+                    string[] splitSection = section.content.Split('\n');
                     bool isFirstOfPara = true;
                     foreach(string splitPara in splitSection)
                     {
-                        splitPara.Replace("%19283746564738291%", "\\n");
                         Paragraph sectiontext = document.Content.Paragraphs.Add(ref missing);
                         if (isFirstOfPara)
                         {
@@ -263,12 +261,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                     
                     foreach (SubSection subsection in section.subSections)
                     {
-                        string replacedSubsection = subsection.content.Replace("\\n", "%19283746564738291%");
-                        string[] splitSubsection = replacedSubsection.Split(new string[] { "\n" }, StringSplitOptions.None);
+                        string[] splitSubsection = subsection.content.Split('\n');
                         bool isFirstOfParaSub = true;
                         foreach (string splitPara in splitSubsection)
                         {
-                            splitPara.Replace("%19283746564738291%", "\\n");
                             Paragraph subsectiontext = document.Content.Paragraphs.Add(ref missing);
                             if (isFirstOfParaSub)
                             {
@@ -342,12 +338,10 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                         foreach (SubSubSection subsubsection in subsection.subsubSections)
                         {
-                            string replacedSubsubsection = subsection.content.Replace("\\n", "%19283746564738291%");
-                            string[] splitSubsubsection = replacedSubsection.Split(new string[] { "\n" }, StringSplitOptions.None);
+                            string[] splitSubsubsection = subsubsection.content.Split('\n');
                             bool isFirstOfParaSubSub = true;
                             foreach (string splitPara in splitSubsubsection)
                             {
-                                splitPara.Replace("%19283746564738291%", "\\n");
                                 Paragraph subsubsectiontext = document.Content.Paragraphs.Add(ref missing);
                                 if (isFirstOfParaSubSub)
                                 {
@@ -471,7 +465,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
                         headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
                         headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                        headerRange.Font.Size = 11;
+                        headerRange.Font.Size = 12;
                         string headerText = constructHeader();
                         headerRange.Text = headerText;
                     }
@@ -489,6 +483,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.Space2();
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.SpaceAfter = 0;
+                document.Range(ref beginDoc, ref endDoc).Font.Size = 12;
 
                 object filename = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
@@ -523,19 +518,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             headerText += "\t";
 
-            if (myPaper.header.centerTitle)
-            {
-                headerText += myPaper.header.centerTitleText;
-            }
-            else if (myPaper.header.centerPageNum)
-            {
-                //add page number
-            }
-            else if (myPaper.header.centerOther)
-            {
-                headerText += myPaper.header.centerOtherText;
-            }
-            headerText += "\t";
+            
 
             if (myPaper.header.rightTitle)
             {
