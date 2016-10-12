@@ -132,12 +132,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                         }
+                        text.Range.ParagraphFormat.FirstLineIndent = 0;
                         text.Range.InsertParagraphAfter();
                     }
                     //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     text.Range.Bold = 0;
                     text.Range.Text = myPaper.summary.content;
+                    text.Range.ParagraphFormat.FirstLineIndent = 36;
                     text.Range.InsertParagraphAfter();
                     if (myPaper.summary.onOwnPage)
                     {
@@ -168,11 +170,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                         }
+                        text.Range.ParagraphFormat.FirstLineIndent = 0;
                         text.Range.InsertParagraphAfter();
                     }
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     text.Range.Bold = 0;
-                    text.Range.Text = myPaper.abstractConfig.content;                    
+                    text.Range.Text = myPaper.abstractConfig.content;
+                    text.Range.ParagraphFormat.FirstLineIndent = 36;
                     text.Range.InsertParagraphAfter();
                     if (myPaper.abstractConfig.onOwnPage)
                     {
@@ -182,7 +186,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }                
 
                 foreach(Section section in myPaper.sections)
-               { 
+                { 
                     string[] splitSection = section.content.Split('\n');
                     bool isFirstOfPara = true;
                     foreach(string splitPara in splitSection)
@@ -197,6 +201,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     sectiontext.Range.Text = section.title + ". " + splitPara;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                     int start = sectiontext.Range.Start;
                                     int end = sectiontext.Range.Start + section.title.Length + 1;
                                     if (myPaper.sectionsConfig.sectionLabelBold)
@@ -225,16 +230,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                     sectiontext.Range.InsertParagraphAfter();
                                     sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     sectiontext.Range.Bold = 0;
                                     sectiontext.Range.Text = splitPara;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 }
                                 else
                                 {
                                     sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-
                                     sectiontext.Range.Text = section.title + ". " + splitPara;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                     int start = sectiontext.Range.Start;
                                     int end = sectiontext.Range.Start + section.title.Length + 1;
                                     if (myPaper.sectionsConfig.sectionLabelBold)
@@ -249,12 +256,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                             {
                                 sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 sectiontext.Range.Text = splitPara;
+                                sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                             }
                             sectiontext.Range.InsertParagraphAfter();
                         }
                         else
                         {
                             sectiontext.Range.Text = splitPara;
+                            sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                             sectiontext.Range.InsertParagraphAfter();
                         }
                     }                   
@@ -275,6 +284,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         subsectiontext.Range.Text = subsection.title + ". " + splitPara;
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                         int start = subsectiontext.Range.Start;
                                         int end = subsectiontext.Range.Start + subsection.title.Length + 1;
                                         if (myPaper.sectionsConfig.subsectionLabelBold)
@@ -303,15 +313,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         }
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                         subsectiontext.Range.InsertParagraphAfter();
                                         subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         subsectiontext.Range.Bold = 0;
                                         subsectiontext.Range.Text = splitPara;
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     }
                                     else
                                     {
                                         subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         subsectiontext.Range.Text = subsection.title + ". " + splitPara;
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                         int start = subsectiontext.Range.Start;
                                         int end = subsectiontext.Range.Start + subsection.title.Length + 1;
                                         if (myPaper.sectionsConfig.subsectionLabelBold)
@@ -326,12 +339,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     subsectiontext.Range.Text = splitPara;
+                                    subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 }
                                 subsectiontext.Range.InsertParagraphAfter();
                             }
                             else
                             {
                                 subsectiontext.Range.Text = splitPara;
+                                subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 subsectiontext.Range.InsertParagraphAfter();
                             }
                         }
@@ -353,6 +368,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             subsubsectiontext.Range.Text = subsubsection.title + ". " + splitPara;
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                             int start = subsubsectiontext.Range.Start;
                                             int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
                                             if (myPaper.sectionsConfig.subsubsectionLabelBold)
@@ -381,15 +397,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             }
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                             subsubsectiontext.Range.InsertParagraphAfter();
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             subsubsectiontext.Range.Bold = 0;
                                             subsubsectiontext.Range.Text = splitPara;
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                         }
                                         else
                                         {
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             subsubsectiontext.Range.Text = subsubsection.title + ". " + splitPara;
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                             int start = subsubsectiontext.Range.Start;
                                             int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
                                             if (myPaper.sectionsConfig.subsubsectionLabelBold)
@@ -404,12 +423,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         subsubsectiontext.Range.Text = splitPara;
+                                        subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     }
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
                                 else
                                 {
                                     subsubsectiontext.Range.Text = splitPara;
+                                    subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
                             }
@@ -444,12 +465,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                         }
-                        
+                        text.Range.ParagraphFormat.FirstLineIndent = 0;
                         text.Range.InsertParagraphAfter();
                     }
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     text.Range.Bold = 0;
                     text.Range.Text = myPaper.conclusion.conclusionContent;
+                    text.Range.ParagraphFormat.FirstLineIndent = 36;
                     text.Range.InsertParagraphAfter();
                 }
 
@@ -485,7 +507,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.SpaceAfter = 0;
                 document.Range(ref beginDoc, ref endDoc).Font.Size = 12;
 
-                object filename = @"C:\Users\Jbeag_000\Desktop\DocXExample.docx";
+                object filename = @"C:\Users\jbeagle\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
                 document.Close(ref missing, ref missing, ref missing);
                 document = null;
