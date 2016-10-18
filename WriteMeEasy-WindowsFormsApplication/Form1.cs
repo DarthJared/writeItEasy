@@ -688,7 +688,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void boldButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void italicButton_Click(object sender, EventArgs e)
