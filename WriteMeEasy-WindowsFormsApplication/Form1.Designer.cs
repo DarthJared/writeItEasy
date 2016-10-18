@@ -422,6 +422,9 @@
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.boldButton = new System.Windows.Forms.ToolStripButton();
+            this.italicButton = new System.Windows.Forms.ToolStripButton();
+            this.underlineButton = new System.Windows.Forms.ToolStripButton();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -5125,13 +5128,16 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveButton,
             this.openButton,
-            this.settingsButton});
+            this.settingsButton,
+            this.boldButton,
+            this.italicButton,
+            this.underlineButton});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.MinimumSize = new System.Drawing.Size(0, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(113, 40);
+            this.toolStrip1.Size = new System.Drawing.Size(246, 40);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton
@@ -5168,6 +5174,39 @@
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.ToolTipText = "Settings";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // boldButton
+            // 
+            this.boldButton.AutoSize = false;
+            this.boldButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.boldButton.Image = ((System.Drawing.Image)(resources.GetObject("boldButton.Image")));
+            this.boldButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.boldButton.Name = "boldButton";
+            this.boldButton.Size = new System.Drawing.Size(34, 37);
+            this.boldButton.Text = "toolStripButton1";
+            this.boldButton.Click += new System.EventHandler(this.boldButton_Click);
+            // 
+            // italicButton
+            // 
+            this.italicButton.AutoSize = false;
+            this.italicButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.italicButton.Image = ((System.Drawing.Image)(resources.GetObject("italicButton.Image")));
+            this.italicButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.italicButton.Name = "italicButton";
+            this.italicButton.Size = new System.Drawing.Size(34, 37);
+            this.italicButton.Text = "toolStripButton2";
+            this.italicButton.Click += new System.EventHandler(this.italicButton_Click);
+            // 
+            // underlineButton
+            // 
+            this.underlineButton.AutoSize = false;
+            this.underlineButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.underlineButton.Image = ((System.Drawing.Image)(resources.GetObject("underlineButton.Image")));
+            this.underlineButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.underlineButton.Name = "underlineButton";
+            this.underlineButton.Size = new System.Drawing.Size(34, 37);
+            this.underlineButton.Text = "toolStripButton3";
+            this.underlineButton.Click += new System.EventHandler(this.underlineButton_Click);
             // 
             // Form1
             // 
@@ -5732,6 +5771,9 @@
         private System.Windows.Forms.ComboBox conclusionTitleAlignChoose;
         private System.Windows.Forms.Label referencesTitleAlignLabel;
         private System.Windows.Forms.ComboBox referencesTitleAlignChoose;
+        private System.Windows.Forms.ToolStripButton boldButton;
+        private System.Windows.Forms.ToolStripButton italicButton;
+        private System.Windows.Forms.ToolStripButton underlineButton;
     }
 }
 

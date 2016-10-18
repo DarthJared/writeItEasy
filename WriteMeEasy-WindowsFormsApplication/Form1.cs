@@ -685,5 +685,20 @@ namespace WriteMeEasy_WindowsFormsApplication
             conclusionContent.Text = "";
             conclusionContent.Text = "Through all of this, we see the consistent pattern.  Whether it be the past, or the present, things remain the same.  Though some jobs may be lost, allowing people to continue forward with their ideas and innovations will help the economy, and the public as a whole, far more than it could ever hurt it.  Some may say, “Yes, let’s keep technology increasing. It’s ok as long as it doesn’t take away my job!”  You cannot have it both ways.  Who has the right to say, “I know you’ve come up with a new, more efficient way of doing something, but some people may have to change jobs, so you can’t use it”? Can you imagine what would have happened if Eli Whitney or Henry Ford would have been told that? I am sure we would be having a great time riding our horses to work every day.  Quality of life will improve, and cost of goods will go down. For every job taken by technology, many more are created, and, in this constantly growing world, we need all we can get.";
         }
+
+        private void boldButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void italicButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void underlineButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
