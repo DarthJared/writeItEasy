@@ -421,10 +421,10 @@
             this.saveButton = new System.Windows.Forms.ToolStripButton();
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.boldButton = new System.Windows.Forms.ToolStripButton();
             this.italicButton = new System.Windows.Forms.ToolStripButton();
             this.underlineButton = new System.Windows.Forms.ToolStripButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -4748,6 +4748,7 @@
             this.conclusionContent.TabIndex = 0;
             this.conclusionContent.Text = "";
             this.conclusionContent.TextChanged += new System.EventHandler(this.conclusionContent_TextChanged);
+            this.conclusionContent.Enter += new System.EventHandler(this.conclusionLast);
             // 
             // toolStrip4
             // 
@@ -4833,6 +4834,7 @@
             this.section1Content.Tag = "1";
             this.section1Content.Text = "";
             this.section1Content.TextChanged += new System.EventHandler(this.sectionTextChanged);
+            this.section1Content.Enter += new System.EventHandler(this.sectionLast);
             // 
             // section1ToolStrip
             // 
@@ -4951,6 +4953,7 @@
             this.abstractContent.TabIndex = 0;
             this.abstractContent.Text = "";
             this.abstractContent.TextChanged += new System.EventHandler(this.abstractContent_TextChanged);
+            this.abstractContent.Enter += new System.EventHandler(this.abstractLast);
             // 
             // toolStrip3
             // 
@@ -5056,6 +5059,7 @@
             this.summaryContent.TabIndex = 0;
             this.summaryContent.Text = "";
             this.summaryContent.TextChanged += new System.EventHandler(this.summaryContent_TextChanged);
+            this.summaryContent.Enter += new System.EventHandler(this.summaryLast);
             // 
             // toolStrip2
             // 
@@ -5137,7 +5141,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(246, 40);
+            this.toolStrip1.Size = new System.Drawing.Size(215, 40);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton

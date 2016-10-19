@@ -688,17 +688,126 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void boldButton_Click(object sender, EventArgs e)
         {
-            
+            RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            if (boxToEdit.SelectionFont.Bold)
+            {
+                if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Underline)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | FontStyle.Italic);
+                }
+                else if (boxToEdit.SelectionFont.Underline)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                }
+                else if (boxToEdit.SelectionFont.Italic)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                }
+                else
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                }                
+            }
+            else
+            {
+                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | boxToEdit.SelectionFont.Style);
+            }            
         }
 
         private void italicButton_Click(object sender, EventArgs e)
         {
-
+            RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            if (boxToEdit.SelectionFont.Italic)
+            {
+                if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Underline)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | FontStyle.Bold);
+                }
+                else if (boxToEdit.SelectionFont.Underline)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                }
+                else if (boxToEdit.SelectionFont.Bold)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                }
+                else
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                }
+            }
+            else
+            {
+                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | boxToEdit.SelectionFont.Style);
+            }
         }
 
         private void underlineButton_Click(object sender, EventArgs e)
         {
+            RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            if (boxToEdit.SelectionFont.Underline)
+            {
+                if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Bold)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Italic);
+                }
+                else if (boxToEdit.SelectionFont.Bold)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                }
+                else if (boxToEdit.SelectionFont.Italic)
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                }
+                else
+                {
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                }
+            }
+            else
+            {
+                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | boxToEdit.SelectionFont.Style);
+            }
+        }
+        
+        private void summaryLast(object sender, EventArgs e)
+        {
+            lastEntered = "summaryContent";
+        }
 
+        private void abstractLast(object sender, EventArgs e)
+        {
+            lastEntered = "abstractContent";
+        }
+
+        private void conclusionLast(object sender, EventArgs e)
+        {
+            lastEntered = "conclusionContent";
+        }
+
+        private void sectionLast(object sender, EventArgs e)
+        {
+            int sectionIndex = Convert.ToInt32(((RichTextBox)sender).Tag);
+            lastEntered = "section" + sectionIndex + "Content";
+        }
+
+        private void subsectionLast(object sender, EventArgs e)
+        {
+            string tag = (string)((RichTextBox)sender).Tag;
+            string[] indexes = tag.Split(',');
+            int sectionIndex = Convert.ToInt32(indexes[0]);
+            int subsectionIndex = Convert.ToInt32(indexes[1]);
+            lastEntered = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
+        }
+
+        private void subsubsectionLast(object sender, EventArgs e)
+        {
+            string tag = (string)((RichTextBox)sender).Tag;
+            string[] indexes = tag.Split(',');
+            int sectionIndex = Convert.ToInt32(indexes[0]);
+            int subsectionIndex = Convert.ToInt32(indexes[1]);
+            int subsubsectionIndex = Convert.ToInt32(indexes[2]);
+            lastEntered = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
         }
     }
 }

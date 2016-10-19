@@ -116,6 +116,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             section1groupBox.Height = 315;
             addSectionButton.Location = new Point(9, 353);
             contentPanel.Height = 404;
+            lastEntered = "";
 
             myPaper.sections.Add(new Section(new List<SubSection>(), "", "", 1));
         }
