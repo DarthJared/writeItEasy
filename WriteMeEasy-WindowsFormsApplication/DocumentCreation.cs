@@ -365,7 +365,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     int start = sectiontext.Range.Start;
                                     int end = sectiontext.Range.Start + section.title.Length + 1;
                                     if (myPaper.sectionsConfig.sectionLabelBold)
@@ -394,7 +394,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
-                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     sectiontext.Range.InsertParagraphAfter();
                                     sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     sectiontext.Range.Bold = 0;
@@ -516,7 +516,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                    sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     int start = sectiontext.Range.Start;
                                     int end = sectiontext.Range.Start + section.title.Length + 1;
                                     if (myPaper.sectionsConfig.sectionLabelBold)
@@ -530,14 +530,121 @@ namespace WriteMeEasy_WindowsFormsApplication
                             else
                             {
                                 sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                sectiontext.Range.Text = splitPara;
+
+                                string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                sectiontext.Range.Text = unformatted;
+
+                                string[] splitBold = splitPara.Split('\b');
+                                for (int i = 0; i < splitBold.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToBold = sectiontext.Range.Duplicate;
+                                        rangeToBold.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                        rangeToBold.Bold = 1;
+                                    }
+                                }
+
+                                string[] splitItalic = splitPara.Split('\a');
+                                for (int i = 0; i < splitItalic.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToItalic = sectiontext.Range.Duplicate;
+                                        rangeToItalic.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                        rangeToItalic.Italic = 1;
+                                    }
+                                }
+
+                                string[] splitUnderline = splitPara.Split('\f');
+                                for (int i = 0; i < splitUnderline.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                        Range rangeToUnderline = sectiontext.Range.Duplicate;
+                                        rangeToUnderline.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                        rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                    }
+                                }
+
                                 sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                             }
                             sectiontext.Range.InsertParagraphAfter();
                         }
                         else
                         {
-                            sectiontext.Range.Text = splitPara;
+                            string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                            sectiontext.Range.Text = unformatted;
+
+                            string[] splitBold = splitPara.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = sectiontext.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                    rangeToBold.Bold = 1;
+                                }
+                            }
+
+                            string[] splitItalic = splitPara.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = sectiontext.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                    rangeToItalic.Italic = 1;
+                                }
+                            }
+
+                            string[] splitUnderline = splitPara.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = sectiontext.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
                             sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                             sectiontext.Range.InsertParagraphAfter();
                         }
@@ -616,7 +723,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             }
                                         }
 
-                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                         int start = subsectiontext.Range.Start;
                                         int end = subsectiontext.Range.Start + subsection.title.Length + 1;
                                         if (myPaper.sectionsConfig.subsectionLabelBold)
@@ -767,7 +874,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             }
                                         }
 
-                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                        subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                         int start = subsectiontext.Range.Start;
                                         int end = subsectiontext.Range.Start + subsection.title.Length + 1;
                                         if (myPaper.sectionsConfig.subsectionLabelBold)
@@ -781,14 +888,121 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 else
                                 {
                                     subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                    subsectiontext.Range.Text = splitPara;
+
+                                    string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    subsectiontext.Range.Text = unformatted;
+
+                                    string[] splitBold = splitPara.Split('\b');
+                                    for (int i = 0; i < splitBold.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToBold = subsectiontext.Range.Duplicate;
+                                            rangeToBold.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                            rangeToBold.Bold = 1;
+                                        }
+                                    }
+
+                                    string[] splitItalic = splitPara.Split('\a');
+                                    for (int i = 0; i < splitItalic.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToItalic = subsectiontext.Range.Duplicate;
+                                            rangeToItalic.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                            rangeToItalic.Italic = 1;
+                                        }
+                                    }
+
+                                    string[] splitUnderline = splitPara.Split('\f');
+                                    for (int i = 0; i < splitUnderline.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                            Range rangeToUnderline = subsectiontext.Range.Duplicate;
+                                            rangeToUnderline.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                            rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                        }
+                                    }
+
                                     subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 }
                                 subsectiontext.Range.InsertParagraphAfter();
                             }
                             else
                             {
-                                subsectiontext.Range.Text = splitPara;
+                                string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                subsectiontext.Range.Text = unformatted;
+
+                                string[] splitBold = splitPara.Split('\b');
+                                for (int i = 0; i < splitBold.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToBold = subsectiontext.Range.Duplicate;
+                                        rangeToBold.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                        rangeToBold.Bold = 1;
+                                    }
+                                }
+
+                                string[] splitItalic = splitPara.Split('\a');
+                                for (int i = 0; i < splitItalic.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToItalic = subsectiontext.Range.Duplicate;
+                                        rangeToItalic.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                        rangeToItalic.Italic = 1;
+                                    }
+                                }
+
+                                string[] splitUnderline = splitPara.Split('\f');
+                                for (int i = 0; i < splitUnderline.Length; i++)
+                                {
+                                    if (i % 2 == 1)
+                                    {
+                                        int previousSplitLength = 0;
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                        }
+                                        string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                        Range rangeToUnderline = subsectiontext.Range.Duplicate;
+                                        rangeToUnderline.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                        rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                    }
+                                }
+
                                 subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 subsectiontext.Range.InsertParagraphAfter();
                             }
@@ -868,7 +1082,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                             int start = subsubsectiontext.Range.Start;
                                             int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
                                             if (myPaper.sectionsConfig.subsubsectionLabelBold)
@@ -955,8 +1169,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                     rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
                                                 }
                                             }
-
-                                            subsubsectiontext.Range.Text = splitPara;
+                                            
                                             subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                         }
                                         else
@@ -1020,7 +1233,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                            subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                             int start = subsubsectiontext.Range.Start;
                                             int end = subsubsectiontext.Range.Start + subsubsection.title.Length + 1;
                                             if (myPaper.sectionsConfig.subsubsectionLabelBold)
@@ -1034,14 +1247,121 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else
                                     {
                                         subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                                        subsubsectiontext.Range.Text = splitPara;
+
+                                        string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                        subsubsectiontext.Range.Text = unformatted;
+
+                                        string[] splitBold = splitPara.Split('\b');
+                                        for (int i = 0; i < splitBold.Length; i++)
+                                        {
+                                            if (i % 2 == 1)
+                                            {
+                                                int previousSplitLength = 0;
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                                }
+                                                string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                                Range rangeToBold = subsubsectiontext.Range.Duplicate;
+                                                rangeToBold.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                rangeToBold.Bold = 1;
+                                            }
+                                        }
+
+                                        string[] splitItalic = splitPara.Split('\a');
+                                        for (int i = 0; i < splitItalic.Length; i++)
+                                        {
+                                            if (i % 2 == 1)
+                                            {
+                                                int previousSplitLength = 0;
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                                }
+                                                string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                Range rangeToItalic = subsubsectiontext.Range.Duplicate;
+                                                rangeToItalic.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                rangeToItalic.Italic = 1;
+                                            }
+                                        }
+
+                                        string[] splitUnderline = splitPara.Split('\f');
+                                        for (int i = 0; i < splitUnderline.Length; i++)
+                                        {
+                                            if (i % 2 == 1)
+                                            {
+                                                int previousSplitLength = 0;
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                                }
+                                                string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                                Range rangeToUnderline = subsubsectiontext.Range.Duplicate;
+                                                rangeToUnderline.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                            }
+                                        }
+                                        
                                         subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     }
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
                                 else
                                 {
-                                    subsubsectiontext.Range.Text = splitPara;
+                                    string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    subsubsectiontext.Range.Text = unformatted;
+
+                                    string[] splitBold = splitPara.Split('\b');
+                                    for (int i = 0; i < splitBold.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToBold = subsubsectiontext.Range.Duplicate;
+                                            rangeToBold.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                            rangeToBold.Bold = 1;
+                                        }
+                                    }
+
+                                    string[] splitItalic = splitPara.Split('\a');
+                                    for (int i = 0; i < splitItalic.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToItalic = subsubsectiontext.Range.Duplicate;
+                                            rangeToItalic.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                            rangeToItalic.Italic = 1;
+                                        }
+                                    }
+
+                                    string[] splitUnderline = splitPara.Split('\f');
+                                    for (int i = 0; i < splitUnderline.Length; i++)
+                                    {
+                                        if (i % 2 == 1)
+                                        {
+                                            int previousSplitLength = 0;
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                            }
+                                            string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                            Range rangeToUnderline = subsubsectiontext.Range.Duplicate;
+                                            rangeToUnderline.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                            rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                        }
+                                    }
+                                    
                                     subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
