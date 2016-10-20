@@ -206,7 +206,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionContent.Location = new Point(0, 0);
             newSectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             newSectionContent.Tag = newSection.index;
-            newSectionContent.TextChanged += new EventHandler(sectionTextChanged);
+            newSectionContent.Leave += new EventHandler(sectionTextChanged);
             newSectionContent.Enter += new EventHandler(sectionLast);
 
             Button newSectionAddSubsectionButton = new Button();
@@ -313,7 +313,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsectionContent.Location = new Point(0, 0);
             subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
-            subsectionContent.TextChanged += new EventHandler(subsectionTextChanged);
+            subsectionContent.Leave += new EventHandler(subsectionTextChanged);
             subsectionContent.Enter += new EventHandler(subsectionLast);
 
             Button addSubsubsectionButton = new Button();
@@ -429,7 +429,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsubsectionContent.Location = new Point(0, 0);
             subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
-            subsubsectionContent.TextChanged += new EventHandler(subsubsectionTextChanged);
+            subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
             subsubsectionContent.Enter += new EventHandler(subsubsectionLast);
 
             addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 282, "contentPanel", "CONTENT");
@@ -453,7 +453,46 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (section.index == sectionIndex)
                 {
-                    section.content = sectionContent.Text;
+                    bool boldStarted = false;
+                    bool italicStarted = false;
+                    bool underlineStarted = false;
+                    string formattedSection = "";
+                    for (int i = 0; i < sectionContent.Text.Length; i++)
+                    {
+                        sectionContent.Select(i, 1);
+                        if (sectionContent.SelectionFont.Bold && !boldStarted)
+                        {
+                            formattedSection += '\b';
+                            boldStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Bold && boldStarted)
+                        {
+                            formattedSection += '\b';
+                            boldStarted = false;
+                        }
+                        if (sectionContent.SelectionFont.Italic && !italicStarted)
+                        {
+                            formattedSection += '\a';
+                            italicStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Italic && italicStarted)
+                        {
+                            formattedSection += '\a';
+                            italicStarted = false;
+                        }
+                        if (sectionContent.SelectionFont.Underline && !underlineStarted)
+                        {
+                            formattedSection += '\f';
+                            underlineStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Underline && underlineStarted)
+                        {
+                            formattedSection += '\f';
+                            underlineStarted = false;
+                        }
+                        formattedSection += sectionContent.Text[i];
+                    }
+                    section.content = formattedSection;
                 }
             }
         }
@@ -541,7 +580,46 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         if (subsection.index == subsectionIndex)
                         {
-                            subsection.content = subsectionContent.Text;
+                            bool boldStarted = false;
+                            bool italicStarted = false;
+                            bool underlineStarted = false;
+                            string formattedSubsection = "";
+                            for (int i = 0; i < subsectionContent.Text.Length; i++)
+                            {
+                                subsectionContent.Select(i, 1);
+                                if (subsectionContent.SelectionFont.Bold && !boldStarted)
+                                {
+                                    formattedSubsection += '\b';
+                                    boldStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Bold && boldStarted)
+                                {
+                                    formattedSubsection += '\b';
+                                    boldStarted = false;
+                                }
+                                if (subsectionContent.SelectionFont.Italic && !italicStarted)
+                                {
+                                    formattedSubsection += '\a';
+                                    italicStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Italic && italicStarted)
+                                {
+                                    formattedSubsection += '\a';
+                                    italicStarted = false;
+                                }
+                                if (subsectionContent.SelectionFont.Underline && !underlineStarted)
+                                {
+                                    formattedSubsection += '\f';
+                                    underlineStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Underline && underlineStarted)
+                                {
+                                    formattedSubsection += '\f';
+                                    underlineStarted = false;
+                                }
+                                formattedSubsection += subsectionContent.Text[i];
+                            }
+                            subsection.content = formattedSubsection;
                         }
                     }
                 }
@@ -569,7 +647,46 @@ namespace WriteMeEasy_WindowsFormsApplication
                             {
                                 if (subsubsection.index == subsubsectionIndex)
                                 {
-                                    subsubsection.content = subsubsectionContent.Text;
+                                    bool boldStarted = false;
+                                    bool italicStarted = false;
+                                    bool underlineStarted = false;
+                                    string formattedSubsubsection = "";
+                                    for (int i = 0; i < subsubsectionContent.Text.Length; i++)
+                                    {
+                                        subsubsectionContent.Select(i, 1);
+                                        if (subsubsectionContent.SelectionFont.Bold && !boldStarted)
+                                        {
+                                            formattedSubsubsection += '\b';
+                                            boldStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Bold && boldStarted)
+                                        {
+                                            formattedSubsubsection += '\b';
+                                            boldStarted = false;
+                                        }
+                                        if (subsubsectionContent.SelectionFont.Italic && !italicStarted)
+                                        {
+                                            formattedSubsubsection += '\a';
+                                            italicStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Italic && italicStarted)
+                                        {
+                                            formattedSubsubsection += '\a';
+                                            italicStarted = false;
+                                        }
+                                        if (subsubsectionContent.SelectionFont.Underline && !underlineStarted)
+                                        {
+                                            formattedSubsubsection += '\f';
+                                            underlineStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Underline && underlineStarted)
+                                        {
+                                            formattedSubsubsection += '\f';
+                                            underlineStarted = false;
+                                        }
+                                        formattedSubsubsection += subsubsectionContent.Text[i];
+                                    }
+                                    subsubsection.content = formattedSubsubsection;
                                 }
                             }
                         }

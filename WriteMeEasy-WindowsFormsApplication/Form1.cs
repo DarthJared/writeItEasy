@@ -8,7 +8,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     public partial class Form1 : Form
     {
         private void summaryTitleText_TextChanged(object sender, EventArgs e)
-        {
+        {            
             myPaper.summary.title = summaryTitleText.Text;
         }
 
@@ -24,17 +24,134 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void summaryContent_TextChanged(object sender, EventArgs e)
         {
-            myPaper.summary.content = summaryContent.Text;
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            string formattedSummary = "";
+            for (int i = 0; i < summaryContent.Text.Length; i++)
+            {
+                summaryContent.Select(i, 1);
+                if (summaryContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedSummary += '\b';
+                    boldStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedSummary += '\b';
+                    boldStarted = false;
+                }
+                if (summaryContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedSummary += '\a';
+                    italicStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedSummary += '\a';
+                    italicStarted = false;
+                }
+                if (summaryContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedSummary += '\f';
+                    underlineStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedSummary += '\f';
+                    underlineStarted = false;
+                }
+                formattedSummary += summaryContent.Text[i];
+            }
+            myPaper.summary.content = formattedSummary;
         }
 
         private void abstractContent_TextChanged(object sender, EventArgs e)
         {
-            myPaper.abstractConfig.content = abstractContent.Text;
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            string formattedAbstract = "";
+            for (int i = 0; i < abstractContent.Text.Length; i++)
+            {
+                abstractContent.Select(i, 1);
+                if (abstractContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedAbstract += '\b';
+                    boldStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedAbstract += '\b';
+                    boldStarted = false;
+                }
+                if (abstractContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedAbstract += '\a';
+                    italicStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedAbstract += '\a';
+                    italicStarted = false;
+                }
+                if (abstractContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedAbstract += '\f';
+                    underlineStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedAbstract += '\f';
+                    underlineStarted = false;
+                }
+                formattedAbstract += abstractContent.Text[i];
+            }
+            myPaper.abstractConfig.content = formattedAbstract;
         }
 
         private void conclusionContent_TextChanged(object sender, EventArgs e)
         {
-            myPaper.conclusion.conclusionContent = conclusionContent.Text;
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            string formattedConclusion = "";
+            for (int i = 0; i < conclusionContent.Text.Length; i++)
+            {
+                conclusionContent.Select(i, 1);
+                if (conclusionContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedConclusion += '\b';
+                    boldStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedConclusion += '\b';
+                    boldStarted = false;
+                }
+                if (conclusionContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedConclusion += '\a';
+                    italicStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedConclusion += '\a';
+                    italicStarted = false;
+                }
+                if (conclusionContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedConclusion += '\f';
+                    underlineStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedConclusion += '\f';
+                    underlineStarted = false;
+                }
+                formattedConclusion += conclusionContent.Text[i];
+            }
+            myPaper.conclusion.conclusionContent = formattedConclusion;
         }
 
         private void conclusionOwnPageCheck_CheckedChanged(object sender, EventArgs e)
@@ -689,85 +806,137 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void boldButton_Click(object sender, EventArgs e)
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+
+            int startedIndex = boxToEdit.SelectionStart;
+            int selectLength = boxToEdit.SelectionLength;
+
             if (boxToEdit.SelectionFont.Bold)
             {
-                if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Underline)
+
+                for (var i = 0; i < selectLength; i++)
                 {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | FontStyle.Italic);
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Underline)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | FontStyle.Underline);
+                    }
+                    else if (boxToEdit.SelectionFont.Italic)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                    }
+                    else if (boxToEdit.SelectionFont.Underline)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                    }
+                    else
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                    }
                 }
-                else if (boxToEdit.SelectionFont.Underline)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
-                }
-                else if (boxToEdit.SelectionFont.Italic)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
-                }
-                else
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
-                }                
             }
             else
             {
-                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | boxToEdit.SelectionFont.Style);
-            }            
+                for (var i = 0; i < selectLength; i++)
+                {
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | boxToEdit.SelectionFont.Style);
+                }
+            }
+
+            boxToEdit.SelectionStart = startedIndex;
+            boxToEdit.SelectionLength = selectLength;
         }
 
         private void italicButton_Click(object sender, EventArgs e)
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            int startedIndex = boxToEdit.SelectionStart;
+            int selectLength = boxToEdit.SelectionLength;
+
             if (boxToEdit.SelectionFont.Italic)
             {
-                if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Underline)
+                for (var i = 0; i < selectLength; i++)
                 {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | FontStyle.Bold);
-                }
-                else if (boxToEdit.SelectionFont.Underline)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
-                }
-                else if (boxToEdit.SelectionFont.Bold)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
-                }
-                else
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Underline)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Underline);
+                    }
+                    else if (boxToEdit.SelectionFont.Bold)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                    }
+                    else if (boxToEdit.SelectionFont.Underline)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                    }
+                    else
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                    }
                 }
             }
             else
             {
-                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | boxToEdit.SelectionFont.Style);
+                for (var i = 0; i < selectLength; i++)
+                {
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | boxToEdit.SelectionFont.Style);
+                }
             }
+
+            boxToEdit.SelectionStart = startedIndex;
+            boxToEdit.SelectionLength = selectLength;
         }
 
         private void underlineButton_Click(object sender, EventArgs e)
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            int startedIndex = boxToEdit.SelectionStart;
+            int selectLength = boxToEdit.SelectionLength;
+
+
+
             if (boxToEdit.SelectionFont.Underline)
             {
-                if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Bold)
+                for (var i = 0; i < selectLength; i++)
                 {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Italic);
-                }
-                else if (boxToEdit.SelectionFont.Bold)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
-                }
-                else if (boxToEdit.SelectionFont.Italic)
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
-                }
-                else
-                {
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Italic)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Italic);
+                    }
+                    else if (boxToEdit.SelectionFont.Bold)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                    }
+                    else if (boxToEdit.SelectionFont.Italic)
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                    }
+                    else
+                    {
+                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                    }
                 }
             }
             else
             {
-                boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | boxToEdit.SelectionFont.Style);
+                for (var i = 0; i < selectLength; i++)
+                {
+                    boxToEdit.SelectionStart = startedIndex + i;
+                    boxToEdit.SelectionLength = 1;
+                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | boxToEdit.SelectionFont.Style);
+                }
             }
+
+            boxToEdit.SelectionStart = startedIndex;
+            boxToEdit.SelectionLength = selectLength;
         }
         
         private void summaryLast(object sender, EventArgs e)
@@ -809,5 +978,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsubsectionIndex = Convert.ToInt32(indexes[2]);
             lastEntered = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
         }
+        
     }
 }

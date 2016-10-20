@@ -20,7 +20,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public SummaryAbstractConfig()
         {
-
+            this.content = "";
         }
     }
 }

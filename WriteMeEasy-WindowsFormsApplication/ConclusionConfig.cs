@@ -20,7 +20,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public ConclusionConfig()
         {
-
+            this.conclusionContent = "";
         }
     }
 }

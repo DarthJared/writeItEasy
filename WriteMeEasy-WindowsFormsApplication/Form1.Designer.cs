@@ -4747,8 +4747,8 @@
             this.conclusionContent.Size = new System.Drawing.Size(594, 182);
             this.conclusionContent.TabIndex = 0;
             this.conclusionContent.Text = "";
-            this.conclusionContent.TextChanged += new System.EventHandler(this.conclusionContent_TextChanged);
             this.conclusionContent.Enter += new System.EventHandler(this.conclusionLast);
+            this.conclusionContent.Leave += new System.EventHandler(this.conclusionContent_TextChanged);
             // 
             // toolStrip4
             // 
@@ -4833,8 +4833,8 @@
             this.section1Content.TabIndex = 0;
             this.section1Content.Tag = "1";
             this.section1Content.Text = "";
-            this.section1Content.TextChanged += new System.EventHandler(this.sectionTextChanged);
             this.section1Content.Enter += new System.EventHandler(this.sectionLast);
+            this.section1Content.Leave += new System.EventHandler(this.sectionTextChanged);
             // 
             // section1ToolStrip
             // 
@@ -4952,8 +4952,8 @@
             this.abstractContent.Size = new System.Drawing.Size(594, 182);
             this.abstractContent.TabIndex = 0;
             this.abstractContent.Text = "";
-            this.abstractContent.TextChanged += new System.EventHandler(this.abstractContent_TextChanged);
             this.abstractContent.Enter += new System.EventHandler(this.abstractLast);
+            this.abstractContent.Leave += new System.EventHandler(this.abstractContent_TextChanged);
             // 
             // toolStrip3
             // 
@@ -5058,8 +5058,8 @@
             this.summaryContent.Size = new System.Drawing.Size(594, 182);
             this.summaryContent.TabIndex = 0;
             this.summaryContent.Text = "";
-            this.summaryContent.TextChanged += new System.EventHandler(this.summaryContent_TextChanged);
             this.summaryContent.Enter += new System.EventHandler(this.summaryLast);
+            this.summaryContent.Leave += new System.EventHandler(this.summaryContent_TextChanged);
             // 
             // toolStrip2
             // 
