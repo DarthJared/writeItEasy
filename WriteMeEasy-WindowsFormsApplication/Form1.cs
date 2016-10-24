@@ -24,6 +24,9 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void summaryContent_TextChanged(object sender, EventArgs e)
         {
+            startSelection = summaryContent.SelectionStart;
+            endSelection = summaryContent.SelectionLength + summaryContent.SelectionStart;
+
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
@@ -68,6 +71,8 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractContent_TextChanged(object sender, EventArgs e)
         {
+            startSelection = abstractContent.SelectionStart;
+            endSelection = abstractContent.SelectionLength + abstractContent.SelectionStart;
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
@@ -112,6 +117,8 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void conclusionContent_TextChanged(object sender, EventArgs e)
         {
+            startSelection = conclusionContent.SelectionStart;
+            endSelection = conclusionContent.SelectionLength + conclusionContent.SelectionStart;
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
@@ -809,39 +816,55 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
-
-            if (boxToEdit.SelectionFont.Bold)
+            int regCount = 0;
+            bool isBold = false;
+            for (int i = 0; i < selectLength; i++)
             {
+                boxToEdit.SelectionStart = startedIndex + i;
+                boxToEdit.SelectionLength = 1;
+                if (!boxToEdit.SelectionFont.Bold)
+                {
+                    regCount++;
+                    isBold = false;
+                }
+                else if(regCount < 1 && boxToEdit.SelectionFont.Bold)
+                {
+                    isBold = true;
+                }
+            }
 
-                for (var i = 0; i < selectLength; i++)
+            if (isBold)
+            {
+                
+                for (int i = 0; i < selectLength; i++)
                 {
                     boxToEdit.SelectionStart = startedIndex + i;
                     boxToEdit.SelectionLength = 1;
                     if (boxToEdit.SelectionFont.Italic && boxToEdit.SelectionFont.Underline)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | FontStyle.Underline);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Italic | FontStyle.Underline);
                     }
                     else if (boxToEdit.SelectionFont.Italic)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Italic);
                     }
                     else if (boxToEdit.SelectionFont.Underline)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Underline);
                     }
                     else
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Regular);
                     }
                 }
             }
             else
             {
-                for (var i = 0; i < selectLength; i++)
+                for (int i = 0; i < selectLength; i++)
                 {
                     boxToEdit.SelectionStart = startedIndex + i;
                     boxToEdit.SelectionLength = 1;
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | boxToEdit.SelectionFont.Style);
+                    boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Bold | boxToEdit.SelectionFont.Style);
                 }
             }
 
@@ -854,8 +877,24 @@ namespace WriteMeEasy_WindowsFormsApplication
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
+            int regCount = 0;
+            bool isItalic = false;
+            for (int i = 0; i < selectLength; i++)
+            {
+                boxToEdit.SelectionStart = startedIndex + i;
+                boxToEdit.SelectionLength = 1;
+                if (!boxToEdit.SelectionFont.Italic)
+                {
+                    regCount++;
+                    isItalic = false;
+                }
+                else if (regCount < 1 && boxToEdit.SelectionFont.Italic)
+                {
+                    isItalic = true;
+                }
+            }
 
-            if (boxToEdit.SelectionFont.Italic)
+            if (isItalic)
             {
                 for (var i = 0; i < selectLength; i++)
                 {
@@ -898,10 +937,24 @@ namespace WriteMeEasy_WindowsFormsApplication
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
+            int regCount = 0;
+            bool isUnderline = false;
+            for (int i = 0; i < selectLength; i++)
+            {
+                boxToEdit.SelectionStart = startedIndex + i;
+                boxToEdit.SelectionLength = 1;
+                if (!boxToEdit.SelectionFont.Underline)
+                {
+                    regCount++;
+                    isUnderline = false;
+                }
+                else if (regCount < 1 && boxToEdit.SelectionFont.Underline)
+                {
+                    isUnderline = true;
+                }
+            }
 
-
-
-            if (boxToEdit.SelectionFont.Underline)
+            if (isUnderline)
             {
                 for (var i = 0; i < selectLength; i++)
                 {
@@ -978,6 +1031,21 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsubsectionIndex = Convert.ToInt32(indexes[2]);
             lastEntered = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
         }
-        
+
+        private void changeFont(object sender, EventArgs e)
+        {
+            RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            boxToEdit.Focus();
+            boxToEdit.SelectionStart = startSelection;
+            boxToEdit.SelectionLength = endSelection - startSelection;
+
+            for (int i = 0; i < endSelection - startSelection; i++)
+            {
+                boxToEdit.Select(startSelection + i, 1);
+                boxToEdit.SelectionFont = new Font(fontSelect.SelectedItem.ToString(), boxToEdit.SelectionFont.Size, boxToEdit.SelectionFont.Style);                
+            }
+            boxToEdit.SelectionStart = startSelection;
+            boxToEdit.SelectionLength = endSelection - startSelection;
+        }
     }
 }

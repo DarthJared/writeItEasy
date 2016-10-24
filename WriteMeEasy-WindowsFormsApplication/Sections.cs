@@ -449,6 +449,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             int sectionIndex = Convert.ToInt32(((RichTextBox)sender).Tag);
             RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Content", true)[0];
 
+            startSelection = sectionContent.SelectionStart;
+            endSelection = sectionContent.SelectionLength + sectionContent.SelectionStart;
+
             foreach (Section section in myPaper.sections)
             {
                 if (section.index == sectionIndex)
@@ -572,6 +575,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsectionIndex = Convert.ToInt32(indexes[1]);
             RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Content", true)[0];
 
+            startSelection = subsectionContent.SelectionStart;
+            endSelection = subsectionContent.SelectionLength + subsectionContent.SelectionStart;
+
             foreach (Section section in myPaper.sections)
             {
                 if (section.index == sectionIndex)
@@ -634,6 +640,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsectionIndex = Convert.ToInt32(indexes[1]);
             int subsubsectionIndex = Convert.ToInt32(indexes[2]);
             RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content", true)[0];
+
+            startSelection = subsubsectionContent.SelectionStart;
+            endSelection = subsubsectionContent.SelectionLength + subsubsectionContent.SelectionStart;
 
             foreach (Section section in myPaper.sections)
             {

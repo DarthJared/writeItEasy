@@ -118,6 +118,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             contentPanel.Height = 404;
             lastEntered = "";
 
+            startSelection = 0;
+            endSelection = 0;
+
             myPaper.sections.Add(new Section(new List<SubSection>(), "", "", 1));
         }
 

@@ -424,6 +424,7 @@
             this.boldButton = new System.Windows.Forms.ToolStripButton();
             this.italicButton = new System.Windows.Forms.ToolStripButton();
             this.underlineButton = new System.Windows.Forms.ToolStripButton();
+            this.fontSelect = new System.Windows.Forms.ToolStripComboBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
@@ -5135,13 +5136,14 @@
             this.settingsButton,
             this.boldButton,
             this.italicButton,
-            this.underlineButton});
+            this.underlineButton,
+            this.fontSelect});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.MinimumSize = new System.Drawing.Size(0, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(215, 40);
+            this.toolStrip1.Size = new System.Drawing.Size(400, 40);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton
@@ -5211,6 +5213,44 @@
             this.underlineButton.Size = new System.Drawing.Size(34, 37);
             this.underlineButton.Text = "toolStripButton3";
             this.underlineButton.Click += new System.EventHandler(this.underlineButton_Click);
+            // 
+            // fontSelect
+            // 
+            this.fontSelect.AutoSize = false;
+            this.fontSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fontSelect.Items.AddRange(new object[] {
+            "Arial",
+            "Bodoni MT",
+            "Book Antiqua",
+            "Calibri",
+            "Calisto MT",
+            "Cambria",
+            "Candara",
+            "Century Gorthic",
+            "Century Schoolbook",
+            "Comic Sans MS",
+            "Consolas",
+            "Constantia",
+            "Corbel",
+            "Courier New",
+            "Elephant",
+            "Franklin Gothic Book",
+            "Georgia",
+            "Gill Sans MT",
+            "Goudy Old Style",
+            "High Tower Text",
+            "Palatino Linotype",
+            "Perpetua",
+            "Rockwell",
+            "Segoe UI",
+            "Times New Roman",
+            "Trebuchet MS",
+            "Tw Cen MT",
+            "Verdana"});
+            this.fontSelect.Name = "fontSelect";
+            this.fontSelect.Size = new System.Drawing.Size(150, 23);
+            this.fontSelect.Text = "Times New Roman";
+            this.fontSelect.TextChanged += new System.EventHandler(this.changeFont);
             // 
             // Form1
             // 
@@ -5778,6 +5818,7 @@
         private System.Windows.Forms.ToolStripButton boldButton;
         private System.Windows.Forms.ToolStripButton italicButton;
         private System.Windows.Forms.ToolStripButton underlineButton;
+        private System.Windows.Forms.ToolStripComboBox fontSelect;
     }
 }
 
