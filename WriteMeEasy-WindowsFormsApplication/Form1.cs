@@ -813,29 +813,11 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void boldButton_Click(object sender, EventArgs e)
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
-
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
-            int regCount = 0;
-            bool isBold = false;
-            for (int i = 0; i < selectLength; i++)
-            {
-                boxToEdit.SelectionStart = startedIndex + i;
-                boxToEdit.SelectionLength = 1;
-                if (!boxToEdit.SelectionFont.Bold)
-                {
-                    regCount++;
-                    isBold = false;
-                }
-                else if(regCount < 1 && boxToEdit.SelectionFont.Bold)
-                {
-                    isBold = true;
-                }
-            }
 
-            if (isBold)
-            {
-                
+            if (boxToEdit.SelectedRtf.Contains("\\b") && !boxToEdit.SelectedRtf.Contains("\\b "))
+            {                
                 for (int i = 0; i < selectLength; i++)
                 {
                     boxToEdit.SelectionStart = startedIndex + i;
@@ -877,24 +859,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
-            int regCount = 0;
-            bool isItalic = false;
-            for (int i = 0; i < selectLength; i++)
-            {
-                boxToEdit.SelectionStart = startedIndex + i;
-                boxToEdit.SelectionLength = 1;
-                if (!boxToEdit.SelectionFont.Italic)
-                {
-                    regCount++;
-                    isItalic = false;
-                }
-                else if (regCount < 1 && boxToEdit.SelectionFont.Italic)
-                {
-                    isItalic = true;
-                }
-            }
 
-            if (isItalic)
+            if (boxToEdit.SelectedRtf.Contains("\\i") && !boxToEdit.SelectedRtf.Contains("\\i "))
             {
                 for (var i = 0; i < selectLength; i++)
                 {
@@ -937,24 +903,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             int startedIndex = boxToEdit.SelectionStart;
             int selectLength = boxToEdit.SelectionLength;
-            int regCount = 0;
-            bool isUnderline = false;
-            for (int i = 0; i < selectLength; i++)
-            {
-                boxToEdit.SelectionStart = startedIndex + i;
-                boxToEdit.SelectionLength = 1;
-                if (!boxToEdit.SelectionFont.Underline)
-                {
-                    regCount++;
-                    isUnderline = false;
-                }
-                else if (regCount < 1 && boxToEdit.SelectionFont.Underline)
-                {
-                    isUnderline = true;
-                }
-            }
 
-            if (isUnderline)
+            if (boxToEdit.SelectedRtf.Contains("\\ul") && !boxToEdit.SelectedRtf.Contains("\\ul "))
             {
                 for (var i = 0; i < selectLength; i++)
                 {

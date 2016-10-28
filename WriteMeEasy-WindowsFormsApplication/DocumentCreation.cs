@@ -1493,13 +1493,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.SpaceAfter = 0;
                 document.Range(ref beginDoc, ref endDoc).Font.Size = 12;
 
-                object filename = @"C:\Users\jbeagle\Desktop\DocXExample.docx";
+                object filename = @"C:\Users\Jbeag\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
                 document.Close(ref missing, ref missing, ref missing);
                 document = null;
                 wordApp.Quit(ref missing, ref missing, ref missing);
                 wordApp = null;
-                MessageBox.Show("Document created successfully !");
+                MessageBox.Show("Document created successfully!");
                 Process.Start("WINWORD.EXE", (string)filename);
             }
             catch (Exception ex)
