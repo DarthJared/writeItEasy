@@ -126,22 +126,33 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void resizeEvent(object sender, EventArgs e)
         {
-            TableLayoutPanelCellPosition rightPos = tableLayoutPanel1.GetCellPosition(tableLayoutPanel2);
-            int rightPanelWidth = tableLayoutPanel1.GetColumnWidths()[rightPos.Column];
-            int rightPanelHeight = tableLayoutPanel1.GetRowHeights()[rightPos.Row];
+            //TableLayoutPanelCellPosition rightPos = tableLayoutPanel1.GetCellPosition(tableLayoutPanel2);
+            //int rightPanelWidth = tableLayoutPanel1.GetColumnWidths()[rightPos.Column];
+            //int rightPanelHeight = tableLayoutPanel1.GetRowHeights()[rightPos.Row];
+
+            int rightPanelWidth = tableLayoutPanel1.Width * 51 / 100;
+            int rightPanelHeight = tableLayoutPanel1.Height;
+
             tableLayoutPanel2.Width = rightPanelWidth - 6;
             tableLayoutPanel2.Height = rightPanelHeight - 6;
 
             previewPanel.Width = rightPanelWidth - 12;
-            TableLayoutPanelCellPosition innerPos = tableLayoutPanel2.GetCellPosition(previewPanel);
-            int innerHeight = tableLayoutPanel2.GetRowHeights()[innerPos.Row];
+            //TableLayoutPanelCellPosition innerPos = tableLayoutPanel2.GetCellPosition(previewPanel);
+            //int innerHeight = tableLayoutPanel2.GetRowHeights()[innerPos.Row];
+
+            int innerHeight = tableLayoutPanel2.Height - 40;
             previewPanel.Height = innerHeight - 6;
 
             finalizePanel.Width = rightPanelWidth - 12;
 
-            TableLayoutPanelCellPosition leftPos = tableLayoutPanel1.GetCellPosition(sectionTabControl);
-            int panelWidth = tableLayoutPanel1.GetColumnWidths()[leftPos.Column];
-            int panelHeight = tableLayoutPanel1.GetRowHeights()[leftPos.Row];
+
+            //TableLayoutPanelCellPosition leftPos = tableLayoutPanel1.GetCellPosition(sectionTabControl);
+            //int panelWidth = tableLayoutPanel1.GetColumnWidths()[leftPos.Column];
+            //int panelHeight = tableLayoutPanel1.GetRowHeights()[leftPos.Row];
+
+            int panelWidth = (tableLayoutPanel1.Width) * 49 / 100;
+            int panelHeight = tableLayoutPanel1.Height;
+
             sectionTabControl.Width = panelWidth - 6;
             sectionTabControl.Height = panelHeight - 6;
 
@@ -266,6 +277,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             checkContentPanelHeight();
 
             writeButton.Location = new Point(finalizePanel.Width - 125, 8);
+            finalizePanel.Height = 119;
         }
 
         private void checkContentPanelHeight()
