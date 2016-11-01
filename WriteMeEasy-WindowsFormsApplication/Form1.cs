@@ -904,19 +904,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                     boxToEdit.SelectionLength = 1;
                     if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Underline)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Underline);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Bold | FontStyle.Underline);
                     }
                     else if (boxToEdit.SelectionFont.Bold)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Bold);
                     }
                     else if (boxToEdit.SelectionFont.Underline)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Underline);
                     }
                     else
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Regular);
                     }
                 }
             }
@@ -926,7 +926,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     boxToEdit.SelectionStart = startedIndex + i;
                     boxToEdit.SelectionLength = 1;
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic | boxToEdit.SelectionFont.Style);
+                    boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Italic | boxToEdit.SelectionFont.Style);
                 }
             }
 
@@ -948,19 +948,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                     boxToEdit.SelectionLength = 1;
                     if (boxToEdit.SelectionFont.Bold && boxToEdit.SelectionFont.Italic)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold | FontStyle.Italic);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Bold | FontStyle.Italic);
                     }
                     else if (boxToEdit.SelectionFont.Bold)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Bold);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Bold);
                     }
                     else if (boxToEdit.SelectionFont.Italic)
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Italic);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Italic);
                     }
                     else
                     {
-                        boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Regular);
+                        boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Regular);
                     }
                 }
             }
@@ -970,7 +970,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     boxToEdit.SelectionStart = startedIndex + i;
                     boxToEdit.SelectionLength = 1;
-                    boxToEdit.SelectionFont = new Font(boxToEdit.Font, FontStyle.Underline | boxToEdit.SelectionFont.Style);
+                    boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont, FontStyle.Underline | boxToEdit.SelectionFont.Style);
                 }
             }
 
