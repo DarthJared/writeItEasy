@@ -31,6 +31,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool italicStarted = false;
             bool underlineStarted = false;
             string formattedSummary = "";
+            string currentFont = "";
+            string currentSize = "";
             for (int i = 0; i < summaryContent.Text.Length; i++)
             {
                 summaryContent.Select(i, 1);
@@ -64,6 +66,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                     formattedSummary += '\f';
                     underlineStarted = false;
                 }
+                if (!summaryContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = summaryContent.SelectionFont.Name;
+                    formattedSummary += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                }
+                if (!summaryContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = summaryContent.SelectionFont.Size.ToString();
+                    formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                }
                 formattedSummary += summaryContent.Text[i];
             }
             myPaper.summary.content = formattedSummary;
@@ -77,6 +89,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool italicStarted = false;
             bool underlineStarted = false;
             string formattedAbstract = "";
+            string currentFont = "";
+            string currentSize = "";
             for (int i = 0; i < abstractContent.Text.Length; i++)
             {
                 abstractContent.Select(i, 1);
@@ -110,6 +124,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                     formattedAbstract += '\f';
                     underlineStarted = false;
                 }
+                if (!abstractContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = abstractContent.SelectionFont.Name;
+                    formattedAbstract += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                }
+                if (!abstractContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = abstractContent.SelectionFont.Size.ToString();
+                    formattedAbstract += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                }
                 formattedAbstract += abstractContent.Text[i];
             }
             myPaper.abstractConfig.content = formattedAbstract;
@@ -123,6 +147,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool italicStarted = false;
             bool underlineStarted = false;
             string formattedConclusion = "";
+            string currentFont = "";
+            string currentSize = "";
             for (int i = 0; i < conclusionContent.Text.Length; i++)
             {
                 conclusionContent.Select(i, 1);
@@ -155,6 +181,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     formattedConclusion += '\f';
                     underlineStarted = false;
+                }
+                if (!conclusionContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = conclusionContent.SelectionFont.Name;
+                    formattedConclusion += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                }
+                if (!conclusionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = conclusionContent.SelectionFont.Size.ToString();
+                    formattedConclusion += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
                 formattedConclusion += conclusionContent.Text[i];
             }
@@ -993,6 +1029,22 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 boxToEdit.Select(startSelection + i, 1);
                 boxToEdit.SelectionFont = new Font(fontSelect.SelectedItem.ToString(), boxToEdit.SelectionFont.Size, boxToEdit.SelectionFont.Style);                
+            }
+            boxToEdit.SelectionStart = startSelection;
+            boxToEdit.SelectionLength = endSelection - startSelection;
+        }
+
+        private void changeSize(object sender, EventArgs e)
+        {
+            RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
+            boxToEdit.Focus();
+            boxToEdit.SelectionStart = startSelection;
+            boxToEdit.SelectionLength = endSelection - startSelection;
+
+            for (int i = 0; i < endSelection - startSelection; i++)
+            {
+                boxToEdit.Select(startSelection + i, 1);
+                boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont.FontFamily.Name, (float)Convert.ToDouble(fontSize.SelectedItem), boxToEdit.SelectionFont.Style);
             }
             boxToEdit.SelectionStart = startSelection;
             boxToEdit.SelectionLength = endSelection - startSelection;

@@ -123,9 +123,6 @@
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>13, 24</value>
   </metadata>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 13</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dateUpButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -271,6 +268,9 @@
   <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>265, 24</value>
   </metadata>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 13</value>
+  </metadata>
   <data name="saveButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASMAAAEwCAYAAAD8YhcYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -336,12 +336,12 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAAFUSURBVEhLtZI9S8NAGIDfwcVfIXTTN+Kqk06CQ7s4ubi7
-        iaPLoYbeRXRRUAg0qcWhIoi4VPwgqAj1oyD4AYZoJ0eFShElmJhcTge56dK88Cx3D8+9w0EnxqY4YjKt
-        VTa0kENxU1wlU6I4UDaw+SekgBAtsFjfjkgDRIfmfykNayTXFmkAy8ATmaSKzfBWpKPNde1FJqliG7gL
-        XoOaj5fkza3PhWm5P50NqytDyQMMl+C5QVsRYaeoVQpJnOJUFCfvMkmV/d/4Io5mFi/R/lwmcdvo8R0y
-        3JXN5kXN5V8wkzjTapnFoz++yuPeOWnLJFV4nOE0j99dkw+ZpEoctyjmedyrk0+ZpEoc32DYy+NPjv4l
-        k1QhpBBsLQ9287h3pfsySZWDSv6Vh+NxnIVvmaTKUXX8QaQB1oskkEmqONsTxyINcHM405RJKrgX8/7Z
-        3uRYUgb4AWlbDfh/I71eAAAAAElFTkSuQmCC
+        iaPLYQ3eRXSx4BBoUotDRRBxqfhBUBHqR0HwAwzRTo4KlSJKMDG5nA5y06V54VnuHp57h4NujE1xzGRa
+        u2JoIYfiprhKpkxxqGJg609IASFaYLGBHZEGiA7N/1Ia1kmuI9IAloEnMkkVm+GtSEeb69qLTFLFNnAX
+        vCY1Hy/Jm9tYCNNyfzof1tZGkgcYrsBzk7Yjwm5RrxaSOMWZKE7eZZIq+7/xZRzPLF6mg7lM4rbR5ztk
+        tCebzZc0l3/BTOJMq2cWj/54ice9c9KRSarwOMNZHr+7Jh8ySZU4blHM87jXIJ8ySZU4vsGwn8efHP1L
+        JqlCSCHYWh3u5XHvSvdlkioH1fwrD8fjOIvfMkmVo9rkg0gDlIokkEmqONtTxyINcHM415JJKrgXRf9s
+        b3oiKQP8AGOXDfBRMk6JAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="settingsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

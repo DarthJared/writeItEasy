@@ -5,11 +5,14 @@ using System.Windows.Forms;
 using System.Diagnostics;
 //using Novacode;
 using Microsoft.Office.Interop.Word;
+using System.Text.RegularExpressions;
 
 namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
+        public string fontPattern = @"\\ffffffffff\\.{1,20}\\ffffffffffff\\";
+        public string sizePattern = @"\\ssssssssss\\.{1,20}\\ssssssssssss\\";
         private void writeButton_Click(object sender, EventArgs e)
         {
             try
@@ -20,7 +23,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 object missing = System.Reflection.Missing.Value;
 
-                Document document = wordApp.Documents.Add(ref missing, ref missing, ref missing, ref missing);
+                Document document = wordApp.Documents.Add(ref missing);
                 //foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
                 //{
                 //    Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
@@ -138,7 +141,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
                     text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     text.Range.Bold = 0;
-                    string unformatted = myPaper.summary.content.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                    string unformatted = Regex.Replace(Regex.Replace(myPaper.summary.content.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                     text.Range.Text = unformatted;
 
                     string[] splitBold = myPaper.summary.content.Split('\b');
@@ -191,6 +194,60 @@ namespace WriteMeEasy_WindowsFormsApplication
                             rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
                         }
                     }
+
+                    string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                    string sizeRemoved = Regex.Replace(myPaper.summary.content, sizePattern, "");
+                    string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                    for (int i = 0; i < splitFont.Length; i++)
+                    {
+                        if (splitFont[i].Length > 0)
+                        {
+                            string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                            string currentFont = fontParts[0];
+                            int previousSplitLength = 0;
+                            if (i > 0)
+                            {
+                                for (int j = i - 1; j >= 0; j--)
+                                {
+                                    string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                    previousSplitLength += noFont.Length;
+                                }
+                            }
+                            string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                            Range rangeToFontChange = text.Range.Duplicate;
+                            rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                            rangeToFontChange.Font.Name = currentFont;
+                        }
+                    }
+
+                    string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                    string fontRemoved = Regex.Replace(myPaper.summary.content, fontPattern, "");
+                    string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                    for (int i = 0; i < splitSize.Length; i++)
+                    {
+                        if (splitSize[i].Length > 0)
+                        {
+                            string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                            string currentSize = sizeParts[0];
+                            int previousSplitLength = 0;
+                            if (i > 0)
+                            {
+                                for (int j = i - 1; j >= 0; j--)
+                                {
+                                    string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                    string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                    previousSplitLength += noSize.Length;
+                                }
+                            }
+                            string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                            Range rangeToSizeChange = text.Range.Duplicate;
+                            rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                            rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                        }
+                    }
+
+
 
                     text.Range.ParagraphFormat.FirstLineIndent = 36;
                     text.Range.InsertParagraphAfter();
@@ -1491,7 +1548,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.Space2();
                 document.Range(ref beginDoc, ref endDoc).Paragraphs.SpaceAfter = 0;
-                document.Range(ref beginDoc, ref endDoc).Font.Size = 12;
+                //document.Range(ref beginDoc, ref endDoc).Font.Size = 12;
 
                 object filename = @"C:\Users\Jbeag\Desktop\DocXExample.docx";
                 document.SaveAs2(ref filename);
@@ -1501,6 +1558,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 wordApp = null;
                 MessageBox.Show("Document created successfully!");
                 Process.Start("WINWORD.EXE", (string)filename);
+                //8525
             }
             catch (Exception ex)
             {

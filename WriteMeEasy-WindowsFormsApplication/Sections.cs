@@ -460,6 +460,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                     bool italicStarted = false;
                     bool underlineStarted = false;
                     string formattedSection = "";
+                    string currentFont = "";
+                    string currentSize = "";
                     for (int i = 0; i < sectionContent.Text.Length; i++)
                     {
                         sectionContent.Select(i, 1);
@@ -492,6 +494,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             formattedSection += '\f';
                             underlineStarted = false;
+                        }
+                        if (!sectionContent.SelectionFont.Name.Equals(currentFont))
+                        {
+                            currentFont = sectionContent.SelectionFont.Name;
+                            formattedSection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                        }
+                        if (!sectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                        {
+                            currentSize = sectionContent.SelectionFont.Size.ToString();
+                            formattedSection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                         }
                         formattedSection += sectionContent.Text[i];
                     }
@@ -590,6 +602,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             bool italicStarted = false;
                             bool underlineStarted = false;
                             string formattedSubsection = "";
+                            string currentFont = "";
+                            string currentSize = "";
                             for (int i = 0; i < subsectionContent.Text.Length; i++)
                             {
                                 subsectionContent.Select(i, 1);
@@ -622,6 +636,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     formattedSubsection += '\f';
                                     underlineStarted = false;
+                                }
+                                if (!subsectionContent.SelectionFont.Name.Equals(currentFont))
+                                {
+                                    currentFont = subsectionContent.SelectionFont.Name;
+                                    formattedSubsection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                                }
+                                if (!subsectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                                {
+                                    currentSize = subsectionContent.SelectionFont.Size.ToString();
+                                    formattedSubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                 }
                                 formattedSubsection += subsectionContent.Text[i];
                             }
@@ -660,6 +684,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     bool italicStarted = false;
                                     bool underlineStarted = false;
                                     string formattedSubsubsection = "";
+                                    string currentFont = "";
+                                    string currentSize = "";
                                     for (int i = 0; i < subsubsectionContent.Text.Length; i++)
                                     {
                                         subsubsectionContent.Select(i, 1);
@@ -692,6 +718,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             formattedSubsubsection += '\f';
                                             underlineStarted = false;
+                                        }
+                                        if (!subsubsectionContent.SelectionFont.Name.Equals(currentFont))
+                                        {
+                                            currentFont = subsubsectionContent.SelectionFont.Name;
+                                            formattedSubsubsection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                                        }
+                                        if (!subsubsectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                                        {
+                                            currentSize = subsubsectionContent.SelectionFont.Size.ToString();
+                                            formattedSubsubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                         }
                                         formattedSubsubsection += subsubsectionContent.Text[i];
                                     }

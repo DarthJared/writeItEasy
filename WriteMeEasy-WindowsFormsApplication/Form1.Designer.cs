@@ -34,6 +34,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.finalizePanel = new System.Windows.Forms.Panel();
+            this.writeButton = new System.Windows.Forms.Button();
+            this.previewPanel = new System.Windows.Forms.Panel();
             this.sectionTabControl = new System.Windows.Forms.TabControl();
             this.formattingTab = new System.Windows.Forms.TabPage();
             this.conclusionPanel = new System.Windows.Forms.Panel();
@@ -413,10 +417,6 @@
             this.summaryContent = new System.Windows.Forms.RichTextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.label23 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.finalizePanel = new System.Windows.Forms.Panel();
-            this.writeButton = new System.Windows.Forms.Button();
-            this.previewPanel = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveButton = new System.Windows.Forms.ToolStripButton();
             this.openButton = new System.Windows.Forms.ToolStripButton();
@@ -425,8 +425,8 @@
             this.italicButton = new System.Windows.Forms.ToolStripButton();
             this.underlineButton = new System.Windows.Forms.ToolStripButton();
             this.fontSelect = new System.Windows.Forms.ToolStripComboBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontSize = new System.Windows.Forms.ToolStripComboBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -434,6 +434,8 @@
             this.toolStripContainer1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.finalizePanel.SuspendLayout();
             this.sectionTabControl.SuspendLayout();
             this.formattingTab.SuspendLayout();
             this.conclusionPanel.SuspendLayout();
@@ -522,8 +524,6 @@
             this.summaryToolStripContainer.ContentPanel.SuspendLayout();
             this.summaryToolStripContainer.TopToolStripPanel.SuspendLayout();
             this.summaryToolStripContainer.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.finalizePanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -599,9 +599,56 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1531F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1626F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(3632, 1626);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1786, 7);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 95);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1838, 1517);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // finalizePanel
+            // 
+            this.finalizePanel.Controls.Add(this.writeButton);
+            this.finalizePanel.Location = new System.Drawing.Point(8, 1254);
+            this.finalizePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.finalizePanel.Name = "finalizePanel";
+            this.finalizePanel.Size = new System.Drawing.Size(1822, 105);
+            this.finalizePanel.TabIndex = 1;
+            // 
+            // writeButton
+            // 
+            this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.writeButton.Location = new System.Drawing.Point(1504, 19);
+            this.writeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.writeButton.Name = "writeButton";
+            this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.writeButton.Size = new System.Drawing.Size(304, 67);
+            this.writeButton.TabIndex = 0;
+            this.writeButton.Text = "Write It!";
+            this.writeButton.UseVisualStyleBackColor = true;
+            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
+            // 
+            // previewPanel
+            // 
+            this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.previewPanel.Location = new System.Drawing.Point(8, 7);
+            this.previewPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.previewPanel.Name = "previewPanel";
+            this.previewPanel.Size = new System.Drawing.Size(1822, 1233);
+            this.previewPanel.TabIndex = 0;
             // 
             // sectionTabControl
             // 
@@ -5036,7 +5083,7 @@
             this.contentTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.contentTab.Name = "contentTab";
             this.contentTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.contentTab.Size = new System.Drawing.Size(1740, 1450);
+            this.contentTab.Size = new System.Drawing.Size(1740, 1472);
             this.contentTab.TabIndex = 1;
             this.contentTab.Text = "CONTENT";
             this.contentTab.UseVisualStyleBackColor = true;
@@ -5091,11 +5138,11 @@
             // conclusionTitleEnter
             // 
             this.conclusionTitleEnter.Enabled = false;
-            this.conclusionTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionTitleEnter.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.conclusionTitleEnter.Location = new System.Drawing.Point(253, 45);
             this.conclusionTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionTitleEnter.Name = "conclusionTitleEnter";
-            this.conclusionTitleEnter.Size = new System.Drawing.Size(487, 39);
+            this.conclusionTitleEnter.Size = new System.Drawing.Size(487, 53);
             this.conclusionTitleEnter.TabIndex = 12;
             this.conclusionTitleEnter.Tag = "1";
             this.conclusionTitleEnter.TextChanged += new System.EventHandler(this.conclusionTitleEnter_TextChanged);
@@ -5142,7 +5189,7 @@
             // 
             // conclusionContent
             // 
-            this.conclusionContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conclusionContent.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.conclusionContent.Location = new System.Drawing.Point(0, 0);
             this.conclusionContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionContent.Name = "conclusionContent";
@@ -5197,11 +5244,11 @@
             // section1LabelEnter
             // 
             this.section1LabelEnter.Enabled = false;
-            this.section1LabelEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1LabelEnter.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.section1LabelEnter.Location = new System.Drawing.Point(216, 45);
             this.section1LabelEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1LabelEnter.Name = "section1LabelEnter";
-            this.section1LabelEnter.Size = new System.Drawing.Size(487, 39);
+            this.section1LabelEnter.Size = new System.Drawing.Size(487, 53);
             this.section1LabelEnter.TabIndex = 9;
             this.section1LabelEnter.Tag = "1";
             this.section1LabelEnter.TextChanged += new System.EventHandler(this.sectionTitleChanged);
@@ -5236,7 +5283,7 @@
             // 
             // section1Content
             // 
-            this.section1Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.section1Content.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.section1Content.Location = new System.Drawing.Point(0, 0);
             this.section1Content.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1Content.Name = "section1Content";
@@ -5317,11 +5364,11 @@
             // abstractTitleText
             // 
             this.abstractTitleText.Enabled = false;
-            this.abstractTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractTitleText.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.abstractTitleText.Location = new System.Drawing.Point(253, 45);
             this.abstractTitleText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractTitleText.Name = "abstractTitleText";
-            this.abstractTitleText.Size = new System.Drawing.Size(487, 39);
+            this.abstractTitleText.Size = new System.Drawing.Size(487, 53);
             this.abstractTitleText.TabIndex = 12;
             this.abstractTitleText.Tag = "abstract";
             this.abstractTitleText.TextChanged += new System.EventHandler(this.abstractTitleText_TextChanged);
@@ -5368,7 +5415,7 @@
             // 
             // abstractContent
             // 
-            this.abstractContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abstractContent.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.abstractContent.Location = new System.Drawing.Point(0, 0);
             this.abstractContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContent.Name = "abstractContent";
@@ -5434,11 +5481,11 @@
             // summaryTitleText
             // 
             this.summaryTitleText.Enabled = false;
-            this.summaryTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryTitleText.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.summaryTitleText.Location = new System.Drawing.Point(253, 45);
             this.summaryTitleText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.summaryTitleText.Name = "summaryTitleText";
-            this.summaryTitleText.Size = new System.Drawing.Size(487, 39);
+            this.summaryTitleText.Size = new System.Drawing.Size(487, 53);
             this.summaryTitleText.TabIndex = 12;
             this.summaryTitleText.Tag = "summary";
             this.summaryTitleText.TextChanged += new System.EventHandler(this.summaryTitleText_TextChanged);
@@ -5485,7 +5532,7 @@
             // 
             // summaryContent
             // 
-            this.summaryContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.summaryContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryContent.Location = new System.Drawing.Point(0, 0);
             this.summaryContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.summaryContent.Name = "summaryContent";
@@ -5519,53 +5566,6 @@
             this.label23.Text = "CONTENT";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1786, 7);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 95);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1838, 1517);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // finalizePanel
-            // 
-            this.finalizePanel.Controls.Add(this.writeButton);
-            this.finalizePanel.Location = new System.Drawing.Point(8, 1405);
-            this.finalizePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.finalizePanel.Name = "finalizePanel";
-            this.finalizePanel.Size = new System.Drawing.Size(1822, 105);
-            this.finalizePanel.TabIndex = 1;
-            // 
-            // writeButton
-            // 
-            this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeButton.Location = new System.Drawing.Point(1504, 19);
-            this.writeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.writeButton.Name = "writeButton";
-            this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.writeButton.Size = new System.Drawing.Size(304, 67);
-            this.writeButton.TabIndex = 0;
-            this.writeButton.Text = "Write It!";
-            this.writeButton.UseVisualStyleBackColor = true;
-            this.writeButton.Click += new System.EventHandler(this.writeButton_Click);
-            // 
-            // previewPanel
-            // 
-            this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.previewPanel.Location = new System.Drawing.Point(8, 7);
-            this.previewPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(1822, 1383);
-            this.previewPanel.TabIndex = 0;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -5584,7 +5584,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(449, 49);
+            this.toolStrip1.Size = new System.Drawing.Size(529, 49);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton
@@ -5717,6 +5717,7 @@
             this.fontSize.Name = "fontSize";
             this.fontSize.Size = new System.Drawing.Size(80, 49);
             this.fontSize.Text = "12";
+            this.fontSize.TextChanged += new System.EventHandler(this.changeSize);
             // 
             // Form1
             // 
@@ -5741,6 +5742,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.finalizePanel.ResumeLayout(false);
             this.sectionTabControl.ResumeLayout(false);
             this.formattingTab.ResumeLayout(false);
             this.conclusionPanel.ResumeLayout(false);
@@ -5880,8 +5883,6 @@
             this.summaryToolStripContainer.TopToolStripPanel.PerformLayout();
             this.summaryToolStripContainer.ResumeLayout(false);
             this.summaryToolStripContainer.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.finalizePanel.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
