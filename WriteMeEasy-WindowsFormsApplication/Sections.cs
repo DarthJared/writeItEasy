@@ -465,6 +465,21 @@ namespace WriteMeEasy_WindowsFormsApplication
                     for (int i = 0; i < sectionContent.Text.Length; i++)
                     {
                         sectionContent.Select(i, 1);
+                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        {
+                            if (boldStarted)
+                            {
+                                formattedSection += '\b';
+                            }
+                            if (italicStarted)
+                            {
+                                formattedSection += '\a';
+                            }
+                            if (underlineStarted)
+                            {
+                                formattedSection += '\f';
+                            }
+                        }
                         if (sectionContent.SelectionFont.Bold && !boldStarted)
                         {
                             formattedSection += '\b';
@@ -506,6 +521,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                             formattedSection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                         }
                         formattedSection += sectionContent.Text[i];
+                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        {
+                            if (boldStarted)
+                            {
+                                formattedSection += '\b';
+                            }
+                            if (italicStarted)
+                            {
+                                formattedSection += '\a';
+                            }
+                            if (underlineStarted)
+                            {
+                                formattedSection += '\f';
+                            }
+                            formattedSection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
+                            formattedSection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                        }
                     }
                     section.content = formattedSection;
                 }
@@ -607,6 +639,21 @@ namespace WriteMeEasy_WindowsFormsApplication
                             for (int i = 0; i < subsectionContent.Text.Length; i++)
                             {
                                 subsectionContent.Select(i, 1);
+                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                {
+                                    if (boldStarted)
+                                    {
+                                        formattedSubsection += '\b';
+                                    }
+                                    if (italicStarted)
+                                    {
+                                        formattedSubsection += '\a';
+                                    }
+                                    if (underlineStarted)
+                                    {
+                                        formattedSubsection += '\f';
+                                    }
+                                }
                                 if (subsectionContent.SelectionFont.Bold && !boldStarted)
                                 {
                                     formattedSubsection += '\b';
@@ -648,6 +695,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     formattedSubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                 }
                                 formattedSubsection += subsectionContent.Text[i];
+                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                {
+                                    if (boldStarted)
+                                    {
+                                        formattedSubsection += '\b';
+                                    }
+                                    if (italicStarted)
+                                    {
+                                        formattedSubsection += '\a';
+                                    }
+                                    if (underlineStarted)
+                                    {
+                                        formattedSubsection += '\f';
+                                    }
+                                    formattedSubsection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                    formattedSubsection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                }
                             }
                             subsection.content = formattedSubsection;
                         }
@@ -689,6 +753,21 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     for (int i = 0; i < subsubsectionContent.Text.Length; i++)
                                     {
                                         subsubsectionContent.Select(i, 1);
+                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        {
+                                            if (boldStarted)
+                                            {
+                                                formattedSubsubsection += '\b';
+                                            }
+                                            if (italicStarted)
+                                            {
+                                                formattedSubsubsection += '\a';
+                                            }
+                                            if (underlineStarted)
+                                            {
+                                                formattedSubsubsection += '\f';
+                                            }
+                                        }
                                         if (subsubsectionContent.SelectionFont.Bold && !boldStarted)
                                         {
                                             formattedSubsubsection += '\b';
@@ -730,6 +809,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             formattedSubsubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                         }
                                         formattedSubsubsection += subsubsectionContent.Text[i];
+                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        {
+                                            if (boldStarted)
+                                            {
+                                                formattedSubsubsection += '\b';
+                                            }
+                                            if (italicStarted)
+                                            {
+                                                formattedSubsubsection += '\a';
+                                            }
+                                            if (underlineStarted)
+                                            {
+                                                formattedSubsubsection += '\f';
+                                            }
+                                            formattedSubsubsection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                            formattedSubsubsection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                        }
                                     }
                                     subsubsection.content = formattedSubsubsection;
                                 }

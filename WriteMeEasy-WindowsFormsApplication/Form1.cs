@@ -36,6 +36,21 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < summaryContent.Text.Length; i++)
             {
                 summaryContent.Select(i, 1);
+                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedSummary += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedSummary += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedSummary += '\f';
+                    }
+                }
                 if (summaryContent.SelectionFont.Bold && !boldStarted)
                 {
                     formattedSummary += '\b';
@@ -77,6 +92,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                     formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
                 formattedSummary += summaryContent.Text[i];
+                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedSummary += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedSummary += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedSummary += '\f';
+                    }
+                    formattedSummary += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedSummary += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
             }
             myPaper.summary.content = formattedSummary;
         }
@@ -94,6 +126,21 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < abstractContent.Text.Length; i++)
             {
                 abstractContent.Select(i, 1);
+                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedAbstract += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedAbstract += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedAbstract += '\f';
+                    }
+                }
                 if (abstractContent.SelectionFont.Bold && !boldStarted)
                 {
                     formattedAbstract += '\b';
@@ -128,6 +175,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     currentFont = abstractContent.SelectionFont.Name;
                     formattedAbstract += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+
                 }
                 if (!abstractContent.SelectionFont.Size.ToString().Equals(currentSize))
                 {
@@ -135,6 +183,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                     formattedAbstract += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
                 formattedAbstract += abstractContent.Text[i];
+                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedAbstract += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedAbstract += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedAbstract += '\f';
+                    }
+                    formattedAbstract += "\\ffffffffff\\" + abstractContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedAbstract += "\\ssssssssss\\" + abstractContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
             }
             myPaper.abstractConfig.content = formattedAbstract;
         }
@@ -152,6 +217,21 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < conclusionContent.Text.Length; i++)
             {
                 conclusionContent.Select(i, 1);
+                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedConclusion += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedConclusion += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedConclusion += '\f';
+                    }
+                }
                 if (conclusionContent.SelectionFont.Bold && !boldStarted)
                 {
                     formattedConclusion += '\b';
@@ -193,6 +273,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                     formattedConclusion += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
                 formattedConclusion += conclusionContent.Text[i];
+                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedConclusion += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedConclusion += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedConclusion += '\f';
+                    }
+                    formattedConclusion += "\\ffffffffff\\" + conclusionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedConclusion += "\\ssssssssss\\" + conclusionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
             }
             myPaper.conclusion.conclusionContent = formattedConclusion;
         }

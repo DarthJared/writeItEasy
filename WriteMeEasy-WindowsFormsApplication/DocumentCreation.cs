@@ -115,144 +115,269 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeSummary)
                 {
-                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
-                    if (myPaper.summary.includeTitle)
-                    {                        
-                        if (myPaper.summary.titleBold)
+                    string[] splitSummary = myPaper.summary.content.Split('\n');
+                    bool isFirstOfPara = true;
+
+                    foreach (string splitPara in splitSummary)
+                    {
+                        Paragraph text = document.Content.Paragraphs.Add(ref missing);
+                        if (isFirstOfPara)
                         {
-                            text.Range.Bold = 1;
+                            isFirstOfPara = false;
+
+                            if (myPaper.summary.includeTitle)
+                            {
+                                if (myPaper.summary.titleBold)
+                                {
+                                    text.Range.Bold = 1;
+                                }
+                                text.Range.Text = myPaper.summary.title;
+                                if (myPaper.summary.titleAlign == "Center")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                }
+                                else if (myPaper.summary.titleAlign == "Right")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                }
+                                else if (myPaper.summary.titleAlign == "Left")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                text.Range.ParagraphFormat.FirstLineIndent = 0;
+                                text.Range.InsertParagraphAfter();
+                            }
+                            //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Bold = 0;
+
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
+
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
+                                }
+                            }
+
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
+                                }
+                            }
+
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
-                        text.Range.Text = myPaper.summary.title;
-                        if (myPaper.summary.titleAlign == "Center")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                        }
-                        else if (myPaper.summary.titleAlign == "Right")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                        }
-                        else if (myPaper.summary.titleAlign == "Left")
+                        else
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                        }
-                        text.Range.ParagraphFormat.FirstLineIndent = 0;
-                        text.Range.InsertParagraphAfter();
-                    }
-                    //Paragraph paragraphText = document.Content.Paragraphs.Add(ref missing);
-                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                    text.Range.Bold = 0;
+                            text.Range.Bold = 0;
 
-                    string unformatted = Regex.Replace(Regex.Replace(myPaper.summary.content.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
-                    text.Range.Text = unformatted;
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
 
-                    string noFontSize = Regex.Replace(Regex.Replace(myPaper.summary.content, fontPattern, ""), sizePattern, "");
-                    string[] splitBold = noFontSize.Split('\b');
-                    for(int i = 0; i < splitBold.Length; i++)
-                    {                        
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
                             {
-                                previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToBold = text.Range.Duplicate;
-                            rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToBold.Bold = 1;
-                        }
-                    }
-
-                    string[] splitItalic = noFontSize.Split('\a');
-                    for (int i = 0; i < splitItalic.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
-                            {
-                                previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToItalic = text.Range.Duplicate;
-                            rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToItalic.Italic = 1;
-                        }
-                    }
-
-                    string[] splitUnderline = noFontSize.Split('\f');
-                    for (int i = 0; i < splitUnderline.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
-                            {
-                                previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
-                            Range rangeToUnderline = text.Range.Duplicate;
-                            rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
-                        }
-                    }
-
-                    string secondFontPattern = @".{1,20}\\ffffffffffff\\";
-                    string sizeRemoved = Regex.Replace(myPaper.summary.content.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
-                    string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
-                    for (int i = 0; i < splitFont.Length; i++)
-                    {
-                        if (splitFont[i].Length > 0)
-                        {
-                            string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
-                            string currentFont = fontParts[0];
-                            int previousSplitLength = 0;
-                            if (i > 0)
-                            {
-                                for (int j = i - 1; j >= 0; j--)
+                                if (i % 2 == 1)
                                 {
-                                    string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                                    string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
-                                    previousSplitLength += noFont.Length;
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
                                 }
                             }
-                            string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToFontChange = text.Range.Duplicate;
-                            rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToFontChange.Font.Name = currentFont;
-                        }
-                    }
 
-                    string secondSizePattern = @".{1,20}\\ssssssssssss\\";
-                    string fontRemoved = Regex.Replace(myPaper.summary.content.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
-                    string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
-                    for (int i = 0; i < splitSize.Length; i++)
-                    {
-                        if (splitSize[i].Length > 0)
-                        {
-                            string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
-                            string currentSize = sizeParts[0];
-                            int previousSplitLength = 0;
-                            if (i > 0)
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
                             {
-                                for (int j = i - 1; j >= 0; j--)
+                                if (i % 2 == 1)
                                 {
-                                    string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
-                                    string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
-                                    previousSplitLength += noSize.Length;
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
                                 }
                             }
-                            string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToSizeChange = text.Range.Duplicate;
-                            rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
-                    }
-
-
-
-                    text.Range.ParagraphFormat.FirstLineIndent = 36;
-                    text.Range.InsertParagraphAfter();
+                    }                   
+                   
                     if (myPaper.summary.onOwnPage)
                     {
                         Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
@@ -262,141 +387,269 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeAbstract)
                 {
-                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
-                    if (myPaper.abstractConfig.includeTitle)
-                    {                        
-                        if (myPaper.abstractConfig.titleBold)
+                    string[] splitAbstract = myPaper.abstractConfig.content.Split('\n');
+                    bool isFirstOfPara = true;
+
+                    foreach (string splitPara in splitAbstract)
+                    {
+                        Paragraph text = document.Content.Paragraphs.Add(ref missing);
+                        if (isFirstOfPara)
                         {
-                            text.Range.Bold = 1;
+                            isFirstOfPara = false;
+
+                            if (myPaper.abstractConfig.includeTitle)
+                            {
+                                if (myPaper.abstractConfig.titleBold)
+                                {
+                                    text.Range.Bold = 1;
+                                }
+                                text.Range.Text = myPaper.abstractConfig.title;
+                                if (myPaper.abstractConfig.titleAlign == "Center")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                }
+                                else if (myPaper.abstractConfig.titleAlign == "Right")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                }
+                                else if (myPaper.abstractConfig.titleAlign == "Left")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                text.Range.ParagraphFormat.FirstLineIndent = 0;
+                                text.Range.InsertParagraphAfter();
+                            }
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Bold = 0;
+
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
+
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
+                                }
+                            }
+
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
+                                }
+                            }
+
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
-                        text.Range.Text = myPaper.abstractConfig.title;
-                        if (myPaper.abstractConfig.titleAlign == "Center")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                        }
-                        else if (myPaper.abstractConfig.titleAlign == "Right")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                        }
-                        else if (myPaper.abstractConfig.titleAlign == "Left")
+                        else
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                        }
-                        text.Range.ParagraphFormat.FirstLineIndent = 0;
-                        text.Range.InsertParagraphAfter();
-                    }
-                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                    text.Range.Bold = 0;
+                            text.Range.Bold = 0;
 
-                    string unformatted = Regex.Replace(Regex.Replace(myPaper.abstractConfig.content.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
-                    text.Range.Text = unformatted;
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
 
-                    string noFontSize = Regex.Replace(Regex.Replace(myPaper.abstractConfig.content, fontPattern, ""), sizePattern, "");
-                    string[] splitBold = noFontSize.Split('\b');
-                    for (int i = 0; i < splitBold.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
                             {
-                                previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToBold = text.Range.Duplicate;
-                            rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToBold.Bold = 1;
-                        }
-                    }
-
-                    string[] splitItalic = noFontSize.Split('\a');
-                    for (int i = 0; i < splitItalic.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
-                            {
-                                previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToItalic = text.Range.Duplicate;
-                            rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToItalic.Italic = 1;
-                        }
-                    }
-
-                    string[] splitUnderline = noFontSize.Split('\f');
-                    for (int i = 0; i < splitUnderline.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
-                            {
-                                previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
-                            }
-                            string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
-                            Range rangeToUnderline = text.Range.Duplicate;
-                            rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
-                        }
-                    }
-
-                    string secondFontPattern = @".{1,20}\\ffffffffffff\\";
-                    string sizeRemoved = Regex.Replace(myPaper.abstractConfig.content.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
-                    string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
-                    for (int i = 0; i < splitFont.Length; i++)
-                    {
-                        if (splitFont[i].Length > 0)
-                        {
-                            string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
-                            string currentFont = fontParts[0];
-                            int previousSplitLength = 0;
-                            if (i > 0)
-                            {
-                                for (int j = i - 1; j >= 0; j--)
+                                if (i % 2 == 1)
                                 {
-                                    string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                                    string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
-                                    previousSplitLength += noFont.Length;
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
                                 }
                             }
-                            string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToFontChange = text.Range.Duplicate;
-                            rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToFontChange.Font.Name = currentFont;
-                        }
-                    }
 
-                    string secondSizePattern = @".{1,20}\\ssssssssssss\\";
-                    string fontRemoved = Regex.Replace(myPaper.abstractConfig.content.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
-                    string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
-                    for (int i = 0; i < splitSize.Length; i++)
-                    {
-                        if (splitSize[i].Length > 0)
-                        {
-                            string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
-                            string currentSize = sizeParts[0];
-                            int previousSplitLength = 0;
-                            if (i > 0)
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
                             {
-                                for (int j = i - 1; j >= 0; j--)
+                                if (i % 2 == 1)
                                 {
-                                    string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
-                                    string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
-                                    previousSplitLength += noSize.Length;
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
                                 }
                             }
-                            string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToSizeChange = text.Range.Duplicate;
-                            rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
                     }
 
-                    text.Range.ParagraphFormat.FirstLineIndent = 36;
-                    text.Range.InsertParagraphAfter();
+                   
                     if (myPaper.abstractConfig.onOwnPage)
                     {
                         Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
@@ -429,7 +682,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -447,7 +700,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -465,7 +718,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -487,7 +740,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
                                             string currentFont = fontParts[0];
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             if (i > 0)
                                             {
                                                 for (int j = i - 1; j >= 0; j--)
@@ -513,7 +766,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
                                             string currentSize = sizeParts[0];
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             if (i > 0)
                                             {
                                                 for (int j = i - 1; j >= 0; j--)
@@ -686,7 +939,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -704,7 +957,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -722,7 +975,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         if (i % 2 == 1)
                                         {
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             for (int j = i - 1; j >= 0; j--)
                                             {
                                                 previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -744,7 +997,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
                                             string currentFont = fontParts[0];
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             if (i > 0)
                                             {
                                                 for (int j = i - 1; j >= 0; j--)
@@ -770,7 +1023,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
                                             string currentSize = sizeParts[0];
-                                            int previousSplitLength = 0;
+                                            int previousSplitLength = section.title.Length + 2;
                                             if (i > 0)
                                             {
                                                 for (int j = i - 1; j >= 0; j--)
@@ -802,10 +1055,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                             {
                                 sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
-                                string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                 sectiontext.Range.Text = unformatted;
 
-                                string[] splitBold = splitPara.Split('\b');
+                                string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                string[] splitBold = noFontSize.Split('\b');
                                 for (int i = 0; i < splitBold.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -822,7 +1076,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
 
-                                string[] splitItalic = splitPara.Split('\a');
+                                string[] splitItalic = noFontSize.Split('\a');
                                 for (int i = 0; i < splitItalic.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -839,7 +1093,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
 
-                                string[] splitUnderline = splitPara.Split('\f');
+                                string[] splitUnderline = noFontSize.Split('\f');
                                 for (int i = 0; i < splitUnderline.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -856,16 +1110,69 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
 
+                                string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                for (int i = 0; i < splitFont.Length; i++)
+                                {
+                                    if (splitFont[i].Length > 0)
+                                    {
+                                        string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                        string currentFont = fontParts[0];
+                                        int previousSplitLength = 0;
+                                        if (i > 0)
+                                        {
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                previousSplitLength += noFont.Length;
+                                            }
+                                        }
+                                        string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToFontChange = sectiontext.Range.Duplicate;
+                                        rangeToFontChange.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                        rangeToFontChange.Font.Name = currentFont;
+                                    }
+                                }
+
+                                string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                for (int i = 0; i < splitSize.Length; i++)
+                                {
+                                    if (splitSize[i].Length > 0)
+                                    {
+                                        string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                        string currentSize = sizeParts[0];
+                                        int previousSplitLength = 0;
+                                        if (i > 0)
+                                        {
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                previousSplitLength += noSize.Length;
+                                            }
+                                        }
+                                        string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToSizeChange = sectiontext.Range.Duplicate;
+                                        rangeToSizeChange.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                        rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                    }
+                                }
+
                                 sectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                             }
                             sectiontext.Range.InsertParagraphAfter();
                         }
                         else
                         {
-                            string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                             sectiontext.Range.Text = unformatted;
 
-                            string[] splitBold = splitPara.Split('\b');
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
                             for (int i = 0; i < splitBold.Length; i++)
                             {
                                 if (i % 2 == 1)
@@ -882,7 +1189,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 }
                             }
 
-                            string[] splitItalic = splitPara.Split('\a');
+                            string[] splitItalic = noFontSize.Split('\a');
                             for (int i = 0; i < splitItalic.Length; i++)
                             {
                                 if (i % 2 == 1)
@@ -899,7 +1206,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 }
                             }
 
-                            string[] splitUnderline = splitPara.Split('\f');
+                            string[] splitUnderline = noFontSize.Split('\f');
                             for (int i = 0; i < splitUnderline.Length; i++)
                             {
                                 if (i % 2 == 1)
@@ -913,6 +1220,58 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     Range rangeToUnderline = sectiontext.Range.Duplicate;
                                     rangeToUnderline.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
                                     rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = sectiontext.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = sectiontext.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + sectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + sectiontext.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
                                 }
                             }
 
@@ -946,7 +1305,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -964,7 +1323,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -982,7 +1341,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -1004,7 +1363,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
                                                 string currentFont = fontParts[0];
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 if (i > 0)
                                                 {
                                                     for (int j = i - 1; j >= 0; j--)
@@ -1030,7 +1389,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
                                                 string currentSize = sizeParts[0];
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 if (i > 0)
                                                 {
                                                     for (int j = i - 1; j >= 0; j--)
@@ -1202,7 +1561,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1220,7 +1579,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1238,7 +1597,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             if (i % 2 == 1)
                                             {
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 for (int j = i - 1; j >= 0; j--)
                                                 {
                                                     previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -1260,7 +1619,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
                                                 string currentFont = fontParts[0];
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 if (i > 0)
                                                 {
                                                     for (int j = i - 1; j >= 0; j--)
@@ -1286,7 +1645,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
                                                 string currentSize = sizeParts[0];
-                                                int previousSplitLength = 0;
+                                                int previousSplitLength = subsection.title.Length + 2;
                                                 if (i > 0)
                                                 {
                                                     for (int j = i - 1; j >= 0; j--)
@@ -1318,10 +1677,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
-                                    string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                     subsectiontext.Range.Text = unformatted;
 
-                                    string[] splitBold = splitPara.Split('\b');
+                                    string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                    string[] splitBold = noFontSize.Split('\b');
                                     for (int i = 0; i < splitBold.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1338,7 +1698,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    string[] splitItalic = splitPara.Split('\a');
+                                    string[] splitItalic = noFontSize.Split('\a');
                                     for (int i = 0; i < splitItalic.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1355,7 +1715,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    string[] splitUnderline = splitPara.Split('\f');
+                                    string[] splitUnderline = noFontSize.Split('\f');
                                     for (int i = 0; i < splitUnderline.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1372,16 +1732,69 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
+                                    string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                    string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                    string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                    for (int i = 0; i < splitFont.Length; i++)
+                                    {
+                                        if (splitFont[i].Length > 0)
+                                        {
+                                            string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                            string currentFont = fontParts[0];
+                                            int previousSplitLength = 0;
+                                            if (i > 0)
+                                            {
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                    previousSplitLength += noFont.Length;
+                                                }
+                                            }
+                                            string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToFontChange = subsectiontext.Range.Duplicate;
+                                            rangeToFontChange.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                            rangeToFontChange.Font.Name = currentFont;
+                                        }
+                                    }
+
+                                    string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                    string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                    string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                    for (int i = 0; i < splitSize.Length; i++)
+                                    {
+                                        if (splitSize[i].Length > 0)
+                                        {
+                                            string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                            string currentSize = sizeParts[0];
+                                            int previousSplitLength = 0;
+                                            if (i > 0)
+                                            {
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                    string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                    previousSplitLength += noSize.Length;
+                                                }
+                                            }
+                                            string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToSizeChange = subsectiontext.Range.Duplicate;
+                                            rangeToSizeChange.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                            rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                        }
+                                    }
+
                                     subsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                 }
                                 subsectiontext.Range.InsertParagraphAfter();
                             }
                             else
                             {
-                                string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                 subsectiontext.Range.Text = unformatted;
 
-                                string[] splitBold = splitPara.Split('\b');
+                                string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                string[] splitBold = noFontSize.Split('\b');
                                 for (int i = 0; i < splitBold.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -1398,7 +1811,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
 
-                                string[] splitItalic = splitPara.Split('\a');
+                                string[] splitItalic = noFontSize.Split('\a');
                                 for (int i = 0; i < splitItalic.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -1415,7 +1828,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
 
-                                string[] splitUnderline = splitPara.Split('\f');
+                                string[] splitUnderline = noFontSize.Split('\f');
                                 for (int i = 0; i < splitUnderline.Length; i++)
                                 {
                                     if (i % 2 == 1)
@@ -1429,6 +1842,58 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         Range rangeToUnderline = subsectiontext.Range.Duplicate;
                                         rangeToUnderline.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
                                         rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                    }
+                                }
+
+                                string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                for (int i = 0; i < splitFont.Length; i++)
+                                {
+                                    if (splitFont[i].Length > 0)
+                                    {
+                                        string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                        string currentFont = fontParts[0];
+                                        int previousSplitLength = 0;
+                                        if (i > 0)
+                                        {
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                previousSplitLength += noFont.Length;
+                                            }
+                                        }
+                                        string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToFontChange = subsectiontext.Range.Duplicate;
+                                        rangeToFontChange.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                        rangeToFontChange.Font.Name = currentFont;
+                                    }
+                                }
+
+                                string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                for (int i = 0; i < splitSize.Length; i++)
+                                {
+                                    if (splitSize[i].Length > 0)
+                                    {
+                                        string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                        string currentSize = sizeParts[0];
+                                        int previousSplitLength = 0;
+                                        if (i > 0)
+                                        {
+                                            for (int j = i - 1; j >= 0; j--)
+                                            {
+                                                string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                previousSplitLength += noSize.Length;
+                                            }
+                                        }
+                                        string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                        Range rangeToSizeChange = subsectiontext.Range.Duplicate;
+                                        rangeToSizeChange.SetRange(previousSplitLength + subsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsectiontext.Range.Start);
+                                        rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
                                     }
                                 }
 
@@ -1454,15 +1919,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
-                                            string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                             subsubsectiontext.Range.Text = subsubsection.title + ". " + unformatted;
 
-                                            string[] splitBold = splitPara.Split('\b');
+                                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                            string[] splitBold = noFontSize.Split('\b');
                                             for (int i = 0; i < splitBold.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1475,12 +1941,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitItalic = splitPara.Split('\a');
+                                            string[] splitItalic = noFontSize.Split('\a');
                                             for (int i = 0; i < splitItalic.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1493,12 +1959,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitUnderline = splitPara.Split('\f');
+                                            string[] splitUnderline = noFontSize.Split('\f');
                                             for (int i = 0; i < splitUnderline.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -1508,6 +1974,58 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                     Range rangeToUnderline = subsubsectiontext.Range.Duplicate;
                                                     rangeToUnderline.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
                                                     rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                                }
+                                            }
+
+                                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                            for (int i = 0; i < splitFont.Length; i++)
+                                            {
+                                                if (splitFont[i].Length > 0)
+                                                {
+                                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                                    string currentFont = fontParts[0];
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                            previousSplitLength += noFont.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToFontChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToFontChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToFontChange.Font.Name = currentFont;
+                                                }
+                                            }
+
+                                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                            for (int i = 0; i < splitSize.Length; i++)
+                                            {
+                                                if (splitSize[i].Length > 0)
+                                                {
+                                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                                    string currentSize = sizeParts[0];
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                            previousSplitLength += noSize.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToSizeChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToSizeChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
                                                 }
                                             }
 
@@ -1545,10 +2063,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             subsubsectiontext.Range.Bold = 0;
 
-                                            string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                             subsubsectiontext.Range.Text = unformatted;
 
-                                            string[] splitBold = splitPara.Split('\b');
+                                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                            string[] splitBold = noFontSize.Split('\b');
                                             for (int i = 0; i < splitBold.Length; i++)
                                             {
                                                 if (i % 2 == 1)
@@ -1565,7 +2084,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitItalic = splitPara.Split('\a');
+                                            string[] splitItalic = noFontSize.Split('\a');
                                             for (int i = 0; i < splitItalic.Length; i++)
                                             {
                                                 if (i % 2 == 1)
@@ -1582,7 +2101,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitUnderline = splitPara.Split('\f');
+                                            string[] splitUnderline = noFontSize.Split('\f');
                                             for (int i = 0; i < splitUnderline.Length; i++)
                                             {
                                                 if (i % 2 == 1)
@@ -1598,22 +2117,75 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                     rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
                                                 }
                                             }
-                                            
+
+                                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                            for (int i = 0; i < splitFont.Length; i++)
+                                            {
+                                                if (splitFont[i].Length > 0)
+                                                {
+                                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                                    string currentFont = fontParts[0];
+                                                    int previousSplitLength = 0;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                            previousSplitLength += noFont.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToFontChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToFontChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToFontChange.Font.Name = currentFont;
+                                                }
+                                            }
+
+                                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                            for (int i = 0; i < splitSize.Length; i++)
+                                            {
+                                                if (splitSize[i].Length > 0)
+                                                {
+                                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                                    string currentSize = sizeParts[0];
+                                                    int previousSplitLength = 0;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                            previousSplitLength += noSize.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToSizeChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToSizeChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                                }
+                                            }
+
                                             subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                         }
                                         else
                                         {
                                             subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
-                                            string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                             subsubsectiontext.Range.Text = subsubsection.title + ". " + unformatted;
 
-                                            string[] splitBold = splitPara.Split('\b');
+                                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                            string[] splitBold = noFontSize.Split('\b');
                                             for (int i = 0; i < splitBold.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1626,12 +2198,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitItalic = splitPara.Split('\a');
+                                            string[] splitItalic = noFontSize.Split('\a');
                                             for (int i = 0; i < splitItalic.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
@@ -1644,12 +2216,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 }
                                             }
 
-                                            string[] splitUnderline = splitPara.Split('\f');
+                                            string[] splitUnderline = noFontSize.Split('\f');
                                             for (int i = 0; i < splitUnderline.Length; i++)
                                             {
                                                 if (i % 2 == 1)
                                                 {
-                                                    int previousSplitLength = 0;
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
                                                     for (int j = i - 1; j >= 0; j--)
                                                     {
                                                         previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
@@ -1659,6 +2231,58 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                     Range rangeToUnderline = subsubsectiontext.Range.Duplicate;
                                                     rangeToUnderline.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
                                                     rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                                }
+                                            }
+
+                                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                            for (int i = 0; i < splitFont.Length; i++)
+                                            {
+                                                if (splitFont[i].Length > 0)
+                                                {
+                                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                                    string currentFont = fontParts[0];
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                            previousSplitLength += noFont.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToFontChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToFontChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToFontChange.Font.Name = currentFont;
+                                                }
+                                            }
+
+                                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                            for (int i = 0; i < splitSize.Length; i++)
+                                            {
+                                                if (splitSize[i].Length > 0)
+                                                {
+                                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                                    string currentSize = sizeParts[0];
+                                                    int previousSplitLength = subsubsection.title.Length + 2;
+                                                    if (i > 0)
+                                                    {
+                                                        for (int j = i - 1; j >= 0; j--)
+                                                        {
+                                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                            previousSplitLength += noSize.Length;
+                                                        }
+                                                    }
+                                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    Range rangeToSizeChange = subsubsectiontext.Range.Duplicate;
+                                                    rangeToSizeChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
                                                 }
                                             }
 
@@ -1677,10 +2301,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
-                                        string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                        string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                         subsubsectiontext.Range.Text = unformatted;
 
-                                        string[] splitBold = splitPara.Split('\b');
+                                        string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                        string[] splitBold = noFontSize.Split('\b');
                                         for (int i = 0; i < splitBold.Length; i++)
                                         {
                                             if (i % 2 == 1)
@@ -1697,7 +2322,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             }
                                         }
 
-                                        string[] splitItalic = splitPara.Split('\a');
+                                        string[] splitItalic = noFontSize.Split('\a');
                                         for (int i = 0; i < splitItalic.Length; i++)
                                         {
                                             if (i % 2 == 1)
@@ -1714,7 +2339,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             }
                                         }
 
-                                        string[] splitUnderline = splitPara.Split('\f');
+                                        string[] splitUnderline = noFontSize.Split('\f');
                                         for (int i = 0; i < splitUnderline.Length; i++)
                                         {
                                             if (i % 2 == 1)
@@ -1730,17 +2355,70 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
                                             }
                                         }
-                                        
+
+                                        string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                        string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                        string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                        for (int i = 0; i < splitFont.Length; i++)
+                                        {
+                                            if (splitFont[i].Length > 0)
+                                            {
+                                                string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                                string currentFont = fontParts[0];
+                                                int previousSplitLength = 0;
+                                                if (i > 0)
+                                                {
+                                                    for (int j = i - 1; j >= 0; j--)
+                                                    {
+                                                        string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                        string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                        previousSplitLength += noFont.Length;
+                                                    }
+                                                }
+                                                string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                Range rangeToFontChange = subsubsectiontext.Range.Duplicate;
+                                                rangeToFontChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                rangeToFontChange.Font.Name = currentFont;
+                                            }
+                                        }
+
+                                        string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                        string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                        string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                        for (int i = 0; i < splitSize.Length; i++)
+                                        {
+                                            if (splitSize[i].Length > 0)
+                                            {
+                                                string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                                string currentSize = sizeParts[0];
+                                                int previousSplitLength = 0;
+                                                if (i > 0)
+                                                {
+                                                    for (int j = i - 1; j >= 0; j--)
+                                                    {
+                                                        string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                        string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                        previousSplitLength += noSize.Length;
+                                                    }
+                                                }
+                                                string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                Range rangeToSizeChange = subsubsectiontext.Range.Duplicate;
+                                                rangeToSizeChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                                rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                            }
+                                        }
+
                                         subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     }
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
                                 else
                                 {
-                                    string unformatted = splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                     subsubsectiontext.Range.Text = unformatted;
 
-                                    string[] splitBold = splitPara.Split('\b');
+                                    string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                                    string[] splitBold = noFontSize.Split('\b');
                                     for (int i = 0; i < splitBold.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1757,7 +2435,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    string[] splitItalic = splitPara.Split('\a');
+                                    string[] splitItalic = noFontSize.Split('\a');
                                     for (int i = 0; i < splitItalic.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1774,7 +2452,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                     }
 
-                                    string[] splitUnderline = splitPara.Split('\f');
+                                    string[] splitUnderline = noFontSize.Split('\f');
                                     for (int i = 0; i < splitUnderline.Length; i++)
                                     {
                                         if (i % 2 == 1)
@@ -1790,7 +2468,59 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
                                         }
                                     }
-                                    
+
+                                    string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                                    string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                                    string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                                    for (int i = 0; i < splitFont.Length; i++)
+                                    {
+                                        if (splitFont[i].Length > 0)
+                                        {
+                                            string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                            string currentFont = fontParts[0];
+                                            int previousSplitLength = 0;
+                                            if (i > 0)
+                                            {
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                                    string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                                    previousSplitLength += noFont.Length;
+                                                }
+                                            }
+                                            string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToFontChange = subsubsectiontext.Range.Duplicate;
+                                            rangeToFontChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                            rangeToFontChange.Font.Name = currentFont;
+                                        }
+                                    }
+
+                                    string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                                    string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                    string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                                    for (int i = 0; i < splitSize.Length; i++)
+                                    {
+                                        if (splitSize[i].Length > 0)
+                                        {
+                                            string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                            string currentSize = sizeParts[0];
+                                            int previousSplitLength = 0;
+                                            if (i > 0)
+                                            {
+                                                for (int j = i - 1; j >= 0; j--)
+                                                {
+                                                    string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                                    string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                                    previousSplitLength += noSize.Length;
+                                                }
+                                            }
+                                            string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            Range rangeToSizeChange = subsubsectiontext.Range.Duplicate;
+                                            rangeToSizeChange.SetRange(previousSplitLength + subsubsectiontext.Range.Start, previousSplitLength + unformattedSplit.Length + subsubsectiontext.Range.Start);
+                                            rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                        }
+                                    }
+
                                     subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 36;
                                     subsubsectiontext.Range.InsertParagraphAfter();
                                 }
@@ -1806,88 +2536,266 @@ namespace WriteMeEasy_WindowsFormsApplication
                         Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
                         pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
                     }
-                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
-                    if (myPaper.conclusion.includeTitle)
+                    string[] splitConclusion = myPaper.conclusion.conclusionContent.Split('\n');
+                    bool isFirstOfPara = true;
+
+                    foreach (string splitPara in splitConclusion)
                     {
-                        if (myPaper.conclusion.boldTitle)
+                        Paragraph text = document.Content.Paragraphs.Add(ref missing);
+                        if (isFirstOfPara)
                         {
-                            text.Range.Bold = 1;
+                            isFirstOfPara = false;
+                            if (myPaper.conclusion.includeTitle)
+                            {
+                                if (myPaper.conclusion.boldTitle)
+                                {
+                                    text.Range.Bold = 1;
+                                }
+                                text.Range.Text = myPaper.conclusion.title;
+                                if (myPaper.conclusion.titleAlign == "Center")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                                }
+                                else if (myPaper.conclusion.titleAlign == "Right")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                                }
+                                else if (myPaper.conclusion.titleAlign == "Left")
+                                {
+                                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                text.Range.ParagraphFormat.FirstLineIndent = 0;
+                                text.Range.InsertParagraphAfter();
+                            }
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            text.Range.Bold = 0;
+
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
+
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
+                                }
+                            }
+
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
+                                }
+                            }
+
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
+                            {
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
+                            }
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
-                        text.Range.Text = myPaper.conclusion.title;
-                        if (myPaper.conclusion.titleAlign == "Center")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                        }
-                        else if (myPaper.conclusion.titleAlign == "Right")
-                        {
-                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                        }
-                        else if (myPaper.conclusion.titleAlign == "Left")
+                        else
                         {
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                        }
-                        text.Range.ParagraphFormat.FirstLineIndent = 0;
-                        text.Range.InsertParagraphAfter();
-                    }
-                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                    text.Range.Bold = 0;
+                            text.Range.Bold = 0;
 
-                    string unformatted = myPaper.conclusion.conclusionContent.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
-                    text.Range.Text = unformatted;
+                            string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "");
+                            text.Range.Text = unformatted;
 
-                    string[] splitBold = myPaper.conclusion.conclusionContent.Split('\b');
-                    for (int i = 0; i < splitBold.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
+                            string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
+                            string[] splitBold = noFontSize.Split('\b');
+                            for (int i = 0; i < splitBold.Length; i++)
                             {
-                                previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitBold[j].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToBold = text.Range.Duplicate;
+                                    rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToBold.Bold = 1;
+                                }
                             }
-                            string unformattedSplit = splitBold[i].Replace('\a'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToBold = text.Range.Duplicate;
-                            rangeToBold.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToBold.Bold = 1;
-                        }
-                    }
 
-                    string[] splitItalic = myPaper.conclusion.conclusionContent.Split('\a');
-                    for (int i = 0; i < splitItalic.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
+                            string[] splitItalic = noFontSize.Split('\a');
+                            for (int i = 0; i < splitItalic.Length; i++)
                             {
-                                previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitItalic[j].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToItalic = text.Range.Duplicate;
+                                    rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToItalic.Italic = 1;
+                                }
                             }
-                            string unformattedSplit = splitItalic[i].Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
-                            Range rangeToItalic = text.Range.Duplicate;
-                            rangeToItalic.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToItalic.Italic = 1;
-                        }
-                    }
 
-                    string[] splitUnderline = myPaper.conclusion.conclusionContent.Split('\f');
-                    for (int i = 0; i < splitUnderline.Length; i++)
-                    {
-                        if (i % 2 == 1)
-                        {
-                            int previousSplitLength = 0;
-                            for (int j = i - 1; j >= 0; j--)
+                            string[] splitUnderline = noFontSize.Split('\f');
+                            for (int i = 0; i < splitUnderline.Length; i++)
                             {
-                                previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                if (i % 2 == 1)
+                                {
+                                    int previousSplitLength = 0;
+                                    for (int j = i - 1; j >= 0; j--)
+                                    {
+                                        previousSplitLength += splitUnderline[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Length;
+                                    }
+                                    string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
+                                    Range rangeToUnderline = text.Range.Duplicate;
+                                    rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+                                }
                             }
-                            string unformattedSplit = splitUnderline[i].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "");
-                            Range rangeToUnderline = text.Range.Duplicate;
-                            rangeToUnderline.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
-                            rangeToUnderline.Underline = WdUnderline.wdUnderlineSingle;
+
+                            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+                            string sizeRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), sizePattern, "");
+                            string[] splitFont = sizeRemoved.Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); //Regex.Split(myPaper.summary.content, fontPattern);
+                            for (int i = 0; i < splitFont.Length; i++)
+                            {
+                                if (splitFont[i].Length > 0)
+                                {
+                                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                                    string currentFont = fontParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = splitFont[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                                            previousSplitLength += noFont.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = fontParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToFontChange = text.Range.Duplicate;
+                                    rangeToFontChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToFontChange.Font.Name = currentFont;
+                                }
+                            }
+
+                            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+                            string fontRemoved = Regex.Replace(splitPara.Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                            string[] splitSize = fontRemoved.Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None);
+                            for (int i = 0; i < splitSize.Length; i++)
+                            {
+                                if (splitSize[i].Length > 0)
+                                {
+                                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                                    string currentSize = sizeParts[0];
+                                    int previousSplitLength = 0;
+                                    if (i > 0)
+                                    {
+                                        for (int j = i - 1; j >= 0; j--)
+                                        {
+                                            string unformattedContent = Regex.Replace(splitSize[j].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, "");
+                                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                                            previousSplitLength += noSize.Length;
+                                        }
+                                    }
+                                    string unformattedSplit = sizeParts[1].Replace('\a'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), "");
+                                    Range rangeToSizeChange = text.Range.Duplicate;
+                                    rangeToSizeChange.SetRange(previousSplitLength + text.Range.Start, previousSplitLength + unformattedSplit.Length + text.Range.Start);
+                                    rangeToSizeChange.Font.Size = (float)Convert.ToDouble(currentSize);
+                                }
+                            }
+
+                            text.Range.ParagraphFormat.FirstLineIndent = 36;
+                            text.Range.InsertParagraphAfter();
                         }
                     }
-                    
-                    text.Range.ParagraphFormat.FirstLineIndent = 36;
-                    text.Range.InsertParagraphAfter();
                 }
 
                 if (myPaper.includeReferences)
