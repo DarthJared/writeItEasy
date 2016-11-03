@@ -1146,5 +1146,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             boxToEdit.SelectionStart = startSelection;
             boxToEdit.SelectionLength = endSelection - startSelection;
         }
+
+        private void addReferenceButton_Click(object sender, EventArgs e)
+        {
+            var referencePopup = new ReferenceAdder();
+            referencePopup.ShowDialog(this);
+        }
     }
 }

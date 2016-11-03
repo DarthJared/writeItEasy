@@ -1,0 +1,261 @@
+Book:
+Author/s
+Year of Publication
+Title of Work
+Publish Location
+Publisher Name
+Edition
+
+Translated Book:
+Author/s
+Year of Publication
+Title of Work
+Translator/s
+Publish Location
+Publisher Name
+Edition
+
+Encyclopedia:
+Author/s
+Year of Publication
+Encyclopedia Section Name
+Name of Encyclopedia
+Volume
+Page (Start and End)
+Publish Location
+Publisher Name
+
+Journal Article:
+Author/s
+Year of Publication
+Article Title
+Journal Title
+Volume Number
+Issue Number
+Pages (Start and End)
+
+Magazine:
+Author/s
+Date of Publication
+Article Title
+Name of Magazine
+Volume Number
+Issue Number
+Pages (Start and End)
+
+Newspaper:
+Author/s
+Date of Publication
+Article Title
+Newspaper Name
+Pages (Start and End)
+
+Review:
+Reviewer/s
+Year of Publication
+Review Title
+Article Being Reviewed Title
+Original Author/s
+Source of Article
+Volume Number
+Issue Number
+Pages (Start and End)
+
+Published Dissertation:
+Author
+Year of Publication
+Title of Dissertation
+Source of Dissertation
+Accession or Order Number
+
+Unpublished Dissertation:
+Author
+Year
+Title of Dissertation
+Name of Institution
+Location
+
+Private Organization Report:
+Name of Organization
+Year of Publication
+Name of place published
+Edition
+City and State where published
+Author
+
+Government Document:
+Created By
+Year of Publication
+Title of Document
+Publication Number
+Website Retrieved from
+
+Interview, Email, Personal Communication:
+Name of Interviewee, Emailer, Communicator
+Date of Communication
+
+Motion Picture
+Producer
+Director
+Date of Publication
+Title of Motion Picture
+Country of Original
+
+TV Broadcast:
+Producer
+Date of Production
+Name of Broadcast
+Location of Broadcast
+Broadcaster
+
+TV Episode:
+Writer
+Director
+Date of Publication
+Title of Episode
+Producer
+Series Title
+City and State of Origin
+Studio or Distributor
+
+Music Recording:
+Songwriter
+Copyright Date
+Title of Song
+Artist
+Title of Album
+Medium of Recording
+Location of Recording
+Label
+Recording Date
+
+Online Periodical Article:
+Author/s
+Date of Publication
+Title of Article
+Title of Periodical
+Volume Number
+Issue Number
+Retrieved From / Available From and place to purchase
+DOI
+
+Online Journal Article:
+Author/s
+Date of Publication
+Title of Article
+Title of Journal
+Volume Number
+Issue Number
+Retrieved From / Available From and place to purchase
+DOI
+
+Online Newspaper Article:
+Author/s
+Date of Publication
+Title of Article
+Title of Newspaper
+Retrieved From / Available From and place to purchase
+
+Electronic Book:
+Author/s
+Date of Publication 
+Title of Book
+Retrieved From / Available From and place to purchase
+
+Kindle Book:
+Author/s
+Date of Publication
+Title of Book
+
+Letter to the Editor:
+Author
+Date of Publication
+Title of Letter
+Work where published
+Volume Number
+Issue Number
+Pages (Start and End)
+
+Online Book Review:
+Author/s
+Date of Publication
+Name of Review
+Name of Book being Reviewed
+Source of Review
+Volume Number
+Issue Number
+Pages (Start and End)
+Retrieved From / Available From and place to purchase
+
+Online Dissertation or Thesis:
+Author/s
+Date of Publication
+Title
+Retrieved from
+
+Online Encyclopedia or Dictionary:
+Word being referenced
+Date of Publication
+Name of Dictionary or Encyclopedia
+Retrieved from
+
+Online Bibliography:
+Author/s
+Date of Publication
+Title
+Retrieved from
+
+Online Interview:
+Interviewer/s
+Interviewee/s
+Date of Interview
+Title of Interview
+Retrieved from
+
+Online Lecture Notes or Slides:
+Name of Presenter/s
+Title of Presentation
+File Format
+Retrieved From
+
+Web Document or Report:
+Author/s
+Date of Publication
+Title of Document
+Retrieved from
+
+Online Forum or Discussion Board:
+Name of Person Posting / Screen Name
+Date Post was Made
+Title of Message
+Message Number
+Site Message was Posted to
+
+Blog:
+Name of Person Posting / Screen Name/s
+Date Post was Made
+Title of Message
+Retrieved From
+
+Wiki:
+Name of Wiki
+Date of Publication
+Date of Retrieval
+Retrieved From
+
+Audio Podcast:
+Name of Presenter/s
+Date of Publication
+Title of Publication
+Name of Podcast Hosting Service
+Retrieved From
+
+Video Podcast:
+Producer
+Director
+Date of Publication
+Title of Podcast
+Episode Number
+Name of Podcast Hosting Service
+Retrieved From
+

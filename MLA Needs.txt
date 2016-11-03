@@ -1,0 +1,220 @@
+Book:
+Author/s
+Title of Book
+Publisher
+Publication Date
+Edition
+
+Translated Book:
+Translator
+Title of Book
+Author/s
+Publisher
+Publish Date
+
+Short Story:
+Author/s
+Title of Book
+Title of Collection
+Editor's Name
+Publisher
+Publish Date 
+Pages (Start and End)
+
+Encyclopedia or Dictionary:
+Term Referenced
+Encyclopedia or Dictionary Title
+Date of Publication
+
+Introduction, Preface, Forward, Afterword:
+Author/s
+Introduction/Preface/Forward/Afterword
+Title of Work
+Author of Main Work (if different)
+Publish Location
+Publication Date
+Pages (Start and End)
+
+Government Document:
+Author/s or Government Breakdown
+Title of Document
+Publisher
+Date of Publication
+
+Published Dissertation:
+Author/s
+Title
+Degree Granting School
+Year Degree was Awarded
+
+Published Thesis:
+Author/s
+Title
+Degree Granting School
+Year Degree was Awarded
+
+Unpublished Dissertation:
+Author/s
+Title
+Degree Granting School
+Year Degree was Awarded
+
+Unpublished Thesis:
+Author/s
+Title
+Degree Granting School
+Year Degree was Awarded
+
+Magazine Article:
+Author/s
+Title of Article
+Title of Magazine
+Date of publication
+Pages (Start and End)
+
+Newspaper Article:
+Author/s
+Title of Article
+Title of Newspaper
+Date of publication
+Pages (Start and End)
+
+Review:
+Reviewer
+Title of Review
+Title of Work Being Reviewed
+Author of Work Being Reviewed
+Date of Publication
+Pages
+
+Letter to the Editor:
+Writer
+Work Written To
+Date
+Pages (Start and End)
+
+Editorial:
+Title of Editorial
+Source of Editorial
+Date of Publication
+Pages (Start and End)
+
+Scholarly Journal:
+Author/s
+Title of Article
+Title of Journal
+Volume Number
+Issue Number
+Year of Publication
+Pages (Start and End)
+
+Website:
+Author/s
+Page Title
+Main Website Title
+Date of Publication
+Retrieved From
+Accessed
+
+Image:
+Artist's Name
+Title of Work
+Date of Creation
+Institution Where Work is Housed
+City Where Work is Housed
+Retrieved From
+Accessed
+
+Online Magazine Article:
+Author/s
+Title of Article
+Magazine Title
+Publisher Name
+Date of Publication
+Retrieved From
+Accessed
+
+Online-Only Scholarly Journal:
+Title of Article
+Title of Journal
+Volume Number
+Issue Number
+Year of Publication
+Retrieved From
+Accessed
+
+Online Scholarly Journal that is also in Print:
+Author/s
+Title of Article
+Title of Journal
+Volume Number
+Issue Number
+Year of Publication
+Pages (Start and End)
+Retrieved From
+Accessed
+
+Email:
+Author
+Subject Line
+Receiver
+Date Received
+
+Discussion or Blog Post:
+Author Name
+Author Screen Name
+Post Title
+Name of Site
+Post Date
+URL
+Accessed
+
+Personal Interview:
+Name of Interviewee
+Date of Interview
+
+Speeches, Lectures, or Other Oral Presentations:
+Speaker's Name
+Title of Speech/Lecture/Presentation
+Conference or meeting where speech/lecture/presentation occurred
+Date Given
+Venue (location given)
+City and State Given
+Kind of Address
+
+Painting, Sculpture, or Photograph:
+Artist
+Title of Artwork
+Date of Composition
+Medium Used
+Institution that houses work
+City and State where work is housed
+
+Song:
+Artist
+Title
+Album
+Recording Manufacturer
+Date of Publication
+Retrieved from
+
+Song on CD:
+Artist
+Title
+Album
+Recording Manufacturer
+Date of Publication
+
+Movie:
+Title
+Director
+Film Studio or Distributor
+Release Year
+
+Television Show Episode:
+Episode Title
+Show Title
+Network Name
+Call Letters of the Station
+City of Broadcast
+Date of Broadcast
