@@ -29,612 +29,662 @@
         private void InitializeComponent()
         {
             this.sourceTypeGroupBox = new System.Windows.Forms.GroupBox();
+            this.personal = new System.Windows.Forms.RadioButton();
+            this.email = new System.Windows.Forms.RadioButton();
+            this.anonymous = new System.Windows.Forms.RadioButton();
+            this.bookNoAuth = new System.Windows.Forms.RadioButton();
+            this.bookByOrg = new System.Windows.Forms.RadioButton();
+            this.music = new System.Windows.Forms.RadioButton();
+            this.tvEpisode = new System.Windows.Forms.RadioButton();
+            this.tvBroadcast = new System.Windows.Forms.RadioButton();
+            this.motionPicture = new System.Windows.Forms.RadioButton();
+            this.interview = new System.Windows.Forms.RadioButton();
+            this.videoPodcast = new System.Windows.Forms.RadioButton();
+            this.audioPodcast = new System.Windows.Forms.RadioButton();
+            this.wiki = new System.Windows.Forms.RadioButton();
+            this.blog = new System.Windows.Forms.RadioButton();
+            this.forumDiscussion = new System.Windows.Forms.RadioButton();
+            this.webDoc = new System.Windows.Forms.RadioButton();
+            this.lectureNotesSlides = new System.Windows.Forms.RadioButton();
+            this.onlineInterview = new System.Windows.Forms.RadioButton();
+            this.onlineBibliography = new System.Windows.Forms.RadioButton();
+            this.onlineEncyclopedia = new System.Windows.Forms.RadioButton();
+            this.onlineDissertation = new System.Windows.Forms.RadioButton();
+            this.bookReview = new System.Windows.Forms.RadioButton();
+            this.kindle = new System.Windows.Forms.RadioButton();
+            this.electronicBook = new System.Windows.Forms.RadioButton();
+            this.onlineNewspaper = new System.Windows.Forms.RadioButton();
+            this.onlineJournal = new System.Windows.Forms.RadioButton();
+            this.onlinePeriodical = new System.Windows.Forms.RadioButton();
+            this.privateOrgReport = new System.Windows.Forms.RadioButton();
+            this.governmentDocument = new System.Windows.Forms.RadioButton();
+            this.unpublishedDissertation = new System.Windows.Forms.RadioButton();
+            this.publishedDissertation = new System.Windows.Forms.RadioButton();
+            this.encyclopedia = new System.Windows.Forms.RadioButton();
+            this.translated = new System.Windows.Forms.RadioButton();
+            this.bookOneAuth = new System.Windows.Forms.RadioButton();
+            this.review = new System.Windows.Forms.RadioButton();
+            this.letterToEditor = new System.Windows.Forms.RadioButton();
+            this.newspaper = new System.Windows.Forms.RadioButton();
+            this.magazine = new System.Windows.Forms.RadioButton();
+            this.journal = new System.Windows.Forms.RadioButton();
             this.sourceInfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
-            this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.radioButton30 = new System.Windows.Forms.RadioButton();
-            this.radioButton31 = new System.Windows.Forms.RadioButton();
-            this.radioButton34 = new System.Windows.Forms.RadioButton();
-            this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.radioButton36 = new System.Windows.Forms.RadioButton();
-            this.radioButton37 = new System.Windows.Forms.RadioButton();
-            this.radioButton38 = new System.Windows.Forms.RadioButton();
-            this.radioButton39 = new System.Windows.Forms.RadioButton();
-            this.radioButton40 = new System.Windows.Forms.RadioButton();
-            this.radioButton41 = new System.Windows.Forms.RadioButton();
-            this.radioButton42 = new System.Windows.Forms.RadioButton();
-            this.radioButton43 = new System.Windows.Forms.RadioButton();
-            this.radioButton44 = new System.Windows.Forms.RadioButton();
-            this.radioButton45 = new System.Windows.Forms.RadioButton();
-            this.radioButton46 = new System.Windows.Forms.RadioButton();
-            this.radioButton47 = new System.Windows.Forms.RadioButton();
-            this.radioButton48 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.referenceContentGroupBox = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.quoteContentGroupBox = new System.Windows.Forms.GroupBox();
+            this.quoteContent = new System.Windows.Forms.RichTextBox();
+            this.bookMoreAuth = new System.Windows.Forms.RadioButton();
             this.sourceTypeGroupBox.SuspendLayout();
-            this.sourceInfoGroupBox.SuspendLayout();
-            this.referenceContentGroupBox.SuspendLayout();
+            this.quoteContentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // sourceTypeGroupBox
             // 
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton48);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton47);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton46);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton45);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton44);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton43);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton42);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton41);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton40);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton39);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton38);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton37);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton36);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton35);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton34);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton31);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton30);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton29);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton26);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton25);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton24);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton23);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton22);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton21);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton20);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton17);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton16);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton14);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton13);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton12);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton11);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton9);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton7);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton6);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton5);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton4);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton3);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton2);
-            this.sourceTypeGroupBox.Controls.Add(this.radioButton1);
-            this.sourceTypeGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.sourceTypeGroupBox.Controls.Add(this.bookMoreAuth);
+            this.sourceTypeGroupBox.Controls.Add(this.personal);
+            this.sourceTypeGroupBox.Controls.Add(this.email);
+            this.sourceTypeGroupBox.Controls.Add(this.anonymous);
+            this.sourceTypeGroupBox.Controls.Add(this.bookNoAuth);
+            this.sourceTypeGroupBox.Controls.Add(this.bookByOrg);
+            this.sourceTypeGroupBox.Controls.Add(this.music);
+            this.sourceTypeGroupBox.Controls.Add(this.tvEpisode);
+            this.sourceTypeGroupBox.Controls.Add(this.tvBroadcast);
+            this.sourceTypeGroupBox.Controls.Add(this.motionPicture);
+            this.sourceTypeGroupBox.Controls.Add(this.interview);
+            this.sourceTypeGroupBox.Controls.Add(this.videoPodcast);
+            this.sourceTypeGroupBox.Controls.Add(this.audioPodcast);
+            this.sourceTypeGroupBox.Controls.Add(this.wiki);
+            this.sourceTypeGroupBox.Controls.Add(this.blog);
+            this.sourceTypeGroupBox.Controls.Add(this.forumDiscussion);
+            this.sourceTypeGroupBox.Controls.Add(this.webDoc);
+            this.sourceTypeGroupBox.Controls.Add(this.lectureNotesSlides);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineInterview);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineBibliography);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineEncyclopedia);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineDissertation);
+            this.sourceTypeGroupBox.Controls.Add(this.bookReview);
+            this.sourceTypeGroupBox.Controls.Add(this.kindle);
+            this.sourceTypeGroupBox.Controls.Add(this.electronicBook);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineNewspaper);
+            this.sourceTypeGroupBox.Controls.Add(this.onlineJournal);
+            this.sourceTypeGroupBox.Controls.Add(this.onlinePeriodical);
+            this.sourceTypeGroupBox.Controls.Add(this.privateOrgReport);
+            this.sourceTypeGroupBox.Controls.Add(this.governmentDocument);
+            this.sourceTypeGroupBox.Controls.Add(this.unpublishedDissertation);
+            this.sourceTypeGroupBox.Controls.Add(this.publishedDissertation);
+            this.sourceTypeGroupBox.Controls.Add(this.encyclopedia);
+            this.sourceTypeGroupBox.Controls.Add(this.translated);
+            this.sourceTypeGroupBox.Controls.Add(this.bookOneAuth);
+            this.sourceTypeGroupBox.Controls.Add(this.review);
+            this.sourceTypeGroupBox.Controls.Add(this.letterToEditor);
+            this.sourceTypeGroupBox.Controls.Add(this.newspaper);
+            this.sourceTypeGroupBox.Controls.Add(this.magazine);
+            this.sourceTypeGroupBox.Controls.Add(this.journal);
+            this.sourceTypeGroupBox.Location = new System.Drawing.Point(32, 29);
+            this.sourceTypeGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sourceTypeGroupBox.Name = "sourceTypeGroupBox";
-            this.sourceTypeGroupBox.Size = new System.Drawing.Size(680, 255);
+            this.sourceTypeGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sourceTypeGroupBox.Size = new System.Drawing.Size(1813, 608);
             this.sourceTypeGroupBox.TabIndex = 0;
             this.sourceTypeGroupBox.TabStop = false;
             this.sourceTypeGroupBox.Text = "Type of Source";
             // 
+            // personal
+            // 
+            this.personal.AutoSize = true;
+            this.personal.Location = new System.Drawing.Point(1403, 482);
+            this.personal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.personal.Name = "personal";
+            this.personal.Size = new System.Drawing.Size(370, 36);
+            this.personal.TabIndex = 56;
+            this.personal.Text = "Personal Communication";
+            this.personal.UseVisualStyleBackColor = true;
+            this.personal.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // email
+            // 
+            this.email.AutoSize = true;
+            this.email.Location = new System.Drawing.Point(1403, 427);
+            this.email.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(124, 36);
+            this.email.TabIndex = 55;
+            this.email.Text = "Email";
+            this.email.UseVisualStyleBackColor = true;
+            this.email.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // anonymous
+            // 
+            this.anonymous.AutoSize = true;
+            this.anonymous.Location = new System.Drawing.Point(16, 482);
+            this.anonymous.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.anonymous.Name = "anonymous";
+            this.anonymous.Size = new System.Drawing.Size(289, 36);
+            this.anonymous.TabIndex = 54;
+            this.anonymous.Text = "Anonymous Article";
+            this.anonymous.UseVisualStyleBackColor = true;
+            this.anonymous.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // bookNoAuth
+            // 
+            this.bookNoAuth.AutoSize = true;
+            this.bookNoAuth.Location = new System.Drawing.Point(16, 153);
+            this.bookNoAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookNoAuth.Name = "bookNoAuth";
+            this.bookNoAuth.Size = new System.Drawing.Size(267, 36);
+            this.bookNoAuth.TabIndex = 53;
+            this.bookNoAuth.Text = "Book - No Author";
+            this.bookNoAuth.UseVisualStyleBackColor = true;
+            this.bookNoAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // bookByOrg
+            // 
+            this.bookByOrg.AutoSize = true;
+            this.bookByOrg.Location = new System.Drawing.Point(16, 207);
+            this.bookByOrg.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookByOrg.Name = "bookByOrg";
+            this.bookByOrg.Size = new System.Drawing.Size(324, 36);
+            this.bookByOrg.TabIndex = 52;
+            this.bookByOrg.Text = "Book by Organization";
+            this.bookByOrg.UseVisualStyleBackColor = true;
+            this.bookByOrg.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // music
+            // 
+            this.music.AutoSize = true;
+            this.music.Location = new System.Drawing.Point(1403, 317);
+            this.music.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.music.Name = "music";
+            this.music.Size = new System.Drawing.Size(263, 36);
+            this.music.TabIndex = 51;
+            this.music.Text = "Music Recording";
+            this.music.UseVisualStyleBackColor = true;
+            this.music.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // tvEpisode
+            // 
+            this.tvEpisode.AutoSize = true;
+            this.tvEpisode.Location = new System.Drawing.Point(1403, 262);
+            this.tvEpisode.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tvEpisode.Name = "tvEpisode";
+            this.tvEpisode.Size = new System.Drawing.Size(199, 36);
+            this.tvEpisode.TabIndex = 50;
+            this.tvEpisode.Text = "TV Episode";
+            this.tvEpisode.UseVisualStyleBackColor = true;
+            this.tvEpisode.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // tvBroadcast
+            // 
+            this.tvBroadcast.AutoSize = true;
+            this.tvBroadcast.Location = new System.Drawing.Point(1403, 207);
+            this.tvBroadcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tvBroadcast.Name = "tvBroadcast";
+            this.tvBroadcast.Size = new System.Drawing.Size(223, 36);
+            this.tvBroadcast.TabIndex = 49;
+            this.tvBroadcast.Text = "TV Broadcast";
+            this.tvBroadcast.UseVisualStyleBackColor = true;
+            this.tvBroadcast.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // motionPicture
+            // 
+            this.motionPicture.AutoSize = true;
+            this.motionPicture.Location = new System.Drawing.Point(1403, 153);
+            this.motionPicture.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.motionPicture.Name = "motionPicture";
+            this.motionPicture.Size = new System.Drawing.Size(234, 36);
+            this.motionPicture.TabIndex = 48;
+            this.motionPicture.Text = "Motion Picture";
+            this.motionPicture.UseVisualStyleBackColor = true;
+            this.motionPicture.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // interview
+            // 
+            this.interview.AutoSize = true;
+            this.interview.Location = new System.Drawing.Point(1403, 372);
+            this.interview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.interview.Name = "interview";
+            this.interview.Size = new System.Drawing.Size(165, 36);
+            this.interview.TabIndex = 47;
+            this.interview.Text = "Interview";
+            this.interview.UseVisualStyleBackColor = true;
+            this.interview.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // videoPodcast
+            // 
+            this.videoPodcast.AutoSize = true;
+            this.videoPodcast.Location = new System.Drawing.Point(1403, 98);
+            this.videoPodcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.videoPodcast.Name = "videoPodcast";
+            this.videoPodcast.Size = new System.Drawing.Size(236, 36);
+            this.videoPodcast.TabIndex = 46;
+            this.videoPodcast.Text = "Video Podcast";
+            this.videoPodcast.UseVisualStyleBackColor = true;
+            this.videoPodcast.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // audioPodcast
+            // 
+            this.audioPodcast.AutoSize = true;
+            this.audioPodcast.Location = new System.Drawing.Point(1403, 43);
+            this.audioPodcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.audioPodcast.Name = "audioPodcast";
+            this.audioPodcast.Size = new System.Drawing.Size(236, 36);
+            this.audioPodcast.TabIndex = 45;
+            this.audioPodcast.Text = "Audio Podcast";
+            this.audioPodcast.UseVisualStyleBackColor = true;
+            this.audioPodcast.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // wiki
+            // 
+            this.wiki.AutoSize = true;
+            this.wiki.Location = new System.Drawing.Point(923, 98);
+            this.wiki.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.wiki.Name = "wiki";
+            this.wiki.Size = new System.Drawing.Size(106, 36);
+            this.wiki.TabIndex = 44;
+            this.wiki.Text = "Wiki";
+            this.wiki.UseVisualStyleBackColor = true;
+            this.wiki.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // blog
+            // 
+            this.blog.AutoSize = true;
+            this.blog.Location = new System.Drawing.Point(923, 43);
+            this.blog.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.blog.Name = "blog";
+            this.blog.Size = new System.Drawing.Size(110, 36);
+            this.blog.TabIndex = 43;
+            this.blog.Text = "Blog";
+            this.blog.UseVisualStyleBackColor = true;
+            this.blog.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // forumDiscussion
+            // 
+            this.forumDiscussion.AutoSize = true;
+            this.forumDiscussion.Location = new System.Drawing.Point(403, 482);
+            this.forumDiscussion.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.forumDiscussion.Name = "forumDiscussion";
+            this.forumDiscussion.Size = new System.Drawing.Size(484, 36);
+            this.forumDiscussion.TabIndex = 42;
+            this.forumDiscussion.Text = "Online Forum or Discussion Board";
+            this.forumDiscussion.UseVisualStyleBackColor = true;
+            this.forumDiscussion.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // webDoc
+            // 
+            this.webDoc.AutoSize = true;
+            this.webDoc.Location = new System.Drawing.Point(923, 153);
+            this.webDoc.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.webDoc.Name = "webDoc";
+            this.webDoc.Size = new System.Drawing.Size(370, 36);
+            this.webDoc.TabIndex = 39;
+            this.webDoc.Text = "Web Document or Report";
+            this.webDoc.UseVisualStyleBackColor = true;
+            this.webDoc.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // lectureNotesSlides
+            // 
+            this.lectureNotesSlides.AutoSize = true;
+            this.lectureNotesSlides.Location = new System.Drawing.Point(923, 537);
+            this.lectureNotesSlides.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.lectureNotesSlides.Name = "lectureNotesSlides";
+            this.lectureNotesSlides.Size = new System.Drawing.Size(437, 36);
+            this.lectureNotesSlides.TabIndex = 38;
+            this.lectureNotesSlides.Text = "Online Lecture Notes or Slides";
+            this.lectureNotesSlides.UseVisualStyleBackColor = true;
+            this.lectureNotesSlides.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineInterview
+            // 
+            this.onlineInterview.AutoSize = true;
+            this.onlineInterview.Location = new System.Drawing.Point(403, 372);
+            this.onlineInterview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineInterview.Name = "onlineInterview";
+            this.onlineInterview.Size = new System.Drawing.Size(256, 36);
+            this.onlineInterview.TabIndex = 37;
+            this.onlineInterview.Text = "Online Interview";
+            this.onlineInterview.UseVisualStyleBackColor = true;
+            this.onlineInterview.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineBibliography
+            // 
+            this.onlineBibliography.AutoSize = true;
+            this.onlineBibliography.Location = new System.Drawing.Point(403, 317);
+            this.onlineBibliography.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineBibliography.Name = "onlineBibliography";
+            this.onlineBibliography.Size = new System.Drawing.Size(302, 36);
+            this.onlineBibliography.TabIndex = 34;
+            this.onlineBibliography.Text = "Online Bibliography";
+            this.onlineBibliography.UseVisualStyleBackColor = true;
+            this.onlineBibliography.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineEncyclopedia
+            // 
+            this.onlineEncyclopedia.AutoSize = true;
+            this.onlineEncyclopedia.Location = new System.Drawing.Point(403, 427);
+            this.onlineEncyclopedia.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineEncyclopedia.Name = "onlineEncyclopedia";
+            this.onlineEncyclopedia.Size = new System.Drawing.Size(480, 36);
+            this.onlineEncyclopedia.TabIndex = 33;
+            this.onlineEncyclopedia.Text = "Online Encyclopedia or Dictionary";
+            this.onlineEncyclopedia.UseVisualStyleBackColor = true;
+            this.onlineEncyclopedia.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineDissertation
+            // 
+            this.onlineDissertation.AutoSize = true;
+            this.onlineDissertation.Location = new System.Drawing.Point(923, 207);
+            this.onlineDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineDissertation.Name = "onlineDissertation";
+            this.onlineDissertation.Size = new System.Drawing.Size(417, 36);
+            this.onlineDissertation.TabIndex = 32;
+            this.onlineDissertation.Text = "Online Dissertation or Thesis";
+            this.onlineDissertation.UseVisualStyleBackColor = true;
+            this.onlineDissertation.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // bookReview
+            // 
+            this.bookReview.AutoSize = true;
+            this.bookReview.Location = new System.Drawing.Point(403, 537);
+            this.bookReview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookReview.Name = "bookReview";
+            this.bookReview.Size = new System.Drawing.Size(308, 36);
+            this.bookReview.TabIndex = 31;
+            this.bookReview.Text = "Online Book Review";
+            this.bookReview.UseVisualStyleBackColor = true;
+            this.bookReview.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // kindle
+            // 
+            this.kindle.AutoSize = true;
+            this.kindle.Location = new System.Drawing.Point(403, 262);
+            this.kindle.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.kindle.Name = "kindle";
+            this.kindle.Size = new System.Drawing.Size(205, 36);
+            this.kindle.TabIndex = 30;
+            this.kindle.Text = "Kindle Book";
+            this.kindle.UseVisualStyleBackColor = true;
+            this.kindle.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // electronicBook
+            // 
+            this.electronicBook.AutoSize = true;
+            this.electronicBook.Location = new System.Drawing.Point(403, 207);
+            this.electronicBook.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.electronicBook.Name = "electronicBook";
+            this.electronicBook.Size = new System.Drawing.Size(250, 36);
+            this.electronicBook.TabIndex = 29;
+            this.electronicBook.Text = "Electronic Book";
+            this.electronicBook.UseVisualStyleBackColor = true;
+            this.electronicBook.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineNewspaper
+            // 
+            this.onlineNewspaper.AutoSize = true;
+            this.onlineNewspaper.Location = new System.Drawing.Point(403, 153);
+            this.onlineNewspaper.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineNewspaper.Name = "onlineNewspaper";
+            this.onlineNewspaper.Size = new System.Drawing.Size(373, 36);
+            this.onlineNewspaper.TabIndex = 28;
+            this.onlineNewspaper.Text = "Online Newspaper Article";
+            this.onlineNewspaper.UseVisualStyleBackColor = true;
+            this.onlineNewspaper.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlineJournal
+            // 
+            this.onlineJournal.AutoSize = true;
+            this.onlineJournal.Location = new System.Drawing.Point(403, 43);
+            this.onlineJournal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineJournal.Name = "onlineJournal";
+            this.onlineJournal.Size = new System.Drawing.Size(362, 36);
+            this.onlineJournal.TabIndex = 25;
+            this.onlineJournal.Text = "Online Scholarly Journal";
+            this.onlineJournal.UseVisualStyleBackColor = true;
+            this.onlineJournal.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // onlinePeriodical
+            // 
+            this.onlinePeriodical.AutoSize = true;
+            this.onlinePeriodical.Location = new System.Drawing.Point(403, 98);
+            this.onlinePeriodical.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlinePeriodical.Name = "onlinePeriodical";
+            this.onlinePeriodical.Size = new System.Drawing.Size(270, 36);
+            this.onlinePeriodical.TabIndex = 24;
+            this.onlinePeriodical.Text = "Online Periodical";
+            this.onlinePeriodical.UseVisualStyleBackColor = true;
+            this.onlinePeriodical.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // privateOrgReport
+            // 
+            this.privateOrgReport.AutoSize = true;
+            this.privateOrgReport.Location = new System.Drawing.Point(923, 372);
+            this.privateOrgReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.privateOrgReport.Name = "privateOrgReport";
+            this.privateOrgReport.Size = new System.Drawing.Size(403, 36);
+            this.privateOrgReport.TabIndex = 22;
+            this.privateOrgReport.Text = "Private Organization Report";
+            this.privateOrgReport.UseVisualStyleBackColor = true;
+            this.privateOrgReport.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // governmentDocument
+            // 
+            this.governmentDocument.AutoSize = true;
+            this.governmentDocument.Location = new System.Drawing.Point(923, 427);
+            this.governmentDocument.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.governmentDocument.Name = "governmentDocument";
+            this.governmentDocument.Size = new System.Drawing.Size(344, 36);
+            this.governmentDocument.TabIndex = 21;
+            this.governmentDocument.Text = "Government Document";
+            this.governmentDocument.UseVisualStyleBackColor = true;
+            this.governmentDocument.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // unpublishedDissertation
+            // 
+            this.unpublishedDissertation.AutoSize = true;
+            this.unpublishedDissertation.Location = new System.Drawing.Point(923, 317);
+            this.unpublishedDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.unpublishedDissertation.Name = "unpublishedDissertation";
+            this.unpublishedDissertation.Size = new System.Drawing.Size(370, 36);
+            this.unpublishedDissertation.TabIndex = 20;
+            this.unpublishedDissertation.Text = "Unpublished Dissertation";
+            this.unpublishedDissertation.UseVisualStyleBackColor = true;
+            this.unpublishedDissertation.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // publishedDissertation
+            // 
+            this.publishedDissertation.AutoSize = true;
+            this.publishedDissertation.Location = new System.Drawing.Point(923, 262);
+            this.publishedDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.publishedDissertation.Name = "publishedDissertation";
+            this.publishedDissertation.Size = new System.Drawing.Size(337, 36);
+            this.publishedDissertation.TabIndex = 19;
+            this.publishedDissertation.Text = "Published Dissertation";
+            this.publishedDissertation.UseVisualStyleBackColor = true;
+            this.publishedDissertation.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // encyclopedia
+            // 
+            this.encyclopedia.AutoSize = true;
+            this.encyclopedia.Location = new System.Drawing.Point(16, 262);
+            this.encyclopedia.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.encyclopedia.Name = "encyclopedia";
+            this.encyclopedia.Size = new System.Drawing.Size(296, 36);
+            this.encyclopedia.TabIndex = 17;
+            this.encyclopedia.Text = "Encyclopedia Entry";
+            this.encyclopedia.UseVisualStyleBackColor = true;
+            this.encyclopedia.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // translated
+            // 
+            this.translated.AutoSize = true;
+            this.translated.Location = new System.Drawing.Point(16, 317);
+            this.translated.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.translated.Name = "translated";
+            this.translated.Size = new System.Drawing.Size(259, 36);
+            this.translated.TabIndex = 15;
+            this.translated.Text = "Translated Book";
+            this.translated.UseVisualStyleBackColor = true;
+            this.translated.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // bookOneAuth
+            // 
+            this.bookOneAuth.AutoSize = true;
+            this.bookOneAuth.Checked = true;
+            this.bookOneAuth.Location = new System.Drawing.Point(16, 43);
+            this.bookOneAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookOneAuth.Name = "bookOneAuth";
+            this.bookOneAuth.Size = new System.Drawing.Size(285, 36);
+            this.bookOneAuth.TabIndex = 14;
+            this.bookOneAuth.Text = "Book - One Author";
+            this.bookOneAuth.UseVisualStyleBackColor = true;
+            this.bookOneAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // review
+            // 
+            this.review.AutoSize = true;
+            this.review.Location = new System.Drawing.Point(923, 482);
+            this.review.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.review.Name = "review";
+            this.review.Size = new System.Drawing.Size(145, 36);
+            this.review.TabIndex = 13;
+            this.review.Text = "Review";
+            this.review.UseVisualStyleBackColor = true;
+            this.review.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // letterToEditor
+            // 
+            this.letterToEditor.AutoSize = true;
+            this.letterToEditor.Location = new System.Drawing.Point(1403, 537);
+            this.letterToEditor.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.letterToEditor.Name = "letterToEditor";
+            this.letterToEditor.Size = new System.Drawing.Size(285, 36);
+            this.letterToEditor.TabIndex = 12;
+            this.letterToEditor.Text = "Letter to the Editor";
+            this.letterToEditor.UseVisualStyleBackColor = true;
+            this.letterToEditor.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // newspaper
+            // 
+            this.newspaper.AutoSize = true;
+            this.newspaper.Location = new System.Drawing.Point(16, 427);
+            this.newspaper.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.newspaper.Name = "newspaper";
+            this.newspaper.Size = new System.Drawing.Size(282, 36);
+            this.newspaper.TabIndex = 11;
+            this.newspaper.Text = "Newspaper Article";
+            this.newspaper.UseVisualStyleBackColor = true;
+            this.newspaper.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // magazine
+            // 
+            this.magazine.AutoSize = true;
+            this.magazine.Location = new System.Drawing.Point(16, 372);
+            this.magazine.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.magazine.Name = "magazine";
+            this.magazine.Size = new System.Drawing.Size(263, 36);
+            this.magazine.TabIndex = 10;
+            this.magazine.Text = "Magazine Article";
+            this.magazine.UseVisualStyleBackColor = true;
+            this.magazine.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
+            // journal
+            // 
+            this.journal.AutoSize = true;
+            this.journal.Location = new System.Drawing.Point(16, 537);
+            this.journal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.journal.Name = "journal";
+            this.journal.Size = new System.Drawing.Size(233, 36);
+            this.journal.TabIndex = 9;
+            this.journal.Text = "Journal Article";
+            this.journal.UseVisualStyleBackColor = true;
+            this.journal.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            // 
             // sourceInfoGroupBox
             // 
-            this.sourceInfoGroupBox.Controls.Add(this.label5);
-            this.sourceInfoGroupBox.Controls.Add(this.label4);
-            this.sourceInfoGroupBox.Controls.Add(this.label3);
-            this.sourceInfoGroupBox.Controls.Add(this.label2);
-            this.sourceInfoGroupBox.Controls.Add(this.label1);
-            this.sourceInfoGroupBox.Location = new System.Drawing.Point(12, 273);
+            this.sourceInfoGroupBox.Location = new System.Drawing.Point(32, 651);
+            this.sourceInfoGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sourceInfoGroupBox.Name = "sourceInfoGroupBox";
-            this.sourceInfoGroupBox.Size = new System.Drawing.Size(680, 155);
+            this.sourceInfoGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sourceInfoGroupBox.Size = new System.Drawing.Size(1813, 370);
             this.sourceInfoGroupBox.TabIndex = 1;
             this.sourceInfoGroupBox.TabStop = false;
             this.sourceInfoGroupBox.Text = "Source Information";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 202);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(91, 17);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.Text = "Journal Article";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 133);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 17);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.Text = "Magazine Article";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 156);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(111, 17);
-            this.radioButton3.TabIndex = 11;
-            this.radioButton3.Text = "Newspaper Article";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 225);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(112, 17);
-            this.radioButton4.TabIndex = 12;
-            this.radioButton4.Text = "Letter to the Editor";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(346, 202);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(61, 17);
-            this.radioButton5.TabIndex = 13;
-            this.radioButton5.Text = "Review";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Checked = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 18);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(129, 17);
-            this.radioButton6.TabIndex = 14;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Book with One Author";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 110);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(103, 17);
-            this.radioButton7.TabIndex = 15;
-            this.radioButton7.Text = "Translated Book";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 87);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(116, 17);
-            this.radioButton9.TabIndex = 17;
-            this.radioButton9.Text = "Encyclopedia Entry";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(346, 110);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(129, 17);
-            this.radioButton11.TabIndex = 19;
-            this.radioButton11.Text = "Published Dissertation";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(346, 133);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(142, 17);
-            this.radioButton12.TabIndex = 20;
-            this.radioButton12.Text = "Unpublished Dissertation";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // radioButton13
-            // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(346, 179);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(135, 17);
-            this.radioButton13.TabIndex = 21;
-            this.radioButton13.Text = "Government Document";
-            this.radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(346, 156);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(155, 17);
-            this.radioButton14.TabIndex = 22;
-            this.radioButton14.Text = "Private Organization Report";
-            this.radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // radioButton16
-            // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(151, 41);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(104, 17);
-            this.radioButton16.TabIndex = 24;
-            this.radioButton16.Text = "Online Periodical";
-            this.radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // radioButton17
-            // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(151, 18);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(138, 17);
-            this.radioButton17.TabIndex = 25;
-            this.radioButton17.Text = "Online Scholarly Journal";
-            this.radioButton17.UseVisualStyleBackColor = true;
-            // 
-            // radioButton20
-            // 
-            this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(151, 64);
-            this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(144, 17);
-            this.radioButton20.TabIndex = 28;
-            this.radioButton20.Text = "Online Newspaper Article";
-            this.radioButton20.UseVisualStyleBackColor = true;
-            // 
-            // radioButton21
-            // 
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(151, 87);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(100, 17);
-            this.radioButton21.TabIndex = 29;
-            this.radioButton21.Text = "Electronic Book";
-            this.radioButton21.UseVisualStyleBackColor = true;
-            // 
-            // radioButton22
-            // 
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(151, 110);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(82, 17);
-            this.radioButton22.TabIndex = 30;
-            this.radioButton22.Text = "Kindle Book";
-            this.radioButton22.UseVisualStyleBackColor = true;
-            // 
-            // radioButton23
-            // 
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Location = new System.Drawing.Point(151, 225);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(122, 17);
-            this.radioButton23.TabIndex = 31;
-            this.radioButton23.Text = "Online Book Review";
-            this.radioButton23.UseVisualStyleBackColor = true;
-            // 
-            // radioButton24
-            // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(346, 87);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(159, 17);
-            this.radioButton24.TabIndex = 32;
-            this.radioButton24.Text = "Online Dissertation or Thesis";
-            this.radioButton24.UseVisualStyleBackColor = true;
-            // 
-            // radioButton25
-            // 
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(151, 179);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(184, 17);
-            this.radioButton25.TabIndex = 33;
-            this.radioButton25.Text = "Online Encyclopedia or Dictionary";
-            this.radioButton25.UseVisualStyleBackColor = true;
-            // 
-            // radioButton26
-            // 
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(151, 133);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(115, 17);
-            this.radioButton26.TabIndex = 34;
-            this.radioButton26.Text = "Online Bibliography";
-            this.radioButton26.UseVisualStyleBackColor = true;
-            // 
-            // radioButton29
-            // 
-            this.radioButton29.AutoSize = true;
-            this.radioButton29.Location = new System.Drawing.Point(151, 156);
-            this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(101, 17);
-            this.radioButton29.TabIndex = 37;
-            this.radioButton29.Text = "Online Interview";
-            this.radioButton29.UseVisualStyleBackColor = true;
-            // 
-            // radioButton30
-            // 
-            this.radioButton30.AutoSize = true;
-            this.radioButton30.Location = new System.Drawing.Point(346, 225);
-            this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(168, 17);
-            this.radioButton30.TabIndex = 38;
-            this.radioButton30.Text = "Online Lecture Notes or Slides";
-            this.radioButton30.UseVisualStyleBackColor = true;
-            // 
-            // radioButton31
-            // 
-            this.radioButton31.AutoSize = true;
-            this.radioButton31.Location = new System.Drawing.Point(346, 64);
-            this.radioButton31.Name = "radioButton31";
-            this.radioButton31.Size = new System.Drawing.Size(147, 17);
-            this.radioButton31.TabIndex = 39;
-            this.radioButton31.Text = "Web Document or Report";
-            this.radioButton31.UseVisualStyleBackColor = true;
-            // 
-            // radioButton34
-            // 
-            this.radioButton34.AutoSize = true;
-            this.radioButton34.Location = new System.Drawing.Point(151, 202);
-            this.radioButton34.Name = "radioButton34";
-            this.radioButton34.Size = new System.Drawing.Size(184, 17);
-            this.radioButton34.TabIndex = 42;
-            this.radioButton34.Text = "Online Forum or Discussion Board";
-            this.radioButton34.UseVisualStyleBackColor = true;
-            // 
-            // radioButton35
-            // 
-            this.radioButton35.AutoSize = true;
-            this.radioButton35.Location = new System.Drawing.Point(346, 18);
-            this.radioButton35.Name = "radioButton35";
-            this.radioButton35.Size = new System.Drawing.Size(46, 17);
-            this.radioButton35.TabIndex = 43;
-            this.radioButton35.Text = "Blog";
-            this.radioButton35.UseVisualStyleBackColor = true;
-            // 
-            // radioButton36
-            // 
-            this.radioButton36.AutoSize = true;
-            this.radioButton36.Location = new System.Drawing.Point(346, 41);
-            this.radioButton36.Name = "radioButton36";
-            this.radioButton36.Size = new System.Drawing.Size(46, 17);
-            this.radioButton36.TabIndex = 44;
-            this.radioButton36.Text = "Wiki";
-            this.radioButton36.UseVisualStyleBackColor = true;
-            // 
-            // radioButton37
-            // 
-            this.radioButton37.AutoSize = true;
-            this.radioButton37.Location = new System.Drawing.Point(526, 18);
-            this.radioButton37.Name = "radioButton37";
-            this.radioButton37.Size = new System.Drawing.Size(94, 17);
-            this.radioButton37.TabIndex = 45;
-            this.radioButton37.Text = "Audio Podcast";
-            this.radioButton37.UseVisualStyleBackColor = true;
-            // 
-            // radioButton38
-            // 
-            this.radioButton38.AutoSize = true;
-            this.radioButton38.Location = new System.Drawing.Point(526, 41);
-            this.radioButton38.Name = "radioButton38";
-            this.radioButton38.Size = new System.Drawing.Size(94, 17);
-            this.radioButton38.TabIndex = 46;
-            this.radioButton38.Text = "Video Podcast";
-            this.radioButton38.UseVisualStyleBackColor = true;
-            // 
-            // radioButton39
-            // 
-            this.radioButton39.AutoSize = true;
-            this.radioButton39.Location = new System.Drawing.Point(526, 156);
-            this.radioButton39.Name = "radioButton39";
-            this.radioButton39.Size = new System.Drawing.Size(68, 17);
-            this.radioButton39.TabIndex = 47;
-            this.radioButton39.Text = "Interview";
-            this.radioButton39.UseVisualStyleBackColor = true;
-            // 
-            // radioButton40
-            // 
-            this.radioButton40.AutoSize = true;
-            this.radioButton40.Location = new System.Drawing.Point(526, 64);
-            this.radioButton40.Name = "radioButton40";
-            this.radioButton40.Size = new System.Drawing.Size(93, 17);
-            this.radioButton40.TabIndex = 48;
-            this.radioButton40.Text = "Motion Picture";
-            this.radioButton40.UseVisualStyleBackColor = true;
-            // 
-            // radioButton41
-            // 
-            this.radioButton41.AutoSize = true;
-            this.radioButton41.Location = new System.Drawing.Point(526, 87);
-            this.radioButton41.Name = "radioButton41";
-            this.radioButton41.Size = new System.Drawing.Size(90, 17);
-            this.radioButton41.TabIndex = 49;
-            this.radioButton41.Text = "TV Broadcast";
-            this.radioButton41.UseVisualStyleBackColor = true;
-            // 
-            // radioButton42
-            // 
-            this.radioButton42.AutoSize = true;
-            this.radioButton42.Location = new System.Drawing.Point(526, 110);
-            this.radioButton42.Name = "radioButton42";
-            this.radioButton42.Size = new System.Drawing.Size(80, 17);
-            this.radioButton42.TabIndex = 50;
-            this.radioButton42.Text = "TV Episode";
-            this.radioButton42.UseVisualStyleBackColor = true;
-            // 
-            // radioButton43
-            // 
-            this.radioButton43.AutoSize = true;
-            this.radioButton43.Location = new System.Drawing.Point(526, 133);
-            this.radioButton43.Name = "radioButton43";
-            this.radioButton43.Size = new System.Drawing.Size(105, 17);
-            this.radioButton43.TabIndex = 51;
-            this.radioButton43.Text = "Music Recording";
-            this.radioButton43.UseVisualStyleBackColor = true;
-            // 
-            // radioButton44
-            // 
-            this.radioButton44.AutoSize = true;
-            this.radioButton44.Location = new System.Drawing.Point(6, 64);
-            this.radioButton44.Name = "radioButton44";
-            this.radioButton44.Size = new System.Drawing.Size(126, 17);
-            this.radioButton44.TabIndex = 52;
-            this.radioButton44.Text = "Book by Organization";
-            this.radioButton44.UseVisualStyleBackColor = true;
-            // 
-            // radioButton45
-            // 
-            this.radioButton45.AutoSize = true;
-            this.radioButton45.Location = new System.Drawing.Point(6, 41);
-            this.radioButton45.Name = "radioButton45";
-            this.radioButton45.Size = new System.Drawing.Size(123, 17);
-            this.radioButton45.TabIndex = 53;
-            this.radioButton45.Text = "Book with No Author";
-            this.radioButton45.UseVisualStyleBackColor = true;
-            // 
-            // radioButton46
-            // 
-            this.radioButton46.AutoSize = true;
-            this.radioButton46.Location = new System.Drawing.Point(6, 179);
-            this.radioButton46.Name = "radioButton46";
-            this.radioButton46.Size = new System.Drawing.Size(112, 17);
-            this.radioButton46.TabIndex = 54;
-            this.radioButton46.Text = "Anonymous Article";
-            this.radioButton46.UseVisualStyleBackColor = true;
-            // 
-            // radioButton47
-            // 
-            this.radioButton47.AutoSize = true;
-            this.radioButton47.Location = new System.Drawing.Point(526, 179);
-            this.radioButton47.Name = "radioButton47";
-            this.radioButton47.Size = new System.Drawing.Size(50, 17);
-            this.radioButton47.TabIndex = 55;
-            this.radioButton47.Text = "Email";
-            this.radioButton47.UseVisualStyleBackColor = true;
-            // 
-            // radioButton48
-            // 
-            this.radioButton48.AutoSize = true;
-            this.radioButton48.Location = new System.Drawing.Point(526, 202);
-            this.radioButton48.Name = "radioButton48";
-            this.radioButton48.Size = new System.Drawing.Size(141, 17);
-            this.radioButton48.TabIndex = 56;
-            this.radioButton48.Text = "Personal Communication";
-            this.radioButton48.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Author";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Year of Publication";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Title of Work";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Publication Location";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Publisher Name";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(592, 535);
+            this.button1.Location = new System.Drawing.Point(1579, 1276);
+            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(267, 55);
             this.button1.TabIndex = 2;
             this.button1.Text = "Create Citation";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cancelButton
             // 
-            this.button2.Location = new System.Drawing.Point(486, 535);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelButton.Location = new System.Drawing.Point(1296, 1276);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(267, 55);
+            this.cancelButton.TabIndex = 3;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // referenceContentGroupBox
+            // quoteContentGroupBox
             // 
-            this.referenceContentGroupBox.Controls.Add(this.richTextBox1);
-            this.referenceContentGroupBox.Location = new System.Drawing.Point(12, 434);
-            this.referenceContentGroupBox.Name = "referenceContentGroupBox";
-            this.referenceContentGroupBox.Size = new System.Drawing.Size(680, 90);
-            this.referenceContentGroupBox.TabIndex = 4;
-            this.referenceContentGroupBox.TabStop = false;
-            this.referenceContentGroupBox.Text = "Content";
+            this.quoteContentGroupBox.Controls.Add(this.quoteContent);
+            this.quoteContentGroupBox.Location = new System.Drawing.Point(32, 1035);
+            this.quoteContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quoteContentGroupBox.Name = "quoteContentGroupBox";
+            this.quoteContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quoteContentGroupBox.Size = new System.Drawing.Size(1813, 215);
+            this.quoteContentGroupBox.TabIndex = 4;
+            this.quoteContentGroupBox.TabStop = false;
+            this.quoteContentGroupBox.Text = "Content";
             // 
-            // richTextBox1
+            // quoteContent
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(9, 19);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(658, 65);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.quoteContent.Location = new System.Drawing.Point(24, 45);
+            this.quoteContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quoteContent.Name = "quoteContent";
+            this.quoteContent.Size = new System.Drawing.Size(1748, 149);
+            this.quoteContent.TabIndex = 0;
+            this.quoteContent.Text = "";
+            // 
+            // bookMoreAuth
+            // 
+            this.bookMoreAuth.AutoSize = true;
+            this.bookMoreAuth.Location = new System.Drawing.Point(16, 98);
+            this.bookMoreAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookMoreAuth.Name = "bookMoreAuth";
+            this.bookMoreAuth.Size = new System.Drawing.Size(345, 36);
+            this.bookMoreAuth.TabIndex = 57;
+            this.bookMoreAuth.Text = "Book - Multiple Authors";
+            this.bookMoreAuth.UseVisualStyleBackColor = true;
+            this.bookMoreAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
             // 
             // ReferenceAdder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 570);
-            this.Controls.Add(this.referenceContentGroupBox);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1877, 1359);
+            this.Controls.Add(this.quoteContentGroupBox);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sourceInfoGroupBox);
             this.Controls.Add(this.sourceTypeGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1909, 1447);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1909, 1447);
             this.Name = "ReferenceAdder";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Add a Quote and Citation";
             this.sourceTypeGroupBox.ResumeLayout(false);
             this.sourceTypeGroupBox.PerformLayout();
-            this.sourceInfoGroupBox.ResumeLayout(false);
-            this.sourceInfoGroupBox.PerformLayout();
-            this.referenceContentGroupBox.ResumeLayout(false);
+            this.quoteContentGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -643,53 +693,49 @@
 
         private System.Windows.Forms.GroupBox sourceTypeGroupBox;
         private System.Windows.Forms.GroupBox sourceInfoGroupBox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton48;
-        private System.Windows.Forms.RadioButton radioButton47;
-        private System.Windows.Forms.RadioButton radioButton46;
-        private System.Windows.Forms.RadioButton radioButton45;
-        private System.Windows.Forms.RadioButton radioButton44;
-        private System.Windows.Forms.RadioButton radioButton43;
-        private System.Windows.Forms.RadioButton radioButton42;
-        private System.Windows.Forms.RadioButton radioButton41;
-        private System.Windows.Forms.RadioButton radioButton40;
-        private System.Windows.Forms.RadioButton radioButton39;
-        private System.Windows.Forms.RadioButton radioButton38;
-        private System.Windows.Forms.RadioButton radioButton37;
-        private System.Windows.Forms.RadioButton radioButton36;
-        private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.RadioButton radioButton34;
-        private System.Windows.Forms.RadioButton radioButton31;
-        private System.Windows.Forms.RadioButton radioButton30;
-        private System.Windows.Forms.RadioButton radioButton29;
-        private System.Windows.Forms.RadioButton radioButton26;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton22;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton20;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton journal;
+        private System.Windows.Forms.RadioButton personal;
+        private System.Windows.Forms.RadioButton email;
+        private System.Windows.Forms.RadioButton anonymous;
+        private System.Windows.Forms.RadioButton bookNoAuth;
+        private System.Windows.Forms.RadioButton bookByOrg;
+        private System.Windows.Forms.RadioButton music;
+        private System.Windows.Forms.RadioButton tvEpisode;
+        private System.Windows.Forms.RadioButton tvBroadcast;
+        private System.Windows.Forms.RadioButton motionPicture;
+        private System.Windows.Forms.RadioButton interview;
+        private System.Windows.Forms.RadioButton videoPodcast;
+        private System.Windows.Forms.RadioButton audioPodcast;
+        private System.Windows.Forms.RadioButton wiki;
+        private System.Windows.Forms.RadioButton blog;
+        private System.Windows.Forms.RadioButton forumDiscussion;
+        private System.Windows.Forms.RadioButton webDoc;
+        private System.Windows.Forms.RadioButton lectureNotesSlides;
+        private System.Windows.Forms.RadioButton onlineInterview;
+        private System.Windows.Forms.RadioButton onlineBibliography;
+        private System.Windows.Forms.RadioButton onlineEncyclopedia;
+        private System.Windows.Forms.RadioButton onlineDissertation;
+        private System.Windows.Forms.RadioButton bookReview;
+        private System.Windows.Forms.RadioButton kindle;
+        private System.Windows.Forms.RadioButton electronicBook;
+        private System.Windows.Forms.RadioButton onlineNewspaper;
+        private System.Windows.Forms.RadioButton onlineJournal;
+        private System.Windows.Forms.RadioButton onlinePeriodical;
+        private System.Windows.Forms.RadioButton privateOrgReport;
+        private System.Windows.Forms.RadioButton governmentDocument;
+        private System.Windows.Forms.RadioButton unpublishedDissertation;
+        private System.Windows.Forms.RadioButton publishedDissertation;
+        private System.Windows.Forms.RadioButton encyclopedia;
+        private System.Windows.Forms.RadioButton translated;
+        private System.Windows.Forms.RadioButton bookOneAuth;
+        private System.Windows.Forms.RadioButton review;
+        private System.Windows.Forms.RadioButton letterToEditor;
+        private System.Windows.Forms.RadioButton newspaper;
+        private System.Windows.Forms.RadioButton magazine;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox referenceContentGroupBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.GroupBox quoteContentGroupBox;
+        private System.Windows.Forms.RichTextBox quoteContent;
+        private System.Windows.Forms.RadioButton bookMoreAuth;
     }
 }
