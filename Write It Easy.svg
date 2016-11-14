@@ -26,14 +26,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="-524.20192"
-     inkscape:cy="41.479659"
+     inkscape:cx="-853.48763"
+     inkscape:cy="-14.948912"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -388,5 +388,19 @@
        transform="matrix(0.65093106,-0.75913685,0.69013114,0.72368433,0,0)"
        inkscape:export-xdpi="10.420648"
        inkscape:export-ydpi="10.420648" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1124.2856"
+       y="1215.2194"
+       id="text3363"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="48.919243"
+       inkscape:export-ydpi="48.919243"><tspan
+         sodipodi:role="line"
+         id="tspan3365"
+         x="-1124.2856"
+         y="1215.2194"
+         style="-inkscape-font-specification:'Californian FB, Normal';font-family:'Californian FB';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:40px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">&quot;Quotation&quot;</tspan></text>
   </g>
 </svg>
