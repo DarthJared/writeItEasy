@@ -26,3 +26,4 @@ C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Deb
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.pdb
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.exe
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.pdb
+C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csprojResolveAssemblyReference.cache
