@@ -31,7 +31,6 @@
             this.sourceTypeGroupBox = new System.Windows.Forms.GroupBox();
             this.personal = new System.Windows.Forms.RadioButton();
             this.email = new System.Windows.Forms.RadioButton();
-            this.anonymous = new System.Windows.Forms.RadioButton();
             this.bookNoAuth = new System.Windows.Forms.RadioButton();
             this.bookByOrg = new System.Windows.Forms.RadioButton();
             this.music = new System.Windows.Forms.RadioButton();
@@ -69,11 +68,11 @@
             this.magazine = new System.Windows.Forms.RadioButton();
             this.journal = new System.Windows.Forms.RadioButton();
             this.sourceInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.sourceInfoPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.quoteContentGroupBox = new System.Windows.Forms.GroupBox();
             this.quoteContent = new System.Windows.Forms.RichTextBox();
-            this.sourceInfoPanel = new System.Windows.Forms.Panel();
             this.sourceTypeGroupBox.SuspendLayout();
             this.sourceInfoGroupBox.SuspendLayout();
             this.quoteContentGroupBox.SuspendLayout();
@@ -83,7 +82,6 @@
             // 
             this.sourceTypeGroupBox.Controls.Add(this.personal);
             this.sourceTypeGroupBox.Controls.Add(this.email);
-            this.sourceTypeGroupBox.Controls.Add(this.anonymous);
             this.sourceTypeGroupBox.Controls.Add(this.bookNoAuth);
             this.sourceTypeGroupBox.Controls.Add(this.bookByOrg);
             this.sourceTypeGroupBox.Controls.Add(this.music);
@@ -120,11 +118,9 @@
             this.sourceTypeGroupBox.Controls.Add(this.newspaper);
             this.sourceTypeGroupBox.Controls.Add(this.magazine);
             this.sourceTypeGroupBox.Controls.Add(this.journal);
-            this.sourceTypeGroupBox.Location = new System.Drawing.Point(32, 29);
-            this.sourceTypeGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sourceTypeGroupBox.Location = new System.Drawing.Point(12, 12);
             this.sourceTypeGroupBox.Name = "sourceTypeGroupBox";
-            this.sourceTypeGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sourceTypeGroupBox.Size = new System.Drawing.Size(1813, 608);
+            this.sourceTypeGroupBox.Size = new System.Drawing.Size(680, 255);
             this.sourceTypeGroupBox.TabIndex = 0;
             this.sourceTypeGroupBox.TabStop = false;
             this.sourceTypeGroupBox.Text = "Type of Source";
@@ -132,10 +128,9 @@
             // personal
             // 
             this.personal.AutoSize = true;
-            this.personal.Location = new System.Drawing.Point(1403, 482);
-            this.personal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.personal.Location = new System.Drawing.Point(526, 179);
             this.personal.Name = "personal";
-            this.personal.Size = new System.Drawing.Size(370, 36);
+            this.personal.Size = new System.Drawing.Size(141, 17);
             this.personal.TabIndex = 56;
             this.personal.Text = "Personal Communication";
             this.personal.UseVisualStyleBackColor = true;
@@ -144,34 +139,20 @@
             // email
             // 
             this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(1403, 427);
-            this.email.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.email.Location = new System.Drawing.Point(526, 156);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(124, 36);
+            this.email.Size = new System.Drawing.Size(50, 17);
             this.email.TabIndex = 55;
             this.email.Text = "Email";
             this.email.UseVisualStyleBackColor = true;
             this.email.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
             // 
-            // anonymous
-            // 
-            this.anonymous.AutoSize = true;
-            this.anonymous.Location = new System.Drawing.Point(16, 482);
-            this.anonymous.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.anonymous.Name = "anonymous";
-            this.anonymous.Size = new System.Drawing.Size(289, 36);
-            this.anonymous.TabIndex = 54;
-            this.anonymous.Text = "Anonymous Article";
-            this.anonymous.UseVisualStyleBackColor = true;
-            this.anonymous.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
-            // 
             // bookNoAuth
             // 
             this.bookNoAuth.AutoSize = true;
-            this.bookNoAuth.Location = new System.Drawing.Point(16, 153);
-            this.bookNoAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookNoAuth.Location = new System.Drawing.Point(6, 41);
             this.bookNoAuth.Name = "bookNoAuth";
-            this.bookNoAuth.Size = new System.Drawing.Size(306, 36);
+            this.bookNoAuth.Size = new System.Drawing.Size(121, 17);
             this.bookNoAuth.TabIndex = 53;
             this.bookNoAuth.Text = "Book without Author";
             this.bookNoAuth.UseVisualStyleBackColor = true;
@@ -180,10 +161,9 @@
             // bookByOrg
             // 
             this.bookByOrg.AutoSize = true;
-            this.bookByOrg.Location = new System.Drawing.Point(16, 207);
-            this.bookByOrg.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookByOrg.Location = new System.Drawing.Point(6, 64);
             this.bookByOrg.Name = "bookByOrg";
-            this.bookByOrg.Size = new System.Drawing.Size(324, 36);
+            this.bookByOrg.Size = new System.Drawing.Size(126, 17);
             this.bookByOrg.TabIndex = 52;
             this.bookByOrg.Text = "Book by Organization";
             this.bookByOrg.UseVisualStyleBackColor = true;
@@ -192,10 +172,9 @@
             // music
             // 
             this.music.AutoSize = true;
-            this.music.Location = new System.Drawing.Point(1403, 317);
-            this.music.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.music.Location = new System.Drawing.Point(346, 225);
             this.music.Name = "music";
-            this.music.Size = new System.Drawing.Size(263, 36);
+            this.music.Size = new System.Drawing.Size(105, 17);
             this.music.TabIndex = 51;
             this.music.Text = "Music Recording";
             this.music.UseVisualStyleBackColor = true;
@@ -204,10 +183,9 @@
             // tvEpisode
             // 
             this.tvEpisode.AutoSize = true;
-            this.tvEpisode.Location = new System.Drawing.Point(1403, 262);
-            this.tvEpisode.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tvEpisode.Location = new System.Drawing.Point(526, 110);
             this.tvEpisode.Name = "tvEpisode";
-            this.tvEpisode.Size = new System.Drawing.Size(199, 36);
+            this.tvEpisode.Size = new System.Drawing.Size(80, 17);
             this.tvEpisode.TabIndex = 50;
             this.tvEpisode.Text = "TV Episode";
             this.tvEpisode.UseVisualStyleBackColor = true;
@@ -216,10 +194,9 @@
             // tvBroadcast
             // 
             this.tvBroadcast.AutoSize = true;
-            this.tvBroadcast.Location = new System.Drawing.Point(1403, 207);
-            this.tvBroadcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tvBroadcast.Location = new System.Drawing.Point(526, 87);
             this.tvBroadcast.Name = "tvBroadcast";
-            this.tvBroadcast.Size = new System.Drawing.Size(223, 36);
+            this.tvBroadcast.Size = new System.Drawing.Size(90, 17);
             this.tvBroadcast.TabIndex = 49;
             this.tvBroadcast.Text = "TV Broadcast";
             this.tvBroadcast.UseVisualStyleBackColor = true;
@@ -228,10 +205,9 @@
             // motionPicture
             // 
             this.motionPicture.AutoSize = true;
-            this.motionPicture.Location = new System.Drawing.Point(1403, 153);
-            this.motionPicture.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.motionPicture.Location = new System.Drawing.Point(526, 64);
             this.motionPicture.Name = "motionPicture";
-            this.motionPicture.Size = new System.Drawing.Size(234, 36);
+            this.motionPicture.Size = new System.Drawing.Size(93, 17);
             this.motionPicture.TabIndex = 48;
             this.motionPicture.Text = "Motion Picture";
             this.motionPicture.UseVisualStyleBackColor = true;
@@ -240,10 +216,9 @@
             // interview
             // 
             this.interview.AutoSize = true;
-            this.interview.Location = new System.Drawing.Point(1403, 372);
-            this.interview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.interview.Location = new System.Drawing.Point(526, 133);
             this.interview.Name = "interview";
-            this.interview.Size = new System.Drawing.Size(165, 36);
+            this.interview.Size = new System.Drawing.Size(68, 17);
             this.interview.TabIndex = 47;
             this.interview.Text = "Interview";
             this.interview.UseVisualStyleBackColor = true;
@@ -252,10 +227,9 @@
             // videoPodcast
             // 
             this.videoPodcast.AutoSize = true;
-            this.videoPodcast.Location = new System.Drawing.Point(1403, 98);
-            this.videoPodcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.videoPodcast.Location = new System.Drawing.Point(526, 41);
             this.videoPodcast.Name = "videoPodcast";
-            this.videoPodcast.Size = new System.Drawing.Size(236, 36);
+            this.videoPodcast.Size = new System.Drawing.Size(94, 17);
             this.videoPodcast.TabIndex = 46;
             this.videoPodcast.Text = "Video Podcast";
             this.videoPodcast.UseVisualStyleBackColor = true;
@@ -264,10 +238,9 @@
             // audioPodcast
             // 
             this.audioPodcast.AutoSize = true;
-            this.audioPodcast.Location = new System.Drawing.Point(1403, 43);
-            this.audioPodcast.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.audioPodcast.Location = new System.Drawing.Point(526, 18);
             this.audioPodcast.Name = "audioPodcast";
-            this.audioPodcast.Size = new System.Drawing.Size(236, 36);
+            this.audioPodcast.Size = new System.Drawing.Size(94, 17);
             this.audioPodcast.TabIndex = 45;
             this.audioPodcast.Text = "Audio Podcast";
             this.audioPodcast.UseVisualStyleBackColor = true;
@@ -276,10 +249,9 @@
             // wiki
             // 
             this.wiki.AutoSize = true;
-            this.wiki.Location = new System.Drawing.Point(923, 98);
-            this.wiki.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.wiki.Location = new System.Drawing.Point(346, 41);
             this.wiki.Name = "wiki";
-            this.wiki.Size = new System.Drawing.Size(106, 36);
+            this.wiki.Size = new System.Drawing.Size(46, 17);
             this.wiki.TabIndex = 44;
             this.wiki.Text = "Wiki";
             this.wiki.UseVisualStyleBackColor = true;
@@ -288,10 +260,9 @@
             // blog
             // 
             this.blog.AutoSize = true;
-            this.blog.Location = new System.Drawing.Point(923, 43);
-            this.blog.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.blog.Location = new System.Drawing.Point(346, 18);
             this.blog.Name = "blog";
-            this.blog.Size = new System.Drawing.Size(110, 36);
+            this.blog.Size = new System.Drawing.Size(46, 17);
             this.blog.TabIndex = 43;
             this.blog.Text = "Blog";
             this.blog.UseVisualStyleBackColor = true;
@@ -300,10 +271,9 @@
             // forumDiscussion
             // 
             this.forumDiscussion.AutoSize = true;
-            this.forumDiscussion.Location = new System.Drawing.Point(403, 482);
-            this.forumDiscussion.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.forumDiscussion.Location = new System.Drawing.Point(151, 202);
             this.forumDiscussion.Name = "forumDiscussion";
-            this.forumDiscussion.Size = new System.Drawing.Size(484, 36);
+            this.forumDiscussion.Size = new System.Drawing.Size(184, 17);
             this.forumDiscussion.TabIndex = 42;
             this.forumDiscussion.Text = "Online Forum or Discussion Board";
             this.forumDiscussion.UseVisualStyleBackColor = true;
@@ -312,10 +282,9 @@
             // webDoc
             // 
             this.webDoc.AutoSize = true;
-            this.webDoc.Location = new System.Drawing.Point(923, 153);
-            this.webDoc.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.webDoc.Location = new System.Drawing.Point(346, 64);
             this.webDoc.Name = "webDoc";
-            this.webDoc.Size = new System.Drawing.Size(370, 36);
+            this.webDoc.Size = new System.Drawing.Size(147, 17);
             this.webDoc.TabIndex = 39;
             this.webDoc.Text = "Web Document or Report";
             this.webDoc.UseVisualStyleBackColor = true;
@@ -324,10 +293,9 @@
             // lectureNotesSlides
             // 
             this.lectureNotesSlides.AutoSize = true;
-            this.lectureNotesSlides.Location = new System.Drawing.Point(923, 537);
-            this.lectureNotesSlides.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.lectureNotesSlides.Location = new System.Drawing.Point(346, 202);
             this.lectureNotesSlides.Name = "lectureNotesSlides";
-            this.lectureNotesSlides.Size = new System.Drawing.Size(437, 36);
+            this.lectureNotesSlides.Size = new System.Drawing.Size(168, 17);
             this.lectureNotesSlides.TabIndex = 38;
             this.lectureNotesSlides.Text = "Online Lecture Notes or Slides";
             this.lectureNotesSlides.UseVisualStyleBackColor = true;
@@ -336,10 +304,9 @@
             // onlineInterview
             // 
             this.onlineInterview.AutoSize = true;
-            this.onlineInterview.Location = new System.Drawing.Point(403, 372);
-            this.onlineInterview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineInterview.Location = new System.Drawing.Point(151, 156);
             this.onlineInterview.Name = "onlineInterview";
-            this.onlineInterview.Size = new System.Drawing.Size(256, 36);
+            this.onlineInterview.Size = new System.Drawing.Size(101, 17);
             this.onlineInterview.TabIndex = 37;
             this.onlineInterview.Text = "Online Interview";
             this.onlineInterview.UseVisualStyleBackColor = true;
@@ -348,10 +315,9 @@
             // onlineBibliography
             // 
             this.onlineBibliography.AutoSize = true;
-            this.onlineBibliography.Location = new System.Drawing.Point(403, 317);
-            this.onlineBibliography.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineBibliography.Location = new System.Drawing.Point(151, 133);
             this.onlineBibliography.Name = "onlineBibliography";
-            this.onlineBibliography.Size = new System.Drawing.Size(302, 36);
+            this.onlineBibliography.Size = new System.Drawing.Size(115, 17);
             this.onlineBibliography.TabIndex = 34;
             this.onlineBibliography.Text = "Online Bibliography";
             this.onlineBibliography.UseVisualStyleBackColor = true;
@@ -360,10 +326,9 @@
             // onlineEncyclopedia
             // 
             this.onlineEncyclopedia.AutoSize = true;
-            this.onlineEncyclopedia.Location = new System.Drawing.Point(403, 427);
-            this.onlineEncyclopedia.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineEncyclopedia.Location = new System.Drawing.Point(151, 179);
             this.onlineEncyclopedia.Name = "onlineEncyclopedia";
-            this.onlineEncyclopedia.Size = new System.Drawing.Size(480, 36);
+            this.onlineEncyclopedia.Size = new System.Drawing.Size(184, 17);
             this.onlineEncyclopedia.TabIndex = 33;
             this.onlineEncyclopedia.Text = "Online Encyclopedia or Dictionary";
             this.onlineEncyclopedia.UseVisualStyleBackColor = true;
@@ -372,10 +337,9 @@
             // onlineDissertation
             // 
             this.onlineDissertation.AutoSize = true;
-            this.onlineDissertation.Location = new System.Drawing.Point(923, 207);
-            this.onlineDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineDissertation.Location = new System.Drawing.Point(346, 87);
             this.onlineDissertation.Name = "onlineDissertation";
-            this.onlineDissertation.Size = new System.Drawing.Size(417, 36);
+            this.onlineDissertation.Size = new System.Drawing.Size(159, 17);
             this.onlineDissertation.TabIndex = 32;
             this.onlineDissertation.Text = "Online Dissertation or Thesis";
             this.onlineDissertation.UseVisualStyleBackColor = true;
@@ -384,10 +348,9 @@
             // bookReview
             // 
             this.bookReview.AutoSize = true;
-            this.bookReview.Location = new System.Drawing.Point(403, 537);
-            this.bookReview.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookReview.Location = new System.Drawing.Point(151, 225);
             this.bookReview.Name = "bookReview";
-            this.bookReview.Size = new System.Drawing.Size(308, 36);
+            this.bookReview.Size = new System.Drawing.Size(122, 17);
             this.bookReview.TabIndex = 31;
             this.bookReview.Text = "Online Book Review";
             this.bookReview.UseVisualStyleBackColor = true;
@@ -396,10 +359,9 @@
             // kindle
             // 
             this.kindle.AutoSize = true;
-            this.kindle.Location = new System.Drawing.Point(403, 262);
-            this.kindle.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.kindle.Location = new System.Drawing.Point(151, 110);
             this.kindle.Name = "kindle";
-            this.kindle.Size = new System.Drawing.Size(205, 36);
+            this.kindle.Size = new System.Drawing.Size(82, 17);
             this.kindle.TabIndex = 30;
             this.kindle.Text = "Kindle Book";
             this.kindle.UseVisualStyleBackColor = true;
@@ -408,10 +370,9 @@
             // electronicBook
             // 
             this.electronicBook.AutoSize = true;
-            this.electronicBook.Location = new System.Drawing.Point(403, 207);
-            this.electronicBook.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.electronicBook.Location = new System.Drawing.Point(151, 87);
             this.electronicBook.Name = "electronicBook";
-            this.electronicBook.Size = new System.Drawing.Size(250, 36);
+            this.electronicBook.Size = new System.Drawing.Size(100, 17);
             this.electronicBook.TabIndex = 29;
             this.electronicBook.Text = "Electronic Book";
             this.electronicBook.UseVisualStyleBackColor = true;
@@ -420,10 +381,9 @@
             // onlineNewspaper
             // 
             this.onlineNewspaper.AutoSize = true;
-            this.onlineNewspaper.Location = new System.Drawing.Point(403, 153);
-            this.onlineNewspaper.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineNewspaper.Location = new System.Drawing.Point(151, 64);
             this.onlineNewspaper.Name = "onlineNewspaper";
-            this.onlineNewspaper.Size = new System.Drawing.Size(373, 36);
+            this.onlineNewspaper.Size = new System.Drawing.Size(144, 17);
             this.onlineNewspaper.TabIndex = 28;
             this.onlineNewspaper.Text = "Online Newspaper Article";
             this.onlineNewspaper.UseVisualStyleBackColor = true;
@@ -432,10 +392,9 @@
             // onlineJournal
             // 
             this.onlineJournal.AutoSize = true;
-            this.onlineJournal.Location = new System.Drawing.Point(403, 43);
-            this.onlineJournal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlineJournal.Location = new System.Drawing.Point(151, 18);
             this.onlineJournal.Name = "onlineJournal";
-            this.onlineJournal.Size = new System.Drawing.Size(362, 36);
+            this.onlineJournal.Size = new System.Drawing.Size(138, 17);
             this.onlineJournal.TabIndex = 25;
             this.onlineJournal.Text = "Online Scholarly Journal";
             this.onlineJournal.UseVisualStyleBackColor = true;
@@ -444,10 +403,9 @@
             // onlinePeriodical
             // 
             this.onlinePeriodical.AutoSize = true;
-            this.onlinePeriodical.Location = new System.Drawing.Point(403, 98);
-            this.onlinePeriodical.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.onlinePeriodical.Location = new System.Drawing.Point(151, 41);
             this.onlinePeriodical.Name = "onlinePeriodical";
-            this.onlinePeriodical.Size = new System.Drawing.Size(270, 36);
+            this.onlinePeriodical.Size = new System.Drawing.Size(104, 17);
             this.onlinePeriodical.TabIndex = 24;
             this.onlinePeriodical.Text = "Online Periodical";
             this.onlinePeriodical.UseVisualStyleBackColor = true;
@@ -456,10 +414,9 @@
             // privateOrgReport
             // 
             this.privateOrgReport.AutoSize = true;
-            this.privateOrgReport.Location = new System.Drawing.Point(923, 372);
-            this.privateOrgReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.privateOrgReport.Location = new System.Drawing.Point(346, 156);
             this.privateOrgReport.Name = "privateOrgReport";
-            this.privateOrgReport.Size = new System.Drawing.Size(403, 36);
+            this.privateOrgReport.Size = new System.Drawing.Size(155, 17);
             this.privateOrgReport.TabIndex = 22;
             this.privateOrgReport.Text = "Private Organization Report";
             this.privateOrgReport.UseVisualStyleBackColor = true;
@@ -468,10 +425,9 @@
             // governmentDocument
             // 
             this.governmentDocument.AutoSize = true;
-            this.governmentDocument.Location = new System.Drawing.Point(923, 427);
-            this.governmentDocument.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.governmentDocument.Location = new System.Drawing.Point(6, 225);
             this.governmentDocument.Name = "governmentDocument";
-            this.governmentDocument.Size = new System.Drawing.Size(344, 36);
+            this.governmentDocument.Size = new System.Drawing.Size(135, 17);
             this.governmentDocument.TabIndex = 21;
             this.governmentDocument.Text = "Government Document";
             this.governmentDocument.UseVisualStyleBackColor = true;
@@ -480,10 +436,9 @@
             // unpublishedDissertation
             // 
             this.unpublishedDissertation.AutoSize = true;
-            this.unpublishedDissertation.Location = new System.Drawing.Point(923, 317);
-            this.unpublishedDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.unpublishedDissertation.Location = new System.Drawing.Point(346, 133);
             this.unpublishedDissertation.Name = "unpublishedDissertation";
-            this.unpublishedDissertation.Size = new System.Drawing.Size(370, 36);
+            this.unpublishedDissertation.Size = new System.Drawing.Size(142, 17);
             this.unpublishedDissertation.TabIndex = 20;
             this.unpublishedDissertation.Text = "Unpublished Dissertation";
             this.unpublishedDissertation.UseVisualStyleBackColor = true;
@@ -492,10 +447,9 @@
             // publishedDissertation
             // 
             this.publishedDissertation.AutoSize = true;
-            this.publishedDissertation.Location = new System.Drawing.Point(923, 262);
-            this.publishedDissertation.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.publishedDissertation.Location = new System.Drawing.Point(346, 110);
             this.publishedDissertation.Name = "publishedDissertation";
-            this.publishedDissertation.Size = new System.Drawing.Size(337, 36);
+            this.publishedDissertation.Size = new System.Drawing.Size(129, 17);
             this.publishedDissertation.TabIndex = 19;
             this.publishedDissertation.Text = "Published Dissertation";
             this.publishedDissertation.UseVisualStyleBackColor = true;
@@ -504,10 +458,9 @@
             // encyclopedia
             // 
             this.encyclopedia.AutoSize = true;
-            this.encyclopedia.Location = new System.Drawing.Point(16, 262);
-            this.encyclopedia.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.encyclopedia.Location = new System.Drawing.Point(6, 87);
             this.encyclopedia.Name = "encyclopedia";
-            this.encyclopedia.Size = new System.Drawing.Size(296, 36);
+            this.encyclopedia.Size = new System.Drawing.Size(116, 17);
             this.encyclopedia.TabIndex = 17;
             this.encyclopedia.Text = "Encyclopedia Entry";
             this.encyclopedia.UseVisualStyleBackColor = true;
@@ -516,10 +469,9 @@
             // translated
             // 
             this.translated.AutoSize = true;
-            this.translated.Location = new System.Drawing.Point(16, 317);
-            this.translated.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.translated.Location = new System.Drawing.Point(6, 110);
             this.translated.Name = "translated";
-            this.translated.Size = new System.Drawing.Size(259, 36);
+            this.translated.Size = new System.Drawing.Size(103, 17);
             this.translated.TabIndex = 15;
             this.translated.Text = "Translated Book";
             this.translated.UseVisualStyleBackColor = true;
@@ -529,10 +481,9 @@
             // 
             this.bookAuth.AutoSize = true;
             this.bookAuth.Checked = true;
-            this.bookAuth.Location = new System.Drawing.Point(16, 43);
-            this.bookAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookAuth.Location = new System.Drawing.Point(6, 18);
             this.bookAuth.Name = "bookAuth";
-            this.bookAuth.Size = new System.Drawing.Size(266, 36);
+            this.bookAuth.Size = new System.Drawing.Size(106, 17);
             this.bookAuth.TabIndex = 14;
             this.bookAuth.TabStop = true;
             this.bookAuth.Text = "Book with Author";
@@ -542,10 +493,9 @@
             // review
             // 
             this.review.AutoSize = true;
-            this.review.Location = new System.Drawing.Point(923, 482);
-            this.review.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.review.Location = new System.Drawing.Point(346, 179);
             this.review.Name = "review";
-            this.review.Size = new System.Drawing.Size(145, 36);
+            this.review.Size = new System.Drawing.Size(61, 17);
             this.review.TabIndex = 13;
             this.review.Text = "Review";
             this.review.UseVisualStyleBackColor = true;
@@ -554,10 +504,9 @@
             // letterToEditor
             // 
             this.letterToEditor.AutoSize = true;
-            this.letterToEditor.Location = new System.Drawing.Point(1403, 537);
-            this.letterToEditor.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.letterToEditor.Location = new System.Drawing.Point(6, 202);
             this.letterToEditor.Name = "letterToEditor";
-            this.letterToEditor.Size = new System.Drawing.Size(285, 36);
+            this.letterToEditor.Size = new System.Drawing.Size(112, 17);
             this.letterToEditor.TabIndex = 12;
             this.letterToEditor.Text = "Letter to the Editor";
             this.letterToEditor.UseVisualStyleBackColor = true;
@@ -566,10 +515,9 @@
             // newspaper
             // 
             this.newspaper.AutoSize = true;
-            this.newspaper.Location = new System.Drawing.Point(16, 427);
-            this.newspaper.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.newspaper.Location = new System.Drawing.Point(6, 156);
             this.newspaper.Name = "newspaper";
-            this.newspaper.Size = new System.Drawing.Size(282, 36);
+            this.newspaper.Size = new System.Drawing.Size(111, 17);
             this.newspaper.TabIndex = 11;
             this.newspaper.Text = "Newspaper Article";
             this.newspaper.UseVisualStyleBackColor = true;
@@ -578,10 +526,9 @@
             // magazine
             // 
             this.magazine.AutoSize = true;
-            this.magazine.Location = new System.Drawing.Point(16, 372);
-            this.magazine.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.magazine.Location = new System.Drawing.Point(6, 133);
             this.magazine.Name = "magazine";
-            this.magazine.Size = new System.Drawing.Size(263, 36);
+            this.magazine.Size = new System.Drawing.Size(103, 17);
             this.magazine.TabIndex = 10;
             this.magazine.Text = "Magazine Article";
             this.magazine.UseVisualStyleBackColor = true;
@@ -590,10 +537,9 @@
             // journal
             // 
             this.journal.AutoSize = true;
-            this.journal.Location = new System.Drawing.Point(16, 537);
-            this.journal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.journal.Location = new System.Drawing.Point(6, 179);
             this.journal.Name = "journal";
-            this.journal.Size = new System.Drawing.Size(233, 36);
+            this.journal.Size = new System.Drawing.Size(91, 17);
             this.journal.TabIndex = 9;
             this.journal.Text = "Journal Article";
             this.journal.UseVisualStyleBackColor = true;
@@ -602,31 +548,36 @@
             // sourceInfoGroupBox
             // 
             this.sourceInfoGroupBox.Controls.Add(this.sourceInfoPanel);
-            this.sourceInfoGroupBox.Location = new System.Drawing.Point(32, 651);
-            this.sourceInfoGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sourceInfoGroupBox.Location = new System.Drawing.Point(12, 273);
             this.sourceInfoGroupBox.Name = "sourceInfoGroupBox";
-            this.sourceInfoGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sourceInfoGroupBox.Size = new System.Drawing.Size(1813, 370);
+            this.sourceInfoGroupBox.Size = new System.Drawing.Size(680, 155);
             this.sourceInfoGroupBox.TabIndex = 1;
             this.sourceInfoGroupBox.TabStop = false;
             this.sourceInfoGroupBox.Text = "Source Information";
             // 
+            // sourceInfoPanel
+            // 
+            this.sourceInfoPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.sourceInfoPanel.Location = new System.Drawing.Point(9, 19);
+            this.sourceInfoPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.sourceInfoPanel.Name = "sourceInfoPanel";
+            this.sourceInfoPanel.Size = new System.Drawing.Size(666, 138);
+            this.sourceInfoPanel.TabIndex = 0;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1579, 1276);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.button1.Location = new System.Drawing.Point(592, 535);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 55);
+            this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Create Citation";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(1296, 1276);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.cancelButton.Location = new System.Drawing.Point(486, 535);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(267, 55);
+            this.cancelButton.Size = new System.Drawing.Size(100, 23);
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -635,48 +586,36 @@
             // quoteContentGroupBox
             // 
             this.quoteContentGroupBox.Controls.Add(this.quoteContent);
-            this.quoteContentGroupBox.Location = new System.Drawing.Point(32, 1035);
-            this.quoteContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quoteContentGroupBox.Location = new System.Drawing.Point(12, 434);
             this.quoteContentGroupBox.Name = "quoteContentGroupBox";
-            this.quoteContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.quoteContentGroupBox.Size = new System.Drawing.Size(1813, 215);
+            this.quoteContentGroupBox.Size = new System.Drawing.Size(680, 90);
             this.quoteContentGroupBox.TabIndex = 4;
             this.quoteContentGroupBox.TabStop = false;
             this.quoteContentGroupBox.Text = "Content";
             // 
             // quoteContent
             // 
-            this.quoteContent.Location = new System.Drawing.Point(24, 45);
-            this.quoteContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.quoteContent.Location = new System.Drawing.Point(9, 19);
             this.quoteContent.Name = "quoteContent";
-            this.quoteContent.Size = new System.Drawing.Size(1748, 149);
+            this.quoteContent.Size = new System.Drawing.Size(658, 65);
             this.quoteContent.TabIndex = 0;
             this.quoteContent.Text = "";
             // 
-            // sourceInfoPanel
-            // 
-            this.sourceInfoPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.sourceInfoPanel.Location = new System.Drawing.Point(24, 46);
-            this.sourceInfoPanel.Name = "sourceInfoPanel";
-            this.sourceInfoPanel.Size = new System.Drawing.Size(1777, 330);
-            this.sourceInfoPanel.TabIndex = 0;
-            // 
             // ReferenceAdder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1877, 1359);
+            this.ClientSize = new System.Drawing.Size(704, 429);
             this.Controls.Add(this.quoteContentGroupBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sourceInfoGroupBox);
             this.Controls.Add(this.sourceTypeGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1909, 1447);
+            this.MaximumSize = new System.Drawing.Size(726, 629);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1909, 1447);
+            this.MinimumSize = new System.Drawing.Size(639, 445);
             this.Name = "ReferenceAdder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Add a Quote and Citation";
@@ -695,7 +634,6 @@
         private System.Windows.Forms.RadioButton journal;
         private System.Windows.Forms.RadioButton personal;
         private System.Windows.Forms.RadioButton email;
-        private System.Windows.Forms.RadioButton anonymous;
         private System.Windows.Forms.RadioButton bookNoAuth;
         private System.Windows.Forms.RadioButton bookByOrg;
         private System.Windows.Forms.RadioButton music;
