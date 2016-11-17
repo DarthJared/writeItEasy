@@ -19,9 +19,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             this.Width = 1909;
             this.Height = 1447;
             sourceInfoGroupBox.Height = 155;
+            sourceInfoPanel.Height = 135;
 
-            bookOneAuth.Checked = false;
-            bookOneAuth.Checked = true;
+            bookAuth.Checked = false;
+            bookAuth.Checked = true;
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -31,274 +32,493 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private int getSourceInfoHeight(int numSourceInfo)
         {
-            return (numSourceInfo * 25) + 30;
+            return (numSourceInfo * 25) + 5;
         }
 
         private void removeInsideInfo()
         {
-            sourceInfoGroupBox.Controls.Clear();
+            sourceInfoPanel.Controls.Clear();
         }
+
+        private void authorAdderButton_Click(object sender, EventArgs e)
+        {
+            Control firstAuthor = Controls.Find("authorFirstEnter1", true)[0];
+            Control middleAuthor = Controls.Find("authorMiddleEnter1", true)[0];
+            Control lastAuthor = Controls.Find("authorLastEnter1", true)[0];
+            sourceInfoPanel.VerticalScroll.Value = 0;
+            string numAuth = sourceInfoGroupBox.Tag.ToString().Split(',')[0];
+            string numPieces = sourceInfoGroupBox.Tag.ToString().Split(',')[1];
+            string newIndex = (Convert.ToInt32(numAuth) + 1).ToString();
+            string newPieces = (Convert.ToInt32(numPieces) + 1).ToString();
+            addAuthor(Convert.ToInt32(newPieces), 25, "authorFirstEnter" + numAuth);
+            Button addAuthorButton = (Button)Controls.Find("authorAdderButton", true)[0];
+            addAuthorButton.Location = new Point(addAuthorButton.Location.X, addAuthorButton.Location.Y - 25);
+
+            Label authorLabel = new Label();
+            authorLabel.Text = "Author:";
+            sourceInfoPanel.Controls.Add(authorLabel);
+            authorLabel.Location = new Point(0, 0);
+
+            TextBox authorFirstEnter = new TextBox();
+            authorFirstEnter.Name = "authorFirstEnter" + newIndex;
+            sourceInfoPanel.Controls.Add(authorFirstEnter);
+            authorFirstEnter.Location = new Point(firstAuthor.Location.X, 0);
+            authorFirstEnter.Width = 100;
+
+            TextBox authorMiddleEnter = new TextBox();
+            authorMiddleEnter.Name = "authorMiddleEnter" + newIndex;
+            sourceInfoPanel.Controls.Add(authorMiddleEnter);
+            authorMiddleEnter.Location = new Point(middleAuthor.Location.X, 0);
+            authorMiddleEnter.Width = 100;
+
+            TextBox authorLastEnter = new TextBox();
+            authorLastEnter.Name = "authorLastEnter" + newIndex;
+            sourceInfoPanel.Controls.Add(authorLastEnter);
+            authorLastEnter.Location = new Point(lastAuthor.Location.X, 0);
+            authorLastEnter.Width = 100;
+
+            sourceInfoGroupBox.Tag = newIndex + "," + newPieces;
+        }
+
+        //highestControlName is the highest thing to lower
+        private void addAuthor(int newNum, int pixels, string highestControlName)
+        {
+            Control highest = Controls.Find(highestControlName, true)[0];
+            int highestY = highest.Location.Y;
+            Control parent = highest.Parent;
+
+            foreach (Control child in parent.Controls)
+            {
+                if (child.Location.Y >= highestY)
+                {
+                    child.Location = new Point(child.Location.X, child.Location.Y + pixels);
+                }
+            }
+
+            if (getSourceInfoHeight(newNum) > 135)
+            {
+                sourceInfoPanel.Height = 135;
+                sourceInfoGroupBox.Height = 160;
+                sourceInfoPanel.AutoScroll = true;
+
+                moveTo("quoteContentGroupBox", 434);
+            }
+            else
+            {
+                sourceInfoPanel.Height = getSourceInfoHeight(newNum);
+                sourceInfoGroupBox.Height = getSourceInfoHeight(newNum) + 25;
+                sourceInfoPanel.VerticalScroll.Value = 0;
+                sourceInfoPanel.AutoScroll = false;
+
+                moveTo("quoteContentGroupBox", getSourceInfoHeight(newNum) + 299);
+            }
+        }
+
+        private void moveTo(string controlName, int yPos)
+        {
+            Control controlToMove = Controls.Find(controlName, true)[0];
+            int yDiff = yPos - controlToMove.Location.Y;
+            int topY = controlToMove.Location.Y;
+            Control parent = controlToMove.Parent;
+
+            foreach (Control child in parent.Controls)
+            {
+                if (child.Location.Y >= topY)
+                {
+                    child.Location = new Point(child.Location.X, child.Location.Y + yDiff);
+                }
+            }
+            parent.Height += yDiff;
+        }        
 
         private void referenceTypeChange(object sender, EventArgs e)
         {
-            if (bookOneAuth.Checked)
+            if (bookAuth.Checked)
             {
                 removeInsideInfo(); 
 
-                sourceInfoGroupBox.Height = getSourceInfoHeight(5);
+                if (getSourceInfoHeight(5) > 135)
+                {
+                    sourceInfoPanel.Height = 135;
+                    sourceInfoGroupBox.Height = 160;
+                    sourceInfoPanel.AutoScroll = true;
+
+                    moveTo("quoteContentGroupBox", 434);
+                }
+                else
+                {
+                    sourceInfoPanel.Height = getSourceInfoHeight(5);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(5) + 25;
+                    sourceInfoPanel.VerticalScroll.Value = 0;
+                    sourceInfoPanel.AutoScroll = false;
+
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(5) + 299);
+                }
+                sourceInfoGroupBox.Tag = "1,5";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
-                sourceInfoGroupBox.Controls.Add(authorLabel);
-                authorLabel.Location = new Point(16, 25);
+                sourceInfoPanel.Controls.Add(authorLabel);
+                authorLabel.Location = new Point(0, 0);
 
                 TextBox authorFirstEnter = new TextBox();
-                authorFirstEnter.Name = "authorFirstEnter";
-                sourceInfoGroupBox.Controls.Add(authorFirstEnter);
-                authorFirstEnter.Location = new Point(125, 25);
+                authorFirstEnter.Name = "authorFirstEnter1";
+                sourceInfoPanel.Controls.Add(authorFirstEnter);
+                authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
 
                 TextBox authorMiddleEnter = new TextBox();
-                authorMiddleEnter.Name = "authorMiddleEnter";
-                sourceInfoGroupBox.Controls.Add(authorMiddleEnter);
-                authorMiddleEnter.Location = new Point(240, 25);
+                authorMiddleEnter.Name = "authorMiddleEnter1";
+                sourceInfoPanel.Controls.Add(authorMiddleEnter);
+                authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
 
                 TextBox authorLastEnter = new TextBox();
-                authorLastEnter.Name = "authorLastEnter";
-                sourceInfoGroupBox.Controls.Add(authorLastEnter);
-                authorLastEnter.Location = new Point(355, 25);
+                authorLastEnter.Name = "authorLastEnter1";
+                sourceInfoPanel.Controls.Add(authorLastEnter);
+                authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+
+                Button authorAdder = new Button();
+                authorAdder.Name = "authorAdderButton";
+                authorAdder.Text = "Add an Author";
+                authorAdder.Width = 100;
+                sourceInfoPanel.Controls.Add(authorAdder);
+                authorAdder.Location = new Point(459, 0);
+                authorAdder.Click += new EventHandler(authorAdderButton_Click);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
-                sourceInfoGroupBox.Controls.Add(bookTitleLabel);
-                bookTitleLabel.Location = new Point(16, 50);
+                sourceInfoPanel.Controls.Add(bookTitleLabel);
+                bookTitleLabel.Location = new Point(0, 25);
 
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
-                sourceInfoGroupBox.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(125, 50);
+                sourceInfoPanel.Controls.Add(titleEnter);
+                titleEnter.Location = new Point(109, 25);
                 titleEnter.Width = 150;
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
-                sourceInfoGroupBox.Controls.Add(publisherLabel);
-                publisherLabel.Location = new Point(16, 75);
+                sourceInfoPanel.Controls.Add(publisherLabel);
+                publisherLabel.Location = new Point(0, 50);
 
                 TextBox publisherEnter = new TextBox();
                 publisherEnter.Name = "publisherEnter";
-                sourceInfoGroupBox.Controls.Add(publisherEnter);
-                publisherEnter.Location = new Point(125, 75);
+                sourceInfoPanel.Controls.Add(publisherEnter);
+                publisherEnter.Location = new Point(109, 50);
                 publisherEnter.Width = 150;
 
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Publication Date:";
-                sourceInfoGroupBox.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(16, 100);
+                sourceInfoPanel.Controls.Add(publishDateLabel);
+                publishDateLabel.Location = new Point(0, 75);
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
-                sourceInfoGroupBox.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(125, 100);
+                sourceInfoPanel.Controls.Add(publishDateEnter);
+                publishDateEnter.Location = new Point(109, 75);
                 publishDateEnter.Width = 150;
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
-                sourceInfoGroupBox.Controls.Add(editionLabel);
-                editionLabel.Location = new Point(16, 125);
+                sourceInfoPanel.Controls.Add(editionLabel);
+                editionLabel.Location = new Point(0, 100);
 
                 TextBox editionEnter = new TextBox();
                 editionEnter.Name = "editionEnter";
-                sourceInfoGroupBox.Controls.Add(editionEnter);
-                editionEnter.Location = new Point(125, 125);
+                sourceInfoPanel.Controls.Add(editionEnter);
+                editionEnter.Location = new Point(109, 100);
                 editionEnter.Width = 150;
-            }
-            else if (bookMoreAuth.Checked)
-            {
-                removeInsideInfo();
-
             }
             else if (bookNoAuth.Checked)
             {
                 removeInsideInfo();
-                sourceInfoGroupBox.Height = getSourceInfoHeight(4);
+                if (getSourceInfoHeight(4) > 135)
+                {
+                    sourceInfoPanel.Height = 135;
+                    sourceInfoGroupBox.Height = 160;
+                    sourceInfoPanel.AutoScroll = true;
+
+                    moveTo("quoteContentGroupBox", 434);
+                }
+                else
+                {
+                    sourceInfoPanel.Height = getSourceInfoHeight(4);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(4) + 25;
+                    sourceInfoPanel.VerticalScroll.Value = 0;
+                    sourceInfoPanel.AutoScroll = false;
+
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(4) + 299);
+                }
                 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
-                sourceInfoGroupBox.Controls.Add(bookTitleLabel);
-                bookTitleLabel.Location = new Point(16, 25);
+                sourceInfoPanel.Controls.Add(bookTitleLabel);
+                bookTitleLabel.Location = new Point(0, 0);
 
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
-                sourceInfoGroupBox.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(125, 25);
+                sourceInfoPanel.Controls.Add(titleEnter);
+                titleEnter.Location = new Point(109, 0);
                 titleEnter.Width = 150;
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
-                sourceInfoGroupBox.Controls.Add(publisherLabel);
-                publisherLabel.Location = new Point(16, 50);
+                sourceInfoPanel.Controls.Add(publisherLabel);
+                publisherLabel.Location = new Point(0, 25);
 
                 TextBox publisherEnter = new TextBox();
                 publisherEnter.Name = "publisherEnter";
-                sourceInfoGroupBox.Controls.Add(publisherEnter);
-                publisherEnter.Location = new Point(125, 50);
+                sourceInfoPanel.Controls.Add(publisherEnter);
+                publisherEnter.Location = new Point(109, 25);
                 publisherEnter.Width = 150;
 
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Publication Date:";
-                sourceInfoGroupBox.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(16, 75);
+                sourceInfoPanel.Controls.Add(publishDateLabel);
+                publishDateLabel.Location = new Point(0, 50);
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
-                sourceInfoGroupBox.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(125, 75);
+                sourceInfoPanel.Controls.Add(publishDateEnter);
+                publishDateEnter.Location = new Point(109, 50);
                 publishDateEnter.Width = 150;
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
-                sourceInfoGroupBox.Controls.Add(editionLabel);
-                editionLabel.Location = new Point(16, 100);
+                sourceInfoPanel.Controls.Add(editionLabel);
+                editionLabel.Location = new Point(0, 75);
 
                 TextBox editionEnter = new TextBox();
                 editionEnter.Name = "editionEnter";
-                sourceInfoGroupBox.Controls.Add(editionEnter);
-                editionEnter.Location = new Point(125, 100);
+                sourceInfoPanel.Controls.Add(editionEnter);
+                editionEnter.Location = new Point(109, 75);
                 editionEnter.Width = 150;
             }
             else if (bookByOrg.Checked)
             {
                 removeInsideInfo();
-                sourceInfoGroupBox.Height = getSourceInfoHeight(5);
+                if (getSourceInfoHeight(5) > 135)
+                {
+                    sourceInfoPanel.Height = 135;
+                    sourceInfoGroupBox.Height = 160;
+                    sourceInfoPanel.AutoScroll = true;
+
+                    moveTo("quoteContentGroupBox", 434);
+                }
+                else
+                {
+                    sourceInfoPanel.Height = getSourceInfoHeight(5);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(5) + 25;
+                    sourceInfoPanel.VerticalScroll.Value = 0;
+                    sourceInfoPanel.AutoScroll = false;
+
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(5) + 299);
+                }
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Organization:";
-                sourceInfoGroupBox.Controls.Add(authorLabel);
-                authorLabel.Location = new Point(16, 25);
+                sourceInfoPanel.Controls.Add(authorLabel);
+                authorLabel.Location = new Point(0, 0);
 
                 TextBox authorEnter = new TextBox();
                 authorEnter.Name = "authorEnter";
-                sourceInfoGroupBox.Controls.Add(authorEnter);
-                authorEnter.Location = new Point(125, 25);
+                sourceInfoPanel.Controls.Add(authorEnter);
+                authorEnter.Location = new Point(109, 0);
                 authorEnter.Width = 150;
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
-                sourceInfoGroupBox.Controls.Add(bookTitleLabel);
-                bookTitleLabel.Location = new Point(16, 50);
+                sourceInfoPanel.Controls.Add(bookTitleLabel);
+                bookTitleLabel.Location = new Point(0, 25);
 
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
-                sourceInfoGroupBox.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(125, 50);
+                sourceInfoPanel.Controls.Add(titleEnter);
+                titleEnter.Location = new Point(109, 25);
                 titleEnter.Width = 150;
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
-                sourceInfoGroupBox.Controls.Add(publisherLabel);
-                publisherLabel.Location = new Point(16, 75);
+                sourceInfoPanel.Controls.Add(publisherLabel);
+                publisherLabel.Location = new Point(0, 50);
 
                 TextBox publisherEnter = new TextBox();
                 publisherEnter.Name = "publisherEnter";
-                sourceInfoGroupBox.Controls.Add(publisherEnter);
-                publisherEnter.Location = new Point(125, 75);
+                sourceInfoPanel.Controls.Add(publisherEnter);
+                publisherEnter.Location = new Point(109, 50);
                 publisherEnter.Width = 150;
 
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Publication Date:";
-                sourceInfoGroupBox.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(16, 100);
+                sourceInfoPanel.Controls.Add(publishDateLabel);
+                publishDateLabel.Location = new Point(0, 75);
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
-                sourceInfoGroupBox.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(125, 100);
+                sourceInfoPanel.Controls.Add(publishDateEnter);
+                publishDateEnter.Location = new Point(109, 75);
                 publishDateEnter.Width = 150;
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
-                sourceInfoGroupBox.Controls.Add(editionLabel);
-                editionLabel.Location = new Point(16, 125);
+                sourceInfoPanel.Controls.Add(editionLabel);
+                editionLabel.Location = new Point(0, 100);
 
                 TextBox editionEnter = new TextBox();
                 editionEnter.Name = "editionEnter";
-                sourceInfoGroupBox.Controls.Add(editionEnter);
-                editionEnter.Location = new Point(125, 125);
+                sourceInfoPanel.Controls.Add(editionEnter);
+                editionEnter.Location = new Point(109, 100);
                 editionEnter.Width = 150;
             }
             else if (encyclopedia.Checked)
             {
                 removeInsideInfo();
-                sourceInfoGroupBox.Height = getSourceInfoHeight(5);
+                if (getSourceInfoHeight(8) > 135)
+                {
+                    sourceInfoPanel.Height = 135;
+                    sourceInfoGroupBox.Height = 160;
+                    sourceInfoPanel.AutoScroll = true;
 
-                Label publishDateLabel = new Label();
-                publishDateLabel.Text = "Publication Date:";
-                sourceInfoGroupBox.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(16, 25);
+                    moveTo("quoteContentGroupBox", 434);
+                }
+                else
+                {
+                    sourceInfoPanel.Height = getSourceInfoHeight(8);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
+                    sourceInfoPanel.VerticalScroll.Value = 0;
+                    sourceInfoPanel.AutoScroll = false;
 
-                TextBox publishDateEnter = new TextBox();
-                publishDateEnter.Name = "publishDateEnter";
-                sourceInfoGroupBox.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(200, 25);
-                publishDateEnter.Width = 150;
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 299);
+                }
+                sourceInfoGroupBox.Tag = "1,8";
 
-                Label termLabel = new Label();
-                termLabel.Text = "Term Referenced:";
-                sourceInfoGroupBox.Controls.Add(termLabel);
-                termLabel.Location = new Point(16, 50);
+                Label authorLabel = new Label();
+                authorLabel.Text = "Author:";
+                sourceInfoPanel.Controls.Add(authorLabel);
+                authorLabel.Location = new Point(0, 0);
 
-                TextBox termEnter = new TextBox();
-                termEnter.Name = "termEnter";
-                sourceInfoGroupBox.Controls.Add(termEnter);
-                termEnter.Location = new Point(200, 50);
-                termEnter.Width = 150;
+                TextBox authorFirstEnter = new TextBox();
+                authorFirstEnter.Name = "authorFirstEnter1";
+                sourceInfoPanel.Controls.Add(authorFirstEnter);
+                authorFirstEnter.Location = new Point(180, 0);
+                authorFirstEnter.Width = 100;
 
-                Label encycDictTitleLabel = new Label();
-                encycDictTitleLabel.Text = "Encyclopedia or Dictionary Name:";
-                sourceInfoGroupBox.Controls.Add(encycDictTitleLabel);
-                encycDictTitleLabel.Location = new Point(16, 75);
-                encycDictTitleLabel.Width = 175;
+                TextBox authorMiddleEnter = new TextBox();
+                authorMiddleEnter.Name = "authorMiddleEnter1";
+                sourceInfoPanel.Controls.Add(authorMiddleEnter);
+                authorMiddleEnter.Location = new Point(295, 0);
+                authorMiddleEnter.Width = 100;
 
-                TextBox titleEnter = new TextBox();
-                titleEnter.Name = "titleEnter";
-                sourceInfoGroupBox.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(200, 75);
-                titleEnter.Width = 150;
+                TextBox authorLastEnter = new TextBox();
+                authorLastEnter.Name = "authorLastEnter1";
+                sourceInfoPanel.Controls.Add(authorLastEnter);
+                authorLastEnter.Location = new Point(410, 0);
+                authorLastEnter.Width = 100;
+
+                Button authorAdder = new Button();
+                authorAdder.Name = "authorAdderButton";
+                authorAdder.Text = "Add an Author";
+                authorAdder.Width = 100;
+                sourceInfoPanel.Controls.Add(authorAdder);
+                authorAdder.Location = new Point(530, 0);
+                authorAdder.Click += new EventHandler(authorAdderButton_Click);
+
+                Label publicationYearLabel = new Label();
+                publicationYearLabel.Text = "Year of Publication:";
+                sourceInfoPanel.Controls.Add(publicationYearLabel);
+                publicationYearLabel.Location = new Point(0, 25);
+
+                TextBox publicationYearEnter = new TextBox();
+                publicationYearEnter.Name = "publicationYearEnter";
+                sourceInfoPanel.Controls.Add(publicationYearEnter);
+                publicationYearEnter.Location = new Point(180, 25);
+                publicationYearEnter.Width = 150;
+
+                Label sectionNameLabel = new Label();
+                sectionNameLabel.Text = "Section Referenced:";
+                sourceInfoPanel.Controls.Add(sectionNameLabel);
+                sectionNameLabel.Location = new Point(0, 50);
+
+                TextBox sectionNameEnter = new TextBox();
+                sectionNameEnter.Name = "sectionNameEnter";
+                sourceInfoPanel.Controls.Add(sectionNameEnter);
+                sectionNameEnter.Location = new Point(180, 50);
+                sectionNameEnter.Width = 150;
+
+                Label bookNameLabel = new Label();
+                bookNameLabel.Text = "Title of Encyclopedia/Dictionary:";
+                sourceInfoPanel.Controls.Add(bookNameLabel);
+                bookNameLabel.Location = new Point(0, 75);
+                bookNameLabel.Width = 180;
+
+                TextBox bookNameEnter = new TextBox();
+                bookNameEnter.Name = "bookNameEnter";
+                sourceInfoPanel.Controls.Add(bookNameEnter);
+                bookNameEnter.Location = new Point(180, 75);
+                bookNameEnter.Width = 150;
 
                 Label volumeLabel = new Label();
                 volumeLabel.Text = "Volume:";
-                sourceInfoGroupBox.Controls.Add(volumeLabel);
-                volumeLabel.Location = new Point(16, 100);
+                sourceInfoPanel.Controls.Add(volumeLabel);
+                volumeLabel.Location = new Point(0, 100);
 
                 TextBox volumeEnter = new TextBox();
                 volumeEnter.Name = "volumeEnter";
-                sourceInfoGroupBox.Controls.Add(volumeEnter);
-                volumeEnter.Location = new Point(200, 100);
+                sourceInfoPanel.Controls.Add(volumeEnter);
+                volumeEnter.Location = new Point(180, 100);
                 volumeEnter.Width = 150;
 
-                Label pagesLabel = new Label();
-                pagesLabel.Text = "Pages:";
-                sourceInfoGroupBox.Controls.Add(pagesLabel);
-                pagesLabel.Location = new Point(16, 125);
+                Label pageStartLabel = new Label();
+                pageStartLabel.Text = "Start Page:";
+                sourceInfoPanel.Controls.Add(pageStartLabel);
+                pageStartLabel.Location = new Point(0, 125);
 
                 TextBox pageStartEnter = new TextBox();
                 pageStartEnter.Name = "pageStartEnter";
-                sourceInfoGroupBox.Controls.Add(pageStartEnter);
-                pageStartEnter.Location = new Point(200, 125);
-                pageStartEnter.Width = 100;
+                sourceInfoPanel.Controls.Add(pageStartEnter);
+                pageStartEnter.Location = new Point(180, 125);
+                pageStartEnter.Width = 150;
+
+                Label pageEndLabel = new Label();
+                pageEndLabel.Text = "End Page:";
+                sourceInfoPanel.Controls.Add(pageEndLabel);
+                pageEndLabel.Location = new Point(0, 125);
 
                 TextBox pageEndEnter = new TextBox();
                 pageEndEnter.Name = "pageEndEnter";
-                sourceInfoGroupBox.Controls.Add(pageEndEnter);
-                pageEndEnter.Location = new Point(315, 125);
-                pageEndEnter.Width = 100;
+                sourceInfoPanel.Controls.Add(pageEndEnter);
+                pageEndEnter.Location = new Point(180, 125);
+                pageEndEnter.Width = 150;
 
+                Label publishLocationLabel = new Label();
+                publishLocationLabel.Text = "Publication Location:";
+                sourceInfoPanel.Controls.Add(publishLocationLabel);
+                publishLocationLabel.Location = new Point(0, 150);
+
+                TextBox publicationLocationEnter = new TextBox();
+                publicationLocationEnter.Name = "publicationLocationEnter";
+                sourceInfoPanel.Controls.Add(publicationLocationEnter);
+                publicationLocationEnter.Location = new Point(180, 150);
+                publicationLocationEnter.Width = 150;
+
+                Label publisherLabel = new Label();
+                publisherLabel.Text = "Publisher Name:";
+                sourceInfoPanel.Controls.Add(publisherLabel);
+                publisherLabel.Location = new Point(0, 175);
+
+                TextBox publisherEnter = new TextBox();
+                publisherEnter.Name = "publisherEnter";
+                sourceInfoPanel.Controls.Add(publisherEnter);
+                publisherEnter.Location = new Point(180, 175);
+                publisherEnter.Width = 150;
             }
             else if (translated.Checked)
             {
                 removeInsideInfo();
+
+
                 
             }
             else if (magazine.Checked)

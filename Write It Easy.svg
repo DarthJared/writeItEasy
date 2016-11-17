@@ -27,13 +27,22 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
      inkscape:cx="-853.48763"
+<<<<<<< HEAD
      inkscape:cy="42.193945"
+=======
+     inkscape:cy="-14.948912"
+>>>>>>> 26322497e92b2e88e1ea30d797ff1cdbbeadc08c
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
+<<<<<<< HEAD
      inkscape:window-width="1680"
      inkscape:window-height="988"
+=======
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
+>>>>>>> 26322497e92b2e88e1ea30d797ff1cdbbeadc08c
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -388,6 +397,7 @@
        transform="matrix(0.65093106,-0.75913685,0.69013114,0.72368433,0,0)"
        inkscape:export-xdpi="10.420648"
        inkscape:export-ydpi="10.420648" />
+<<<<<<< HEAD
     <flowRoot
        xml:space="preserve"
        id="flowRoot4163"
@@ -403,4 +413,21 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT, Normal';text-align:start;writing-mode:lr;text-anchor:start;" /></flowRegion><flowPara
          id="flowPara4169"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT, Normal';text-align:start;writing-mode:lr;text-anchor:start;">&quot;Reference&quot;</flowPara></flowRoot>  </g>
+=======
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1124.2856"
+       y="1215.2194"
+       id="text3363"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="48.919243"
+       inkscape:export-ydpi="48.919243"><tspan
+         sodipodi:role="line"
+         id="tspan3365"
+         x="-1124.2856"
+         y="1215.2194"
+         style="-inkscape-font-specification:'Californian FB, Normal';font-family:'Californian FB';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:40px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">&quot;Quotation&quot;</tspan></text>
+  </g>
+>>>>>>> 26322497e92b2e88e1ea30d797ff1cdbbeadc08c
 </svg>

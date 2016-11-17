@@ -62,7 +62,7 @@
             this.publishedDissertation = new System.Windows.Forms.RadioButton();
             this.encyclopedia = new System.Windows.Forms.RadioButton();
             this.translated = new System.Windows.Forms.RadioButton();
-            this.bookOneAuth = new System.Windows.Forms.RadioButton();
+            this.bookAuth = new System.Windows.Forms.RadioButton();
             this.review = new System.Windows.Forms.RadioButton();
             this.letterToEditor = new System.Windows.Forms.RadioButton();
             this.newspaper = new System.Windows.Forms.RadioButton();
@@ -73,14 +73,14 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.quoteContentGroupBox = new System.Windows.Forms.GroupBox();
             this.quoteContent = new System.Windows.Forms.RichTextBox();
-            this.bookMoreAuth = new System.Windows.Forms.RadioButton();
+            this.sourceInfoPanel = new System.Windows.Forms.Panel();
             this.sourceTypeGroupBox.SuspendLayout();
+            this.sourceInfoGroupBox.SuspendLayout();
             this.quoteContentGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // sourceTypeGroupBox
             // 
-            this.sourceTypeGroupBox.Controls.Add(this.bookMoreAuth);
             this.sourceTypeGroupBox.Controls.Add(this.personal);
             this.sourceTypeGroupBox.Controls.Add(this.email);
             this.sourceTypeGroupBox.Controls.Add(this.anonymous);
@@ -114,7 +114,7 @@
             this.sourceTypeGroupBox.Controls.Add(this.publishedDissertation);
             this.sourceTypeGroupBox.Controls.Add(this.encyclopedia);
             this.sourceTypeGroupBox.Controls.Add(this.translated);
-            this.sourceTypeGroupBox.Controls.Add(this.bookOneAuth);
+            this.sourceTypeGroupBox.Controls.Add(this.bookAuth);
             this.sourceTypeGroupBox.Controls.Add(this.review);
             this.sourceTypeGroupBox.Controls.Add(this.letterToEditor);
             this.sourceTypeGroupBox.Controls.Add(this.newspaper);
@@ -171,9 +171,9 @@
             this.bookNoAuth.Location = new System.Drawing.Point(16, 153);
             this.bookNoAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bookNoAuth.Name = "bookNoAuth";
-            this.bookNoAuth.Size = new System.Drawing.Size(267, 36);
+            this.bookNoAuth.Size = new System.Drawing.Size(306, 36);
             this.bookNoAuth.TabIndex = 53;
-            this.bookNoAuth.Text = "Book - No Author";
+            this.bookNoAuth.Text = "Book without Author";
             this.bookNoAuth.UseVisualStyleBackColor = true;
             this.bookNoAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
             // 
@@ -525,18 +525,19 @@
             this.translated.UseVisualStyleBackColor = true;
             this.translated.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
             // 
-            // bookOneAuth
+            // bookAuth
             // 
-            this.bookOneAuth.AutoSize = true;
-            this.bookOneAuth.Checked = true;
-            this.bookOneAuth.Location = new System.Drawing.Point(16, 43);
-            this.bookOneAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.bookOneAuth.Name = "bookOneAuth";
-            this.bookOneAuth.Size = new System.Drawing.Size(285, 36);
-            this.bookOneAuth.TabIndex = 14;
-            this.bookOneAuth.Text = "Book - One Author";
-            this.bookOneAuth.UseVisualStyleBackColor = true;
-            this.bookOneAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            this.bookAuth.AutoSize = true;
+            this.bookAuth.Checked = true;
+            this.bookAuth.Location = new System.Drawing.Point(16, 43);
+            this.bookAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.bookAuth.Name = "bookAuth";
+            this.bookAuth.Size = new System.Drawing.Size(266, 36);
+            this.bookAuth.TabIndex = 14;
+            this.bookAuth.TabStop = true;
+            this.bookAuth.Text = "Book with Author";
+            this.bookAuth.UseVisualStyleBackColor = true;
+            this.bookAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
             // 
             // review
             // 
@@ -600,6 +601,7 @@
             // 
             // sourceInfoGroupBox
             // 
+            this.sourceInfoGroupBox.Controls.Add(this.sourceInfoPanel);
             this.sourceInfoGroupBox.Location = new System.Drawing.Point(32, 651);
             this.sourceInfoGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sourceInfoGroupBox.Name = "sourceInfoGroupBox";
@@ -651,17 +653,13 @@
             this.quoteContent.TabIndex = 0;
             this.quoteContent.Text = "";
             // 
-            // bookMoreAuth
+            // sourceInfoPanel
             // 
-            this.bookMoreAuth.AutoSize = true;
-            this.bookMoreAuth.Location = new System.Drawing.Point(16, 98);
-            this.bookMoreAuth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.bookMoreAuth.Name = "bookMoreAuth";
-            this.bookMoreAuth.Size = new System.Drawing.Size(345, 36);
-            this.bookMoreAuth.TabIndex = 57;
-            this.bookMoreAuth.Text = "Book - Multiple Authors";
-            this.bookMoreAuth.UseVisualStyleBackColor = true;
-            this.bookMoreAuth.CheckedChanged += new System.EventHandler(this.referenceTypeChange);
+            this.sourceInfoPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.sourceInfoPanel.Location = new System.Drawing.Point(24, 46);
+            this.sourceInfoPanel.Name = "sourceInfoPanel";
+            this.sourceInfoPanel.Size = new System.Drawing.Size(1777, 330);
+            this.sourceInfoPanel.TabIndex = 0;
             // 
             // ReferenceAdder
             // 
@@ -684,6 +682,7 @@
             this.Text = "Add a Quote and Citation";
             this.sourceTypeGroupBox.ResumeLayout(false);
             this.sourceTypeGroupBox.PerformLayout();
+            this.sourceInfoGroupBox.ResumeLayout(false);
             this.quoteContentGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -727,7 +726,7 @@
         private System.Windows.Forms.RadioButton publishedDissertation;
         private System.Windows.Forms.RadioButton encyclopedia;
         private System.Windows.Forms.RadioButton translated;
-        private System.Windows.Forms.RadioButton bookOneAuth;
+        private System.Windows.Forms.RadioButton bookAuth;
         private System.Windows.Forms.RadioButton review;
         private System.Windows.Forms.RadioButton letterToEditor;
         private System.Windows.Forms.RadioButton newspaper;
@@ -736,6 +735,6 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.GroupBox quoteContentGroupBox;
         private System.Windows.Forms.RichTextBox quoteContent;
-        private System.Windows.Forms.RadioButton bookMoreAuth;
+        private System.Windows.Forms.Panel sourceInfoPanel;
     }
 }
