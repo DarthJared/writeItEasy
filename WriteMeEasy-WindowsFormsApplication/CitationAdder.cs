@@ -422,7 +422,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (book.Checked)
             {
-                removeInsideInfo(); 
+                removeInsideInfo();
 
                 if (getSourceInfoHeight(6) > 135)
                 {
@@ -1200,7 +1200,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(newspaperNameEnter);
                 newspaperNameEnter.Location = new Point(109, 75);
                 newspaperNameEnter.Width = 150;
-                
+
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
                 sourceInfoPanel.Controls.Add(pageStartLabel);
@@ -1716,7 +1716,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrieveFromEnter.Location = new Point(109, 100);
                 retrieveFromEnter.Width = 150;
             }
-            else if (electronicBook.Checked)
+            else if (true)//electronicBook.Checked)
             {
                 removeInsideInfo();
 
@@ -1791,7 +1791,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
-                
+
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
                 sourceInfoPanel.Controls.Add(retrievedFromLabel);
@@ -1803,7 +1803,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrieveFromEnter.Location = new Point(109, 75);
                 retrieveFromEnter.Width = 150;
             }
-            else if (kindle.Checked)
+            else if (true)//kindle.Checked)
             {
                 removeInsideInfo();
 
@@ -1879,7 +1879,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
             }
-            else if (onlineBibliography.Checked)
+            else if (true)//onlineBibliography.Checked)
             {
                 removeInsideInfo();
 
@@ -1966,7 +1966,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrieveFromEnter.Location = new Point(109, 75);
                 retrieveFromEnter.Width = 150;
             }
-            else if (onlineInterview.Checked)
+            else if (true)//onlineInterview.Checked)
             {
                 removeInsideInfo();
 
@@ -2243,7 +2243,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrieveFromEnter.Location = new Point(109, 100);
                 retrieveFromEnter.Width = 150;
             }
-            else if (bookReview.Checked)
+            else if (true)//bookReview.Checked)
             {
                 removeInsideInfo();
 
@@ -2400,7 +2400,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 225);
                 retrievedFromEnter.Width = 150;
             }
-            else if (blog.Checked)
+            else if (true)// blog.Checked)
             {
                 removeInsideInfo();
 
@@ -2481,7 +2481,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 75);
                 retrievedFromEnter.Width = 150;
             }
-            else if (wiki.Checked)
+            else if (true)//wiki.Checked)
             {
                 removeInsideInfo();
 
@@ -2550,7 +2550,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 75);
                 retrievedFromEnter.Width = 150;
             }
-            else if (webDoc.Checked)
+            else if (true)//webDoc.Checked)
             {
                 removeInsideInfo();
 
@@ -2639,7 +2639,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 75);
                 retrievedFromEnter.Width = 150;
             }
-            else if (onlineDissertation.Checked)
+            else if (true)//onlineDissertation.Checked)
             {
                 removeInsideInfo();
 
@@ -2930,7 +2930,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 locationEnter.Location = new Point(109, 100);
                 locationEnter.Width = 150;
             } 
-            else if (privateOrgReport.Checked)
+            else if (true)//privateOrgReport.Checked)
             {
                 removeInsideInfo();
 
@@ -3285,7 +3285,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 pageEndEnter.Location = new Point(180, 225);
                 pageEndEnter.Width = 150;
             }
-            else if (lectureNotesSlides.Checked)
+            else if (true)//lectureNotesSlides.Checked)
             {
                 removeInsideInfo();
 
@@ -3374,7 +3374,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 75);
                 retrievedFromEnter.Width = 150;
             }
-            else if (audioPodcast.Checked)
+            else if (true)//audioPodcast.Checked)
             {
                 removeInsideInfo();
 
@@ -3475,7 +3475,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 retrievedFromEnter.Location = new Point(109, 100);
                 retrievedFromEnter.Width = 150;
             }
-            else if (videoPodcast.Checked)
+            else if (true)//videoPodcast.Checked)
             {
                 removeInsideInfo();
 
@@ -3708,7 +3708,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 countryEnter.Location = new Point(109, 100);
                 countryEnter.Width = 150;
             }
-            else if (tvBroadcast.Checked)
+            else if (true)//tvBroadcast.Checked)
             {
                 removeInsideInfo();
 
@@ -4225,7 +4225,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 dateEnter.Location = new Point(109, 25);
                 dateEnter.Width = 150;
             }
-            else if (personal.Checked)
+            else if (true)//personal.Checked)
             {
                 removeInsideInfo();
 
