@@ -57,7 +57,7 @@
             this.journal = new System.Windows.Forms.RadioButton();
             this.sourceInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.sourceInfoPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addReferenceButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.quoteContentGroupBox = new System.Windows.Forms.GroupBox();
             this.quoteContent = new System.Windows.Forms.RichTextBox();
@@ -409,14 +409,14 @@
             this.sourceInfoPanel.Size = new System.Drawing.Size(666, 138);
             this.sourceInfoPanel.TabIndex = 0;
             // 
-            // button1
+            // addReferenceButton
             // 
-            this.button1.Location = new System.Drawing.Point(592, 455);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Create Citation";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addReferenceButton.Location = new System.Drawing.Point(592, 455);
+            this.addReferenceButton.Name = "addReferenceButton";
+            this.addReferenceButton.Size = new System.Drawing.Size(100, 23);
+            this.addReferenceButton.TabIndex = 2;
+            this.addReferenceButton.Text = "Create Citation";
+            this.addReferenceButton.UseVisualStyleBackColor = true;
             // 
             // cancelButton
             // 
@@ -473,7 +473,7 @@
             this.ClientSize = new System.Drawing.Size(694, 482);
             this.Controls.Add(this.quoteContentGroupBox);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addReferenceButton);
             this.Controls.Add(this.sourceInfoGroupBox);
             this.Controls.Add(this.sourceTypeGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -519,7 +519,7 @@
         private System.Windows.Forms.RadioButton letterToEditor;
         private System.Windows.Forms.RadioButton newspaper;
         private System.Windows.Forms.RadioButton magazine;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addReferenceButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.GroupBox quoteContentGroupBox;
         private System.Windows.Forms.RichTextBox quoteContent;

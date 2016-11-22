@@ -19,10 +19,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         public int tabsHangingIndent;
         public bool emptyLineBetweenReferences;
         public string orderBy;
-
+        public List<Reference> references;
         public ReferencesConfig()
         {
-
+            references = new List<Reference>();
         }
     }
 }

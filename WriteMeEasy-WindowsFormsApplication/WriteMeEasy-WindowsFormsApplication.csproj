@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author.cs" />
     <Compile Include="Conclusion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,7 @@
     <Compile Include="CitationAdder.Designer.cs">
       <DependentUpon>CitationAdder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reference.cs" />
     <Compile Include="ReferenceAdder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,9 @@
     </Compile>
     <Compile Include="SectionsConfig.cs" />
     <Compile Include="Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreReferences.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubSection.cs" />
