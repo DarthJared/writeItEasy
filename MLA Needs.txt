@@ -36,10 +36,12 @@ Publication Date
 Pages (Start and End)
 
 Government Document:
-Author/s or Government Breakdown
+Author or Government Breakdown
 Title of Document
 Publisher
 Date of Publication
+Retrieved From
+Accessed
 
 Published Dissertation:
 Author/s
@@ -89,11 +91,13 @@ Pages
 
 Letter to the Editor:
 Writer
+Title
 Work Written To
-Date
+Date of Publication
 Pages (Start and End)
 
 Editorial:
+Author
 Title of Editorial
 Source of Editorial
 Date of Publication
@@ -135,6 +139,7 @@ Retrieved From
 Accessed
 
 Online-Only Scholarly Journal:
+Author/s
 Title of Article
 Title of Journal
 Volume Number
@@ -181,14 +186,6 @@ Date Given
 Venue (location given)
 City and State Given
 Kind of Address
-
-Painting, Sculpture, or Photograph:
-Artist
-Title of Artwork
-Date of Composition
-Medium Used
-Institution that houses work
-City and State where work is housed
 
 Song:
 Artist

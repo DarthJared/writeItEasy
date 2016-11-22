@@ -1149,8 +1149,21 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
-            var referencePopup = new ReferenceAdder();
-            referencePopup.ShowDialog(this);
+            if (apaRadio.Checked)
+            {
+                var referencePopup = new ReferenceAdder();
+                referencePopup.ShowDialog(this);
+            }
+            else if (mlaRadio.Checked)
+            {
+                var citationPopup = new CitationAdder();
+                citationPopup.ShowDialog(this);
+            }
+            else
+            {
+
+            }
+            
         }
     }
 }
