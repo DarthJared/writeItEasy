@@ -845,7 +845,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(7) > 135)
+                if (getSourceInfoHeight(8) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -855,14 +855,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(7);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(7) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(8);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(7) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,7,1";
+                sourceInfoGroupBox.Tag = "1,8,1";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
@@ -872,19 +872,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox authorFirstEnter = new TextBox();
                 authorFirstEnter.Name = "authorFirstEnter1";
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
-                authorFirstEnter.Location = new Point(109, 0);
+                authorFirstEnter.Location = new Point(180, 0);
                 authorFirstEnter.Width = 100;
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
-                authorMiddleEnter.Location = new Point(224, 0);
+                authorMiddleEnter.Location = new Point(295, 0);
                 authorMiddleEnter.Width = 100;
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
-                authorLastEnter.Location = new Point(339, 0);
+                authorLastEnter.Location = new Point(410, 0);
                 authorLastEnter.Width = 100;
 
                 Button authorTransAdder = new Button();
@@ -892,7 +892,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 authorTransAdder.Text = "Add an Author";
                 authorTransAdder.Width = 100;
                 sourceInfoPanel.Controls.Add(authorTransAdder);
-                authorTransAdder.Location = new Point(459, 0);
+                authorTransAdder.Location = new Point(530, 0);
                 authorTransAdder.Click += new EventHandler(authorTransAdderButton_Click);
 
                 Label publishDateLabel = new Label();
@@ -903,7 +903,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
                 sourceInfoPanel.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(109, 25);
+                publishDateEnter.Location = new Point(180, 25);
                 publishDateEnter.Width = 150;
 
                 Label bookTitleLabel = new Label();
@@ -914,7 +914,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
                 sourceInfoPanel.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(109, 50);
+                titleEnter.Location = new Point(180, 50);
                 titleEnter.Width = 150;
 
                 Label translatorLabel = new Label();
@@ -925,27 +925,27 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox translatorFirstEnter = new TextBox();
                 translatorFirstEnter.Name = "translatorFirstEnter1";
                 sourceInfoPanel.Controls.Add(translatorFirstEnter);
-                translatorFirstEnter.Location = new Point(109, 75);
+                translatorFirstEnter.Location = new Point(180, 75);
                 translatorFirstEnter.Width = 100;
 
                 TextBox translatorMiddleEnter = new TextBox();
                 translatorMiddleEnter.Name = "translatorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(translatorMiddleEnter);
-                translatorMiddleEnter.Location = new Point(224, 75);
+                translatorMiddleEnter.Location = new Point(295, 75);
                 translatorMiddleEnter.Width = 100;
 
                 TextBox translatorLastEnter = new TextBox();
                 translatorLastEnter.Name = "translatorLastEnter1";
                 sourceInfoPanel.Controls.Add(translatorLastEnter);
-                translatorLastEnter.Location = new Point(339, 75);
+                translatorLastEnter.Location = new Point(410, 75);
                 translatorLastEnter.Width = 100;
 
                 Button translatorAdder = new Button();
                 translatorAdder.Name = "translatorAdderButton";
                 translatorAdder.Text = "Add an Translator";
-                translatorAdder.Width = 120;
+                translatorAdder.Width = 110;
                 sourceInfoPanel.Controls.Add(translatorAdder);
-                translatorAdder.Location = new Point(459, 75);
+                translatorAdder.Location = new Point(530, 75);
                 translatorAdder.Click += new EventHandler(translatorAdderButton_Click);
 
                 Label publishLocationLabel = new Label();
@@ -957,7 +957,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox publishLocationEnter = new TextBox();
                 publishLocationEnter.Name = "publishLocationEnter";
                 sourceInfoPanel.Controls.Add(publishLocationEnter);
-                publishLocationEnter.Location = new Point(109, 100);
+                publishLocationEnter.Location = new Point(180, 100);
                 publishLocationEnter.Width = 150;
 
                 Label publisherLabel = new Label();
@@ -968,18 +968,30 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox publisherEnter = new TextBox();
                 publisherEnter.Name = "publisherEnter";
                 sourceInfoPanel.Controls.Add(publisherEnter);
-                publisherEnter.Location = new Point(109, 125);
+                publisherEnter.Location = new Point(180, 125);
                 publisherEnter.Width = 150;
+
+                Label originalPublishDateLabel = new Label();
+                originalPublishDateLabel.Text = "Original Publication Year:";
+                sourceInfoPanel.Controls.Add(originalPublishDateLabel);
+                originalPublishDateLabel.Location = new Point(0, 150);
+                originalPublishDateLabel.Width = 180;
+
+                TextBox originalPublishDateEnter = new TextBox();
+                originalPublishDateEnter.Name = "originalPublishDateEnter";
+                sourceInfoPanel.Controls.Add(originalPublishDateEnter);
+                originalPublishDateEnter.Location = new Point(180, 150);
+                originalPublishDateEnter.Width = 150;
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
                 sourceInfoPanel.Controls.Add(editionLabel);
-                editionLabel.Location = new Point(0, 150);
+                editionLabel.Location = new Point(0, 175);
 
                 TextBox editionEnter = new TextBox();
                 editionEnter.Name = "editionEnter";
                 sourceInfoPanel.Controls.Add(editionEnter);
-                editionEnter.Location = new Point(109, 150);
+                editionEnter.Location = new Point(180, 175);
                 editionEnter.Width = 150;
 
             }
@@ -1118,7 +1130,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(6) > 135)
+                if (getSourceInfoHeight(8) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -1128,12 +1140,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(6);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(6) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(8);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(6) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 299);
                 }
                 sourceInfoGroupBox.Tag = "1,8";
 
@@ -1200,27 +1212,49 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(newspaperNameEnter);
                 newspaperNameEnter.Location = new Point(109, 75);
                 newspaperNameEnter.Width = 150;
-                
+
+                Label volumeNumberLabel = new Label();
+                volumeNumberLabel.Text = "Volume Number:";
+                sourceInfoPanel.Controls.Add(volumeNumberLabel);
+                volumeNumberLabel.Location = new Point(0, 100);
+
+                TextBox volumeNumberEnter = new TextBox();
+                volumeNumberEnter.Name = "volumeNumberEnter";
+                sourceInfoPanel.Controls.Add(volumeNumberEnter);
+                volumeNumberEnter.Location = new Point(109, 100);
+                volumeNumberEnter.Width = 150;
+
+                Label issueNumberLabel = new Label();
+                issueNumberLabel.Text = "Issue Number:";
+                sourceInfoPanel.Controls.Add(issueNumberLabel);
+                issueNumberLabel.Location = new Point(0, 125);
+
+                TextBox issueNumberEnter = new TextBox();
+                issueNumberEnter.Name = "issueNumberEnter";
+                sourceInfoPanel.Controls.Add(issueNumberEnter);
+                issueNumberEnter.Location = new Point(109, 125);
+                issueNumberEnter.Width = 150;
+
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
                 sourceInfoPanel.Controls.Add(pageStartLabel);
-                pageStartLabel.Location = new Point(0, 100);
+                pageStartLabel.Location = new Point(0, 150);
 
                 TextBox pageStartEnter = new TextBox();
                 pageStartEnter.Name = "pageStartEnter";
                 sourceInfoPanel.Controls.Add(pageStartEnter);
-                pageStartEnter.Location = new Point(109, 100);
+                pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
                 sourceInfoPanel.Controls.Add(pageEndLabel);
-                pageEndLabel.Location = new Point(0, 125);
+                pageEndLabel.Location = new Point(0, 175);
 
                 TextBox pageEndEnter = new TextBox();
                 pageEndEnter.Name = "pageEndEnter";
                 sourceInfoPanel.Controls.Add(pageEndEnter);
-                pageEndEnter.Location = new Point(109, 125);
+                pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
 
             }
