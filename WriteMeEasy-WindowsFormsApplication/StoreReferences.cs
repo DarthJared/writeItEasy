@@ -16,6 +16,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 reference.type = "bookAuth";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
+                
                 for (int i = 0; i < numAuthors; i++)
                 {
                     int index = i + 1;
@@ -26,7 +27,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                     author.firstName = firstName.Text;
                     author.middleName = middleName.Text;
                     author.lastName = lastName.Text;
-                    reference.authors.Add(author);
+                    if (author.firstName.Length > 0 || author.middleName.Length > 0 || author.lastName.Length > 0)
+                    {
+                        reference.authors.Add(author);
+                    }                    
                 }
                 TextBox publishDate = (TextBox)Controls.Find("publishDateEnter", true)[0];
                 reference.publicationDate = publishDate.Text;
@@ -40,12 +44,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                 reference.edition = edition.Text;
 
                 reference.formattedReference = "";
+               
                 if (reference.authors.Count > 0)
                 {
                     for (int i = 0; i < reference.authors.Count; i++)
                     {
                         bool elipseAdded = false;
-                        if (i < 6 && i != reference.authors.Count)
+                        if (i < 6 && i != reference.authors.Count - 1)
                         {
                             if (reference.authors[i].lastName.Length > 0)
                             {
@@ -65,10 +70,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                             if (reference.authors[i].middleName.Length > 0)
                             {
-                                reference.formattedReference += reference.authors[i].middleName + "., ";
+                                reference.formattedReference += reference.authors[i].middleName[0].ToString().ToUpper() + "., ";
                             }
                         }
-                        else if (i != reference.authors.Count)
+                        else if (i == reference.authors.Count - 1)
                         {
                             if (reference.authors[i].lastName.Length > 0)
                             {
@@ -77,6 +82,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     reference.formattedReference += ",";
                                 }
+                                reference.formattedReference += " ";
                             }
                             if (reference.authors[i].firstName.Length > 0)
                             {
@@ -84,10 +90,75 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                             if (reference.authors[i].middleName.Length > 0)
                             {
-                                reference.formattedReference += reference.authors[i].middleName + ". ";
+                                reference.formattedReference += reference.authors[i].middleName[0].ToString().ToUpper() + ". ";
+                            }
+                        }
+                        else
+                        {
+                            if (!elipseAdded)
+                            {
+                                elipseAdded = true;
+                                reference.formattedReference += ". . . ";
                             }
                         }
                     }
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        reference.formattedReference += '\a';
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }                                
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        if (reference.edition.Length > 0)
+                        {
+                            reference.formattedReference += " (" + reference.edition + " ed.)";
+                        }
+                        reference.formattedReference += ". ";
+                        reference.formattedReference += '\a';
+                    }
+                    if (reference.publishLocation.Length > 0)
+                    {
+                        if (reference.publisher.Length > 0)
+                        {
+                            reference.formattedReference += reference.publishLocation + ": ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += reference.publishLocation + ".";
+                        }
+                    }
+                    if (reference.publisher.Length > 0)
+                    {
+                        reference.formattedReference += reference.publisher + ".";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Enter an author or switch reference type to \"Book without Author\"");
                 }
             }
             else if (bookNoAuth.Checked)
@@ -243,6 +314,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             }
             Form1.myPaper.references.references.Add(reference);
+            this.Close();
         }
     }
 }
