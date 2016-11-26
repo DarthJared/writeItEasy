@@ -24,6 +24,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         public string endPage;
         public string originalPublishDate;
         public string source;
+        public string retrievedFrom;
+        public string doi;
 
         public Reference()
         {

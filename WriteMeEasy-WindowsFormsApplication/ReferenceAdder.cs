@@ -1394,7 +1394,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(8) > 135)
+                if (getSourceInfoHeight(10) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -1404,14 +1404,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(8);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(10);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(10) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(10) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,8";
+                sourceInfoGroupBox.Tag = "1,10";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
@@ -1499,33 +1499,55 @@ namespace WriteMeEasy_WindowsFormsApplication
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
 
+                Label pageStartLabel = new Label();
+                pageStartLabel.Text = "Start Page:";
+                sourceInfoPanel.Controls.Add(pageStartLabel);
+                pageStartLabel.Location = new Point(0, 150);
+
+                TextBox pageStartEnter = new TextBox();
+                pageStartEnter.Name = "pageStartEnter";
+                sourceInfoPanel.Controls.Add(pageStartEnter);
+                pageStartEnter.Location = new Point(109, 150);
+                pageStartEnter.Width = 150;
+
+                Label pageEndLabel = new Label();
+                pageEndLabel.Text = "End Page:";
+                sourceInfoPanel.Controls.Add(pageEndLabel);
+                pageEndLabel.Location = new Point(0, 175);
+
+                TextBox pageEndEnter = new TextBox();
+                pageEndEnter.Name = "pageEndEnter";
+                sourceInfoPanel.Controls.Add(pageEndEnter);
+                pageEndEnter.Location = new Point(109, 175);
+                pageEndEnter.Width = 150;
+
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
                 sourceInfoPanel.Controls.Add(retrievedFromLabel);
-                retrievedFromLabel.Location = new Point(0, 150);
+                retrievedFromLabel.Location = new Point(0, 200);
 
                 TextBox retrievedFromEnter = new TextBox();
                 retrievedFromEnter.Name = "retrievedFromEnter";
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
-                retrievedFromEnter.Location = new Point(109, 150);
+                retrievedFromEnter.Location = new Point(109, 200);
                 retrievedFromEnter.Width = 150;
 
                 Label doiLabel = new Label();
                 doiLabel.Text = "DOI:";
                 sourceInfoPanel.Controls.Add(doiLabel);
-                doiLabel.Location = new Point(0, 175);
+                doiLabel.Location = new Point(0, 225);
 
                 TextBox doiEnter = new TextBox();
                 doiEnter.Name = "doiEnter";
                 sourceInfoPanel.Controls.Add(doiEnter);
-                doiEnter.Location = new Point(109, 175);
+                doiEnter.Location = new Point(109, 225);
                 doiEnter.Width = 150;
             }
             else if (onlinePeriodical.Checked)
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(8) > 135)
+                if (getSourceInfoHeight(10) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -1535,14 +1557,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(8);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(10);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(10) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(10) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,8";
+                sourceInfoGroupBox.Tag = "1,10";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
@@ -1630,26 +1652,48 @@ namespace WriteMeEasy_WindowsFormsApplication
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
 
+                Label pageStartLabel = new Label();
+                pageStartLabel.Text = "Start Page:";
+                sourceInfoPanel.Controls.Add(pageStartLabel);
+                pageStartLabel.Location = new Point(0, 150);
+
+                TextBox pageStartEnter = new TextBox();
+                pageStartEnter.Name = "pageStartEnter";
+                sourceInfoPanel.Controls.Add(pageStartEnter);
+                pageStartEnter.Location = new Point(109, 150);
+                pageStartEnter.Width = 150;
+
+                Label pageEndLabel = new Label();
+                pageEndLabel.Text = "End Page:";
+                sourceInfoPanel.Controls.Add(pageEndLabel);
+                pageEndLabel.Location = new Point(0, 175);
+
+                TextBox pageEndEnter = new TextBox();
+                pageEndEnter.Name = "pageEndEnter";
+                sourceInfoPanel.Controls.Add(pageEndEnter);
+                pageEndEnter.Location = new Point(109, 175);
+                pageEndEnter.Width = 150;
+
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
                 sourceInfoPanel.Controls.Add(retrievedFromLabel);
-                retrievedFromLabel.Location = new Point(0, 150);
+                retrievedFromLabel.Location = new Point(0, 200);
 
                 TextBox retrievedFromEnter = new TextBox();
                 retrievedFromEnter.Name = "retrievedFromEnter";
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
-                retrievedFromEnter.Location = new Point(109, 150);
+                retrievedFromEnter.Location = new Point(109, 200);
                 retrievedFromEnter.Width = 150;
 
                 Label doiLabel = new Label();
                 doiLabel.Text = "DOI:";
                 sourceInfoPanel.Controls.Add(doiLabel);
-                doiLabel.Location = new Point(0, 175);
+                doiLabel.Location = new Point(0, 225);
 
                 TextBox doiEnter = new TextBox();
                 doiEnter.Name = "doiEnter";
                 sourceInfoPanel.Controls.Add(doiEnter);
-                doiEnter.Location = new Point(109, 175);
+                doiEnter.Location = new Point(109, 225);
                 doiEnter.Width = 150;
             }
             else if (onlineNewspaper.Checked)
