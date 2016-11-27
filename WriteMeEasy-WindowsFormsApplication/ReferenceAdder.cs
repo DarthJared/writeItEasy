@@ -1885,7 +1885,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(3) > 135)
+                if (getSourceInfoHeight(5) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -1895,14 +1895,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(3);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(3) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(5);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(5) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(3) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(5) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,3";
+                sourceInfoGroupBox.Tag = "1,5";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
@@ -1956,6 +1956,28 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+
+                Label doiLabel = new Label();
+                doiLabel.Text = "DOI:";
+                sourceInfoPanel.Controls.Add(doiLabel);
+                doiLabel.Location = new Point(0, 75);
+
+                TextBox doiEnter = new TextBox();
+                doiEnter.Name = "doiEnter";
+                sourceInfoPanel.Controls.Add(doiEnter);
+                doiEnter.Location = new Point(109, 75);
+                doiEnter.Width = 150;
+
+                Label retrievedFromLabel = new Label();
+                retrievedFromLabel.Text = "Retrieved From:";
+                sourceInfoPanel.Controls.Add(retrievedFromLabel);
+                retrievedFromLabel.Location = new Point(0, 100);
+
+                TextBox retrieveFromEnter = new TextBox();
+                retrieveFromEnter.Name = "retrieveFromEnter";
+                sourceInfoPanel.Controls.Add(retrieveFromEnter);
+                retrieveFromEnter.Location = new Point(109, 100);
+                retrieveFromEnter.Width = 150;
             }
             else if (onlineBibliography.Checked)
             {
