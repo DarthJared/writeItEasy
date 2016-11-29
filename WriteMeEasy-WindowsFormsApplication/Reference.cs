@@ -15,6 +15,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public List<Author> translators;
         public List<Author> interviewers;
         public List<Author> interviewees;
+        public List<Author> reviewers;
         public string title;
         public string publisher;
         public string publishLocation;
@@ -30,6 +31,14 @@ namespace WriteMeEasy_WindowsFormsApplication
         public string doi;
         public string interviewDate;
         public string number;
+        public string reviewTitle;
+        public string retrieveDate;
+        public string accession;
+        public string institution;
+        public string location;
+        public string organization;
+        public Author producer;
+        public Author director;
 
         public Reference()
         {
@@ -37,6 +46,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             translators = new List<Author>();
             interviewers = new List<Author>();
             interviewees = new List<Author>();
+            reviewers = new List<Author>();
         }
     }
 }
