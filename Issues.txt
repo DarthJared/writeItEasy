@@ -1,0 +1,10 @@
+ISSUES:
+-Fix centering with no label problem
+-Finish APA storing references
+-Finish MLA storing references
+-Get in text references to work
+-Write the references page to .docx
+-Get the rich text boxes to have indented first line and double spaced
+-Get bold, italics, underline, font, and size to show when selected
+-Redo UI
+-Save and Load

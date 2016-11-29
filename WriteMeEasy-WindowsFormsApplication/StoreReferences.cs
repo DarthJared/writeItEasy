@@ -4473,7 +4473,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 reference.title = title.Text;
                 TextBox episodeNum = (TextBox)Controls.Find("episodeNumberEnter", true)[0];
                 reference.number = episodeNum.Text;
-                TextBox source = (TextBox)Controls.Find("titleEnter", true)[0];
+                TextBox source = (TextBox)Controls.Find("sourceEnter", true)[0];
                 reference.source = source.Text;
                 TextBox retrievedFrom = (TextBox)Controls.Find("retrievedFromEnter", true)[0];
                 reference.retrievedFrom = retrievedFrom.Text;
@@ -4640,7 +4640,29 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (motionPicture.Checked)
             {
-
+                reference.type = "movie";
+                Author producer = new Author();
+                TextBox producerFirst = (TextBox)Controls.Find("producerFirstEnter", true)[0];
+                TextBox producerMiddle = (TextBox)Controls.Find("producerMiddleEnter", true)[0];
+                TextBox producerLast = (TextBox)Controls.Find("producerLastEnter", true)[0];
+                producer.firstName = producerFirst.Text;
+                producer.middleName = producerMiddle.Text;
+                producer.lastName = producerLast.Text;
+                reference.producer = producer;
+                Author director = new Author();
+                TextBox directorFirst = (TextBox)Controls.Find("directorFirstEnter", true)[0];
+                TextBox directorMiddle = (TextBox)Controls.Find("directorMiddleEnter", true)[0];
+                TextBox directorLast = (TextBox)Controls.Find("directorLastEnter", true)[0];
+                director.firstName = directorFirst.Text;
+                director.middleName = directorMiddle.Text;
+                director.lastName = directorLast.Text;
+                reference.director = director;
+                TextBox publishDate = (TextBox)Controls.Find("publicationDateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
+                TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
+                reference.title = title.Text;
+                TextBox location = (TextBox)Controls.Find("countryEnter", true)[0];
+                reference.location = location.Text;
             }
             else if (tvBroadcast.Checked)
             {
