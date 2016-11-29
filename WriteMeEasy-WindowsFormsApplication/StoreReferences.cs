@@ -4663,38 +4663,942 @@ namespace WriteMeEasy_WindowsFormsApplication
                 reference.title = title.Text;
                 TextBox location = (TextBox)Controls.Find("countryEnter", true)[0];
                 reference.location = location.Text;
+                TextBox studio = (TextBox)Controls.Find("studioEnter", true)[0];
+                reference.studio = studio.Text;
+
+                if (producer.firstName.Length > 0 || producer.middleName.Length > 0 || producer.lastName.Length > 0)
+                {
+                    if (reference.producer.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.lastName;
+                        if (reference.producer.middleName.Length > 0 || reference.producer.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.producer.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.producer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Producer)";
+                    if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += ", & ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += ". ";
+                    }
+                }
+                if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                {
+                    if (reference.director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.lastName;
+                        if (reference.director.middleName.Length > 0 || reference.director.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.director.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.producer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Director). ";
+                }
+                if (director.firstName.Length < 1 && director.middleName.Length < 1 && director.lastName.Length < 1 && producer.firstName.Length < 1 && producer.middleName.Length < 1 && producer.lastName.Length < 1)
+                {
+                    if (reference.title.Length > 0)
+                    {
+                        reference.formattedReference += '\a';
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += '\a';
+                        reference.formattedReference += " [Motion picture]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the video podcast\n";
+                    }
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                }
+                else
+                {
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        reference.formattedReference += '\a';
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += '\a';
+                        reference.formattedReference += " [Motion picture]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the motion picture\n";
+                    }
+                }
+                if (reference.location.Length > 0)
+                {
+                    if (reference.studio.Length > 0)
+                    {
+                        reference.formattedReference += reference.location + ": ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += reference.location + ".";
+                    }
+                }
+                if (reference.studio.Length > 0)
+                {
+                    reference.formattedReference += reference.studio + ".";
+                }
             }
             else if (tvBroadcast.Checked)
             {
+                reference.type = "broadcast";
+                Author producer = new Author();
+                TextBox producerFirst = (TextBox)Controls.Find("producerFirstEnter", true)[0];
+                TextBox producerMiddle = (TextBox)Controls.Find("producerMiddleEnter", true)[0];
+                TextBox producerLast = (TextBox)Controls.Find("producerLastEnter", true)[0];
+                producer.firstName = producerFirst.Text;
+                producer.middleName = producerMiddle.Text;
+                producer.lastName = producerLast.Text;
+                reference.producer = producer;
+                Author director = new Author();
+                TextBox directorFirst = (TextBox)Controls.Find("directorFirstEnter", true)[0];
+                TextBox directorMiddle = (TextBox)Controls.Find("directorMiddleEnter", true)[0];
+                TextBox directorLast = (TextBox)Controls.Find("directorLastEnter", true)[0];
+                director.firstName = directorFirst.Text;
+                director.middleName = directorMiddle.Text;
+                director.lastName = directorLast.Text;
+                reference.director = director;
+                TextBox publishDate = (TextBox)Controls.Find("publicationDateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
+                TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
+                reference.title = title.Text;
+                TextBox location = (TextBox)Controls.Find("locationEnter", true)[0];
+                reference.location = location.Text;
+                TextBox studio = (TextBox)Controls.Find("broadcasterEnter", true)[0];
+                reference.studio = studio.Text;
 
+                if (producer.firstName.Length > 0 || producer.middleName.Length > 0 || producer.lastName.Length > 0)
+                {
+                    if (reference.producer.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.lastName;
+                        if (reference.producer.middleName.Length > 0 || reference.producer.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.producer.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.producer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Producer)";
+                    if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += ", & ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += ". ";
+                    }
+                }
+                if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                {
+                    if (reference.director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.lastName;
+                        if (reference.director.middleName.Length > 0 || reference.director.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.director.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.producer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Director). ";
+                }
+                if (director.firstName.Length < 1 && director.middleName.Length < 1 && director.lastName.Length < 1 && producer.firstName.Length < 1 && producer.middleName.Length < 1 && producer.lastName.Length < 1)
+                {
+                    if (reference.title.Length > 0)
+                    {
+                        reference.formattedReference += '\a';
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += '\a';
+                        reference.formattedReference += " [Television broadcast]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the video podcast\n";
+                    }
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                }
+                else
+                {
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        reference.formattedReference += '\a';
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += '\a';
+                        reference.formattedReference += " [Television broadcast]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the broadcast\n";
+                    }
+                }
+                if (reference.location.Length > 0)
+                {
+                    if (reference.studio.Length > 0)
+                    {
+                        reference.formattedReference += reference.location + ": ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += reference.location + ".";
+                    }
+                }
+                if (reference.studio.Length > 0)
+                {
+                    reference.formattedReference += reference.studio + ".";
+                }
             }
             else if (tvEpisode.Checked)
             {
+                reference.type = "episode";
+                Author writer = new Author();
+                TextBox writerFirst = (TextBox)Controls.Find("writerFirstEnter", true)[0];
+                TextBox writerMiddle = (TextBox)Controls.Find("writerMiddleEnter", true)[0];
+                TextBox writerLast = (TextBox)Controls.Find("writerLastEnter", true)[0];
+                writer.firstName = writerFirst.Text;
+                writer.middleName = writerMiddle.Text;
+                writer.lastName = writerLast.Text;
+                reference.writer = writer;
+                Author producer = new Author();
+                TextBox producerFirst = (TextBox)Controls.Find("producerFirstEnter", true)[0];
+                TextBox producerMiddle = (TextBox)Controls.Find("producerMiddleEnter", true)[0];
+                TextBox producerLast = (TextBox)Controls.Find("producerLastEnter", true)[0];
+                producer.firstName = producerFirst.Text;
+                producer.middleName = producerMiddle.Text;
+                producer.lastName = producerLast.Text;
+                reference.producer = producer;
+                Author director = new Author();
+                TextBox directorFirst = (TextBox)Controls.Find("directorFirstEnter", true)[0];
+                TextBox directorMiddle = (TextBox)Controls.Find("directorMiddleEnter", true)[0];
+                TextBox directorLast = (TextBox)Controls.Find("directorLastEnter", true)[0];
+                director.firstName = directorFirst.Text;
+                director.middleName = directorMiddle.Text;
+                director.lastName = directorLast.Text;
+                reference.director = director;
+                TextBox publishDate = (TextBox)Controls.Find("publicationDateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
+                TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
+                reference.title = title.Text;
+                TextBox series = (TextBox)Controls.Find("seriesTitleEnter", true)[0];
+                reference.source = series.Text;
+                TextBox location = (TextBox)Controls.Find("originEnter", true)[0];
+                reference.location = location.Text;
+                TextBox studio = (TextBox)Controls.Find("studioEnter", true)[0];
+                reference.studio = studio.Text;
 
+                if (writer.firstName.Length > 0 || writer.middleName.Length > 0 || writer.lastName.Length > 0)
+                {
+                    if (reference.writer.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.lastName;
+                        if (reference.writer.middleName.Length > 0 || reference.writer.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.writer.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.writer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Writer)";
+                    if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += ", & ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += ". ";
+                    }
+                }
+                if (director.firstName.Length > 0 || director.middleName.Length > 0 || director.lastName.Length > 0)
+                {
+                    if (reference.director.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.lastName;
+                        if (reference.director.middleName.Length > 0 || reference.director.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.director.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.producer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.director.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Director). ";
+                }
+                if (director.firstName.Length < 1 && director.middleName.Length < 1 && director.lastName.Length < 1 && writer.firstName.Length < 1 && writer.middleName.Length < 1 && writer.lastName.Length < 1)
+                {
+                    if (reference.title.Length > 0)
+                    {
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += " [Television series episode]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the video podcast\n";
+                    }
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                }
+                else
+                {
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += " [Television series episode]. ";
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the episode\n";
+                    }
+                }
+                if (producer.firstName.Length > 0 || producer.middleName.Length > 0 || producer.lastName.Length > 0)
+                {
+                    reference.formattedReference += "In ";
+                    if (reference.producer.firstName.Length > 0 && reference.producer.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.producer.firstName[0].ToString().ToUpper() + ". ";
+                        if (reference.producer.middleName.Length > 0)
+                        {
+                            reference.formattedReference += reference.producer.middleName[0].ToString().ToUpper() + ". ";
+                        }
+                        reference.formattedReference += reference.producer.lastName + " (Producer), ";
+                        if (reference.source.Length > 0)
+                        {
+                            reference.formattedReference += '\a';
+                            bool nextCapital = true;
+                            for (int i = 0; i < reference.source.Length; i++)
+                            {
+                                if (nextCapital)
+                                {
+                                    if (!reference.source[i].ToString().Equals(" "))
+                                    {
+                                        nextCapital = false;
+                                    }
+                                    reference.formattedReference += reference.source[i].ToString().ToUpper();
+                                }
+                                else
+                                {
+                                    reference.formattedReference += reference.source[i].ToString().ToLower();
+                                }
+                                if (reference.source[i].ToString().Equals(":"))
+                                {
+                                    nextCapital = true;
+                                }
+                            }
+                            reference.formattedReference += ". ";
+                            reference.formattedReference += '\a';
+                            if (reference.location.Length > 0)
+                            {
+                                if (reference.studio.Length > 0)
+                                {
+                                    reference.formattedReference += reference.location + ": ";
+                                }
+                                else
+                                {
+                                    reference.formattedReference += reference.location + ".";
+                                }
+                            }
+                            if (reference.studio.Length > 0)
+                            {
+                                reference.formattedReference += reference.studio + ".";
+                            }
+                        }
+                        else
+                        {
+                            error = true;
+                            errorMessage += "Enter the title of the series\n";
+                        }
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the producer's first and last name\n";
+                    }
+                }
+                else
+                {
+                    error = true;
+                    errorMessage += "Enter the producer's name\n";
+                }
             }
             else if (music.Checked)
             {
+                reference.type = "music";
+                Author writer = new Author();
+                TextBox writerFirst = (TextBox)Controls.Find("writerFirstEnter", true)[0];
+                TextBox writerMiddle = (TextBox)Controls.Find("writerMiddleEnter", true)[0];
+                TextBox writerLast = (TextBox)Controls.Find("writerLastEnter", true)[0];
+                writer.firstName = writerFirst.Text;
+                writer.middleName = writerMiddle.Text;
+                writer.lastName = writerLast.Text;
+                reference.writer = writer;
+                Author artist = new Author();
+                TextBox artistFirst = (TextBox)Controls.Find("artistFirstEnter", true)[0];
+                TextBox artistMiddle = (TextBox)Controls.Find("artistMiddleEnter", true)[0];
+                TextBox artistLast = (TextBox)Controls.Find("artistLastEnter", true)[0];
+                artist.firstName = artistFirst.Text;
+                artist.middleName = artistMiddle.Text;
+                artist.lastName = artistLast.Text;
+                reference.producer = artist;
+                TextBox publishDate = (TextBox)Controls.Find("copyrightDateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
+                TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
+                reference.title = title.Text;
+                TextBox album = (TextBox)Controls.Find("albumTitleEnter", true)[0];
+                reference.source = album.Text;
+                TextBox medium = (TextBox)Controls.Find("mediumEnter", true)[0];
+                reference.type = medium.Text;
+                TextBox location = (TextBox)Controls.Find("locationEnter", true)[0];
+                reference.location = location.Text;
+                TextBox label = (TextBox)Controls.Find("labelEnter", true)[0];
+                reference.studio = label.Text;
+                TextBox recordDate = (TextBox)Controls.Find("recordingDateEnter", true)[0];
+                reference.recordDate = recordDate.Text;
 
+                if (writer.firstName.Length > 0 || writer.middleName.Length > 0 || writer.lastName.Length > 0)
+                {
+                    if (reference.writer.lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.lastName;
+                        if (reference.writer.middleName.Length > 0 || reference.writer.firstName.Length > 0)
+                        {
+                            reference.formattedReference += ", ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += " ";
+                        }
+                    }
+                    if (reference.writer.firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.writer.middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.writer.middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    reference.formattedReference += "(Writer). ";
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        if ((artist.firstName.Length > 0 || artist.middleName.Length > 0 || artist.lastName.Length > 0) &&
+                            (!artist.firstName.Equals(writer.firstName) || !artist.middleName.Equals(writer.middleName) || !artist.lastName.Equals(writer.lastName)))
+                        {
+                            reference.formattedReference += " [Recorded by " + artist.firstName + " " + artist.middleName + " " + artist.lastName+ "]. ";
+                        }
+                        else
+                        {
+                            reference.formattedReference += ". ";
+                        }
+                        if (reference.source.Length > 0)
+                        {
+                            reference.formattedReference += "On ";
+                            reference.formattedReference += '\a';
+                            nextCapital = true;
+                            for (int i = 0; i < reference.source.Length; i++)
+                            {
+                                if (nextCapital)
+                                {
+                                    if (!reference.source[i].ToString().Equals(" "))
+                                    {
+                                        nextCapital = false;
+                                    }
+                                    reference.formattedReference += reference.source[i].ToString().ToUpper();
+                                }
+                                else
+                                {
+                                    reference.formattedReference += reference.source[i].ToString().ToLower();
+                                }
+                                if (reference.source[i].ToString().Equals(":"))
+                                {
+                                    nextCapital = true;
+                                }
+                            }
+                            reference.formattedReference += " ";
+                            reference.formattedReference += '\a';
+                            if (reference.type.Length > 0)
+                            {
+                                reference.formattedReference += "[" + reference.type + "]. ";
+                                if (reference.location.Length > 0)
+                                {
+                                    if (reference.studio.Length > 0)
+                                    {
+                                        reference.formattedReference += reference.location + ": ";
+                                    }
+                                    else
+                                    {
+                                        reference.formattedReference += reference.location + ".";
+                                    }
+                                }
+                                if (reference.studio.Length > 0)
+                                {
+                                    reference.formattedReference += reference.studio + ".";
+                                }
+                                if (reference.recordDate.Length > 0 && !reference.recordDate.Equals(reference.publicationDate))
+                                {
+                                    reference.formattedReference += " (" + reference.recordDate + ").";
+                                }
+                            }
+                            else
+                            {
+                                error = true;
+                                errorMessage += "Enter the medium\n";
+                            }
+                        }
+                        else
+                        {
+                            error = true;
+                            errorMessage += "Enter the album\n";
+                        }
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the song title\n";
+                    }
+                }
+                else
+                {
+                    error = true;
+                    errorMessage += "Enter the song writer\n";
+                }
             }
             else if (interview.Checked)
             {
-
+                reference.type = "interview";
+                Author author = new Author();
+                TextBox authorFirst = (TextBox)Controls.Find("communicatorFirstEnter", true)[0];
+                TextBox authorMiddle = (TextBox)Controls.Find("communicatorMiddleEnter", true)[0];
+                TextBox authorLast = (TextBox)Controls.Find("communicatorLastEnter", true)[0];
+                author.firstName = authorFirst.Text;
+                author.middleName = authorMiddle.Text;
+                author.lastName = authorLast.Text;
+                reference.authors.Add(author);
+                TextBox publishDate = (TextBox)Controls.Find("dateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
             }
             else if (email.Checked)
             {
-
+                reference.type = "email";
+                Author author = new Author();
+                TextBox authorFirst = (TextBox)Controls.Find("communicatorFirstEnter", true)[0];
+                TextBox authorMiddle = (TextBox)Controls.Find("communicatorMiddleEnter", true)[0];
+                TextBox authorLast = (TextBox)Controls.Find("communicatorLastEnter", true)[0];
+                author.firstName = authorFirst.Text;
+                author.middleName = authorMiddle.Text;
+                author.lastName = authorLast.Text;
+                reference.authors.Add(author);
+                TextBox publishDate = (TextBox)Controls.Find("dateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
             }
             else if (personal.Checked)
             {
-
+                reference.type = "personal";
+                Author author = new Author();
+                TextBox authorFirst = (TextBox)Controls.Find("communicatorFirstEnter", true)[0];
+                TextBox authorMiddle = (TextBox)Controls.Find("communicatorMiddleEnter", true)[0];
+                TextBox authorLast = (TextBox)Controls.Find("communicatorLastEnter", true)[0];
+                author.firstName = authorFirst.Text;
+                author.middleName = authorMiddle.Text;
+                author.lastName = authorLast.Text;
+                reference.authors.Add(author);
+                TextBox publishDate = (TextBox)Controls.Find("dateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
             }
             else if (letterToEditor.Checked)
             {
+                reference.type = "letterToEditor";
+                Author author = new Author();
+                TextBox authorFirst = (TextBox)Controls.Find("authorFirstEnter", true)[0];
+                TextBox authorMiddle = (TextBox)Controls.Find("authorMiddleEnter", true)[0];
+                TextBox authorLast = (TextBox)Controls.Find("authorLastEnter", true)[0];
+                author.firstName = authorFirst.Text;
+                author.middleName = authorMiddle.Text;
+                author.lastName = authorLast.Text;
+                reference.authors.Add(author);
+                TextBox publishDate = (TextBox)Controls.Find("publicationDateEnter", true)[0];
+                reference.publicationDate = publishDate.Text;
+                TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
+                reference.title = title.Text;
+                TextBox source = (TextBox)Controls.Find("wherePublishedEnter", true)[0];
+                reference.source = source.Text;
+                TextBox volume = (TextBox)Controls.Find("volumeEnter", true)[0];
+                reference.volume = volume.Text;
+                TextBox issue = (TextBox)Controls.Find("issueEnter", true)[0];
+                reference.issue = issue.Text;
+                TextBox startPage = (TextBox)Controls.Find("pageStartEnter", true)[0];
+                reference.startPage = startPage.Text;
+                TextBox endPage = (TextBox)Controls.Find("pageEndEnter", true)[0];
+                reference.endPage = endPage.Text;
 
+                if (reference.authors.Count > 0)
+                {                    
+                    if (reference.authors[0].lastName.Length > 0)
+                    {
+                        reference.formattedReference += reference.authors[0].lastName;
+                        if (reference.authors[0].firstName.Length > 0 || reference.authors[0].middleName.Length > 0)
+                        {
+                            reference.formattedReference += ",";
+                        }
+                        reference.formattedReference += " ";
+                    }
+                    if (reference.authors[0].firstName.Length > 0)
+                    {
+                        reference.formattedReference += reference.authors[0].firstName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.authors[0].middleName.Length > 0)
+                    {
+                        reference.formattedReference += reference.authors[0].middleName[0].ToString().ToUpper() + ". ";
+                    }
+                    if (reference.publicationDate.Length < 1)
+                    {
+                        reference.formattedReference += "(n.d.). ";
+                    }
+                    else
+                    {
+                        reference.formattedReference += "(" + reference.publicationDate + "). ";
+                    }
+                    if (reference.title.Length > 0)
+                    {
+                        bool nextCapital = true;
+                        for (int i = 0; i < reference.title.Length; i++)
+                        {
+                            if (nextCapital)
+                            {
+                                if (!reference.title[i].ToString().Equals(" "))
+                                {
+                                    nextCapital = false;
+                                }
+                                reference.formattedReference += reference.title[i].ToString().ToUpper();
+                            }
+                            else
+                            {
+                                reference.formattedReference += reference.title[i].ToString().ToLower();
+                            }
+                            if (reference.title[i].ToString().Equals(":"))
+                            {
+                                nextCapital = true;
+                            }
+                        }
+                        reference.formattedReference += " [Letter to the editor]. ";
+                        if (reference.source.Length > 0)
+                        {
+                            reference.formattedReference += '\a';
+                            reference.formattedReference += reference.source;
+                            if (reference.volume.Length > 0 || reference.issue.Length > 0 ||
+                                reference.startPage.Length > 0)
+                            {
+                                reference.formattedReference += ", ";
+                            }
+                            if (reference.volume.Length > 0)
+                            {
+                                reference.formattedReference += reference.volume;
+                            }
+                            reference.formattedReference += '\a';
+                            if (reference.issue.Length > 0)
+                            {
+                                reference.formattedReference += "(" + reference.issue + ")";
+                            }
+                            if ((reference.volume.Length > 0 || reference.issue.Length > 0) &&
+                                reference.startPage.Length > 0)
+                            {
+                                reference.formattedReference += ", ";
+                            }
+                            if (reference.startPage.Length < 1 && reference.endPage.Length > 0)
+                            {
+                                error = true;
+                                errorMessage += "Enter a start page\n";
+                            }
+                            else if ((reference.startPage.Length > 0 && reference.endPage.Length > 0) &&
+                                !reference.startPage.Equals(reference.endPage))
+                            {
+                                reference.formattedReference += reference.startPage + "-" + reference.endPage;
+                            }
+                            else if ((reference.startPage.Length > 0 && reference.endPage.Length < 1) ||
+                                (reference.startPage.Equals(reference.endPage) && reference.startPage.Length > 0))
+                            {
+                                reference.formattedReference += reference.startPage;
+                            }
+                            reference.formattedReference += ".";
+                        }
+                        else
+                        {
+                            error = true;
+                            errorMessage += "Enter the source name\n";
+                        }
+                    }
+                    else
+                    {
+                        error = true;
+                        errorMessage += "Enter the title of the letter\n";
+                    }
+                }                
+                else
+                {
+                    error = true;
+                    errorMessage += "Enter the author's name\n";
+                }
             }
             else
             {
-
+                error = true;
+                errorMessage += "No valid reference type has been selected\n";
             }
             if (error)
             {

@@ -3643,7 +3643,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(5) > 135)
+                if (getSourceInfoHeight(6) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -3653,14 +3653,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(5);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(5) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(6);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(6) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(5) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(6) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,5";
+                sourceInfoGroupBox.Tag = "1,6";
 
                 Label producerLabel = new Label();
                 producerLabel.Text = "Producer:";
@@ -3743,12 +3743,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(countryEnter);
                 countryEnter.Location = new Point(109, 100);
                 countryEnter.Width = 150;
+
+                Label studioLabel = new Label();
+                studioLabel.Text = "Studio/Distributor:";
+                sourceInfoPanel.Controls.Add(studioLabel);
+                studioLabel.Location = new Point(0, 125);
+                studioLabel.Width = 109;
+
+                TextBox studioEnter = new TextBox();
+                studioEnter.Name = "studioEnter";
+                sourceInfoPanel.Controls.Add(studioEnter);
+                studioEnter.Location = new Point(109, 125);
+                studioEnter.Width = 150;
             }
             else if (tvBroadcast.Checked)
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(5) > 135)
+                if (getSourceInfoHeight(6) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -3758,14 +3770,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(5);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(5) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(6);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(6) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(5) + 299);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(6) + 299);
                 }
-                sourceInfoGroupBox.Tag = "1,5";
+                sourceInfoGroupBox.Tag = "1,6";
 
                 Label producerLabel = new Label();
                 producerLabel.Text = "Producer:";
@@ -3790,52 +3802,75 @@ namespace WriteMeEasy_WindowsFormsApplication
                 producerLastEnter.Location = new Point(339, 0);
                 producerLastEnter.Width = 100;
 
+                Label directorLabel = new Label();
+                directorLabel.Text = "Director:";
+                sourceInfoPanel.Controls.Add(directorLabel);
+                directorLabel.Location = new Point(0, 25);
+
+                TextBox directorFirstEnter = new TextBox();
+                directorFirstEnter.Name = "directorFirstEnter";
+                sourceInfoPanel.Controls.Add(directorFirstEnter);
+                directorFirstEnter.Location = new Point(109, 25);
+                directorFirstEnter.Width = 100;
+
+                TextBox directorMiddleEnter = new TextBox();
+                directorMiddleEnter.Name = "directorMiddleEnter";
+                sourceInfoPanel.Controls.Add(directorMiddleEnter);
+                directorMiddleEnter.Location = new Point(224, 25);
+                directorMiddleEnter.Width = 100;
+
+                TextBox directorLastEnter = new TextBox();
+                directorLastEnter.Name = "directorLastEnter";
+                sourceInfoPanel.Controls.Add(directorLastEnter);
+                directorLastEnter.Location = new Point(339, 25);
+                directorLastEnter.Width = 100;
+
                 Label publicationDateLabel = new Label();
                 publicationDateLabel.Text = "Production Date:";
                 sourceInfoPanel.Controls.Add(publicationDateLabel);
-                publicationDateLabel.Location = new Point(0, 25);
+                publicationDateLabel.Location = new Point(0, 50);
                 publicationDateLabel.Width = 109;
 
                 TextBox publicationDateEnter = new TextBox();
                 publicationDateEnter.Name = "publicationDateEnter";
                 sourceInfoPanel.Controls.Add(publicationDateEnter);
-                publicationDateEnter.Location = new Point(109, 25);
+                publicationDateEnter.Location = new Point(109, 50);
                 publicationDateEnter.Width = 150;
 
                 Label titleLabel = new Label();
                 titleLabel.Text = "Title:";
                 sourceInfoPanel.Controls.Add(titleLabel);
-                titleLabel.Location = new Point(0, 50);
+                titleLabel.Location = new Point(0, 75);
                 titleLabel.Width = 109;
 
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
                 sourceInfoPanel.Controls.Add(titleEnter);
-                titleEnter.Location = new Point(109, 50);
+                titleEnter.Location = new Point(109, 75);
                 titleEnter.Width = 150;
 
                 Label locationLabel = new Label();
                 locationLabel.Text = "Location:";
                 sourceInfoPanel.Controls.Add(locationLabel);
-                locationLabel.Location = new Point(0, 75);
+                locationLabel.Location = new Point(0, 100);
                 locationLabel.Width = 109;
 
                 TextBox locationEnter = new TextBox();
                 locationEnter.Name = "locationEnter";
                 sourceInfoPanel.Controls.Add(locationEnter);
-                locationEnter.Location = new Point(109, 75);
+                locationEnter.Location = new Point(109, 100);
                 locationEnter.Width = 150;
 
                 Label broadcasterLabel = new Label();
                 broadcasterLabel.Text = "Broadcaster:";
                 sourceInfoPanel.Controls.Add(broadcasterLabel);
-                broadcasterLabel.Location = new Point(0, 100);
+                broadcasterLabel.Location = new Point(0, 125);
                 broadcasterLabel.Width = 109;
 
                 TextBox broadcasterEnter = new TextBox();
                 broadcasterEnter.Name = "broadcasterEnter";
                 sourceInfoPanel.Controls.Add(broadcasterEnter);
-                broadcasterEnter.Location = new Point(109, 100);
+                broadcasterEnter.Location = new Point(109, 125);
                 broadcasterEnter.Width = 150;
             }
             else if (tvEpisode.Checked)

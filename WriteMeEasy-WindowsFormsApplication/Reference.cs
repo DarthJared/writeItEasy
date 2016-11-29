@@ -39,6 +39,10 @@ namespace WriteMeEasy_WindowsFormsApplication
         public string organization;
         public Author producer;
         public Author director;
+        public Author writer;
+        public Author artist;
+        public string studio;
+        public string recordDate;
 
         public Reference()
         {

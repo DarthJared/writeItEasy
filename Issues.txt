@@ -8,3 +8,5 @@ ISSUES:
 -Get bold, italics, underline, font, and size to show when selected
 -Redo UI
 -Save and Load
+-Fix Tabing
+-Add Managing references
