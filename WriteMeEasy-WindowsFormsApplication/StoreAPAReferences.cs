@@ -521,7 +521,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                         error = true;
                         errorMessage += "Enter the word or section referenced\n";
                     }
-
                 }
                 else
                 {
@@ -5607,7 +5606,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
                 Form1.myPaper.references.references.Add(reference);
-                //this.Close();
+                this.Close();
             }            
         }
     }

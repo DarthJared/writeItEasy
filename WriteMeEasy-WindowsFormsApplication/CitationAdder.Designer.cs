@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.sourceTypeGroupBox = new System.Windows.Forms.GroupBox();
+            this.publishedThesis = new System.Windows.Forms.RadioButton();
+            this.unpublishedThesis = new System.Windows.Forms.RadioButton();
             this.presentation = new System.Windows.Forms.RadioButton();
             this.website = new System.Windows.Forms.RadioButton();
             this.onlinePrintJournal = new System.Windows.Forms.RadioButton();
@@ -61,8 +63,6 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.quoteContentGroupBox = new System.Windows.Forms.GroupBox();
             this.quoteContent = new System.Windows.Forms.RichTextBox();
-            this.unpublishedThesis = new System.Windows.Forms.RadioButton();
-            this.publishedThesis = new System.Windows.Forms.RadioButton();
             this.sourceTypeGroupBox.SuspendLayout();
             this.sourceInfoGroupBox.SuspendLayout();
             this.quoteContentGroupBox.SuspendLayout();
@@ -104,6 +104,26 @@
             this.sourceTypeGroupBox.TabIndex = 0;
             this.sourceTypeGroupBox.TabStop = false;
             this.sourceTypeGroupBox.Text = "Type of Source";
+            // 
+            // publishedThesis
+            // 
+            this.publishedThesis.AutoSize = true;
+            this.publishedThesis.Location = new System.Drawing.Point(378, 41);
+            this.publishedThesis.Name = "publishedThesis";
+            this.publishedThesis.Size = new System.Drawing.Size(105, 17);
+            this.publishedThesis.TabIndex = 61;
+            this.publishedThesis.Text = "Published Thesis";
+            this.publishedThesis.UseVisualStyleBackColor = true;
+            // 
+            // unpublishedThesis
+            // 
+            this.unpublishedThesis.AutoSize = true;
+            this.unpublishedThesis.Location = new System.Drawing.Point(378, 87);
+            this.unpublishedThesis.Name = "unpublishedThesis";
+            this.unpublishedThesis.Size = new System.Drawing.Size(118, 17);
+            this.unpublishedThesis.TabIndex = 60;
+            this.unpublishedThesis.Text = "Unpublished Thesis";
+            this.unpublishedThesis.UseVisualStyleBackColor = true;
             // 
             // presentation
             // 
@@ -404,7 +424,7 @@
             // 
             this.sourceInfoPanel.BackColor = System.Drawing.SystemColors.Control;
             this.sourceInfoPanel.Location = new System.Drawing.Point(9, 19);
-            this.sourceInfoPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.sourceInfoPanel.Margin = new System.Windows.Forms.Padding(1);
             this.sourceInfoPanel.Name = "sourceInfoPanel";
             this.sourceInfoPanel.Size = new System.Drawing.Size(666, 138);
             this.sourceInfoPanel.TabIndex = 0;
@@ -417,6 +437,7 @@
             this.addReferenceButton.TabIndex = 2;
             this.addReferenceButton.Text = "Create Citation";
             this.addReferenceButton.UseVisualStyleBackColor = true;
+            this.addReferenceButton.Click += new System.EventHandler(this.addReferenceButton_Click);
             // 
             // cancelButton
             // 
@@ -445,26 +466,6 @@
             this.quoteContent.Size = new System.Drawing.Size(658, 65);
             this.quoteContent.TabIndex = 0;
             this.quoteContent.Text = "";
-            // 
-            // unpublishedThesis
-            // 
-            this.unpublishedThesis.AutoSize = true;
-            this.unpublishedThesis.Location = new System.Drawing.Point(378, 87);
-            this.unpublishedThesis.Name = "unpublishedThesis";
-            this.unpublishedThesis.Size = new System.Drawing.Size(118, 17);
-            this.unpublishedThesis.TabIndex = 60;
-            this.unpublishedThesis.Text = "Unpublished Thesis";
-            this.unpublishedThesis.UseVisualStyleBackColor = true;
-            // 
-            // publishedThesis
-            // 
-            this.publishedThesis.AutoSize = true;
-            this.publishedThesis.Location = new System.Drawing.Point(378, 41);
-            this.publishedThesis.Name = "publishedThesis";
-            this.publishedThesis.Size = new System.Drawing.Size(105, 17);
-            this.publishedThesis.TabIndex = 61;
-            this.publishedThesis.Text = "Published Thesis";
-            this.publishedThesis.UseVisualStyleBackColor = true;
             // 
             // CitationAdder
             // 

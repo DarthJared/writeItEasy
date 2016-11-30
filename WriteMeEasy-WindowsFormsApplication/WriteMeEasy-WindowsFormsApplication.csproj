@@ -107,7 +107,10 @@
     <Compile Include="Setup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StoreReferences.cs">
+    <Compile Include="StoreAPAReferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreMLAReferences.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubSection.cs" />
