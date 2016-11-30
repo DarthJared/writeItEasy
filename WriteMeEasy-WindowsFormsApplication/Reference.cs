@@ -41,6 +41,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public Author director;
         public Author writer;
         public Author artist;
+        public Author editor;
         public string studio;
         public string recordDate;
 
