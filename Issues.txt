@@ -11,3 +11,4 @@ ISSUES:
 -Fix Tabing
 -Add Managing references
 -Add placeholders
+-Enter APA and MLA defaults

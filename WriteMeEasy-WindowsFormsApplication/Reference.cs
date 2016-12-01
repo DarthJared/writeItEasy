@@ -44,6 +44,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public Author editor;
         public string studio;
         public string recordDate;
+        public string accessedOn;
 
         public Reference()
         {

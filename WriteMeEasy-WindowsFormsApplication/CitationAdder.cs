@@ -765,7 +765,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(3) > 135)
+                if (getSourceInfoHeight(4) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -775,12 +775,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(3);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(3) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(4);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(4) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(3) + 219);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(4) + 219);
                 }
                 Label sectionNameLabel = new Label();
                 sectionNameLabel.Text = "Section or Word Referenced:";
@@ -806,15 +806,26 @@ namespace WriteMeEasy_WindowsFormsApplication
                 bookNameEnter.Location = new Point(180, 25);
                 bookNameEnter.Width = 150;
 
+                Label editionLabel = new Label();
+                editionLabel.Text = "Edition:";
+                sourceInfoPanel.Controls.Add(editionLabel);
+                editionLabel.Location = new Point(0, 50);
+
+                TextBox editionEnter = new TextBox();
+                editionEnter.Name = "editionEnter";
+                sourceInfoPanel.Controls.Add(editionEnter);
+                editionEnter.Location = new Point(180, 50);
+                editionEnter.Width = 150;
+
                 Label publicationDateLabel = new Label();
                 publicationDateLabel.Text = "Date of Publication:";
                 sourceInfoPanel.Controls.Add(publicationDateLabel);
-                publicationDateLabel.Location = new Point(0, 50);
+                publicationDateLabel.Location = new Point(0, 75);
 
                 TextBox publicationDateEnter = new TextBox();
                 publicationDateEnter.Name = "publicationDateEnter";
                 sourceInfoPanel.Controls.Add(publicationDateEnter);
-                publicationDateEnter.Location = new Point(180, 50);
+                publicationDateEnter.Location = new Point(180, 75);
                 publicationDateEnter.Width = 150;
             }
             else if (translated.Checked)
