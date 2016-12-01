@@ -1078,6 +1078,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void summaryLast(object sender, EventArgs e)
         {
             lastEntered = "summaryContent";
+
         }
 
         private void abstractLast(object sender, EventArgs e)
@@ -1149,21 +1150,23 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
-            if (apaRadio.Checked)
+            if (lastEntered.Length > 0)
             {
-                var referencePopup = new ReferenceAdder();
-                referencePopup.ShowDialog(this);
-            }
-            else if (mlaRadio.Checked)
-            {
-                var citationPopup = new CitationAdder();
-                citationPopup.ShowDialog(this);
-            }
+                if (apaRadio.Checked)
+                {
+                    var referencePopup = new ReferenceAdder();
+                    referencePopup.ShowDialog(this);
+                }
+                else if (mlaRadio.Checked)
+                {
+                    var citationPopup = new CitationAdder();
+                    citationPopup.ShowDialog(this);
+                }
+            }            
             else
             {
-
-            }
-            
+                MessageBox.Show("Choose where you want to have the quote or citation inserted and then select to insert the citation.\n");
+            }            
         }
     }
 }

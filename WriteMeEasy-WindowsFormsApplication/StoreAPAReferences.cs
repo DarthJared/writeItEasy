@@ -11,6 +11,8 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
+            RichTextBox insertInto = (RichTextBox)Form1.Controls.Find(Form1.lastEntered, true)[0];
+
             Reference reference = new Reference();
             bool error = false;
             string errorMessage = "";
