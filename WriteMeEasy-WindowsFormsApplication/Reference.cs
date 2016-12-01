@@ -42,9 +42,19 @@ namespace WriteMeEasy_WindowsFormsApplication
         public Author writer;
         public Author artist;
         public Author editor;
+        public Author communicator;
+        public Author receiver;
         public string studio;
         public string recordDate;
         public string accessedOn;
+        public string screenName;
+        public string meeting;
+        public string venue;
+        public string format;
+        public string callLetters;
+        public string season;
+        public string episode;
+        public string artistName;
 
         public Reference()
         {

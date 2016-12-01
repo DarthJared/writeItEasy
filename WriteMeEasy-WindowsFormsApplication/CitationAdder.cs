@@ -1432,7 +1432,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(7) > 135)
+                if (getSourceInfoHeight(6) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -1442,14 +1442,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(7);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(7) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(6);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(6) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(7) + 219);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(6) + 219);
                 }
-                sourceInfoGroupBox.Tag = "1,7";
+                sourceInfoGroupBox.Tag = "1,6";
 
                 Label authorLabel = new Label();
                 authorLabel.Text = "Author:";
@@ -1504,48 +1504,37 @@ namespace WriteMeEasy_WindowsFormsApplication
                 periodicalNameEnter.Location = new Point(109, 50);
                 periodicalNameEnter.Width = 150;
 
-                Label publisherLabel = new Label();
-                publisherLabel.Text = "Publisher:";
-                sourceInfoPanel.Controls.Add(publisherLabel);
-                publisherLabel.Location = new Point(0, 75);
-
-                TextBox publisherEnter = new TextBox();
-                publisherEnter.Name = "publisherEnter";
-                sourceInfoPanel.Controls.Add(publisherEnter);
-                publisherEnter.Location = new Point(109, 75);
-                publisherEnter.Width = 150;
-
                 Label publishDateLabel = new Label();
-                publishDateLabel.Text = "Year of Publication:";
+                publishDateLabel.Text = "Date of Publication:";
                 sourceInfoPanel.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(0, 100);
+                publishDateLabel.Location = new Point(0, 75);
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
                 sourceInfoPanel.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(109, 100);
+                publishDateEnter.Location = new Point(109, 75);
                 publishDateEnter.Width = 150;
 
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
                 sourceInfoPanel.Controls.Add(retrievedFromLabel);
-                retrievedFromLabel.Location = new Point(0, 125);
+                retrievedFromLabel.Location = new Point(0, 100);
 
                 TextBox retrievedFromEnter = new TextBox();
                 retrievedFromEnter.Name = "retrievedFromEnter";
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
-                retrievedFromEnter.Location = new Point(109, 125);
+                retrievedFromEnter.Location = new Point(109, 100);
                 retrievedFromEnter.Width = 150;
 
                 Label accessedLabel = new Label();
                 accessedLabel.Text = "Accessed On:";
                 sourceInfoPanel.Controls.Add(accessedLabel);
-                accessedLabel.Location = new Point(0, 150);
+                accessedLabel.Location = new Point(0, 125);
 
                 TextBox accessedEnter = new TextBox();
                 accessedEnter.Name = "accessedEnter";
                 sourceInfoPanel.Controls.Add(accessedEnter);
-                accessedEnter.Location = new Point(109, 150);
+                accessedEnter.Location = new Point(109, 125);
                 accessedEnter.Width = 150;
             }
             else if (onlineNewspaper.Checked)
@@ -2434,60 +2423,72 @@ namespace WriteMeEasy_WindowsFormsApplication
                 authorAdder.Location = new Point(530, 75);
                 authorAdder.Click += new EventHandler(originalAuthorAdderButton_Click);
 
+                Label sourceLabel = new Label();
+                sourceLabel.Text = "Source of Review:";
+                sourceInfoPanel.Controls.Add(sourceLabel);
+                sourceLabel.Location = new Point(0, 100);
+                sourceLabel.Width = 180;
+
+                TextBox sourceEnter = new TextBox();
+                sourceEnter.Name = "sourceEnter";
+                sourceInfoPanel.Controls.Add(sourceEnter);
+                sourceEnter.Location = new Point(180, 100);
+                sourceEnter.Width = 150;
+
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Publication Year:";
                 sourceInfoPanel.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(0, 100);
+                publishDateLabel.Location = new Point(0, 125);
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
                 sourceInfoPanel.Controls.Add(publishDateEnter);
-                publishDateEnter.Location = new Point(180, 100);
+                publishDateEnter.Location = new Point(180, 125);
                 publishDateEnter.Width = 150;
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
                 sourceInfoPanel.Controls.Add(pageStartLabel);
-                pageStartLabel.Location = new Point(0, 125);
+                pageStartLabel.Location = new Point(0, 150);
 
                 TextBox pageStartEnter = new TextBox();
                 pageStartEnter.Name = "pageStartEnter";
                 sourceInfoPanel.Controls.Add(pageStartEnter);
-                pageStartEnter.Location = new Point(180, 125);
+                pageStartEnter.Location = new Point(180, 150);
                 pageStartEnter.Width = 150;
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
                 sourceInfoPanel.Controls.Add(pageEndLabel);
-                pageEndLabel.Location = new Point(0, 150);
+                pageEndLabel.Location = new Point(0, 175);
 
                 TextBox pageEndEnter = new TextBox();
                 pageEndEnter.Name = "pageEndEnter";
                 sourceInfoPanel.Controls.Add(pageEndEnter);
-                pageEndEnter.Location = new Point(180, 150);
+                pageEndEnter.Location = new Point(180, 175);
                 pageEndEnter.Width = 150;
 
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
                 sourceInfoPanel.Controls.Add(retrievedFromLabel);
-                retrievedFromLabel.Location = new Point(0, 175);
+                retrievedFromLabel.Location = new Point(0, 200);
                 retrievedFromLabel.Width = 109;
 
                 TextBox retrievedFromEnter = new TextBox();
                 retrievedFromEnter.Name = "retrievedFromEnter";
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
-                retrievedFromEnter.Location = new Point(180, 175);
+                retrievedFromEnter.Location = new Point(180, 200);
                 retrievedFromEnter.Width = 150;
 
                 Label accessedLabel = new Label();
                 accessedLabel.Text = "Accessed On:";
                 sourceInfoPanel.Controls.Add(accessedLabel);
-                accessedLabel.Location = new Point(0, 200);
+                accessedLabel.Location = new Point(0, 225);
 
                 TextBox accessedEnter = new TextBox();
                 accessedEnter.Name = "accessedEnter";
                 sourceInfoPanel.Controls.Add(accessedEnter);
-                accessedEnter.Location = new Point(180, 200);
+                accessedEnter.Location = new Point(180, 225);
                 accessedEnter.Width = 150;
             }
             else if (presentation.Checked)
@@ -2724,7 +2725,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 removeInsideInfo();
 
-                if (getSourceInfoHeight(6) > 135)
+                if (getSourceInfoHeight(8) > 135)
                 {
                     sourceInfoPanel.Height = 135;
                     sourceInfoGroupBox.Height = 160;
@@ -2734,14 +2735,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else
                 {
-                    sourceInfoPanel.Height = getSourceInfoHeight(6);
-                    sourceInfoGroupBox.Height = getSourceInfoHeight(6) + 25;
+                    sourceInfoPanel.Height = getSourceInfoHeight(8);
+                    sourceInfoGroupBox.Height = getSourceInfoHeight(8) + 25;
                     sourceInfoPanel.VerticalScroll.Value = 0;
                     sourceInfoPanel.AutoScroll = false;
 
-                    moveTo("quoteContentGroupBox", getSourceInfoHeight(6) + 219);
+                    moveTo("quoteContentGroupBox", getSourceInfoHeight(8) + 219);
                 }
-                sourceInfoGroupBox.Tag = "1,6";
+                sourceInfoGroupBox.Tag = "1,8";
 
                 Label titleLabel = new Label();
                 titleLabel.Text = "Episode Title:";
@@ -2767,52 +2768,76 @@ namespace WriteMeEasy_WindowsFormsApplication
                 seriesTitleEnter.Location = new Point(109, 25);
                 seriesTitleEnter.Width = 150;
 
+                Label seasonLabel = new Label();
+                seasonLabel.Text = "Season Number:";
+                sourceInfoPanel.Controls.Add(seasonLabel);
+                seasonLabel.Location = new Point(0, 50);
+                seasonLabel.Width = 109;
+
+                TextBox seasonEnter = new TextBox();
+                seasonEnter.Name = "seasonEnter";
+                sourceInfoPanel.Controls.Add(seasonEnter);
+                seasonEnter.Location = new Point(109, 50);
+                seasonEnter.Width = 150;
+
+                Label episodeLabel = new Label();
+                episodeLabel.Text = "Episode Number:";
+                sourceInfoPanel.Controls.Add(episodeLabel);
+                episodeLabel.Location = new Point(0, 75);
+                episodeLabel.Width = 109;
+
+                TextBox episodeEnter = new TextBox();
+                episodeEnter.Name = "episodeEnter";
+                sourceInfoPanel.Controls.Add(episodeEnter);
+                episodeEnter.Location = new Point(109, 75);
+                episodeEnter.Width = 150;
+
                 Label networkLabel = new Label();
                 networkLabel.Text = "Network:";
                 sourceInfoPanel.Controls.Add(networkLabel);
-                networkLabel.Location = new Point(0, 50);
+                networkLabel.Location = new Point(0, 100);
                 networkLabel.Width = 109;
 
                 TextBox networkEnter = new TextBox();
                 networkEnter.Name = "networkEnter";
                 sourceInfoPanel.Controls.Add(networkEnter);
-                networkEnter.Location = new Point(109, 50);
+                networkEnter.Location = new Point(109, 100);
                 networkEnter.Width = 150;
 
                 Label lettersLabel = new Label();
                 lettersLabel.Text = "Call Letters:";
                 sourceInfoPanel.Controls.Add(lettersLabel);
-                lettersLabel.Location = new Point(0, 75);
+                lettersLabel.Location = new Point(0, 125);
                 lettersLabel.Width = 109;
 
                 TextBox lettersEnter = new TextBox();
                 lettersEnter.Name = "lettersEnter";
                 sourceInfoPanel.Controls.Add(lettersEnter);
-                lettersEnter.Location = new Point(109, 75);
+                lettersEnter.Location = new Point(109, 125);
                 lettersEnter.Width = 150;
 
                 Label originLabel = new Label();
                 originLabel.Text = "City, State of Origin:";
                 sourceInfoPanel.Controls.Add(originLabel);
-                originLabel.Location = new Point(0, 100);
+                originLabel.Location = new Point(0, 150);
                 originLabel.Width = 109;
 
                 TextBox originEnter = new TextBox();
                 originEnter.Name = "originEnter";
                 sourceInfoPanel.Controls.Add(originEnter);
-                originEnter.Location = new Point(109, 100);
+                originEnter.Location = new Point(109, 150);
                 originEnter.Width = 150;
 
                 Label publicationDateLabel = new Label();
                 publicationDateLabel.Text = "Production Date:";
                 sourceInfoPanel.Controls.Add(publicationDateLabel);
-                publicationDateLabel.Location = new Point(0, 125);
+                publicationDateLabel.Location = new Point(0, 175);
                 publicationDateLabel.Width = 109;
 
                 TextBox publicationDateEnter = new TextBox();
                 publicationDateEnter.Name = "publicationDateEnter";
                 sourceInfoPanel.Controls.Add(publicationDateEnter);
-                publicationDateEnter.Location = new Point(109, 125);
+                publicationDateEnter.Location = new Point(109, 175);
                 publicationDateEnter.Width = 150;
             }
             else if (music.Checked)
@@ -2844,22 +2869,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 artistLabel.Location = new Point(0, 0);
 
                 TextBox artistFirstEnter = new TextBox();
-                artistFirstEnter.Name = "artistFirstEnter";
+                artistFirstEnter.Name = "artistEnter";
                 sourceInfoPanel.Controls.Add(artistFirstEnter);
                 artistFirstEnter.Location = new Point(109, 0);
-                artistFirstEnter.Width = 100;
-
-                TextBox artistMiddleEnter = new TextBox();
-                artistMiddleEnter.Name = "artistMiddleEnter";
-                sourceInfoPanel.Controls.Add(artistMiddleEnter);
-                artistMiddleEnter.Location = new Point(224, 0);
-                artistMiddleEnter.Width = 100;
-
-                TextBox artistLastEnter = new TextBox();
-                artistLastEnter.Name = "artistLastEnter";
-                sourceInfoPanel.Controls.Add(artistLastEnter);
-                artistLastEnter.Location = new Point(339, 0);
-                artistLastEnter.Width = 100;
+                artistFirstEnter.Width = 150;
 
                 Label titleLabel = new Label();
                 titleLabel.Text = "Song Title:";
