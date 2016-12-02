@@ -11,7 +11,9 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
-            RichTextBox insertInto = (RichTextBox)Form1.Controls.Find(Form1.lastEntered, true)[0];
+            RichTextBox insertInto = (RichTextBox)mainForm.Controls.Find(mainForm.lastEntered, true)[0];
+            int whereToInser = insertInto.SelectionStart;
+            string quoteText = quoteContent.Text;
 
             Reference reference = new Reference();
             bool error = false;
@@ -2755,9 +2757,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         {
                             error = true;
                             errorMessage += "Enter the URL where the post was retrieved\n";
-                        }
-                     
-                           
+                        }    
                     }
                     else
                     {
@@ -3011,7 +3011,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox messageTitle = (TextBox)Controls.Find("messageTitleEnter", true)[0];
                 reference.title = messageTitle.Text;
                 TextBox type = (TextBox)Controls.Find("typeEnter", true)[0];
-                reference.type = type.Text;
+                reference.format = type.Text;
                 TextBox retrievedFrom = (TextBox)Controls.Find("retrievedFromEnter", true)[0];
                 reference.retrievedFrom = retrievedFrom.Text;
 
@@ -3064,9 +3064,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 nextCapital = true;
                             }
                         }
-                        if (reference.type.Length > 0)
+                        if (reference.format.Length > 0)
                         {
-                            reference.formattedReference += " [" + reference.type + "]";
+                            reference.formattedReference += " [" + reference.format + "]";
                             reference.formattedReference += ". Retrieved from ";
                             if (reference.retrievedFrom.Length > 0)
                             {
@@ -3737,6 +3737,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (governmentDocument.Checked)
             {
+                reference.type = "government";
                 TextBox organization = (TextBox)Controls.Find("authorEnter", true)[0];
                 reference.organization = organization.Text;
                 TextBox publicationDate = (TextBox)Controls.Find("publishDateEnter", true)[0];
@@ -4150,7 +4151,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
                 reference.title = title.Text;
                 TextBox format = (TextBox)Controls.Find("formatEnter", true)[0];
-                reference.type = format.Text;                
+                reference.format = format.Text;                
                 TextBox retrievedFrom = (TextBox)Controls.Find("retrievedFromEnter", true)[0];
                 reference.retrievedFrom = retrievedFrom.Text;
 
@@ -4243,9 +4244,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                         }
                         reference.formattedReference += '\a';
-                        if (reference.type.Length > 0)
+                        if (reference.format.Length > 0)
                         {
-                            reference.formattedReference += " [" + reference.type + "]. ";
+                            reference.formattedReference += " [" + reference.format + "]. ";
                             if (reference.retrievedFrom.Length > 0)
                             {
                                 reference.formattedReference += "Retrieved from " + reference.retrievedFrom;
@@ -5277,7 +5278,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 TextBox album = (TextBox)Controls.Find("albumTitleEnter", true)[0];
                 reference.source = album.Text;
                 TextBox medium = (TextBox)Controls.Find("mediumEnter", true)[0];
-                reference.type = medium.Text;
+                reference.format = medium.Text;
                 TextBox location = (TextBox)Controls.Find("locationEnter", true)[0];
                 reference.location = location.Text;
                 TextBox label = (TextBox)Controls.Find("labelEnter", true)[0];
@@ -5373,9 +5374,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                             }
                             reference.formattedReference += " ";
                             reference.formattedReference += '\a';
-                            if (reference.type.Length > 0)
+                            if (reference.format.Length > 0)
                             {
-                                reference.formattedReference += "[" + reference.type + "]. ";
+                                reference.formattedReference += "[" + reference.format + "]. ";
                                 if (reference.location.Length > 0)
                                 {
                                     if (reference.studio.Length > 0)
@@ -5607,7 +5608,154 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else
             {
+                bool citeLikeAuthor = false;
                 Form1.myPaper.references.references.Add(reference);
+                //insertInto.SelectedText = "\"" + quoteText + "\" (" + reference.publicationDate + ")";
+                string parenText = "(";
+                if (reference.type.Equals("bookNoAuth") || reference.type.Equals("wiki"))
+                {
+                    parenText += "\"" + reference.title + ",\" ";
+                }
+                else if (reference.type.Equals("bookOrg"))
+                {
+                    parenText += reference.authors[0].completeName + ", ";
+                }
+                else if (reference.type.Equals("dictionEncyclo"))
+                {
+                    if (reference.authors.Count > 0)
+                    {
+                        citeLikeAuthor = true;
+                    }
+                    else
+                    {
+                        parenText += "\"" + reference.section + ",\" ";
+                    }
+                }
+                else if (reference.type.Equals("onlineInterview"))
+                {
+                    //TODO: Modify the author one to be with interviewer
+                }
+                else if (reference.type.Equals("onlineDictionEncyclo"))
+                {                    
+                    parenText += "\"" + reference.section + ",\" ";                    
+                }
+                else if (reference.type.Equals("government"))
+                {
+                    parenText += reference.organization + ", ";
+                }
+                else if (reference.type.Equals("review"))
+                {
+                    //TODO: Modify the author one to be with review
+                }
+                else if (reference.type.Equals("videoPodcast") || reference.type.Equals("movie") || reference.type.Equals("broadcast"))
+                {
+                    if (reference.producer.lastName.Length > 0)
+                    {
+                        parenText += reference.producer.lastName + ", ";
+                    }
+                    else if (reference.director.lastName.Length > 0)
+                    {
+                        parenText += reference.director.lastName + ", ";
+                    }
+                    else
+                    {
+                        parenText += "\"" + reference.title + ",\" ";
+                    }
+                }
+                else if (reference.type.Equals("episode"))
+                {
+                    if (reference.writer.lastName.Length > 0)
+                    {
+                        parenText += reference.writer.lastName + ", ";
+                    }
+                    else if (reference.director.lastName.Length > 0)
+                    {
+                        parenText += reference.director.lastName + ", ";
+                    }
+                    else
+                    {
+                        parenText += "\"" + reference.title + ",\" ";
+                    }
+                }
+                else if (reference.type.Equals("music"))
+                {
+                    parenText += reference.writer.lastName + ", ";
+                }
+                else if (reference.type.Equals("interview") || reference.type.Equals("email") || reference.type.Equals("personal"))
+                {
+                    parenText += reference.authors[0].lastName + ", personal communication, ";
+                }
+                else
+                {
+                    citeLikeAuthor = true;
+                }
+                if (citeLikeAuthor)
+                {
+                    if (reference.authors.Count == 1)
+                    {
+                        parenText += reference.authors[0].lastName + ", ";
+                    }
+                    else if (reference.authors.Count == 2)
+                    {
+                        parenText += reference.authors[1].lastName + " & " + reference.authors[0].lastName + ", ";
+                    }
+                    else if (reference.authors.Count < 6)
+                    {
+                        for (int i = reference.authors.Count - 1; i >= 0; i--)
+                        {
+                            if (i == 0)
+                            {
+                                parenText += "& ";
+                            }
+                            parenText += reference.authors[i].lastName + ", ";
+                        }
+                    }
+                    else {
+                        parenText += reference.authors[reference.authors.Count - 1].lastName + ", ";
+                    }                    
+                }
+                if (reference.publicationDate.Length < 1)
+                {
+                    parenText += "n.d.";
+                }
+                else
+                {
+                    parenText += reference.publicationDate;
+                }
+                if ((reference.startPage.Length > 0 && reference.endPage.Length < 1) ||
+                    (reference.startPage.Length > 0 && reference.startPage.Equals(reference.endPage)))
+                {
+                    parenText += ", p. " + reference.startPage;
+                }
+                else if (reference.startPage.Length > 0 && reference.endPage.Length > 0)
+                {
+                    parenText += ", pp. " + reference.startPage + "-" + reference.endPage;
+                }
+                parenText += ")";
+
+
+                string textToInsert = "";
+                string[] words = quoteText.Split(' ');
+                if (words.Length == 0 || (words.Length == 1 && words[0].Length < 1))
+                {
+                    textToInsert += parenText;
+                    insertInto.SelectedText = textToInsert;
+                }
+                else if (words.Length < 40)
+                {
+                    textToInsert += "\"" + quoteText + "\" " + parenText;
+                    insertInto.SelectedText = textToInsert;
+                }
+                else
+                {
+                    textToInsert += quoteText + " " + parenText;
+                    int starter = insertInto.SelectionStart + 1;
+                    insertInto.SelectedText = "\n" + textToInsert + "\n";                    
+                    insertInto.SelectionStart = starter;
+                    insertInto.SelectionLength = textToInsert.Length;
+                    insertInto.SelectionIndent = 40;
+                }
+
                 this.Close();
             }            
         }

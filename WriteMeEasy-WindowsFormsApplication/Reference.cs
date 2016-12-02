@@ -63,6 +63,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             interviewers = new List<Author>();
             interviewees = new List<Author>();
             reviewers = new List<Author>();
+
+            startPage = "";
+            endPage = "";
         }
     }
 }

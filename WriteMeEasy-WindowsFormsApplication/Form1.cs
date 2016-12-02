@@ -30,26 +30,23 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
+            bool indentStarted = false;
             string formattedSummary = "";
             string currentFont = "";
             string currentSize = "";
+            
             for (int i = 0; i < summaryContent.Text.Length; i++)
             {
                 summaryContent.Select(i, 1);
-                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                if (summaryContent.SelectionIndent == 40 && !indentStarted)
                 {
-                    if (boldStarted)
-                    {
-                        formattedSummary += '\b';
-                    }
-                    if (italicStarted)
-                    {
-                        formattedSummary += '\a';
-                    }
-                    if (underlineStarted)
-                    {
-                        formattedSummary += '\f';
-                    }
+                    formattedSummary += '\v';
+                    indentStarted = true;
+                }
+                else if (summaryContent.SelectionIndent != 40 && indentStarted)
+                {
+                    formattedSummary += '\v';
+                    indentStarted = false;
                 }
                 if (summaryContent.SelectionFont.Bold && !boldStarted)
                 {
@@ -91,7 +88,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                     currentSize = summaryContent.SelectionFont.Size.ToString();
                     formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
-                formattedSummary += summaryContent.Text[i];
                 if (summaryContent.SelectedText.Equals('\n'.ToString()))
                 {
                     if (boldStarted)
@@ -106,6 +102,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         formattedSummary += '\f';
                     }
+                    if (indentStarted)
+                    {
+                        formattedSummary += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedSummary += summaryContent.Text[i];
+                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                {
                     formattedSummary += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
                     formattedSummary += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                 }
@@ -120,26 +128,22 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
+            bool indentStarted = false;
             string formattedAbstract = "";
             string currentFont = "";
             string currentSize = "";
             for (int i = 0; i < abstractContent.Text.Length; i++)
             {
                 abstractContent.Select(i, 1);
-                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                if (abstractContent.SelectionIndent == 40 && !indentStarted)
                 {
-                    if (boldStarted)
-                    {
-                        formattedAbstract += '\b';
-                    }
-                    if (italicStarted)
-                    {
-                        formattedAbstract += '\a';
-                    }
-                    if (underlineStarted)
-                    {
-                        formattedAbstract += '\f';
-                    }
+                    formattedAbstract += '\v';
+                    indentStarted = true;
+                }
+                else if (abstractContent.SelectionIndent != 40 && indentStarted)
+                {
+                    formattedAbstract += '\v';
+                    indentStarted = false;
                 }
                 if (abstractContent.SelectionFont.Bold && !boldStarted)
                 {
@@ -182,7 +186,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                     currentSize = abstractContent.SelectionFont.Size.ToString();
                     formattedAbstract += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
-                formattedAbstract += abstractContent.Text[i];
                 if (abstractContent.SelectedText.Equals('\n'.ToString()))
                 {
                     if (boldStarted)
@@ -197,6 +200,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         formattedAbstract += '\f';
                     }
+                    if (indentStarted)
+                    {
+                        formattedAbstract += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedAbstract += abstractContent.Text[i];
+                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                {
                     formattedAbstract += "\\ffffffffff\\" + abstractContent.SelectionFont.Name + "\\ffffffffffff\\";
                     formattedAbstract += "\\ssssssssss\\" + abstractContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                 }
@@ -211,26 +226,22 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool boldStarted = false;
             bool italicStarted = false;
             bool underlineStarted = false;
+            bool indentStarted = false;
             string formattedConclusion = "";
             string currentFont = "";
             string currentSize = "";
             for (int i = 0; i < conclusionContent.Text.Length; i++)
             {
                 conclusionContent.Select(i, 1);
-                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                if (conclusionContent.SelectionIndent == 40 && !indentStarted)
                 {
-                    if (boldStarted)
-                    {
-                        formattedConclusion += '\b';
-                    }
-                    if (italicStarted)
-                    {
-                        formattedConclusion += '\a';
-                    }
-                    if (underlineStarted)
-                    {
-                        formattedConclusion += '\f';
-                    }
+                    formattedConclusion += '\v';
+                    indentStarted = true;
+                }
+                else if (conclusionContent.SelectionIndent != 40 && indentStarted)
+                {
+                    formattedConclusion += '\v';
+                    indentStarted = false;
                 }
                 if (conclusionContent.SelectionFont.Bold && !boldStarted)
                 {
@@ -272,7 +283,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                     currentSize = conclusionContent.SelectionFont.Size.ToString();
                     formattedConclusion += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                 }
-                formattedConclusion += conclusionContent.Text[i];
                 if (conclusionContent.SelectedText.Equals('\n'.ToString()))
                 {
                     if (boldStarted)
@@ -287,6 +297,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         formattedConclusion += '\f';
                     }
+                    if (indentStarted)
+                    {
+                        formattedConclusion += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedConclusion += conclusionContent.Text[i];
+                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                {
                     formattedConclusion += "\\ffffffffff\\" + conclusionContent.SelectionFont.Name + "\\ffffffffffff\\";
                     formattedConclusion += "\\ssssssssss\\" + conclusionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                 }
@@ -1154,7 +1176,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (apaRadio.Checked)
                 {
-                    var referencePopup = new ReferenceAdder();
+                    var referencePopup = new ReferenceAdder(this);
                     referencePopup.ShowDialog(this);
                 }
                 else if (mlaRadio.Checked)

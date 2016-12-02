@@ -459,26 +459,22 @@ namespace WriteMeEasy_WindowsFormsApplication
                     bool boldStarted = false;
                     bool italicStarted = false;
                     bool underlineStarted = false;
+                    bool indentStarted = false;
                     string formattedSection = "";
                     string currentFont = "";
                     string currentSize = "";
                     for (int i = 0; i < sectionContent.Text.Length; i++)
                     {
                         sectionContent.Select(i, 1);
-                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        if (sectionContent.SelectionIndent == 40 && !indentStarted)
                         {
-                            if (boldStarted)
-                            {
-                                formattedSection += '\b';
-                            }
-                            if (italicStarted)
-                            {
-                                formattedSection += '\a';
-                            }
-                            if (underlineStarted)
-                            {
-                                formattedSection += '\f';
-                            }
+                            formattedSection += '\v';
+                            indentStarted = true;
+                        }
+                        else if (sectionContent.SelectionIndent != 40 && indentStarted)
+                        {
+                            formattedSection += '\v';
+                            indentStarted = false;
                         }
                         if (sectionContent.SelectionFont.Bold && !boldStarted)
                         {
@@ -520,7 +516,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                             currentSize = sectionContent.SelectionFont.Size.ToString();
                             formattedSection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                         }
-                        formattedSection += sectionContent.Text[i];
                         if (sectionContent.SelectedText.Equals('\n'.ToString()))
                         {
                             if (boldStarted)
@@ -535,8 +530,20 @@ namespace WriteMeEasy_WindowsFormsApplication
                             {
                                 formattedSection += '\f';
                             }
-                            formattedSection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
-                            formattedSection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                            if (indentStarted)
+                            {
+                                formattedSection += '\v';
+                            }
+                            indentStarted = false;
+                            boldStarted = false;
+                            italicStarted = false;
+                            underlineStarted = false;
+                        }
+                        formattedSection += sectionContent.Text[i];
+                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        {
+                            formattedSection += "\\ffffffffff\\" + sectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                            formattedSection += "\\ssssssssss\\" + sectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                         }
                     }
                     section.content = formattedSection;
@@ -633,26 +640,22 @@ namespace WriteMeEasy_WindowsFormsApplication
                             bool boldStarted = false;
                             bool italicStarted = false;
                             bool underlineStarted = false;
+                            bool indentStarted = false;
                             string formattedSubsection = "";
                             string currentFont = "";
                             string currentSize = "";
                             for (int i = 0; i < subsectionContent.Text.Length; i++)
                             {
                                 subsectionContent.Select(i, 1);
-                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                if (subsectionContent.SelectionIndent == 40 && !indentStarted)
                                 {
-                                    if (boldStarted)
-                                    {
-                                        formattedSubsection += '\b';
-                                    }
-                                    if (italicStarted)
-                                    {
-                                        formattedSubsection += '\a';
-                                    }
-                                    if (underlineStarted)
-                                    {
-                                        formattedSubsection += '\f';
-                                    }
+                                    formattedSubsection += '\v';
+                                    indentStarted = true;
+                                }
+                                else if (subsectionContent.SelectionIndent != 40 && indentStarted)
+                                {
+                                    formattedSubsection += '\v';
+                                    indentStarted = false;
                                 }
                                 if (subsectionContent.SelectionFont.Bold && !boldStarted)
                                 {
@@ -694,7 +697,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     currentSize = subsectionContent.SelectionFont.Size.ToString();
                                     formattedSubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                 }
-                                formattedSubsection += subsectionContent.Text[i];
                                 if (subsectionContent.SelectedText.Equals('\n'.ToString()))
                                 {
                                     if (boldStarted)
@@ -709,8 +711,20 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         formattedSubsection += '\f';
                                     }
-                                    formattedSubsection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
-                                    formattedSubsection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                    if (indentStarted)
+                                    {
+                                        formattedSubsection += '\v';
+                                    }
+                                    indentStarted = false;
+                                    boldStarted = false;
+                                    italicStarted = false;
+                                    underlineStarted = false;
+                                }
+                                formattedSubsection += subsectionContent.Text[i];
+                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                {
+                                    formattedSubsection += "\\ffffffffff\\" + subsectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                    formattedSubsection += "\\ssssssssss\\" + subsectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                                 }
                             }
                             subsection.content = formattedSubsection;
@@ -747,26 +761,22 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     bool boldStarted = false;
                                     bool italicStarted = false;
                                     bool underlineStarted = false;
+                                    bool indentStarted = false;
                                     string formattedSubsubsection = "";
                                     string currentFont = "";
                                     string currentSize = "";
                                     for (int i = 0; i < subsubsectionContent.Text.Length; i++)
                                     {
                                         subsubsectionContent.Select(i, 1);
-                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        if (subsubsectionContent.SelectionIndent == 40 && !indentStarted)
                                         {
-                                            if (boldStarted)
-                                            {
-                                                formattedSubsubsection += '\b';
-                                            }
-                                            if (italicStarted)
-                                            {
-                                                formattedSubsubsection += '\a';
-                                            }
-                                            if (underlineStarted)
-                                            {
-                                                formattedSubsubsection += '\f';
-                                            }
+                                            formattedSubsubsection += '\v';
+                                            indentStarted = true;
+                                        }
+                                        else if (subsubsectionContent.SelectionIndent != 40 && indentStarted)
+                                        {
+                                            formattedSubsubsection += '\v';
+                                            indentStarted = false;
                                         }
                                         if (subsubsectionContent.SelectionFont.Bold && !boldStarted)
                                         {
@@ -808,7 +818,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             currentSize = subsubsectionContent.SelectionFont.Size.ToString();
                                             formattedSubsubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
                                         }
-                                        formattedSubsubsection += subsubsectionContent.Text[i];
                                         if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
                                         {
                                             if (boldStarted)
@@ -823,8 +832,20 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 formattedSubsubsection += '\f';
                                             }
-                                            formattedSubsubsection += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
-                                            formattedSubsubsection += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                            if (indentStarted)
+                                            {
+                                                formattedSubsubsection += '\v';
+                                            }
+                                            indentStarted = false;
+                                            boldStarted = false;
+                                            italicStarted = false;
+                                            underlineStarted = false;
+                                        }
+                                        formattedSubsubsection += subsubsectionContent.Text[i];
+                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        {
+                                            formattedSubsubsection += "\\ffffffffff\\" + subsubsectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                            formattedSubsubsection += "\\ssssssssss\\" + subsubsectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
                                         }
                                     }
                                     subsubsection.content = formattedSubsubsection;

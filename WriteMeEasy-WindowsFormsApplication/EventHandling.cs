@@ -18,9 +18,9 @@ namespace WriteMeEasy_WindowsFormsApplication
         private SortedDictionary<string, int> titlePageOrder = new SortedDictionary<string, int>();
         private SortedDictionary<int, string> orderTitlePage = new SortedDictionary<int, string>();
         public static PaperConfig myPaper = new PaperConfig();
-        public static string lastEntered;
-        public static int startSelection;
-        public static int endSelection;
+        public string lastEntered;
+        public int startSelection;
+        public int endSelection;
 
         private void lowerSection(int pixelsDown, string startSection)
         {

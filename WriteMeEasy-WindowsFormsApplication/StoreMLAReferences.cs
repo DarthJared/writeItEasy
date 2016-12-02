@@ -2822,7 +2822,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
                 Form1.myPaper.references.references.Add(reference);
-                //this.Close();
+                this.Close();
             }
         }
     }
