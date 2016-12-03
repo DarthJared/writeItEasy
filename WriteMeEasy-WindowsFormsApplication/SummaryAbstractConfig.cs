@@ -20,7 +20,15 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public SummaryAbstractConfig()
         {
-            this.content = "";
+            onOwnPage = false;
+            includeTitle = false;
+            title = "";
+            titleBold = false;
+            titleFont = "";
+            titleSize = 0;
+            titleColor = "";
+            titleAlign = "";
+            content = "";
         }
     }
 }

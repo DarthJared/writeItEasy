@@ -427,7 +427,7 @@
             this.fontSelect = new System.Windows.Forms.ToolStripComboBox();
             this.fontSize = new System.Windows.Forms.ToolStripComboBox();
             this.addReferenceButton = new System.Windows.Forms.ToolStripButton();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFile = new System.Windows.Forms.SaveFileDialog();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -5605,6 +5605,7 @@
             this.saveButton.Size = new System.Drawing.Size(34, 37);
             this.saveButton.Text = "toolStripButton1";
             this.saveButton.ToolTipText = "Save";
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // openButton
             // 
@@ -5737,6 +5738,11 @@
             this.addReferenceButton.Size = new System.Drawing.Size(110, 44);
             this.addReferenceButton.Text = "toolStripButton2";
             this.addReferenceButton.Click += new System.EventHandler(this.addReferenceButton_Click);
+            // 
+            // saveFile
+            // 
+            this.saveFile.Filter = "WriteItEasy Project|*.write";
+            this.saveFile.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFile_FileOk);
             // 
             // Form1
             // 
@@ -5947,7 +5953,6 @@
         private System.Windows.Forms.GroupBox section1groupBox;
         private System.Windows.Forms.Label section1contentLabel;
         private System.Windows.Forms.Button section1AddSubsectionButton;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel titlePagePanel;
         private System.Windows.Forms.GroupBox titlePageIncludeGroupBox;
         private System.Windows.Forms.Label titlePageProfessorLabel;
@@ -6308,6 +6313,7 @@
         private System.Windows.Forms.ToolStripComboBox fontSelect;
         private System.Windows.Forms.ToolStripComboBox fontSize;
         private System.Windows.Forms.ToolStripButton addReferenceButton;
+        private System.Windows.Forms.SaveFileDialog saveFile;
     }
 }
 

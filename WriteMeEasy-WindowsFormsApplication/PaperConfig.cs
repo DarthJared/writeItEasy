@@ -27,7 +27,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public List<Section> sections;
         public ConclusionConfig conclusion;
         public ReferencesConfig references;
-        
+
         public PaperConfig()
         {
             titlePage = new TitlePageConfig();
@@ -40,6 +40,16 @@ namespace WriteMeEasy_WindowsFormsApplication
             footer = new HeaderFooterConfig();
             sections = new List<Section>();
             references = new ReferencesConfig();
+            titleOfPaper = "";
+            isAPA = true;
+            isMLA = false;
+            includeTitlePage = false;
+            includeSummary = false;
+            includeAbstract = false;
+            includeHeader = false;
+            includeFooter = false;
+            includeConclusion = false;
+            includeReferences = false;
         }
     }
 }

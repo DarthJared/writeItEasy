@@ -22,6 +22,17 @@ namespace WriteMeEasy_WindowsFormsApplication
         public List<Reference> references;
         public ReferencesConfig()
         {
+            includeTitle = true;
+            title = "";
+            titleAlign = "";
+            boldTitle = true;
+            titleFont = "";
+            titleSize = 0;
+            titleColor = "";
+            hangingIndent = true;
+            tabsHangingIndent = 0;
+            emptyLineBetweenReferences = true;
+            orderBy = "";
             references = new List<Reference>();
         }
     }

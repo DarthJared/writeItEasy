@@ -122,6 +122,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             endSelection = 0;
 
             myPaper.sections.Add(new Section(new List<SubSection>(), "", "", 1));
+            section1Content.SelectionIndent = 40;
+            section1Content.SelectionHangingIndent = -40;
+            conclusionContent.SelectionIndent = 40;
+            conclusionContent.SelectionHangingIndent = -40;
+            abstractContent.SelectionIndent = 40;
+            abstractContent.SelectionHangingIndent = -40;
+            summaryContent.SelectionIndent = 40;
+            summaryContent.SelectionHangingIndent = -40;
         }
 
         private void resizeEvent(object sender, EventArgs e)
@@ -277,7 +285,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             checkContentPanelHeight();
 
             writeButton.Location = new Point(finalizePanel.Width - 125, 8);
-            finalizePanel.Height = 119;
+            finalizePanel.Height = 119;                       
         }
 
         private void checkContentPanelHeight()

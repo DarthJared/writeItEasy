@@ -2957,6 +2957,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     insertInto.SelectionStart = starter;
                     insertInto.SelectionLength = textToInsert.Length;
                     insertInto.SelectionIndent = 40;
+                    insertInto.SelectionHangingIndent = 0;
                 }
                 this.Close();
             }

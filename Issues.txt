@@ -1,7 +1,5 @@
 ISSUES:
 -Fix centering with no label problem
--Get in text references to work
--Write the references page to .docx
 -Get the rich text boxes to have indented first line and double spaced
 -Get bold, italics, underline, font, and size to show when selected
 -Redo UI
@@ -11,3 +9,7 @@ ISSUES:
 -Add placeholders
 -Enter APA and MLA defaults
 -Make section heads right font and size
+-Add Page Numbers
+-Add different first page header
+-Add manually adjusting indented
+

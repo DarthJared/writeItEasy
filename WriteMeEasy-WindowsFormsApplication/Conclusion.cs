@@ -79,6 +79,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 conclusionActive = false;
             }
             checkContentPanelHeight();
+            
         }
 
         private void conclusionIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)

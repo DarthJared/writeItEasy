@@ -29,6 +29,21 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public TitlePageConfig()
         {
+            includeTitle = false;
+            includeName = false;
+            includeClass = false;
+            includeProfessor = false;
+            includeSchool = false;
+            includeDate = false;
+
+            title = "";
+            name = "";
+            className = "";
+            professor = "";
+            school = "";
+            date = "";
+            alignment = "";
+            position = "";
             titlePageOrder = new List<string>();
         }
     }

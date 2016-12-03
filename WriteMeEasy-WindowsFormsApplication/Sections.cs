@@ -208,6 +208,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionContent.Tag = newSection.index;
             newSectionContent.Leave += new EventHandler(sectionTextChanged);
             newSectionContent.Enter += new EventHandler(sectionLast);
+            newSectionContent.SelectionIndent = 40;
+            newSectionContent.SelectionHangingIndent = -40;
 
             Button newSectionAddSubsectionButton = new Button();
             newSectionAddSubsectionButton.Name = "section" + newSection.index + "AddSubsectionButton";
@@ -315,6 +317,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
             subsectionContent.Leave += new EventHandler(subsectionTextChanged);
             subsectionContent.Enter += new EventHandler(subsectionLast);
+            subsectionContent.SelectionIndent = 40;
+            subsectionContent.SelectionHangingIndent = -40;
 
             Button addSubsubsectionButton = new Button();
             addSubsubsectionButton.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton";
@@ -431,6 +435,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
             subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
             subsubsectionContent.Enter += new EventHandler(subsubsectionLast);
+            subsubsectionContent.SelectionIndent = 40;
+            subsubsectionContent.SelectionHangingIndent = -40;
 
             addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 282, "contentPanel", "CONTENT");
             subsubsectionToAdd.Location = new Point(9, starter.Location.Y - 277);

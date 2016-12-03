@@ -67,7 +67,62 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public HeaderFooterConfig()
         {
+            differentFirstPage = false;
+            useRunningHead = false;
 
+            leftTitle = false;
+            leftPageNum = false;
+            leftOther = false;
+            leftNone = false;
+
+            centerTitle = false;
+            centerPageNum = false;
+            centerOther = false;
+            centerNone = false;
+
+            rightTitle = false;
+            rightPageNum = false;
+            rightOther = false;
+            rightNone = false;
+
+            firstLeftTitle = false;
+            firstLeftPageNum = false;
+            firstLeftOther = false;
+            firstLeftNone = false;
+
+            firstCenterTitle = false;
+            firstCenterPageNum = false;
+            firstCenterOther = false;
+            firstCenterNone = false;
+
+            firstRightTitle = false;
+            firstRightPageNum = false;
+            firstRightOther = false;
+            firstRightNone = false;
+
+            leftTitleText = "";
+            leftPageNumStart = 0;
+            leftOtherText = "";
+
+            centerTitleText = "";
+            centerPageNumStart = 0;
+            centerOtherText = "";
+
+            rightTitleText = "";
+            rightPageNumStart = 0;
+            rightOtherText = "";
+
+            firstLeftTitleText = "";
+            firstLeftPageNumStart = 0;
+            firstLeftOtherText = "";
+
+            firstCenterTitleText = "";
+            firstCenterPageNumStart = 0;
+            firstCenterOtherText = "";
+
+            firstRightTitleText = "";
+            firstRightPageNumStart = 0;
+            firstRightOtherText = "";
         }
     }
 }

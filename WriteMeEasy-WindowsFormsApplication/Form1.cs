@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace WriteMeEasy_WindowsFormsApplication
 {
@@ -1189,6 +1190,183 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 MessageBox.Show("Choose where you want to have the quote or citation inserted and then select to insert the citation.\n");
             }            
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (myPaper.titleOfPaper != null && myPaper.titleOfPaper.Length > 0)
+            {
+                saveFile.FileName = myPaper.titleOfPaper + ".write";
+            }
+            else
+            {
+                saveFile.FileName = "newProject.write";
+            }
+            saveFile.ShowDialog(this);                        
+        }
+
+        private void saveFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string fileName = saveFile.FileName;
+            if (fileName.Length > 0)
+            {
+                if (fileName.Length > 2)
+                {
+                    string ext = fileName[fileName.Length - 6].ToString() + fileName[fileName.Length - 5].ToString() + fileName[fileName.Length - 4].ToString() + fileName[fileName.Length - 3].ToString() + fileName[fileName.Length - 2].ToString() + fileName[fileName.Length - 1].ToString();
+                    if (!ext.Equals(".write"))
+                    {
+                        fileName += ".write";
+                    }
+                }
+                else
+                {
+                    fileName += ".write";
+                }
+                using (XmlWriter writer = XmlWriter.Create(fileName))
+                {
+                    writer.WriteStartDocument();
+                    writer.WriteStartElement("Paper");
+                    writer.WriteElementString("PaperTitle", myPaper.titleOfPaper.ToString());
+                    string apaMla = "";
+                    if (myPaper.isAPA)
+                    {
+                        apaMla = "APA";
+                    }
+                    else if (myPaper.isMLA)
+                    {
+                        apaMla = "MLA";
+                    }
+                    writer.WriteElementString("APAMLA", apaMla);
+                    writer.WriteElementString("IncludeTitlePage", myPaper.includeTitlePage.ToString());
+                    writer.WriteElementString("IncludeSummary", myPaper.includeSummary.ToString());
+                    writer.WriteElementString("IncludeAbstract", myPaper.includeAbstract.ToString());
+                    writer.WriteElementString("IncludeHeader", myPaper.includeHeader.ToString());
+                    writer.WriteElementString("IncludeConclusion", myPaper.includeConclusion.ToString());
+                    writer.WriteElementString("IncludeReferences", myPaper.includeReferences.ToString());
+
+                    writer.WriteStartElement("TitlePage");
+                    writer.WriteElementString("IncludeTitle", myPaper.titlePage.includeTitle.ToString());
+                    writer.WriteElementString("IncludeName", myPaper.titlePage.includeName.ToString());
+                    writer.WriteElementString("IncludeClass", myPaper.titlePage.includeClass.ToString());
+                    writer.WriteElementString("IncludeProfessor", myPaper.titlePage.includeProfessor.ToString());
+                    writer.WriteElementString("IncludeSchool", myPaper.titlePage.includeSchool.ToString());
+                    writer.WriteElementString("IncludeDate", myPaper.titlePage.includeDate.ToString());
+                    writer.WriteElementString("Title", myPaper.titlePage.title.ToString());
+                    writer.WriteElementString("Name", myPaper.titlePage.name.ToString());
+                    writer.WriteElementString("Class", myPaper.titlePage.className.ToString());
+                    writer.WriteElementString("Professor", myPaper.titlePage.professor.ToString());
+                    writer.WriteElementString("School", myPaper.titlePage.school.ToString());
+                    writer.WriteElementString("Date", myPaper.titlePage.date.ToString());
+                    writer.WriteElementString("Alignment", myPaper.titlePage.alignment);
+                    writer.WriteStartElement("TitlePage");
+                    foreach (string item in myPaper.titlePage.titlePageOrder)
+                    {
+                        writer.WriteElementString("Item", item);
+                    }
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Summary");
+                    writer.WriteElementString("OwnPage", myPaper.summary.onOwnPage.ToString());
+                    writer.WriteElementString("IncludeTitle", myPaper.summary.includeTitle.ToString());
+                    writer.WriteElementString("Title", myPaper.summary.title);
+                    writer.WriteElementString("BoldTitle", myPaper.summary.titleBold.ToString());
+                    writer.WriteElementString("TitleFont", myPaper.summary.titleFont);
+                    writer.WriteElementString("TitleSize", myPaper.summary.titleSize.ToString());
+                    writer.WriteElementString("TitleColor", myPaper.summary.titleColor);
+                    writer.WriteElementString("TitleAlign", myPaper.summary.titleAlign);
+                    writer.WriteElementString("Content", myPaper.summary.content);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Abstract");
+                    writer.WriteElementString("OwnPage", myPaper.abstractConfig.onOwnPage.ToString());
+                    writer.WriteElementString("IncludeTitle", myPaper.abstractConfig.includeTitle.ToString());
+                    writer.WriteElementString("Title", myPaper.abstractConfig.title);
+                    writer.WriteElementString("BoldTitle", myPaper.abstractConfig.titleBold.ToString());
+                    writer.WriteElementString("TitleFont", myPaper.abstractConfig.titleFont);
+                    writer.WriteElementString("TitleSize", myPaper.abstractConfig.titleSize.ToString());
+                    writer.WriteElementString("TitleColor", myPaper.abstractConfig.titleColor);
+                    writer.WriteElementString("TitleAlign", myPaper.abstractConfig.titleAlign);
+                    writer.WriteElementString("Content", myPaper.abstractConfig.content);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("Header");
+                    writer.WriteElementString("DifferentFirst", myPaper.header.differentFirstPage.ToString());
+                    writer.WriteElementString("UseRunningHead", myPaper.header.useRunningHead.ToString());
+                    writer.WriteElementString("LeftTitle", myPaper.header.leftTitle.ToString());
+                    writer.WriteElementString("LeftPageNum", myPaper.header.leftPageNum.ToString());
+                    writer.WriteElementString("LeftOther", myPaper.header.leftOther.ToString());
+                    writer.WriteElementString("LeftNone", myPaper.header.leftNone.ToString());
+                    writer.WriteElementString("CenterTitle", myPaper.header.centerTitle.ToString());
+                    writer.WriteElementString("CenterPageNum", myPaper.header.centerPageNum.ToString());
+                    writer.WriteElementString("CenterOther", myPaper.header.centerOther.ToString());
+                    writer.WriteElementString("CenterNone", myPaper.header.centerNone.ToString());
+                    writer.WriteElementString("RightTitle", myPaper.header.rightTitle.ToString());
+                    writer.WriteElementString("RightPageNum", myPaper.header.rightPageNum.ToString());
+                    writer.WriteElementString("RightOther", myPaper.header.rightOther.ToString());
+                    writer.WriteElementString("RightNone", myPaper.header.rightNone.ToString());
+                    writer.WriteElementString("FirstLeftTitle", myPaper.header.firstLeftTitle.ToString());
+                    writer.WriteElementString("FirstLeftPageNum", myPaper.header.firstLeftPageNum.ToString());
+                    writer.WriteElementString("FirstLeftOther", myPaper.header.firstLeftOther.ToString());
+                    writer.WriteElementString("FirstLeftNone", myPaper.header.firstLeftNone.ToString());                                              
+                    writer.WriteElementString("FirstCenterTitle", myPaper.header.firstCenterTitle.ToString());
+                    writer.WriteElementString("FirstCenterPageNum", myPaper.header.firstCenterPageNum.ToString());
+                    writer.WriteElementString("FirstCenterOther", myPaper.header.firstCenterOther.ToString());
+                    writer.WriteElementString("FirstCenterNone", myPaper.header.firstCenterNone.ToString());                                               
+                    writer.WriteElementString("FirstRightTitle", myPaper.header.firstRightTitle.ToString());
+                    writer.WriteElementString("FirstRightPageNum", myPaper.header.firstRightPageNum.ToString());
+                    writer.WriteElementString("FirstRightOther", myPaper.header.firstRightOther.ToString());
+                    writer.WriteElementString("FirstRightNone", myPaper.header.firstRightNone.ToString());
+                    writer.WriteElementString("LeftTitle", myPaper.header.leftTitleText);
+                    writer.WriteElementString("LeftPageStart", myPaper.header.leftPageNumStart.ToString());
+                    writer.WriteElementString("LeftOther", myPaper.header.leftOtherText);
+                    writer.WriteElementString("CenterTitle", myPaper.header.centerTitleText);
+                    writer.WriteElementString("CenterPageStart", myPaper.header.centerPageNumStart.ToString());
+                    writer.WriteElementString("CenterOther", myPaper.header.centerOtherText);
+                    writer.WriteElementString("RightTitle", myPaper.header.rightTitleText);
+                    writer.WriteElementString("RightPageStart", myPaper.header.rightPageNumStart.ToString());
+                    writer.WriteElementString("RightOther", myPaper.header.rightOtherText);
+                    writer.WriteElementString("FirstLeftTitle", myPaper.header.firstLeftTitleText);
+                    writer.WriteElementString("FirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
+                    writer.WriteElementString("FirstLeftOther", myPaper.header.firstLeftOtherText);                                              
+                    writer.WriteElementString("FirstCenterTitle", myPaper.header.firstCenterTitleText);
+                    writer.WriteElementString("FirstCenterPageStart", myPaper.header.firstCenterPageNumStart.ToString());
+                    writer.WriteElementString("FirstCenterOther", myPaper.header.firstCenterOtherText);                                            
+                    writer.WriteElementString("FirstRightTitle", myPaper.header.firstRightTitleText);
+                    writer.WriteElementString("FirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
+                    writer.WriteElementString("FirstRightOther", myPaper.header.firstRightOtherText);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("References");
+                    writer.WriteElementString("IncludeTitle", myPaper.references.includeTitle.ToString());
+                    writer.WriteElementString("Title", myPaper.references.title);
+                    writer.WriteElementString("TitleAlign", myPaper.references.titleAlign);
+                    writer.WriteElementString("BoldTitle", myPaper.references.boldTitle.ToString());
+                    writer.WriteElementString("TitleFont", myPaper.references.titleFont);
+                    writer.WriteElementString("TitleSize", myPaper.references.titleSize.ToString());
+                    writer.WriteElementString("TitleColor", myPaper.references.titleColor);
+                    writer.WriteElementString("HangingIndent", myPaper.references.hangingIndent.ToString());
+                    writer.WriteElementString("NumTabsHanging", myPaper.references.tabsHangingIndent.ToString());
+                    writer.WriteElementString("EmptyLineBetween", myPaper.references.emptyLineBetweenReferences.ToString());
+                    writer.WriteElementString("OrderBy", myPaper.references.orderBy);
+                    foreach (Reference reference in myPaper.references.references)
+                    {
+
+                    }
+                    writer.WriteEndElement();
+
+
+
+                    writer.WriteEndElement();
+                    writer.WriteEndDocument();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter the name you would like to use to store the file.\n");
+            }
+            
+
         }
     }
 }
