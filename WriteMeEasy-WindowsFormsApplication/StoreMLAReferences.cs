@@ -14,6 +14,10 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
+            RichTextBox insertInto = (RichTextBox)mainForm.Controls.Find(mainForm.lastEntered, true)[0];
+            int whereToInser = insertInto.SelectionStart;
+            string quoteText = quoteContent.Text;
+
             Reference reference = new Reference();
             bool error = false;
             string errorMessage = "";
@@ -418,6 +422,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (encyclopedia.Checked)
             {
+                reference.type = "encyclopedia";
                 TextBox section = (TextBox)Controls.Find("sectionNameEnter", true)[0];
                 reference.section = section.Text;
                 TextBox title = (TextBox)Controls.Find("bookNameEnter", true)[0];
@@ -462,6 +467,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (translated.Checked)
             {
+                reference.type = "translated";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
                 int numTranslators = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[2]);
 
@@ -619,6 +625,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (magazine.Checked)
             {
+                reference.type = "magazine";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -751,6 +758,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (newspaper.Checked)
             {
+                reference.type = "newspaper";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -883,6 +891,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (journal.Checked)
             {
+                reference.type = "journal";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1027,6 +1036,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (onlineOnlyJournal.Checked)
             {
+                reference.type = "onlineOnlyJournal";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1163,6 +1173,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (onlinePeriodical.Checked)
             {
+                reference.type = "onlinePeriodical";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1287,6 +1298,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (onlineNewspaper.Checked)
             {
+                reference.type = "onlineNewspaper";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1429,6 +1441,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (website.Checked)
             {
+                reference.type = "website";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1548,6 +1561,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (onlinePrintJournal.Checked)
             {
+                reference.type = "onlinePrintJournal";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1702,6 +1716,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (onlineEncyclopedia.Checked)
             {
+                reference.type = "onlineEncyclopedia";
                 TextBox section = (TextBox)Controls.Find("sectionNameEnter", true)[0];
                 reference.section = section.Text;
                 TextBox title = (TextBox)Controls.Find("bookNameEnter", true)[0];
@@ -1752,6 +1767,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (blogDiscussion.Checked)
             {
+                reference.type = "blog";
                 Author poster = new Author();
                 TextBox posterFirst = (TextBox)Controls.Find("posterFirstEnter", true)[0];
                 TextBox posterMiddle = (TextBox)Controls.Find("posterMiddleEnter", true)[0];
@@ -1846,6 +1862,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (publishedDissertation.Checked || publishedThesis.Checked || unpublishedDissertation.Checked || unpublishedThesis.Checked)
             {
+                reference.type = "dissertationThesis";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -1992,6 +2009,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (governmentDocument.Checked)
             {
+                reference.type = "government";
                 TextBox organization = (TextBox)Controls.Find("authorEnter", true)[0];
                 reference.organization = organization.Text;
                 TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
@@ -2062,6 +2080,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (review.Checked)
             {
+                reference.type = "review";
                 int numReviewers = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[2]);
 
@@ -2281,6 +2300,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (presentation.Checked)
             {
+                reference.type = "presentation";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
 
                 for (int i = 0; i < numAuthors; i++)
@@ -2420,6 +2440,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (movie.Checked)
             {
+                reference.type = "movie";
                 Author director = new Author();
                 TextBox directorFirst = (TextBox)Controls.Find("directorFirstEnter", true)[0];
                 TextBox directorMiddle = (TextBox)Controls.Find("directorMiddleEnter", true)[0];
@@ -2470,6 +2491,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (tvEpisode.Checked)
             {
+                reference.type = "episode";
                 TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
                 reference.title = title.Text;
                 TextBox series = (TextBox)Controls.Find("seriesTitleEnter", true)[0];
@@ -2553,6 +2575,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (music.Checked)
             {
+                reference.type = "music";
                 TextBox artist = (TextBox)Controls.Find("artistEnter", true)[0];
                 reference.artistName = artist.Text;
                 TextBox title = (TextBox)Controls.Find("titleEnter", true)[0];
@@ -2626,6 +2649,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (interview.Checked)
             {
+                reference.type = "interview";
                 Author communicator = new Author();
                 TextBox communicatorFirst = (TextBox)Controls.Find("communicatorFirstEnter", true)[0];
                 TextBox communicatorMiddle = (TextBox)Controls.Find("communicatorMiddleEnter", true)[0];
@@ -2657,6 +2681,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (email.Checked)
             {
+                reference.type = "email";
                 Author communicator = new Author();
                 TextBox communicatorFirst = (TextBox)Controls.Find("communicatorFirstEnter", true)[0];
                 TextBox communicatorMiddle = (TextBox)Controls.Find("communicatorMiddleEnter", true)[0];
@@ -2716,7 +2741,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (letterToEditor.Checked)
             {
-                reference.type = "editorial";
+                reference.type = "letterToEditor";
                 int numAuthors = Convert.ToInt32(sourceInfoGroupBox.Tag.ToString().Split(',')[0]);
                 
                 Author author = new Author();
@@ -2822,6 +2847,117 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
                 Form1.myPaper.references.references.Add(reference);
+
+                bool citeLikeAuthor = false;
+                string parenText = "(";
+
+                if (reference.type.Equals("editorial") || reference.type.Equals("letterToEditor") || reference.type.Equals("website"))
+                {
+                    if (reference.authors.Count > 0)
+                    {
+                        citeLikeAuthor = true;
+                    }
+                    else
+                    {
+                        parenText += reference.title;
+                    }
+                }
+                else if (reference.type.Equals("encyclopedia") || reference.type.Equals("onlineEncyclopedia"))
+                {
+                    parenText += reference.section;
+                }
+                else if (reference.type.Equals("blog"))
+                {
+                    if (reference.screenName.Length > 0)
+                    {
+                        parenText += reference.screenName;
+                    }
+                    else
+                    {
+                        parenText += reference.authors[0].lastName;
+                    }
+                }
+                else if (reference.type.Equals("government"))
+                {
+                    parenText += reference.organization;
+                }
+                else if (reference.type.Equals("review"))
+                {
+                    if (reference.reviewers.Count == 1)
+                    {
+                        parenText += reference.reviewers[0].lastName;
+                    }
+                    else if (reference.reviewers.Count == 2)
+                    {
+                        parenText += reference.reviewers[1].lastName + " and " + reference.reviewers[0].lastName;
+                    }
+                    else if (reference.reviewers.Count > 2)
+                    {
+                        parenText += reference.reviewers[reference.reviewers.Count - 1].lastName + " et al.";
+                    }
+                }
+                else if (reference.type.Equals("movie") || reference.type.Equals("episode"))
+                {
+                    parenText += reference.episode;
+                }
+                else if (reference.type.Equals("music"))
+                {
+                    parenText += reference.artistName;
+                }
+                else if (reference.type.Equals("interview") || reference.type.Equals("email"))
+                {
+                    parenText += reference.communicator.lastName;
+                }
+                else
+                {
+                    citeLikeAuthor = true;
+                }
+                if (citeLikeAuthor)
+                {
+                    if (reference.authors.Count == 1)
+                    {
+                        parenText += reference.authors[0].lastName;
+                    }
+                    else if (reference.authors.Count == 2)
+                    {
+                        parenText += reference.authors[1].lastName + " and " + reference.authors[0].lastName;
+                    }
+                    else if (reference.authors.Count  > 2)
+                    {
+                        parenText += reference.authors[reference.authors.Count - 1].lastName + " et al.";
+                    }
+                }
+                if (reference.startPage.Length > 0)
+                {
+                    parenText += ", " + reference.startPage;
+                }
+                if (reference.endPage.Length > 0)
+                {
+                    parenText += "-" + reference.endPage;
+                }
+                parenText += ")";
+
+                string[] words = quoteText.Split(' ');
+                string textToInsert = "";
+                if (words.Length == 0 || (words.Length == 1 && words[0].Length < 1))
+                {
+                    textToInsert += parenText;
+                    insertInto.SelectedText = textToInsert;
+                }
+                else if (words.Length < 50)
+                {
+                    textToInsert += "\"" + quoteText + "\" " + parenText;
+                    insertInto.SelectedText = textToInsert;
+                }
+                else
+                {
+                    textToInsert += quoteText + " " + parenText;
+                    int starter = insertInto.SelectionStart + 1;
+                    insertInto.SelectedText = "\n" + textToInsert + "\n";
+                    insertInto.SelectionStart = starter;
+                    insertInto.SelectionLength = textToInsert.Length;
+                    insertInto.SelectionIndent = 40;
+                }
                 this.Close();
             }
         }

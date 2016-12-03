@@ -12,6 +12,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class CitationAdder : Form
     {
+        public Form1 mainForm;
         public CitationAdder()
         {
             InitializeComponent();
@@ -23,6 +24,21 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             book.Checked = false;
             book.Checked = true;
+        }
+
+        public CitationAdder(Form1 form1)
+        {
+            InitializeComponent();
+
+            this.Width = 1909;
+            this.Height = 1447;
+            sourceInfoGroupBox.Height = 155;
+            sourceInfoPanel.Height = 135;
+
+            book.Checked = false;
+            book.Checked = true;
+
+            mainForm = form1;
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

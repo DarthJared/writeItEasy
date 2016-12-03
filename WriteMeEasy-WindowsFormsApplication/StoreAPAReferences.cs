@@ -219,14 +219,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                             nextCapital = true;
                         }
                     }
+                    reference.formattedReference += '\a';
                     if (reference.edition.Length > 0)
                     {
                         reference.formattedReference += " (" + reference.edition + " ed.).";
                     }
                     else
                     {
-                        reference.formattedReference += ".";
-                        reference.formattedReference += '\a';
+                        reference.formattedReference += ".";                       
                     }
                     if (reference.publicationDate.Length > 0)
                     {
@@ -5610,7 +5610,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 bool citeLikeAuthor = false;
                 Form1.myPaper.references.references.Add(reference);
-                //insertInto.SelectedText = "\"" + quoteText + "\" (" + reference.publicationDate + ")";
                 string parenText = "(";
                 if (reference.type.Equals("bookNoAuth") || reference.type.Equals("wiki"))
                 {
@@ -5633,7 +5632,29 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else if (reference.type.Equals("onlineInterview"))
                 {
-                    //TODO: Modify the author one to be with interviewer
+                    if (reference.interviewers.Count == 1)
+                    {
+                        parenText += reference.interviewers[0].lastName + ", ";
+                    }
+                    else if (reference.interviewers.Count == 2)
+                    {
+                        parenText += reference.interviewers[1].lastName + " & " + reference.interviewers[0].lastName + ", ";
+                    }
+                    else if (reference.interviewers.Count < 6)
+                    {
+                        for (int i = reference.interviewers.Count - 1; i >= 0; i--)
+                        {
+                            if (i == 0)
+                            {
+                                parenText += "& ";
+                            }
+                            parenText += reference.interviewers[i].lastName + ", ";
+                        }
+                    }
+                    else
+                    {
+                        parenText += reference.interviewers[reference.interviewers.Count - 1].lastName + ", ";
+                    }
                 }
                 else if (reference.type.Equals("onlineDictionEncyclo"))
                 {                    
@@ -5645,7 +5666,29 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else if (reference.type.Equals("review"))
                 {
-                    //TODO: Modify the author one to be with review
+                    if (reference.reviewers.Count == 1)
+                    {
+                        parenText += reference.reviewers[0].lastName + ", ";
+                    }
+                    else if (reference.reviewers.Count == 2)
+                    {
+                        parenText += reference.reviewers[1].lastName + " & " + reference.reviewers[0].lastName + ", ";
+                    }
+                    else if (reference.reviewers.Count < 6)
+                    {
+                        for (int i = reference.reviewers.Count - 1; i >= 0; i--)
+                        {
+                            if (i == 0)
+                            {
+                                parenText += "& ";
+                            }
+                            parenText += reference.reviewers[i].lastName + ", ";
+                        }
+                    }
+                    else
+                    {
+                        parenText += reference.reviewers[reference.reviewers.Count - 1].lastName + ", ";
+                    }
                 }
                 else if (reference.type.Equals("videoPodcast") || reference.type.Equals("movie") || reference.type.Equals("broadcast"))
                 {

@@ -600,7 +600,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 796F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 892F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(3365, 892);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -4793,6 +4793,11 @@
             // 
             // referencesOrderChoose
             // 
+            this.referencesOrderChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referencesOrderChoose.Items.AddRange(new object[] {
+            "Alphabetically A-Z",
+            "First Added to Last Added",
+            "Last Added to First Added"});
             this.referencesOrderChoose.Location = new System.Drawing.Point(117, 362);
             this.referencesOrderChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.referencesOrderChoose.Name = "referencesOrderChoose";
@@ -5084,7 +5089,7 @@
             this.contentTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.contentTab.Name = "contentTab";
             this.contentTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.contentTab.Size = new System.Drawing.Size(1612, 737);
+            this.contentTab.Size = new System.Drawing.Size(1611, 737);
             this.contentTab.TabIndex = 1;
             this.contentTab.Text = "CONTENT";
             this.contentTab.UseVisualStyleBackColor = true;
@@ -5586,7 +5591,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(637, 49);
+            this.toolStrip1.Size = new System.Drawing.Size(559, 49);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton

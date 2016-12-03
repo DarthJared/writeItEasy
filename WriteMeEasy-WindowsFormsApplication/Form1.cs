@@ -1181,7 +1181,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
                 else if (mlaRadio.Checked)
                 {
-                    var citationPopup = new CitationAdder();
+                    var citationPopup = new CitationAdder(this);
                     citationPopup.ShowDialog(this);
                 }
             }            

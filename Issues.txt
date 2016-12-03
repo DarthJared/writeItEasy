@@ -10,3 +10,4 @@ ISSUES:
 -Add Managing references
 -Add placeholders
 -Enter APA and MLA defaults
+-Make section heads right font and size

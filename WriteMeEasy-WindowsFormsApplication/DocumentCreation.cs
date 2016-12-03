@@ -3352,7 +3352,62 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 if (myPaper.includeReferences)
                 {
-
+                    Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                    pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                    Paragraph text = document.Content.Paragraphs.Add(ref missing);
+                    if (myPaper.references.includeTitle)
+                    {                   
+                        if (myPaper.references.boldTitle)
+                        {
+                            text.Range.Bold = 1;
+                        }
+                        text.Range.Text = myPaper.references.title;
+                        if (myPaper.references.titleAlign == "Center")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                        }
+                        else if (myPaper.references.titleAlign == "Right")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                        }
+                        else if (myPaper.references.titleAlign == "Left")
+                        {
+                            text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                        text.Range.ParagraphFormat.FirstLineIndent = 0;
+                        text.Range.InsertParagraphAfter();
+                    }
+                    text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                    text.Range.Bold = 0;
+                    foreach (Reference reference in myPaper.references.references)
+                    {
+                        string formattedReference = reference.formattedReference;
+                        string unformattedReference = formattedReference.Replace('\a'.ToString(), "");
+                        text.Range.Text = unformattedReference;
+                        string[] splitReference = formattedReference.Split('\a');
+                        for (int i = 0; i < splitReference.Length; i++)
+                        {
+                            if (i % 2 == 1)
+                            {
+                                int previousCount = 0;
+                                for (int j = i - 1; j >= 0; j--)
+                                {
+                                    previousCount += splitReference[j].Length;
+                                }
+                                Range rangeToItalic = text.Range.Duplicate;
+                                rangeToItalic.SetRange(previousCount + text.Range.Start, previousCount + splitReference[i].Length + text.Range.Start);
+                                rangeToItalic.Italic = 1;                                
+                            }
+                        }
+                        if (myPaper.references.hangingIndent)
+                        {
+                            text.Range.ParagraphFormat.TabHangingIndent(Convert.ToInt16(myPaper.references.tabsHangingIndent));
+                        }
+                        text.Range.InsertParagraphAfter();                        
+                    }
+                    
+                    
+                    text.Range.InsertParagraphAfter();
                 }
 
                 if (myPaper.includeHeader)
