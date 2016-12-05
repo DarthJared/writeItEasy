@@ -1211,7 +1211,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             string fileName = saveFile.FileName;
             if (fileName.Length > 0)
             {
-                if (fileName.Length > 2)
+                if (fileName.Length > 6)
                 {
                     string ext = fileName[fileName.Length - 6].ToString() + fileName[fileName.Length - 5].ToString() + fileName[fileName.Length - 4].ToString() + fileName[fileName.Length - 3].ToString() + fileName[fileName.Length - 2].ToString() + fileName[fileName.Length - 1].ToString();
                     if (!ext.Equals(".write"))
@@ -1501,6 +1501,18 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                     /*Sections Configurations*/
 
+                    /*Conclusion Configurations*/
+                    writer.WriteStartElement("Conclusion");
+                    writer.WriteElementString("OnOwnPage", myPaper.conclusion.onOwnPage.ToString());
+                    writer.WriteElementString("IncludeTitle", myPaper.conclusion.includeTitle.ToString());
+                    writer.WriteElementString("Title", myPaper.conclusion.title);
+                    writer.WriteElementString("TitleAlign", myPaper.conclusion.titleAlign);
+                    writer.WriteElementString("BoldTitle", myPaper.conclusion.boldTitle.ToString());
+                    writer.WriteElementString("TitleFont", myPaper.conclusion.titleFont);
+                    writer.WriteElementString("TitleSize", myPaper.conclusion.titleSize.ToString());
+                    writer.WriteElementString("TitleColor", myPaper.conclusion.titleColor);
+                    writer.WriteElementString("Content", myPaper.conclusion.conclusionContent);
+                    writer.WriteEndElement();
 
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
@@ -1509,9 +1521,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
                 MessageBox.Show("Enter the name you would like to use to store the file.\n");
-            }
-            
-
+            }      
         }
     }
 }
