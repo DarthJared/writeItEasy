@@ -66,6 +66,48 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             startPage = "";
             endPage = "";
+            formattedReference = "";
+            type = "";
+            publicationDate = "";
+            title = "";
+            publisher = "";
+            publishLocation = "";
+            edition = "";
+            section = "";
+            volume = "";
+            issue = "";
+            startPage = "";
+            endPage = "";
+            originalPublishDate = "";
+            source = "";
+            retrievedFrom = "";
+            doi = "";
+            interviewDate = "";
+            number = "";
+            reviewTitle = "";
+            retrieveDate = "";
+            accession = "";
+            institution = "";
+            location = "";
+            organization = "";
+            studio = "";
+            recordDate = "";
+            accessedOn = "";
+            screenName = "";
+            meeting = "";
+            venue = "";
+            format = "";
+            callLetters = "";
+            season = "";
+            episode = "";
+            artistName = "";
+            producer = new Author();
+            director = new Author();
+            writer = new Author();
+            artist = new Author();
+            editor = new Author();
+            communicator = new Author();
+            receiver = new Author();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace WriteMeEasy_WindowsFormsApplication
 {
@@ -1222,10 +1223,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     fileName += ".write";
                 }
-                using (XmlWriter writer = XmlWriter.Create(fileName))
+                XDocument xDocument = null;
+                XmlWriterSettings xmlWriterSettings = new XmlWriterSettings { CheckCharacters = false };
+                using (XmlWriter writer = XmlWriter.Create(fileName, xmlWriterSettings))
                 {
                     writer.WriteStartDocument();
                     writer.WriteStartElement("Paper");
+
+                    /*General Paper Configurations*/
                     writer.WriteElementString("PaperTitle", myPaper.titleOfPaper.ToString());
                     string apaMla = "";
                     if (myPaper.isAPA)
@@ -1244,6 +1249,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("IncludeConclusion", myPaper.includeConclusion.ToString());
                     writer.WriteElementString("IncludeReferences", myPaper.includeReferences.ToString());
 
+                    /*Title Page Configurations*/
                     writer.WriteStartElement("TitlePage");
                     writer.WriteElementString("IncludeTitle", myPaper.titlePage.includeTitle.ToString());
                     writer.WriteElementString("IncludeName", myPaper.titlePage.includeName.ToString());
@@ -1266,6 +1272,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteEndElement();
                     writer.WriteEndElement();
 
+                    /*Summary Configurations*/
                     writer.WriteStartElement("Summary");
                     writer.WriteElementString("OwnPage", myPaper.summary.onOwnPage.ToString());
                     writer.WriteElementString("IncludeTitle", myPaper.summary.includeTitle.ToString());
@@ -1278,6 +1285,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("Content", myPaper.summary.content);
                     writer.WriteEndElement();
 
+                    /*Abstract Configurations*/
                     writer.WriteStartElement("Abstract");
                     writer.WriteElementString("OwnPage", myPaper.abstractConfig.onOwnPage.ToString());
                     writer.WriteElementString("IncludeTitle", myPaper.abstractConfig.includeTitle.ToString());
@@ -1290,6 +1298,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("Content", myPaper.abstractConfig.content);
                     writer.WriteEndElement();
 
+                    /*Header Configurations*/
                     writer.WriteStartElement("Header");
                     writer.WriteElementString("DifferentFirst", myPaper.header.differentFirstPage.ToString());
                     writer.WriteElementString("UseRunningHead", myPaper.header.useRunningHead.ToString());
@@ -1337,6 +1346,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("FirstRightOther", myPaper.header.firstRightOtherText);
                     writer.WriteEndElement();
 
+                    /*References Configurations*/
                     writer.WriteStartElement("References");
                     writer.WriteElementString("IncludeTitle", myPaper.references.includeTitle.ToString());
                     writer.WriteElementString("Title", myPaper.references.title);
@@ -1351,10 +1361,145 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("OrderBy", myPaper.references.orderBy);
                     foreach (Reference reference in myPaper.references.references)
                     {
-
+                        writer.WriteStartElement("References");
+                        writer.WriteElementString("Formatted", reference.formattedReference);
+                        writer.WriteElementString("Type", reference.type);
+                        writer.WriteElementString("PublicationDate", reference.publicationDate);
+                        writer.WriteElementString("Title", reference.title);
+                        writer.WriteElementString("Publishere", reference.publisher);
+                        writer.WriteElementString("PublishLocation", reference.publishLocation);
+                        writer.WriteElementString("Edition", reference.edition);
+                        writer.WriteElementString("Section", reference.section);
+                        writer.WriteElementString("Volume", reference.volume);
+                        writer.WriteElementString("Issue", reference.issue);
+                        writer.WriteElementString("StartPage", reference.startPage);
+                        writer.WriteElementString("EndPage", reference.endPage);
+                        writer.WriteElementString("OriginalPublishDate", reference.originalPublishDate);
+                        writer.WriteElementString("Source", reference.source);
+                        writer.WriteElementString("RetrievedFrom", reference.retrievedFrom);
+                        writer.WriteElementString("Doi", reference.doi);
+                        writer.WriteElementString("InterviewDate", reference.interviewDate);
+                        writer.WriteElementString("Number", reference.number);
+                        writer.WriteElementString("ReviewTitle", reference.reviewTitle);
+                        writer.WriteElementString("RetrieveDate", reference.retrieveDate);
+                        writer.WriteElementString("Accession", reference.accession);
+                        writer.WriteElementString("Institution", reference.institution);
+                        writer.WriteElementString("Location", reference.location);
+                        writer.WriteElementString("Organization", reference.organization);
+                        writer.WriteElementString("Studio", reference.studio);
+                        writer.WriteElementString("RecordDate", reference.recordDate);
+                        writer.WriteElementString("AccessedOn", reference.accessedOn);
+                        writer.WriteElementString("ScreenName", reference.screenName);
+                        writer.WriteElementString("Meeting", reference.meeting);
+                        writer.WriteElementString("Venue", reference.venue);
+                        writer.WriteElementString("Format", reference.format);
+                        writer.WriteElementString("CallLetters", reference.callLetters);
+                        writer.WriteElementString("Season", reference.season);
+                        writer.WriteElementString("Episode", reference.episode);
+                        writer.WriteElementString("ArtistName", reference.artistName);
+                        writer.WriteStartElement("Authors");
+                        foreach (Author author in reference.authors)
+                        {
+                            writer.WriteStartElement("Author");
+                            writer.WriteElementString("FirstName", author.firstName);
+                            writer.WriteElementString("MiddleName", author.middleName);
+                            writer.WriteElementString("LastName", author.lastName);
+                            writer.WriteElementString("CompleteName", author.completeName);
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Translator");
+                        foreach (Author author in reference.translators)
+                        {
+                            writer.WriteStartElement("Translator");
+                            writer.WriteElementString("FirstName", author.firstName);
+                            writer.WriteElementString("MiddleName", author.middleName);
+                            writer.WriteElementString("LastName", author.lastName);
+                            writer.WriteElementString("CompleteName", author.completeName);
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Interviewers");
+                        foreach (Author author in reference.interviewers)
+                        {
+                            writer.WriteStartElement("Interviewer");
+                            writer.WriteElementString("FirstName", author.firstName);
+                            writer.WriteElementString("MiddleName", author.middleName);
+                            writer.WriteElementString("LastName", author.lastName);
+                            writer.WriteElementString("CompleteName", author.completeName);
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Interviewees");
+                        foreach (Author author in reference.interviewees)
+                        {
+                            writer.WriteStartElement("Interviewee");
+                            writer.WriteElementString("FirstName", author.firstName);
+                            writer.WriteElementString("MiddleName", author.middleName);
+                            writer.WriteElementString("LastName", author.lastName);
+                            writer.WriteElementString("CompleteName", author.completeName);
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Reviewers");
+                        foreach (Author author in reference.reviewers)
+                        {
+                            writer.WriteStartElement("Reviewer");
+                            writer.WriteElementString("FirstName", author.firstName);
+                            writer.WriteElementString("MiddleName", author.middleName);
+                            writer.WriteElementString("LastName", author.lastName);
+                            writer.WriteElementString("CompleteName", author.completeName);
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Producer");
+                        writer.WriteElementString("FirstName", reference.producer.firstName);
+                        writer.WriteElementString("MiddleName", reference.producer.middleName);
+                        writer.WriteElementString("LastName", reference.producer.lastName);
+                        writer.WriteElementString("CompleteName", reference.producer.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Director");
+                        writer.WriteElementString("FirstName", reference.director.firstName);
+                        writer.WriteElementString("MiddleName", reference.director.middleName);
+                        writer.WriteElementString("LastName", reference.director.lastName);
+                        writer.WriteElementString("CompleteName", reference.director.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Writer");
+                        writer.WriteElementString("FirstName", reference.writer.firstName);
+                        writer.WriteElementString("MiddleName", reference.writer.middleName);
+                        writer.WriteElementString("LastName", reference.writer.lastName);
+                        writer.WriteElementString("CompleteName", reference.writer.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Artist");
+                        writer.WriteElementString("FirstName", reference.artist.firstName);
+                        writer.WriteElementString("MiddleName", reference.artist.middleName);
+                        writer.WriteElementString("LastName", reference.artist.lastName);
+                        writer.WriteElementString("CompleteName", reference.artist.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Editor");
+                        writer.WriteElementString("FirstName", reference.editor.firstName);
+                        writer.WriteElementString("MiddleName", reference.editor.middleName);
+                        writer.WriteElementString("LastName", reference.editor.lastName);
+                        writer.WriteElementString("CompleteName", reference.editor.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Communicator");
+                        writer.WriteElementString("FirstName", reference.communicator.firstName);
+                        writer.WriteElementString("MiddleName", reference.communicator.middleName);
+                        writer.WriteElementString("LastName", reference.communicator.lastName);
+                        writer.WriteElementString("CompleteName", reference.communicator.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Receiver");
+                        writer.WriteElementString("FirstName", reference.receiver.firstName);
+                        writer.WriteElementString("MiddleName", reference.receiver.middleName);
+                        writer.WriteElementString("LastName", reference.receiver.lastName);
+                        writer.WriteElementString("CompleteName", reference.receiver.completeName);
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
                     }
                     writer.WriteEndElement();
 
+                    /*Sections Configurations*/
 
 
                     writer.WriteEndElement();
