@@ -1317,24 +1317,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("HeaderFirstRightPageNum", myPaper.header.firstRightPageNum.ToString());
                     writer.WriteElementString("HeaderFirstRightOther", myPaper.header.firstRightOther.ToString());
                     writer.WriteElementString("HeaderFirstRightNone", myPaper.header.firstRightNone.ToString());
-                    writer.WriteElementString("HeaderLeftTitle", myPaper.header.leftTitleText);
-                    writer.WriteElementString("HeaderLeftPageStart", myPaper.header.leftPageNumStart.ToString());
-                    writer.WriteElementString("HeaderLeftOther", myPaper.header.leftOtherText);
-                    writer.WriteElementString("HeaderCenterTitle", myPaper.header.centerTitleText);
-                    writer.WriteElementString("HeaderCenterPageStart", myPaper.header.centerPageNumStart.ToString());
-                    writer.WriteElementString("HeaderCenterOther", myPaper.header.centerOtherText);
-                    writer.WriteElementString("HeaderRightTitle", myPaper.header.rightTitleText);
-                    writer.WriteElementString("HeaderRightPageStart", myPaper.header.rightPageNumStart.ToString());
-                    writer.WriteElementString("HeaderRightOther", myPaper.header.rightOtherText);
-                    writer.WriteElementString("HeaderFirstLeftTitle", myPaper.header.firstLeftTitleText);
-                    writer.WriteElementString("HeaderFirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
-                    writer.WriteElementString("HeaderFirstLeftOther", myPaper.header.firstLeftOtherText);                                              
-                    writer.WriteElementString("HeaderFirstCenterTitle", myPaper.header.firstCenterTitleText);
-                    writer.WriteElementString("HeaderFirstCenterPageStart", myPaper.header.firstCenterPageNumStart.ToString());
-                    writer.WriteElementString("HeaderFirstCenterOther", myPaper.header.firstCenterOtherText);                                            
-                    writer.WriteElementString("HeaderFirstRightTitle", myPaper.header.firstRightTitleText);
-                    writer.WriteElementString("HeaderFirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
-                    writer.WriteElementString("HeaderFirstRightOther", myPaper.header.firstRightOtherText);
+                    writer.WriteElementString("HeaderEnterLeftTitle", myPaper.header.leftTitleText);
+                    writer.WriteElementString("HeaderEnterLeftPageStart", myPaper.header.leftPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterLeftOther", myPaper.header.leftOtherText);
+                    writer.WriteElementString("HeaderEnterCenterTitle", myPaper.header.centerTitleText);
+                    writer.WriteElementString("HeaderEnterCenterPageStart", myPaper.header.centerPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterCenterOther", myPaper.header.centerOtherText);
+                    writer.WriteElementString("HeaderEnterRightTitle", myPaper.header.rightTitleText);
+                    writer.WriteElementString("HeaderEnterRightPageStart", myPaper.header.rightPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterRightOther", myPaper.header.rightOtherText);
+                    writer.WriteElementString("HeaderEnterFirstLeftTitle", myPaper.header.firstLeftTitleText);
+                    writer.WriteElementString("HeaderEnterFirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterFirstLeftOther", myPaper.header.firstLeftOtherText);                                              
+                    writer.WriteElementString("HeaderEnterFirstCenterTitle", myPaper.header.firstCenterTitleText);
+                    writer.WriteElementString("HeaderEnterFirstCenterPageStart", myPaper.header.firstCenterPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterFirstCenterOther", myPaper.header.firstCenterOtherText);                                            
+                    writer.WriteElementString("HeaderEnterFirstRightTitle", myPaper.header.firstRightTitleText);
+                    writer.WriteElementString("HeaderEnterFirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
+                    writer.WriteElementString("HeaderEnterFirstRightOther", myPaper.header.firstRightOtherText);
 
                     /*References Configurations*/
                     writer.WriteElementString("ReferencesIncludeTitle", myPaper.references.includeTitle.ToString());
@@ -1355,7 +1355,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteElementString("Type", reference.type);
                         writer.WriteElementString("PublicationDate", reference.publicationDate);
                         writer.WriteElementString("Title", reference.title);
-                        writer.WriteElementString("Publishere", reference.publisher);
+                        writer.WriteElementString("Publisher", reference.publisher);
                         writer.WriteElementString("PublishLocation", reference.publishLocation);
                         writer.WriteElementString("Edition", reference.edition);
                         writer.WriteElementString("Section", reference.section);
@@ -1600,12 +1600,18 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 while (reader.Read())
                 {
-                    // Only detect start elements.
-                    if (reader.IsStartElement())
+                    //// Only detect start elements.
+                    if (reader.IsStartElement() && !reader.IsEmptyElement)
                     {
                         // Get element name and switch on it.
                         switch (reader.Name)
                         {
+                            case "PaperTitle":
+                                if (reader.Read())
+                                {
+                                    paperTitleEnter.Text = reader.Value;
+                                }
+                                break;
                             case "APAMLA":
                                 if (reader.Read())
                                 {
@@ -1835,16 +1841,2331 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     myPaper.titlePage.titlePageOrder.Add(reader.Value);
                                 }
                                 break;
+                            case "SummaryOwnPage":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        summaryOwnPageCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        summaryOwnPageCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SummaryIncludeTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        summaryIncludeTitleCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        summaryIncludeTitleCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SummaryTitle":
+                                if (reader.Read())
+                                {
+                                    summaryTitleText.Text = reader.Value;
+                                }
+                                break;
+                            case "SummaryBoldTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        summaryTitleBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        summaryTitleBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SummaryTitleFont":
+                                if (reader.Read())
+                                {
+                                    summaryTitleFontChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "SummaryTitleSize":
+                                if (reader.Read())
+                                {
+                                    summaryTitleSizeChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "SummaryTitleColor":
+                                if (reader.Read())
+                                {
+                                    summaryTitleColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "SummaryTitleAlign":
+                                if (reader.Read())
+                                {
+                                    summaryTitleAlignSelect.Text = reader.Value;
+                                }
+                                break;
+                            case "SummaryContent":
+                                if (reader.Read())
+                                {
+                                    summaryContent.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractOwnPage":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        abstractOwnPageCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        abstractOwnPageCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "AbstractIncludeTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        abstractIncludeTitleCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        abstractIncludeTitleCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "AbstractTitle":
+                                if (reader.Read())
+                                {
+                                    abstractTitleText.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractBoldTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        abstractTitleBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        abstractTitleBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "AbstractTitleFont":
+                                if (reader.Read())
+                                {
+                                    abstractTitleFontChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractTitleSize":
+                                if (reader.Read())
+                                {
+                                    abstractTitleSizeChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractTitleColor":
+                                if (reader.Read())
+                                {
+                                    abstractTitleColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractTitleAlign":
+                                if (reader.Read())
+                                {
+                                    abstractTitleAlignSelect.Text = reader.Value;
+                                }
+                                break;
+                            case "AbstractContent":
+                                if (reader.Read())
+                                {
+                                    abstractContent.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderDifferentFirst":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerDiffFirstPageCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerDiffFirstPageCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderUseRunningHead":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstPageUseRunningHeadCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstPageUseRunningHeadCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderLeftTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerLeftTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerLeftTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderLeftPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerLeftNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerLeftNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderLeftOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerLeftOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerLeftOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderLeftNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerLeftEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerLeftEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderCenterTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerCenterTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerCenterTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderCenterPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerCenterNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerCenterNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderCenterOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerCenterOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerCenterOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderCenterNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerCenterEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerCenterEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderRightTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerRightTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerRightTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderRightPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerRightNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerRightNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderRightOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerRightOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerRightOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderRightNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerRightEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerRightEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstLeftTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstLeftTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstLeftTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstLeftPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstLeftNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstLeftNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstLeftOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstLeftOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstLeftOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstLeftNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstLeftEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstLeftEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstCenterTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstCenterTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstCenterTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstCenterPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstCenterNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstCenterNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstCenterOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstCenterOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstCenterOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstCenterNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstCenterEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstCenterEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstRightTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstRightTitleRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstRightTitleRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstRightPageNum":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstRightNumberRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstRightNumberRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstRightOther":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstRightOtherRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstRightOtherRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstRightNone":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstRightEmptyRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstRightEmptyRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderEnterLeftTitle":
+                                if (reader.Read())
+                                {
+                                    headerLeftTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterLeftPageStart":
+                                if (reader.Read())
+                                {
+                                    headerLeftNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterLeftOther":
+                                if (reader.Read())
+                                {
+                                    headerLeftOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterCenterTitle":
+                                if (reader.Read())
+                                {
+                                    headerCenterTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterCenterPageStart":
+                                if (reader.Read())
+                                {
+                                    headerCenterNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterCenterOther":
+                                if (reader.Read())
+                                {
+                                    headerCenterOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterRightTitle":
+                                if (reader.Read())
+                                {
+                                    headerRightTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterRightPageStart":
+                                if (reader.Read())
+                                {
+                                    headerRightNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterRightOther":
+                                if (reader.Read())
+                                {
+                                    headerRightOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstLeftTitle":
+                                if (reader.Read())
+                                {
+                                    headerFirstLeftTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstLeftPageStart":
+                                if (reader.Read())
+                                {
+                                    headerFirstLeftNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstLeftOther":
+                                if (reader.Read())
+                                {
+                                    headerFirstLeftOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstCenterTitle":
+                                if (reader.Read())
+                                {
+                                    headerFirstCenterTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstCenterPageStart":
+                                if (reader.Read())
+                                {
+                                    headerFirstCenterNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstCenterOther":
+                                if (reader.Read())
+                                {
+                                    headerFirstCenterOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstRightTitle":
+                                if (reader.Read())
+                                {
+                                    headerFirstRightTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstRightPageStart":
+                                if (reader.Read())
+                                {
+                                    headerFirstRightNumberEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "HeaderEnterFirstRightOther":
+                                if (reader.Read())
+                                {
+                                    headerFirstRightOtherEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesIncludeTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        referencesTitleIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        referencesTitleIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ReferencesTitle":
+                                if (reader.Read())
+                                {
+                                    referencesTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesTitleAlign":
+                                if (reader.Read())
+                                {
+                                    referencesTitleAlignChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesBoldTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        referencesTitleBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        referencesTitleBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ReferencesTitleFont":
+                                if (reader.Read())
+                                {
+                                    referencesTitleFontChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesTitleSize":
+                                if (reader.Read())
+                                {
+                                    referencesTitleSizeChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesTitleColor":
+                                if (reader.Read())
+                                {
+                                    referencesTitleColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesHangingIndent":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        referencesHangingIndentCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        referencesHangingIndentCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ReferencesNumTabsHanging":
+                                if (reader.Read())
+                                {
+                                    referencesIndentTabsEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "ReferencesEmptyLineBetween":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        referencesEmptyLineBetweenCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        referencesEmptyLineBetweenCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ReferencesOrderBy":
+                                if (reader.Read())
+                                {
+                                    referencesOrderChoose.Text = reader.Value;
+                                }
+                                break;
                             case "Reference":
+                                if (inReference)
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                    myPaper.references.references.Add(reference);
+                                }
                                 inReference = true;
-                                newReference = true;
+                                reference = new Reference();
+                                break;
+                            case "Formatted":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.formattedReference = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Type":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.type = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "PublicationDate":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.publicationDate = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Title":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.title = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Publisher":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.publisher = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "PublishLocation":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.publishLocation = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Edition":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.edition = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Section":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.section = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Volume":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.volume = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Issue":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.issue = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "StartPage":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.startPage = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "EndPage":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.endPage = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "OriginalPublishDate":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.originalPublishDate = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Source":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.source = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "RetrievedFrom":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.retrievedFrom = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Doi":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.doi = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "InterviewDate":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.interviewDate = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Number":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.number = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "ReviewTitle":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.reviewTitle = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "RetrieveDate":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.retrieveDate = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Accession":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.accession = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Institution":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.institution = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Location":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.location = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Organization":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.organization = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Studio":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.studio = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "RecordDate":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.recordDate = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "AccessedOn":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.accessedOn = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "ScreenName":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.screenName = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Meeting":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.meeting = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Venue":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.venue = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Format":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.format = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "CallLetters":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.callLetters = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Season":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.season = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "Episode":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.episode = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "ArtistName":
+                                if (reader.Read())
+                                {
+                                    if (inReference)
+                                    {
+                                        reference.artistName = reader.Value;
+                                    }
+                                }
                                 break;
                             case "Author":
-                                inReferenceAuthor = true;
-                                newReferenceAuthor = true;
+                                if (inReference)
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                    }
+                                    author = new Author();
+                                    inReferenceAuthor = true;
+
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Translator":
+                                if (inReference)
+                                {
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                    }
+                                    translator = new Author();
+                                    inReferenceTranslator = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Interviewer":
+                                if (inReference)
+                                {
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                    }
+                                    interviewer = new Author();
+                                    inReferenceInterviewer = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Interviewee":
+                                if (inReference)
+                                {
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                    }
+                                    interviewee = new Author();
+                                    inReferenceInterviewee = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Reviewer":
+                                if (inReference)
+                                {
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                    }
+                                    reviewer = new Author();
+                                    inReferenceReviewer = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Producer":
+                                if (inReference)
+                                {
+                                    producer = new Author();
+                                    inReferenceProducer = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Director":
+                                if (inReference)
+                                {
+                                    director = new Author();
+                                    inReferenceDirector = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Writer":
+                                if (inReference)
+                                {
+                                    writer = new Author();
+                                    inReferenceWriter = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Artist":
+                                if (inReference)
+                                {
+                                    artist = new Author();
+                                    inReferenceArtist = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Editor":
+                                if (inReference)
+                                {
+                                    editor = new Author();
+                                    inReferenceEditor = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Communicator":
+                                if (inReference)
+                                {
+                                    communcator = new Author();
+                                    inReferenceCommunicator = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceReceiver)
+                                    {
+                                        inReferenceReceiver = false;
+                                    }
+                                }
+                                break;
+                            case "Receiver":
+                                if (inReference)
+                                {
+                                    receiver = new Author();
+                                    inReferenceReceiver = true;
+
+                                    if (inReferenceAuthor)
+                                    {
+                                        reference.authors.Add(author);
+                                        inReferenceAuthor = false;
+                                    }
+                                    if (inReferenceTranslator)
+                                    {
+                                        reference.translators.Add(translator);
+                                        inReferenceTranslator = false;
+                                    }
+                                    if (inReferenceInterviewer)
+                                    {
+                                        reference.interviewers.Add(interviewer);
+                                        inReferenceInterviewer = false;
+                                    }
+                                    if (inReferenceInterviewee)
+                                    {
+                                        reference.interviewees.Add(interviewee);
+                                        inReferenceInterviewee = false;
+                                    }
+                                    if (inReferenceReviewer)
+                                    {
+                                        reference.reviewers.Add(reviewer);
+                                        inReferenceReviewer = false;
+                                    }
+                                    if (inReferenceProducer)
+                                    {
+                                        inReferenceProducer = false;
+                                    }
+                                    if (inReferenceDirector)
+                                    {
+                                        inReferenceDirector = false;
+                                    }
+                                    if (inReferenceWriter)
+                                    {
+                                        inReferenceWriter = false;
+                                    }
+                                    if (inReferenceArtist)
+                                    {
+                                        inReferenceArtist = false;
+                                    }
+                                    if (inReferenceEditor)
+                                    {
+                                        inReferenceEditor = false;
+                                    }
+                                    if (inReferenceCommunicator)
+                                    {
+                                        inReferenceCommunicator = false;
+                                    }
+                                }
+                                break;
+                            case "FirstName":
+                                if (reader.Read())
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        author.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceTranslator)
+                                    {
+                                        translator.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewer)
+                                    {
+                                        interviewer.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewee)
+                                    {
+                                        interviewee.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceReviewer)
+                                    {
+                                        reviewer.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceProducer)
+                                    {
+                                        producer.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceDirector)
+                                    {
+                                        director.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceWriter)
+                                    {
+                                        writer.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceArtist)
+                                    {
+                                        artist.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceEditor)
+                                    {
+                                        editor.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceCommunicator)
+                                    {
+                                        communcator.firstName = reader.Value;
+                                    }
+                                    else if (inReferenceReceiver)
+                                    {
+                                        receiver.firstName = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "MiddleName":
+                                if (reader.Read())
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        author.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceTranslator)
+                                    {
+                                        translator.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewer)
+                                    {
+                                        interviewer.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewee)
+                                    {
+                                        interviewee.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceReviewer)
+                                    {
+                                        reviewer.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceProducer)
+                                    {
+                                        producer.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceDirector)
+                                    {
+                                        director.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceWriter)
+                                    {
+                                        writer.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceArtist)
+                                    {
+                                        artist.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceEditor)
+                                    {
+                                        editor.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceCommunicator)
+                                    {
+                                        communcator.middleName = reader.Value;
+                                    }
+                                    else if (inReferenceReceiver)
+                                    {
+                                        receiver.middleName = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "LastName":
+                                if (reader.Read())
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        author.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceTranslator)
+                                    {
+                                        translator.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewer)
+                                    {
+                                        interviewer.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewee)
+                                    {
+                                        interviewee.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceReviewer)
+                                    {
+                                        reviewer.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceProducer)
+                                    {
+                                        producer.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceDirector)
+                                    {
+                                        director.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceWriter)
+                                    {
+                                        writer.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceArtist)
+                                    {
+                                        artist.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceEditor)
+                                    {
+                                        editor.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceCommunicator)
+                                    {
+                                        communcator.lastName = reader.Value;
+                                    }
+                                    else if (inReferenceReceiver)
+                                    {
+                                        receiver.lastName = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "CompleteName":
+                                if (reader.Read())
+                                {
+                                    if (inReferenceAuthor)
+                                    {
+                                        author.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceTranslator)
+                                    {
+                                        translator.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewer)
+                                    {
+                                        interviewer.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceInterviewee)
+                                    {
+                                        interviewee.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceReviewer)
+                                    {
+                                        reviewer.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceProducer)
+                                    {
+                                        producer.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceDirector)
+                                    {
+                                        director.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceWriter)
+                                    {
+                                        writer.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceArtist)
+                                    {
+                                        artist.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceEditor)
+                                    {
+                                        editor.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceCommunicator)
+                                    {
+                                        communcator.completeName = reader.Value;
+                                    }
+                                    else if (inReferenceReceiver)
+                                    {
+                                        receiver.completeName = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "SectionsBlankLineBetweem":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        blankLineBetweenSectionsRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        blankLineBetweenSectionsRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionsNewPageBetween":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        newPageForEachSectionRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        newPageForEachSectionRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionsNoSpaceBetween":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        noSpaceBetweenSectionsRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        noSpaceBetweenSectionsRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionsIncludeSectionLabel":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        includeSectionLabelsCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        includeSectionLabelsCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionsIncludeSubsectionLabel":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        includeSubsectionLabelCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        includeSubsectionLabelCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionsIncludeSubsubsectionLabel":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        includeSubsubsectionLabelCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        includeSubsubsectionLabelCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionLabelInline":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        sectionLabelInLineRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        sectionLabelInLineRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionLabelOwnLine":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        sectionLabelBeforeRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        sectionLabelBeforeRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionLabelBold":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        sectionLabelBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        sectionLabelBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SectionLabelAlign":
+                                if (reader.Read())
+                                {
+                                    sectionLabelAlignChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "SectionLabelFont":
+                                if (reader.Read())
+                                {
+                                    sectionLabelFont.Text = reader.Value;
+                                }
+                                break;
+                            case "SectionLabelSize":
+                                if (reader.Read())
+                                {
+                                    sectionLabelSize.Text = reader.Value;
+                                }
+                                break;
+                            case "SectionLabelColor":
+                                if (reader.Read())
+                                {
+                                    sectionLabelColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsectionLabelInline":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsectionLabelInLineRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsectionLabelInLineRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsectionLabelOwnLine":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsectionLabelBeforeRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsectionLabelBeforeRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsectionLabelBold":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsectionLabelBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsectionLabelBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsectionLabelAlign":
+                                if (reader.Read())
+                                {
+                                    subsectionLabelAlignChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsectionLabelFont":
+                                if (reader.Read())
+                                {
+                                    subsectionLabelFont.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsectionLabelSize":
+                                if (reader.Read())
+                                {
+                                    subsectionLabelSize.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsectionLabelColor":
+                                if (reader.Read())
+                                {
+                                    subsectionLabelColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsubsectionLabelInline":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsubsectionLabelInLineRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsubsectionLabelInLineRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsubsectionLabelOwnLine":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsubsectionLabelBeforeRadio.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsubsectionLabelBeforeRadio.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsubsectionLabelBold":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsubsectionLabelBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsubsectionLabelBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsubsectionLabelAlign":
+                                if (reader.Read())
+                                {
+                                    subsubsectionLabelAlignChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsubsectionLabelFont":
+                                if (reader.Read())
+                                {
+                                    subsubsectionLabelFont.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsubsectionLabelSize":
+                                if (reader.Read())
+                                {
+                                    subsubsectionLabelSize.Text = reader.Value;
+                                }
+                                break;
+                            case "SubsubsectionLabelColor":
+                                if (reader.Read())
+                                {
+                                    subsubsectionLabelColorText.Text = reader.Value;
+                                }
+                                break;
+
+                            //TODO Add section objects here
+
+
+                            case "ConclusionOnOwnPage":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        conclusionOwnPageCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        conclusionOwnPageCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ConclusionIncludeTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        conclusionIncludeTitleCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        conclusionIncludeTitleCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ConclusionTitle":
+                                if (reader.Read())
+                                {
+                                    conclusionTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "ConclusionTitleAlign":
+                                if (reader.Read())
+                                {
+                                    conclusionTitleAlignChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ConclusionBoldTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        conclusionTitleBoldCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        conclusionTitleBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "ConclusionTitleFont":
+                                if (reader.Read())
+                                {
+                                    conclusionTitleFontChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ConclusionTitleSize":
+                                if (reader.Read())
+                                {
+                                    conclusionTitleSizeChoose.Text = reader.Value;
+                                }
+                                break;
+                            case "ConclusionTitleColor":
+                                if (reader.Read())
+                                {
+                                    conclusionTitleColorText.Text = reader.Value;
+                                }
+                                break;
+                            case "ConclusionContent":
+                                if (reader.Read())
+                                {
+                                    conclusionContent.Text = reader.Value;
+                                }
                                 break;
                         }
-                    }
+                    }                    
                 }
             }
         }
