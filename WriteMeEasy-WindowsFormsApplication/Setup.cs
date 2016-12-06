@@ -151,15 +151,15 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionContent.Width = rightPanelWidth - 85;
                 for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                 {
-                    GroupBox subsectionGroupBox = (GroupBox)Controls.Find("subsection" + j + "groupBox", true)[0];
+                    GroupBox subsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "GroupBox", true)[0];
                     subsectionGroupBox.Width = rightPanelWidth - 85;
-                    RichTextBox subsectionContent = (RichTextBox)Controls.Find("subsection" + j + "Content", true)[0];
+                    RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + i + "Subsection" + j + "Content", true)[0];
                     subsectionContent.Width = rightPanelWidth - 103;
                     for (int k = 1; k <= myPaper.sections[i - 1].subSections[j - 1].subsubSections.Count; k++)
                     {
-                        GroupBox subsubsectionGroupBox = (GroupBox)Controls.Find("subsubsection" + j + "groupBox", true)[0];
+                        GroupBox subsubsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "subsubsection" + k + "groupBox", true)[0];
                         subsubsectionGroupBox.Width = rightPanelWidth - 103;
-                        RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("subsubsection" + j + "Content", true)[0];
+                        RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section" + i + "Subsection" + j + "subsubsection" + k + "Content", true)[0];
                         subsubsectionContent.Width = rightPanelWidth - 121;
                     }
                 }

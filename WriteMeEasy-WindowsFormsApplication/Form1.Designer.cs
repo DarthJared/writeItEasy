@@ -330,7 +330,7 @@
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.writeFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.saveButton = new System.Windows.Forms.ToolStripButton();
             this.openButton = new System.Windows.Forms.ToolStripButton();
             this.settingsButton = new System.Windows.Forms.ToolStripButton();
@@ -408,7 +408,7 @@
             this.abstractPanel.SuspendLayout();
             this.abstractOptionsGroupBox.SuspendLayout();
             this.abstractTitleGroupBox.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
+            this.mainToolStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -446,7 +446,7 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.mainToolStrip);
             this.toolStripContainer1.TopToolStripPanel.MinimumSize = new System.Drawing.Size(0, 40);
             // 
             // statusStrip1
@@ -3970,10 +3970,11 @@
             this.openFile.Filter = "WriteItEasy Project|*.write";
             this.openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
             // 
-            // toolStrip2
+            // mainToolStrip
             // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.mainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveButton,
             this.openButton,
             this.settingsButton,
@@ -3983,10 +3984,11 @@
             this.fontSelect,
             this.fontSize,
             this.addReferenceButton});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 24);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(494, 25);
-            this.toolStrip2.TabIndex = 1;
+            this.mainToolStrip.Location = new System.Drawing.Point(3, 24);
+            this.mainToolStrip.Name = "mainToolStrip";
+            this.mainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.mainToolStrip.Size = new System.Drawing.Size(516, 25);
+            this.mainToolStrip.TabIndex = 1;
             // 
             // saveButton
             // 
@@ -4261,8 +4263,8 @@
             this.abstractOptionsGroupBox.PerformLayout();
             this.abstractTitleGroupBox.ResumeLayout(false);
             this.abstractTitleGroupBox.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            this.mainToolStrip.ResumeLayout(false);
+            this.mainToolStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -4571,7 +4573,7 @@
         private System.Windows.Forms.SaveFileDialog writeFile;
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.Panel settingsPanel;
-        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStrip mainToolStrip;
         private System.Windows.Forms.ToolStripButton saveButton;
         private System.Windows.Forms.ToolStripButton openButton;
         private System.Windows.Forms.ToolStripButton settingsButton;

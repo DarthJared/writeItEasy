@@ -208,7 +208,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Tag = newSection.index;
             newSectionAddSubsectionButton.Click += new EventHandler(sectionAddSubsectionButton_Click);
 
-            addSpace("addSectionButton", 335, "contentPanel", "CONTENT");
+            addSpace("addSectionButton", 318, "contentPanel", "CONTENT");
             newSectionGroupBox.Size = new Size(tableLayoutPanel1.Width - 567, 298);
             newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 321);
             newSectionLabelLabel.Visible = true;
@@ -269,6 +269,17 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             subsectionLabelEnter.Tag = sectionIndex + "," + subsectionIndex;
             subsectionLabelEnter.TextChanged += new EventHandler(subsectionTitleChanged);
+            
+            RichTextBox subsectionContent = new RichTextBox();
+            subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
+            subsectionToAdd.Controls.Add(subsectionContent);
+            subsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            subsectionContent.Location = new Point(9, 70);
+            subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
+            subsectionContent.Leave += new EventHandler(subsectionTextChanged);
+            subsectionContent.Enter += new EventHandler(subsectionLast);
+            subsectionContent.SelectionIndent = 40;
+            subsectionContent.SelectionHangingIndent = -40;
 
             Label subsectionContentLabel = new Label();
             subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
@@ -277,49 +288,21 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContentLabel.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsectionContentLabel.BackColor = Color.Transparent;
 
-            Panel subsectionContentPanel = new Panel();
-            subsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentPanel";
-            subsectionToAdd.Controls.Add(subsectionContentPanel);
-
-            ToolStripContainer subsectionToolStripContainer = new ToolStripContainer();
-            subsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "toolstripcontainer";
-
-            ToolStrip subsectionToolStrip = new ToolStrip();
-            subsectionToolStrip.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "toolstrip";
-            subsectionToolStrip.RenderMode = ToolStripRenderMode.System;
-            subsectionToolStrip.Size = new Size(43, 25);
-            subsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsectionToolStrip);
-            subsectionContentPanel.Controls.Add(subsectionToolStripContainer);
-
-            RichTextBox subsectionContent = new RichTextBox();
-            subsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Content";
-            subsectionToolStripContainer.ContentPanel.Controls.Add(subsectionContent);
-            subsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
-            subsectionContent.Location = new Point(0, 0);
-            subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
-            subsectionContent.Leave += new EventHandler(subsectionTextChanged);
-            subsectionContent.Enter += new EventHandler(subsectionLast);
-            subsectionContent.SelectionIndent = 40;
-            subsectionContent.SelectionHangingIndent = -40;
-
             Button addSubsubsectionButton = new Button();
             addSubsubsectionButton.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton";
             addSubsubsectionButton.Text = "Add Subsubsection";
             addSubsubsectionButton.Size = new Size(130, 23);
-            addSubsubsectionButton.UseVisualStyleBackColor = true;// Color.Gainsboro;
+            addSubsubsectionButton.UseVisualStyleBackColor = true;
             addSubsubsectionButton.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             addSubsubsectionButton.Tag = sectionIndex + "," + subsectionIndex;
             addSubsubsectionButton.Click += new EventHandler(subsectionAddSubsubsectionButton_Click);
 
-            addSpace("section" + sectionIndex + "AddSubsectionButton", 315, "contentPanel", "CONTENT");
+            addSpace("section" + sectionIndex + "AddSubsectionButton", 330, "contentPanel", "CONTENT");
             subsectionToAdd.Location = new Point(9, starter.Location.Y - 310);
-            subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 305);
+            subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 298);
             subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
             subsectionContentLabel.Location = new Point(6, 49);
-            subsectionContentPanel.Location = new Point(9, 73);
-            subsectionContentPanel.Size = new Size(subsectionToAdd.Width - 18, 189);
-            subsectionToolStripContainer.Size = subsectionContentPanel.Size;
-            subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
+            subsectionContent.Size = new Size(subsectionToAdd.Width - 18, 182);
             subsectionToAdd.Controls.Add(addSubsubsectionButton);
             addSubsubsectionButton.Location = new Point(9, 272);
         }
@@ -386,6 +369,17 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             subsubsectionLabelEnter.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
             subsubsectionLabelEnter.TextChanged += new EventHandler(subsubsectionTitleChanged);
+            
+            RichTextBox subsubsectionContent = new RichTextBox();
+            subsubsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
+            subsubsectionToAdd.Controls.Add(subsubsectionContent);
+            subsubsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            subsubsectionContent.Location = new Point(9, 70);
+            subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
+            subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
+            subsubsectionContent.Enter += new EventHandler(subsubsectionLast);
+            subsubsectionContent.SelectionIndent = 40;
+            subsubsectionContent.SelectionHangingIndent = -40;
 
             Label subsubsectionContentLabel = new Label();
             subsubsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "ContentLabel";
@@ -394,40 +388,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionContentLabel.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsubsectionContentLabel.BackColor = Color.Transparent;
 
-            Panel subsubsectionContentPanel = new Panel();
-            subsubsectionContentPanel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "ContentPanel";
-            subsubsectionToAdd.Controls.Add(subsubsectionContentPanel);
-
-            ToolStripContainer subsubsectionToolStripContainer = new ToolStripContainer();
-            subsubsectionToolStripContainer.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "toolstripcontainer";
-
-            ToolStrip subsubsectionToolStrip = new ToolStrip();
-            subsubsectionToolStrip.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "toolstrip";
-            subsubsectionToolStrip.RenderMode = ToolStripRenderMode.System;
-            subsubsectionToolStrip.Size = new Size(43, 25);
-            subsubsectionToolStripContainer.TopToolStripPanel.Controls.Add(subsubsectionToolStrip);
-            subsubsectionContentPanel.Controls.Add(subsubsectionToolStripContainer);
-
-            RichTextBox subsubsectionContent = new RichTextBox();
-            subsubsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
-            subsubsectionToolStripContainer.ContentPanel.Controls.Add(subsubsectionContent);
-            subsubsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
-            subsubsectionContent.Location = new Point(0, 0);
-            subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
-            subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
-            subsubsectionContent.Enter += new EventHandler(subsubsectionLast);
-            subsubsectionContent.SelectionIndent = 40;
-            subsubsectionContent.SelectionHangingIndent = -40;
-
-            addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 282, "contentPanel", "CONTENT");
-            subsubsectionToAdd.Location = new Point(9, starter.Location.Y - 277);
-            subsubsectionToAdd.Size = new Size(subsectionToAddTo.Width - 18, 272);
+            addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 318, "contentPanel", "CONTENT");
+            subsubsectionToAdd.Location = new Point(9, starter.Location.Y - 298);
+            subsubsectionToAdd.Size = new Size(subsectionToAddTo.Width - 18, 298);
             subsubsectionToAdd.Font = new Font(subsubsectionToAdd.Font, FontStyle.Regular);
             subsubsectionContentLabel.Location = new Point(6, 49);
-            subsubsectionContentPanel.Location = new Point(9, 73);
-            subsubsectionContentPanel.Size = new Size(subsubsectionToAdd.Width - 18, 189);
-            subsubsectionToolStripContainer.Size = subsubsectionContentPanel.Size;
-            subsubsectionContent.Size = new Size(subsubsectionToolStripContainer.ContentPanel.Width - 3, subsubsectionToolStripContainer.ContentPanel.Height - 3);
+            subsubsectionContent.Size = new Size(subsubsectionToAdd.Width - 18, 182);
         }
 
         private void sectionTextChanged(object sender, EventArgs e)
