@@ -233,7 +233,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionToolStripContainer.Size = newSectionContentPanel.Size;
             newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
             newSectionAddSubsectionButton.Location = new Point(9, 282);
-            checkContentPanelHeight();
         }
 
         private void sectionAddSubsectionButton_Click(object sender, EventArgs e)
@@ -340,7 +339,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Size = new Size(subsectionToolStripContainer.ContentPanel.Width - 3, subsectionToolStripContainer.ContentPanel.Height - 3);
             subsectionToAdd.Controls.Add(addSubsubsectionButton);
             addSubsubsectionButton.Location = new Point(9, 272);
-            checkContentPanelHeight();
         }
 
         private void subsectionAddSubsubsectionButton_Click(object sender, EventArgs e)
@@ -447,7 +445,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionContentPanel.Size = new Size(subsubsectionToAdd.Width - 18, 189);
             subsubsectionToolStripContainer.Size = subsubsectionContentPanel.Size;
             subsubsectionContent.Size = new Size(subsubsectionToolStripContainer.ContentPanel.Width - 3, subsubsectionToolStripContainer.ContentPanel.Height - 3);
-            checkContentPanelHeight();
         }
 
         private void sectionTextChanged(object sender, EventArgs e)

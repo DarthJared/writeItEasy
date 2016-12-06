@@ -58,7 +58,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             if (conclusionIncludeCheck.Checked)
             {
                 myPaper.includeConclusion = true;
-                contentPanel.Height += 312;
+                contentPanel.Height += 295;
                 int newY = addSectionButton.Location.Y + addSectionButton.Height + 20;
                 conclusionContentGroupBox.Location = new Point(9, newY);
                 conclusionContentGroupBox.Visible = true;
@@ -71,15 +71,13 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
                 myPaper.includeConclusion = false;
-                contentPanel.Height -= 312;
+                contentPanel.Height -= 295;
                 conclusionContentGroupBox.Visible = false;
 
                 conclusionPanel.Visible = false;
                 raiseSection(sectionHeight, "CONCLUSION");
                 conclusionActive = false;
-            }
-            checkContentPanelHeight();
-            
+            }         
         }
 
         private void conclusionIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)

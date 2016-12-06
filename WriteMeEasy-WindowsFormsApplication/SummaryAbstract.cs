@@ -31,11 +31,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             {                
                 if (abstractIncludeCheck.Checked)
                 {
-                    addSpace("abstractContentGroupBox", 312, "contentPanel", "CONTENT");
+                    addSpace("abstractContentGroupBox", 295, "contentPanel", "CONTENT");
                 }
                 else
                 {
-                    addSpace("section1GroupBox", 312, "contentPanel", "CONTENT");
+                    addSpace("section1GroupBox", 295, "contentPanel", "CONTENT");
                 }
                 summaryContentGroupBox.Location = new Point(9, 36);
                 summaryContentGroupBox.Visible = true;
@@ -49,11 +49,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (abstractIncludeCheck.Checked)
                 {
-                    addSpace("abstractContentGroupBox", -312, "contentPanel", "CONTENT");
+                    addSpace("abstractContentGroupBox", -295, "contentPanel", "CONTENT");
                 }
                 else
                 {
-                    addSpace("section1GroupBox", -312, "contentPanel", "CONTENT");
+                    addSpace("section1GroupBox", -295, "contentPanel", "CONTENT");
                 }
                 summaryContentGroupBox.Visible = false;
 
@@ -61,7 +61,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 raiseSection(sectionHeight, "SUMMARY");
                 summaryActive = false;
             }
-            checkContentPanelHeight();
         }
 
         private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
@@ -93,8 +92,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (abstractIncludeCheck.Checked)
             {
-                addSpace("section1GroupBox", 312, "contentPanel", "CONTENT");
-                abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 312);
+                addSpace("section1GroupBox", 295, "contentPanel", "CONTENT");
+                abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 295);
                 abstractContentGroupBox.Visible = true;
 
                 abstractPanel.Visible = true;
@@ -104,14 +103,13 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                addSpace("section1GroupBox", -312, "contentPanel", "CONTENT");
+                addSpace("section1GroupBox", -295, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Visible = false;
 
                 abstractPanel.Visible = false;
                 raiseSection(sectionHeight, "ABSTRACT");
                 abstractActive = false;
             }
-            checkContentPanelHeight();
         }
 
         private void summaryIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)

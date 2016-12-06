@@ -363,12 +363,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 loopParents(parent, heightChange, nameCheck, false);
             }
-        }
-
-        private void sectionTabControl_Change(object sender, EventArgs e)
-        {
-            checkContentPanelHeight();
-        }
+        }        
 
         private void apaMla_Changed(object sender, EventArgs e)
         {

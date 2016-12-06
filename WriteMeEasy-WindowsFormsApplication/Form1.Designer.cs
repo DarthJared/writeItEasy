@@ -38,8 +38,6 @@
             this.finalizePanel = new System.Windows.Forms.Panel();
             this.writeButton = new System.Windows.Forms.Button();
             this.previewPanel = new System.Windows.Forms.Panel();
-            this.sectionTabControl = new System.Windows.Forms.TabControl();
-            this.formattingTab = new System.Windows.Forms.TabPage();
             this.conclusionPanel = new System.Windows.Forms.Panel();
             this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.conclusionDefaultButton = new System.Windows.Forms.Button();
@@ -380,43 +378,29 @@
             this.referencesTitleLabel = new System.Windows.Forms.Label();
             this.referencesHeader = new System.Windows.Forms.Label();
             this.referencesDefaultButton = new System.Windows.Forms.Button();
-            this.contentTab = new System.Windows.Forms.TabPage();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.conclusionContentGroupBox = new System.Windows.Forms.GroupBox();
             this.conclusionTitleLabel = new System.Windows.Forms.Label();
             this.conclusionTitleEnter = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.conclusionContentPanel = new System.Windows.Forms.Panel();
-            this.conclusionToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.conclusionContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.section1groupBox = new System.Windows.Forms.GroupBox();
             this.section1LabelLabel = new System.Windows.Forms.Label();
             this.section1LabelEnter = new System.Windows.Forms.TextBox();
-            this.section1ContentPanel = new System.Windows.Forms.Panel();
-            this.section1ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.section1Content = new System.Windows.Forms.RichTextBox();
-            this.section1ToolStrip = new System.Windows.Forms.ToolStrip();
             this.section1AddSubsectionButton = new System.Windows.Forms.Button();
             this.section1contentLabel = new System.Windows.Forms.Label();
             this.abstractContentGroupBox = new System.Windows.Forms.GroupBox();
             this.abstractTitleLabel = new System.Windows.Forms.Label();
             this.abstractTitleText = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.abstractContentPanel = new System.Windows.Forms.Panel();
-            this.abstractContentToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.abstractContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.addSectionButton = new System.Windows.Forms.Button();
             this.summaryContentGroupBox = new System.Windows.Forms.GroupBox();
             this.summaryTitleTextLabel = new System.Windows.Forms.Label();
             this.summaryTitleText = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.summaryContentPanel = new System.Windows.Forms.Panel();
-            this.summaryToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.summaryContent = new System.Windows.Forms.RichTextBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.label23 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveButton = new System.Windows.Forms.ToolStripButton();
             this.openButton = new System.Windows.Forms.ToolStripButton();
@@ -430,6 +414,7 @@
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.writeFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.settingsPanel = new System.Windows.Forms.Panel();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -439,8 +424,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.finalizePanel.SuspendLayout();
-            this.sectionTabControl.SuspendLayout();
-            this.formattingTab.SuspendLayout();
+            this.previewPanel.SuspendLayout();
             this.conclusionPanel.SuspendLayout();
             this.conclusionOptionsGroupBox.SuspendLayout();
             this.conclusionTitleGroupBox.SuspendLayout();
@@ -505,29 +489,13 @@
             this.referencesIndentationGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).BeginInit();
             this.referencesTitleGroupBox.SuspendLayout();
-            this.contentTab.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.conclusionContentGroupBox.SuspendLayout();
-            this.conclusionContentPanel.SuspendLayout();
-            this.conclusionToolStripContainer.ContentPanel.SuspendLayout();
-            this.conclusionToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.conclusionToolStripContainer.SuspendLayout();
             this.section1groupBox.SuspendLayout();
-            this.section1ContentPanel.SuspendLayout();
-            this.section1ToolStripContainer.ContentPanel.SuspendLayout();
-            this.section1ToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.section1ToolStripContainer.SuspendLayout();
             this.abstractContentGroupBox.SuspendLayout();
-            this.abstractContentPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.ContentPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.abstractContentToolStripContainer.SuspendLayout();
             this.summaryContentGroupBox.SuspendLayout();
-            this.summaryContentPanel.SuspendLayout();
-            this.summaryToolStripContainer.ContentPanel.SuspendLayout();
-            this.summaryToolStripContainer.TopToolStripPanel.SuspendLayout();
-            this.summaryToolStripContainer.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // generalHeader
@@ -538,7 +506,7 @@
             generalHeader.ForeColor = System.Drawing.SystemColors.Control;
             generalHeader.Location = new System.Drawing.Point(0, 0);
             generalHeader.Name = "generalHeader";
-            generalHeader.Size = new System.Drawing.Size(633, 30);
+            generalHeader.Size = new System.Drawing.Size(472, 30);
             generalHeader.TabIndex = 0;
             generalHeader.Text = "GENERAL";
             generalHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -553,11 +521,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tableLayoutPanel1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1258, 360);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1278, 666);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(1258, 429);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1278, 735);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -574,7 +542,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1258, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1278, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -588,18 +556,17 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.9721F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.0279F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.sectionTabControl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.settingsPanel, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(80, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 384F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1258, 360);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1278, 666);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -608,27 +575,27 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(619, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(503, 3);
             this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(636, 328);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(772, 660);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // finalizePanel
             // 
             this.finalizePanel.Controls.Add(this.writeButton);
-            this.finalizePanel.Location = new System.Drawing.Point(3, 218);
+            this.finalizePanel.Location = new System.Drawing.Point(3, 613);
             this.finalizePanel.Name = "finalizePanel";
-            this.finalizePanel.Size = new System.Drawing.Size(630, 44);
+            this.finalizePanel.Size = new System.Drawing.Size(766, 44);
             this.finalizePanel.TabIndex = 1;
             // 
             // writeButton
             // 
             this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeButton.Location = new System.Drawing.Point(564, 8);
+            this.writeButton.Location = new System.Drawing.Point(646, 7);
             this.writeButton.Name = "writeButton";
             this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.writeButton.Size = new System.Drawing.Size(114, 28);
@@ -639,45 +606,13 @@
             // 
             // previewPanel
             // 
+            this.previewPanel.AutoScroll = true;
             this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.previewPanel.Controls.Add(this.contentPanel);
             this.previewPanel.Location = new System.Drawing.Point(3, 3);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(630, 209);
+            this.previewPanel.Size = new System.Drawing.Size(766, 604);
             this.previewPanel.TabIndex = 0;
-            // 
-            // sectionTabControl
-            // 
-            this.sectionTabControl.Controls.Add(this.formattingTab);
-            this.sectionTabControl.Controls.Add(this.contentTab);
-            this.sectionTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionTabControl.ItemSize = new System.Drawing.Size(325, 25);
-            this.sectionTabControl.Location = new System.Drawing.Point(3, 3);
-            this.sectionTabControl.Name = "sectionTabControl";
-            this.sectionTabControl.SelectedIndex = 0;
-            this.sectionTabControl.Size = new System.Drawing.Size(610, 328);
-            this.sectionTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.sectionTabControl.TabIndex = 1;
-            this.sectionTabControl.SelectedIndexChanged += new System.EventHandler(this.sectionTabControl_Change);
-            // 
-            // formattingTab
-            // 
-            this.formattingTab.AutoScroll = true;
-            this.formattingTab.Controls.Add(this.conclusionPanel);
-            this.formattingTab.Controls.Add(this.footerPanel);
-            this.formattingTab.Controls.Add(this.sectionsPanel);
-            this.formattingTab.Controls.Add(this.titlePagePanel);
-            this.formattingTab.Controls.Add(this.headerPanel);
-            this.formattingTab.Controls.Add(this.summaryPanel);
-            this.formattingTab.Controls.Add(this.abstractPanel);
-            this.formattingTab.Controls.Add(this.generalPanel);
-            this.formattingTab.Controls.Add(this.referencesPanel);
-            this.formattingTab.Location = new System.Drawing.Point(4, 29);
-            this.formattingTab.Name = "formattingTab";
-            this.formattingTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.formattingTab.Size = new System.Drawing.Size(602, 295);
-            this.formattingTab.TabIndex = 0;
-            this.formattingTab.Text = "FORMATTING";
-            this.formattingTab.UseVisualStyleBackColor = true;
             // 
             // conclusionPanel
             // 
@@ -687,7 +622,7 @@
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
             this.conclusionPanel.Location = new System.Drawing.Point(0, 2671);
             this.conclusionPanel.Name = "conclusionPanel";
-            this.conclusionPanel.Size = new System.Drawing.Size(635, 172);
+            this.conclusionPanel.Size = new System.Drawing.Size(474, 172);
             this.conclusionPanel.TabIndex = 7;
             // 
             // conclusionOptionsGroupBox
@@ -698,7 +633,7 @@
             this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
-            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
+            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(456, 125);
             this.conclusionOptionsGroupBox.TabIndex = 3;
             this.conclusionOptionsGroupBox.TabStop = false;
             this.conclusionOptionsGroupBox.Text = "Options";
@@ -730,7 +665,7 @@
             this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
-            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(438, 45);
             this.conclusionTitleGroupBox.TabIndex = 4;
             this.conclusionTitleGroupBox.TabStop = false;
             this.conclusionTitleGroupBox.Text = "Conclusion Title";
@@ -872,7 +807,7 @@
             this.conclusionHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.conclusionHeader.Location = new System.Drawing.Point(0, 0);
             this.conclusionHeader.Name = "conclusionHeader";
-            this.conclusionHeader.Size = new System.Drawing.Size(633, 30);
+            this.conclusionHeader.Size = new System.Drawing.Size(472, 30);
             this.conclusionHeader.TabIndex = 0;
             this.conclusionHeader.Text = "CONCLUSION";
             this.conclusionHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -886,7 +821,7 @@
             this.footerPanel.Controls.Add(this.footerDefaultButton);
             this.footerPanel.Location = new System.Drawing.Point(0, 1834);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(635, 571);
+            this.footerPanel.Size = new System.Drawing.Size(474, 571);
             this.footerPanel.TabIndex = 10;
             // 
             // footerOptionsGroupBox
@@ -1736,7 +1671,7 @@
             this.footerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.footerHeader.Location = new System.Drawing.Point(0, 0);
             this.footerHeader.Name = "footerHeader";
-            this.footerHeader.Size = new System.Drawing.Size(633, 30);
+            this.footerHeader.Size = new System.Drawing.Size(472, 30);
             this.footerHeader.TabIndex = 0;
             this.footerHeader.Text = "FOOTER";
             this.footerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1759,7 +1694,7 @@
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
             this.sectionsPanel.Location = new System.Drawing.Point(0, 2405);
             this.sectionsPanel.Name = "sectionsPanel";
-            this.sectionsPanel.Size = new System.Drawing.Size(635, 266);
+            this.sectionsPanel.Size = new System.Drawing.Size(474, 266);
             this.sectionsPanel.TabIndex = 4;
             // 
             // sectionsOptionsGroupBox
@@ -1772,7 +1707,7 @@
             this.sectionsOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(9, 36);
             this.sectionsOptionsGroupBox.Name = "sectionsOptionsGroupBox";
-            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 212);
+            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(456, 212);
             this.sectionsOptionsGroupBox.TabIndex = 10;
             this.sectionsOptionsGroupBox.TabStop = false;
             this.sectionsOptionsGroupBox.Text = "Section Options";
@@ -1797,7 +1732,7 @@
             this.subsubsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(9, 244);
             this.subsubsectionLabelGroupBox.Name = "subsubsectionLabelGroupBox";
-            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(438, 45);
             this.subsubsectionLabelGroupBox.TabIndex = 9;
             this.subsubsectionLabelGroupBox.TabStop = false;
             this.subsubsectionLabelGroupBox.Text = "Subsubsection Labels";
@@ -1840,7 +1775,7 @@
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBoldCheck);
             this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsubsectionLabelStyleGroupBox.Name = "subsubsectionLabelStyleGroupBox";
-            this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(420, 150);
             this.subsubsectionLabelStyleGroupBox.TabIndex = 5;
             this.subsubsectionLabelStyleGroupBox.TabStop = false;
             this.subsubsectionLabelStyleGroupBox.Text = "Style";
@@ -1937,7 +1872,7 @@
             this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
-            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(420, 73);
             this.subsubsectionLabelLocationGroupBox.TabIndex = 4;
             this.subsubsectionLabelLocationGroupBox.TabStop = false;
             this.subsubsectionLabelLocationGroupBox.Text = "Location";
@@ -1989,7 +1924,7 @@
             this.subsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subsectionLabelGroupBox.Location = new System.Drawing.Point(9, 186);
             this.subsectionLabelGroupBox.Name = "subsectionLabelGroupBox";
-            this.subsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.subsectionLabelGroupBox.Size = new System.Drawing.Size(438, 45);
             this.subsectionLabelGroupBox.TabIndex = 8;
             this.subsectionLabelGroupBox.TabStop = false;
             this.subsectionLabelGroupBox.Text = "Subsection Labels";
@@ -2032,7 +1967,7 @@
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBoldCheck);
             this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsectionLabelStyleGroupBox.Name = "subsectionLabelStyleGroupBox";
-            this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(420, 150);
             this.subsectionLabelStyleGroupBox.TabIndex = 5;
             this.subsectionLabelStyleGroupBox.TabStop = false;
             this.subsectionLabelStyleGroupBox.Text = "Style";
@@ -2128,7 +2063,7 @@
             this.subsectionLabelLocationGroupBox.Controls.Add(this.subsectionLabelBeforeRadio);
             this.subsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsectionLabelLocationGroupBox.Name = "subsectionLabelLocationGroupBox";
-            this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(420, 73);
             this.subsectionLabelLocationGroupBox.TabIndex = 4;
             this.subsectionLabelLocationGroupBox.TabStop = false;
             this.subsectionLabelLocationGroupBox.Text = "Location";
@@ -2180,7 +2115,7 @@
             this.sectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionLabelGroupBox.Location = new System.Drawing.Point(9, 128);
             this.sectionLabelGroupBox.Name = "sectionLabelGroupBox";
-            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.sectionLabelGroupBox.Size = new System.Drawing.Size(438, 45);
             this.sectionLabelGroupBox.TabIndex = 7;
             this.sectionLabelGroupBox.TabStop = false;
             this.sectionLabelGroupBox.Text = "Section Labels";
@@ -2222,7 +2157,7 @@
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBoldCheck);
             this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.sectionLabelStyleGroupBox.Name = "sectionLabelStyleGroupBox";
-            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
+            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(420, 150);
             this.sectionLabelStyleGroupBox.TabIndex = 5;
             this.sectionLabelStyleGroupBox.TabStop = false;
             this.sectionLabelStyleGroupBox.Text = "Style";
@@ -2318,7 +2253,7 @@
             this.sectionLabelLocationGroupBox.Controls.Add(this.sectionLabelBeforeRadio);
             this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.sectionLabelLocationGroupBox.Name = "sectionLabelLocationGroupBox";
-            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
+            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(420, 73);
             this.sectionLabelLocationGroupBox.TabIndex = 4;
             this.sectionLabelLocationGroupBox.TabStop = false;
             this.sectionLabelLocationGroupBox.Text = "Location";
@@ -2368,7 +2303,7 @@
             this.betweenSectionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betweenSectionsGroupBox.Location = new System.Drawing.Point(9, 19);
             this.betweenSectionsGroupBox.Name = "betweenSectionsGroupBox";
-            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(597, 96);
+            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(438, 96);
             this.betweenSectionsGroupBox.TabIndex = 4;
             this.betweenSectionsGroupBox.TabStop = false;
             this.betweenSectionsGroupBox.Text = "Between Sections";
@@ -2416,7 +2351,7 @@
             this.sectionsHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.sectionsHeader.Location = new System.Drawing.Point(0, 0);
             this.sectionsHeader.Name = "sectionsHeader";
-            this.sectionsHeader.Size = new System.Drawing.Size(633, 30);
+            this.sectionsHeader.Size = new System.Drawing.Size(472, 30);
             this.sectionsHeader.TabIndex = 0;
             this.sectionsHeader.Text = "SECTIONS";
             this.sectionsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2432,7 +2367,7 @@
             this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
             this.titlePagePanel.Location = new System.Drawing.Point(0, 440);
             this.titlePagePanel.Name = "titlePagePanel";
-            this.titlePagePanel.Size = new System.Drawing.Size(635, 475);
+            this.titlePagePanel.Size = new System.Drawing.Size(474, 475);
             this.titlePagePanel.TabIndex = 5;
             // 
             // titlePageDefaultButton
@@ -2454,7 +2389,7 @@
             this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePagePositionGroupBox.Location = new System.Drawing.Point(9, 333);
             this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
-            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(615, 92);
+            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(456, 92);
             this.titlePagePositionGroupBox.TabIndex = 4;
             this.titlePagePositionGroupBox.TabStop = false;
             this.titlePagePositionGroupBox.Text = "Position";
@@ -2505,7 +2440,7 @@
             this.titlePageAllignGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePageAllignGroupBox.Location = new System.Drawing.Point(9, 219);
             this.titlePageAllignGroupBox.Name = "titlePageAllignGroupBox";
-            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(615, 92);
+            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(456, 92);
             this.titlePageAllignGroupBox.TabIndex = 3;
             this.titlePageAllignGroupBox.TabStop = false;
             this.titlePageAllignGroupBox.Text = "Allignment";
@@ -2583,7 +2518,7 @@
             this.titlePageIncludeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePageIncludeGroupBox.Location = new System.Drawing.Point(9, 36);
             this.titlePageIncludeGroupBox.Name = "titlePageIncludeGroupBox";
-            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(615, 163);
+            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(456, 163);
             this.titlePageIncludeGroupBox.TabIndex = 2;
             this.titlePageIncludeGroupBox.TabStop = false;
             this.titlePageIncludeGroupBox.Text = "Include In Title Page";
@@ -2949,7 +2884,7 @@
             this.titlePageSectionLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.titlePageSectionLabel.Location = new System.Drawing.Point(0, 0);
             this.titlePageSectionLabel.Name = "titlePageSectionLabel";
-            this.titlePageSectionLabel.Size = new System.Drawing.Size(633, 30);
+            this.titlePageSectionLabel.Size = new System.Drawing.Size(472, 30);
             this.titlePageSectionLabel.TabIndex = 1;
             this.titlePageSectionLabel.Text = "TITLE PAGE";
             this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2961,9 +2896,9 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 1263);
+            this.headerPanel.Location = new System.Drawing.Point(1, 1263);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(635, 571);
+            this.headerPanel.Size = new System.Drawing.Size(473, 571);
             this.headerPanel.TabIndex = 10;
             // 
             // headerOptionsGroupBox
@@ -2975,7 +2910,7 @@
             this.headerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.headerOptionsGroupBox.Name = "headerOptionsGroupBox";
-            this.headerOptionsGroupBox.Size = new System.Drawing.Size(615, 494);
+            this.headerOptionsGroupBox.Size = new System.Drawing.Size(456, 494);
             this.headerOptionsGroupBox.TabIndex = 1;
             this.headerOptionsGroupBox.TabStop = false;
             this.headerOptionsGroupBox.Text = "Options";
@@ -2991,7 +2926,7 @@
             this.headerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerFirstPageGroupBox.Location = new System.Drawing.Point(9, 440);
             this.headerFirstPageGroupBox.Name = "headerFirstPageGroupBox";
-            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(597, 43);
+            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(438, 43);
             this.headerFirstPageGroupBox.TabIndex = 27;
             this.headerFirstPageGroupBox.TabStop = false;
             this.headerFirstPageGroupBox.Text = "First Page";
@@ -3011,7 +2946,7 @@
             this.headerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 342);
             this.headerFirstPageRightGroupBox.Name = "headerFirstPageRightGroupBox";
-            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 121);
+            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(420, 121);
             this.headerFirstPageRightGroupBox.TabIndex = 26;
             this.headerFirstPageRightGroupBox.TabStop = false;
             this.headerFirstPageRightGroupBox.Text = "First Page Right";
@@ -3140,7 +3075,7 @@
             this.headerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 215);
             this.headerFirstPageCenterGroupBox.Name = "headerFirstPageCenterGroupBox";
-            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 121);
+            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(420, 121);
             this.headerFirstPageCenterGroupBox.TabIndex = 26;
             this.headerFirstPageCenterGroupBox.TabStop = false;
             this.headerFirstPageCenterGroupBox.Text = "First Page Center";
@@ -3269,7 +3204,7 @@
             this.headerFirstPageLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerFirstPageLeftGroupBox.Location = new System.Drawing.Point(9, 88);
             this.headerFirstPageLeftGroupBox.Name = "headerFirstPageLeftGroupBox";
-            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 121);
+            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(420, 121);
             this.headerFirstPageLeftGroupBox.TabIndex = 21;
             this.headerFirstPageLeftGroupBox.TabStop = false;
             this.headerFirstPageLeftGroupBox.Text = "First Page Left";
@@ -3436,7 +3371,7 @@
             this.headerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerRightGroupBox.Location = new System.Drawing.Point(9, 300);
             this.headerRightGroupBox.Name = "headerRightGroupBox";
-            this.headerRightGroupBox.Size = new System.Drawing.Size(597, 121);
+            this.headerRightGroupBox.Size = new System.Drawing.Size(438, 121);
             this.headerRightGroupBox.TabIndex = 26;
             this.headerRightGroupBox.TabStop = false;
             this.headerRightGroupBox.Text = "Right";
@@ -3563,7 +3498,7 @@
             this.headerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerCenterGroupBox.Location = new System.Drawing.Point(9, 157);
             this.headerCenterGroupBox.Name = "headerCenterGroupBox";
-            this.headerCenterGroupBox.Size = new System.Drawing.Size(597, 121);
+            this.headerCenterGroupBox.Size = new System.Drawing.Size(438, 121);
             this.headerCenterGroupBox.TabIndex = 26;
             this.headerCenterGroupBox.TabStop = false;
             this.headerCenterGroupBox.Text = "Center";
@@ -3690,7 +3625,7 @@
             this.headerLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerLeftGroupBox.Location = new System.Drawing.Point(9, 19);
             this.headerLeftGroupBox.Name = "headerLeftGroupBox";
-            this.headerLeftGroupBox.Size = new System.Drawing.Size(597, 121);
+            this.headerLeftGroupBox.Size = new System.Drawing.Size(438, 121);
             this.headerLeftGroupBox.TabIndex = 20;
             this.headerLeftGroupBox.TabStop = false;
             this.headerLeftGroupBox.Text = "Left";
@@ -3807,7 +3742,7 @@
             this.headerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.headerHeader.Location = new System.Drawing.Point(0, 0);
             this.headerHeader.Name = "headerHeader";
-            this.headerHeader.Size = new System.Drawing.Size(633, 30);
+            this.headerHeader.Size = new System.Drawing.Size(471, 30);
             this.headerHeader.TabIndex = 0;
             this.headerHeader.Text = "HEADER";
             this.headerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3831,7 +3766,7 @@
             this.summaryPanel.Controls.Add(this.summaryHeader);
             this.summaryPanel.Location = new System.Drawing.Point(0, 915);
             this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Size = new System.Drawing.Size(635, 174);
+            this.summaryPanel.Size = new System.Drawing.Size(474, 174);
             this.summaryPanel.TabIndex = 8;
             // 
             // summaryOptionsGroupBox
@@ -3842,7 +3777,7 @@
             this.summaryOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.summaryOptionsGroupBox.Name = "summaryOptionsGroupBox";
-            this.summaryOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
+            this.summaryOptionsGroupBox.Size = new System.Drawing.Size(456, 125);
             this.summaryOptionsGroupBox.TabIndex = 1;
             this.summaryOptionsGroupBox.TabStop = false;
             this.summaryOptionsGroupBox.Text = "Options";
@@ -3874,7 +3809,7 @@
             this.summaryTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.summaryTitleGroupBox.Name = "summaryTitleGroupBox";
-            this.summaryTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.summaryTitleGroupBox.Size = new System.Drawing.Size(438, 45);
             this.summaryTitleGroupBox.TabIndex = 4;
             this.summaryTitleGroupBox.TabStop = false;
             this.summaryTitleGroupBox.Text = "Summary Title";
@@ -4016,7 +3951,7 @@
             this.summaryHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.summaryHeader.Location = new System.Drawing.Point(0, 0);
             this.summaryHeader.Name = "summaryHeader";
-            this.summaryHeader.Size = new System.Drawing.Size(633, 30);
+            this.summaryHeader.Size = new System.Drawing.Size(472, 30);
             this.summaryHeader.TabIndex = 0;
             this.summaryHeader.Text = "SUMMARY";
             this.summaryHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4029,7 +3964,7 @@
             this.abstractPanel.Controls.Add(this.abstractHeader);
             this.abstractPanel.Location = new System.Drawing.Point(0, 1089);
             this.abstractPanel.Name = "abstractPanel";
-            this.abstractPanel.Size = new System.Drawing.Size(635, 174);
+            this.abstractPanel.Size = new System.Drawing.Size(474, 174);
             this.abstractPanel.TabIndex = 9;
             // 
             // abstractOptionsGroupBox
@@ -4040,7 +3975,7 @@
             this.abstractOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abstractOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.abstractOptionsGroupBox.Name = "abstractOptionsGroupBox";
-            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
+            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(456, 125);
             this.abstractOptionsGroupBox.TabIndex = 2;
             this.abstractOptionsGroupBox.TabStop = false;
             this.abstractOptionsGroupBox.Text = "Options";
@@ -4071,7 +4006,7 @@
             this.abstractTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abstractTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.abstractTitleGroupBox.Name = "abstractTitleGroupBox";
-            this.abstractTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.abstractTitleGroupBox.Size = new System.Drawing.Size(438, 45);
             this.abstractTitleGroupBox.TabIndex = 4;
             this.abstractTitleGroupBox.TabStop = false;
             this.abstractTitleGroupBox.Text = "Abstract Title";
@@ -4210,7 +4145,7 @@
             this.abstractHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.abstractHeader.Location = new System.Drawing.Point(0, 0);
             this.abstractHeader.Name = "abstractHeader";
-            this.abstractHeader.Size = new System.Drawing.Size(633, 30);
+            this.abstractHeader.Size = new System.Drawing.Size(472, 30);
             this.abstractHeader.TabIndex = 0;
             this.abstractHeader.Text = "ABSTRACT";
             this.abstractHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4226,7 +4161,7 @@
             this.generalPanel.Controls.Add(generalHeader);
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(635, 440);
+            this.generalPanel.Size = new System.Drawing.Size(474, 440);
             this.generalPanel.TabIndex = 0;
             // 
             // generalDefaultButton
@@ -4252,7 +4187,7 @@
             this.includeInPapeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.includeInPapeGroupBox.Location = new System.Drawing.Point(9, 202);
             this.includeInPapeGroupBox.Name = "includeInPapeGroupBox";
-            this.includeInPapeGroupBox.Size = new System.Drawing.Size(615, 185);
+            this.includeInPapeGroupBox.Size = new System.Drawing.Size(456, 185);
             this.includeInPapeGroupBox.TabIndex = 18;
             this.includeInPapeGroupBox.TabStop = false;
             this.includeInPapeGroupBox.Text = "Include In Paper";
@@ -4347,7 +4282,7 @@
             this.paperTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paperTitleGroupBox.Location = new System.Drawing.Point(9, 36);
             this.paperTitleGroupBox.Name = "paperTitleGroupBox";
-            this.paperTitleGroupBox.Size = new System.Drawing.Size(615, 55);
+            this.paperTitleGroupBox.Size = new System.Drawing.Size(456, 55);
             this.paperTitleGroupBox.TabIndex = 16;
             this.paperTitleGroupBox.TabStop = false;
             this.paperTitleGroupBox.Text = "Title of Paper";
@@ -4368,7 +4303,7 @@
             this.apaMlaGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apaMlaGroupBox.Location = new System.Drawing.Point(9, 112);
             this.apaMlaGroupBox.Name = "apaMlaGroupBox";
-            this.apaMlaGroupBox.Size = new System.Drawing.Size(615, 70);
+            this.apaMlaGroupBox.Size = new System.Drawing.Size(456, 70);
             this.apaMlaGroupBox.TabIndex = 15;
             this.apaMlaGroupBox.TabStop = false;
             this.apaMlaGroupBox.Text = "APA or MLA";
@@ -4408,7 +4343,7 @@
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
             this.referencesPanel.Location = new System.Drawing.Point(0, 2843);
             this.referencesPanel.Name = "referencesPanel";
-            this.referencesPanel.Size = new System.Drawing.Size(635, 270);
+            this.referencesPanel.Size = new System.Drawing.Size(474, 270);
             this.referencesPanel.TabIndex = 6;
             // 
             // referencesOptionsGroupBox
@@ -4421,7 +4356,7 @@
             this.referencesOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.referencesOptionsGroupBox.Name = "referencesOptionsGroupBox";
-            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(615, 185);
+            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(456, 185);
             this.referencesOptionsGroupBox.TabIndex = 4;
             this.referencesOptionsGroupBox.TabStop = false;
             this.referencesOptionsGroupBox.Text = "Options";
@@ -4469,7 +4404,7 @@
             this.referencesIndentationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesIndentationGroupBox.Location = new System.Drawing.Point(9, 73);
             this.referencesIndentationGroupBox.Name = "referencesIndentationGroupBox";
-            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(438, 45);
             this.referencesIndentationGroupBox.TabIndex = 20;
             this.referencesIndentationGroupBox.TabStop = false;
             this.referencesIndentationGroupBox.Text = "Indentation";
@@ -4524,7 +4459,7 @@
             this.referencesTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesTitleGroupBox.Location = new System.Drawing.Point(9, 19);
             this.referencesTitleGroupBox.Name = "referencesTitleGroupBox";
-            this.referencesTitleGroupBox.Size = new System.Drawing.Size(597, 45);
+            this.referencesTitleGroupBox.Size = new System.Drawing.Size(438, 45);
             this.referencesTitleGroupBox.TabIndex = 4;
             this.referencesTitleGroupBox.TabStop = false;
             this.referencesTitleGroupBox.Text = "References Title";
@@ -4532,7 +4467,7 @@
             // referencesTitleAlignLabel
             // 
             this.referencesTitleAlignLabel.AutoSize = true;
-            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(300, 20);
+            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(280, 20);
             this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
             this.referencesTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.referencesTitleAlignLabel.TabIndex = 27;
@@ -4546,7 +4481,7 @@
             "Left",
             "Center",
             "Right"});
-            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(334, 17);
+            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(312, 17);
             this.referencesTitleAlignChoose.Name = "referencesTitleAlignChoose";
             this.referencesTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.referencesTitleAlignChoose.TabIndex = 26;
@@ -4649,7 +4584,7 @@
             // referencesTitleEnter
             // 
             this.referencesTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleEnter.Location = new System.Drawing.Point(123, 17);
+            this.referencesTitleEnter.Location = new System.Drawing.Point(116, 17);
             this.referencesTitleEnter.Name = "referencesTitleEnter";
             this.referencesTitleEnter.Size = new System.Drawing.Size(159, 20);
             this.referencesTitleEnter.TabIndex = 2;
@@ -4660,7 +4595,7 @@
             // 
             this.referencesTitleLabel.AutoSize = true;
             this.referencesTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleLabel.Location = new System.Drawing.Point(94, 20);
+            this.referencesTitleLabel.Location = new System.Drawing.Point(87, 20);
             this.referencesTitleLabel.Name = "referencesTitleLabel";
             this.referencesTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.referencesTitleLabel.TabIndex = 3;
@@ -4675,7 +4610,7 @@
             this.referencesHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.referencesHeader.Location = new System.Drawing.Point(0, 0);
             this.referencesHeader.Name = "referencesHeader";
-            this.referencesHeader.Size = new System.Drawing.Size(633, 30);
+            this.referencesHeader.Size = new System.Drawing.Size(472, 30);
             this.referencesHeader.TabIndex = 0;
             this.referencesHeader.Text = "REFERENCES";
             this.referencesHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4691,18 +4626,6 @@
             this.referencesDefaultButton.UseVisualStyleBackColor = true;
             this.referencesDefaultButton.Click += new System.EventHandler(this.referencesDefaultButton_Click);
             // 
-            // contentTab
-            // 
-            this.contentTab.AutoScroll = true;
-            this.contentTab.Controls.Add(this.contentPanel);
-            this.contentTab.Location = new System.Drawing.Point(4, 29);
-            this.contentTab.Name = "contentTab";
-            this.contentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.contentTab.Size = new System.Drawing.Size(604, 295);
-            this.contentTab.TabIndex = 1;
-            this.contentTab.Text = "CONTENT";
-            this.contentTab.UseVisualStyleBackColor = true;
-            // 
             // contentPanel
             // 
             this.contentPanel.BackColor = System.Drawing.Color.White;
@@ -4712,22 +4635,21 @@
             this.contentPanel.Controls.Add(this.abstractContentGroupBox);
             this.contentPanel.Controls.Add(this.addSectionButton);
             this.contentPanel.Controls.Add(this.summaryContentGroupBox);
-            this.contentPanel.Controls.Add(this.label23);
-            this.contentPanel.Location = new System.Drawing.Point(0, 0);
+            this.contentPanel.Location = new System.Drawing.Point(7, 9);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(635, 1390);
+            this.contentPanel.Size = new System.Drawing.Size(734, 1288);
             this.contentPanel.TabIndex = 10;
             // 
             // conclusionContentGroupBox
             // 
+            this.conclusionContentGroupBox.Controls.Add(this.conclusionContent);
             this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleLabel);
             this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleEnter);
             this.conclusionContentGroupBox.Controls.Add(this.label19);
-            this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
             this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 1028);
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 977);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
-            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.conclusionContentGroupBox.Size = new System.Drawing.Size(713, 275);
             this.conclusionContentGroupBox.TabIndex = 12;
             this.conclusionContentGroupBox.TabStop = false;
             this.conclusionContentGroupBox.Text = "Conclusion";
@@ -4768,63 +4690,28 @@
             this.label19.Tag = "1";
             this.label19.Text = "Content:";
             // 
-            // conclusionContentPanel
-            // 
-            this.conclusionContentPanel.Controls.Add(this.conclusionToolStripContainer);
-            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 69);
-            this.conclusionContentPanel.Name = "conclusionContentPanel";
-            this.conclusionContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.conclusionContentPanel.TabIndex = 6;
-            // 
-            // conclusionToolStripContainer
-            // 
-            // 
-            // conclusionToolStripContainer.ContentPanel
-            // 
-            this.conclusionToolStripContainer.ContentPanel.Controls.Add(this.conclusionContent);
-            this.conclusionToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.conclusionToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.conclusionToolStripContainer.Name = "conclusionToolStripContainer";
-            this.conclusionToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.conclusionToolStripContainer.TabIndex = 0;
-            this.conclusionToolStripContainer.Text = "toolStripContainer3";
-            // 
-            // conclusionToolStripContainer.TopToolStripPanel
-            // 
-            this.conclusionToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip4);
-            // 
             // conclusionContent
             // 
             this.conclusionContent.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.conclusionContent.Location = new System.Drawing.Point(0, 0);
+            this.conclusionContent.Location = new System.Drawing.Point(9, 70);
             this.conclusionContent.Name = "conclusionContent";
-            this.conclusionContent.Size = new System.Drawing.Size(594, 182);
+            this.conclusionContent.Size = new System.Drawing.Size(695, 182);
             this.conclusionContent.TabIndex = 0;
             this.conclusionContent.Text = "";
             this.conclusionContent.Enter += new System.EventHandler(this.conclusionLast);
             this.conclusionContent.Leave += new System.EventHandler(this.conclusionContent_TextChanged);
             // 
-            // toolStrip4
-            // 
-            this.toolStrip4.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip4.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.toolStrip4.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip4.TabIndex = 0;
-            // 
             // section1groupBox
             // 
+            this.section1groupBox.Controls.Add(this.section1Content);
             this.section1groupBox.Controls.Add(this.section1LabelLabel);
             this.section1groupBox.Controls.Add(this.section1LabelEnter);
-            this.section1groupBox.Controls.Add(this.section1ContentPanel);
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
             this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(9, 660);
+            this.section1groupBox.Location = new System.Drawing.Point(9, 626);
             this.section1groupBox.Name = "section1groupBox";
-            this.section1groupBox.Size = new System.Drawing.Size(615, 315);
+            this.section1groupBox.Size = new System.Drawing.Size(713, 298);
             this.section1groupBox.TabIndex = 9;
             this.section1groupBox.TabStop = false;
             this.section1groupBox.Tag = "1";
@@ -4854,58 +4741,23 @@
             this.section1LabelEnter.Tag = "1";
             this.section1LabelEnter.TextChanged += new System.EventHandler(this.sectionTitleChanged);
             // 
-            // section1ContentPanel
-            // 
-            this.section1ContentPanel.Controls.Add(this.section1ToolStripContainer);
-            this.section1ContentPanel.Location = new System.Drawing.Point(9, 67);
-            this.section1ContentPanel.Name = "section1ContentPanel";
-            this.section1ContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.section1ContentPanel.TabIndex = 8;
-            // 
-            // section1ToolStripContainer
-            // 
-            // 
-            // section1ToolStripContainer.ContentPanel
-            // 
-            this.section1ToolStripContainer.ContentPanel.Controls.Add(this.section1Content);
-            this.section1ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.section1ToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.section1ToolStripContainer.Name = "section1ToolStripContainer";
-            this.section1ToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.section1ToolStripContainer.TabIndex = 0;
-            this.section1ToolStripContainer.Text = "toolStripContainer4";
-            // 
-            // section1ToolStripContainer.TopToolStripPanel
-            // 
-            this.section1ToolStripContainer.TopToolStripPanel.Controls.Add(this.section1ToolStrip);
-            // 
             // section1Content
             // 
             this.section1Content.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.section1Content.Location = new System.Drawing.Point(0, 0);
+            this.section1Content.Location = new System.Drawing.Point(9, 70);
             this.section1Content.Name = "section1Content";
-            this.section1Content.Size = new System.Drawing.Size(594, 182);
+            this.section1Content.Size = new System.Drawing.Size(695, 182);
             this.section1Content.TabIndex = 0;
             this.section1Content.Tag = "1";
             this.section1Content.Text = "";
             this.section1Content.Enter += new System.EventHandler(this.sectionLast);
             this.section1Content.Leave += new System.EventHandler(this.sectionTextChanged);
             // 
-            // section1ToolStrip
-            // 
-            this.section1ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.section1ToolStrip.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.section1ToolStrip.Location = new System.Drawing.Point(3, 0);
-            this.section1ToolStrip.Name = "section1ToolStrip";
-            this.section1ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.section1ToolStrip.Size = new System.Drawing.Size(111, 25);
-            this.section1ToolStrip.TabIndex = 0;
-            // 
             // section1AddSubsectionButton
             // 
             this.section1AddSubsectionButton.BackColor = System.Drawing.Color.White;
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 282);
+            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 260);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
             this.section1AddSubsectionButton.Size = new System.Drawing.Size(130, 23);
             this.section1AddSubsectionButton.TabIndex = 7;
@@ -4927,14 +4779,14 @@
             // 
             // abstractContentGroupBox
             // 
+            this.abstractContentGroupBox.Controls.Add(this.abstractContent);
             this.abstractContentGroupBox.Controls.Add(this.abstractTitleLabel);
             this.abstractContentGroupBox.Controls.Add(this.abstractTitleText);
             this.abstractContentGroupBox.Controls.Add(this.label17);
-            this.abstractContentGroupBox.Controls.Add(this.abstractContentPanel);
             this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 348);
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 331);
             this.abstractContentGroupBox.Name = "abstractContentGroupBox";
-            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.abstractContentGroupBox.Size = new System.Drawing.Size(713, 275);
             this.abstractContentGroupBox.TabIndex = 11;
             this.abstractContentGroupBox.TabStop = false;
             this.abstractContentGroupBox.Text = "Abstract";
@@ -4975,56 +4827,21 @@
             this.label17.Tag = "1";
             this.label17.Text = "Content:";
             // 
-            // abstractContentPanel
-            // 
-            this.abstractContentPanel.Controls.Add(this.abstractContentToolStripContainer);
-            this.abstractContentPanel.Location = new System.Drawing.Point(9, 69);
-            this.abstractContentPanel.Name = "abstractContentPanel";
-            this.abstractContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.abstractContentPanel.TabIndex = 6;
-            // 
-            // abstractContentToolStripContainer
-            // 
-            // 
-            // abstractContentToolStripContainer.ContentPanel
-            // 
-            this.abstractContentToolStripContainer.ContentPanel.Controls.Add(this.abstractContent);
-            this.abstractContentToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.abstractContentToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.abstractContentToolStripContainer.Name = "abstractContentToolStripContainer";
-            this.abstractContentToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.abstractContentToolStripContainer.TabIndex = 0;
-            this.abstractContentToolStripContainer.Text = "toolStripContainer3";
-            // 
-            // abstractContentToolStripContainer.TopToolStripPanel
-            // 
-            this.abstractContentToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip3);
-            // 
             // abstractContent
             // 
             this.abstractContent.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.abstractContent.Location = new System.Drawing.Point(0, 0);
+            this.abstractContent.Location = new System.Drawing.Point(9, 70);
             this.abstractContent.Name = "abstractContent";
-            this.abstractContent.Size = new System.Drawing.Size(594, 182);
+            this.abstractContent.Size = new System.Drawing.Size(695, 182);
             this.abstractContent.TabIndex = 0;
             this.abstractContent.Text = "";
             this.abstractContent.Enter += new System.EventHandler(this.abstractLast);
             this.abstractContent.Leave += new System.EventHandler(this.abstractContent_TextChanged);
             // 
-            // toolStrip3
-            // 
-            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip3.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.toolStrip3.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip3.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip3.TabIndex = 0;
-            // 
             // addSectionButton
             // 
             this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSectionButton.Location = new System.Drawing.Point(9, 985);
+            this.addSectionButton.Location = new System.Drawing.Point(9, 934);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(130, 23);
             this.addSectionButton.TabIndex = 11;
@@ -5034,14 +4851,14 @@
             // 
             // summaryContentGroupBox
             // 
+            this.summaryContentGroupBox.Controls.Add(this.summaryContent);
             this.summaryContentGroupBox.Controls.Add(this.summaryTitleTextLabel);
             this.summaryContentGroupBox.Controls.Add(this.summaryTitleText);
             this.summaryContentGroupBox.Controls.Add(this.label11);
-            this.summaryContentGroupBox.Controls.Add(this.summaryContentPanel);
             this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryContentGroupBox.Location = new System.Drawing.Point(9, 36);
             this.summaryContentGroupBox.Name = "summaryContentGroupBox";
-            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 292);
+            this.summaryContentGroupBox.Size = new System.Drawing.Size(713, 275);
             this.summaryContentGroupBox.TabIndex = 10;
             this.summaryContentGroupBox.TabStop = false;
             this.summaryContentGroupBox.Text = "Summary";
@@ -5082,64 +4899,16 @@
             this.label11.Tag = "1";
             this.label11.Text = "Content:";
             // 
-            // summaryContentPanel
-            // 
-            this.summaryContentPanel.Controls.Add(this.summaryToolStripContainer);
-            this.summaryContentPanel.Location = new System.Drawing.Point(9, 69);
-            this.summaryContentPanel.Name = "summaryContentPanel";
-            this.summaryContentPanel.Size = new System.Drawing.Size(597, 210);
-            this.summaryContentPanel.TabIndex = 6;
-            // 
-            // summaryToolStripContainer
-            // 
-            // 
-            // summaryToolStripContainer.ContentPanel
-            // 
-            this.summaryToolStripContainer.ContentPanel.Controls.Add(this.summaryContent);
-            this.summaryToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
-            this.summaryToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.summaryToolStripContainer.Name = "summaryToolStripContainer";
-            this.summaryToolStripContainer.Size = new System.Drawing.Size(597, 210);
-            this.summaryToolStripContainer.TabIndex = 0;
-            this.summaryToolStripContainer.Text = "toolStripContainer2";
-            // 
-            // summaryToolStripContainer.TopToolStripPanel
-            // 
-            this.summaryToolStripContainer.TopToolStripPanel.Controls.Add(this.toolStrip2);
-            // 
             // summaryContent
             // 
             this.summaryContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContent.Location = new System.Drawing.Point(0, 0);
+            this.summaryContent.Location = new System.Drawing.Point(9, 70);
             this.summaryContent.Name = "summaryContent";
-            this.summaryContent.Size = new System.Drawing.Size(594, 182);
+            this.summaryContent.Size = new System.Drawing.Size(695, 182);
             this.summaryContent.TabIndex = 0;
             this.summaryContent.Text = "";
             this.summaryContent.Enter += new System.EventHandler(this.summaryLast);
             this.summaryContent.Leave += new System.EventHandler(this.summaryContent_TextChanged);
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.toolStrip2.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(111, 25);
-            this.toolStrip2.TabIndex = 0;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.Control;
-            this.label23.Location = new System.Drawing.Point(0, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(633, 30);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "CONTENT";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -5325,13 +5094,30 @@
             this.openFile.Filter = "WriteItEasy Project|*.write";
             this.openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
             // 
+            // settingsPanel
+            // 
+            this.settingsPanel.AutoScroll = true;
+            this.settingsPanel.Controls.Add(this.conclusionPanel);
+            this.settingsPanel.Controls.Add(this.generalPanel);
+            this.settingsPanel.Controls.Add(this.sectionsPanel);
+            this.settingsPanel.Controls.Add(this.footerPanel);
+            this.settingsPanel.Controls.Add(this.referencesPanel);
+            this.settingsPanel.Controls.Add(this.titlePagePanel);
+            this.settingsPanel.Controls.Add(this.headerPanel);
+            this.settingsPanel.Controls.Add(this.summaryPanel);
+            this.settingsPanel.Controls.Add(this.abstractPanel);
+            this.settingsPanel.Location = new System.Drawing.Point(3, 6);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(494, 657);
+            this.settingsPanel.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1258, 429);
+            this.ClientSize = new System.Drawing.Size(1278, 735);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -5349,8 +5135,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.finalizePanel.ResumeLayout(false);
-            this.sectionTabControl.ResumeLayout(false);
-            this.formattingTab.ResumeLayout(false);
+            this.previewPanel.ResumeLayout(false);
             this.conclusionPanel.ResumeLayout(false);
             this.conclusionOptionsGroupBox.ResumeLayout(false);
             this.conclusionOptionsGroupBox.PerformLayout();
@@ -5454,42 +5239,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.referencesIndentTabsEnter)).EndInit();
             this.referencesTitleGroupBox.ResumeLayout(false);
             this.referencesTitleGroupBox.PerformLayout();
-            this.contentTab.ResumeLayout(false);
             this.contentPanel.ResumeLayout(false);
             this.conclusionContentGroupBox.ResumeLayout(false);
             this.conclusionContentGroupBox.PerformLayout();
-            this.conclusionContentPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.conclusionToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.conclusionToolStripContainer.ResumeLayout(false);
-            this.conclusionToolStripContainer.PerformLayout();
             this.section1groupBox.ResumeLayout(false);
             this.section1groupBox.PerformLayout();
-            this.section1ContentPanel.ResumeLayout(false);
-            this.section1ToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.section1ToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.section1ToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.section1ToolStripContainer.ResumeLayout(false);
-            this.section1ToolStripContainer.PerformLayout();
             this.abstractContentGroupBox.ResumeLayout(false);
             this.abstractContentGroupBox.PerformLayout();
-            this.abstractContentPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.abstractContentToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.abstractContentToolStripContainer.ResumeLayout(false);
-            this.abstractContentToolStripContainer.PerformLayout();
             this.summaryContentGroupBox.ResumeLayout(false);
             this.summaryContentGroupBox.PerformLayout();
-            this.summaryContentPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.ContentPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.TopToolStripPanel.ResumeLayout(false);
-            this.summaryToolStripContainer.TopToolStripPanel.PerformLayout();
-            this.summaryToolStripContainer.ResumeLayout(false);
-            this.summaryToolStripContainer.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.settingsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5598,10 +5359,7 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label headerHeader;
         private System.Windows.Forms.GroupBox abstractContentGroupBox;
-        private System.Windows.Forms.Panel abstractContentPanel;
-        private System.Windows.Forms.ToolStripContainer abstractContentToolStripContainer;
         private System.Windows.Forms.RichTextBox abstractContent;
-        private System.Windows.Forms.ToolStrip toolStrip3;
         private System.Windows.Forms.GroupBox abstractOptionsGroupBox;
         private System.Windows.Forms.Button abstractDefaultButton;
         private System.Windows.Forms.GroupBox abstractTitleGroupBox;
@@ -5616,10 +5374,7 @@
         private System.Windows.Forms.CheckBox abstractIncludeTitleCheck;
         private System.Windows.Forms.CheckBox abstractOwnPageCheck;
         private System.Windows.Forms.GroupBox summaryContentGroupBox;
-        private System.Windows.Forms.Panel summaryContentPanel;
-        private System.Windows.Forms.ToolStripContainer summaryToolStripContainer;
         private System.Windows.Forms.RichTextBox summaryContent;
-        private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.GroupBox summaryOptionsGroupBox;
         private System.Windows.Forms.Button summaryDefaultButton;
         private System.Windows.Forms.GroupBox summaryTitleGroupBox;
@@ -5633,8 +5388,6 @@
         private System.Windows.Forms.CheckBox summaryTitleBoldCheck;
         private System.Windows.Forms.CheckBox summaryIncludeTitleCheck;
         private System.Windows.Forms.CheckBox summaryOwnPageCheck;
-        private System.Windows.Forms.Panel section1ContentPanel;
-        private System.Windows.Forms.ToolStripContainer section1ToolStripContainer;
         private System.Windows.Forms.RichTextBox section1Content;
         private System.Windows.Forms.Button dateUpButton;
         private System.Windows.Forms.Button dateDownButton;
@@ -5751,10 +5504,7 @@
         private System.Windows.Forms.RadioButton headerCenterTitleRadio;
         private System.Windows.Forms.TextBox headerCenterOtherEnter;
         private System.Windows.Forms.GroupBox conclusionContentGroupBox;
-        private System.Windows.Forms.Panel conclusionContentPanel;
-        private System.Windows.Forms.ToolStripContainer conclusionToolStripContainer;
         private System.Windows.Forms.RichTextBox conclusionContent;
-        private System.Windows.Forms.ToolStrip toolStrip4;
         private System.Windows.Forms.GroupBox conclusionOptionsGroupBox;
         private System.Windows.Forms.Button conclusionDefaultButton;
         private System.Windows.Forms.GroupBox conclusionTitleGroupBox;
@@ -5827,7 +5577,6 @@
         private System.Windows.Forms.RadioButton footerRightEmptyRadio;
         private System.Windows.Forms.RadioButton footerCenterEmptyRadio;
         private System.Windows.Forms.RadioButton footerLeftEmptyRadio;
-        private System.Windows.Forms.ToolStrip section1ToolStrip;
         private System.Windows.Forms.GroupBox subsectionLabelGroupBox;
         private System.Windows.Forms.GroupBox subsectionLabelStyleGroupBox;
         private System.Windows.Forms.Button subsectionLabelColorButton;
@@ -5858,12 +5607,8 @@
         private System.Windows.Forms.RadioButton subsubsectionLabelInLineRadio;
         private System.Windows.Forms.RadioButton subsubsectionLabelBeforeRadio;
         private System.Windows.Forms.CheckBox includeSubsubsectionLabelCheck;
-        private System.Windows.Forms.TabControl sectionTabControl;
-        private System.Windows.Forms.TabPage formattingTab;
-        private System.Windows.Forms.TabPage contentTab;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Button addSectionButton;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label conclusionTitleLabel;
         private System.Windows.Forms.TextBox conclusionTitleEnter;
         private System.Windows.Forms.Label label19;
@@ -5896,6 +5641,7 @@
         private System.Windows.Forms.SaveFileDialog saveFile;
         private System.Windows.Forms.SaveFileDialog writeFile;
         private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.Panel settingsPanel;
     }
 }
 
