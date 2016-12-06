@@ -14,12 +14,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             Width = 1000;
             WindowState = FormWindowState.Maximized;
 
-            sections.Add("GENERAL", 440);
+            sections.Add("GENERAL", 410);
             sections.Add("TITLE_PAGE", 475);
             sections.Add("SUMMARY", 545);
             sections.Add("ABSTRACT", 545);
             sections.Add("HEADER", 825);
-            sections.Add("FOOTER", 825);
             sections.Add("SECTIONS", 865);
             sections.Add("CONCLUSION", 545);
             sections.Add("REFERENCES", 407);
@@ -51,7 +50,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryActive = false;
             abstractActive = false;
             headerActive = false;
-            footerActive = false;
             conclusionActive = false;
             referencesActive = false;
 
@@ -59,7 +57,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryPanel.Visible = false;
             abstractPanel.Visible = false;
             headerPanel.Visible = false;
-            footerPanel.Visible = false;
             conclusionPanel.Visible = false;
             referencesPanel.Visible = false;
 
@@ -82,12 +79,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             headerDefaultButton.Location = new Point(9, 535);
             headerPanel.Height = 571;
             sections["HEADER"] = 571;
-
-            footerFirstPageGroupBox.Height = 40;
-            footerOptionsGroupBox.Height = 494;
-            footerDefaultButton.Location = new Point(9, 535);
-            footerPanel.Height = 571;
-            sections["FOOTER"] = 571;
 
             sectionLabelGroupBox.Height = 45;
             sectionsDefaultButton.Location = new Point(9, 179);

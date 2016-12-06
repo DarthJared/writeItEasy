@@ -35,11 +35,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (sections.TryGetValue("HEADER", out headerSectionHeight)) { }
             }
-            int footerSectionHeight = 0;
-            if (footerActive)
-            {
-                if (sections.TryGetValue("FOOTER", out footerSectionHeight)) { }
-            }
             int sectionsSectionHeight;
             if (sections.TryGetValue("SECTIONS", out sectionsSectionHeight)) { }
             int conclusionSectionHeight = 0;
@@ -55,7 +50,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 summarySectionHeight +
                 abstractSectionHeight +
                 headerSectionHeight +
-                footerSectionHeight +
                 sectionsSectionHeight +
                 conclusionSectionHeight +
                 genY);

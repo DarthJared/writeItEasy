@@ -186,24 +186,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionGroupBox.Controls.Add(newSectionContentLabel);
             newSectionContentLabel.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
 
-            Panel newSectionContentPanel = new Panel();
-            newSectionContentPanel.Name = "section" + newSection.index + "ContentPanel";
-            newSectionGroupBox.Controls.Add(newSectionContentPanel);
-
-            ToolStripContainer newSectionToolStripContainer = new ToolStripContainer();
-            newSectionToolStripContainer.Name = "section" + newSection.index + "ToolStripContainer";
-            newSectionContentPanel.Controls.Add(newSectionToolStripContainer);
-
-            ToolStrip newSectionToolStrip = new ToolStrip();
-            newSectionToolStrip.Name = "section" + newSection.index + "ToolStrip";
-            newSectionToolStrip.RenderMode = ToolStripRenderMode.System;
-            newSectionToolStrip.Size = new Size(43, 25);
-            newSectionToolStripContainer.TopToolStripPanel.Controls.Add(newSectionToolStrip);
-
             RichTextBox newSectionContent = new RichTextBox();
             newSectionContent.Name = "section" + newSection.index + "Content";
-            newSectionToolStripContainer.ContentPanel.Controls.Add(newSectionContent);
-            newSectionContent.Location = new Point(0, 0);
+            newSectionGroupBox.Controls.Add(newSectionContent);
+            newSectionContent.Location = new Point(9, 70);
             newSectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             newSectionContent.Tag = newSection.index;
             newSectionContent.Leave += new EventHandler(sectionTextChanged);
@@ -215,7 +201,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Name = "section" + newSection.index + "AddSubsectionButton";
             newSectionAddSubsectionButton.Text = "Add Subsection";
             newSectionAddSubsectionButton.Size = new Size(130, 23);
-            newSectionAddSubsectionButton.UseVisualStyleBackColor = true;//Color.Gainsboro;
+            newSectionAddSubsectionButton.UseVisualStyleBackColor = true;
             newSectionGroupBox.Controls.Add(newSectionAddSubsectionButton);
             newSectionGroupBox.Controls.Add(newSectionContentLabel);
             newSectionAddSubsectionButton.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
@@ -223,16 +209,13 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Click += new EventHandler(sectionAddSubsectionButton_Click);
 
             addSpace("addSectionButton", 335, "contentPanel", "CONTENT");
-            newSectionGroupBox.Size = new Size(615, 315);
+            newSectionGroupBox.Size = new Size(tableLayoutPanel1.Width - 567, 298);
             newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 321);
             newSectionLabelLabel.Visible = true;
             newSectionLabelEnter.Visible = true;
             newSectionContentLabel.Location = new Point(6, 49);
-            newSectionContentPanel.Size = new Size(newSectionGroupBox.Width - 18, 210);
-            newSectionContentPanel.Location = new Point(9, 67);
-            newSectionToolStripContainer.Size = newSectionContentPanel.Size;
-            newSectionContent.Size = new Size(newSectionToolStripContainer.ContentPanel.Width - 3, newSectionToolStripContainer.ContentPanel.Height - 3);
-            newSectionAddSubsectionButton.Location = new Point(9, 282);
+            newSectionContent.Size = new Size(tableLayoutPanel1.Width - 585, 182);
+            newSectionAddSubsectionButton.Location = new Point(9, 260);
         }
 
         private void sectionAddSubsectionButton_Click(object sender, EventArgs e)

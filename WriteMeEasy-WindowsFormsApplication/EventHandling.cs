@@ -12,7 +12,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private bool summaryActive;
         private bool abstractActive;
         private bool headerActive;
-        private bool footerActive;
         private bool conclusionActive;
         private bool referencesActive;
         private SortedDictionary<string, int> titlePageOrder = new SortedDictionary<string, int>();
@@ -42,10 +41,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
                 if (conclusionActive)
                 {
@@ -70,10 +65,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
                 if (conclusionActive)
                 {
@@ -94,10 +85,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
                 if (conclusionActive)
                 {
@@ -114,10 +101,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
                 if (conclusionActive)
                 {
@@ -130,10 +113,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (startSection.Equals("HEADER"))
             {
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y + pixelsDown);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
                 if (conclusionActive)
                 {
@@ -196,10 +175,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
                 if (conclusionActive)
                 {
@@ -224,10 +199,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
                 if (conclusionActive)
                 {
@@ -248,10 +219,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
                 if (conclusionActive)
                 {
@@ -268,10 +235,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
                 }
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
                 if (conclusionActive)
                 {
@@ -284,10 +247,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             else if (startSection.Equals("HEADER"))
             {
-                if (footerActive)
-                {
-                    footerPanel.Location = new Point(0, footerPanel.Location.Y - pixelsUp);
-                }
                 sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
                 if (conclusionActive)
                 {
@@ -385,7 +344,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             summaryDefaultButton.Text = newButtonText;
             abstractDefaultButton.Text = newButtonText;
             headerDefaultButton.Text = newButtonText;
-            footerDefaultButton.Text = newButtonText;
             sectionsDefaultButton.Text = newButtonText;
             conclusionDefaultButton.Text = newButtonText;
             referencesDefaultButton.Text = newButtonText;
