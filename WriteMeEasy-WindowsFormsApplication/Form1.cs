@@ -1836,10 +1836,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 }
                                 break;
                             case "TitlePageItem":
-                                if (reader.Read())
-                                {
-                                    myPaper.titlePage.titlePageOrder.Add(reader.Value);
-                                }
+                                //TODO Adjust order based on order
+                                //if (reader.Read())
+                                //{
+                                //    myPaper.titlePage.titlePageOrder.Add(reader.Value);
+                                //}
                                 break;
                             case "SummaryOwnPage":
                                 if (reader.Read())

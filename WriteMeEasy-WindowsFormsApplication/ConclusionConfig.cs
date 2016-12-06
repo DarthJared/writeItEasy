@@ -13,10 +13,12 @@ namespace WriteMeEasy_WindowsFormsApplication
         public string title;
         public string titleAlign;
         public bool boldTitle;
-        public string titleFont;
+        
         public int titleSize;
         public string titleColor;
         public string conclusionContent;
+
+        public string titleFont;
 
         public ConclusionConfig()
         {

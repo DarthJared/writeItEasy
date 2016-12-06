@@ -537,9 +537,8 @@
             generalHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             generalHeader.ForeColor = System.Drawing.SystemColors.Control;
             generalHeader.Location = new System.Drawing.Point(0, 0);
-            generalHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             generalHeader.Name = "generalHeader";
-            generalHeader.Size = new System.Drawing.Size(1688, 72);
+            generalHeader.Size = new System.Drawing.Size(633, 30);
             generalHeader.TabIndex = 0;
             generalHeader.Text = "GENERAL";
             generalHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -554,20 +553,18 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tableLayoutPanel1);
-            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(3365, 892);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1258, 360);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(3365, 1033);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1258, 429);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer1.TopToolStripPanel.MinimumSize = new System.Drawing.Size(0, 95);
+            this.toolStripContainer1.TopToolStripPanel.MinimumSize = new System.Drawing.Size(0, 40);
             // 
             // statusStrip1
             // 
@@ -577,7 +574,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(3365, 46);
+            this.statusStrip1.Size = new System.Drawing.Size(1258, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -585,7 +582,7 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(400, 41);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(156, 17);
             this.toolStripStatusLabel1.Text = "Last Saved 8-9-2016 1:54 PM";
             // 
             // tableLayoutPanel1
@@ -597,13 +594,12 @@
             this.tableLayoutPanel1.Controls.Add(this.sectionTabControl, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(213, 0);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(80, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 892F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(3365, 892);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 384F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1258, 360);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -612,33 +608,30 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.finalizePanel, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.previewPanel, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1655, 7);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 95);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(619, 3);
+            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 269F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1701, 782);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(636, 328);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // finalizePanel
             // 
             this.finalizePanel.Controls.Add(this.writeButton);
-            this.finalizePanel.Location = new System.Drawing.Point(8, 520);
-            this.finalizePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.finalizePanel.Location = new System.Drawing.Point(3, 218);
             this.finalizePanel.Name = "finalizePanel";
-            this.finalizePanel.Size = new System.Drawing.Size(1685, 105);
+            this.finalizePanel.Size = new System.Drawing.Size(630, 44);
             this.finalizePanel.TabIndex = 1;
             // 
             // writeButton
             // 
             this.writeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.writeButton.Location = new System.Drawing.Point(1504, 19);
-            this.writeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.writeButton.Location = new System.Drawing.Point(564, 8);
             this.writeButton.Name = "writeButton";
             this.writeButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.writeButton.Size = new System.Drawing.Size(304, 67);
+            this.writeButton.Size = new System.Drawing.Size(114, 28);
             this.writeButton.TabIndex = 0;
             this.writeButton.Text = "Write It!";
             this.writeButton.UseVisualStyleBackColor = true;
@@ -647,10 +640,9 @@
             // previewPanel
             // 
             this.previewPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.previewPanel.Location = new System.Drawing.Point(8, 7);
-            this.previewPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.previewPanel.Location = new System.Drawing.Point(3, 3);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(1685, 498);
+            this.previewPanel.Size = new System.Drawing.Size(630, 209);
             this.previewPanel.TabIndex = 0;
             // 
             // sectionTabControl
@@ -659,11 +651,10 @@
             this.sectionTabControl.Controls.Add(this.contentTab);
             this.sectionTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionTabControl.ItemSize = new System.Drawing.Size(325, 25);
-            this.sectionTabControl.Location = new System.Drawing.Point(8, 7);
-            this.sectionTabControl.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionTabControl.Location = new System.Drawing.Point(3, 3);
             this.sectionTabControl.Name = "sectionTabControl";
             this.sectionTabControl.SelectedIndex = 0;
-            this.sectionTabControl.Size = new System.Drawing.Size(1631, 782);
+            this.sectionTabControl.Size = new System.Drawing.Size(610, 328);
             this.sectionTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.sectionTabControl.TabIndex = 1;
             this.sectionTabControl.SelectedIndexChanged += new System.EventHandler(this.sectionTabControl_Change);
@@ -680,11 +671,10 @@
             this.formattingTab.Controls.Add(this.abstractPanel);
             this.formattingTab.Controls.Add(this.generalPanel);
             this.formattingTab.Controls.Add(this.referencesPanel);
-            this.formattingTab.Location = new System.Drawing.Point(10, 35);
-            this.formattingTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.formattingTab.Location = new System.Drawing.Point(4, 29);
             this.formattingTab.Name = "formattingTab";
-            this.formattingTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.formattingTab.Size = new System.Drawing.Size(1611, 737);
+            this.formattingTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.formattingTab.Size = new System.Drawing.Size(602, 295);
             this.formattingTab.TabIndex = 0;
             this.formattingTab.Text = "FORMATTING";
             this.formattingTab.UseVisualStyleBackColor = true;
@@ -695,10 +685,9 @@
             this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 6369);
-            this.conclusionPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 2671);
             this.conclusionPanel.Name = "conclusionPanel";
-            this.conclusionPanel.Size = new System.Drawing.Size(1690, 407);
+            this.conclusionPanel.Size = new System.Drawing.Size(635, 172);
             this.conclusionPanel.TabIndex = 7;
             // 
             // conclusionOptionsGroupBox
@@ -707,11 +696,9 @@
             this.conclusionOptionsGroupBox.Controls.Add(this.conclusionTitleGroupBox);
             this.conclusionOptionsGroupBox.Controls.Add(this.conclusionOwnPageCheck);
             this.conclusionOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.conclusionOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.conclusionOptionsGroupBox.Name = "conclusionOptionsGroupBox";
-            this.conclusionOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(1640, 298);
+            this.conclusionOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
             this.conclusionOptionsGroupBox.TabIndex = 3;
             this.conclusionOptionsGroupBox.TabStop = false;
             this.conclusionOptionsGroupBox.Text = "Options";
@@ -719,10 +706,9 @@
             // conclusionDefaultButton
             // 
             this.conclusionDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionDefaultButton.Location = new System.Drawing.Point(24, 222);
-            this.conclusionDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionDefaultButton.Location = new System.Drawing.Point(9, 93);
             this.conclusionDefaultButton.Name = "conclusionDefaultButton";
-            this.conclusionDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.conclusionDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.conclusionDefaultButton.TabIndex = 14;
             this.conclusionDefaultButton.Text = "APA Default";
             this.conclusionDefaultButton.UseVisualStyleBackColor = true;
@@ -742,11 +728,9 @@
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionTitleBoldCheck);
             this.conclusionTitleGroupBox.Controls.Add(this.conclusionIncludeTitleCheck);
             this.conclusionTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.conclusionTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.conclusionTitleGroupBox.Name = "conclusionTitleGroupBox";
-            this.conclusionTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.conclusionTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.conclusionTitleGroupBox.TabIndex = 4;
             this.conclusionTitleGroupBox.TabStop = false;
             this.conclusionTitleGroupBox.Text = "Conclusion Title";
@@ -754,10 +738,9 @@
             // conclusionTitleAlignLabel
             // 
             this.conclusionTitleAlignLabel.AutoSize = true;
-            this.conclusionTitleAlignLabel.Location = new System.Drawing.Point(368, 48);
-            this.conclusionTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.conclusionTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
             this.conclusionTitleAlignLabel.Name = "conclusionTitleAlignLabel";
-            this.conclusionTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.conclusionTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.conclusionTitleAlignLabel.TabIndex = 27;
             this.conclusionTitleAlignLabel.Text = "Align:";
             this.conclusionTitleAlignLabel.Visible = false;
@@ -769,20 +752,18 @@
             "Left",
             "Center",
             "Right"});
-            this.conclusionTitleAlignChoose.Location = new System.Drawing.Point(459, 41);
-            this.conclusionTitleAlignChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleAlignChoose.Location = new System.Drawing.Point(172, 17);
             this.conclusionTitleAlignChoose.Name = "conclusionTitleAlignChoose";
-            this.conclusionTitleAlignChoose.Size = new System.Drawing.Size(316, 39);
+            this.conclusionTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.conclusionTitleAlignChoose.TabIndex = 26;
             this.conclusionTitleAlignChoose.Visible = false;
             this.conclusionTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleAlignChoose_SelectedIndexChanged);
             // 
             // conclusionTitleColorButton
             // 
-            this.conclusionTitleColorButton.Location = new System.Drawing.Point(376, 272);
-            this.conclusionTitleColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleColorButton.Location = new System.Drawing.Point(141, 114);
             this.conclusionTitleColorButton.Name = "conclusionTitleColorButton";
-            this.conclusionTitleColorButton.Size = new System.Drawing.Size(195, 55);
+            this.conclusionTitleColorButton.Size = new System.Drawing.Size(73, 23);
             this.conclusionTitleColorButton.TabIndex = 13;
             this.conclusionTitleColorButton.Text = "Choose";
             this.conclusionTitleColorButton.UseVisualStyleBackColor = true;
@@ -791,20 +772,18 @@
             // 
             // conclusionTitleColorText
             // 
-            this.conclusionTitleColorText.Location = new System.Drawing.Point(187, 277);
-            this.conclusionTitleColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleColorText.Location = new System.Drawing.Point(70, 116);
             this.conclusionTitleColorText.Name = "conclusionTitleColorText";
-            this.conclusionTitleColorText.Size = new System.Drawing.Size(185, 39);
+            this.conclusionTitleColorText.Size = new System.Drawing.Size(72, 20);
             this.conclusionTitleColorText.TabIndex = 14;
             this.conclusionTitleColorText.Visible = false;
             // 
             // conclusionTitleColorLabel
             // 
             this.conclusionTitleColorLabel.AutoSize = true;
-            this.conclusionTitleColorLabel.Location = new System.Drawing.Point(8, 284);
-            this.conclusionTitleColorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.conclusionTitleColorLabel.Location = new System.Drawing.Point(3, 119);
             this.conclusionTitleColorLabel.Name = "conclusionTitleColorLabel";
-            this.conclusionTitleColorLabel.Size = new System.Drawing.Size(153, 32);
+            this.conclusionTitleColorLabel.Size = new System.Drawing.Size(57, 13);
             this.conclusionTitleColorLabel.TabIndex = 19;
             this.conclusionTitleColorLabel.Text = "Title Color:";
             this.conclusionTitleColorLabel.Visible = false;
@@ -812,10 +791,9 @@
             // conclusionTitleSizeChoose
             // 
             this.conclusionTitleSizeChoose.FormattingEnabled = true;
-            this.conclusionTitleSizeChoose.Location = new System.Drawing.Point(187, 215);
-            this.conclusionTitleSizeChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
             this.conclusionTitleSizeChoose.Name = "conclusionTitleSizeChoose";
-            this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(377, 39);
+            this.conclusionTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.conclusionTitleSizeChoose.TabIndex = 18;
             this.conclusionTitleSizeChoose.Visible = false;
             this.conclusionTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleSizeChoose_SelectedIndexChanged);
@@ -823,10 +801,9 @@
             // conclusionTitleSizeLabel
             // 
             this.conclusionTitleSizeLabel.AutoSize = true;
-            this.conclusionTitleSizeLabel.Location = new System.Drawing.Point(8, 222);
-            this.conclusionTitleSizeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.conclusionTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
             this.conclusionTitleSizeLabel.Name = "conclusionTitleSizeLabel";
-            this.conclusionTitleSizeLabel.Size = new System.Drawing.Size(141, 32);
+            this.conclusionTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
             this.conclusionTitleSizeLabel.TabIndex = 17;
             this.conclusionTitleSizeLabel.Text = "Title Size:";
             this.conclusionTitleSizeLabel.Visible = false;
@@ -834,10 +811,9 @@
             // conclusionTitleFontLabel
             // 
             this.conclusionTitleFontLabel.AutoSize = true;
-            this.conclusionTitleFontLabel.Location = new System.Drawing.Point(8, 160);
-            this.conclusionTitleFontLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.conclusionTitleFontLabel.Location = new System.Drawing.Point(3, 67);
             this.conclusionTitleFontLabel.Name = "conclusionTitleFontLabel";
-            this.conclusionTitleFontLabel.Size = new System.Drawing.Size(142, 32);
+            this.conclusionTitleFontLabel.Size = new System.Drawing.Size(54, 13);
             this.conclusionTitleFontLabel.TabIndex = 16;
             this.conclusionTitleFontLabel.Text = "Title Font:";
             this.conclusionTitleFontLabel.Visible = false;
@@ -845,10 +821,9 @@
             // conclusionTitleFontChoose
             // 
             this.conclusionTitleFontChoose.FormattingEnabled = true;
-            this.conclusionTitleFontChoose.Location = new System.Drawing.Point(187, 153);
-            this.conclusionTitleFontChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleFontChoose.Location = new System.Drawing.Point(70, 64);
             this.conclusionTitleFontChoose.Name = "conclusionTitleFontChoose";
-            this.conclusionTitleFontChoose.Size = new System.Drawing.Size(377, 39);
+            this.conclusionTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.conclusionTitleFontChoose.TabIndex = 15;
             this.conclusionTitleFontChoose.Visible = false;
             this.conclusionTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.conclusionTitleFontChoose_SelectedIndexChanged);
@@ -856,10 +831,9 @@
             // conclusionTitleBoldCheck
             // 
             this.conclusionTitleBoldCheck.AutoSize = true;
-            this.conclusionTitleBoldCheck.Location = new System.Drawing.Point(16, 100);
-            this.conclusionTitleBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
             this.conclusionTitleBoldCheck.Name = "conclusionTitleBoldCheck";
-            this.conclusionTitleBoldCheck.Size = new System.Drawing.Size(173, 36);
+            this.conclusionTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
             this.conclusionTitleBoldCheck.TabIndex = 11;
             this.conclusionTitleBoldCheck.Text = "Bold Title";
             this.conclusionTitleBoldCheck.UseVisualStyleBackColor = true;
@@ -870,10 +844,9 @@
             // 
             this.conclusionIncludeTitleCheck.AutoSize = true;
             this.conclusionIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionIncludeTitleCheck.Location = new System.Drawing.Point(16, 45);
-            this.conclusionIncludeTitleCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
             this.conclusionIncludeTitleCheck.Name = "conclusionIncludeTitleCheck";
-            this.conclusionIncludeTitleCheck.Size = new System.Drawing.Size(207, 36);
+            this.conclusionIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
             this.conclusionIncludeTitleCheck.TabIndex = 1;
             this.conclusionIncludeTitleCheck.Text = "Include Title";
             this.conclusionIncludeTitleCheck.UseVisualStyleBackColor = true;
@@ -883,10 +856,9 @@
             // 
             this.conclusionOwnPageCheck.AutoSize = true;
             this.conclusionOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionOwnPageCheck.Location = new System.Drawing.Point(24, 45);
-            this.conclusionOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionOwnPageCheck.Location = new System.Drawing.Point(9, 19);
             this.conclusionOwnPageCheck.Name = "conclusionOwnPageCheck";
-            this.conclusionOwnPageCheck.Size = new System.Drawing.Size(266, 36);
+            this.conclusionOwnPageCheck.Size = new System.Drawing.Size(107, 17);
             this.conclusionOwnPageCheck.TabIndex = 0;
             this.conclusionOwnPageCheck.Text = "On Its Own Page";
             this.conclusionOwnPageCheck.UseVisualStyleBackColor = true;
@@ -899,9 +871,8 @@
             this.conclusionHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusionHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.conclusionHeader.Location = new System.Drawing.Point(0, 0);
-            this.conclusionHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.conclusionHeader.Name = "conclusionHeader";
-            this.conclusionHeader.Size = new System.Drawing.Size(1688, 72);
+            this.conclusionHeader.Size = new System.Drawing.Size(633, 30);
             this.conclusionHeader.TabIndex = 0;
             this.conclusionHeader.Text = "CONCLUSION";
             this.conclusionHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -913,10 +884,9 @@
             this.footerPanel.Controls.Add(this.footerOptionsGroupBox);
             this.footerPanel.Controls.Add(this.footerHeader);
             this.footerPanel.Controls.Add(this.footerDefaultButton);
-            this.footerPanel.Location = new System.Drawing.Point(0, 4373);
-            this.footerPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerPanel.Location = new System.Drawing.Point(0, 1834);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(1690, 1359);
+            this.footerPanel.Size = new System.Drawing.Size(635, 571);
             this.footerPanel.TabIndex = 10;
             // 
             // footerOptionsGroupBox
@@ -926,11 +896,9 @@
             this.footerOptionsGroupBox.Controls.Add(this.footerCenterGroupBox);
             this.footerOptionsGroupBox.Controls.Add(this.footerLeftGroupBox);
             this.footerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.footerOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.footerOptionsGroupBox.Name = "footerOptionsGroupBox";
-            this.footerOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerOptionsGroupBox.Size = new System.Drawing.Size(1640, 1180);
+            this.footerOptionsGroupBox.Size = new System.Drawing.Size(615, 495);
             this.footerOptionsGroupBox.TabIndex = 2;
             this.footerOptionsGroupBox.TabStop = false;
             this.footerOptionsGroupBox.Text = "Options";
@@ -944,11 +912,9 @@
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageDiffCheck);
             this.footerFirstPageGroupBox.Controls.Add(this.footerFirstPageUseRunningHeadCheck);
             this.footerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(24, 1049);
-            this.footerFirstPageGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageGroupBox.Location = new System.Drawing.Point(9, 440);
             this.footerFirstPageGroupBox.Name = "footerFirstPageGroupBox";
-            this.footerFirstPageGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(1592, 103);
+            this.footerFirstPageGroupBox.Size = new System.Drawing.Size(597, 43);
             this.footerFirstPageGroupBox.TabIndex = 27;
             this.footerFirstPageGroupBox.TabStop = false;
             this.footerFirstPageGroupBox.Text = "First Page";
@@ -966,11 +932,9 @@
             this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightTitleRadio);
             this.footerFirstPageRightGroupBox.Controls.Add(this.footerFirstRightOtherEnter);
             this.footerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageRightGroupBox.Location = new System.Drawing.Point(24, 816);
-            this.footerFirstPageRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 342);
             this.footerFirstPageRightGroupBox.Name = "footerFirstPageRightGroupBox";
-            this.footerFirstPageRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerFirstPageRightGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.footerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageRightGroupBox.TabIndex = 26;
             this.footerFirstPageRightGroupBox.TabStop = false;
             this.footerFirstPageRightGroupBox.Text = "First Page Right";
@@ -980,10 +944,9 @@
             // 
             this.footerFirstRightEmptyRadio.AutoSize = true;
             this.footerFirstRightEmptyRadio.Checked = true;
-            this.footerFirstRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerFirstRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerFirstRightEmptyRadio.Name = "footerFirstRightEmptyRadio";
-            this.footerFirstRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerFirstRightEmptyRadio.TabIndex = 32;
             this.footerFirstRightEmptyRadio.TabStop = true;
             this.footerFirstRightEmptyRadio.Text = "Empty";
@@ -993,10 +956,9 @@
             // footerFirstRightTitleEnter
             // 
             this.footerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstRightTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.footerFirstRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.footerFirstRightTitleEnter.Name = "footerFirstRightTitleEnter";
-            this.footerFirstRightTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightTitleEnter.TabIndex = 29;
             this.footerFirstRightTitleEnter.Visible = false;
             this.footerFirstRightTitleEnter.TextChanged += new System.EventHandler(this.footerFirstRightTitleEnter_TextChanged);
@@ -1004,20 +966,18 @@
             // footerFirstRightTitleLabel
             // 
             this.footerFirstRightTitleLabel.AutoSize = true;
-            this.footerFirstRightTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.footerFirstRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstRightTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.footerFirstRightTitleLabel.Name = "footerFirstRightTitleLabel";
-            this.footerFirstRightTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstRightTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerFirstRightTitleLabel.TabIndex = 28;
             this.footerFirstRightTitleLabel.Text = "Title:";
             this.footerFirstRightTitleLabel.Visible = false;
             // 
             // footerFirstRightNumberEnter
             // 
-            this.footerFirstRightNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerFirstRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerFirstRightNumberEnter.Name = "footerFirstRightNumberEnter";
-            this.footerFirstRightNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightNumberEnter.TabIndex = 25;
             this.footerFirstRightNumberEnter.Visible = false;
             this.footerFirstRightNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstRightNumberEnter_ValueChanged);
@@ -1025,10 +985,9 @@
             // footerFirstRightNumberLabel
             // 
             this.footerFirstRightNumberLabel.AutoSize = true;
-            this.footerFirstRightNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerFirstRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstRightNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerFirstRightNumberLabel.Name = "footerFirstRightNumberLabel";
-            this.footerFirstRightNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerFirstRightNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerFirstRightNumberLabel.TabIndex = 24;
             this.footerFirstRightNumberLabel.Text = "1st Page Number:";
             this.footerFirstRightNumberLabel.Visible = false;
@@ -1036,10 +995,9 @@
             // footerFirstRightOtherLabel
             // 
             this.footerFirstRightOtherLabel.AutoSize = true;
-            this.footerFirstRightOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerFirstRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstRightOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerFirstRightOtherLabel.Name = "footerFirstRightOtherLabel";
-            this.footerFirstRightOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstRightOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerFirstRightOtherLabel.TabIndex = 23;
             this.footerFirstRightOtherLabel.Text = "Text:";
             this.footerFirstRightOtherLabel.Visible = false;
@@ -1047,10 +1005,9 @@
             // footerFirstRightOtherRadio
             // 
             this.footerFirstRightOtherRadio.AutoSize = true;
-            this.footerFirstRightOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerFirstRightOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerFirstRightOtherRadio.Name = "footerFirstRightOtherRadio";
-            this.footerFirstRightOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerFirstRightOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerFirstRightOtherRadio.TabIndex = 22;
             this.footerFirstRightOtherRadio.TabStop = true;
             this.footerFirstRightOtherRadio.Text = "Other Text";
@@ -1060,10 +1017,9 @@
             // footerFirstRightNumberRadio
             // 
             this.footerFirstRightNumberRadio.AutoSize = true;
-            this.footerFirstRightNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerFirstRightNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerFirstRightNumberRadio.Name = "footerFirstRightNumberRadio";
-            this.footerFirstRightNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerFirstRightNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerFirstRightNumberRadio.TabIndex = 21;
             this.footerFirstRightNumberRadio.TabStop = true;
             this.footerFirstRightNumberRadio.Text = "Page Number";
@@ -1073,10 +1029,9 @@
             // footerFirstRightTitleRadio
             // 
             this.footerFirstRightTitleRadio.AutoSize = true;
-            this.footerFirstRightTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerFirstRightTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerFirstRightTitleRadio.Name = "footerFirstRightTitleRadio";
-            this.footerFirstRightTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerFirstRightTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerFirstRightTitleRadio.TabIndex = 20;
             this.footerFirstRightTitleRadio.TabStop = true;
             this.footerFirstRightTitleRadio.Text = "Paper Title";
@@ -1086,10 +1041,9 @@
             // footerFirstRightOtherEnter
             // 
             this.footerFirstRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstRightOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerFirstRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstRightOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerFirstRightOtherEnter.Name = "footerFirstRightOtherEnter";
-            this.footerFirstRightOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstRightOtherEnter.TabIndex = 19;
             this.footerFirstRightOtherEnter.Visible = false;
             this.footerFirstRightOtherEnter.TextChanged += new System.EventHandler(this.footerFirstRightOtherEnter_TextChanged);
@@ -1107,11 +1061,9 @@
             this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterTitleRadio);
             this.footerFirstPageCenterGroupBox.Controls.Add(this.footerFirstCenterOtherEnter);
             this.footerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageCenterGroupBox.Location = new System.Drawing.Point(24, 513);
-            this.footerFirstPageCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 215);
             this.footerFirstPageCenterGroupBox.Name = "footerFirstPageCenterGroupBox";
-            this.footerFirstPageCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerFirstPageCenterGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.footerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageCenterGroupBox.TabIndex = 26;
             this.footerFirstPageCenterGroupBox.TabStop = false;
             this.footerFirstPageCenterGroupBox.Text = "First Page Center";
@@ -1121,10 +1073,9 @@
             // 
             this.footerFirstCenterEmptyRadio.AutoSize = true;
             this.footerFirstCenterEmptyRadio.Checked = true;
-            this.footerFirstCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerFirstCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerFirstCenterEmptyRadio.Name = "footerFirstCenterEmptyRadio";
-            this.footerFirstCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerFirstCenterEmptyRadio.TabIndex = 32;
             this.footerFirstCenterEmptyRadio.TabStop = true;
             this.footerFirstCenterEmptyRadio.Text = "Empty";
@@ -1134,10 +1085,9 @@
             // footerFirstCenterTitleEnter
             // 
             this.footerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.footerFirstCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.footerFirstCenterTitleEnter.Name = "footerFirstCenterTitleEnter";
-            this.footerFirstCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterTitleEnter.TabIndex = 29;
             this.footerFirstCenterTitleEnter.Visible = false;
             this.footerFirstCenterTitleEnter.TextChanged += new System.EventHandler(this.footerFirstCenterTitleEnter_TextChanged);
@@ -1145,20 +1095,18 @@
             // footerFirstCenterTitleLabel
             // 
             this.footerFirstCenterTitleLabel.AutoSize = true;
-            this.footerFirstCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.footerFirstCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.footerFirstCenterTitleLabel.Name = "footerFirstCenterTitleLabel";
-            this.footerFirstCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerFirstCenterTitleLabel.TabIndex = 28;
             this.footerFirstCenterTitleLabel.Text = "Title:";
             this.footerFirstCenterTitleLabel.Visible = false;
             // 
             // footerFirstCenterNumberEnter
             // 
-            this.footerFirstCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerFirstCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerFirstCenterNumberEnter.Name = "footerFirstCenterNumberEnter";
-            this.footerFirstCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterNumberEnter.TabIndex = 25;
             this.footerFirstCenterNumberEnter.Visible = false;
             this.footerFirstCenterNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstCenterNumberEnter_ValueChanged);
@@ -1166,10 +1114,9 @@
             // footerFirstCenterNumberLabel
             // 
             this.footerFirstCenterNumberLabel.AutoSize = true;
-            this.footerFirstCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerFirstCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerFirstCenterNumberLabel.Name = "footerFirstCenterNumberLabel";
-            this.footerFirstCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerFirstCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerFirstCenterNumberLabel.TabIndex = 24;
             this.footerFirstCenterNumberLabel.Text = "1st Page Number:";
             this.footerFirstCenterNumberLabel.Visible = false;
@@ -1177,10 +1124,9 @@
             // footerFirstCenterOtherLabel
             // 
             this.footerFirstCenterOtherLabel.AutoSize = true;
-            this.footerFirstCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerFirstCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerFirstCenterOtherLabel.Name = "footerFirstCenterOtherLabel";
-            this.footerFirstCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerFirstCenterOtherLabel.TabIndex = 23;
             this.footerFirstCenterOtherLabel.Text = "Text:";
             this.footerFirstCenterOtherLabel.Visible = false;
@@ -1188,10 +1134,9 @@
             // footerFirstCenterOtherRadio
             // 
             this.footerFirstCenterOtherRadio.AutoSize = true;
-            this.footerFirstCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerFirstCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerFirstCenterOtherRadio.Name = "footerFirstCenterOtherRadio";
-            this.footerFirstCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerFirstCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerFirstCenterOtherRadio.TabIndex = 22;
             this.footerFirstCenterOtherRadio.TabStop = true;
             this.footerFirstCenterOtherRadio.Text = "Other Text";
@@ -1201,10 +1146,9 @@
             // footerFirstCenterNumberRadio
             // 
             this.footerFirstCenterNumberRadio.AutoSize = true;
-            this.footerFirstCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerFirstCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerFirstCenterNumberRadio.Name = "footerFirstCenterNumberRadio";
-            this.footerFirstCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerFirstCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerFirstCenterNumberRadio.TabIndex = 21;
             this.footerFirstCenterNumberRadio.TabStop = true;
             this.footerFirstCenterNumberRadio.Text = "Page Number";
@@ -1214,10 +1158,9 @@
             // footerFirstCenterTitleRadio
             // 
             this.footerFirstCenterTitleRadio.AutoSize = true;
-            this.footerFirstCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerFirstCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerFirstCenterTitleRadio.Name = "footerFirstCenterTitleRadio";
-            this.footerFirstCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerFirstCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerFirstCenterTitleRadio.TabIndex = 20;
             this.footerFirstCenterTitleRadio.TabStop = true;
             this.footerFirstCenterTitleRadio.Text = "Paper Title";
@@ -1227,10 +1170,9 @@
             // footerFirstCenterOtherEnter
             // 
             this.footerFirstCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerFirstCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerFirstCenterOtherEnter.Name = "footerFirstCenterOtherEnter";
-            this.footerFirstCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstCenterOtherEnter.TabIndex = 19;
             this.footerFirstCenterOtherEnter.Visible = false;
             this.footerFirstCenterOtherEnter.TextChanged += new System.EventHandler(this.footerFirstCenterOtherEnter_TextChanged);
@@ -1248,11 +1190,9 @@
             this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftTitleRadio);
             this.footerFirstPageLeftGroupBox.Controls.Add(this.footerFirstLeftOtherEnter);
             this.footerFirstPageLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageLeftGroupBox.Location = new System.Drawing.Point(24, 210);
-            this.footerFirstPageLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageLeftGroupBox.Location = new System.Drawing.Point(9, 88);
             this.footerFirstPageLeftGroupBox.Name = "footerFirstPageLeftGroupBox";
-            this.footerFirstPageLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerFirstPageLeftGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.footerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 121);
             this.footerFirstPageLeftGroupBox.TabIndex = 21;
             this.footerFirstPageLeftGroupBox.TabStop = false;
             this.footerFirstPageLeftGroupBox.Text = "First Page Left";
@@ -1262,10 +1202,9 @@
             // 
             this.footerFirstLeftEmptyRadio.AutoSize = true;
             this.footerFirstLeftEmptyRadio.Checked = true;
-            this.footerFirstLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerFirstLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerFirstLeftEmptyRadio.Name = "footerFirstLeftEmptyRadio";
-            this.footerFirstLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerFirstLeftEmptyRadio.TabIndex = 31;
             this.footerFirstLeftEmptyRadio.TabStop = true;
             this.footerFirstLeftEmptyRadio.Text = "Empty";
@@ -1275,10 +1214,9 @@
             // footerFirstLeftTitleEnter
             // 
             this.footerFirstLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstLeftTitleEnter.Location = new System.Drawing.Point(517, 43);
-            this.footerFirstLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftTitleEnter.Location = new System.Drawing.Point(194, 18);
             this.footerFirstLeftTitleEnter.Name = "footerFirstLeftTitleEnter";
-            this.footerFirstLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftTitleEnter.TabIndex = 29;
             this.footerFirstLeftTitleEnter.Visible = false;
             this.footerFirstLeftTitleEnter.TextChanged += new System.EventHandler(this.footerFirstLeftTitleEnter_TextChanged);
@@ -1286,20 +1224,18 @@
             // footerFirstLeftTitleLabel
             // 
             this.footerFirstLeftTitleLabel.AutoSize = true;
-            this.footerFirstLeftTitleLabel.Location = new System.Drawing.Point(427, 50);
-            this.footerFirstLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstLeftTitleLabel.Location = new System.Drawing.Point(160, 21);
             this.footerFirstLeftTitleLabel.Name = "footerFirstLeftTitleLabel";
-            this.footerFirstLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerFirstLeftTitleLabel.TabIndex = 28;
             this.footerFirstLeftTitleLabel.Text = "Title:";
             this.footerFirstLeftTitleLabel.Visible = false;
             // 
             // footerFirstLeftNumberEnter
             // 
-            this.footerFirstLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerFirstLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerFirstLeftNumberEnter.Name = "footerFirstLeftNumberEnter";
-            this.footerFirstLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftNumberEnter.TabIndex = 25;
             this.footerFirstLeftNumberEnter.Visible = false;
             this.footerFirstLeftNumberEnter.ValueChanged += new System.EventHandler(this.footerFirstLeftNumberEnter_ValueChanged);
@@ -1307,10 +1243,9 @@
             // footerFirstLeftNumberLabel
             // 
             this.footerFirstLeftNumberLabel.AutoSize = true;
-            this.footerFirstLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerFirstLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerFirstLeftNumberLabel.Name = "footerFirstLeftNumberLabel";
-            this.footerFirstLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerFirstLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerFirstLeftNumberLabel.TabIndex = 24;
             this.footerFirstLeftNumberLabel.Text = "1st Page Number:";
             this.footerFirstLeftNumberLabel.Visible = false;
@@ -1318,10 +1253,9 @@
             // footerFirstLeftOtherLabel
             // 
             this.footerFirstLeftOtherLabel.AutoSize = true;
-            this.footerFirstLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerFirstLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerFirstLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerFirstLeftOtherLabel.Name = "footerFirstLeftOtherLabel";
-            this.footerFirstLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerFirstLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerFirstLeftOtherLabel.TabIndex = 23;
             this.footerFirstLeftOtherLabel.Text = "Text:";
             this.footerFirstLeftOtherLabel.Visible = false;
@@ -1329,10 +1263,9 @@
             // footerFirstLeftOtherRadio
             // 
             this.footerFirstLeftOtherRadio.AutoSize = true;
-            this.footerFirstLeftOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerFirstLeftOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerFirstLeftOtherRadio.Name = "footerFirstLeftOtherRadio";
-            this.footerFirstLeftOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerFirstLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerFirstLeftOtherRadio.TabIndex = 22;
             this.footerFirstLeftOtherRadio.TabStop = true;
             this.footerFirstLeftOtherRadio.Text = "Other Text";
@@ -1342,10 +1275,9 @@
             // footerFirstLeftNumberRadio
             // 
             this.footerFirstLeftNumberRadio.AutoSize = true;
-            this.footerFirstLeftNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerFirstLeftNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerFirstLeftNumberRadio.Name = "footerFirstLeftNumberRadio";
-            this.footerFirstLeftNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerFirstLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerFirstLeftNumberRadio.TabIndex = 21;
             this.footerFirstLeftNumberRadio.TabStop = true;
             this.footerFirstLeftNumberRadio.Text = "Page Number";
@@ -1355,10 +1287,9 @@
             // footerFirstLeftTitleRadio
             // 
             this.footerFirstLeftTitleRadio.AutoSize = true;
-            this.footerFirstLeftTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerFirstLeftTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerFirstLeftTitleRadio.Name = "footerFirstLeftTitleRadio";
-            this.footerFirstLeftTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerFirstLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerFirstLeftTitleRadio.TabIndex = 20;
             this.footerFirstLeftTitleRadio.TabStop = true;
             this.footerFirstLeftTitleRadio.Text = "Paper Title";
@@ -1368,10 +1299,9 @@
             // footerFirstLeftOtherEnter
             // 
             this.footerFirstLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerFirstLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerFirstLeftOtherEnter.Name = "footerFirstLeftOtherEnter";
-            this.footerFirstLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerFirstLeftOtherEnter.TabIndex = 19;
             this.footerFirstLeftOtherEnter.Visible = false;
             this.footerFirstLeftOtherEnter.TextChanged += new System.EventHandler(this.footerFirstLeftOtherEnter_TextChanged);
@@ -1380,10 +1310,9 @@
             // 
             this.footerFirstPageUseMoreCheck.AutoSize = true;
             this.footerFirstPageUseMoreCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageUseMoreCheck.Location = new System.Drawing.Point(24, 155);
-            this.footerFirstPageUseMoreCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageUseMoreCheck.Location = new System.Drawing.Point(9, 65);
             this.footerFirstPageUseMoreCheck.Name = "footerFirstPageUseMoreCheck";
-            this.footerFirstPageUseMoreCheck.Size = new System.Drawing.Size(280, 36);
+            this.footerFirstPageUseMoreCheck.Size = new System.Drawing.Size(111, 17);
             this.footerFirstPageUseMoreCheck.TabIndex = 3;
             this.footerFirstPageUseMoreCheck.Text = "Use More Options";
             this.footerFirstPageUseMoreCheck.UseVisualStyleBackColor = true;
@@ -1394,10 +1323,9 @@
             // 
             this.footerFirstPageDiffCheck.AutoSize = true;
             this.footerFirstPageDiffCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageDiffCheck.Location = new System.Drawing.Point(24, 45);
-            this.footerFirstPageDiffCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageDiffCheck.Location = new System.Drawing.Point(9, 19);
             this.footerFirstPageDiffCheck.Name = "footerFirstPageDiffCheck";
-            this.footerFirstPageDiffCheck.Size = new System.Drawing.Size(342, 36);
+            this.footerFirstPageDiffCheck.Size = new System.Drawing.Size(133, 17);
             this.footerFirstPageDiffCheck.TabIndex = 1;
             this.footerFirstPageDiffCheck.Text = "Different On First Page";
             this.footerFirstPageDiffCheck.UseVisualStyleBackColor = true;
@@ -1407,10 +1335,9 @@
             // 
             this.footerFirstPageUseRunningHeadCheck.AutoSize = true;
             this.footerFirstPageUseRunningHeadCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(24, 100);
-            this.footerFirstPageUseRunningHeadCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(9, 42);
             this.footerFirstPageUseRunningHeadCheck.Name = "footerFirstPageUseRunningHeadCheck";
-            this.footerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(316, 36);
+            this.footerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(128, 17);
             this.footerFirstPageUseRunningHeadCheck.TabIndex = 2;
             this.footerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
             this.footerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
@@ -1430,11 +1357,9 @@
             this.footerRightGroupBox.Controls.Add(this.footerRightTitleRadio);
             this.footerRightGroupBox.Controls.Add(this.footerRightOtherEnter);
             this.footerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerRightGroupBox.Location = new System.Drawing.Point(24, 715);
-            this.footerRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightGroupBox.Location = new System.Drawing.Point(9, 300);
             this.footerRightGroupBox.Name = "footerRightGroupBox";
-            this.footerRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerRightGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.footerRightGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerRightGroupBox.TabIndex = 26;
             this.footerRightGroupBox.TabStop = false;
             this.footerRightGroupBox.Text = "Right";
@@ -1443,10 +1368,9 @@
             // 
             this.footerRightEmptyRadio.AutoSize = true;
             this.footerRightEmptyRadio.Checked = true;
-            this.footerRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerRightEmptyRadio.Name = "footerRightEmptyRadio";
-            this.footerRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerRightEmptyRadio.TabIndex = 32;
             this.footerRightEmptyRadio.TabStop = true;
             this.footerRightEmptyRadio.Text = "Empty";
@@ -1456,10 +1380,9 @@
             // footerRightTitleEnter
             // 
             this.footerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerRightTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.footerRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.footerRightTitleEnter.Name = "footerRightTitleEnter";
-            this.footerRightTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightTitleEnter.TabIndex = 29;
             this.footerRightTitleEnter.Visible = false;
             this.footerRightTitleEnter.TextChanged += new System.EventHandler(this.footerRightTitleEnter_TextChanged);
@@ -1467,20 +1390,18 @@
             // footerRightTitleLabel
             // 
             this.footerRightTitleLabel.AutoSize = true;
-            this.footerRightTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.footerRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerRightTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.footerRightTitleLabel.Name = "footerRightTitleLabel";
-            this.footerRightTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerRightTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerRightTitleLabel.TabIndex = 28;
             this.footerRightTitleLabel.Text = "Title:";
             this.footerRightTitleLabel.Visible = false;
             // 
             // footerRightNumberEnter
             // 
-            this.footerRightNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerRightNumberEnter.Name = "footerRightNumberEnter";
-            this.footerRightNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightNumberEnter.TabIndex = 25;
             this.footerRightNumberEnter.Visible = false;
             this.footerRightNumberEnter.ValueChanged += new System.EventHandler(this.footerRightNumberEnter_ValueChanged);
@@ -1488,10 +1409,9 @@
             // footerRightNumberLabel
             // 
             this.footerRightNumberLabel.AutoSize = true;
-            this.footerRightNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerRightNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerRightNumberLabel.Name = "footerRightNumberLabel";
-            this.footerRightNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerRightNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerRightNumberLabel.TabIndex = 24;
             this.footerRightNumberLabel.Text = "1st Page Number:";
             this.footerRightNumberLabel.Visible = false;
@@ -1499,10 +1419,9 @@
             // footerRightOtherLabel
             // 
             this.footerRightOtherLabel.AutoSize = true;
-            this.footerRightOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerRightOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerRightOtherLabel.Name = "footerRightOtherLabel";
-            this.footerRightOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerRightOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerRightOtherLabel.TabIndex = 23;
             this.footerRightOtherLabel.Text = "Text:";
             this.footerRightOtherLabel.Visible = false;
@@ -1510,10 +1429,9 @@
             // footerRightOtherRadio
             // 
             this.footerRightOtherRadio.AutoSize = true;
-            this.footerRightOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerRightOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerRightOtherRadio.Name = "footerRightOtherRadio";
-            this.footerRightOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerRightOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerRightOtherRadio.TabIndex = 22;
             this.footerRightOtherRadio.TabStop = true;
             this.footerRightOtherRadio.Text = "Other Text";
@@ -1523,10 +1441,9 @@
             // footerRightNumberRadio
             // 
             this.footerRightNumberRadio.AutoSize = true;
-            this.footerRightNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerRightNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerRightNumberRadio.Name = "footerRightNumberRadio";
-            this.footerRightNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerRightNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerRightNumberRadio.TabIndex = 21;
             this.footerRightNumberRadio.TabStop = true;
             this.footerRightNumberRadio.Text = "Page Number";
@@ -1536,10 +1453,9 @@
             // footerRightTitleRadio
             // 
             this.footerRightTitleRadio.AutoSize = true;
-            this.footerRightTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerRightTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerRightTitleRadio.Name = "footerRightTitleRadio";
-            this.footerRightTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerRightTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerRightTitleRadio.TabIndex = 20;
             this.footerRightTitleRadio.TabStop = true;
             this.footerRightTitleRadio.Text = "Paper Title";
@@ -1549,10 +1465,9 @@
             // footerRightOtherEnter
             // 
             this.footerRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerRightOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerRightOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerRightOtherEnter.Name = "footerRightOtherEnter";
-            this.footerRightOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerRightOtherEnter.TabIndex = 19;
             this.footerRightOtherEnter.Visible = false;
             this.footerRightOtherEnter.TextChanged += new System.EventHandler(this.footerRightOtherEnter_TextChanged);
@@ -1570,11 +1485,9 @@
             this.footerCenterGroupBox.Controls.Add(this.footerCenterTitleRadio);
             this.footerCenterGroupBox.Controls.Add(this.footerCenterOtherEnter);
             this.footerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerCenterGroupBox.Location = new System.Drawing.Point(24, 374);
-            this.footerCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterGroupBox.Location = new System.Drawing.Point(9, 157);
             this.footerCenterGroupBox.Name = "footerCenterGroupBox";
-            this.footerCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerCenterGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.footerCenterGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerCenterGroupBox.TabIndex = 26;
             this.footerCenterGroupBox.TabStop = false;
             this.footerCenterGroupBox.Text = "Center";
@@ -1583,10 +1496,9 @@
             // 
             this.footerCenterEmptyRadio.AutoSize = true;
             this.footerCenterEmptyRadio.Checked = true;
-            this.footerCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerCenterEmptyRadio.Name = "footerCenterEmptyRadio";
-            this.footerCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerCenterEmptyRadio.TabIndex = 32;
             this.footerCenterEmptyRadio.TabStop = true;
             this.footerCenterEmptyRadio.Text = "Empty";
@@ -1596,10 +1508,9 @@
             // footerCenterTitleEnter
             // 
             this.footerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.footerCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.footerCenterTitleEnter.Name = "footerCenterTitleEnter";
-            this.footerCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterTitleEnter.TabIndex = 29;
             this.footerCenterTitleEnter.Visible = false;
             this.footerCenterTitleEnter.TextChanged += new System.EventHandler(this.footerCenterTitleEnter_TextChanged);
@@ -1607,20 +1518,18 @@
             // footerCenterTitleLabel
             // 
             this.footerCenterTitleLabel.AutoSize = true;
-            this.footerCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.footerCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.footerCenterTitleLabel.Name = "footerCenterTitleLabel";
-            this.footerCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerCenterTitleLabel.TabIndex = 28;
             this.footerCenterTitleLabel.Text = "Title:";
             this.footerCenterTitleLabel.Visible = false;
             // 
             // footerCenterNumberEnter
             // 
-            this.footerCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerCenterNumberEnter.Name = "footerCenterNumberEnter";
-            this.footerCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterNumberEnter.TabIndex = 25;
             this.footerCenterNumberEnter.Visible = false;
             this.footerCenterNumberEnter.ValueChanged += new System.EventHandler(this.footerCenterNumberEnter_ValueChanged);
@@ -1628,10 +1537,9 @@
             // footerCenterNumberLabel
             // 
             this.footerCenterNumberLabel.AutoSize = true;
-            this.footerCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerCenterNumberLabel.Name = "footerCenterNumberLabel";
-            this.footerCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerCenterNumberLabel.TabIndex = 24;
             this.footerCenterNumberLabel.Text = "1st Page Number:";
             this.footerCenterNumberLabel.Visible = false;
@@ -1639,10 +1547,9 @@
             // footerCenterOtherLabel
             // 
             this.footerCenterOtherLabel.AutoSize = true;
-            this.footerCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerCenterOtherLabel.Name = "footerCenterOtherLabel";
-            this.footerCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerCenterOtherLabel.TabIndex = 23;
             this.footerCenterOtherLabel.Text = "Text:";
             this.footerCenterOtherLabel.Visible = false;
@@ -1650,10 +1557,9 @@
             // footerCenterOtherRadio
             // 
             this.footerCenterOtherRadio.AutoSize = true;
-            this.footerCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerCenterOtherRadio.Name = "footerCenterOtherRadio";
-            this.footerCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerCenterOtherRadio.TabIndex = 22;
             this.footerCenterOtherRadio.TabStop = true;
             this.footerCenterOtherRadio.Text = "Other Text";
@@ -1663,10 +1569,9 @@
             // footerCenterNumberRadio
             // 
             this.footerCenterNumberRadio.AutoSize = true;
-            this.footerCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerCenterNumberRadio.Name = "footerCenterNumberRadio";
-            this.footerCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerCenterNumberRadio.TabIndex = 21;
             this.footerCenterNumberRadio.TabStop = true;
             this.footerCenterNumberRadio.Text = "Page Number";
@@ -1676,10 +1581,9 @@
             // footerCenterTitleRadio
             // 
             this.footerCenterTitleRadio.AutoSize = true;
-            this.footerCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerCenterTitleRadio.Name = "footerCenterTitleRadio";
-            this.footerCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerCenterTitleRadio.TabIndex = 20;
             this.footerCenterTitleRadio.TabStop = true;
             this.footerCenterTitleRadio.Text = "Paper Title";
@@ -1689,10 +1593,9 @@
             // footerCenterOtherEnter
             // 
             this.footerCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerCenterOtherEnter.Name = "footerCenterOtherEnter";
-            this.footerCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerCenterOtherEnter.TabIndex = 19;
             this.footerCenterOtherEnter.Visible = false;
             this.footerCenterOtherEnter.TextChanged += new System.EventHandler(this.footerCenterOtherEnter_TextChanged);
@@ -1710,11 +1613,9 @@
             this.footerLeftGroupBox.Controls.Add(this.footerLeftTitleRadio);
             this.footerLeftGroupBox.Controls.Add(this.footerLeftOtherEnter);
             this.footerLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerLeftGroupBox.Location = new System.Drawing.Point(24, 45);
-            this.footerLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftGroupBox.Location = new System.Drawing.Point(9, 19);
             this.footerLeftGroupBox.Name = "footerLeftGroupBox";
-            this.footerLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.footerLeftGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.footerLeftGroupBox.Size = new System.Drawing.Size(597, 121);
             this.footerLeftGroupBox.TabIndex = 20;
             this.footerLeftGroupBox.TabStop = false;
             this.footerLeftGroupBox.Text = "Left";
@@ -1723,10 +1624,9 @@
             // 
             this.footerLeftEmptyRadio.AutoSize = true;
             this.footerLeftEmptyRadio.Checked = true;
-            this.footerLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.footerLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.footerLeftEmptyRadio.Name = "footerLeftEmptyRadio";
-            this.footerLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.footerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.footerLeftEmptyRadio.TabIndex = 31;
             this.footerLeftEmptyRadio.TabStop = true;
             this.footerLeftEmptyRadio.Text = "Empty";
@@ -1736,10 +1636,9 @@
             // footerLeftTitleEnter
             // 
             this.footerLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerLeftTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.footerLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.footerLeftTitleEnter.Name = "footerLeftTitleEnter";
-            this.footerLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftTitleEnter.TabIndex = 29;
             this.footerLeftTitleEnter.Visible = false;
             this.footerLeftTitleEnter.TextChanged += new System.EventHandler(this.footerLeftTitleEnter_TextChanged);
@@ -1747,20 +1646,18 @@
             // footerLeftTitleLabel
             // 
             this.footerLeftTitleLabel.AutoSize = true;
-            this.footerLeftTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.footerLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.footerLeftTitleLabel.Name = "footerLeftTitleLabel";
-            this.footerLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.footerLeftTitleLabel.TabIndex = 28;
             this.footerLeftTitleLabel.Text = "Title:";
             this.footerLeftTitleLabel.Visible = false;
             // 
             // footerLeftNumberEnter
             // 
-            this.footerLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.footerLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.footerLeftNumberEnter.Name = "footerLeftNumberEnter";
-            this.footerLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.footerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftNumberEnter.TabIndex = 25;
             this.footerLeftNumberEnter.Visible = false;
             this.footerLeftNumberEnter.ValueChanged += new System.EventHandler(this.footerLeftNumberEnter_ValueChanged);
@@ -1768,10 +1665,9 @@
             // footerLeftNumberLabel
             // 
             this.footerLeftNumberLabel.AutoSize = true;
-            this.footerLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.footerLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.footerLeftNumberLabel.Name = "footerLeftNumberLabel";
-            this.footerLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.footerLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.footerLeftNumberLabel.TabIndex = 24;
             this.footerLeftNumberLabel.Text = "1st Page Number:";
             this.footerLeftNumberLabel.Visible = false;
@@ -1779,10 +1675,9 @@
             // footerLeftOtherLabel
             // 
             this.footerLeftOtherLabel.AutoSize = true;
-            this.footerLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.footerLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.footerLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.footerLeftOtherLabel.Name = "footerLeftOtherLabel";
-            this.footerLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.footerLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.footerLeftOtherLabel.TabIndex = 23;
             this.footerLeftOtherLabel.Text = "Text:";
             this.footerLeftOtherLabel.Visible = false;
@@ -1790,10 +1685,9 @@
             // footerLeftOtherRadio
             // 
             this.footerLeftOtherRadio.AutoSize = true;
-            this.footerLeftOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.footerLeftOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.footerLeftOtherRadio.Name = "footerLeftOtherRadio";
-            this.footerLeftOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.footerLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.footerLeftOtherRadio.TabIndex = 22;
             this.footerLeftOtherRadio.TabStop = true;
             this.footerLeftOtherRadio.Text = "Other Text";
@@ -1803,10 +1697,9 @@
             // footerLeftNumberRadio
             // 
             this.footerLeftNumberRadio.AutoSize = true;
-            this.footerLeftNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.footerLeftNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.footerLeftNumberRadio.Name = "footerLeftNumberRadio";
-            this.footerLeftNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.footerLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.footerLeftNumberRadio.TabIndex = 21;
             this.footerLeftNumberRadio.TabStop = true;
             this.footerLeftNumberRadio.Text = "Page Number";
@@ -1816,10 +1709,9 @@
             // footerLeftTitleRadio
             // 
             this.footerLeftTitleRadio.AutoSize = true;
-            this.footerLeftTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.footerLeftTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.footerLeftTitleRadio.Name = "footerLeftTitleRadio";
-            this.footerLeftTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.footerLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.footerLeftTitleRadio.TabIndex = 20;
             this.footerLeftTitleRadio.TabStop = true;
             this.footerLeftTitleRadio.Text = "Paper Title";
@@ -1829,10 +1721,9 @@
             // footerLeftOtherEnter
             // 
             this.footerLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.footerLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.footerLeftOtherEnter.Name = "footerLeftOtherEnter";
-            this.footerLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.footerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.footerLeftOtherEnter.TabIndex = 19;
             this.footerLeftOtherEnter.Visible = false;
             this.footerLeftOtherEnter.TextChanged += new System.EventHandler(this.footerLeftOtherEnter_TextChanged);
@@ -1844,9 +1735,8 @@
             this.footerHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.footerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.footerHeader.Location = new System.Drawing.Point(0, 0);
-            this.footerHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.footerHeader.Name = "footerHeader";
-            this.footerHeader.Size = new System.Drawing.Size(1688, 72);
+            this.footerHeader.Size = new System.Drawing.Size(633, 30);
             this.footerHeader.TabIndex = 0;
             this.footerHeader.Text = "FOOTER";
             this.footerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1854,10 +1744,9 @@
             // footerDefaultButton
             // 
             this.footerDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerDefaultButton.Location = new System.Drawing.Point(24, 1278);
-            this.footerDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerDefaultButton.Location = new System.Drawing.Point(9, 536);
             this.footerDefaultButton.Name = "footerDefaultButton";
-            this.footerDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.footerDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.footerDefaultButton.TabIndex = 15;
             this.footerDefaultButton.Text = "APA Default";
             this.footerDefaultButton.UseVisualStyleBackColor = true;
@@ -1868,10 +1757,9 @@
             this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(0, 5735);
-            this.sectionsPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionsPanel.Location = new System.Drawing.Point(0, 2405);
             this.sectionsPanel.Name = "sectionsPanel";
-            this.sectionsPanel.Size = new System.Drawing.Size(1690, 632);
+            this.sectionsPanel.Size = new System.Drawing.Size(635, 266);
             this.sectionsPanel.TabIndex = 4;
             // 
             // sectionsOptionsGroupBox
@@ -1882,11 +1770,9 @@
             this.sectionsOptionsGroupBox.Controls.Add(this.sectionLabelGroupBox);
             this.sectionsOptionsGroupBox.Controls.Add(this.betweenSectionsGroupBox);
             this.sectionsOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(24, 86);
-            this.sectionsOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionsOptionsGroupBox.Location = new System.Drawing.Point(9, 36);
             this.sectionsOptionsGroupBox.Name = "sectionsOptionsGroupBox";
-            this.sectionsOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(1640, 506);
+            this.sectionsOptionsGroupBox.Size = new System.Drawing.Size(615, 212);
             this.sectionsOptionsGroupBox.TabIndex = 10;
             this.sectionsOptionsGroupBox.TabStop = false;
             this.sectionsOptionsGroupBox.Text = "Section Options";
@@ -1894,10 +1780,9 @@
             // sectionsDefaultButton
             // 
             this.sectionsDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionsDefaultButton.Location = new System.Drawing.Point(24, 432);
-            this.sectionsDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionsDefaultButton.Location = new System.Drawing.Point(9, 181);
             this.sectionsDefaultButton.Name = "sectionsDefaultButton";
-            this.sectionsDefaultButton.Size = new System.Drawing.Size(336, 55);
+            this.sectionsDefaultButton.Size = new System.Drawing.Size(126, 23);
             this.sectionsDefaultButton.TabIndex = 6;
             this.sectionsDefaultButton.Text = "APA Defaults";
             this.sectionsDefaultButton.UseVisualStyleBackColor = true;
@@ -1910,11 +1795,9 @@
             this.subsubsectionLabelGroupBox.Controls.Add(this.subsubsectionLabelLocationGroupBox);
             this.subsubsectionLabelGroupBox.Controls.Add(this.includeSubsubsectionLabelCheck);
             this.subsubsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(24, 582);
-            this.subsubsectionLabelGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelGroupBox.Location = new System.Drawing.Point(9, 244);
             this.subsubsectionLabelGroupBox.Name = "subsubsectionLabelGroupBox";
-            this.subsubsectionLabelGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.subsubsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
             this.subsubsectionLabelGroupBox.TabIndex = 9;
             this.subsubsectionLabelGroupBox.TabStop = false;
             this.subsubsectionLabelGroupBox.Text = "Subsubsection Labels";
@@ -1923,10 +1806,9 @@
             // subsubsectionLabelAlignLabel
             // 
             this.subsubsectionLabelAlignLabel.AutoSize = true;
-            this.subsubsectionLabelAlignLabel.Location = new System.Drawing.Point(619, 50);
-            this.subsubsectionLabelAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.subsubsectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
             this.subsubsectionLabelAlignLabel.Name = "subsubsectionLabelAlignLabel";
-            this.subsubsectionLabelAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.subsubsectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.subsubsectionLabelAlignLabel.TabIndex = 27;
             this.subsubsectionLabelAlignLabel.Text = "Align:";
             this.subsubsectionLabelAlignLabel.Visible = false;
@@ -1938,10 +1820,9 @@
             "Left",
             "Center",
             "Right"});
-            this.subsubsectionLabelAlignChoose.Location = new System.Drawing.Point(709, 43);
-            this.subsubsectionLabelAlignChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
             this.subsubsectionLabelAlignChoose.Name = "subsubsectionLabelAlignChoose";
-            this.subsubsectionLabelAlignChoose.Size = new System.Drawing.Size(316, 39);
+            this.subsubsectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.subsubsectionLabelAlignChoose.TabIndex = 26;
             this.subsubsectionLabelAlignChoose.Visible = false;
             this.subsubsectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelAlignChoose_SelectedIndexChanged);
@@ -1957,11 +1838,9 @@
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelFont);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBullettedCheck);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBoldCheck);
-            this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
-            this.subsubsectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsubsectionLabelStyleGroupBox.Name = "subsubsectionLabelStyleGroupBox";
-            this.subsubsectionLabelStyleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(1544, 358);
+            this.subsubsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
             this.subsubsectionLabelStyleGroupBox.TabIndex = 5;
             this.subsubsectionLabelStyleGroupBox.TabStop = false;
             this.subsubsectionLabelStyleGroupBox.Text = "Style";
@@ -1969,10 +1848,9 @@
             // 
             // subsubsectionLabelButton
             // 
-            this.subsubsectionLabelButton.Location = new System.Drawing.Point(304, 269);
-            this.subsubsectionLabelButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelButton.Location = new System.Drawing.Point(114, 113);
             this.subsubsectionLabelButton.Name = "subsubsectionLabelButton";
-            this.subsubsectionLabelButton.Size = new System.Drawing.Size(195, 55);
+            this.subsubsectionLabelButton.Size = new System.Drawing.Size(73, 23);
             this.subsubsectionLabelButton.TabIndex = 6;
             this.subsubsectionLabelButton.Text = "Choose";
             this.subsubsectionLabelButton.UseVisualStyleBackColor = true;
@@ -1980,69 +1858,62 @@
             // 
             // subsubsectionLabelColorText
             // 
-            this.subsubsectionLabelColorText.Location = new System.Drawing.Point(115, 274);
-            this.subsubsectionLabelColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelColorText.Location = new System.Drawing.Point(43, 115);
             this.subsubsectionLabelColorText.Name = "subsubsectionLabelColorText";
-            this.subsubsectionLabelColorText.Size = new System.Drawing.Size(185, 39);
+            this.subsubsectionLabelColorText.Size = new System.Drawing.Size(72, 20);
             this.subsubsectionLabelColorText.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 281);
-            this.label7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label7.Location = new System.Drawing.Point(6, 118);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 32);
+            this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Color:";
             // 
             // subsubsectionLabelSize
             // 
             this.subsubsectionLabelSize.FormattingEnabled = true;
-            this.subsubsectionLabelSize.Location = new System.Drawing.Point(115, 212);
-            this.subsubsectionLabelSize.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelSize.Location = new System.Drawing.Point(43, 89);
             this.subsubsectionLabelSize.Name = "subsubsectionLabelSize";
-            this.subsubsectionLabelSize.Size = new System.Drawing.Size(377, 39);
+            this.subsubsectionLabelSize.Size = new System.Drawing.Size(144, 21);
             this.subsubsectionLabelSize.TabIndex = 9;
             this.subsubsectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelSize_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 219);
-            this.label8.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label8.Location = new System.Drawing.Point(6, 92);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 32);
+            this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Size:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 162);
-            this.label9.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label9.Location = new System.Drawing.Point(6, 68);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 32);
+            this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 7;
             this.label9.Text = "Font:";
             // 
             // subsubsectionLabelFont
             // 
             this.subsubsectionLabelFont.FormattingEnabled = true;
-            this.subsubsectionLabelFont.Location = new System.Drawing.Point(115, 155);
-            this.subsubsectionLabelFont.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelFont.Location = new System.Drawing.Point(43, 65);
             this.subsubsectionLabelFont.Name = "subsubsectionLabelFont";
-            this.subsubsectionLabelFont.Size = new System.Drawing.Size(377, 39);
+            this.subsubsectionLabelFont.Size = new System.Drawing.Size(144, 21);
             this.subsubsectionLabelFont.TabIndex = 6;
             this.subsubsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelFont_SelectedIndexChanged);
             // 
             // subsubsectionLabelBullettedCheck
             // 
             this.subsubsectionLabelBullettedCheck.AutoSize = true;
-            this.subsubsectionLabelBullettedCheck.Location = new System.Drawing.Point(19, 100);
-            this.subsubsectionLabelBullettedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelBullettedCheck.Location = new System.Drawing.Point(7, 42);
             this.subsubsectionLabelBullettedCheck.Name = "subsubsectionLabelBullettedCheck";
-            this.subsubsectionLabelBullettedCheck.Size = new System.Drawing.Size(166, 36);
+            this.subsubsectionLabelBullettedCheck.Size = new System.Drawing.Size(67, 17);
             this.subsubsectionLabelBullettedCheck.TabIndex = 1;
             this.subsubsectionLabelBullettedCheck.Text = "Bulletted";
             this.subsubsectionLabelBullettedCheck.UseVisualStyleBackColor = true;
@@ -2051,10 +1922,9 @@
             // subsubsectionLabelBoldCheck
             // 
             this.subsubsectionLabelBoldCheck.AutoSize = true;
-            this.subsubsectionLabelBoldCheck.Location = new System.Drawing.Point(19, 45);
-            this.subsubsectionLabelBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
             this.subsubsectionLabelBoldCheck.Name = "subsubsectionLabelBoldCheck";
-            this.subsubsectionLabelBoldCheck.Size = new System.Drawing.Size(111, 36);
+            this.subsubsectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
             this.subsubsectionLabelBoldCheck.TabIndex = 0;
             this.subsubsectionLabelBoldCheck.Text = "Bold";
             this.subsubsectionLabelBoldCheck.UseVisualStyleBackColor = true;
@@ -2065,11 +1935,9 @@
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.subsubsectionLabelInLineRadio);
             this.subsubsectionLabelLocationGroupBox.Controls.Add(this.subsubsectionLabelBeforeRadio);
             this.subsubsectionLabelLocationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.subsubsectionLabelLocationGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsubsectionLabelLocationGroupBox.Name = "subsubsectionLabelLocationGroupBox";
-            this.subsubsectionLabelLocationGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(1544, 174);
+            this.subsubsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
             this.subsubsectionLabelLocationGroupBox.TabIndex = 4;
             this.subsubsectionLabelLocationGroupBox.TabStop = false;
             this.subsubsectionLabelLocationGroupBox.Text = "Location";
@@ -2079,10 +1947,9 @@
             // 
             this.subsubsectionLabelInLineRadio.AutoSize = true;
             this.subsubsectionLabelInLineRadio.Checked = true;
-            this.subsubsectionLabelInLineRadio.Location = new System.Drawing.Point(19, 43);
-            this.subsubsectionLabelInLineRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
             this.subsubsectionLabelInLineRadio.Name = "subsubsectionLabelInLineRadio";
-            this.subsubsectionLabelInLineRadio.Size = new System.Drawing.Size(263, 36);
+            this.subsubsectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
             this.subsubsectionLabelInLineRadio.TabIndex = 1;
             this.subsubsectionLabelInLineRadio.TabStop = true;
             this.subsubsectionLabelInLineRadio.Text = "In Line With Text";
@@ -2092,10 +1959,9 @@
             // subsubsectionLabelBeforeRadio
             // 
             this.subsubsectionLabelBeforeRadio.AutoSize = true;
-            this.subsubsectionLabelBeforeRadio.Location = new System.Drawing.Point(19, 98);
-            this.subsubsectionLabelBeforeRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
             this.subsubsectionLabelBeforeRadio.Name = "subsubsectionLabelBeforeRadio";
-            this.subsubsectionLabelBeforeRadio.Size = new System.Drawing.Size(483, 36);
+            this.subsubsectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
             this.subsubsectionLabelBeforeRadio.TabIndex = 2;
             this.subsubsectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
             this.subsubsectionLabelBeforeRadio.UseVisualStyleBackColor = true;
@@ -2105,10 +1971,9 @@
             // 
             this.includeSubsubsectionLabelCheck.AutoSize = true;
             this.includeSubsubsectionLabelCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeSubsubsectionLabelCheck.Location = new System.Drawing.Point(24, 45);
-            this.includeSubsubsectionLabelCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.includeSubsubsectionLabelCheck.Location = new System.Drawing.Point(9, 19);
             this.includeSubsubsectionLabelCheck.Name = "includeSubsubsectionLabelCheck";
-            this.includeSubsubsectionLabelCheck.Size = new System.Drawing.Size(432, 36);
+            this.includeSubsubsectionLabelCheck.Size = new System.Drawing.Size(168, 17);
             this.includeSubsubsectionLabelCheck.TabIndex = 0;
             this.includeSubsubsectionLabelCheck.Text = "Include Subsubsection Labels";
             this.includeSubsubsectionLabelCheck.UseVisualStyleBackColor = true;
@@ -2122,11 +1987,9 @@
             this.subsectionLabelGroupBox.Controls.Add(this.subsectionLabelLocationGroupBox);
             this.subsectionLabelGroupBox.Controls.Add(this.includeSubsectionLabelCheck);
             this.subsectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subsectionLabelGroupBox.Location = new System.Drawing.Point(24, 444);
-            this.subsectionLabelGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelGroupBox.Location = new System.Drawing.Point(9, 186);
             this.subsectionLabelGroupBox.Name = "subsectionLabelGroupBox";
-            this.subsectionLabelGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsectionLabelGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.subsectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
             this.subsectionLabelGroupBox.TabIndex = 8;
             this.subsectionLabelGroupBox.TabStop = false;
             this.subsectionLabelGroupBox.Text = "Subsection Labels";
@@ -2135,10 +1998,9 @@
             // subsectionLabelAlignLabel
             // 
             this.subsectionLabelAlignLabel.AutoSize = true;
-            this.subsectionLabelAlignLabel.Location = new System.Drawing.Point(619, 50);
-            this.subsectionLabelAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.subsectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
             this.subsectionLabelAlignLabel.Name = "subsectionLabelAlignLabel";
-            this.subsectionLabelAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.subsectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.subsectionLabelAlignLabel.TabIndex = 27;
             this.subsectionLabelAlignLabel.Text = "Align:";
             this.subsectionLabelAlignLabel.Visible = false;
@@ -2150,10 +2012,9 @@
             "Left",
             "Center",
             "Right"});
-            this.subsectionLabelAlignChoose.Location = new System.Drawing.Point(709, 43);
-            this.subsectionLabelAlignChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
             this.subsectionLabelAlignChoose.Name = "subsectionLabelAlignChoose";
-            this.subsectionLabelAlignChoose.Size = new System.Drawing.Size(316, 39);
+            this.subsectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.subsectionLabelAlignChoose.TabIndex = 26;
             this.subsectionLabelAlignChoose.Visible = false;
             this.subsectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelAlignChoose_SelectedIndexChanged);
@@ -2169,11 +2030,9 @@
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelFont);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBulletted);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBoldCheck);
-            this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
-            this.subsectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.subsectionLabelStyleGroupBox.Name = "subsectionLabelStyleGroupBox";
-            this.subsectionLabelStyleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(1544, 358);
+            this.subsectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
             this.subsectionLabelStyleGroupBox.TabIndex = 5;
             this.subsectionLabelStyleGroupBox.TabStop = false;
             this.subsectionLabelStyleGroupBox.Text = "Style";
@@ -2181,10 +2040,9 @@
             // 
             // subsectionLabelColorButton
             // 
-            this.subsectionLabelColorButton.Location = new System.Drawing.Point(304, 269);
-            this.subsectionLabelColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelColorButton.Location = new System.Drawing.Point(114, 113);
             this.subsectionLabelColorButton.Name = "subsectionLabelColorButton";
-            this.subsectionLabelColorButton.Size = new System.Drawing.Size(195, 55);
+            this.subsectionLabelColorButton.Size = new System.Drawing.Size(73, 23);
             this.subsectionLabelColorButton.TabIndex = 6;
             this.subsectionLabelColorButton.Text = "Choose";
             this.subsectionLabelColorButton.UseVisualStyleBackColor = true;
@@ -2192,69 +2050,62 @@
             // 
             // subsectionLabelColorText
             // 
-            this.subsectionLabelColorText.Location = new System.Drawing.Point(115, 274);
-            this.subsectionLabelColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelColorText.Location = new System.Drawing.Point(43, 115);
             this.subsectionLabelColorText.Name = "subsectionLabelColorText";
-            this.subsectionLabelColorText.Size = new System.Drawing.Size(185, 39);
+            this.subsectionLabelColorText.Size = new System.Drawing.Size(72, 20);
             this.subsectionLabelColorText.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 281);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label4.Location = new System.Drawing.Point(6, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 32);
+            this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Color:";
             // 
             // subsectionLabelSize
             // 
             this.subsectionLabelSize.FormattingEnabled = true;
-            this.subsectionLabelSize.Location = new System.Drawing.Point(115, 212);
-            this.subsectionLabelSize.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelSize.Location = new System.Drawing.Point(43, 89);
             this.subsectionLabelSize.Name = "subsectionLabelSize";
-            this.subsectionLabelSize.Size = new System.Drawing.Size(377, 39);
+            this.subsectionLabelSize.Size = new System.Drawing.Size(144, 21);
             this.subsectionLabelSize.TabIndex = 9;
             this.subsectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelSize_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 219);
-            this.label5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label5.Location = new System.Drawing.Point(6, 92);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 32);
+            this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Size:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 162);
-            this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label6.Location = new System.Drawing.Point(6, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 32);
+            this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Font:";
             // 
             // subsectionLabelFont
             // 
             this.subsectionLabelFont.FormattingEnabled = true;
-            this.subsectionLabelFont.Location = new System.Drawing.Point(115, 155);
-            this.subsectionLabelFont.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelFont.Location = new System.Drawing.Point(43, 65);
             this.subsectionLabelFont.Name = "subsectionLabelFont";
-            this.subsectionLabelFont.Size = new System.Drawing.Size(377, 39);
+            this.subsectionLabelFont.Size = new System.Drawing.Size(144, 21);
             this.subsectionLabelFont.TabIndex = 6;
             this.subsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelFont_SelectedIndexChanged);
             // 
             // subsectionLabelBulletted
             // 
             this.subsectionLabelBulletted.AutoSize = true;
-            this.subsectionLabelBulletted.Location = new System.Drawing.Point(19, 100);
-            this.subsectionLabelBulletted.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelBulletted.Location = new System.Drawing.Point(7, 42);
             this.subsectionLabelBulletted.Name = "subsectionLabelBulletted";
-            this.subsectionLabelBulletted.Size = new System.Drawing.Size(166, 36);
+            this.subsectionLabelBulletted.Size = new System.Drawing.Size(67, 17);
             this.subsectionLabelBulletted.TabIndex = 1;
             this.subsectionLabelBulletted.Text = "Bulletted";
             this.subsectionLabelBulletted.UseVisualStyleBackColor = true;
@@ -2263,10 +2114,9 @@
             // subsectionLabelBoldCheck
             // 
             this.subsectionLabelBoldCheck.AutoSize = true;
-            this.subsectionLabelBoldCheck.Location = new System.Drawing.Point(19, 45);
-            this.subsectionLabelBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
             this.subsectionLabelBoldCheck.Name = "subsectionLabelBoldCheck";
-            this.subsectionLabelBoldCheck.Size = new System.Drawing.Size(111, 36);
+            this.subsectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
             this.subsectionLabelBoldCheck.TabIndex = 0;
             this.subsectionLabelBoldCheck.Text = "Bold";
             this.subsectionLabelBoldCheck.UseVisualStyleBackColor = true;
@@ -2276,11 +2126,9 @@
             // 
             this.subsectionLabelLocationGroupBox.Controls.Add(this.subsectionLabelInLineRadio);
             this.subsectionLabelLocationGroupBox.Controls.Add(this.subsectionLabelBeforeRadio);
-            this.subsectionLabelLocationGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.subsectionLabelLocationGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.subsectionLabelLocationGroupBox.Name = "subsectionLabelLocationGroupBox";
-            this.subsectionLabelLocationGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(1544, 174);
+            this.subsectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
             this.subsectionLabelLocationGroupBox.TabIndex = 4;
             this.subsectionLabelLocationGroupBox.TabStop = false;
             this.subsectionLabelLocationGroupBox.Text = "Location";
@@ -2290,10 +2138,9 @@
             // 
             this.subsectionLabelInLineRadio.AutoSize = true;
             this.subsectionLabelInLineRadio.Checked = true;
-            this.subsectionLabelInLineRadio.Location = new System.Drawing.Point(19, 43);
-            this.subsectionLabelInLineRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
             this.subsectionLabelInLineRadio.Name = "subsectionLabelInLineRadio";
-            this.subsectionLabelInLineRadio.Size = new System.Drawing.Size(263, 36);
+            this.subsectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
             this.subsectionLabelInLineRadio.TabIndex = 1;
             this.subsectionLabelInLineRadio.TabStop = true;
             this.subsectionLabelInLineRadio.Text = "In Line With Text";
@@ -2303,10 +2150,9 @@
             // subsectionLabelBeforeRadio
             // 
             this.subsectionLabelBeforeRadio.AutoSize = true;
-            this.subsectionLabelBeforeRadio.Location = new System.Drawing.Point(19, 98);
-            this.subsectionLabelBeforeRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
             this.subsectionLabelBeforeRadio.Name = "subsectionLabelBeforeRadio";
-            this.subsectionLabelBeforeRadio.Size = new System.Drawing.Size(483, 36);
+            this.subsectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
             this.subsectionLabelBeforeRadio.TabIndex = 2;
             this.subsectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
             this.subsectionLabelBeforeRadio.UseVisualStyleBackColor = true;
@@ -2316,10 +2162,9 @@
             // 
             this.includeSubsectionLabelCheck.AutoSize = true;
             this.includeSubsectionLabelCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeSubsectionLabelCheck.Location = new System.Drawing.Point(24, 45);
-            this.includeSubsectionLabelCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.includeSubsectionLabelCheck.Location = new System.Drawing.Point(9, 19);
             this.includeSubsectionLabelCheck.Name = "includeSubsectionLabelCheck";
-            this.includeSubsectionLabelCheck.Size = new System.Drawing.Size(386, 36);
+            this.includeSubsectionLabelCheck.Size = new System.Drawing.Size(151, 17);
             this.includeSubsectionLabelCheck.TabIndex = 0;
             this.includeSubsectionLabelCheck.Text = "Include Subsection Labels";
             this.includeSubsectionLabelCheck.UseVisualStyleBackColor = true;
@@ -2333,11 +2178,9 @@
             this.sectionLabelGroupBox.Controls.Add(this.sectionLabelLocationGroupBox);
             this.sectionLabelGroupBox.Controls.Add(this.includeSectionLabelsCheck);
             this.sectionLabelGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionLabelGroupBox.Location = new System.Drawing.Point(24, 305);
-            this.sectionLabelGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelGroupBox.Location = new System.Drawing.Point(9, 128);
             this.sectionLabelGroupBox.Name = "sectionLabelGroupBox";
-            this.sectionLabelGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sectionLabelGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.sectionLabelGroupBox.Size = new System.Drawing.Size(597, 45);
             this.sectionLabelGroupBox.TabIndex = 7;
             this.sectionLabelGroupBox.TabStop = false;
             this.sectionLabelGroupBox.Text = "Section Labels";
@@ -2345,10 +2188,9 @@
             // sectionLabelAlignLabel
             // 
             this.sectionLabelAlignLabel.AutoSize = true;
-            this.sectionLabelAlignLabel.Location = new System.Drawing.Point(619, 50);
-            this.sectionLabelAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.sectionLabelAlignLabel.Location = new System.Drawing.Point(232, 21);
             this.sectionLabelAlignLabel.Name = "sectionLabelAlignLabel";
-            this.sectionLabelAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.sectionLabelAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.sectionLabelAlignLabel.TabIndex = 25;
             this.sectionLabelAlignLabel.Text = "Align:";
             this.sectionLabelAlignLabel.Visible = false;
@@ -2360,10 +2202,9 @@
             "Left",
             "Center",
             "Right"});
-            this.sectionLabelAlignChoose.Location = new System.Drawing.Point(709, 43);
-            this.sectionLabelAlignChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelAlignChoose.Location = new System.Drawing.Point(266, 18);
             this.sectionLabelAlignChoose.Name = "sectionLabelAlignChoose";
-            this.sectionLabelAlignChoose.Size = new System.Drawing.Size(316, 39);
+            this.sectionLabelAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.sectionLabelAlignChoose.TabIndex = 24;
             this.sectionLabelAlignChoose.Visible = false;
             this.sectionLabelAlignChoose.SelectedIndexChanged += new System.EventHandler(this.sectionLabelAlignChoose_SelectedIndexChanged);
@@ -2379,11 +2220,9 @@
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelFont);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBullettedCheck);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBoldCheck);
-            this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
-            this.sectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(9, 121);
             this.sectionLabelStyleGroupBox.Name = "sectionLabelStyleGroupBox";
-            this.sectionLabelStyleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(1544, 358);
+            this.sectionLabelStyleGroupBox.Size = new System.Drawing.Size(579, 150);
             this.sectionLabelStyleGroupBox.TabIndex = 5;
             this.sectionLabelStyleGroupBox.TabStop = false;
             this.sectionLabelStyleGroupBox.Text = "Style";
@@ -2391,10 +2230,9 @@
             // 
             // sectionLabelColorButton
             // 
-            this.sectionLabelColorButton.Location = new System.Drawing.Point(304, 269);
-            this.sectionLabelColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelColorButton.Location = new System.Drawing.Point(114, 113);
             this.sectionLabelColorButton.Name = "sectionLabelColorButton";
-            this.sectionLabelColorButton.Size = new System.Drawing.Size(195, 55);
+            this.sectionLabelColorButton.Size = new System.Drawing.Size(73, 23);
             this.sectionLabelColorButton.TabIndex = 6;
             this.sectionLabelColorButton.Text = "Choose";
             this.sectionLabelColorButton.UseVisualStyleBackColor = true;
@@ -2402,69 +2240,62 @@
             // 
             // sectionLabelColorText
             // 
-            this.sectionLabelColorText.Location = new System.Drawing.Point(115, 274);
-            this.sectionLabelColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelColorText.Location = new System.Drawing.Point(43, 115);
             this.sectionLabelColorText.Name = "sectionLabelColorText";
-            this.sectionLabelColorText.Size = new System.Drawing.Size(185, 39);
+            this.sectionLabelColorText.Size = new System.Drawing.Size(72, 20);
             this.sectionLabelColorText.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 281);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label3.Location = new System.Drawing.Point(6, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 32);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Color:";
             // 
             // sectionLabelSize
             // 
             this.sectionLabelSize.FormattingEnabled = true;
-            this.sectionLabelSize.Location = new System.Drawing.Point(115, 212);
-            this.sectionLabelSize.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelSize.Location = new System.Drawing.Point(43, 89);
             this.sectionLabelSize.Name = "sectionLabelSize";
-            this.sectionLabelSize.Size = new System.Drawing.Size(377, 39);
+            this.sectionLabelSize.Size = new System.Drawing.Size(144, 21);
             this.sectionLabelSize.TabIndex = 9;
             this.sectionLabelSize.SelectedIndexChanged += new System.EventHandler(this.sectionLabelSize_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 219);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label2.Location = new System.Drawing.Point(6, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 32);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Size:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 162);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(6, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 32);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Font:";
             // 
             // sectionLabelFont
             // 
             this.sectionLabelFont.FormattingEnabled = true;
-            this.sectionLabelFont.Location = new System.Drawing.Point(115, 155);
-            this.sectionLabelFont.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelFont.Location = new System.Drawing.Point(43, 65);
             this.sectionLabelFont.Name = "sectionLabelFont";
-            this.sectionLabelFont.Size = new System.Drawing.Size(377, 39);
+            this.sectionLabelFont.Size = new System.Drawing.Size(144, 21);
             this.sectionLabelFont.TabIndex = 6;
             this.sectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.sectionLabelFont_SelectedIndexChanged);
             // 
             // sectionLabelBullettedCheck
             // 
             this.sectionLabelBullettedCheck.AutoSize = true;
-            this.sectionLabelBullettedCheck.Location = new System.Drawing.Point(19, 100);
-            this.sectionLabelBullettedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelBullettedCheck.Location = new System.Drawing.Point(7, 42);
             this.sectionLabelBullettedCheck.Name = "sectionLabelBullettedCheck";
-            this.sectionLabelBullettedCheck.Size = new System.Drawing.Size(166, 36);
+            this.sectionLabelBullettedCheck.Size = new System.Drawing.Size(67, 17);
             this.sectionLabelBullettedCheck.TabIndex = 1;
             this.sectionLabelBullettedCheck.Text = "Bulletted";
             this.sectionLabelBullettedCheck.UseVisualStyleBackColor = true;
@@ -2473,10 +2304,9 @@
             // sectionLabelBoldCheck
             // 
             this.sectionLabelBoldCheck.AutoSize = true;
-            this.sectionLabelBoldCheck.Location = new System.Drawing.Point(19, 45);
-            this.sectionLabelBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelBoldCheck.Location = new System.Drawing.Point(7, 19);
             this.sectionLabelBoldCheck.Name = "sectionLabelBoldCheck";
-            this.sectionLabelBoldCheck.Size = new System.Drawing.Size(111, 36);
+            this.sectionLabelBoldCheck.Size = new System.Drawing.Size(47, 17);
             this.sectionLabelBoldCheck.TabIndex = 0;
             this.sectionLabelBoldCheck.Text = "Bold";
             this.sectionLabelBoldCheck.UseVisualStyleBackColor = true;
@@ -2486,11 +2316,9 @@
             // 
             this.sectionLabelLocationGroupBox.Controls.Add(this.sectionLabelInLineRadio);
             this.sectionLabelLocationGroupBox.Controls.Add(this.sectionLabelBeforeRadio);
-            this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.sectionLabelLocationGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelLocationGroupBox.Location = new System.Drawing.Point(9, 42);
             this.sectionLabelLocationGroupBox.Name = "sectionLabelLocationGroupBox";
-            this.sectionLabelLocationGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(1544, 174);
+            this.sectionLabelLocationGroupBox.Size = new System.Drawing.Size(579, 73);
             this.sectionLabelLocationGroupBox.TabIndex = 4;
             this.sectionLabelLocationGroupBox.TabStop = false;
             this.sectionLabelLocationGroupBox.Text = "Location";
@@ -2500,10 +2328,9 @@
             // 
             this.sectionLabelInLineRadio.AutoSize = true;
             this.sectionLabelInLineRadio.Checked = true;
-            this.sectionLabelInLineRadio.Location = new System.Drawing.Point(19, 43);
-            this.sectionLabelInLineRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelInLineRadio.Location = new System.Drawing.Point(7, 18);
             this.sectionLabelInLineRadio.Name = "sectionLabelInLineRadio";
-            this.sectionLabelInLineRadio.Size = new System.Drawing.Size(263, 36);
+            this.sectionLabelInLineRadio.Size = new System.Drawing.Size(106, 17);
             this.sectionLabelInLineRadio.TabIndex = 1;
             this.sectionLabelInLineRadio.TabStop = true;
             this.sectionLabelInLineRadio.Text = "In Line With Text";
@@ -2513,10 +2340,9 @@
             // sectionLabelBeforeRadio
             // 
             this.sectionLabelBeforeRadio.AutoSize = true;
-            this.sectionLabelBeforeRadio.Location = new System.Drawing.Point(19, 98);
-            this.sectionLabelBeforeRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelBeforeRadio.Location = new System.Drawing.Point(7, 41);
             this.sectionLabelBeforeRadio.Name = "sectionLabelBeforeRadio";
-            this.sectionLabelBeforeRadio.Size = new System.Drawing.Size(483, 36);
+            this.sectionLabelBeforeRadio.Size = new System.Drawing.Size(186, 17);
             this.sectionLabelBeforeRadio.TabIndex = 2;
             this.sectionLabelBeforeRadio.Text = "On Separate Line Before Sections";
             this.sectionLabelBeforeRadio.UseVisualStyleBackColor = true;
@@ -2526,10 +2352,9 @@
             // 
             this.includeSectionLabelsCheck.AutoSize = true;
             this.includeSectionLabelsCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeSectionLabelsCheck.Location = new System.Drawing.Point(24, 45);
-            this.includeSectionLabelsCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.includeSectionLabelsCheck.Location = new System.Drawing.Point(9, 19);
             this.includeSectionLabelsCheck.Name = "includeSectionLabelsCheck";
-            this.includeSectionLabelsCheck.Size = new System.Drawing.Size(340, 36);
+            this.includeSectionLabelsCheck.Size = new System.Drawing.Size(134, 17);
             this.includeSectionLabelsCheck.TabIndex = 0;
             this.includeSectionLabelsCheck.Text = "Include Section Labels";
             this.includeSectionLabelsCheck.UseVisualStyleBackColor = true;
@@ -2541,11 +2366,9 @@
             this.betweenSectionsGroupBox.Controls.Add(this.newPageForEachSectionRadio);
             this.betweenSectionsGroupBox.Controls.Add(this.blankLineBetweenSectionsRadio);
             this.betweenSectionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betweenSectionsGroupBox.Location = new System.Drawing.Point(24, 45);
-            this.betweenSectionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.betweenSectionsGroupBox.Location = new System.Drawing.Point(9, 19);
             this.betweenSectionsGroupBox.Name = "betweenSectionsGroupBox";
-            this.betweenSectionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(1592, 229);
+            this.betweenSectionsGroupBox.Size = new System.Drawing.Size(597, 96);
             this.betweenSectionsGroupBox.TabIndex = 4;
             this.betweenSectionsGroupBox.TabStop = false;
             this.betweenSectionsGroupBox.Text = "Between Sections";
@@ -2553,10 +2376,9 @@
             // noSpaceBetweenSectionsRadio
             // 
             this.noSpaceBetweenSectionsRadio.AutoSize = true;
-            this.noSpaceBetweenSectionsRadio.Location = new System.Drawing.Point(24, 155);
-            this.noSpaceBetweenSectionsRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.noSpaceBetweenSectionsRadio.Location = new System.Drawing.Point(9, 65);
             this.noSpaceBetweenSectionsRadio.Name = "noSpaceBetweenSectionsRadio";
-            this.noSpaceBetweenSectionsRadio.Size = new System.Drawing.Size(411, 36);
+            this.noSpaceBetweenSectionsRadio.Size = new System.Drawing.Size(162, 17);
             this.noSpaceBetweenSectionsRadio.TabIndex = 4;
             this.noSpaceBetweenSectionsRadio.Text = "No Space Between Sections";
             this.noSpaceBetweenSectionsRadio.UseVisualStyleBackColor = true;
@@ -2565,10 +2387,9 @@
             // newPageForEachSectionRadio
             // 
             this.newPageForEachSectionRadio.AutoSize = true;
-            this.newPageForEachSectionRadio.Location = new System.Drawing.Point(24, 100);
-            this.newPageForEachSectionRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.newPageForEachSectionRadio.Location = new System.Drawing.Point(9, 42);
             this.newPageForEachSectionRadio.Name = "newPageForEachSectionRadio";
-            this.newPageForEachSectionRadio.Size = new System.Drawing.Size(406, 36);
+            this.newPageForEachSectionRadio.Size = new System.Drawing.Size(160, 17);
             this.newPageForEachSectionRadio.TabIndex = 3;
             this.newPageForEachSectionRadio.Text = "New Page For Each Section";
             this.newPageForEachSectionRadio.UseVisualStyleBackColor = true;
@@ -2579,10 +2400,9 @@
             this.blankLineBetweenSectionsRadio.AutoSize = true;
             this.blankLineBetweenSectionsRadio.Checked = true;
             this.blankLineBetweenSectionsRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blankLineBetweenSectionsRadio.Location = new System.Drawing.Point(24, 45);
-            this.blankLineBetweenSectionsRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.blankLineBetweenSectionsRadio.Location = new System.Drawing.Point(9, 19);
             this.blankLineBetweenSectionsRadio.Name = "blankLineBetweenSectionsRadio";
-            this.blankLineBetweenSectionsRadio.Size = new System.Drawing.Size(479, 36);
+            this.blankLineBetweenSectionsRadio.Size = new System.Drawing.Size(187, 17);
             this.blankLineBetweenSectionsRadio.TabIndex = 2;
             this.blankLineBetweenSectionsRadio.TabStop = true;
             this.blankLineBetweenSectionsRadio.Text = "Blank Line Between Each Section";
@@ -2595,9 +2415,8 @@
             this.sectionsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sectionsHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.sectionsHeader.Location = new System.Drawing.Point(0, 0);
-            this.sectionsHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.sectionsHeader.Name = "sectionsHeader";
-            this.sectionsHeader.Size = new System.Drawing.Size(1688, 72);
+            this.sectionsHeader.Size = new System.Drawing.Size(633, 30);
             this.sectionsHeader.TabIndex = 0;
             this.sectionsHeader.Text = "SECTIONS";
             this.sectionsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2611,19 +2430,17 @@
             this.titlePagePanel.Controls.Add(this.titlePageAllignGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageIncludeGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
-            this.titlePagePanel.Location = new System.Drawing.Point(0, 1049);
-            this.titlePagePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePagePanel.Location = new System.Drawing.Point(0, 440);
             this.titlePagePanel.Name = "titlePagePanel";
-            this.titlePagePanel.Size = new System.Drawing.Size(1690, 1130);
+            this.titlePagePanel.Size = new System.Drawing.Size(635, 475);
             this.titlePagePanel.TabIndex = 5;
             // 
             // titlePageDefaultButton
             // 
             this.titlePageDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDefaultButton.Location = new System.Drawing.Point(24, 1040);
-            this.titlePageDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageDefaultButton.Location = new System.Drawing.Point(9, 436);
             this.titlePageDefaultButton.Name = "titlePageDefaultButton";
-            this.titlePageDefaultButton.Size = new System.Drawing.Size(336, 55);
+            this.titlePageDefaultButton.Size = new System.Drawing.Size(126, 23);
             this.titlePageDefaultButton.TabIndex = 5;
             this.titlePageDefaultButton.Text = "APA Defaults";
             this.titlePageDefaultButton.UseVisualStyleBackColor = true;
@@ -2635,11 +2452,9 @@
             this.titlePagePositionGroupBox.Controls.Add(this.titlePageBottomRadio);
             this.titlePagePositionGroupBox.Controls.Add(this.titlePageTopRadio);
             this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePagePositionGroupBox.Location = new System.Drawing.Point(24, 794);
-            this.titlePagePositionGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePagePositionGroupBox.Location = new System.Drawing.Point(9, 333);
             this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
-            this.titlePagePositionGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(1640, 219);
+            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(615, 92);
             this.titlePagePositionGroupBox.TabIndex = 4;
             this.titlePagePositionGroupBox.TabStop = false;
             this.titlePagePositionGroupBox.Text = "Position";
@@ -2649,10 +2464,9 @@
             this.titlePageMiddleRadio.AutoSize = true;
             this.titlePageMiddleRadio.Checked = true;
             this.titlePageMiddleRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageMiddleRadio.Location = new System.Drawing.Point(24, 100);
-            this.titlePageMiddleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageMiddleRadio.Location = new System.Drawing.Point(9, 42);
             this.titlePageMiddleRadio.Name = "titlePageMiddleRadio";
-            this.titlePageMiddleRadio.Size = new System.Drawing.Size(242, 36);
+            this.titlePageMiddleRadio.Size = new System.Drawing.Size(96, 17);
             this.titlePageMiddleRadio.TabIndex = 2;
             this.titlePageMiddleRadio.TabStop = true;
             this.titlePageMiddleRadio.Text = "Middle of Page";
@@ -2663,10 +2477,9 @@
             // 
             this.titlePageBottomRadio.AutoSize = true;
             this.titlePageBottomRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageBottomRadio.Location = new System.Drawing.Point(24, 155);
-            this.titlePageBottomRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageBottomRadio.Location = new System.Drawing.Point(9, 65);
             this.titlePageBottomRadio.Name = "titlePageBottomRadio";
-            this.titlePageBottomRadio.Size = new System.Drawing.Size(247, 36);
+            this.titlePageBottomRadio.Size = new System.Drawing.Size(98, 17);
             this.titlePageBottomRadio.TabIndex = 1;
             this.titlePageBottomRadio.Text = "Bottom of Page";
             this.titlePageBottomRadio.UseVisualStyleBackColor = true;
@@ -2676,10 +2489,9 @@
             // 
             this.titlePageTopRadio.AutoSize = true;
             this.titlePageTopRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTopRadio.Location = new System.Drawing.Point(24, 45);
-            this.titlePageTopRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageTopRadio.Location = new System.Drawing.Point(9, 19);
             this.titlePageTopRadio.Name = "titlePageTopRadio";
-            this.titlePageTopRadio.Size = new System.Drawing.Size(206, 36);
+            this.titlePageTopRadio.Size = new System.Drawing.Size(84, 17);
             this.titlePageTopRadio.TabIndex = 0;
             this.titlePageTopRadio.Text = "Top of Page";
             this.titlePageTopRadio.UseVisualStyleBackColor = true;
@@ -2691,11 +2503,9 @@
             this.titlePageAllignGroupBox.Controls.Add(this.titlePageCenterRadio);
             this.titlePageAllignGroupBox.Controls.Add(this.titlePageLeftAllignRadio);
             this.titlePageAllignGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageAllignGroupBox.Location = new System.Drawing.Point(24, 522);
-            this.titlePageAllignGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageAllignGroupBox.Location = new System.Drawing.Point(9, 219);
             this.titlePageAllignGroupBox.Name = "titlePageAllignGroupBox";
-            this.titlePageAllignGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(1640, 219);
+            this.titlePageAllignGroupBox.Size = new System.Drawing.Size(615, 92);
             this.titlePageAllignGroupBox.TabIndex = 3;
             this.titlePageAllignGroupBox.TabStop = false;
             this.titlePageAllignGroupBox.Text = "Allignment";
@@ -2704,10 +2514,9 @@
             // 
             this.titlePageRightAllignRadio.AutoSize = true;
             this.titlePageRightAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageRightAllignRadio.Location = new System.Drawing.Point(24, 155);
-            this.titlePageRightAllignRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageRightAllignRadio.Location = new System.Drawing.Point(9, 65);
             this.titlePageRightAllignRadio.Name = "titlePageRightAllignRadio";
-            this.titlePageRightAllignRadio.Size = new System.Drawing.Size(198, 36);
+            this.titlePageRightAllignRadio.Size = new System.Drawing.Size(78, 17);
             this.titlePageRightAllignRadio.TabIndex = 2;
             this.titlePageRightAllignRadio.Text = "Right Allign";
             this.titlePageRightAllignRadio.UseVisualStyleBackColor = true;
@@ -2718,10 +2527,9 @@
             this.titlePageCenterRadio.AutoSize = true;
             this.titlePageCenterRadio.Checked = true;
             this.titlePageCenterRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageCenterRadio.Location = new System.Drawing.Point(24, 100);
-            this.titlePageCenterRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageCenterRadio.Location = new System.Drawing.Point(9, 42);
             this.titlePageCenterRadio.Name = "titlePageCenterRadio";
-            this.titlePageCenterRadio.Size = new System.Drawing.Size(137, 36);
+            this.titlePageCenterRadio.Size = new System.Drawing.Size(56, 17);
             this.titlePageCenterRadio.TabIndex = 1;
             this.titlePageCenterRadio.TabStop = true;
             this.titlePageCenterRadio.Text = "Center";
@@ -2732,10 +2540,9 @@
             // 
             this.titlePageLeftAllignRadio.AutoSize = true;
             this.titlePageLeftAllignRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageLeftAllignRadio.Location = new System.Drawing.Point(24, 45);
-            this.titlePageLeftAllignRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageLeftAllignRadio.Location = new System.Drawing.Point(9, 19);
             this.titlePageLeftAllignRadio.Name = "titlePageLeftAllignRadio";
-            this.titlePageLeftAllignRadio.Size = new System.Drawing.Size(179, 36);
+            this.titlePageLeftAllignRadio.Size = new System.Drawing.Size(71, 17);
             this.titlePageLeftAllignRadio.TabIndex = 0;
             this.titlePageLeftAllignRadio.Text = "Left Allign";
             this.titlePageLeftAllignRadio.UseVisualStyleBackColor = true;
@@ -2774,11 +2581,9 @@
             this.titlePageIncludeGroupBox.Controls.Add(this.titlePageNameCheck);
             this.titlePageIncludeGroupBox.Controls.Add(this.titlePageTitleCheck);
             this.titlePageIncludeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageIncludeGroupBox.Location = new System.Drawing.Point(24, 86);
-            this.titlePageIncludeGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageIncludeGroupBox.Location = new System.Drawing.Point(9, 36);
             this.titlePageIncludeGroupBox.Name = "titlePageIncludeGroupBox";
-            this.titlePageIncludeGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(1640, 389);
+            this.titlePageIncludeGroupBox.Size = new System.Drawing.Size(615, 163);
             this.titlePageIncludeGroupBox.TabIndex = 2;
             this.titlePageIncludeGroupBox.TabStop = false;
             this.titlePageIncludeGroupBox.Text = "Include In Title Page";
@@ -2787,10 +2592,9 @@
             // 
             this.titlePageDateLabel.AutoSize = true;
             this.titlePageDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateLabel.Location = new System.Drawing.Point(459, 322);
-            this.titlePageDateLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageDateLabel.Location = new System.Drawing.Point(172, 135);
             this.titlePageDateLabel.Name = "titlePageDateLabel";
-            this.titlePageDateLabel.Size = new System.Drawing.Size(83, 32);
+            this.titlePageDateLabel.Size = new System.Drawing.Size(33, 13);
             this.titlePageDateLabel.TabIndex = 30;
             this.titlePageDateLabel.Text = "Date:";
             this.titlePageDateLabel.Visible = false;
@@ -2799,10 +2603,9 @@
             // 
             this.titlePageSchoolLabel.AutoSize = true;
             this.titlePageSchoolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolLabel.Location = new System.Drawing.Point(432, 267);
-            this.titlePageSchoolLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageSchoolLabel.Location = new System.Drawing.Point(162, 112);
             this.titlePageSchoolLabel.Name = "titlePageSchoolLabel";
-            this.titlePageSchoolLabel.Size = new System.Drawing.Size(111, 32);
+            this.titlePageSchoolLabel.Size = new System.Drawing.Size(43, 13);
             this.titlePageSchoolLabel.TabIndex = 29;
             this.titlePageSchoolLabel.Text = "School:";
             this.titlePageSchoolLabel.Visible = false;
@@ -2813,10 +2616,9 @@
             this.dateUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dateUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dateUpButton.ForeColor = System.Drawing.Color.White;
-            this.dateUpButton.Location = new System.Drawing.Point(24, 320);
-            this.dateUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.dateUpButton.Location = new System.Drawing.Point(9, 134);
             this.dateUpButton.Name = "dateUpButton";
-            this.dateUpButton.Size = new System.Drawing.Size(59, 19);
+            this.dateUpButton.Size = new System.Drawing.Size(22, 8);
             this.dateUpButton.TabIndex = 28;
             this.dateUpButton.UseVisualStyleBackColor = true;
             this.dateUpButton.Click += new System.EventHandler(this.dateUpButton_Click);
@@ -2827,10 +2629,9 @@
             this.dateDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dateDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dateDownButton.ForeColor = System.Drawing.Color.White;
-            this.dateDownButton.Location = new System.Drawing.Point(24, 341);
-            this.dateDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.dateDownButton.Location = new System.Drawing.Point(9, 143);
             this.dateDownButton.Name = "dateDownButton";
-            this.dateDownButton.Size = new System.Drawing.Size(59, 19);
+            this.dateDownButton.Size = new System.Drawing.Size(22, 8);
             this.dateDownButton.TabIndex = 27;
             this.dateDownButton.UseVisualStyleBackColor = true;
             // 
@@ -2838,10 +2639,9 @@
             // 
             this.titlePageDateCheck.AutoSize = true;
             this.titlePageDateCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateCheck.Location = new System.Drawing.Point(109, 320);
-            this.titlePageDateCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageDateCheck.Location = new System.Drawing.Point(41, 134);
             this.titlePageDateCheck.Name = "titlePageDateCheck";
-            this.titlePageDateCheck.Size = new System.Drawing.Size(212, 36);
+            this.titlePageDateCheck.Size = new System.Drawing.Size(87, 17);
             this.titlePageDateCheck.TabIndex = 26;
             this.titlePageDateCheck.Text = "Include Date";
             this.titlePageDateCheck.UseVisualStyleBackColor = true;
@@ -2850,10 +2650,9 @@
             // titlePageSchoolEnter
             // 
             this.titlePageSchoolEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolEnter.Location = new System.Drawing.Point(565, 260);
-            this.titlePageSchoolEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageSchoolEnter.Location = new System.Drawing.Point(212, 109);
             this.titlePageSchoolEnter.Name = "titlePageSchoolEnter";
-            this.titlePageSchoolEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageSchoolEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageSchoolEnter.TabIndex = 25;
             this.titlePageSchoolEnter.Visible = false;
             this.titlePageSchoolEnter.TextChanged += new System.EventHandler(this.titlePageSchoolEnter_TextChanged);
@@ -2864,10 +2663,9 @@
             this.schoolUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.schoolUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.schoolUpButton.ForeColor = System.Drawing.Color.White;
-            this.schoolUpButton.Location = new System.Drawing.Point(24, 265);
-            this.schoolUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.schoolUpButton.Location = new System.Drawing.Point(9, 111);
             this.schoolUpButton.Name = "schoolUpButton";
-            this.schoolUpButton.Size = new System.Drawing.Size(59, 19);
+            this.schoolUpButton.Size = new System.Drawing.Size(22, 8);
             this.schoolUpButton.TabIndex = 24;
             this.schoolUpButton.UseVisualStyleBackColor = true;
             this.schoolUpButton.Click += new System.EventHandler(this.schoolUpButton_Click);
@@ -2878,10 +2676,9 @@
             this.professorUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.professorUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.professorUpButton.ForeColor = System.Drawing.Color.White;
-            this.professorUpButton.Location = new System.Drawing.Point(24, 210);
-            this.professorUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.professorUpButton.Location = new System.Drawing.Point(9, 88);
             this.professorUpButton.Name = "professorUpButton";
-            this.professorUpButton.Size = new System.Drawing.Size(59, 19);
+            this.professorUpButton.Size = new System.Drawing.Size(22, 8);
             this.professorUpButton.TabIndex = 23;
             this.professorUpButton.UseVisualStyleBackColor = true;
             this.professorUpButton.Click += new System.EventHandler(this.professorUpButton_Click);
@@ -2892,10 +2689,9 @@
             this.classUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.classUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.classUpButton.ForeColor = System.Drawing.Color.White;
-            this.classUpButton.Location = new System.Drawing.Point(24, 155);
-            this.classUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.classUpButton.Location = new System.Drawing.Point(9, 65);
             this.classUpButton.Name = "classUpButton";
-            this.classUpButton.Size = new System.Drawing.Size(59, 19);
+            this.classUpButton.Size = new System.Drawing.Size(22, 8);
             this.classUpButton.TabIndex = 22;
             this.classUpButton.UseVisualStyleBackColor = true;
             this.classUpButton.Click += new System.EventHandler(this.classUpButton_Click);
@@ -2906,10 +2702,9 @@
             this.nameUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.nameUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nameUpButton.ForeColor = System.Drawing.Color.White;
-            this.nameUpButton.Location = new System.Drawing.Point(24, 100);
-            this.nameUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.nameUpButton.Location = new System.Drawing.Point(9, 42);
             this.nameUpButton.Name = "nameUpButton";
-            this.nameUpButton.Size = new System.Drawing.Size(59, 19);
+            this.nameUpButton.Size = new System.Drawing.Size(22, 8);
             this.nameUpButton.TabIndex = 21;
             this.nameUpButton.UseVisualStyleBackColor = true;
             this.nameUpButton.Click += new System.EventHandler(this.nameUpButton_Click);
@@ -2920,10 +2715,9 @@
             this.schoolDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.schoolDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.schoolDownButton.ForeColor = System.Drawing.Color.White;
-            this.schoolDownButton.Location = new System.Drawing.Point(24, 286);
-            this.schoolDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.schoolDownButton.Location = new System.Drawing.Point(9, 120);
             this.schoolDownButton.Name = "schoolDownButton";
-            this.schoolDownButton.Size = new System.Drawing.Size(59, 19);
+            this.schoolDownButton.Size = new System.Drawing.Size(22, 8);
             this.schoolDownButton.TabIndex = 20;
             this.schoolDownButton.UseVisualStyleBackColor = true;
             this.schoolDownButton.Click += new System.EventHandler(this.schoolDownButton_Click);
@@ -2934,10 +2728,9 @@
             this.professorDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.professorDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.professorDownButton.ForeColor = System.Drawing.Color.White;
-            this.professorDownButton.Location = new System.Drawing.Point(24, 231);
-            this.professorDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.professorDownButton.Location = new System.Drawing.Point(9, 97);
             this.professorDownButton.Name = "professorDownButton";
-            this.professorDownButton.Size = new System.Drawing.Size(59, 19);
+            this.professorDownButton.Size = new System.Drawing.Size(22, 8);
             this.professorDownButton.TabIndex = 19;
             this.professorDownButton.UseVisualStyleBackColor = true;
             this.professorDownButton.Click += new System.EventHandler(this.professorDownButton_Click);
@@ -2948,10 +2741,9 @@
             this.classDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.classDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.classDownButton.ForeColor = System.Drawing.Color.White;
-            this.classDownButton.Location = new System.Drawing.Point(24, 176);
-            this.classDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.classDownButton.Location = new System.Drawing.Point(9, 74);
             this.classDownButton.Name = "classDownButton";
-            this.classDownButton.Size = new System.Drawing.Size(59, 19);
+            this.classDownButton.Size = new System.Drawing.Size(22, 8);
             this.classDownButton.TabIndex = 18;
             this.classDownButton.UseVisualStyleBackColor = true;
             this.classDownButton.Click += new System.EventHandler(this.classDownButton_Click);
@@ -2962,10 +2754,9 @@
             this.nameDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.nameDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nameDownButton.ForeColor = System.Drawing.Color.White;
-            this.nameDownButton.Location = new System.Drawing.Point(24, 122);
-            this.nameDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.nameDownButton.Location = new System.Drawing.Point(9, 51);
             this.nameDownButton.Name = "nameDownButton";
-            this.nameDownButton.Size = new System.Drawing.Size(59, 19);
+            this.nameDownButton.Size = new System.Drawing.Size(22, 8);
             this.nameDownButton.TabIndex = 17;
             this.nameDownButton.UseVisualStyleBackColor = true;
             this.nameDownButton.Click += new System.EventHandler(this.nameDownButton_Click);
@@ -2976,10 +2767,9 @@
             this.titleUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.titleUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.titleUpButton.ForeColor = System.Drawing.Color.White;
-            this.titleUpButton.Location = new System.Drawing.Point(24, 45);
-            this.titleUpButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleUpButton.Location = new System.Drawing.Point(9, 19);
             this.titleUpButton.Name = "titleUpButton";
-            this.titleUpButton.Size = new System.Drawing.Size(59, 19);
+            this.titleUpButton.Size = new System.Drawing.Size(22, 8);
             this.titleUpButton.TabIndex = 16;
             this.titleUpButton.UseVisualStyleBackColor = true;
             this.titleUpButton.Click += new System.EventHandler(this.titleUpButton_Click);
@@ -2990,10 +2780,9 @@
             this.titleDownButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.titleDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.titleDownButton.ForeColor = System.Drawing.Color.White;
-            this.titleDownButton.Location = new System.Drawing.Point(24, 67);
-            this.titleDownButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleDownButton.Location = new System.Drawing.Point(9, 28);
             this.titleDownButton.Name = "titleDownButton";
-            this.titleDownButton.Size = new System.Drawing.Size(59, 19);
+            this.titleDownButton.Size = new System.Drawing.Size(22, 8);
             this.titleDownButton.TabIndex = 15;
             this.titleDownButton.UseVisualStyleBackColor = true;
             this.titleDownButton.Click += new System.EventHandler(this.titleDownButton_Click);
@@ -3002,10 +2791,9 @@
             // 
             this.titlePageProfessorLabel.AutoSize = true;
             this.titlePageProfessorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorLabel.Location = new System.Drawing.Point(405, 212);
-            this.titlePageProfessorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageProfessorLabel.Location = new System.Drawing.Point(152, 89);
             this.titlePageProfessorLabel.Name = "titlePageProfessorLabel";
-            this.titlePageProfessorLabel.Size = new System.Drawing.Size(144, 32);
+            this.titlePageProfessorLabel.Size = new System.Drawing.Size(54, 13);
             this.titlePageProfessorLabel.TabIndex = 14;
             this.titlePageProfessorLabel.Text = "Professor:";
             this.titlePageProfessorLabel.Visible = false;
@@ -3014,10 +2802,9 @@
             // 
             this.titlePageClassLabel.AutoSize = true;
             this.titlePageClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassLabel.Location = new System.Drawing.Point(456, 157);
-            this.titlePageClassLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageClassLabel.Location = new System.Drawing.Point(171, 66);
             this.titlePageClassLabel.Name = "titlePageClassLabel";
-            this.titlePageClassLabel.Size = new System.Drawing.Size(94, 32);
+            this.titlePageClassLabel.Size = new System.Drawing.Size(35, 13);
             this.titlePageClassLabel.TabIndex = 13;
             this.titlePageClassLabel.Text = "Class:";
             this.titlePageClassLabel.Visible = false;
@@ -3025,10 +2812,9 @@
             // titlePageDateEnter
             // 
             this.titlePageDateEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDateEnter.Location = new System.Drawing.Point(565, 315);
-            this.titlePageDateEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageDateEnter.Location = new System.Drawing.Point(212, 132);
             this.titlePageDateEnter.Name = "titlePageDateEnter";
-            this.titlePageDateEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageDateEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageDateEnter.TabIndex = 12;
             this.titlePageDateEnter.Visible = false;
             this.titlePageDateEnter.ValueChanged += new System.EventHandler(this.titlePageDateEnter_ValueChanged);
@@ -3036,10 +2822,9 @@
             // titlePageProfessorEnter
             // 
             this.titlePageProfessorEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorEnter.Location = new System.Drawing.Point(565, 205);
-            this.titlePageProfessorEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageProfessorEnter.Location = new System.Drawing.Point(212, 86);
             this.titlePageProfessorEnter.Name = "titlePageProfessorEnter";
-            this.titlePageProfessorEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageProfessorEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageProfessorEnter.TabIndex = 10;
             this.titlePageProfessorEnter.Visible = false;
             this.titlePageProfessorEnter.TextChanged += new System.EventHandler(this.titlePageProfessorEnter_TextChanged);
@@ -3047,10 +2832,9 @@
             // titlePageClassEnter
             // 
             this.titlePageClassEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassEnter.Location = new System.Drawing.Point(565, 150);
-            this.titlePageClassEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageClassEnter.Location = new System.Drawing.Point(212, 63);
             this.titlePageClassEnter.Name = "titlePageClassEnter";
-            this.titlePageClassEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageClassEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageClassEnter.TabIndex = 9;
             this.titlePageClassEnter.Visible = false;
             this.titlePageClassEnter.TextChanged += new System.EventHandler(this.titlePageClassEnter_TextChanged);
@@ -3058,10 +2842,9 @@
             // titlePageNameEnter
             // 
             this.titlePageNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameEnter.Location = new System.Drawing.Point(565, 95);
-            this.titlePageNameEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageNameEnter.Location = new System.Drawing.Point(212, 40);
             this.titlePageNameEnter.Name = "titlePageNameEnter";
-            this.titlePageNameEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageNameEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageNameEnter.TabIndex = 8;
             this.titlePageNameEnter.Visible = false;
             this.titlePageNameEnter.TextChanged += new System.EventHandler(this.titlePageNameEnter_TextChanged);
@@ -3070,10 +2853,9 @@
             // 
             this.titlePageNameLabel.AutoSize = true;
             this.titlePageNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameLabel.Location = new System.Drawing.Point(448, 103);
-            this.titlePageNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageNameLabel.Location = new System.Drawing.Point(168, 43);
             this.titlePageNameLabel.Name = "titlePageNameLabel";
-            this.titlePageNameLabel.Size = new System.Drawing.Size(98, 32);
+            this.titlePageNameLabel.Size = new System.Drawing.Size(38, 13);
             this.titlePageNameLabel.TabIndex = 7;
             this.titlePageNameLabel.Text = "Name:";
             this.titlePageNameLabel.Visible = false;
@@ -3082,10 +2864,9 @@
             // 
             this.titlePageTitleLabel.AutoSize = true;
             this.titlePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleLabel.Location = new System.Drawing.Point(469, 48);
-            this.titlePageTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.titlePageTitleLabel.Location = new System.Drawing.Point(176, 20);
             this.titlePageTitleLabel.Name = "titlePageTitleLabel";
-            this.titlePageTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.titlePageTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.titlePageTitleLabel.TabIndex = 6;
             this.titlePageTitleLabel.Text = "Title:";
             this.titlePageTitleLabel.Visible = false;
@@ -3093,10 +2874,9 @@
             // titlePageTitleEnter
             // 
             this.titlePageTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleEnter.Location = new System.Drawing.Point(565, 41);
-            this.titlePageTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageTitleEnter.Location = new System.Drawing.Point(212, 17);
             this.titlePageTitleEnter.Name = "titlePageTitleEnter";
-            this.titlePageTitleEnter.Size = new System.Drawing.Size(524, 39);
+            this.titlePageTitleEnter.Size = new System.Drawing.Size(199, 20);
             this.titlePageTitleEnter.TabIndex = 5;
             this.titlePageTitleEnter.Visible = false;
             this.titlePageTitleEnter.TextChanged += new System.EventHandler(this.titlePageTitleEnter_TextChanged);
@@ -3105,10 +2885,9 @@
             // 
             this.titlePageSchoolCheck.AutoSize = true;
             this.titlePageSchoolCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageSchoolCheck.Location = new System.Drawing.Point(109, 265);
-            this.titlePageSchoolCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageSchoolCheck.Location = new System.Drawing.Point(41, 111);
             this.titlePageSchoolCheck.Name = "titlePageSchoolCheck";
-            this.titlePageSchoolCheck.Size = new System.Drawing.Size(240, 36);
+            this.titlePageSchoolCheck.Size = new System.Drawing.Size(97, 17);
             this.titlePageSchoolCheck.TabIndex = 4;
             this.titlePageSchoolCheck.Text = "Include School";
             this.titlePageSchoolCheck.UseVisualStyleBackColor = true;
@@ -3118,10 +2897,9 @@
             // 
             this.titlePageProfessorCheck.AutoSize = true;
             this.titlePageProfessorCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageProfessorCheck.Location = new System.Drawing.Point(109, 210);
-            this.titlePageProfessorCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageProfessorCheck.Location = new System.Drawing.Point(41, 88);
             this.titlePageProfessorCheck.Name = "titlePageProfessorCheck";
-            this.titlePageProfessorCheck.Size = new System.Drawing.Size(273, 36);
+            this.titlePageProfessorCheck.Size = new System.Drawing.Size(108, 17);
             this.titlePageProfessorCheck.TabIndex = 3;
             this.titlePageProfessorCheck.Text = "Include Professor";
             this.titlePageProfessorCheck.UseVisualStyleBackColor = true;
@@ -3131,10 +2909,9 @@
             // 
             this.titlePageClassCheck.AutoSize = true;
             this.titlePageClassCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageClassCheck.Location = new System.Drawing.Point(109, 155);
-            this.titlePageClassCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageClassCheck.Location = new System.Drawing.Point(41, 65);
             this.titlePageClassCheck.Name = "titlePageClassCheck";
-            this.titlePageClassCheck.Size = new System.Drawing.Size(223, 36);
+            this.titlePageClassCheck.Size = new System.Drawing.Size(89, 17);
             this.titlePageClassCheck.TabIndex = 2;
             this.titlePageClassCheck.Text = "Include Class";
             this.titlePageClassCheck.UseVisualStyleBackColor = true;
@@ -3144,10 +2921,9 @@
             // 
             this.titlePageNameCheck.AutoSize = true;
             this.titlePageNameCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageNameCheck.Location = new System.Drawing.Point(109, 100);
-            this.titlePageNameCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageNameCheck.Location = new System.Drawing.Point(41, 42);
             this.titlePageNameCheck.Name = "titlePageNameCheck";
-            this.titlePageNameCheck.Size = new System.Drawing.Size(227, 36);
+            this.titlePageNameCheck.Size = new System.Drawing.Size(92, 17);
             this.titlePageNameCheck.TabIndex = 1;
             this.titlePageNameCheck.Text = "Include Name";
             this.titlePageNameCheck.UseVisualStyleBackColor = true;
@@ -3157,10 +2933,9 @@
             // 
             this.titlePageTitleCheck.AutoSize = true;
             this.titlePageTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTitleCheck.Location = new System.Drawing.Point(109, 45);
-            this.titlePageTitleCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageTitleCheck.Location = new System.Drawing.Point(41, 19);
             this.titlePageTitleCheck.Name = "titlePageTitleCheck";
-            this.titlePageTitleCheck.Size = new System.Drawing.Size(207, 36);
+            this.titlePageTitleCheck.Size = new System.Drawing.Size(84, 17);
             this.titlePageTitleCheck.TabIndex = 0;
             this.titlePageTitleCheck.Text = "Include Title";
             this.titlePageTitleCheck.UseVisualStyleBackColor = true;
@@ -3173,9 +2948,8 @@
             this.titlePageSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePageSectionLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.titlePageSectionLabel.Location = new System.Drawing.Point(0, 0);
-            this.titlePageSectionLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.titlePageSectionLabel.Name = "titlePageSectionLabel";
-            this.titlePageSectionLabel.Size = new System.Drawing.Size(1688, 72);
+            this.titlePageSectionLabel.Size = new System.Drawing.Size(633, 30);
             this.titlePageSectionLabel.TabIndex = 1;
             this.titlePageSectionLabel.Text = "TITLE PAGE";
             this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3187,10 +2961,9 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 3012);
-            this.headerPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerPanel.Location = new System.Drawing.Point(0, 1263);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1690, 1359);
+            this.headerPanel.Size = new System.Drawing.Size(635, 571);
             this.headerPanel.TabIndex = 10;
             // 
             // headerOptionsGroupBox
@@ -3200,11 +2973,9 @@
             this.headerOptionsGroupBox.Controls.Add(this.headerCenterGroupBox);
             this.headerOptionsGroupBox.Controls.Add(this.headerLeftGroupBox);
             this.headerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.headerOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.headerOptionsGroupBox.Name = "headerOptionsGroupBox";
-            this.headerOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerOptionsGroupBox.Size = new System.Drawing.Size(1640, 1178);
+            this.headerOptionsGroupBox.Size = new System.Drawing.Size(615, 494);
             this.headerOptionsGroupBox.TabIndex = 1;
             this.headerOptionsGroupBox.TabStop = false;
             this.headerOptionsGroupBox.Text = "Options";
@@ -3218,11 +2989,9 @@
             this.headerFirstPageGroupBox.Controls.Add(this.headerDiffFirstPageCheck);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageUseRunningHeadCheck);
             this.headerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(24, 1049);
-            this.headerFirstPageGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(9, 440);
             this.headerFirstPageGroupBox.Name = "headerFirstPageGroupBox";
-            this.headerFirstPageGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(1592, 103);
+            this.headerFirstPageGroupBox.Size = new System.Drawing.Size(597, 43);
             this.headerFirstPageGroupBox.TabIndex = 27;
             this.headerFirstPageGroupBox.TabStop = false;
             this.headerFirstPageGroupBox.Text = "First Page";
@@ -3240,11 +3009,9 @@
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleRadio);
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightOtherEnter);
             this.headerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(24, 816);
-            this.headerFirstPageRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(9, 342);
             this.headerFirstPageRightGroupBox.Name = "headerFirstPageRightGroupBox";
-            this.headerFirstPageRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageRightGroupBox.TabIndex = 26;
             this.headerFirstPageRightGroupBox.TabStop = false;
             this.headerFirstPageRightGroupBox.Text = "First Page Right";
@@ -3254,10 +3021,9 @@
             // 
             this.headerFirstRightEmptyRadio.AutoSize = true;
             this.headerFirstRightEmptyRadio.Checked = true;
-            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerFirstRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerFirstRightEmptyRadio.Name = "headerFirstRightEmptyRadio";
-            this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerFirstRightEmptyRadio.TabIndex = 30;
             this.headerFirstRightEmptyRadio.TabStop = true;
             this.headerFirstRightEmptyRadio.Text = "Empty";
@@ -3267,10 +3033,9 @@
             // headerFirstRightTitleEnter
             // 
             this.headerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstRightTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerFirstRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerFirstRightTitleEnter.Name = "headerFirstRightTitleEnter";
-            this.headerFirstRightTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightTitleEnter.TabIndex = 29;
             this.headerFirstRightTitleEnter.Visible = false;
             this.headerFirstRightTitleEnter.TextChanged += new System.EventHandler(this.headerFirstRightTitleEnter_TextChanged);
@@ -3278,20 +3043,18 @@
             // headerFirstRightTitleLabel
             // 
             this.headerFirstRightTitleLabel.AutoSize = true;
-            this.headerFirstRightTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerFirstRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstRightTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerFirstRightTitleLabel.Name = "headerFirstRightTitleLabel";
-            this.headerFirstRightTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstRightTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerFirstRightTitleLabel.TabIndex = 28;
             this.headerFirstRightTitleLabel.Text = "Title:";
             this.headerFirstRightTitleLabel.Visible = false;
             // 
             // headerFirstRightNumberEnter
             // 
-            this.headerFirstRightNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerFirstRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerFirstRightNumberEnter.Name = "headerFirstRightNumberEnter";
-            this.headerFirstRightNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerFirstRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightNumberEnter.TabIndex = 25;
             this.headerFirstRightNumberEnter.Visible = false;
             this.headerFirstRightNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstRightNumberEnter_ValueChanged);
@@ -3299,10 +3062,9 @@
             // headerFirstRightNumberLabel
             // 
             this.headerFirstRightNumberLabel.AutoSize = true;
-            this.headerFirstRightNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerFirstRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstRightNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerFirstRightNumberLabel.Name = "headerFirstRightNumberLabel";
-            this.headerFirstRightNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerFirstRightNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerFirstRightNumberLabel.TabIndex = 24;
             this.headerFirstRightNumberLabel.Text = "1st Page Number:";
             this.headerFirstRightNumberLabel.Visible = false;
@@ -3310,10 +3072,9 @@
             // headerFirstRightOtherLabel
             // 
             this.headerFirstRightOtherLabel.AutoSize = true;
-            this.headerFirstRightOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerFirstRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstRightOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerFirstRightOtherLabel.Name = "headerFirstRightOtherLabel";
-            this.headerFirstRightOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstRightOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerFirstRightOtherLabel.TabIndex = 23;
             this.headerFirstRightOtherLabel.Text = "Text:";
             this.headerFirstRightOtherLabel.Visible = false;
@@ -3321,10 +3082,9 @@
             // headerFirstRightOtherRadio
             // 
             this.headerFirstRightOtherRadio.AutoSize = true;
-            this.headerFirstRightOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerFirstRightOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerFirstRightOtherRadio.Name = "headerFirstRightOtherRadio";
-            this.headerFirstRightOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerFirstRightOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerFirstRightOtherRadio.TabIndex = 22;
             this.headerFirstRightOtherRadio.TabStop = true;
             this.headerFirstRightOtherRadio.Text = "Other Text";
@@ -3334,10 +3094,9 @@
             // headerFirstRightNumberRadio
             // 
             this.headerFirstRightNumberRadio.AutoSize = true;
-            this.headerFirstRightNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerFirstRightNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerFirstRightNumberRadio.Name = "headerFirstRightNumberRadio";
-            this.headerFirstRightNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerFirstRightNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerFirstRightNumberRadio.TabIndex = 21;
             this.headerFirstRightNumberRadio.TabStop = true;
             this.headerFirstRightNumberRadio.Text = "Page Number";
@@ -3347,10 +3106,9 @@
             // headerFirstRightTitleRadio
             // 
             this.headerFirstRightTitleRadio.AutoSize = true;
-            this.headerFirstRightTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerFirstRightTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerFirstRightTitleRadio.Name = "headerFirstRightTitleRadio";
-            this.headerFirstRightTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerFirstRightTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerFirstRightTitleRadio.TabIndex = 20;
             this.headerFirstRightTitleRadio.TabStop = true;
             this.headerFirstRightTitleRadio.Text = "Paper Title";
@@ -3360,10 +3118,9 @@
             // headerFirstRightOtherEnter
             // 
             this.headerFirstRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstRightOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerFirstRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerFirstRightOtherEnter.Name = "headerFirstRightOtherEnter";
-            this.headerFirstRightOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstRightOtherEnter.TabIndex = 19;
             this.headerFirstRightOtherEnter.Visible = false;
             this.headerFirstRightOtherEnter.TextChanged += new System.EventHandler(this.headerFirstRightOtherEnter_TextChanged);
@@ -3381,11 +3138,9 @@
             this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleRadio);
             this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherEnter);
             this.headerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(24, 513);
-            this.headerFirstPageCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(9, 215);
             this.headerFirstPageCenterGroupBox.Name = "headerFirstPageCenterGroupBox";
-            this.headerFirstPageCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageCenterGroupBox.TabIndex = 26;
             this.headerFirstPageCenterGroupBox.TabStop = false;
             this.headerFirstPageCenterGroupBox.Text = "First Page Center";
@@ -3395,10 +3150,9 @@
             // 
             this.headerFirstCenterEmptyRadio.AutoSize = true;
             this.headerFirstCenterEmptyRadio.Checked = true;
-            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerFirstCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerFirstCenterEmptyRadio.Name = "headerFirstCenterEmptyRadio";
-            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerFirstCenterEmptyRadio.TabIndex = 30;
             this.headerFirstCenterEmptyRadio.TabStop = true;
             this.headerFirstCenterEmptyRadio.Text = "Empty";
@@ -3408,10 +3162,9 @@
             // headerFirstCenterTitleEnter
             // 
             this.headerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerFirstCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerFirstCenterTitleEnter.Name = "headerFirstCenterTitleEnter";
-            this.headerFirstCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterTitleEnter.TabIndex = 29;
             this.headerFirstCenterTitleEnter.Visible = false;
             this.headerFirstCenterTitleEnter.TextChanged += new System.EventHandler(this.headerFirstCenterTitleEnter_TextChanged);
@@ -3419,20 +3172,18 @@
             // headerFirstCenterTitleLabel
             // 
             this.headerFirstCenterTitleLabel.AutoSize = true;
-            this.headerFirstCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerFirstCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerFirstCenterTitleLabel.Name = "headerFirstCenterTitleLabel";
-            this.headerFirstCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerFirstCenterTitleLabel.TabIndex = 28;
             this.headerFirstCenterTitleLabel.Text = "Title:";
             this.headerFirstCenterTitleLabel.Visible = false;
             // 
             // headerFirstCenterNumberEnter
             // 
-            this.headerFirstCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerFirstCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerFirstCenterNumberEnter.Name = "headerFirstCenterNumberEnter";
-            this.headerFirstCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerFirstCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterNumberEnter.TabIndex = 25;
             this.headerFirstCenterNumberEnter.Visible = false;
             this.headerFirstCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstCenterNumberEnter_ValueChanged);
@@ -3440,10 +3191,9 @@
             // headerFirstCenterNumberLabel
             // 
             this.headerFirstCenterNumberLabel.AutoSize = true;
-            this.headerFirstCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerFirstCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerFirstCenterNumberLabel.Name = "headerFirstCenterNumberLabel";
-            this.headerFirstCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerFirstCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerFirstCenterNumberLabel.TabIndex = 24;
             this.headerFirstCenterNumberLabel.Text = "1st Page Number:";
             this.headerFirstCenterNumberLabel.Visible = false;
@@ -3451,10 +3201,9 @@
             // headerFirstCenterOtherLabel
             // 
             this.headerFirstCenterOtherLabel.AutoSize = true;
-            this.headerFirstCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerFirstCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerFirstCenterOtherLabel.Name = "headerFirstCenterOtherLabel";
-            this.headerFirstCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerFirstCenterOtherLabel.TabIndex = 23;
             this.headerFirstCenterOtherLabel.Text = "Text:";
             this.headerFirstCenterOtherLabel.Visible = false;
@@ -3462,10 +3211,9 @@
             // headerFirstCenterOtherRadio
             // 
             this.headerFirstCenterOtherRadio.AutoSize = true;
-            this.headerFirstCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerFirstCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerFirstCenterOtherRadio.Name = "headerFirstCenterOtherRadio";
-            this.headerFirstCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerFirstCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerFirstCenterOtherRadio.TabIndex = 22;
             this.headerFirstCenterOtherRadio.TabStop = true;
             this.headerFirstCenterOtherRadio.Text = "Other Text";
@@ -3475,10 +3223,9 @@
             // headerFirstCenterNumberRadio
             // 
             this.headerFirstCenterNumberRadio.AutoSize = true;
-            this.headerFirstCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerFirstCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerFirstCenterNumberRadio.Name = "headerFirstCenterNumberRadio";
-            this.headerFirstCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerFirstCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerFirstCenterNumberRadio.TabIndex = 21;
             this.headerFirstCenterNumberRadio.TabStop = true;
             this.headerFirstCenterNumberRadio.Text = "Page Number";
@@ -3488,10 +3235,9 @@
             // headerFirstCenterTitleRadio
             // 
             this.headerFirstCenterTitleRadio.AutoSize = true;
-            this.headerFirstCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerFirstCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerFirstCenterTitleRadio.Name = "headerFirstCenterTitleRadio";
-            this.headerFirstCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerFirstCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerFirstCenterTitleRadio.TabIndex = 20;
             this.headerFirstCenterTitleRadio.TabStop = true;
             this.headerFirstCenterTitleRadio.Text = "Paper Title";
@@ -3501,10 +3247,9 @@
             // headerFirstCenterOtherEnter
             // 
             this.headerFirstCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerFirstCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerFirstCenterOtherEnter.Name = "headerFirstCenterOtherEnter";
-            this.headerFirstCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstCenterOtherEnter.TabIndex = 19;
             this.headerFirstCenterOtherEnter.Visible = false;
             this.headerFirstCenterOtherEnter.TextChanged += new System.EventHandler(this.headerFirstCenterOtherEnter_TextChanged);
@@ -3522,11 +3267,9 @@
             this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleRadio);
             this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftOtherEnter);
             this.headerFirstPageLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageLeftGroupBox.Location = new System.Drawing.Point(24, 210);
-            this.headerFirstPageLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageLeftGroupBox.Location = new System.Drawing.Point(9, 88);
             this.headerFirstPageLeftGroupBox.Name = "headerFirstPageLeftGroupBox";
-            this.headerFirstPageLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(1544, 289);
+            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(579, 121);
             this.headerFirstPageLeftGroupBox.TabIndex = 21;
             this.headerFirstPageLeftGroupBox.TabStop = false;
             this.headerFirstPageLeftGroupBox.Text = "First Page Left";
@@ -3536,10 +3279,9 @@
             // 
             this.headerFirstLeftEmptyRadio.AutoSize = true;
             this.headerFirstLeftEmptyRadio.Checked = true;
-            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerFirstLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerFirstLeftEmptyRadio.Name = "headerFirstLeftEmptyRadio";
-            this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerFirstLeftEmptyRadio.TabIndex = 30;
             this.headerFirstLeftEmptyRadio.TabStop = true;
             this.headerFirstLeftEmptyRadio.Text = "Empty";
@@ -3549,10 +3291,9 @@
             // headerFirstLeftTitleEnter
             // 
             this.headerFirstLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstLeftTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerFirstLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerFirstLeftTitleEnter.Name = "headerFirstLeftTitleEnter";
-            this.headerFirstLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftTitleEnter.TabIndex = 29;
             this.headerFirstLeftTitleEnter.Visible = false;
             this.headerFirstLeftTitleEnter.TextChanged += new System.EventHandler(this.headerFirstLeftTitleEnter_TextChanged);
@@ -3560,20 +3301,18 @@
             // headerFirstLeftTitleLabel
             // 
             this.headerFirstLeftTitleLabel.AutoSize = true;
-            this.headerFirstLeftTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerFirstLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerFirstLeftTitleLabel.Name = "headerFirstLeftTitleLabel";
-            this.headerFirstLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerFirstLeftTitleLabel.TabIndex = 28;
             this.headerFirstLeftTitleLabel.Text = "Title:";
             this.headerFirstLeftTitleLabel.Visible = false;
             // 
             // headerFirstLeftNumberEnter
             // 
-            this.headerFirstLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerFirstLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerFirstLeftNumberEnter.Name = "headerFirstLeftNumberEnter";
-            this.headerFirstLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerFirstLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftNumberEnter.TabIndex = 25;
             this.headerFirstLeftNumberEnter.Visible = false;
             this.headerFirstLeftNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstLeftNumberEnter_ValueChanged);
@@ -3581,10 +3320,9 @@
             // headerFirstLeftNumberLabel
             // 
             this.headerFirstLeftNumberLabel.AutoSize = true;
-            this.headerFirstLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerFirstLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerFirstLeftNumberLabel.Name = "headerFirstLeftNumberLabel";
-            this.headerFirstLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerFirstLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerFirstLeftNumberLabel.TabIndex = 24;
             this.headerFirstLeftNumberLabel.Text = "1st Page Number:";
             this.headerFirstLeftNumberLabel.Visible = false;
@@ -3592,10 +3330,9 @@
             // headerFirstLeftOtherLabel
             // 
             this.headerFirstLeftOtherLabel.AutoSize = true;
-            this.headerFirstLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerFirstLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerFirstLeftOtherLabel.Name = "headerFirstLeftOtherLabel";
-            this.headerFirstLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerFirstLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerFirstLeftOtherLabel.TabIndex = 23;
             this.headerFirstLeftOtherLabel.Text = "Text:";
             this.headerFirstLeftOtherLabel.Visible = false;
@@ -3603,10 +3340,9 @@
             // headerFirstLeftOtherRadio
             // 
             this.headerFirstLeftOtherRadio.AutoSize = true;
-            this.headerFirstLeftOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerFirstLeftOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerFirstLeftOtherRadio.Name = "headerFirstLeftOtherRadio";
-            this.headerFirstLeftOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerFirstLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerFirstLeftOtherRadio.TabIndex = 22;
             this.headerFirstLeftOtherRadio.TabStop = true;
             this.headerFirstLeftOtherRadio.Text = "Other Text";
@@ -3616,10 +3352,9 @@
             // headerFirstLeftNumberRadio
             // 
             this.headerFirstLeftNumberRadio.AutoSize = true;
-            this.headerFirstLeftNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerFirstLeftNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerFirstLeftNumberRadio.Name = "headerFirstLeftNumberRadio";
-            this.headerFirstLeftNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerFirstLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerFirstLeftNumberRadio.TabIndex = 21;
             this.headerFirstLeftNumberRadio.TabStop = true;
             this.headerFirstLeftNumberRadio.Text = "Page Number";
@@ -3629,10 +3364,9 @@
             // headerFirstLeftTitleRadio
             // 
             this.headerFirstLeftTitleRadio.AutoSize = true;
-            this.headerFirstLeftTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerFirstLeftTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerFirstLeftTitleRadio.Name = "headerFirstLeftTitleRadio";
-            this.headerFirstLeftTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerFirstLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerFirstLeftTitleRadio.TabIndex = 20;
             this.headerFirstLeftTitleRadio.TabStop = true;
             this.headerFirstLeftTitleRadio.Text = "Paper Title";
@@ -3642,10 +3376,9 @@
             // headerFirstLeftOtherEnter
             // 
             this.headerFirstLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerFirstLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerFirstLeftOtherEnter.Name = "headerFirstLeftOtherEnter";
-            this.headerFirstLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerFirstLeftOtherEnter.TabIndex = 19;
             this.headerFirstLeftOtherEnter.Visible = false;
             this.headerFirstLeftOtherEnter.TextChanged += new System.EventHandler(this.headerFirstLeftOtherEnter_TextChanged);
@@ -3654,10 +3387,9 @@
             // 
             this.headerFirstPageMoreCheck.AutoSize = true;
             this.headerFirstPageMoreCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageMoreCheck.Location = new System.Drawing.Point(24, 155);
-            this.headerFirstPageMoreCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageMoreCheck.Location = new System.Drawing.Point(9, 65);
             this.headerFirstPageMoreCheck.Name = "headerFirstPageMoreCheck";
-            this.headerFirstPageMoreCheck.Size = new System.Drawing.Size(280, 36);
+            this.headerFirstPageMoreCheck.Size = new System.Drawing.Size(111, 17);
             this.headerFirstPageMoreCheck.TabIndex = 3;
             this.headerFirstPageMoreCheck.Text = "Use More Options";
             this.headerFirstPageMoreCheck.UseVisualStyleBackColor = true;
@@ -3668,10 +3400,9 @@
             // 
             this.headerDiffFirstPageCheck.AutoSize = true;
             this.headerDiffFirstPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerDiffFirstPageCheck.Location = new System.Drawing.Point(24, 45);
-            this.headerDiffFirstPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerDiffFirstPageCheck.Location = new System.Drawing.Point(9, 19);
             this.headerDiffFirstPageCheck.Name = "headerDiffFirstPageCheck";
-            this.headerDiffFirstPageCheck.Size = new System.Drawing.Size(342, 36);
+            this.headerDiffFirstPageCheck.Size = new System.Drawing.Size(133, 17);
             this.headerDiffFirstPageCheck.TabIndex = 1;
             this.headerDiffFirstPageCheck.Text = "Different On First Page";
             this.headerDiffFirstPageCheck.UseVisualStyleBackColor = true;
@@ -3681,10 +3412,9 @@
             // 
             this.headerFirstPageUseRunningHeadCheck.AutoSize = true;
             this.headerFirstPageUseRunningHeadCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(24, 100);
-            this.headerFirstPageUseRunningHeadCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstPageUseRunningHeadCheck.Location = new System.Drawing.Point(9, 42);
             this.headerFirstPageUseRunningHeadCheck.Name = "headerFirstPageUseRunningHeadCheck";
-            this.headerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(316, 36);
+            this.headerFirstPageUseRunningHeadCheck.Size = new System.Drawing.Size(128, 17);
             this.headerFirstPageUseRunningHeadCheck.TabIndex = 2;
             this.headerFirstPageUseRunningHeadCheck.Text = "Use \"Running head:\"";
             this.headerFirstPageUseRunningHeadCheck.UseVisualStyleBackColor = true;
@@ -3704,11 +3434,9 @@
             this.headerRightGroupBox.Controls.Add(this.headerRightTitleRadio);
             this.headerRightGroupBox.Controls.Add(this.headerRightOtherEnter);
             this.headerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightGroupBox.Location = new System.Drawing.Point(24, 715);
-            this.headerRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightGroupBox.Location = new System.Drawing.Point(9, 300);
             this.headerRightGroupBox.Name = "headerRightGroupBox";
-            this.headerRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerRightGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.headerRightGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerRightGroupBox.TabIndex = 26;
             this.headerRightGroupBox.TabStop = false;
             this.headerRightGroupBox.Text = "Right";
@@ -3717,10 +3445,9 @@
             // 
             this.headerRightEmptyRadio.AutoSize = true;
             this.headerRightEmptyRadio.Checked = true;
-            this.headerRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerRightEmptyRadio.Name = "headerRightEmptyRadio";
-            this.headerRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerRightEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerRightEmptyRadio.TabIndex = 30;
             this.headerRightEmptyRadio.TabStop = true;
             this.headerRightEmptyRadio.Text = "Empty";
@@ -3729,10 +3456,9 @@
             // headerRightTitleEnter
             // 
             this.headerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerRightTitleEnter.Name = "headerRightTitleEnter";
-            this.headerRightTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerRightTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightTitleEnter.TabIndex = 29;
             this.headerRightTitleEnter.Visible = false;
             this.headerRightTitleEnter.TextChanged += new System.EventHandler(this.headerRightTitleEnter_TextChanged);
@@ -3740,20 +3466,18 @@
             // headerRightTitleLabel
             // 
             this.headerRightTitleLabel.AutoSize = true;
-            this.headerRightTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerRightTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerRightTitleLabel.Name = "headerRightTitleLabel";
-            this.headerRightTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerRightTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerRightTitleLabel.TabIndex = 28;
             this.headerRightTitleLabel.Text = "Title:";
             this.headerRightTitleLabel.Visible = false;
             // 
             // headerRightNumberEnter
             // 
-            this.headerRightNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerRightNumberEnter.Name = "headerRightNumberEnter";
-            this.headerRightNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerRightNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightNumberEnter.TabIndex = 25;
             this.headerRightNumberEnter.Visible = false;
             this.headerRightNumberEnter.ValueChanged += new System.EventHandler(this.headerRightNumberEnter_ValueChanged);
@@ -3761,10 +3485,9 @@
             // headerRightNumberLabel
             // 
             this.headerRightNumberLabel.AutoSize = true;
-            this.headerRightNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerRightNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerRightNumberLabel.Name = "headerRightNumberLabel";
-            this.headerRightNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerRightNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerRightNumberLabel.TabIndex = 24;
             this.headerRightNumberLabel.Text = "1st Page Number:";
             this.headerRightNumberLabel.Visible = false;
@@ -3772,10 +3495,9 @@
             // headerRightOtherLabel
             // 
             this.headerRightOtherLabel.AutoSize = true;
-            this.headerRightOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerRightOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerRightOtherLabel.Name = "headerRightOtherLabel";
-            this.headerRightOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerRightOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerRightOtherLabel.TabIndex = 23;
             this.headerRightOtherLabel.Text = "Text:";
             this.headerRightOtherLabel.Visible = false;
@@ -3783,10 +3505,9 @@
             // headerRightOtherRadio
             // 
             this.headerRightOtherRadio.AutoSize = true;
-            this.headerRightOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerRightOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerRightOtherRadio.Name = "headerRightOtherRadio";
-            this.headerRightOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerRightOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerRightOtherRadio.TabIndex = 22;
             this.headerRightOtherRadio.TabStop = true;
             this.headerRightOtherRadio.Text = "Other Text";
@@ -3796,10 +3517,9 @@
             // headerRightNumberRadio
             // 
             this.headerRightNumberRadio.AutoSize = true;
-            this.headerRightNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerRightNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerRightNumberRadio.Name = "headerRightNumberRadio";
-            this.headerRightNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerRightNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerRightNumberRadio.TabIndex = 21;
             this.headerRightNumberRadio.TabStop = true;
             this.headerRightNumberRadio.Text = "Page Number";
@@ -3809,10 +3529,9 @@
             // headerRightTitleRadio
             // 
             this.headerRightTitleRadio.AutoSize = true;
-            this.headerRightTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerRightTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerRightTitleRadio.Name = "headerRightTitleRadio";
-            this.headerRightTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerRightTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerRightTitleRadio.TabIndex = 20;
             this.headerRightTitleRadio.TabStop = true;
             this.headerRightTitleRadio.Text = "Paper Title";
@@ -3822,10 +3541,9 @@
             // headerRightOtherEnter
             // 
             this.headerRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerRightOtherEnter.Name = "headerRightOtherEnter";
-            this.headerRightOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerRightOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerRightOtherEnter.TabIndex = 19;
             this.headerRightOtherEnter.Visible = false;
             this.headerRightOtherEnter.TextChanged += new System.EventHandler(this.headerRightOtherEnter_TextChanged);
@@ -3843,11 +3561,9 @@
             this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleRadio);
             this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherEnter);
             this.headerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterGroupBox.Location = new System.Drawing.Point(24, 374);
-            this.headerCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterGroupBox.Location = new System.Drawing.Point(9, 157);
             this.headerCenterGroupBox.Name = "headerCenterGroupBox";
-            this.headerCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.headerCenterGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerCenterGroupBox.TabIndex = 26;
             this.headerCenterGroupBox.TabStop = false;
             this.headerCenterGroupBox.Text = "Center";
@@ -3856,10 +3572,9 @@
             // 
             this.headerCenterEmptyRadio.AutoSize = true;
             this.headerCenterEmptyRadio.Checked = true;
-            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerCenterEmptyRadio.Name = "headerCenterEmptyRadio";
-            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerCenterEmptyRadio.TabIndex = 30;
             this.headerCenterEmptyRadio.TabStop = true;
             this.headerCenterEmptyRadio.Text = "Empty";
@@ -3868,10 +3583,9 @@
             // headerCenterTitleEnter
             // 
             this.headerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerCenterTitleEnter.Name = "headerCenterTitleEnter";
-            this.headerCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerCenterTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterTitleEnter.TabIndex = 29;
             this.headerCenterTitleEnter.Visible = false;
             this.headerCenterTitleEnter.TextChanged += new System.EventHandler(this.headerCenterTitleEnter_TextChanged);
@@ -3879,20 +3593,18 @@
             // headerCenterTitleLabel
             // 
             this.headerCenterTitleLabel.AutoSize = true;
-            this.headerCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerCenterTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerCenterTitleLabel.Name = "headerCenterTitleLabel";
-            this.headerCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerCenterTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerCenterTitleLabel.TabIndex = 28;
             this.headerCenterTitleLabel.Text = "Title:";
             this.headerCenterTitleLabel.Visible = false;
             // 
             // headerCenterNumberEnter
             // 
-            this.headerCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerCenterNumberEnter.Name = "headerCenterNumberEnter";
-            this.headerCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerCenterNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterNumberEnter.TabIndex = 25;
             this.headerCenterNumberEnter.Visible = false;
             this.headerCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerCenterNumberEnter_ValueChanged);
@@ -3900,10 +3612,9 @@
             // headerCenterNumberLabel
             // 
             this.headerCenterNumberLabel.AutoSize = true;
-            this.headerCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerCenterNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerCenterNumberLabel.Name = "headerCenterNumberLabel";
-            this.headerCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerCenterNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerCenterNumberLabel.TabIndex = 24;
             this.headerCenterNumberLabel.Text = "1st Page Number:";
             this.headerCenterNumberLabel.Visible = false;
@@ -3911,10 +3622,9 @@
             // headerCenterOtherLabel
             // 
             this.headerCenterOtherLabel.AutoSize = true;
-            this.headerCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerCenterOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerCenterOtherLabel.Name = "headerCenterOtherLabel";
-            this.headerCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerCenterOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerCenterOtherLabel.TabIndex = 23;
             this.headerCenterOtherLabel.Text = "Text:";
             this.headerCenterOtherLabel.Visible = false;
@@ -3922,10 +3632,9 @@
             // headerCenterOtherRadio
             // 
             this.headerCenterOtherRadio.AutoSize = true;
-            this.headerCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerCenterOtherRadio.Name = "headerCenterOtherRadio";
-            this.headerCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerCenterOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerCenterOtherRadio.TabIndex = 22;
             this.headerCenterOtherRadio.TabStop = true;
             this.headerCenterOtherRadio.Text = "Other Text";
@@ -3935,10 +3644,9 @@
             // headerCenterNumberRadio
             // 
             this.headerCenterNumberRadio.AutoSize = true;
-            this.headerCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerCenterNumberRadio.Name = "headerCenterNumberRadio";
-            this.headerCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerCenterNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerCenterNumberRadio.TabIndex = 21;
             this.headerCenterNumberRadio.TabStop = true;
             this.headerCenterNumberRadio.Text = "Page Number";
@@ -3948,10 +3656,9 @@
             // headerCenterTitleRadio
             // 
             this.headerCenterTitleRadio.AutoSize = true;
-            this.headerCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerCenterTitleRadio.Name = "headerCenterTitleRadio";
-            this.headerCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerCenterTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerCenterTitleRadio.TabIndex = 20;
             this.headerCenterTitleRadio.TabStop = true;
             this.headerCenterTitleRadio.Text = "Paper Title";
@@ -3961,10 +3668,9 @@
             // headerCenterOtherEnter
             // 
             this.headerCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerCenterOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerCenterOtherEnter.Name = "headerCenterOtherEnter";
-            this.headerCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerCenterOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerCenterOtherEnter.TabIndex = 19;
             this.headerCenterOtherEnter.Visible = false;
             this.headerCenterOtherEnter.TextChanged += new System.EventHandler(this.headerCenterOtherEnter_TextChanged);
@@ -3982,11 +3688,9 @@
             this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleRadio);
             this.headerLeftGroupBox.Controls.Add(this.headerLeftOtherEnter);
             this.headerLeftGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLeftGroupBox.Location = new System.Drawing.Point(24, 45);
-            this.headerLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftGroupBox.Location = new System.Drawing.Point(9, 19);
             this.headerLeftGroupBox.Name = "headerLeftGroupBox";
-            this.headerLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerLeftGroupBox.Size = new System.Drawing.Size(1592, 289);
+            this.headerLeftGroupBox.Size = new System.Drawing.Size(597, 121);
             this.headerLeftGroupBox.TabIndex = 20;
             this.headerLeftGroupBox.TabStop = false;
             this.headerLeftGroupBox.Text = "Left";
@@ -3995,10 +3699,9 @@
             // 
             this.headerLeftEmptyRadio.AutoSize = true;
             this.headerLeftEmptyRadio.Checked = true;
-            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(9, 88);
             this.headerLeftEmptyRadio.Name = "headerLeftEmptyRadio";
-            this.headerLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
+            this.headerLeftEmptyRadio.Size = new System.Drawing.Size(54, 17);
             this.headerLeftEmptyRadio.TabIndex = 28;
             this.headerLeftEmptyRadio.TabStop = true;
             this.headerLeftEmptyRadio.Text = "Empty";
@@ -4007,10 +3710,9 @@
             // headerLeftTitleEnter
             // 
             this.headerLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLeftTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftTitleEnter.Location = new System.Drawing.Point(196, 18);
             this.headerLeftTitleEnter.Name = "headerLeftTitleEnter";
-            this.headerLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerLeftTitleEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftTitleEnter.TabIndex = 27;
             this.headerLeftTitleEnter.Visible = false;
             this.headerLeftTitleEnter.TextChanged += new System.EventHandler(this.headerLeftTitleEnter_TextChanged);
@@ -4018,20 +3720,18 @@
             // headerLeftTitleLabel
             // 
             this.headerLeftTitleLabel.AutoSize = true;
-            this.headerLeftTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerLeftTitleLabel.Location = new System.Drawing.Point(162, 21);
             this.headerLeftTitleLabel.Name = "headerLeftTitleLabel";
-            this.headerLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerLeftTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.headerLeftTitleLabel.TabIndex = 26;
             this.headerLeftTitleLabel.Text = "Title:";
             this.headerLeftTitleLabel.Visible = false;
             // 
             // headerLeftNumberEnter
             // 
-            this.headerLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftNumberEnter.Location = new System.Drawing.Point(196, 42);
             this.headerLeftNumberEnter.Name = "headerLeftNumberEnter";
-            this.headerLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerLeftNumberEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftNumberEnter.TabIndex = 25;
             this.headerLeftNumberEnter.Visible = false;
             this.headerLeftNumberEnter.ValueChanged += new System.EventHandler(this.headerLeftNumberEnter_ValueChanged);
@@ -4039,10 +3739,9 @@
             // headerLeftNumberLabel
             // 
             this.headerLeftNumberLabel.AutoSize = true;
-            this.headerLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerLeftNumberLabel.Location = new System.Drawing.Point(100, 44);
             this.headerLeftNumberLabel.Name = "headerLeftNumberLabel";
-            this.headerLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerLeftNumberLabel.Size = new System.Drawing.Size(92, 13);
             this.headerLeftNumberLabel.TabIndex = 24;
             this.headerLeftNumberLabel.Text = "1st Page Number:";
             this.headerLeftNumberLabel.Visible = false;
@@ -4050,10 +3749,9 @@
             // headerLeftOtherLabel
             // 
             this.headerLeftOtherLabel.AutoSize = true;
-            this.headerLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerLeftOtherLabel.Location = new System.Drawing.Point(161, 67);
             this.headerLeftOtherLabel.Name = "headerLeftOtherLabel";
-            this.headerLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
+            this.headerLeftOtherLabel.Size = new System.Drawing.Size(31, 13);
             this.headerLeftOtherLabel.TabIndex = 23;
             this.headerLeftOtherLabel.Text = "Text:";
             this.headerLeftOtherLabel.Visible = false;
@@ -4061,10 +3759,9 @@
             // headerLeftOtherRadio
             // 
             this.headerLeftOtherRadio.AutoSize = true;
-            this.headerLeftOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerLeftOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftOtherRadio.Location = new System.Drawing.Point(9, 65);
             this.headerLeftOtherRadio.Name = "headerLeftOtherRadio";
-            this.headerLeftOtherRadio.Size = new System.Drawing.Size(185, 36);
+            this.headerLeftOtherRadio.Size = new System.Drawing.Size(75, 17);
             this.headerLeftOtherRadio.TabIndex = 22;
             this.headerLeftOtherRadio.Text = "Other Text";
             this.headerLeftOtherRadio.UseVisualStyleBackColor = true;
@@ -4073,10 +3770,9 @@
             // headerLeftNumberRadio
             // 
             this.headerLeftNumberRadio.AutoSize = true;
-            this.headerLeftNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerLeftNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftNumberRadio.Location = new System.Drawing.Point(9, 42);
             this.headerLeftNumberRadio.Name = "headerLeftNumberRadio";
-            this.headerLeftNumberRadio.Size = new System.Drawing.Size(226, 36);
+            this.headerLeftNumberRadio.Size = new System.Drawing.Size(90, 17);
             this.headerLeftNumberRadio.TabIndex = 21;
             this.headerLeftNumberRadio.Text = "Page Number";
             this.headerLeftNumberRadio.UseVisualStyleBackColor = true;
@@ -4085,10 +3781,9 @@
             // headerLeftTitleRadio
             // 
             this.headerLeftTitleRadio.AutoSize = true;
-            this.headerLeftTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerLeftTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftTitleRadio.Location = new System.Drawing.Point(9, 19);
             this.headerLeftTitleRadio.Name = "headerLeftTitleRadio";
-            this.headerLeftTitleRadio.Size = new System.Drawing.Size(190, 36);
+            this.headerLeftTitleRadio.Size = new System.Drawing.Size(76, 17);
             this.headerLeftTitleRadio.TabIndex = 20;
             this.headerLeftTitleRadio.Text = "Paper Title";
             this.headerLeftTitleRadio.UseVisualStyleBackColor = true;
@@ -4097,10 +3792,9 @@
             // headerLeftOtherEnter
             // 
             this.headerLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftOtherEnter.Location = new System.Drawing.Point(196, 64);
             this.headerLeftOtherEnter.Name = "headerLeftOtherEnter";
-            this.headerLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerLeftOtherEnter.Size = new System.Drawing.Size(140, 20);
             this.headerLeftOtherEnter.TabIndex = 19;
             this.headerLeftOtherEnter.Visible = false;
             this.headerLeftOtherEnter.TextChanged += new System.EventHandler(this.headerLeftOtherEnter_TextChanged);
@@ -4112,9 +3806,8 @@
             this.headerHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.headerHeader.Location = new System.Drawing.Point(0, 0);
-            this.headerHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerHeader.Name = "headerHeader";
-            this.headerHeader.Size = new System.Drawing.Size(1688, 72);
+            this.headerHeader.Size = new System.Drawing.Size(633, 30);
             this.headerHeader.TabIndex = 0;
             this.headerHeader.Text = "HEADER";
             this.headerHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4122,10 +3815,9 @@
             // headerDefaultButton
             // 
             this.headerDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerDefaultButton.Location = new System.Drawing.Point(24, 1276);
-            this.headerDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerDefaultButton.Location = new System.Drawing.Point(9, 535);
             this.headerDefaultButton.Name = "headerDefaultButton";
-            this.headerDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.headerDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.headerDefaultButton.TabIndex = 15;
             this.headerDefaultButton.Text = "APA Default";
             this.headerDefaultButton.UseVisualStyleBackColor = true;
@@ -4137,10 +3829,9 @@
             this.summaryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.summaryPanel.Controls.Add(this.summaryOptionsGroupBox);
             this.summaryPanel.Controls.Add(this.summaryHeader);
-            this.summaryPanel.Location = new System.Drawing.Point(0, 2182);
-            this.summaryPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryPanel.Location = new System.Drawing.Point(0, 915);
             this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Size = new System.Drawing.Size(1690, 412);
+            this.summaryPanel.Size = new System.Drawing.Size(635, 174);
             this.summaryPanel.TabIndex = 8;
             // 
             // summaryOptionsGroupBox
@@ -4149,11 +3840,9 @@
             this.summaryOptionsGroupBox.Controls.Add(this.summaryTitleGroupBox);
             this.summaryOptionsGroupBox.Controls.Add(this.summaryOwnPageCheck);
             this.summaryOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.summaryOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.summaryOptionsGroupBox.Name = "summaryOptionsGroupBox";
-            this.summaryOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryOptionsGroupBox.Size = new System.Drawing.Size(1640, 298);
+            this.summaryOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
             this.summaryOptionsGroupBox.TabIndex = 1;
             this.summaryOptionsGroupBox.TabStop = false;
             this.summaryOptionsGroupBox.Text = "Options";
@@ -4161,10 +3850,9 @@
             // summaryDefaultButton
             // 
             this.summaryDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryDefaultButton.Location = new System.Drawing.Point(24, 222);
-            this.summaryDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryDefaultButton.Location = new System.Drawing.Point(9, 93);
             this.summaryDefaultButton.Name = "summaryDefaultButton";
-            this.summaryDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.summaryDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.summaryDefaultButton.TabIndex = 14;
             this.summaryDefaultButton.Text = "APA Default";
             this.summaryDefaultButton.UseVisualStyleBackColor = true;
@@ -4184,11 +3872,9 @@
             this.summaryTitleGroupBox.Controls.Add(this.summaryTitleBoldCheck);
             this.summaryTitleGroupBox.Controls.Add(this.summaryIncludeTitleCheck);
             this.summaryTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.summaryTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.summaryTitleGroupBox.Name = "summaryTitleGroupBox";
-            this.summaryTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.summaryTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.summaryTitleGroupBox.TabIndex = 4;
             this.summaryTitleGroupBox.TabStop = false;
             this.summaryTitleGroupBox.Text = "Summary Title";
@@ -4196,10 +3882,9 @@
             // summaryTitleAlignLabel
             // 
             this.summaryTitleAlignLabel.AutoSize = true;
-            this.summaryTitleAlignLabel.Location = new System.Drawing.Point(368, 48);
-            this.summaryTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.summaryTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
             this.summaryTitleAlignLabel.Name = "summaryTitleAlignLabel";
-            this.summaryTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.summaryTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.summaryTitleAlignLabel.TabIndex = 23;
             this.summaryTitleAlignLabel.Text = "Align:";
             this.summaryTitleAlignLabel.Visible = false;
@@ -4211,20 +3896,18 @@
             "Left",
             "Center",
             "Right"});
-            this.summaryTitleAlignSelect.Location = new System.Drawing.Point(459, 41);
-            this.summaryTitleAlignSelect.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleAlignSelect.Location = new System.Drawing.Point(172, 17);
             this.summaryTitleAlignSelect.Name = "summaryTitleAlignSelect";
-            this.summaryTitleAlignSelect.Size = new System.Drawing.Size(316, 39);
+            this.summaryTitleAlignSelect.Size = new System.Drawing.Size(121, 21);
             this.summaryTitleAlignSelect.TabIndex = 22;
             this.summaryTitleAlignSelect.Visible = false;
             this.summaryTitleAlignSelect.SelectedIndexChanged += new System.EventHandler(this.summaryTitleAlignSelect_SelectedIndexChanged);
             // 
             // summaryTitleColorButton
             // 
-            this.summaryTitleColorButton.Location = new System.Drawing.Point(376, 272);
-            this.summaryTitleColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleColorButton.Location = new System.Drawing.Point(141, 114);
             this.summaryTitleColorButton.Name = "summaryTitleColorButton";
-            this.summaryTitleColorButton.Size = new System.Drawing.Size(195, 55);
+            this.summaryTitleColorButton.Size = new System.Drawing.Size(73, 23);
             this.summaryTitleColorButton.TabIndex = 13;
             this.summaryTitleColorButton.Text = "Choose";
             this.summaryTitleColorButton.UseVisualStyleBackColor = true;
@@ -4233,20 +3916,18 @@
             // 
             // summaryTitleColorText
             // 
-            this.summaryTitleColorText.Location = new System.Drawing.Point(187, 277);
-            this.summaryTitleColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleColorText.Location = new System.Drawing.Point(70, 116);
             this.summaryTitleColorText.Name = "summaryTitleColorText";
-            this.summaryTitleColorText.Size = new System.Drawing.Size(185, 39);
+            this.summaryTitleColorText.Size = new System.Drawing.Size(72, 20);
             this.summaryTitleColorText.TabIndex = 14;
             this.summaryTitleColorText.Visible = false;
             // 
             // summaryTitleColorLabel
             // 
             this.summaryTitleColorLabel.AutoSize = true;
-            this.summaryTitleColorLabel.Location = new System.Drawing.Point(8, 284);
-            this.summaryTitleColorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.summaryTitleColorLabel.Location = new System.Drawing.Point(3, 119);
             this.summaryTitleColorLabel.Name = "summaryTitleColorLabel";
-            this.summaryTitleColorLabel.Size = new System.Drawing.Size(153, 32);
+            this.summaryTitleColorLabel.Size = new System.Drawing.Size(57, 13);
             this.summaryTitleColorLabel.TabIndex = 19;
             this.summaryTitleColorLabel.Text = "Title Color:";
             this.summaryTitleColorLabel.Visible = false;
@@ -4254,10 +3935,9 @@
             // summaryTitleSizeChoose
             // 
             this.summaryTitleSizeChoose.FormattingEnabled = true;
-            this.summaryTitleSizeChoose.Location = new System.Drawing.Point(187, 215);
-            this.summaryTitleSizeChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
             this.summaryTitleSizeChoose.Name = "summaryTitleSizeChoose";
-            this.summaryTitleSizeChoose.Size = new System.Drawing.Size(377, 39);
+            this.summaryTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.summaryTitleSizeChoose.TabIndex = 18;
             this.summaryTitleSizeChoose.Visible = false;
             this.summaryTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleSizeChoose_SelectedIndexChanged);
@@ -4265,10 +3945,9 @@
             // summaryTitleSizeLabel
             // 
             this.summaryTitleSizeLabel.AutoSize = true;
-            this.summaryTitleSizeLabel.Location = new System.Drawing.Point(8, 222);
-            this.summaryTitleSizeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.summaryTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
             this.summaryTitleSizeLabel.Name = "summaryTitleSizeLabel";
-            this.summaryTitleSizeLabel.Size = new System.Drawing.Size(141, 32);
+            this.summaryTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
             this.summaryTitleSizeLabel.TabIndex = 17;
             this.summaryTitleSizeLabel.Text = "Title Size:";
             this.summaryTitleSizeLabel.Visible = false;
@@ -4276,10 +3955,9 @@
             // summaryTitleFontLabel
             // 
             this.summaryTitleFontLabel.AutoSize = true;
-            this.summaryTitleFontLabel.Location = new System.Drawing.Point(8, 160);
-            this.summaryTitleFontLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.summaryTitleFontLabel.Location = new System.Drawing.Point(3, 67);
             this.summaryTitleFontLabel.Name = "summaryTitleFontLabel";
-            this.summaryTitleFontLabel.Size = new System.Drawing.Size(142, 32);
+            this.summaryTitleFontLabel.Size = new System.Drawing.Size(54, 13);
             this.summaryTitleFontLabel.TabIndex = 16;
             this.summaryTitleFontLabel.Text = "Title Font:";
             this.summaryTitleFontLabel.Visible = false;
@@ -4287,10 +3965,9 @@
             // summaryTitleFontChoose
             // 
             this.summaryTitleFontChoose.FormattingEnabled = true;
-            this.summaryTitleFontChoose.Location = new System.Drawing.Point(187, 153);
-            this.summaryTitleFontChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleFontChoose.Location = new System.Drawing.Point(70, 64);
             this.summaryTitleFontChoose.Name = "summaryTitleFontChoose";
-            this.summaryTitleFontChoose.Size = new System.Drawing.Size(377, 39);
+            this.summaryTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.summaryTitleFontChoose.TabIndex = 15;
             this.summaryTitleFontChoose.Visible = false;
             this.summaryTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleFontChoose_SelectedIndexChanged);
@@ -4298,10 +3975,9 @@
             // summaryTitleBoldCheck
             // 
             this.summaryTitleBoldCheck.AutoSize = true;
-            this.summaryTitleBoldCheck.Location = new System.Drawing.Point(16, 100);
-            this.summaryTitleBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
             this.summaryTitleBoldCheck.Name = "summaryTitleBoldCheck";
-            this.summaryTitleBoldCheck.Size = new System.Drawing.Size(173, 36);
+            this.summaryTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
             this.summaryTitleBoldCheck.TabIndex = 11;
             this.summaryTitleBoldCheck.Text = "Bold Title";
             this.summaryTitleBoldCheck.UseVisualStyleBackColor = true;
@@ -4312,10 +3988,9 @@
             // 
             this.summaryIncludeTitleCheck.AutoSize = true;
             this.summaryIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryIncludeTitleCheck.Location = new System.Drawing.Point(16, 45);
-            this.summaryIncludeTitleCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
             this.summaryIncludeTitleCheck.Name = "summaryIncludeTitleCheck";
-            this.summaryIncludeTitleCheck.Size = new System.Drawing.Size(207, 36);
+            this.summaryIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
             this.summaryIncludeTitleCheck.TabIndex = 1;
             this.summaryIncludeTitleCheck.Text = "Include Title";
             this.summaryIncludeTitleCheck.UseVisualStyleBackColor = true;
@@ -4325,10 +4000,9 @@
             // 
             this.summaryOwnPageCheck.AutoSize = true;
             this.summaryOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryOwnPageCheck.Location = new System.Drawing.Point(24, 45);
-            this.summaryOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryOwnPageCheck.Location = new System.Drawing.Point(9, 19);
             this.summaryOwnPageCheck.Name = "summaryOwnPageCheck";
-            this.summaryOwnPageCheck.Size = new System.Drawing.Size(266, 36);
+            this.summaryOwnPageCheck.Size = new System.Drawing.Size(107, 17);
             this.summaryOwnPageCheck.TabIndex = 0;
             this.summaryOwnPageCheck.Text = "On Its Own Page";
             this.summaryOwnPageCheck.UseVisualStyleBackColor = true;
@@ -4341,9 +4015,8 @@
             this.summaryHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.summaryHeader.Location = new System.Drawing.Point(0, 0);
-            this.summaryHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.summaryHeader.Name = "summaryHeader";
-            this.summaryHeader.Size = new System.Drawing.Size(1688, 72);
+            this.summaryHeader.Size = new System.Drawing.Size(633, 30);
             this.summaryHeader.TabIndex = 0;
             this.summaryHeader.Text = "SUMMARY";
             this.summaryHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4354,10 +4027,9 @@
             this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
             this.abstractPanel.Controls.Add(this.abstractHeader);
-            this.abstractPanel.Location = new System.Drawing.Point(0, 2597);
-            this.abstractPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractPanel.Location = new System.Drawing.Point(0, 1089);
             this.abstractPanel.Name = "abstractPanel";
-            this.abstractPanel.Size = new System.Drawing.Size(1690, 412);
+            this.abstractPanel.Size = new System.Drawing.Size(635, 174);
             this.abstractPanel.TabIndex = 9;
             // 
             // abstractOptionsGroupBox
@@ -4366,11 +4038,9 @@
             this.abstractOptionsGroupBox.Controls.Add(this.abstractTitleGroupBox);
             this.abstractOptionsGroupBox.Controls.Add(this.abstractOwnPageCheck);
             this.abstractOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.abstractOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.abstractOptionsGroupBox.Name = "abstractOptionsGroupBox";
-            this.abstractOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(1640, 298);
+            this.abstractOptionsGroupBox.Size = new System.Drawing.Size(615, 125);
             this.abstractOptionsGroupBox.TabIndex = 2;
             this.abstractOptionsGroupBox.TabStop = false;
             this.abstractOptionsGroupBox.Text = "Options";
@@ -4378,10 +4048,9 @@
             // abstractDefaultButton
             // 
             this.abstractDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractDefaultButton.Location = new System.Drawing.Point(24, 222);
-            this.abstractDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractDefaultButton.Location = new System.Drawing.Point(9, 93);
             this.abstractDefaultButton.Name = "abstractDefaultButton";
-            this.abstractDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.abstractDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.abstractDefaultButton.TabIndex = 14;
             this.abstractDefaultButton.Text = "APA Default";
             this.abstractDefaultButton.UseVisualStyleBackColor = true;
@@ -4400,11 +4069,9 @@
             this.abstractTitleGroupBox.Controls.Add(this.abstractTitleBoldCheck);
             this.abstractTitleGroupBox.Controls.Add(this.abstractIncludeTitleCheck);
             this.abstractTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.abstractTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleGroupBox.Location = new System.Drawing.Point(9, 42);
             this.abstractTitleGroupBox.Name = "abstractTitleGroupBox";
-            this.abstractTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.abstractTitleGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.abstractTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.abstractTitleGroupBox.TabIndex = 4;
             this.abstractTitleGroupBox.TabStop = false;
             this.abstractTitleGroupBox.Text = "Abstract Title";
@@ -4412,10 +4079,9 @@
             // abstractTitleAlignLabel
             // 
             this.abstractTitleAlignLabel.AutoSize = true;
-            this.abstractTitleAlignLabel.Location = new System.Drawing.Point(368, 48);
-            this.abstractTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.abstractTitleAlignLabel.Location = new System.Drawing.Point(138, 20);
             this.abstractTitleAlignLabel.Name = "abstractTitleAlignLabel";
-            this.abstractTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.abstractTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.abstractTitleAlignLabel.TabIndex = 21;
             this.abstractTitleAlignLabel.Text = "Align:";
             this.abstractTitleAlignLabel.Visible = false;
@@ -4427,20 +4093,18 @@
             "Left",
             "Center",
             "Right"});
-            this.abstractTitleAlignSelect.Location = new System.Drawing.Point(459, 41);
-            this.abstractTitleAlignSelect.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleAlignSelect.Location = new System.Drawing.Point(172, 17);
             this.abstractTitleAlignSelect.Name = "abstractTitleAlignSelect";
-            this.abstractTitleAlignSelect.Size = new System.Drawing.Size(316, 39);
+            this.abstractTitleAlignSelect.Size = new System.Drawing.Size(121, 21);
             this.abstractTitleAlignSelect.TabIndex = 20;
             this.abstractTitleAlignSelect.Visible = false;
             this.abstractTitleAlignSelect.SelectedIndexChanged += new System.EventHandler(this.abstractTitleAlignSelect_SelectedIndexChanged);
             // 
             // abstractTitleColorButton
             // 
-            this.abstractTitleColorButton.Location = new System.Drawing.Point(376, 272);
-            this.abstractTitleColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleColorButton.Location = new System.Drawing.Point(141, 114);
             this.abstractTitleColorButton.Name = "abstractTitleColorButton";
-            this.abstractTitleColorButton.Size = new System.Drawing.Size(195, 55);
+            this.abstractTitleColorButton.Size = new System.Drawing.Size(73, 23);
             this.abstractTitleColorButton.TabIndex = 13;
             this.abstractTitleColorButton.Text = "Choose";
             this.abstractTitleColorButton.UseVisualStyleBackColor = true;
@@ -4448,20 +4112,18 @@
             // 
             // abstractTitleColorText
             // 
-            this.abstractTitleColorText.Location = new System.Drawing.Point(187, 277);
-            this.abstractTitleColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleColorText.Location = new System.Drawing.Point(70, 116);
             this.abstractTitleColorText.Name = "abstractTitleColorText";
-            this.abstractTitleColorText.Size = new System.Drawing.Size(185, 39);
+            this.abstractTitleColorText.Size = new System.Drawing.Size(72, 20);
             this.abstractTitleColorText.TabIndex = 14;
             this.abstractTitleColorText.Visible = false;
             // 
             // abstractTitleColorLabel
             // 
             this.abstractTitleColorLabel.AutoSize = true;
-            this.abstractTitleColorLabel.Location = new System.Drawing.Point(8, 284);
-            this.abstractTitleColorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.abstractTitleColorLabel.Location = new System.Drawing.Point(3, 119);
             this.abstractTitleColorLabel.Name = "abstractTitleColorLabel";
-            this.abstractTitleColorLabel.Size = new System.Drawing.Size(153, 32);
+            this.abstractTitleColorLabel.Size = new System.Drawing.Size(57, 13);
             this.abstractTitleColorLabel.TabIndex = 19;
             this.abstractTitleColorLabel.Text = "Title Color:";
             this.abstractTitleColorLabel.Visible = false;
@@ -4469,20 +4131,18 @@
             // abstractTitleSizeChoose
             // 
             this.abstractTitleSizeChoose.FormattingEnabled = true;
-            this.abstractTitleSizeChoose.Location = new System.Drawing.Point(187, 215);
-            this.abstractTitleSizeChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
             this.abstractTitleSizeChoose.Name = "abstractTitleSizeChoose";
-            this.abstractTitleSizeChoose.Size = new System.Drawing.Size(377, 39);
+            this.abstractTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.abstractTitleSizeChoose.TabIndex = 18;
             this.abstractTitleSizeChoose.Visible = false;
             // 
             // abstractTitleSizeLabel
             // 
             this.abstractTitleSizeLabel.AutoSize = true;
-            this.abstractTitleSizeLabel.Location = new System.Drawing.Point(8, 222);
-            this.abstractTitleSizeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.abstractTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
             this.abstractTitleSizeLabel.Name = "abstractTitleSizeLabel";
-            this.abstractTitleSizeLabel.Size = new System.Drawing.Size(141, 32);
+            this.abstractTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
             this.abstractTitleSizeLabel.TabIndex = 17;
             this.abstractTitleSizeLabel.Text = "Title Size:";
             this.abstractTitleSizeLabel.Visible = false;
@@ -4490,10 +4150,9 @@
             // abstractTitleFontLabel
             // 
             this.abstractTitleFontLabel.AutoSize = true;
-            this.abstractTitleFontLabel.Location = new System.Drawing.Point(8, 160);
-            this.abstractTitleFontLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.abstractTitleFontLabel.Location = new System.Drawing.Point(3, 67);
             this.abstractTitleFontLabel.Name = "abstractTitleFontLabel";
-            this.abstractTitleFontLabel.Size = new System.Drawing.Size(142, 32);
+            this.abstractTitleFontLabel.Size = new System.Drawing.Size(54, 13);
             this.abstractTitleFontLabel.TabIndex = 16;
             this.abstractTitleFontLabel.Text = "Title Font:";
             this.abstractTitleFontLabel.Visible = false;
@@ -4501,20 +4160,18 @@
             // abstractTitleFontChoose
             // 
             this.abstractTitleFontChoose.FormattingEnabled = true;
-            this.abstractTitleFontChoose.Location = new System.Drawing.Point(187, 153);
-            this.abstractTitleFontChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleFontChoose.Location = new System.Drawing.Point(70, 64);
             this.abstractTitleFontChoose.Name = "abstractTitleFontChoose";
-            this.abstractTitleFontChoose.Size = new System.Drawing.Size(377, 39);
+            this.abstractTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.abstractTitleFontChoose.TabIndex = 15;
             this.abstractTitleFontChoose.Visible = false;
             // 
             // abstractTitleBoldCheck
             // 
             this.abstractTitleBoldCheck.AutoSize = true;
-            this.abstractTitleBoldCheck.Location = new System.Drawing.Point(16, 100);
-            this.abstractTitleBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
             this.abstractTitleBoldCheck.Name = "abstractTitleBoldCheck";
-            this.abstractTitleBoldCheck.Size = new System.Drawing.Size(173, 36);
+            this.abstractTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
             this.abstractTitleBoldCheck.TabIndex = 11;
             this.abstractTitleBoldCheck.Text = "Bold Title";
             this.abstractTitleBoldCheck.UseVisualStyleBackColor = true;
@@ -4525,10 +4182,9 @@
             // 
             this.abstractIncludeTitleCheck.AutoSize = true;
             this.abstractIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractIncludeTitleCheck.Location = new System.Drawing.Point(16, 45);
-            this.abstractIncludeTitleCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractIncludeTitleCheck.Location = new System.Drawing.Point(6, 19);
             this.abstractIncludeTitleCheck.Name = "abstractIncludeTitleCheck";
-            this.abstractIncludeTitleCheck.Size = new System.Drawing.Size(207, 36);
+            this.abstractIncludeTitleCheck.Size = new System.Drawing.Size(84, 17);
             this.abstractIncludeTitleCheck.TabIndex = 1;
             this.abstractIncludeTitleCheck.Text = "Include Title";
             this.abstractIncludeTitleCheck.UseVisualStyleBackColor = true;
@@ -4538,10 +4194,9 @@
             // 
             this.abstractOwnPageCheck.AutoSize = true;
             this.abstractOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractOwnPageCheck.Location = new System.Drawing.Point(24, 45);
-            this.abstractOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractOwnPageCheck.Location = new System.Drawing.Point(9, 19);
             this.abstractOwnPageCheck.Name = "abstractOwnPageCheck";
-            this.abstractOwnPageCheck.Size = new System.Drawing.Size(266, 36);
+            this.abstractOwnPageCheck.Size = new System.Drawing.Size(107, 17);
             this.abstractOwnPageCheck.TabIndex = 0;
             this.abstractOwnPageCheck.Text = "On Its Own Page";
             this.abstractOwnPageCheck.UseVisualStyleBackColor = true;
@@ -4554,9 +4209,8 @@
             this.abstractHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abstractHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.abstractHeader.Location = new System.Drawing.Point(0, 0);
-            this.abstractHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.abstractHeader.Name = "abstractHeader";
-            this.abstractHeader.Size = new System.Drawing.Size(1688, 72);
+            this.abstractHeader.Size = new System.Drawing.Size(633, 30);
             this.abstractHeader.TabIndex = 0;
             this.abstractHeader.Text = "ABSTRACT";
             this.abstractHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4571,18 +4225,16 @@
             this.generalPanel.Controls.Add(this.apaMlaGroupBox);
             this.generalPanel.Controls.Add(generalHeader);
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
-            this.generalPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(1690, 1046);
+            this.generalPanel.Size = new System.Drawing.Size(635, 440);
             this.generalPanel.TabIndex = 0;
             // 
             // generalDefaultButton
             // 
             this.generalDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generalDefaultButton.Location = new System.Drawing.Point(24, 951);
-            this.generalDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.generalDefaultButton.Location = new System.Drawing.Point(9, 399);
             this.generalDefaultButton.Name = "generalDefaultButton";
-            this.generalDefaultButton.Size = new System.Drawing.Size(336, 55);
+            this.generalDefaultButton.Size = new System.Drawing.Size(126, 23);
             this.generalDefaultButton.TabIndex = 19;
             this.generalDefaultButton.Text = "APA Defaults";
             this.generalDefaultButton.UseVisualStyleBackColor = true;
@@ -4598,11 +4250,9 @@
             this.includeInPapeGroupBox.Controls.Add(this.summaryIncludeCheck);
             this.includeInPapeGroupBox.Controls.Add(this.titlePageIncludeCheck);
             this.includeInPapeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.includeInPapeGroupBox.Location = new System.Drawing.Point(24, 482);
-            this.includeInPapeGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.includeInPapeGroupBox.Location = new System.Drawing.Point(9, 202);
             this.includeInPapeGroupBox.Name = "includeInPapeGroupBox";
-            this.includeInPapeGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.includeInPapeGroupBox.Size = new System.Drawing.Size(1640, 441);
+            this.includeInPapeGroupBox.Size = new System.Drawing.Size(615, 185);
             this.includeInPapeGroupBox.TabIndex = 18;
             this.includeInPapeGroupBox.TabStop = false;
             this.includeInPapeGroupBox.Text = "Include In Paper";
@@ -4611,10 +4261,9 @@
             // 
             this.referencesIncludeCheck.AutoSize = true;
             this.referencesIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIncludeCheck.Location = new System.Drawing.Point(24, 374);
-            this.referencesIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesIncludeCheck.Location = new System.Drawing.Point(9, 157);
             this.referencesIncludeCheck.Name = "referencesIncludeCheck";
-            this.referencesIncludeCheck.Size = new System.Drawing.Size(371, 36);
+            this.referencesIncludeCheck.Size = new System.Drawing.Size(147, 17);
             this.referencesIncludeCheck.TabIndex = 14;
             this.referencesIncludeCheck.Text = "Include References Page";
             this.referencesIncludeCheck.UseVisualStyleBackColor = true;
@@ -4624,10 +4273,9 @@
             // 
             this.conclusionIncludeCheck.AutoSize = true;
             this.conclusionIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionIncludeCheck.Location = new System.Drawing.Point(24, 320);
-            this.conclusionIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionIncludeCheck.Location = new System.Drawing.Point(9, 134);
             this.conclusionIncludeCheck.Name = "conclusionIncludeCheck";
-            this.conclusionIncludeCheck.Size = new System.Drawing.Size(294, 36);
+            this.conclusionIncludeCheck.Size = new System.Drawing.Size(116, 17);
             this.conclusionIncludeCheck.TabIndex = 12;
             this.conclusionIncludeCheck.Text = "Include Conclusion";
             this.conclusionIncludeCheck.UseVisualStyleBackColor = true;
@@ -4637,10 +4285,9 @@
             // 
             this.footerIncludeCheck.AutoSize = true;
             this.footerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.footerIncludeCheck.Location = new System.Drawing.Point(24, 265);
-            this.footerIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.footerIncludeCheck.Location = new System.Drawing.Point(9, 111);
             this.footerIncludeCheck.Name = "footerIncludeCheck";
-            this.footerIncludeCheck.Size = new System.Drawing.Size(234, 36);
+            this.footerIncludeCheck.Size = new System.Drawing.Size(94, 17);
             this.footerIncludeCheck.TabIndex = 11;
             this.footerIncludeCheck.Text = "Include Footer";
             this.footerIncludeCheck.UseVisualStyleBackColor = true;
@@ -4650,10 +4297,9 @@
             // 
             this.headerIncludeCheck.AutoSize = true;
             this.headerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerIncludeCheck.Location = new System.Drawing.Point(24, 210);
-            this.headerIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerIncludeCheck.Location = new System.Drawing.Point(9, 88);
             this.headerIncludeCheck.Name = "headerIncludeCheck";
-            this.headerIncludeCheck.Size = new System.Drawing.Size(245, 36);
+            this.headerIncludeCheck.Size = new System.Drawing.Size(99, 17);
             this.headerIncludeCheck.TabIndex = 10;
             this.headerIncludeCheck.Text = "Include Header";
             this.headerIncludeCheck.UseVisualStyleBackColor = true;
@@ -4663,10 +4309,9 @@
             // 
             this.abstractIncludeCheck.AutoSize = true;
             this.abstractIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractIncludeCheck.Location = new System.Drawing.Point(24, 155);
-            this.abstractIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractIncludeCheck.Location = new System.Drawing.Point(9, 65);
             this.abstractIncludeCheck.Name = "abstractIncludeCheck";
-            this.abstractIncludeCheck.Size = new System.Drawing.Size(256, 36);
+            this.abstractIncludeCheck.Size = new System.Drawing.Size(103, 17);
             this.abstractIncludeCheck.TabIndex = 9;
             this.abstractIncludeCheck.Text = "Include Abstract";
             this.abstractIncludeCheck.UseVisualStyleBackColor = true;
@@ -4676,10 +4321,9 @@
             // 
             this.summaryIncludeCheck.AutoSize = true;
             this.summaryIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryIncludeCheck.Location = new System.Drawing.Point(24, 100);
-            this.summaryIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryIncludeCheck.Location = new System.Drawing.Point(9, 42);
             this.summaryIncludeCheck.Name = "summaryIncludeCheck";
-            this.summaryIncludeCheck.Size = new System.Drawing.Size(272, 36);
+            this.summaryIncludeCheck.Size = new System.Drawing.Size(107, 17);
             this.summaryIncludeCheck.TabIndex = 8;
             this.summaryIncludeCheck.Text = "Include Summary";
             this.summaryIncludeCheck.UseVisualStyleBackColor = true;
@@ -4689,10 +4333,9 @@
             // 
             this.titlePageIncludeCheck.AutoSize = true;
             this.titlePageIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageIncludeCheck.Location = new System.Drawing.Point(24, 45);
-            this.titlePageIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titlePageIncludeCheck.Location = new System.Drawing.Point(9, 19);
             this.titlePageIncludeCheck.Name = "titlePageIncludeCheck";
-            this.titlePageIncludeCheck.Size = new System.Drawing.Size(281, 36);
+            this.titlePageIncludeCheck.Size = new System.Drawing.Size(112, 17);
             this.titlePageIncludeCheck.TabIndex = 2;
             this.titlePageIncludeCheck.Text = "Include Title Page";
             this.titlePageIncludeCheck.UseVisualStyleBackColor = true;
@@ -4702,11 +4345,9 @@
             // 
             this.paperTitleGroupBox.Controls.Add(this.paperTitleEnter);
             this.paperTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paperTitleGroupBox.Location = new System.Drawing.Point(24, 86);
-            this.paperTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.paperTitleGroupBox.Location = new System.Drawing.Point(9, 36);
             this.paperTitleGroupBox.Name = "paperTitleGroupBox";
-            this.paperTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.paperTitleGroupBox.Size = new System.Drawing.Size(1640, 131);
+            this.paperTitleGroupBox.Size = new System.Drawing.Size(615, 55);
             this.paperTitleGroupBox.TabIndex = 16;
             this.paperTitleGroupBox.TabStop = false;
             this.paperTitleGroupBox.Text = "Title of Paper";
@@ -4714,10 +4355,9 @@
             // paperTitleEnter
             // 
             this.paperTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paperTitleEnter.Location = new System.Drawing.Point(24, 45);
-            this.paperTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.paperTitleEnter.Location = new System.Drawing.Point(9, 19);
             this.paperTitleEnter.Name = "paperTitleEnter";
-            this.paperTitleEnter.Size = new System.Drawing.Size(519, 39);
+            this.paperTitleEnter.Size = new System.Drawing.Size(197, 20);
             this.paperTitleEnter.TabIndex = 0;
             this.paperTitleEnter.TextChanged += new System.EventHandler(this.paperTitleEnter_TextChanged);
             // 
@@ -4726,11 +4366,9 @@
             this.apaMlaGroupBox.Controls.Add(this.mlaRadio);
             this.apaMlaGroupBox.Controls.Add(this.apaRadio);
             this.apaMlaGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apaMlaGroupBox.Location = new System.Drawing.Point(24, 267);
-            this.apaMlaGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.apaMlaGroupBox.Location = new System.Drawing.Point(9, 112);
             this.apaMlaGroupBox.Name = "apaMlaGroupBox";
-            this.apaMlaGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.apaMlaGroupBox.Size = new System.Drawing.Size(1640, 167);
+            this.apaMlaGroupBox.Size = new System.Drawing.Size(615, 70);
             this.apaMlaGroupBox.TabIndex = 15;
             this.apaMlaGroupBox.TabStop = false;
             this.apaMlaGroupBox.Text = "APA or MLA";
@@ -4739,10 +4377,9 @@
             // 
             this.mlaRadio.AutoSize = true;
             this.mlaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mlaRadio.Location = new System.Drawing.Point(24, 100);
-            this.mlaRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.mlaRadio.Location = new System.Drawing.Point(9, 42);
             this.mlaRadio.Name = "mlaRadio";
-            this.mlaRadio.Size = new System.Drawing.Size(110, 36);
+            this.mlaRadio.Size = new System.Drawing.Size(47, 17);
             this.mlaRadio.TabIndex = 1;
             this.mlaRadio.Text = "MLA";
             this.mlaRadio.UseVisualStyleBackColor = true;
@@ -4753,10 +4390,9 @@
             this.apaRadio.AutoSize = true;
             this.apaRadio.Checked = true;
             this.apaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apaRadio.Location = new System.Drawing.Point(24, 45);
-            this.apaRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.apaRadio.Location = new System.Drawing.Point(9, 19);
             this.apaRadio.Name = "apaRadio";
-            this.apaRadio.Size = new System.Drawing.Size(109, 36);
+            this.apaRadio.Size = new System.Drawing.Size(46, 17);
             this.apaRadio.TabIndex = 0;
             this.apaRadio.TabStop = true;
             this.apaRadio.Text = "APA";
@@ -4770,10 +4406,9 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 6779);
-            this.referencesPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 2843);
             this.referencesPanel.Name = "referencesPanel";
-            this.referencesPanel.Size = new System.Drawing.Size(1690, 641);
+            this.referencesPanel.Size = new System.Drawing.Size(635, 270);
             this.referencesPanel.TabIndex = 6;
             // 
             // referencesOptionsGroupBox
@@ -4784,11 +4419,9 @@
             this.referencesOptionsGroupBox.Controls.Add(this.referencesIndentationGroupBox);
             this.referencesOptionsGroupBox.Controls.Add(this.referencesTitleGroupBox);
             this.referencesOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.referencesOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesOptionsGroupBox.Location = new System.Drawing.Point(9, 33);
             this.referencesOptionsGroupBox.Name = "referencesOptionsGroupBox";
-            this.referencesOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(1640, 441);
+            this.referencesOptionsGroupBox.Size = new System.Drawing.Size(615, 185);
             this.referencesOptionsGroupBox.TabIndex = 4;
             this.referencesOptionsGroupBox.TabStop = false;
             this.referencesOptionsGroupBox.Text = "Options";
@@ -4800,10 +4433,9 @@
             "Alphabetically A-Z",
             "First Added to Last Added",
             "Last Added to First Added"});
-            this.referencesOrderChoose.Location = new System.Drawing.Point(117, 362);
-            this.referencesOrderChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesOrderChoose.Location = new System.Drawing.Point(44, 152);
             this.referencesOrderChoose.Name = "referencesOrderChoose";
-            this.referencesOrderChoose.Size = new System.Drawing.Size(377, 39);
+            this.referencesOrderChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesOrderChoose.TabIndex = 23;
             this.referencesOrderChoose.SelectedIndexChanged += new System.EventHandler(this.referencesOrderChoose_SelectedIndexChanged);
             // 
@@ -4811,10 +4443,9 @@
             // 
             this.referencesOrderLabel.AutoSize = true;
             this.referencesOrderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesOrderLabel.Location = new System.Drawing.Point(16, 370);
-            this.referencesOrderLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesOrderLabel.Location = new System.Drawing.Point(6, 155);
             this.referencesOrderLabel.Name = "referencesOrderLabel";
-            this.referencesOrderLabel.Size = new System.Drawing.Size(95, 32);
+            this.referencesOrderLabel.Size = new System.Drawing.Size(36, 13);
             this.referencesOrderLabel.TabIndex = 22;
             this.referencesOrderLabel.Text = "Order:";
             // 
@@ -4822,10 +4453,9 @@
             // 
             this.referencesEmptyLineBetweenCheck.AutoSize = true;
             this.referencesEmptyLineBetweenCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesEmptyLineBetweenCheck.Location = new System.Drawing.Point(24, 308);
-            this.referencesEmptyLineBetweenCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesEmptyLineBetweenCheck.Location = new System.Drawing.Point(9, 129);
             this.referencesEmptyLineBetweenCheck.Name = "referencesEmptyLineBetweenCheck";
-            this.referencesEmptyLineBetweenCheck.Size = new System.Drawing.Size(581, 36);
+            this.referencesEmptyLineBetweenCheck.Size = new System.Drawing.Size(226, 17);
             this.referencesEmptyLineBetweenCheck.TabIndex = 21;
             this.referencesEmptyLineBetweenCheck.Text = "Add Empty Line Between Each Reference";
             this.referencesEmptyLineBetweenCheck.UseVisualStyleBackColor = true;
@@ -4837,21 +4467,18 @@
             this.referencesIndentationGroupBox.Controls.Add(this.referencesIndentTabsLabel);
             this.referencesIndentationGroupBox.Controls.Add(this.referencesHangingIndentCheck);
             this.referencesIndentationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIndentationGroupBox.Location = new System.Drawing.Point(24, 174);
-            this.referencesIndentationGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesIndentationGroupBox.Location = new System.Drawing.Point(9, 73);
             this.referencesIndentationGroupBox.Name = "referencesIndentationGroupBox";
-            this.referencesIndentationGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.referencesIndentationGroupBox.Size = new System.Drawing.Size(597, 45);
             this.referencesIndentationGroupBox.TabIndex = 20;
             this.referencesIndentationGroupBox.TabStop = false;
             this.referencesIndentationGroupBox.Text = "Indentation";
             // 
             // referencesIndentTabsEnter
             // 
-            this.referencesIndentTabsEnter.Location = new System.Drawing.Point(365, 100);
-            this.referencesIndentTabsEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesIndentTabsEnter.Location = new System.Drawing.Point(137, 42);
             this.referencesIndentTabsEnter.Name = "referencesIndentTabsEnter";
-            this.referencesIndentTabsEnter.Size = new System.Drawing.Size(320, 39);
+            this.referencesIndentTabsEnter.Size = new System.Drawing.Size(120, 20);
             this.referencesIndentTabsEnter.TabIndex = 17;
             this.referencesIndentTabsEnter.Visible = false;
             this.referencesIndentTabsEnter.ValueChanged += new System.EventHandler(this.referencesIndentTabsEnter_ValueChanged);
@@ -4860,10 +4487,9 @@
             // 
             this.referencesIndentTabsLabel.AutoSize = true;
             this.referencesIndentTabsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIndentTabsLabel.Location = new System.Drawing.Point(8, 105);
-            this.referencesIndentTabsLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesIndentTabsLabel.Location = new System.Drawing.Point(3, 44);
             this.referencesIndentTabsLabel.Name = "referencesIndentTabsLabel";
-            this.referencesIndentTabsLabel.Size = new System.Drawing.Size(348, 32);
+            this.referencesIndentTabsLabel.Size = new System.Drawing.Size(133, 13);
             this.referencesIndentTabsLabel.TabIndex = 16;
             this.referencesIndentTabsLabel.Text = "Number Of Tabs Indented:";
             this.referencesIndentTabsLabel.Visible = false;
@@ -4872,10 +4498,9 @@
             // 
             this.referencesHangingIndentCheck.AutoSize = true;
             this.referencesHangingIndentCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesHangingIndentCheck.Location = new System.Drawing.Point(16, 45);
-            this.referencesHangingIndentCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesHangingIndentCheck.Location = new System.Drawing.Point(6, 19);
             this.referencesHangingIndentCheck.Name = "referencesHangingIndentCheck";
-            this.referencesHangingIndentCheck.Size = new System.Drawing.Size(496, 36);
+            this.referencesHangingIndentCheck.Size = new System.Drawing.Size(195, 17);
             this.referencesHangingIndentCheck.TabIndex = 15;
             this.referencesHangingIndentCheck.Text = "Add Hanging Indent To References";
             this.referencesHangingIndentCheck.UseVisualStyleBackColor = true;
@@ -4897,11 +4522,9 @@
             this.referencesTitleGroupBox.Controls.Add(this.referencesTitleEnter);
             this.referencesTitleGroupBox.Controls.Add(this.referencesTitleLabel);
             this.referencesTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleGroupBox.Location = new System.Drawing.Point(24, 45);
-            this.referencesTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleGroupBox.Location = new System.Drawing.Point(9, 19);
             this.referencesTitleGroupBox.Name = "referencesTitleGroupBox";
-            this.referencesTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.referencesTitleGroupBox.Size = new System.Drawing.Size(1592, 107);
+            this.referencesTitleGroupBox.Size = new System.Drawing.Size(597, 45);
             this.referencesTitleGroupBox.TabIndex = 4;
             this.referencesTitleGroupBox.TabStop = false;
             this.referencesTitleGroupBox.Text = "References Title";
@@ -4909,10 +4532,9 @@
             // referencesTitleAlignLabel
             // 
             this.referencesTitleAlignLabel.AutoSize = true;
-            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(800, 48);
-            this.referencesTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(300, 20);
             this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
-            this.referencesTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
+            this.referencesTitleAlignLabel.Size = new System.Drawing.Size(33, 13);
             this.referencesTitleAlignLabel.TabIndex = 27;
             this.referencesTitleAlignLabel.Text = "Align:";
             this.referencesTitleAlignLabel.Visible = false;
@@ -4924,20 +4546,18 @@
             "Left",
             "Center",
             "Right"});
-            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(891, 41);
-            this.referencesTitleAlignChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleAlignChoose.Location = new System.Drawing.Point(334, 17);
             this.referencesTitleAlignChoose.Name = "referencesTitleAlignChoose";
-            this.referencesTitleAlignChoose.Size = new System.Drawing.Size(316, 39);
+            this.referencesTitleAlignChoose.Size = new System.Drawing.Size(121, 21);
             this.referencesTitleAlignChoose.TabIndex = 26;
             this.referencesTitleAlignChoose.Visible = false;
             this.referencesTitleAlignChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleAlignChoose_SelectedIndexChanged);
             // 
             // referencesTitleColorButton
             // 
-            this.referencesTitleColorButton.Location = new System.Drawing.Point(376, 272);
-            this.referencesTitleColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleColorButton.Location = new System.Drawing.Point(141, 114);
             this.referencesTitleColorButton.Name = "referencesTitleColorButton";
-            this.referencesTitleColorButton.Size = new System.Drawing.Size(195, 55);
+            this.referencesTitleColorButton.Size = new System.Drawing.Size(73, 23);
             this.referencesTitleColorButton.TabIndex = 13;
             this.referencesTitleColorButton.Text = "Choose";
             this.referencesTitleColorButton.UseVisualStyleBackColor = true;
@@ -4946,20 +4566,18 @@
             // 
             // referencesTitleColorText
             // 
-            this.referencesTitleColorText.Location = new System.Drawing.Point(187, 277);
-            this.referencesTitleColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleColorText.Location = new System.Drawing.Point(70, 116);
             this.referencesTitleColorText.Name = "referencesTitleColorText";
-            this.referencesTitleColorText.Size = new System.Drawing.Size(185, 39);
+            this.referencesTitleColorText.Size = new System.Drawing.Size(72, 20);
             this.referencesTitleColorText.TabIndex = 14;
             this.referencesTitleColorText.Visible = false;
             // 
             // referencesTitleColorLabel
             // 
             this.referencesTitleColorLabel.AutoSize = true;
-            this.referencesTitleColorLabel.Location = new System.Drawing.Point(8, 284);
-            this.referencesTitleColorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesTitleColorLabel.Location = new System.Drawing.Point(3, 119);
             this.referencesTitleColorLabel.Name = "referencesTitleColorLabel";
-            this.referencesTitleColorLabel.Size = new System.Drawing.Size(153, 32);
+            this.referencesTitleColorLabel.Size = new System.Drawing.Size(57, 13);
             this.referencesTitleColorLabel.TabIndex = 19;
             this.referencesTitleColorLabel.Text = "Title Color:";
             this.referencesTitleColorLabel.Visible = false;
@@ -4967,10 +4585,9 @@
             // referencesTitleSizeChoose
             // 
             this.referencesTitleSizeChoose.FormattingEnabled = true;
-            this.referencesTitleSizeChoose.Location = new System.Drawing.Point(187, 215);
-            this.referencesTitleSizeChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleSizeChoose.Location = new System.Drawing.Point(70, 90);
             this.referencesTitleSizeChoose.Name = "referencesTitleSizeChoose";
-            this.referencesTitleSizeChoose.Size = new System.Drawing.Size(377, 39);
+            this.referencesTitleSizeChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesTitleSizeChoose.TabIndex = 18;
             this.referencesTitleSizeChoose.Visible = false;
             this.referencesTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleSizeChoose_SelectedIndexChanged);
@@ -4978,10 +4595,9 @@
             // referencesTitleSizeLabel
             // 
             this.referencesTitleSizeLabel.AutoSize = true;
-            this.referencesTitleSizeLabel.Location = new System.Drawing.Point(8, 222);
-            this.referencesTitleSizeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesTitleSizeLabel.Location = new System.Drawing.Point(3, 93);
             this.referencesTitleSizeLabel.Name = "referencesTitleSizeLabel";
-            this.referencesTitleSizeLabel.Size = new System.Drawing.Size(141, 32);
+            this.referencesTitleSizeLabel.Size = new System.Drawing.Size(53, 13);
             this.referencesTitleSizeLabel.TabIndex = 17;
             this.referencesTitleSizeLabel.Text = "Title Size:";
             this.referencesTitleSizeLabel.Visible = false;
@@ -4989,10 +4605,9 @@
             // referencesTitleFontLabel
             // 
             this.referencesTitleFontLabel.AutoSize = true;
-            this.referencesTitleFontLabel.Location = new System.Drawing.Point(8, 160);
-            this.referencesTitleFontLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesTitleFontLabel.Location = new System.Drawing.Point(3, 67);
             this.referencesTitleFontLabel.Name = "referencesTitleFontLabel";
-            this.referencesTitleFontLabel.Size = new System.Drawing.Size(142, 32);
+            this.referencesTitleFontLabel.Size = new System.Drawing.Size(54, 13);
             this.referencesTitleFontLabel.TabIndex = 16;
             this.referencesTitleFontLabel.Text = "Title Font:";
             this.referencesTitleFontLabel.Visible = false;
@@ -5000,10 +4615,9 @@
             // referencesTitleFontChoose
             // 
             this.referencesTitleFontChoose.FormattingEnabled = true;
-            this.referencesTitleFontChoose.Location = new System.Drawing.Point(187, 153);
-            this.referencesTitleFontChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleFontChoose.Location = new System.Drawing.Point(70, 64);
             this.referencesTitleFontChoose.Name = "referencesTitleFontChoose";
-            this.referencesTitleFontChoose.Size = new System.Drawing.Size(377, 39);
+            this.referencesTitleFontChoose.Size = new System.Drawing.Size(144, 21);
             this.referencesTitleFontChoose.TabIndex = 15;
             this.referencesTitleFontChoose.Visible = false;
             this.referencesTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.referencesTitleFontChoose_SelectedIndexChanged);
@@ -5011,10 +4625,9 @@
             // referencesTitleBoldCheck
             // 
             this.referencesTitleBoldCheck.AutoSize = true;
-            this.referencesTitleBoldCheck.Location = new System.Drawing.Point(16, 100);
-            this.referencesTitleBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleBoldCheck.Location = new System.Drawing.Point(6, 42);
             this.referencesTitleBoldCheck.Name = "referencesTitleBoldCheck";
-            this.referencesTitleBoldCheck.Size = new System.Drawing.Size(173, 36);
+            this.referencesTitleBoldCheck.Size = new System.Drawing.Size(70, 17);
             this.referencesTitleBoldCheck.TabIndex = 11;
             this.referencesTitleBoldCheck.Text = "Bold Title";
             this.referencesTitleBoldCheck.UseVisualStyleBackColor = true;
@@ -5025,10 +4638,9 @@
             // 
             this.referencesTitleIncludeCheck.AutoSize = true;
             this.referencesTitleIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleIncludeCheck.Location = new System.Drawing.Point(16, 45);
-            this.referencesTitleIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleIncludeCheck.Location = new System.Drawing.Point(6, 19);
             this.referencesTitleIncludeCheck.Name = "referencesTitleIncludeCheck";
-            this.referencesTitleIncludeCheck.Size = new System.Drawing.Size(207, 36);
+            this.referencesTitleIncludeCheck.Size = new System.Drawing.Size(84, 17);
             this.referencesTitleIncludeCheck.TabIndex = 1;
             this.referencesTitleIncludeCheck.Text = "Include Title";
             this.referencesTitleIncludeCheck.UseVisualStyleBackColor = true;
@@ -5037,10 +4649,9 @@
             // referencesTitleEnter
             // 
             this.referencesTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleEnter.Location = new System.Drawing.Point(328, 41);
-            this.referencesTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesTitleEnter.Location = new System.Drawing.Point(123, 17);
             this.referencesTitleEnter.Name = "referencesTitleEnter";
-            this.referencesTitleEnter.Size = new System.Drawing.Size(417, 39);
+            this.referencesTitleEnter.Size = new System.Drawing.Size(159, 20);
             this.referencesTitleEnter.TabIndex = 2;
             this.referencesTitleEnter.Visible = false;
             this.referencesTitleEnter.TextChanged += new System.EventHandler(this.referencesTitleEnter_TextChanged);
@@ -5049,10 +4660,9 @@
             // 
             this.referencesTitleLabel.AutoSize = true;
             this.referencesTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesTitleLabel.Location = new System.Drawing.Point(251, 48);
-            this.referencesTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.referencesTitleLabel.Location = new System.Drawing.Point(94, 20);
             this.referencesTitleLabel.Name = "referencesTitleLabel";
-            this.referencesTitleLabel.Size = new System.Drawing.Size(78, 32);
+            this.referencesTitleLabel.Size = new System.Drawing.Size(30, 13);
             this.referencesTitleLabel.TabIndex = 3;
             this.referencesTitleLabel.Text = "Title:";
             this.referencesTitleLabel.Visible = false;
@@ -5064,9 +4674,8 @@
             this.referencesHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referencesHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.referencesHeader.Location = new System.Drawing.Point(0, 0);
-            this.referencesHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.referencesHeader.Name = "referencesHeader";
-            this.referencesHeader.Size = new System.Drawing.Size(1688, 72);
+            this.referencesHeader.Size = new System.Drawing.Size(633, 30);
             this.referencesHeader.TabIndex = 0;
             this.referencesHeader.Text = "REFERENCES";
             this.referencesHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5074,10 +4683,9 @@
             // referencesDefaultButton
             // 
             this.referencesDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesDefaultButton.Location = new System.Drawing.Point(24, 556);
-            this.referencesDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.referencesDefaultButton.Location = new System.Drawing.Point(9, 233);
             this.referencesDefaultButton.Name = "referencesDefaultButton";
-            this.referencesDefaultButton.Size = new System.Drawing.Size(251, 55);
+            this.referencesDefaultButton.Size = new System.Drawing.Size(94, 23);
             this.referencesDefaultButton.TabIndex = 14;
             this.referencesDefaultButton.Text = "APA Default";
             this.referencesDefaultButton.UseVisualStyleBackColor = true;
@@ -5087,11 +4695,10 @@
             // 
             this.contentTab.AutoScroll = true;
             this.contentTab.Controls.Add(this.contentPanel);
-            this.contentTab.Location = new System.Drawing.Point(10, 35);
-            this.contentTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.contentTab.Location = new System.Drawing.Point(4, 29);
             this.contentTab.Name = "contentTab";
-            this.contentTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.contentTab.Size = new System.Drawing.Size(1611, 737);
+            this.contentTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.contentTab.Size = new System.Drawing.Size(604, 295);
             this.contentTab.TabIndex = 1;
             this.contentTab.Text = "CONTENT";
             this.contentTab.UseVisualStyleBackColor = true;
@@ -5107,9 +4714,8 @@
             this.contentPanel.Controls.Add(this.summaryContentGroupBox);
             this.contentPanel.Controls.Add(this.label23);
             this.contentPanel.Location = new System.Drawing.Point(0, 0);
-            this.contentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1690, 3312);
+            this.contentPanel.Size = new System.Drawing.Size(635, 1390);
             this.contentPanel.TabIndex = 10;
             // 
             // conclusionContentGroupBox
@@ -5119,11 +4725,9 @@
             this.conclusionContentGroupBox.Controls.Add(this.label19);
             this.conclusionContentGroupBox.Controls.Add(this.conclusionContentPanel);
             this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(24, 2451);
-            this.conclusionContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(9, 1028);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
-            this.conclusionContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.conclusionContentGroupBox.Size = new System.Drawing.Size(1640, 696);
+            this.conclusionContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.conclusionContentGroupBox.TabIndex = 12;
             this.conclusionContentGroupBox.TabStop = false;
             this.conclusionContentGroupBox.Text = "Conclusion";
@@ -5135,10 +4739,9 @@
             this.conclusionTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.conclusionTitleLabel.Enabled = false;
             this.conclusionTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionTitleLabel.Location = new System.Drawing.Point(16, 52);
-            this.conclusionTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.conclusionTitleLabel.Location = new System.Drawing.Point(6, 22);
             this.conclusionTitleLabel.Name = "conclusionTitleLabel";
-            this.conclusionTitleLabel.Size = new System.Drawing.Size(227, 32);
+            this.conclusionTitleLabel.Size = new System.Drawing.Size(85, 13);
             this.conclusionTitleLabel.TabIndex = 13;
             this.conclusionTitleLabel.Tag = "1";
             this.conclusionTitleLabel.Text = "Conclusion Title:";
@@ -5147,10 +4750,9 @@
             // 
             this.conclusionTitleEnter.Enabled = false;
             this.conclusionTitleEnter.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.conclusionTitleEnter.Location = new System.Drawing.Point(253, 45);
-            this.conclusionTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionTitleEnter.Location = new System.Drawing.Point(95, 19);
             this.conclusionTitleEnter.Name = "conclusionTitleEnter";
-            this.conclusionTitleEnter.Size = new System.Drawing.Size(487, 53);
+            this.conclusionTitleEnter.Size = new System.Drawing.Size(185, 26);
             this.conclusionTitleEnter.TabIndex = 12;
             this.conclusionTitleEnter.Tag = "1";
             this.conclusionTitleEnter.TextChanged += new System.EventHandler(this.conclusionTitleEnter_TextChanged);
@@ -5159,10 +4761,9 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(16, 117);
-            this.label19.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label19.Location = new System.Drawing.Point(6, 49);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(123, 32);
+            this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 11;
             this.label19.Tag = "1";
             this.label19.Text = "Content:";
@@ -5170,10 +4771,9 @@
             // conclusionContentPanel
             // 
             this.conclusionContentPanel.Controls.Add(this.conclusionToolStripContainer);
-            this.conclusionContentPanel.Location = new System.Drawing.Point(24, 165);
-            this.conclusionContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.conclusionContentPanel.Location = new System.Drawing.Point(9, 69);
             this.conclusionContentPanel.Name = "conclusionContentPanel";
-            this.conclusionContentPanel.Size = new System.Drawing.Size(1592, 501);
+            this.conclusionContentPanel.Size = new System.Drawing.Size(597, 210);
             this.conclusionContentPanel.TabIndex = 6;
             // 
             // conclusionToolStripContainer
@@ -5182,12 +4782,10 @@
             // conclusionToolStripContainer.ContentPanel
             // 
             this.conclusionToolStripContainer.ContentPanel.Controls.Add(this.conclusionContent);
-            this.conclusionToolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.conclusionToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1592, 476);
+            this.conclusionToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
             this.conclusionToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.conclusionToolStripContainer.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionToolStripContainer.Name = "conclusionToolStripContainer";
-            this.conclusionToolStripContainer.Size = new System.Drawing.Size(1592, 501);
+            this.conclusionToolStripContainer.Size = new System.Drawing.Size(597, 210);
             this.conclusionToolStripContainer.TabIndex = 0;
             this.conclusionToolStripContainer.Text = "toolStripContainer3";
             // 
@@ -5199,9 +4797,8 @@
             // 
             this.conclusionContent.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.conclusionContent.Location = new System.Drawing.Point(0, 0);
-            this.conclusionContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionContent.Name = "conclusionContent";
-            this.conclusionContent.Size = new System.Drawing.Size(1577, 428);
+            this.conclusionContent.Size = new System.Drawing.Size(594, 182);
             this.conclusionContent.TabIndex = 0;
             this.conclusionContent.Text = "";
             this.conclusionContent.Enter += new System.EventHandler(this.conclusionLast);
@@ -5225,11 +4822,9 @@
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
             this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(24, 1574);
-            this.section1groupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.section1groupBox.Location = new System.Drawing.Point(9, 660);
             this.section1groupBox.Name = "section1groupBox";
-            this.section1groupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.section1groupBox.Size = new System.Drawing.Size(1640, 751);
+            this.section1groupBox.Size = new System.Drawing.Size(615, 315);
             this.section1groupBox.TabIndex = 9;
             this.section1groupBox.TabStop = false;
             this.section1groupBox.Tag = "1";
@@ -5241,10 +4836,9 @@
             this.section1LabelLabel.BackColor = System.Drawing.Color.Transparent;
             this.section1LabelLabel.Enabled = false;
             this.section1LabelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1LabelLabel.Location = new System.Drawing.Point(16, 52);
-            this.section1LabelLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.section1LabelLabel.Location = new System.Drawing.Point(6, 22);
             this.section1LabelLabel.Name = "section1LabelLabel";
-            this.section1LabelLabel.Size = new System.Drawing.Size(197, 32);
+            this.section1LabelLabel.Size = new System.Drawing.Size(75, 13);
             this.section1LabelLabel.TabIndex = 10;
             this.section1LabelLabel.Tag = "1";
             this.section1LabelLabel.Text = "Section Label:";
@@ -5253,10 +4847,9 @@
             // 
             this.section1LabelEnter.Enabled = false;
             this.section1LabelEnter.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.section1LabelEnter.Location = new System.Drawing.Point(216, 45);
-            this.section1LabelEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.section1LabelEnter.Location = new System.Drawing.Point(81, 19);
             this.section1LabelEnter.Name = "section1LabelEnter";
-            this.section1LabelEnter.Size = new System.Drawing.Size(487, 53);
+            this.section1LabelEnter.Size = new System.Drawing.Size(185, 26);
             this.section1LabelEnter.TabIndex = 9;
             this.section1LabelEnter.Tag = "1";
             this.section1LabelEnter.TextChanged += new System.EventHandler(this.sectionTitleChanged);
@@ -5264,10 +4857,9 @@
             // section1ContentPanel
             // 
             this.section1ContentPanel.Controls.Add(this.section1ToolStripContainer);
-            this.section1ContentPanel.Location = new System.Drawing.Point(24, 160);
-            this.section1ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.section1ContentPanel.Location = new System.Drawing.Point(9, 67);
             this.section1ContentPanel.Name = "section1ContentPanel";
-            this.section1ContentPanel.Size = new System.Drawing.Size(1592, 501);
+            this.section1ContentPanel.Size = new System.Drawing.Size(597, 210);
             this.section1ContentPanel.TabIndex = 8;
             // 
             // section1ToolStripContainer
@@ -5276,12 +4868,10 @@
             // section1ToolStripContainer.ContentPanel
             // 
             this.section1ToolStripContainer.ContentPanel.Controls.Add(this.section1Content);
-            this.section1ToolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.section1ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1592, 476);
+            this.section1ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
             this.section1ToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.section1ToolStripContainer.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1ToolStripContainer.Name = "section1ToolStripContainer";
-            this.section1ToolStripContainer.Size = new System.Drawing.Size(1592, 501);
+            this.section1ToolStripContainer.Size = new System.Drawing.Size(597, 210);
             this.section1ToolStripContainer.TabIndex = 0;
             this.section1ToolStripContainer.Text = "toolStripContainer4";
             // 
@@ -5293,9 +4883,8 @@
             // 
             this.section1Content.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.section1Content.Location = new System.Drawing.Point(0, 0);
-            this.section1Content.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1Content.Name = "section1Content";
-            this.section1Content.Size = new System.Drawing.Size(1577, 428);
+            this.section1Content.Size = new System.Drawing.Size(594, 182);
             this.section1Content.TabIndex = 0;
             this.section1Content.Tag = "1";
             this.section1Content.Text = "";
@@ -5316,10 +4905,9 @@
             // 
             this.section1AddSubsectionButton.BackColor = System.Drawing.Color.White;
             this.section1AddSubsectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1AddSubsectionButton.Location = new System.Drawing.Point(24, 672);
-            this.section1AddSubsectionButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.section1AddSubsectionButton.Location = new System.Drawing.Point(9, 282);
             this.section1AddSubsectionButton.Name = "section1AddSubsectionButton";
-            this.section1AddSubsectionButton.Size = new System.Drawing.Size(347, 55);
+            this.section1AddSubsectionButton.Size = new System.Drawing.Size(130, 23);
             this.section1AddSubsectionButton.TabIndex = 7;
             this.section1AddSubsectionButton.Tag = "1";
             this.section1AddSubsectionButton.Text = "Add Subsection";
@@ -5330,10 +4918,9 @@
             // 
             this.section1contentLabel.AutoSize = true;
             this.section1contentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1contentLabel.Location = new System.Drawing.Point(16, 117);
-            this.section1contentLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.section1contentLabel.Location = new System.Drawing.Point(6, 49);
             this.section1contentLabel.Name = "section1contentLabel";
-            this.section1contentLabel.Size = new System.Drawing.Size(123, 32);
+            this.section1contentLabel.Size = new System.Drawing.Size(47, 13);
             this.section1contentLabel.TabIndex = 5;
             this.section1contentLabel.Tag = "1";
             this.section1contentLabel.Text = "Content:";
@@ -5345,11 +4932,9 @@
             this.abstractContentGroupBox.Controls.Add(this.label17);
             this.abstractContentGroupBox.Controls.Add(this.abstractContentPanel);
             this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(24, 830);
-            this.abstractContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(9, 348);
             this.abstractContentGroupBox.Name = "abstractContentGroupBox";
-            this.abstractContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.abstractContentGroupBox.Size = new System.Drawing.Size(1640, 696);
+            this.abstractContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.abstractContentGroupBox.TabIndex = 11;
             this.abstractContentGroupBox.TabStop = false;
             this.abstractContentGroupBox.Text = "Abstract";
@@ -5361,10 +4946,9 @@
             this.abstractTitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.abstractTitleLabel.Enabled = false;
             this.abstractTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractTitleLabel.Location = new System.Drawing.Point(16, 52);
-            this.abstractTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.abstractTitleLabel.Location = new System.Drawing.Point(6, 22);
             this.abstractTitleLabel.Name = "abstractTitleLabel";
-            this.abstractTitleLabel.Size = new System.Drawing.Size(189, 32);
+            this.abstractTitleLabel.Size = new System.Drawing.Size(72, 13);
             this.abstractTitleLabel.TabIndex = 13;
             this.abstractTitleLabel.Tag = "1";
             this.abstractTitleLabel.Text = "Abstract Title:";
@@ -5373,10 +4957,9 @@
             // 
             this.abstractTitleText.Enabled = false;
             this.abstractTitleText.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.abstractTitleText.Location = new System.Drawing.Point(253, 45);
-            this.abstractTitleText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractTitleText.Location = new System.Drawing.Point(95, 19);
             this.abstractTitleText.Name = "abstractTitleText";
-            this.abstractTitleText.Size = new System.Drawing.Size(487, 53);
+            this.abstractTitleText.Size = new System.Drawing.Size(185, 26);
             this.abstractTitleText.TabIndex = 12;
             this.abstractTitleText.Tag = "abstract";
             this.abstractTitleText.TextChanged += new System.EventHandler(this.abstractTitleText_TextChanged);
@@ -5385,10 +4968,9 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(16, 117);
-            this.label17.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label17.Location = new System.Drawing.Point(6, 49);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(123, 32);
+            this.label17.Size = new System.Drawing.Size(47, 13);
             this.label17.TabIndex = 11;
             this.label17.Tag = "1";
             this.label17.Text = "Content:";
@@ -5396,10 +4978,9 @@
             // abstractContentPanel
             // 
             this.abstractContentPanel.Controls.Add(this.abstractContentToolStripContainer);
-            this.abstractContentPanel.Location = new System.Drawing.Point(24, 165);
-            this.abstractContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.abstractContentPanel.Location = new System.Drawing.Point(9, 69);
             this.abstractContentPanel.Name = "abstractContentPanel";
-            this.abstractContentPanel.Size = new System.Drawing.Size(1592, 501);
+            this.abstractContentPanel.Size = new System.Drawing.Size(597, 210);
             this.abstractContentPanel.TabIndex = 6;
             // 
             // abstractContentToolStripContainer
@@ -5408,12 +4989,10 @@
             // abstractContentToolStripContainer.ContentPanel
             // 
             this.abstractContentToolStripContainer.ContentPanel.Controls.Add(this.abstractContent);
-            this.abstractContentToolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.abstractContentToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1592, 476);
+            this.abstractContentToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
             this.abstractContentToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.abstractContentToolStripContainer.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContentToolStripContainer.Name = "abstractContentToolStripContainer";
-            this.abstractContentToolStripContainer.Size = new System.Drawing.Size(1592, 501);
+            this.abstractContentToolStripContainer.Size = new System.Drawing.Size(597, 210);
             this.abstractContentToolStripContainer.TabIndex = 0;
             this.abstractContentToolStripContainer.Text = "toolStripContainer3";
             // 
@@ -5425,9 +5004,8 @@
             // 
             this.abstractContent.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.abstractContent.Location = new System.Drawing.Point(0, 0);
-            this.abstractContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContent.Name = "abstractContent";
-            this.abstractContent.Size = new System.Drawing.Size(1577, 428);
+            this.abstractContent.Size = new System.Drawing.Size(594, 182);
             this.abstractContent.TabIndex = 0;
             this.abstractContent.Text = "";
             this.abstractContent.Enter += new System.EventHandler(this.abstractLast);
@@ -5446,10 +5024,9 @@
             // addSectionButton
             // 
             this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSectionButton.Location = new System.Drawing.Point(24, 2349);
-            this.addSectionButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.addSectionButton.Location = new System.Drawing.Point(9, 985);
             this.addSectionButton.Name = "addSectionButton";
-            this.addSectionButton.Size = new System.Drawing.Size(347, 55);
+            this.addSectionButton.Size = new System.Drawing.Size(130, 23);
             this.addSectionButton.TabIndex = 11;
             this.addSectionButton.Text = "Add Section";
             this.addSectionButton.UseVisualStyleBackColor = true;
@@ -5462,11 +5039,9 @@
             this.summaryContentGroupBox.Controls.Add(this.label11);
             this.summaryContentGroupBox.Controls.Add(this.summaryContentPanel);
             this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContentGroupBox.Location = new System.Drawing.Point(24, 86);
-            this.summaryContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryContentGroupBox.Location = new System.Drawing.Point(9, 36);
             this.summaryContentGroupBox.Name = "summaryContentGroupBox";
-            this.summaryContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryContentGroupBox.Size = new System.Drawing.Size(1640, 696);
+            this.summaryContentGroupBox.Size = new System.Drawing.Size(615, 292);
             this.summaryContentGroupBox.TabIndex = 10;
             this.summaryContentGroupBox.TabStop = false;
             this.summaryContentGroupBox.Text = "Summary";
@@ -5478,10 +5053,9 @@
             this.summaryTitleTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.summaryTitleTextLabel.Enabled = false;
             this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleTextLabel.Location = new System.Drawing.Point(16, 52);
-            this.summaryTitleTextLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.summaryTitleTextLabel.Location = new System.Drawing.Point(6, 22);
             this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
-            this.summaryTitleTextLabel.Size = new System.Drawing.Size(205, 32);
+            this.summaryTitleTextLabel.Size = new System.Drawing.Size(76, 13);
             this.summaryTitleTextLabel.TabIndex = 13;
             this.summaryTitleTextLabel.Tag = "1";
             this.summaryTitleTextLabel.Text = "Summary Title:";
@@ -5490,10 +5064,9 @@
             // 
             this.summaryTitleText.Enabled = false;
             this.summaryTitleText.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.summaryTitleText.Location = new System.Drawing.Point(253, 45);
-            this.summaryTitleText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryTitleText.Location = new System.Drawing.Point(95, 19);
             this.summaryTitleText.Name = "summaryTitleText";
-            this.summaryTitleText.Size = new System.Drawing.Size(487, 53);
+            this.summaryTitleText.Size = new System.Drawing.Size(185, 26);
             this.summaryTitleText.TabIndex = 12;
             this.summaryTitleText.Tag = "summary";
             this.summaryTitleText.TextChanged += new System.EventHandler(this.summaryTitleText_TextChanged);
@@ -5502,10 +5075,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 117);
-            this.label11.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label11.Location = new System.Drawing.Point(6, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 32);
+            this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 11;
             this.label11.Tag = "1";
             this.label11.Text = "Content:";
@@ -5513,10 +5085,9 @@
             // summaryContentPanel
             // 
             this.summaryContentPanel.Controls.Add(this.summaryToolStripContainer);
-            this.summaryContentPanel.Location = new System.Drawing.Point(24, 165);
-            this.summaryContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.summaryContentPanel.Location = new System.Drawing.Point(9, 69);
             this.summaryContentPanel.Name = "summaryContentPanel";
-            this.summaryContentPanel.Size = new System.Drawing.Size(1592, 501);
+            this.summaryContentPanel.Size = new System.Drawing.Size(597, 210);
             this.summaryContentPanel.TabIndex = 6;
             // 
             // summaryToolStripContainer
@@ -5525,12 +5096,10 @@
             // summaryToolStripContainer.ContentPanel
             // 
             this.summaryToolStripContainer.ContentPanel.Controls.Add(this.summaryContent);
-            this.summaryToolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1592, 476);
+            this.summaryToolStripContainer.ContentPanel.Size = new System.Drawing.Size(597, 185);
             this.summaryToolStripContainer.Location = new System.Drawing.Point(0, 0);
-            this.summaryToolStripContainer.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.summaryToolStripContainer.Name = "summaryToolStripContainer";
-            this.summaryToolStripContainer.Size = new System.Drawing.Size(1592, 501);
+            this.summaryToolStripContainer.Size = new System.Drawing.Size(597, 210);
             this.summaryToolStripContainer.TabIndex = 0;
             this.summaryToolStripContainer.Text = "toolStripContainer2";
             // 
@@ -5542,9 +5111,8 @@
             // 
             this.summaryContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryContent.Location = new System.Drawing.Point(0, 0);
-            this.summaryContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.summaryContent.Name = "summaryContent";
-            this.summaryContent.Size = new System.Drawing.Size(1577, 428);
+            this.summaryContent.Size = new System.Drawing.Size(594, 182);
             this.summaryContent.TabIndex = 0;
             this.summaryContent.Text = "";
             this.summaryContent.Enter += new System.EventHandler(this.summaryLast);
@@ -5567,9 +5135,8 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.Control;
             this.label23.Location = new System.Drawing.Point(0, 0);
-            this.label23.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(1688, 72);
+            this.label23.Size = new System.Drawing.Size(633, 30);
             this.label23.TabIndex = 0;
             this.label23.Text = "CONTENT";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5593,7 +5160,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(559, 49);
+            this.toolStrip1.Size = new System.Drawing.Size(559, 47);
             this.toolStrip1.TabIndex = 0;
             // 
             // saveButton
@@ -5700,7 +5267,7 @@
             "Tw Cen MT",
             "Verdana"});
             this.fontSelect.Name = "fontSelect";
-            this.fontSelect.Size = new System.Drawing.Size(150, 49);
+            this.fontSelect.Size = new System.Drawing.Size(150, 23);
             this.fontSelect.Text = "Times New Roman";
             this.fontSelect.TextChanged += new System.EventHandler(this.changeFont);
             // 
@@ -5726,7 +5293,7 @@
             "42",
             "48"});
             this.fontSize.Name = "fontSize";
-            this.fontSize.Size = new System.Drawing.Size(80, 49);
+            this.fontSize.Size = new System.Drawing.Size(80, 23);
             this.fontSize.Text = "12";
             this.fontSize.TextChanged += new System.EventHandler(this.changeSize);
             // 
@@ -5761,13 +5328,12 @@
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(3365, 1033);
+            this.ClientSize = new System.Drawing.Size(1258, 429);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
             this.Text = "Write It Easy";
             this.Resize += new System.EventHandler(this.resizeEvent);
