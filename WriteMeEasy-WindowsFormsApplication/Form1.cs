@@ -1506,7 +1506,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("SubsubsectionLabelColor", myPaper.sectionsConfig.subsubsectionLabelColor);                    
                     foreach (Section section in myPaper.sections)
                     {
-                        writer.WriteStartElement("Section");
+                        writer.WriteStartElement("SectionElement");
                         writer.WriteElementString("Content", section.content);
                         writer.WriteElementString("Title", section.title);
                         writer.WriteElementString("Index", section.index.ToString());
@@ -1592,6 +1592,20 @@ namespace WriteMeEasy_WindowsFormsApplication
             bool inReferenceReceiver = false;
             bool newReferenceReceiver = false;
             Author receiver = new Author();
+            bool inSection = false;
+            bool newSection = false;
+            bool inSubsection = false;
+            bool newSubsection = false;
+            bool inSubsubsection = false;
+            bool newSubsubsection = false;
+            Section section = new Section();
+            int numSections = 1;
+            int numSectionsStarted = 0;
+            int numSubsections = 0;
+            int numSubsectionsStarted = 0;
+            int numSubsubsections = 0;
+            int numSubsubsectionsStarted = 0;
+
 
             string fileName = openFile.FileName;
             XDocument xDocument = null;
@@ -4088,7 +4102,17 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 break;
 
                             //TODO Add section objects here
-
+                            case "SectionElement":
+                                numSectionsStarted++;
+                                if (numSections < numSectionsStarted)
+                                {
+                                    addSectionButton.PerformClick();
+                                    numSections++;
+                                }
+                                inSection = true;
+                                inSubsection = false;
+                                inSubsubsection = false;
+                                break;
 
                             case "ConclusionOnOwnPage":
                                 if (reader.Read())
@@ -4165,6 +4189,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     conclusionContent.Text = reader.Value;
                                 }
                                 break;
+
                         }
                     }                    
                 }
