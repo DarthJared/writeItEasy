@@ -1,6 +1,5 @@
 ISSUES:
 -Fix centering with no label problem
--Get the rich text boxes to have indented first line and double spaced
 -Get bold, italics, underline, font, and size to show when selected
 -Redo UI
 -Save and Load

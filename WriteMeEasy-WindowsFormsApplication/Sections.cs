@@ -472,12 +472,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                     for (int i = 0; i < sectionContent.Text.Length; i++)
                     {
                         sectionContent.Select(i, 1);
-                        if (sectionContent.SelectionIndent == 40 && !indentStarted)
+                        if (sectionContent.SelectionIndent == 40 && sectionContent.SelectionHangingIndent == 0 && !indentStarted)
                         {
                             formattedSection += '\v';
                             indentStarted = true;
                         }
-                        else if (sectionContent.SelectionIndent != 40 && indentStarted)
+                        else if ((sectionContent.SelectionIndent != 40 || sectionContent.SelectionHangingIndent != 0) && indentStarted)
                         {
                             formattedSection += '\v';
                             indentStarted = false;
@@ -653,12 +653,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                             for (int i = 0; i < subsectionContent.Text.Length; i++)
                             {
                                 subsectionContent.Select(i, 1);
-                                if (subsectionContent.SelectionIndent == 40 && !indentStarted)
+                                if (subsectionContent.SelectionIndent == 40 && subsectionContent.SelectionHangingIndent == 0 && !indentStarted)
                                 {
                                     formattedSubsection += '\v';
                                     indentStarted = true;
                                 }
-                                else if (subsectionContent.SelectionIndent != 40 && indentStarted)
+                                else if ((subsectionContent.SelectionIndent != 40 || subsectionContent.SelectionHangingIndent != 0) && indentStarted)
                                 {
                                     formattedSubsection += '\v';
                                     indentStarted = false;
@@ -774,12 +774,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     for (int i = 0; i < subsubsectionContent.Text.Length; i++)
                                     {
                                         subsubsectionContent.Select(i, 1);
-                                        if (subsubsectionContent.SelectionIndent == 40 && !indentStarted)
+                                        if (subsubsectionContent.SelectionIndent == 40 && subsubsectionContent.SelectionHangingIndent == 0 && !indentStarted)
                                         {
                                             formattedSubsubsection += '\v';
                                             indentStarted = true;
                                         }
-                                        else if (subsubsectionContent.SelectionIndent != 40 && indentStarted)
+                                        else if ((subsubsectionContent.SelectionIndent != 40 || subsubsectionContent.SelectionHangingIndent == 0) && indentStarted)
                                         {
                                             formattedSubsubsection += '\v';
                                             indentStarted = false;

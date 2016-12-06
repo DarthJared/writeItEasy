@@ -42,7 +42,37 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         public SectionsConfig()
         {
+            blankLineBetween = true;
+            newPageBetween = true;
+            noSpaceBetween = true;
 
+            includeSectionLabels = true;
+            includeSubsectionLabels = true;
+            includeSubsubsectionLabels = true;
+
+            sectionLabelInlineWithText = true;
+            sectionLabelOnOwnLine = true;
+            sectionLabelBold = true;
+            sectionLabelAlignment = "";
+            sectionLabelFont = "";
+            sectionLabelSize = 0;
+            sectionLabelColor = "";
+
+            subsectionLabelInlineWithText = true;
+            subsectionLabelOnOwnLine = true;
+            subsectionLabelBold = true;
+            subsectionLabelAlignment = "";
+            subsectionLabelFont = "";
+            subsectionLabelSize = 0;
+            subsectionLabelColor = "";
+
+            subsubsectionLabelInlineWithText = true;
+            subsubsectionLabelOnOwnLine = true;
+            subsubsectionLabelBold = true;
+            subsubsectionLabelAlignment = "";
+            subsubsectionLabelFont = "";
+            subsubsectionLabelSize = 0;
+            subsubsectionLabelColor = "";
         }
     }
 }

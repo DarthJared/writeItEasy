@@ -40,12 +40,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < summaryContent.Text.Length; i++)
             {
                 summaryContent.Select(i, 1);
-                if (summaryContent.SelectionIndent == 40 && !indentStarted)
+                if (summaryContent.SelectionIndent == 40 && summaryContent.SelectionHangingIndent == 0 && !indentStarted)
                 {
                     formattedSummary += '\v';
                     indentStarted = true;
                 }
-                else if (summaryContent.SelectionIndent != 40 && indentStarted)
+                else if ((summaryContent.SelectionIndent != 40 || summaryContent.SelectionHangingIndent != 0) && indentStarted)
                 {
                     formattedSummary += '\v';
                     indentStarted = false;
@@ -137,12 +137,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < abstractContent.Text.Length; i++)
             {
                 abstractContent.Select(i, 1);
-                if (abstractContent.SelectionIndent == 40 && !indentStarted)
+                if (abstractContent.SelectionIndent == 40 && abstractContent.SelectionHangingIndent == 0 && !indentStarted)
                 {
                     formattedAbstract += '\v';
                     indentStarted = true;
                 }
-                else if (abstractContent.SelectionIndent != 40 && indentStarted)
+                else if ((abstractContent.SelectionIndent != 40 || abstractContent.SelectionHangingIndent != 0) && indentStarted)
                 {
                     formattedAbstract += '\v';
                     indentStarted = false;
@@ -235,12 +235,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             for (int i = 0; i < conclusionContent.Text.Length; i++)
             {
                 conclusionContent.Select(i, 1);
-                if (conclusionContent.SelectionIndent == 40 && !indentStarted)
+                if (conclusionContent.SelectionIndent == 40 && conclusionContent.SelectionHangingIndent == 0 && !indentStarted)
                 {
                     formattedConclusion += '\v';
                     indentStarted = true;
                 }
-                else if (conclusionContent.SelectionIndent != 40 && indentStarted)
+                else if ((conclusionContent.SelectionIndent != 40 || conclusionContent.SelectionHangingIndent != 0) && indentStarted)
                 {
                     formattedConclusion += '\v';
                     indentStarted = false;
@@ -1250,118 +1250,107 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("IncludeReferences", myPaper.includeReferences.ToString());
 
                     /*Title Page Configurations*/
-                    writer.WriteStartElement("TitlePage");
-                    writer.WriteElementString("IncludeTitle", myPaper.titlePage.includeTitle.ToString());
-                    writer.WriteElementString("IncludeName", myPaper.titlePage.includeName.ToString());
-                    writer.WriteElementString("IncludeClass", myPaper.titlePage.includeClass.ToString());
-                    writer.WriteElementString("IncludeProfessor", myPaper.titlePage.includeProfessor.ToString());
-                    writer.WriteElementString("IncludeSchool", myPaper.titlePage.includeSchool.ToString());
-                    writer.WriteElementString("IncludeDate", myPaper.titlePage.includeDate.ToString());
-                    writer.WriteElementString("Title", myPaper.titlePage.title.ToString());
-                    writer.WriteElementString("Name", myPaper.titlePage.name.ToString());
-                    writer.WriteElementString("Class", myPaper.titlePage.className.ToString());
-                    writer.WriteElementString("Professor", myPaper.titlePage.professor.ToString());
-                    writer.WriteElementString("School", myPaper.titlePage.school.ToString());
-                    writer.WriteElementString("Date", myPaper.titlePage.date.ToString());
-                    writer.WriteElementString("Alignment", myPaper.titlePage.alignment);
-                    writer.WriteStartElement("TitlePage");
+                    writer.WriteElementString("TitlePageIncludeTitle", myPaper.titlePage.includeTitle.ToString());
+                    writer.WriteElementString("TitlePageIncludeName", myPaper.titlePage.includeName.ToString());
+                    writer.WriteElementString("TitlePageIncludeClass", myPaper.titlePage.includeClass.ToString());
+                    writer.WriteElementString("TitlePageIncludeProfessor", myPaper.titlePage.includeProfessor.ToString());
+                    writer.WriteElementString("TitlePageIncludeSchool", myPaper.titlePage.includeSchool.ToString());
+                    writer.WriteElementString("TitlePageIncludeDate", myPaper.titlePage.includeDate.ToString());
+                    writer.WriteElementString("TitlePageTitle", myPaper.titlePage.title.ToString());
+                    writer.WriteElementString("TitlePageName", myPaper.titlePage.name.ToString());
+                    writer.WriteElementString("TitlePageClass", myPaper.titlePage.className.ToString());
+                    writer.WriteElementString("TitlePageProfessor", myPaper.titlePage.professor.ToString());
+                    writer.WriteElementString("TitlePageSchool", myPaper.titlePage.school.ToString());
+                    writer.WriteElementString("TitlePageDate", myPaper.titlePage.date.ToString());
+                    writer.WriteElementString("TitlePageAlignment", myPaper.titlePage.alignment);
                     foreach (string item in myPaper.titlePage.titlePageOrder)
                     {
-                        writer.WriteElementString("Item", item);
+                        writer.WriteElementString("TitlePageItem", item);
                     }
-                    writer.WriteEndElement();
-                    writer.WriteEndElement();
 
                     /*Summary Configurations*/
-                    writer.WriteStartElement("Summary");
-                    writer.WriteElementString("OwnPage", myPaper.summary.onOwnPage.ToString());
-                    writer.WriteElementString("IncludeTitle", myPaper.summary.includeTitle.ToString());
-                    writer.WriteElementString("Title", myPaper.summary.title);
-                    writer.WriteElementString("BoldTitle", myPaper.summary.titleBold.ToString());
-                    writer.WriteElementString("TitleFont", myPaper.summary.titleFont);
-                    writer.WriteElementString("TitleSize", myPaper.summary.titleSize.ToString());
-                    writer.WriteElementString("TitleColor", myPaper.summary.titleColor);
-                    writer.WriteElementString("TitleAlign", myPaper.summary.titleAlign);
-                    writer.WriteElementString("Content", myPaper.summary.content);
-                    writer.WriteEndElement();
+                    writer.WriteElementString("SummaryOwnPage", myPaper.summary.onOwnPage.ToString());
+                    writer.WriteElementString("SummaryIncludeTitle", myPaper.summary.includeTitle.ToString());
+                    writer.WriteElementString("SummaryTitle", myPaper.summary.title);
+                    writer.WriteElementString("SummaryBoldTitle", myPaper.summary.titleBold.ToString());
+                    writer.WriteElementString("SummaryTitleFont", myPaper.summary.titleFont);
+                    writer.WriteElementString("SummaryTitleSize", myPaper.summary.titleSize.ToString());
+                    writer.WriteElementString("SummaryTitleColor", myPaper.summary.titleColor);
+                    writer.WriteElementString("SummaryTitleAlign", myPaper.summary.titleAlign);
+                    writer.WriteElementString("SummaryContent", myPaper.summary.content);
 
                     /*Abstract Configurations*/
-                    writer.WriteStartElement("Abstract");
-                    writer.WriteElementString("OwnPage", myPaper.abstractConfig.onOwnPage.ToString());
-                    writer.WriteElementString("IncludeTitle", myPaper.abstractConfig.includeTitle.ToString());
-                    writer.WriteElementString("Title", myPaper.abstractConfig.title);
-                    writer.WriteElementString("BoldTitle", myPaper.abstractConfig.titleBold.ToString());
-                    writer.WriteElementString("TitleFont", myPaper.abstractConfig.titleFont);
-                    writer.WriteElementString("TitleSize", myPaper.abstractConfig.titleSize.ToString());
-                    writer.WriteElementString("TitleColor", myPaper.abstractConfig.titleColor);
-                    writer.WriteElementString("TitleAlign", myPaper.abstractConfig.titleAlign);
-                    writer.WriteElementString("Content", myPaper.abstractConfig.content);
-                    writer.WriteEndElement();
+                    writer.WriteElementString("AbstractOwnPage", myPaper.abstractConfig.onOwnPage.ToString());
+                    writer.WriteElementString("AbstractIncludeTitle", myPaper.abstractConfig.includeTitle.ToString());
+                    writer.WriteElementString("AbstractTitle", myPaper.abstractConfig.title);
+                    writer.WriteElementString("AbstractBoldTitle", myPaper.abstractConfig.titleBold.ToString());
+                    writer.WriteElementString("AbstractTitleFont", myPaper.abstractConfig.titleFont);
+                    writer.WriteElementString("AbstractTitleSize", myPaper.abstractConfig.titleSize.ToString());
+                    writer.WriteElementString("AbstractTitleColor", myPaper.abstractConfig.titleColor);
+                    writer.WriteElementString("AbstractTitleAlign", myPaper.abstractConfig.titleAlign);
+                    writer.WriteElementString("AbstractContent", myPaper.abstractConfig.content);
 
                     /*Header Configurations*/
-                    writer.WriteStartElement("Header");
-                    writer.WriteElementString("DifferentFirst", myPaper.header.differentFirstPage.ToString());
-                    writer.WriteElementString("UseRunningHead", myPaper.header.useRunningHead.ToString());
-                    writer.WriteElementString("LeftTitle", myPaper.header.leftTitle.ToString());
-                    writer.WriteElementString("LeftPageNum", myPaper.header.leftPageNum.ToString());
-                    writer.WriteElementString("LeftOther", myPaper.header.leftOther.ToString());
-                    writer.WriteElementString("LeftNone", myPaper.header.leftNone.ToString());
-                    writer.WriteElementString("CenterTitle", myPaper.header.centerTitle.ToString());
-                    writer.WriteElementString("CenterPageNum", myPaper.header.centerPageNum.ToString());
-                    writer.WriteElementString("CenterOther", myPaper.header.centerOther.ToString());
-                    writer.WriteElementString("CenterNone", myPaper.header.centerNone.ToString());
-                    writer.WriteElementString("RightTitle", myPaper.header.rightTitle.ToString());
-                    writer.WriteElementString("RightPageNum", myPaper.header.rightPageNum.ToString());
-                    writer.WriteElementString("RightOther", myPaper.header.rightOther.ToString());
-                    writer.WriteElementString("RightNone", myPaper.header.rightNone.ToString());
-                    writer.WriteElementString("FirstLeftTitle", myPaper.header.firstLeftTitle.ToString());
-                    writer.WriteElementString("FirstLeftPageNum", myPaper.header.firstLeftPageNum.ToString());
-                    writer.WriteElementString("FirstLeftOther", myPaper.header.firstLeftOther.ToString());
-                    writer.WriteElementString("FirstLeftNone", myPaper.header.firstLeftNone.ToString());                                              
-                    writer.WriteElementString("FirstCenterTitle", myPaper.header.firstCenterTitle.ToString());
-                    writer.WriteElementString("FirstCenterPageNum", myPaper.header.firstCenterPageNum.ToString());
-                    writer.WriteElementString("FirstCenterOther", myPaper.header.firstCenterOther.ToString());
-                    writer.WriteElementString("FirstCenterNone", myPaper.header.firstCenterNone.ToString());                                               
-                    writer.WriteElementString("FirstRightTitle", myPaper.header.firstRightTitle.ToString());
-                    writer.WriteElementString("FirstRightPageNum", myPaper.header.firstRightPageNum.ToString());
-                    writer.WriteElementString("FirstRightOther", myPaper.header.firstRightOther.ToString());
-                    writer.WriteElementString("FirstRightNone", myPaper.header.firstRightNone.ToString());
-                    writer.WriteElementString("LeftTitle", myPaper.header.leftTitleText);
-                    writer.WriteElementString("LeftPageStart", myPaper.header.leftPageNumStart.ToString());
-                    writer.WriteElementString("LeftOther", myPaper.header.leftOtherText);
-                    writer.WriteElementString("CenterTitle", myPaper.header.centerTitleText);
-                    writer.WriteElementString("CenterPageStart", myPaper.header.centerPageNumStart.ToString());
-                    writer.WriteElementString("CenterOther", myPaper.header.centerOtherText);
-                    writer.WriteElementString("RightTitle", myPaper.header.rightTitleText);
-                    writer.WriteElementString("RightPageStart", myPaper.header.rightPageNumStart.ToString());
-                    writer.WriteElementString("RightOther", myPaper.header.rightOtherText);
-                    writer.WriteElementString("FirstLeftTitle", myPaper.header.firstLeftTitleText);
-                    writer.WriteElementString("FirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
-                    writer.WriteElementString("FirstLeftOther", myPaper.header.firstLeftOtherText);                                              
-                    writer.WriteElementString("FirstCenterTitle", myPaper.header.firstCenterTitleText);
-                    writer.WriteElementString("FirstCenterPageStart", myPaper.header.firstCenterPageNumStart.ToString());
-                    writer.WriteElementString("FirstCenterOther", myPaper.header.firstCenterOtherText);                                            
-                    writer.WriteElementString("FirstRightTitle", myPaper.header.firstRightTitleText);
-                    writer.WriteElementString("FirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
-                    writer.WriteElementString("FirstRightOther", myPaper.header.firstRightOtherText);
-                    writer.WriteEndElement();
+                    writer.WriteElementString("HeaderDifferentFirst", myPaper.header.differentFirstPage.ToString());
+                    writer.WriteElementString("HeaderUseRunningHead", myPaper.header.useRunningHead.ToString());
+                    writer.WriteElementString("HeaderLeftTitle", myPaper.header.leftTitle.ToString());
+                    writer.WriteElementString("HeaderLeftPageNum", myPaper.header.leftPageNum.ToString());
+                    writer.WriteElementString("HeaderLeftOther", myPaper.header.leftOther.ToString());
+                    writer.WriteElementString("HeaderLeftNone", myPaper.header.leftNone.ToString());
+                    writer.WriteElementString("HeaderCenterTitle", myPaper.header.centerTitle.ToString());
+                    writer.WriteElementString("HeaderCenterPageNum", myPaper.header.centerPageNum.ToString());
+                    writer.WriteElementString("HeaderCenterOther", myPaper.header.centerOther.ToString());
+                    writer.WriteElementString("HeaderCenterNone", myPaper.header.centerNone.ToString());
+                    writer.WriteElementString("HeaderRightTitle", myPaper.header.rightTitle.ToString());
+                    writer.WriteElementString("HeaderRightPageNum", myPaper.header.rightPageNum.ToString());
+                    writer.WriteElementString("HeaderRightOther", myPaper.header.rightOther.ToString());
+                    writer.WriteElementString("HeaderRightNone", myPaper.header.rightNone.ToString());
+                    writer.WriteElementString("HeaderFirstLeftTitle", myPaper.header.firstLeftTitle.ToString());
+                    writer.WriteElementString("HeaderFirstLeftPageNum", myPaper.header.firstLeftPageNum.ToString());
+                    writer.WriteElementString("HeaderFirstLeftOther", myPaper.header.firstLeftOther.ToString());
+                    writer.WriteElementString("HeaderFirstLeftNone", myPaper.header.firstLeftNone.ToString());                                              
+                    writer.WriteElementString("HeaderFirstCenterTitle", myPaper.header.firstCenterTitle.ToString());
+                    writer.WriteElementString("HeaderFirstCenterPageNum", myPaper.header.firstCenterPageNum.ToString());
+                    writer.WriteElementString("HeaderFirstCenterOther", myPaper.header.firstCenterOther.ToString());
+                    writer.WriteElementString("HeaderFirstCenterNone", myPaper.header.firstCenterNone.ToString());                                               
+                    writer.WriteElementString("HeaderFirstRightTitle", myPaper.header.firstRightTitle.ToString());
+                    writer.WriteElementString("HeaderFirstRightPageNum", myPaper.header.firstRightPageNum.ToString());
+                    writer.WriteElementString("HeaderFirstRightOther", myPaper.header.firstRightOther.ToString());
+                    writer.WriteElementString("HeaderFirstRightNone", myPaper.header.firstRightNone.ToString());
+                    writer.WriteElementString("HeaderLeftTitle", myPaper.header.leftTitleText);
+                    writer.WriteElementString("HeaderLeftPageStart", myPaper.header.leftPageNumStart.ToString());
+                    writer.WriteElementString("HeaderLeftOther", myPaper.header.leftOtherText);
+                    writer.WriteElementString("HeaderCenterTitle", myPaper.header.centerTitleText);
+                    writer.WriteElementString("HeaderCenterPageStart", myPaper.header.centerPageNumStart.ToString());
+                    writer.WriteElementString("HeaderCenterOther", myPaper.header.centerOtherText);
+                    writer.WriteElementString("HeaderRightTitle", myPaper.header.rightTitleText);
+                    writer.WriteElementString("HeaderRightPageStart", myPaper.header.rightPageNumStart.ToString());
+                    writer.WriteElementString("HeaderRightOther", myPaper.header.rightOtherText);
+                    writer.WriteElementString("HeaderFirstLeftTitle", myPaper.header.firstLeftTitleText);
+                    writer.WriteElementString("HeaderFirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
+                    writer.WriteElementString("HeaderFirstLeftOther", myPaper.header.firstLeftOtherText);                                              
+                    writer.WriteElementString("HeaderFirstCenterTitle", myPaper.header.firstCenterTitleText);
+                    writer.WriteElementString("HeaderFirstCenterPageStart", myPaper.header.firstCenterPageNumStart.ToString());
+                    writer.WriteElementString("HeaderFirstCenterOther", myPaper.header.firstCenterOtherText);                                            
+                    writer.WriteElementString("HeaderFirstRightTitle", myPaper.header.firstRightTitleText);
+                    writer.WriteElementString("HeaderFirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
+                    writer.WriteElementString("HeaderFirstRightOther", myPaper.header.firstRightOtherText);
 
                     /*References Configurations*/
-                    writer.WriteStartElement("References");
-                    writer.WriteElementString("IncludeTitle", myPaper.references.includeTitle.ToString());
-                    writer.WriteElementString("Title", myPaper.references.title);
-                    writer.WriteElementString("TitleAlign", myPaper.references.titleAlign);
-                    writer.WriteElementString("BoldTitle", myPaper.references.boldTitle.ToString());
-                    writer.WriteElementString("TitleFont", myPaper.references.titleFont);
-                    writer.WriteElementString("TitleSize", myPaper.references.titleSize.ToString());
-                    writer.WriteElementString("TitleColor", myPaper.references.titleColor);
-                    writer.WriteElementString("HangingIndent", myPaper.references.hangingIndent.ToString());
-                    writer.WriteElementString("NumTabsHanging", myPaper.references.tabsHangingIndent.ToString());
-                    writer.WriteElementString("EmptyLineBetween", myPaper.references.emptyLineBetweenReferences.ToString());
-                    writer.WriteElementString("OrderBy", myPaper.references.orderBy);
+                    writer.WriteElementString("ReferencesIncludeTitle", myPaper.references.includeTitle.ToString());
+                    writer.WriteElementString("ReferencesTitle", myPaper.references.title);
+                    writer.WriteElementString("ReferencesTitleAlign", myPaper.references.titleAlign);
+                    writer.WriteElementString("ReferencesBoldTitle", myPaper.references.boldTitle.ToString());
+                    writer.WriteElementString("ReferencesTitleFont", myPaper.references.titleFont);
+                    writer.WriteElementString("ReferencesTitleSize", myPaper.references.titleSize.ToString());
+                    writer.WriteElementString("ReferencesTitleColor", myPaper.references.titleColor);
+                    writer.WriteElementString("ReferencesHangingIndent", myPaper.references.hangingIndent.ToString());
+                    writer.WriteElementString("ReferencesNumTabsHanging", myPaper.references.tabsHangingIndent.ToString());
+                    writer.WriteElementString("ReferencesEmptyLineBetween", myPaper.references.emptyLineBetweenReferences.ToString());
+                    writer.WriteElementString("ReferencesOrderBy", myPaper.references.orderBy);
                     foreach (Reference reference in myPaper.references.references)
                     {
-                        writer.WriteStartElement("References");
+                        writer.WriteStartElement("Reference");
                         writer.WriteElementString("Formatted", reference.formattedReference);
                         writer.WriteElementString("Type", reference.type);
                         writer.WriteElementString("PublicationDate", reference.publicationDate);
@@ -1397,7 +1386,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteElementString("Season", reference.season);
                         writer.WriteElementString("Episode", reference.episode);
                         writer.WriteElementString("ArtistName", reference.artistName);
-                        writer.WriteStartElement("Authors");
                         foreach (Author author in reference.authors)
                         {
                             writer.WriteStartElement("Author");
@@ -1407,8 +1395,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                             writer.WriteElementString("CompleteName", author.completeName);
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Translator");
                         foreach (Author author in reference.translators)
                         {
                             writer.WriteStartElement("Translator");
@@ -1418,8 +1404,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                             writer.WriteElementString("CompleteName", author.completeName);
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Interviewers");
                         foreach (Author author in reference.interviewers)
                         {
                             writer.WriteStartElement("Interviewer");
@@ -1429,8 +1413,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                             writer.WriteElementString("CompleteName", author.completeName);
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Interviewees");
                         foreach (Author author in reference.interviewees)
                         {
                             writer.WriteStartElement("Interviewee");
@@ -1440,8 +1422,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                             writer.WriteElementString("CompleteName", author.completeName);
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Reviewers");
                         foreach (Author author in reference.reviewers)
                         {
                             writer.WriteStartElement("Reviewer");
@@ -1451,13 +1431,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                             writer.WriteElementString("CompleteName", author.completeName);
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
                         writer.WriteStartElement("Producer");
                         writer.WriteElementString("FirstName", reference.producer.firstName);
                         writer.WriteElementString("MiddleName", reference.producer.middleName);
                         writer.WriteElementString("LastName", reference.producer.lastName);
                         writer.WriteElementString("CompleteName", reference.producer.completeName);
-                        writer.WriteEndElement();
                         writer.WriteEndElement();
                         writer.WriteStartElement("Director");
                         writer.WriteElementString("FirstName", reference.director.firstName);
@@ -1497,31 +1475,383 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteEndElement();
                         writer.WriteEndElement();
                     }
-                    writer.WriteEndElement();
 
                     /*Sections Configurations*/
+                    writer.WriteElementString("SectionsBlankLineBetweem", myPaper.sectionsConfig.blankLineBetween.ToString());
+                    writer.WriteElementString("SectionsNewPageBetween", myPaper.sectionsConfig.newPageBetween.ToString());
+                    writer.WriteElementString("SectionsNoSpaceBetween", myPaper.sectionsConfig.noSpaceBetween.ToString());
+                    writer.WriteElementString("SectionsIncludeSectionLabel", myPaper.sectionsConfig.includeSectionLabels.ToString());
+                    writer.WriteElementString("SectionsIncludeSubsectionLabel", myPaper.sectionsConfig.includeSubsectionLabels.ToString());
+                    writer.WriteElementString("SectionsIncludeSubsubsectionLabel", myPaper.sectionsConfig.includeSubsubsectionLabels.ToString());
+                    writer.WriteElementString("SectionLabelInline", myPaper.sectionsConfig.sectionLabelInlineWithText.ToString());
+                    writer.WriteElementString("SectionLabelOwnLine", myPaper.sectionsConfig.sectionLabelOnOwnLine.ToString());
+                    writer.WriteElementString("SectionLabelBold", myPaper.sectionsConfig.sectionLabelBold.ToString());
+                    writer.WriteElementString("SectionLabelAlign", myPaper.sectionsConfig.sectionLabelAlignment);
+                    writer.WriteElementString("SectionLabelFont", myPaper.sectionsConfig.sectionLabelFont);
+                    writer.WriteElementString("SectionLabelSize", myPaper.sectionsConfig.sectionLabelSize.ToString());
+                    writer.WriteElementString("SectionLabelColor", myPaper.sectionsConfig.sectionLabelColor);
+                    writer.WriteElementString("SubsectionLabelInline", myPaper.sectionsConfig.subsectionLabelInlineWithText.ToString());
+                    writer.WriteElementString("SubsectionLabelOwnLine", myPaper.sectionsConfig.subsectionLabelOnOwnLine.ToString());
+                    writer.WriteElementString("SubsectionLabelBold", myPaper.sectionsConfig.subsectionLabelBold.ToString());
+                    writer.WriteElementString("SubsectionLabelAlign", myPaper.sectionsConfig.subsectionLabelAlignment);
+                    writer.WriteElementString("SubsectionLabelFont", myPaper.sectionsConfig.subsectionLabelFont);
+                    writer.WriteElementString("SubsectionLabelSize", myPaper.sectionsConfig.subsectionLabelSize.ToString());
+                    writer.WriteElementString("SubsectionLabelColor", myPaper.sectionsConfig.subsectionLabelColor);                                                
+                    writer.WriteElementString("SubsubsectionLabelInline", myPaper.sectionsConfig.subsubsectionLabelInlineWithText.ToString());
+                    writer.WriteElementString("SubsubsectionLabelOwnLine", myPaper.sectionsConfig.subsubsectionLabelOnOwnLine.ToString());
+                    writer.WriteElementString("SubsubsectionLabelBold", myPaper.sectionsConfig.subsubsectionLabelBold.ToString());
+                    writer.WriteElementString("SubsubsectionLabelAlign", myPaper.sectionsConfig.subsubsectionLabelAlignment);
+                    writer.WriteElementString("SubsubsectionLabelFont", myPaper.sectionsConfig.subsubsectionLabelFont);
+                    writer.WriteElementString("SubsubsectionLabelSize", myPaper.sectionsConfig.subsubsectionLabelSize.ToString());
+                    writer.WriteElementString("SubsubsectionLabelColor", myPaper.sectionsConfig.subsubsectionLabelColor);                    
+                    foreach (Section section in myPaper.sections)
+                    {
+                        writer.WriteStartElement("Section");
+                        writer.WriteElementString("Content", section.content);
+                        writer.WriteElementString("Title", section.title);
+                        writer.WriteElementString("Index", section.index.ToString());
+                        foreach(SubSection subsection in section.subSections)
+                        {
+                            writer.WriteStartElement("Subsection");
+                            writer.WriteElementString("Content", subsection.content);
+                            writer.WriteElementString("Title", subsection.title);
+                            writer.WriteElementString("Index", subsection.index.ToString());
+                            foreach (SubSubSection subsubsection in subsection.subsubSections)
+                            {
+                                writer.WriteStartElement("Subsubsection");
+                                writer.WriteElementString("Content", subsubsection.content);
+                                writer.WriteElementString("Title", subsubsection.title);
+                                writer.WriteElementString("Index", subsubsection.index.ToString());
+                                writer.WriteEndElement();
+                            }
+                            writer.WriteEndElement();
+                        }
+                        writer.WriteEndElement();
+                    }
 
                     /*Conclusion Configurations*/
-                    writer.WriteStartElement("Conclusion");
-                    writer.WriteElementString("OnOwnPage", myPaper.conclusion.onOwnPage.ToString());
-                    writer.WriteElementString("IncludeTitle", myPaper.conclusion.includeTitle.ToString());
-                    writer.WriteElementString("Title", myPaper.conclusion.title);
-                    writer.WriteElementString("TitleAlign", myPaper.conclusion.titleAlign);
-                    writer.WriteElementString("BoldTitle", myPaper.conclusion.boldTitle.ToString());
-                    writer.WriteElementString("TitleFont", myPaper.conclusion.titleFont);
-                    writer.WriteElementString("TitleSize", myPaper.conclusion.titleSize.ToString());
-                    writer.WriteElementString("TitleColor", myPaper.conclusion.titleColor);
-                    writer.WriteElementString("Content", myPaper.conclusion.conclusionContent);
-                    writer.WriteEndElement();
+                    writer.WriteElementString("ConclusionOnOwnPage", myPaper.conclusion.onOwnPage.ToString());
+                    writer.WriteElementString("ConclusionIncludeTitle", myPaper.conclusion.includeTitle.ToString());
+                    writer.WriteElementString("ConclusionTitle", myPaper.conclusion.title);
+                    writer.WriteElementString("ConclusionTitleAlign", myPaper.conclusion.titleAlign);
+                    writer.WriteElementString("ConclusionBoldTitle", myPaper.conclusion.boldTitle.ToString());
+                    writer.WriteElementString("ConclusionTitleFont", myPaper.conclusion.titleFont);
+                    writer.WriteElementString("ConclusionTitleSize", myPaper.conclusion.titleSize.ToString());
+                    writer.WriteElementString("ConclusionTitleColor", myPaper.conclusion.titleColor);
+                    writer.WriteElementString("ConclusionContent", myPaper.conclusion.conclusionContent);
 
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
                 }
+                MessageBox.Show("Your project has been saved!\n");
             }
             else
             {
                 MessageBox.Show("Enter the name you would like to use to store the file.\n");
             }      
+        }
+
+        private void openFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            bool inReference = false;
+            bool newReference = false;
+            Reference reference = new Reference();
+            bool inReferenceAuthor = false;
+            bool newReferenceAuthor = false;
+            Author author = new Author();
+            bool inReferenceTranslator = false;
+            bool newReferenceTranslator = false;
+            Author translator = new Author();
+            bool inReferenceInterviewer = false;
+            bool newReferenceInterviewer = false;
+            Author interviewer = new Author();
+            bool inReferenceInterviewee = false;
+            bool newReferenceInterviewee = false;
+            Author interviewee = new Author();
+            bool inReferenceReviewer = false;
+            bool newReferenceReviewer = false;
+            Author reviewer = new Author();
+            bool inReferenceProducer = false;
+            bool newReferenceProducer = false;
+            Author producer = new Author();
+            bool inReferenceDirector = false;
+            bool newReferenceDirector = false;
+            Author director = new Author();
+            bool inReferenceWriter = false;
+            bool newReferenceWriter = false;
+            Author writer = new Author();
+            bool inReferenceArtist = false;
+            bool newReferenceArtist = false;
+            Author artist = new Author();
+            bool inReferenceEditor = false;
+            bool newReferenceEditor = false;
+            Author editor = new Author();
+            bool inReferenceCommunicator = false;
+            bool newReferenceCommunicator = false;
+            Author communcator = new Author();
+            bool inReferenceReceiver = false;
+            bool newReferenceReceiver = false;
+            Author receiver = new Author();
+
+            string fileName = openFile.FileName;
+            XDocument xDocument = null;
+            XmlReaderSettings xmlReaderSettings = new XmlReaderSettings { CheckCharacters = false };
+            using (XmlReader reader = XmlReader.Create(fileName, xmlReaderSettings))
+            {
+                while (reader.Read())
+                {
+                    // Only detect start elements.
+                    if (reader.IsStartElement())
+                    {
+                        // Get element name and switch on it.
+                        switch (reader.Name)
+                        {
+                            case "APAMLA":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("APA"))
+                                    {
+                                        apaRadio.Checked = true;
+                                    }
+                                    else if (reader.Value.Equals("MLA"))
+                                    {
+                                        mlaRadio.Checked = true;
+                                    }
+                                }
+                                break;
+                            case "IncludeTitlePage":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "IncludeSummary":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        summaryIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        summaryIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "IncludeAbstract":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        abstractIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        abstractIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "IncludeHeader":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "IncludeConclusion":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        conclusionIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        conclusionIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "IncludeReferences":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        referencesIncludeCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        referencesIncludeCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeTitle":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageTitleCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageTitleCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeName":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageNameCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageNameCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeClass":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageClassCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageClassCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeProfessor":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageProfessorCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageProfessorCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeSchool":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageSchoolCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageSchoolCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageIncludeDate":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        titlePageDateCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        titlePageDateCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "TitlePageTitle":
+                                if (reader.Read())
+                                {
+                                    titlePageTitleEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageName":
+                                if (reader.Read())
+                                {
+                                    titlePageNameEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageClass":
+                                if (reader.Read())
+                                {
+                                    titlePageClassEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageProfessor":
+                                if (reader.Read())
+                                {
+                                    titlePageProfessorEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageSchool":
+                                if (reader.Read())
+                                {
+                                    titlePageSchoolEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageDate":
+                                if (reader.Read())
+                                {
+                                    titlePageDateEnter.Text = reader.Value;
+                                }
+                                break;
+                            case "TitlePageAlignment":
+                                if (reader.Read())
+                                {
+                                    string alignment = reader.Value;
+                                    if (alignment.Equals("left"))
+                                    {
+                                        titlePageLeftAllignRadio.Checked = true;
+                                    }
+                                    else if (alignment.Equals("center"))
+                                    {
+                                        titlePageCenterRadio.Checked = true;
+                                    }
+                                    else if (alignment.Equals("right"))
+                                    {
+                                        titlePageRightAllignRadio.Checked = true;
+                                    }
+                                }
+                                break;
+                            case "TitlePageItem":
+                                if (reader.Read())
+                                {
+                                    myPaper.titlePage.titlePageOrder.Add(reader.Value);
+                                }
+                                break;
+                            case "Reference":
+                                inReference = true;
+                                newReference = true;
+                                break;
+                            case "Author":
+                                inReferenceAuthor = true;
+                                newReferenceAuthor = true;
+                                break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            openFile.ShowDialog();
         }
     }
 }

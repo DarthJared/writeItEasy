@@ -376,10 +376,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             if (apaRadio.Checked)
             {
                 newButtonText = "APA Defaults";
+                myPaper.isAPA = true;
+                myPaper.isMLA = false;
             }
             else
             {
                 newButtonText = "MLA Defaults";
+                myPaper.isAPA = false;
+                myPaper.isMLA = true;
             }
             generalDefaultButton.Text = newButtonText;
             titlePageDefaultButton.Text = newButtonText;
