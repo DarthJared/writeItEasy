@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -1831,7 +1832,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "SummaryContent":
                                 if (reader.Read())
                                 {
-                                    summaryContent.Text = reader.Value;
+                                    formatLoaded(reader.Value, summaryContent);
                                 }
                                 break;
                             case "AbstractOwnPage":
@@ -4164,6 +4165,108 @@ namespace WriteMeEasy_WindowsFormsApplication
                     }                    
                 }
             }
+        }
+
+        private void formatLoaded (string loadedText, RichTextBox intoControl)
+        {
+            string unformatted = Regex.Replace(Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
+
+            intoControl.Text = unformatted;
+            string[] splitIndent = Regex.Replace(Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "").Split('\v');
+            for (int i = 0; i < splitIndent.Length; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    int previousSplitLength = 0;
+                    for (int j = i - 1; j >= 0; j--)
+                    {
+                        previousSplitLength += splitIndent[j].Length;
+                    }
+                    intoControl.Select(previousSplitLength, splitIndent[i].Length);
+                    intoControl.SelectionIndent = 40;
+                    intoControl.SelectionHangingIndent = 0;
+                }
+            }
+
+            string[] splitBold = Regex.Replace(Regex.Replace(loadedText.Replace('\v'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "").Split('\b');
+            for (int i = 0; i < splitBold.Length; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    int previousSplitLength = 0;
+                    for (int j = i - 1; j >= 0; j--)
+                    {
+                        previousSplitLength += splitBold[j].Length;
+                    }
+                    intoControl.Select(previousSplitLength, splitBold[i].Length);                
+                    intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold);
+                }
+            }
+
+            string[] splitItalic = Regex.Replace(Regex.Replace(loadedText.Replace('\v'.ToString(), "").Replace('\b'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "").Split('\a');
+            for (int i = 0; i < splitItalic.Length; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    int previousSplitLength = 0;
+                    for (int j = i - 1; j >= 0; j--)
+                    {
+                        previousSplitLength += splitItalic[j].Length;
+                    }
+                    intoControl.Select(previousSplitLength, splitItalic[i].Length);
+                    int selectStart = intoControl.SelectionStart;
+                    int selectLength = intoControl.SelectionLength;
+                    for (int j = 0; j < selectLength; j++)
+                    {
+                        intoControl.Select(selectStart + j, 1);
+                        if (intoControl.SelectionFont.Bold)
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold | FontStyle.Italic);
+                        }
+                        else
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Italic);
+                        }
+                    }                    
+                }
+            }
+
+            string[] splitUnderline = Regex.Replace(Regex.Replace(loadedText.Replace('\v'.ToString(), "").Replace('\b'.ToString(), "").Replace('\a'.ToString(), ""), fontPattern, ""), sizePattern, "").Split('\f');
+            for (int i = 0; i < splitUnderline.Length; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    int previousSplitLength = 0;
+                    for (int j = i - 1; j >= 0; j--)
+                    {
+                        previousSplitLength += splitUnderline[j].Length;
+                    }
+                    intoControl.Select(previousSplitLength, splitUnderline[i].Length);
+                    int selectStart = intoControl.SelectionStart;
+                    int selectLength = intoControl.SelectionLength;
+                    for (int j = 0; j < selectLength; j++)
+                    {
+                        intoControl.Select(selectStart + j, 1);
+                        if (intoControl.SelectionFont.Bold && intoControl.SelectionFont.Italic)
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                        }
+                        else if (intoControl.SelectionFont.Bold)
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+                        }
+                        else if (intoControl.SelectionFont.Italic)
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Underline | FontStyle.Italic);
+                        }
+                        else
+                        {
+                            intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Underline);
+                        }
+                    }
+                }
+            }
+
         }
 
         private void openButton_Click(object sender, EventArgs e)
