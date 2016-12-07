@@ -1414,20 +1414,17 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         writer.WriteStartElement("SectionElement");
                         writer.WriteElementString("Content", section.content);
-                        writer.WriteElementString("Title", section.title);
-                        writer.WriteElementString("Index", section.index.ToString());
+                        writer.WriteElementString("SectionTitle", section.title);
                         foreach(SubSection subsection in section.subSections)
                         {
                             writer.WriteStartElement("Subsection");
                             writer.WriteElementString("Content", subsection.content);
-                            writer.WriteElementString("Title", subsection.title);
-                            writer.WriteElementString("Index", subsection.index.ToString());
+                            writer.WriteElementString("SectionTitle", subsection.title);
                             foreach (SubSubSection subsubsection in subsection.subsubSections)
                             {
                                 writer.WriteStartElement("Subsubsection");
                                 writer.WriteElementString("Content", subsubsection.content);
-                                writer.WriteElementString("Title", subsubsection.title);
-                                writer.WriteElementString("Index", subsubsection.index.ToString());
+                                writer.WriteElementString("SectionTitle", subsubsection.title);
                                 writer.WriteEndElement();
                             }
                             writer.WriteEndElement();
@@ -4006,10 +4003,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     subsubsectionLabelColorText.Text = reader.Value;
                                 }
                                 break;
-
-                            //TODO Add section objects here
                             case "SectionElement":
                                 numSectionsStarted++;
+                                numSubsections = 0;
+                                numSubsectionsStarted = 0;
+                                numSubsubsections = 0;
+                                numSubsubsectionsStarted = 0;
                                 if (numSections < numSectionsStarted)
                                 {
                                     addSectionButton.PerformClick();
@@ -4019,7 +4018,72 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 inSubsection = false;
                                 inSubsubsection = false;
                                 break;
-
+                            case "Subsection":
+                                numSubsectionsStarted++;
+                                numSubsubsections = 0;
+                                numSubsubsectionsStarted = 0;
+                                if (numSubsections < numSubsectionsStarted)
+                                {
+                                    Button addSubsectionButton = (Button)Controls.Find("section" + numSections + "AddSubsectionButton", true)[0];
+                                    addSubsectionButton.PerformClick();
+                                    numSubsections++;
+                                }
+                                inSection = true;
+                                inSubsection = true;
+                                inSubsubsection = false;
+                                break;
+                            case "Subsubsection":
+                                numSubsubsectionsStarted++;
+                                if (numSubsubsections < numSubsubsectionsStarted)
+                                {
+                                    Button addSubsubsectionButton = (Button)Controls.Find("section" + numSections + "Subsection" + numSubsections + "AddSubsubsectionButton", true)[0];
+                                    addSubsubsectionButton.PerformClick();
+                                    numSubsubsections++;
+                                }
+                                inSection = true;
+                                inSubsection = true;
+                                inSubsubsection = true;
+                                break;
+                            case "Content":
+                                if (reader.Read())
+                                {
+                                    if (inSubsubsection)
+                                    {
+                                        RichTextBox subsubsection = (RichTextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "Subsubsection" + numSubsubsections + "Content", true)[0];
+                                        subsubsection.Text = reader.Value;
+                                    }
+                                    else if (inSubsection)
+                                    {
+                                        RichTextBox subsection = (RichTextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "Content", true)[0];
+                                        subsection.Text = reader.Value;
+                                    }
+                                    else if (inSection)
+                                    {
+                                        RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + numSections + "Content", true)[0];
+                                        sectionContent.Text = reader.Value;
+                                    }
+                                }
+                                break;
+                            case "SectionTitle":
+                                if (reader.Read())
+                                {
+                                    if (inSubsubsection)
+                                    {
+                                        TextBox subsubsection = (TextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "Subsubsection" + numSubsubsections + "LabelEnter", true)[0];
+                                        subsubsection.Text = reader.Value;
+                                    }
+                                    else if (inSubsection)
+                                    {
+                                        TextBox subsection = (TextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "LabelEnter", true)[0];
+                                        subsection.Text = reader.Value;
+                                    }
+                                    else if (inSection)
+                                    {
+                                        TextBox sectionTitle = (TextBox)Controls.Find("section" + numSections + "LabelEnter", true)[0];
+                                        sectionTitle.Text = reader.Value;
+                                    }
+                                }
+                                break;
                             case "ConclusionOnOwnPage":
                                 if (reader.Read())
                                 {
