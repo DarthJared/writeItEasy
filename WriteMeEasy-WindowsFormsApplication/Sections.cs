@@ -190,12 +190,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionContent.Name = "section" + newSection.index + "Content";
             newSectionGroupBox.Controls.Add(newSectionContent);
             newSectionContent.Location = new Point(9, 70);
-            newSectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             newSectionContent.Tag = newSection.index;
             newSectionContent.Leave += new EventHandler(sectionTextChanged);
             newSectionContent.Enter += new EventHandler(sectionLast);
             newSectionContent.SelectionIndent = 40;
             newSectionContent.SelectionHangingIndent = -40;
+            newSectionContent.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
 
             Button newSectionAddSubsectionButton = new Button();
             newSectionAddSubsectionButton.Name = "section" + newSection.index + "AddSubsectionButton";
@@ -208,9 +208,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionAddSubsectionButton.Tag = newSection.index;
             newSectionAddSubsectionButton.Click += new EventHandler(sectionAddSubsectionButton_Click);
 
-            addSpace("addSectionButton", 318, "contentPanel", "CONTENT");
+            addSpace("addSectionButton", 308, "contentPanel", "CONTENT");            
             newSectionGroupBox.Size = new Size(tableLayoutPanel1.Width - 567, 298);
-            newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 321);
+            newSectionGroupBox.Location = new Point(9, addSectionButton.Location.Y - 311);
             newSectionLabelLabel.Visible = true;
             newSectionLabelEnter.Visible = true;
             newSectionContentLabel.Location = new Point(6, 49);
@@ -246,6 +246,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionToAdd.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "GroupBox";
             subsectionToAdd.Text = "Subsection " + subsectionIndex;
             sectionToAddTo.Controls.Add(subsectionToAdd);
+            subsectionToAdd.Font = new Font("Microsoft Sans Serif", (float)9.75, FontStyle.Bold);
 
             Label subsectionLabelLabel = new Label();
             subsectionLabelLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "LabelLabel";
@@ -257,7 +258,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             TextBox subsectionLabelEnter = new TextBox();
             subsectionLabelEnter.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "LabelEnter";
             subsectionToAdd.Controls.Add(subsectionLabelEnter);
-            subsectionLabelEnter.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            subsectionLabelEnter.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
             subsectionLabelEnter.Location = new Point(110, 19);
             subsectionLabelEnter.Width = 185;
 
@@ -280,6 +281,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Enter += new EventHandler(subsectionLast);
             subsectionContent.SelectionIndent = 40;
             subsectionContent.SelectionHangingIndent = -40;
+            subsectionContent.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
 
             Label subsectionContentLabel = new Label();
             subsectionContentLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "ContentLabel";
@@ -300,7 +302,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             addSpace("section" + sectionIndex + "AddSubsectionButton", 330, "contentPanel", "CONTENT");
             subsectionToAdd.Location = new Point(9, starter.Location.Y - 310);
             subsectionToAdd.Size = new Size(sectionToAddTo.Width - 18, 298);
-            subsectionToAdd.Font = new Font(subsectionToAdd.Font, FontStyle.Regular);
             subsectionContentLabel.Location = new Point(6, 49);
             subsectionContent.Size = new Size(subsectionToAdd.Width - 18, 182);
             subsectionToAdd.Controls.Add(addSubsubsectionButton);
@@ -345,6 +346,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionToAdd.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "GroupBox";
             subsubsectionToAdd.Text = "Subsubsection " + subsubsectionIndex;
             subsectionToAddTo.Controls.Add(subsubsectionToAdd);
+            subsubsectionToAdd.Font = new Font("Microsoft Sans Serif", (float)9.75, FontStyle.Bold);
 
             Label subsubsectionLabelLabel = new Label();
             subsubsectionLabelLabel.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "LabelLabel";
@@ -357,7 +359,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             TextBox subsubsectionLabelEnter = new TextBox();
             subsubsectionLabelEnter.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "LabelEnter";
             subsubsectionToAdd.Controls.Add(subsubsectionLabelEnter);
-            subsubsectionLabelEnter.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            subsubsectionLabelEnter.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
             subsubsectionLabelEnter.Location = new Point(122, 19);
             subsubsectionLabelEnter.Width = 185;
 
@@ -373,7 +375,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             RichTextBox subsubsectionContent = new RichTextBox();
             subsubsectionContent.Name = "section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content";
             subsubsectionToAdd.Controls.Add(subsubsectionContent);
-            subsubsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
+            subsubsectionContent.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
             subsubsectionContent.Location = new Point(9, 70);
             subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
             subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
@@ -391,7 +393,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             addSpace("section" + sectionIndex + "Subsection" + subsectionIndex + "AddSubsubsectionButton", 318, "contentPanel", "CONTENT");
             subsubsectionToAdd.Location = new Point(9, starter.Location.Y - 298);
             subsubsectionToAdd.Size = new Size(subsectionToAddTo.Width - 18, 298);
-            subsubsectionToAdd.Font = new Font(subsubsectionToAdd.Font, FontStyle.Regular);
             subsubsectionContentLabel.Location = new Point(6, 49);
             subsubsectionContent.Size = new Size(subsubsectionToAdd.Width - 18, 182);
         }

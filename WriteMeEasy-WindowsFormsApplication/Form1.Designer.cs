@@ -343,6 +343,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paperTitle = new System.Windows.Forms.Label();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -533,6 +534,7 @@
             // 
             this.contentPanel.BackColor = System.Drawing.Color.White;
             this.contentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contentPanel.Controls.Add(this.paperTitle);
             this.contentPanel.Controls.Add(this.conclusionContentGroupBox);
             this.contentPanel.Controls.Add(this.section1groupBox);
             this.contentPanel.Controls.Add(this.abstractContentGroupBox);
@@ -3987,7 +3989,7 @@
             this.mainToolStrip.Location = new System.Drawing.Point(3, 24);
             this.mainToolStrip.Name = "mainToolStrip";
             this.mainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mainToolStrip.Size = new System.Drawing.Size(516, 25);
+            this.mainToolStrip.Size = new System.Drawing.Size(485, 25);
             this.mainToolStrip.TabIndex = 1;
             // 
             // saveButton
@@ -4145,6 +4147,17 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // paperTitle
+            // 
+            this.paperTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paperTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paperTitle.Location = new System.Drawing.Point(0, 0);
+            this.paperTitle.Name = "paperTitle";
+            this.paperTitle.Size = new System.Drawing.Size(732, 24);
+            this.paperTitle.TabIndex = 13;
+            this.paperTitle.Text = "Your Paper";
+            this.paperTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -4586,6 +4599,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.Label paperTitle;
     }
 }
 

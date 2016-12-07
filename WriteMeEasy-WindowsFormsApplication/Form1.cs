@@ -362,6 +362,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void paperTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.titleOfPaper = paperTitleEnter.Text;
+            paperTitle.Text = paperTitleEnter.Text;
         }
 
         private void generalDefaultButton_Click(object sender, EventArgs e)
