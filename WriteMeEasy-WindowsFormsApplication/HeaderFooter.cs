@@ -58,27 +58,25 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (headerFirstPageMoreCheck.Checked)
             {
-                lowerSection(384, "HEADER");
-                sections["HEADER"] = 1005;
-                headerPanel.Height = 1005;
-                headerDefaultButton.Location = new Point(9, 969);
-                headerOptionsGroupBox.Height = 928;
-                headerFirstPageGroupBox.Height = 474;
+                lowerSection(339, "HEADER");
+                sections["HEADER"] = 865;
+                headerPanel.Height = 865;
+                headerDefaultButton.Location = new Point(9, 829);
+                headerOptionsGroupBox.Height = 788;
+                headerFirstPageGroupBox.Height = 424;
                 headerFirstPageLeftGroupBox.Visible = true;
-                headerFirstPageCenterGroupBox.Visible = true;
                 headerFirstPageRightGroupBox.Visible = true;
             }
             else
             {
                 headerFirstPageLeftGroupBox.Visible = false;
-                headerFirstPageCenterGroupBox.Visible = false;
                 headerFirstPageRightGroupBox.Visible = false;
                 headerFirstPageGroupBox.Height = 90;
-                headerOptionsGroupBox.Height = 544;
-                headerDefaultButton.Location = new Point(9, 585);
-                headerPanel.Height = 621;
-                sections["HEADER"] = 621;
-                raiseSection(384, "HEADER");
+                headerOptionsGroupBox.Height = 449;
+                headerDefaultButton.Location = new Point(9, 490);
+                headerPanel.Height = 526;
+                sections["HEADER"] = 526;
+                raiseSection(339, "HEADER");
             }
         }
 
@@ -88,23 +86,22 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 if (headerFirstPageMoreCheck.Checked)
                 {
-                    lowerSection(434, "HEADER");
-                    sections["HEADER"] = 1005;
-                    headerPanel.Height = 1005;
-                    headerDefaultButton.Location = new Point(9, 969);
-                    headerOptionsGroupBox.Height = 928;
-                    headerFirstPageGroupBox.Height = 474;
+                    lowerSection(384, "HEADER");
+                    sections["HEADER"] = 865;
+                    headerPanel.Height = 865;
+                    headerDefaultButton.Location = new Point(9, 829);
+                    headerOptionsGroupBox.Height = 788;
+                    headerFirstPageGroupBox.Height = 424;
                     headerFirstPageLeftGroupBox.Visible = true;
-                    headerFirstPageCenterGroupBox.Visible = true;
                     headerFirstPageRightGroupBox.Visible = true;
                 }
                 else
                 {
-                    lowerSection(50, "HEADER");
-                    sections["HEADER"] = 621;
-                    headerPanel.Height = 621;
-                    headerDefaultButton.Location = new Point(9, 585);
-                    headerOptionsGroupBox.Height = 544;
+                    lowerSection(45, "HEADER");
+                    sections["HEADER"] = 526;
+                    headerPanel.Height = 526;
+                    headerDefaultButton.Location = new Point(9, 490);
+                    headerOptionsGroupBox.Height = 449;
                     headerFirstPageGroupBox.Height = 90;
                 }
                 headerFirstPageUseRunningHeadCheck.Visible = true;
@@ -115,21 +112,20 @@ namespace WriteMeEasy_WindowsFormsApplication
                 if (headerFirstPageMoreCheck.Checked)
                 {
                     headerFirstPageLeftGroupBox.Visible = false;
-                    headerFirstPageCenterGroupBox.Visible = false;
                     headerFirstPageRightGroupBox.Visible = false;
-                    raiseSection(434, "HEADER");
+                    raiseSection(384, "HEADER");
                 }
                 else
                 {
-                    raiseSection(50, "HEADER");
+                    raiseSection(45, "HEADER");
                 }
                 headerFirstPageUseRunningHeadCheck.Visible = false;
                 headerFirstPageMoreCheck.Visible = false;
                 headerFirstPageGroupBox.Height = 40;
-                headerOptionsGroupBox.Height = 494;
-                headerDefaultButton.Location = new Point(9, 535);
-                headerPanel.Height = 571;
-                sections["HEADER"] = 571;
+                headerOptionsGroupBox.Height = 404;
+                headerDefaultButton.Location = new Point(9, 445);
+                headerPanel.Height = 481;
+                sections["HEADER"] = 481;
             }
         }
 
@@ -143,15 +139,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
+                headerLeftFirstPageNumLabel.Visible = false;
+                headerLeftFirstPageNumEnter.Visible = false;
+                headerLeftLastNameLabel.Visible = false;
+                headerLeftLastNameEnter.Visible = false;
             }
             else if (headerLeftNumberRadio.Checked)
             {
-                 headerLeftTitleLabel.Visible = false;
+                headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
                 headerLeftNumberLabel.Visible = true;
                 headerLeftNumberEnter.Visible = true;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
+                headerLeftFirstPageNumLabel.Visible = false;
+                headerLeftFirstPageNumEnter.Visible = false;
+                headerLeftLastNameLabel.Visible = false;
+                headerLeftLastNameEnter.Visible = false;
             }
             else if (headerLeftOtherRadio.Checked)
             {
@@ -161,6 +165,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = true;
                 headerLeftOtherEnter.Visible = true;
+                headerLeftFirstPageNumLabel.Visible = false;
+                headerLeftFirstPageNumEnter.Visible = false;
+                headerLeftLastNameLabel.Visible = false;
+                headerLeftLastNameEnter.Visible = false;
+            }
+            else if (headerLeftNumNameRadio.Checked)
+            {
+                headerLeftTitleLabel.Visible = false;
+                headerLeftTitleEnter.Visible = false;
+                headerLeftNumberLabel.Visible = false;
+                headerLeftNumberEnter.Visible = false;
+                headerLeftOtherLabel.Visible = false;
+                headerLeftOtherEnter.Visible = false;
+                headerLeftFirstPageNumLabel.Visible = true;
+                headerLeftFirstPageNumEnter.Visible = true;
+                headerLeftLastNameLabel.Visible = true;
+                headerLeftLastNameEnter.Visible = true;
             }
             else if (headerLeftEmptyRadio.Checked)
             {
@@ -170,46 +191,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
-            }
-        }
-
-        private void headerCenterChanged(object sender, EventArgs e)
-        {
-            if (headerCenterTitleRadio.Checked)
-            {
-                headerCenterTitleLabel.Visible = true;
-                headerCenterTitleEnter.Visible = true;
-                headerCenterNumberLabel.Visible = false;
-                headerCenterNumberEnter.Visible = false;
-                headerCenterOtherLabel.Visible = false;
-                headerCenterOtherEnter.Visible = false;
-            }
-            else if (headerCenterNumberRadio.Checked)
-            {
-                headerCenterTitleLabel.Visible = false;
-                headerCenterTitleEnter.Visible = false;
-                headerCenterNumberLabel.Visible = true;
-                headerCenterNumberEnter.Visible = true;
-                headerCenterOtherLabel.Visible = false;
-                headerCenterOtherEnter.Visible = false;
-            }
-            else if (headerCenterOtherRadio.Checked)
-            {
-                headerCenterTitleLabel.Visible = false;
-                headerCenterTitleEnter.Visible = false;
-                headerCenterNumberLabel.Visible = false;
-                headerCenterNumberEnter.Visible = false;
-                headerCenterOtherLabel.Visible = true;
-                headerCenterOtherEnter.Visible = true;
-            }
-            else if (headerCenterEmptyRadio.Checked)
-            {
-                headerCenterTitleLabel.Visible = false;
-                headerCenterTitleEnter.Visible = false;
-                headerCenterNumberLabel.Visible = false;
-                headerCenterNumberEnter.Visible = false;
-                headerCenterOtherLabel.Visible = false;
-                headerCenterOtherEnter.Visible = false;
+                headerLeftFirstPageNumLabel.Visible = false;
+                headerLeftFirstPageNumEnter.Visible = false;
+                headerLeftLastNameLabel.Visible = false;
+                headerLeftLastNameEnter.Visible = false;
             }
         }
 
@@ -223,6 +208,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
+                headerRightFirstPageNumLabel.Visible = false;
+                headerRightFirstPageNumEnter.Visible = false;
+                headerRightLastNameLabel.Visible = false;
+                headerRightLastNameEnter.Visible = false;
             }
             else if (headerRightNumberRadio.Checked)
             {
@@ -232,6 +221,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerRightNumberEnter.Visible = true;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
+                headerRightFirstPageNumLabel.Visible = false;
+                headerRightFirstPageNumEnter.Visible = false;
+                headerRightLastNameLabel.Visible = false;
+                headerRightLastNameEnter.Visible = false;
             }
             else if (headerRightOtherRadio.Checked)
             {
@@ -241,6 +234,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = true;
                 headerRightOtherEnter.Visible = true;
+                headerRightFirstPageNumLabel.Visible = false;
+                headerRightFirstPageNumEnter.Visible = false;
+                headerRightLastNameLabel.Visible = false;
+                headerRightLastNameEnter.Visible = false;
+            }
+            else if (headerRightNumNameRadio.Checked)
+            {
+                headerRightTitleLabel.Visible = false;
+                headerRightTitleEnter.Visible = false;
+                headerRightNumberLabel.Visible = false;
+                headerRightNumberEnter.Visible = false;
+                headerRightOtherLabel.Visible = false;
+                headerRightOtherEnter.Visible = false;
+                headerRightFirstPageNumLabel.Visible = true;
+                headerRightFirstPageNumEnter.Visible = true;
+                headerRightLastNameLabel.Visible = true;
+                headerRightLastNameEnter.Visible = true;
             }
             else if (headerRightEmptyRadio.Checked)
             {
@@ -250,6 +260,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
+                headerRightFirstPageNumLabel.Visible = false;
+                headerRightFirstPageNumEnter.Visible = false;
+                headerRightLastNameLabel.Visible = false;
+                headerRightLastNameEnter.Visible = false;
             }
         }
 
@@ -263,6 +277,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
+                headerFirstLeftPageNumLabel.Visible = false;
+                headerFirstLeftFirstPageNumEnter.Visible = false;
+                headerFirstLeftLastNameLabel.Visible = false;
+                headerFirstLeftLastNameEnter.Visible = false;
             }
             else if (headerFirstLeftNumberRadio.Checked)
             {
@@ -272,6 +290,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstLeftNumberEnter.Visible = true;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
+                headerFirstLeftPageNumLabel.Visible = false;
+                headerFirstLeftFirstPageNumEnter.Visible = false;
+                headerFirstLeftLastNameLabel.Visible = false;
+                headerFirstLeftLastNameEnter.Visible = false;
             }
             else if (headerFirstLeftOtherRadio.Checked)
             {
@@ -281,6 +303,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = true;
                 headerFirstLeftOtherEnter.Visible = true;
+                headerFirstLeftPageNumLabel.Visible = false;
+                headerFirstLeftFirstPageNumEnter.Visible = false;
+                headerFirstLeftLastNameLabel.Visible = false;
+                headerFirstLeftLastNameEnter.Visible = false;
+            }
+            else if (headerFirstLeftPageNumberLastNameRadio.Checked)
+            {
+                headerFirstLeftTitleLabel.Visible = false;
+                headerFirstLeftTitleEnter.Visible = false;
+                headerFirstLeftNumberLabel.Visible = false;
+                headerFirstLeftNumberEnter.Visible = false;
+                headerFirstLeftOtherLabel.Visible = false;
+                headerFirstLeftOtherEnter.Visible = false;
+                headerFirstLeftPageNumLabel.Visible = true;
+                headerFirstLeftFirstPageNumEnter.Visible = true;
+                headerFirstLeftLastNameLabel.Visible = true;
+                headerFirstLeftLastNameEnter.Visible = true;
             }
             else if (headerFirstLeftEmptyRadio.Checked)
             {
@@ -290,46 +329,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
-            }
-        }
-
-        private void headerFirstCenterChanged(object sender, EventArgs e)
-        {
-            if (headerFirstCenterTitleRadio.Checked)
-            {
-                headerFirstCenterTitleLabel.Visible = true;
-                headerFirstCenterTitleEnter.Visible = true;
-                headerFirstCenterNumberLabel.Visible = false;
-                headerFirstCenterNumberEnter.Visible = false;
-                headerFirstCenterOtherLabel.Visible = false;
-                headerFirstCenterOtherEnter.Visible = false;
-            }
-            else if (headerFirstCenterNumberRadio.Checked)
-            {
-                headerFirstCenterTitleLabel.Visible = false;
-                headerFirstCenterTitleEnter.Visible = false;
-                headerFirstCenterNumberLabel.Visible = true;
-                headerFirstCenterNumberEnter.Visible = true;
-                headerFirstCenterOtherLabel.Visible = false;
-                headerFirstCenterOtherEnter.Visible = false;
-            }
-            else if (headerFirstCenterOtherRadio.Checked)
-            {
-                headerFirstCenterTitleLabel.Visible = false;
-                headerFirstCenterTitleEnter.Visible = false;
-                headerFirstCenterNumberLabel.Visible = false;
-                headerFirstCenterNumberEnter.Visible = false;
-                headerFirstCenterOtherLabel.Visible = true;
-                headerFirstCenterOtherEnter.Visible = true;
-            }
-            else if (headerFirstCenterEmptyRadio.Checked)
-            {
-                headerFirstCenterTitleLabel.Visible = false;
-                headerFirstCenterTitleEnter.Visible = false;
-                headerFirstCenterNumberLabel.Visible = false;
-                headerFirstCenterNumberEnter.Visible = false;
-                headerFirstCenterOtherLabel.Visible = false;
-                headerFirstCenterOtherEnter.Visible = false;
+                headerFirstLeftPageNumLabel.Visible = false;
+                headerFirstLeftFirstPageNumEnter.Visible = false;
+                headerFirstLeftLastNameLabel.Visible = false;
+                headerFirstLeftLastNameEnter.Visible = false;
             }
         }
 
@@ -343,6 +346,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
+                headerFirstRightPageNumLabel.Visible = false;
+                headerFirstRightFirstPageNumEnter.Visible = false;
+                headerFirstRightLastNameLabel.Visible = false;
+                headerFirstRightLastNameEnter.Visible = false;
             }
             else if (headerFirstRightNumberRadio.Checked)
             {
@@ -352,6 +359,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstRightNumberEnter.Visible = true;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
+                headerFirstRightPageNumLabel.Visible = false;
+                headerFirstRightFirstPageNumEnter.Visible = false;
+                headerFirstRightLastNameLabel.Visible = false;
+                headerFirstRightLastNameEnter.Visible = false;
             }
             else if (headerFirstRightOtherRadio.Checked)
             {
@@ -361,6 +372,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = true;
                 headerFirstRightOtherEnter.Visible = true;
+                headerFirstRightPageNumLabel.Visible = false;
+                headerFirstRightFirstPageNumEnter.Visible = false;
+                headerFirstRightLastNameLabel.Visible = false;
+                headerFirstRightLastNameEnter.Visible = false;
+            }
+            else if (headerFirstRightPageNumberLastNameRadio.Checked)
+            {
+                headerFirstRightTitleLabel.Visible = false;
+                headerFirstRightTitleEnter.Visible = false;
+                headerFirstRightNumberLabel.Visible = false;
+                headerFirstRightNumberEnter.Visible = false;
+                headerFirstRightOtherLabel.Visible = false;
+                headerFirstRightOtherEnter.Visible = false;
+                headerFirstRightPageNumLabel.Visible = true;
+                headerFirstRightFirstPageNumEnter.Visible = true;
+                headerFirstRightLastNameLabel.Visible = true;
+                headerFirstRightLastNameEnter.Visible = true;
             }
             else if (headerFirstRightEmptyRadio.Checked)
             {
@@ -370,6 +398,10 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
+                headerFirstRightPageNumLabel.Visible = false;
+                headerFirstRightFirstPageNumEnter.Visible = false;
+                headerFirstRightLastNameLabel.Visible = false;
+                headerFirstRightLastNameEnter.Visible = false;
             }
         }        
     }

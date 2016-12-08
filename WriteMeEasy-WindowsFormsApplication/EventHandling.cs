@@ -322,7 +322,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 loopParents(parent, heightChange, nameCheck, false);
             }
-        }        
+        }
+
+        private bool adjusted = false;
 
         private void apaMla_Changed(object sender, EventArgs e)
         {
@@ -361,7 +363,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 headerLeftTitleRadio.Checked = true;
                 headerLeftTitleEnter.Text = paperTitleEnter.Text;
-                headerCenterEmptyRadio.Checked = true;
                 headerRightNumberRadio.Checked = true;
                 headerRightNumberEnter.Value = 1;
                 headerDiffFirstPageCheck.Checked = true;
@@ -396,6 +397,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelSize.Text = "12";
                 //TODO Add color for subsubsection label
 
+                if (!adjusted && !subsectionLabelGroupBox.Visible && !subsubsectionLabelGroupBox.Visible)
+                {
+                    adjusted = true;
+                    sectionsDefaultButton.Location = new Point(sectionsDefaultButton.Location.X, sectionsDefaultButton.Location.Y - 480);
+                    sectionsOptionsGroupBox.Height -= 480;
+                    sectionsPanel.Height -= 480;
+                    raiseSection(480, "SECTIONS");
+                }
+                else if ((!adjusted && !subsectionLabelGroupBox.Visible) ||
+                    (!adjusted && !subsubsectionLabelGroupBox.Visible))
+                {
+                    adjusted = true;
+                    sectionsDefaultButton.Location = new Point(sectionsDefaultButton.Location.X, sectionsDefaultButton.Location.Y - 240);
+                    sectionsOptionsGroupBox.Height -= 240;
+                    sectionsPanel.Height -= 240;
+                    raiseSection(240, "SECTIONS");
+                }
+
                 conclusionOwnPageCheck.Checked = false;
                 conclusionIncludeTitleCheck.Checked = true;
                 conclusionTitleAlignChoose.Text = "Center";
@@ -426,6 +445,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 titlePageIncludeCheck.Checked = true;
                 summaryIncludeCheck.Checked = false;
                 abstractIncludeCheck.Checked = false;
+                headerIncludeCheck.Checked = true;
                 conclusionIncludeCheck.Checked = true;
                 referencesIncludeCheck.Checked = true;
 
@@ -438,7 +458,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                 titlePageLeftAllignRadio.Checked = true;
                 titleInfoTopFirstPageCheck.Checked = true;
                 //TODO Make sure they are ordered correctly
-                
+
+                headerLeftEmptyRadio.Checked = true;
+                headerLeftTitleEnter.Text = paperTitleEnter.Text;
+                headerFirstRightPageNumberLastNameRadio.Checked = true;
+                headerRightNumberEnter.Value = 1;
+                headerDiffFirstPageCheck.Checked = false;
+
                 blankLineBetweenSectionsRadio.Checked = true;
                 includeSectionLabelsCheck.Checked = true;
                 sectionLabelAlignChoose.Text = "Center";
@@ -466,6 +492,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelFont.Text = "Times New Roman";
                 subsubsectionLabelSize.Text = "12";
                 //TODO Add color for subsubsection label
+
+                if (!adjusted && !subsectionLabelGroupBox.Visible && !subsubsectionLabelGroupBox.Visible)
+                {
+                    adjusted = true;
+                    sectionsDefaultButton.Location = new Point(sectionsDefaultButton.Location.X, sectionsDefaultButton.Location.Y - 480);
+                    sectionsOptionsGroupBox.Height -= 480;
+                    sectionsPanel.Height -= 480;
+                    raiseSection(480, "SECTIONS");
+                }
+                else if ((!adjusted && !subsectionLabelGroupBox.Visible) ||
+                    (!adjusted && !subsubsectionLabelGroupBox.Visible))
+                {
+                    adjusted = true;
+                    sectionsDefaultButton.Location = new Point(sectionsDefaultButton.Location.X, sectionsDefaultButton.Location.Y - 240);
+                    sectionsOptionsGroupBox.Height -= 240;
+                    sectionsPanel.Height -= 240;
+                    raiseSection(240, "SECTIONS");
+                }
 
                 conclusionOwnPageCheck.Checked = false;
                 conclusionIncludeTitleCheck.Checked = true;

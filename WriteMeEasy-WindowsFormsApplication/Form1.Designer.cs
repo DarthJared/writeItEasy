@@ -181,6 +181,8 @@
             this.titlePagePanel = new System.Windows.Forms.Panel();
             this.titlePageDefaultButton = new System.Windows.Forms.Button();
             this.titlePagePositionGroupBox = new System.Windows.Forms.GroupBox();
+            this.titleInfoTopFirstPageCheck = new System.Windows.Forms.RadioButton();
+            this.titleOwnPageCheck = new System.Windows.Forms.RadioButton();
             this.titlePageAllignGroupBox = new System.Windows.Forms.GroupBox();
             this.titlePageRightAllignRadio = new System.Windows.Forms.RadioButton();
             this.titlePageCenterRadio = new System.Windows.Forms.RadioButton();
@@ -221,6 +223,11 @@
             this.headerOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageGroupBox = new System.Windows.Forms.GroupBox();
             this.headerFirstPageRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerFirstRightFirstPageNumEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerFirstRightPageNumLabel = new System.Windows.Forms.Label();
+            this.headerFirstRightLastNameEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstRightLastNameLabel = new System.Windows.Forms.Label();
+            this.headerFirstRightPageNumberLastNameRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightTitleEnter = new System.Windows.Forms.TextBox();
             this.headerFirstRightTitleLabel = new System.Windows.Forms.Label();
@@ -231,18 +238,12 @@
             this.headerFirstRightNumberRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstRightOtherEnter = new System.Windows.Forms.TextBox();
-            this.headerFirstPageCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.headerFirstCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstCenterTitleEnter = new System.Windows.Forms.TextBox();
-            this.headerFirstCenterTitleLabel = new System.Windows.Forms.Label();
-            this.headerFirstCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
-            this.headerFirstCenterNumberLabel = new System.Windows.Forms.Label();
-            this.headerFirstCenterOtherLabel = new System.Windows.Forms.Label();
-            this.headerFirstCenterOtherRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstCenterNumberRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstCenterTitleRadio = new System.Windows.Forms.RadioButton();
-            this.headerFirstCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerFirstPageLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerFirstLeftFirstPageNumEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerFirstLeftPageNumLabel = new System.Windows.Forms.Label();
+            this.headerFirstLeftLastNameEnter = new System.Windows.Forms.TextBox();
+            this.headerFirstLeftLastNameLabel = new System.Windows.Forms.Label();
+            this.headerFirstLeftPageNumberLastNameRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerFirstLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.headerFirstLeftTitleLabel = new System.Windows.Forms.Label();
@@ -257,6 +258,11 @@
             this.headerDiffFirstPageCheck = new System.Windows.Forms.CheckBox();
             this.headerFirstPageUseRunningHeadCheck = new System.Windows.Forms.CheckBox();
             this.headerRightGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerRightFirstPageNumEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerRightFirstPageNumLabel = new System.Windows.Forms.Label();
+            this.headerRightLastNameEnter = new System.Windows.Forms.TextBox();
+            this.headerRightLastNameLabel = new System.Windows.Forms.Label();
+            this.headerRightNumNameRadio = new System.Windows.Forms.RadioButton();
             this.headerRightEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerRightTitleEnter = new System.Windows.Forms.TextBox();
             this.headerRightTitleLabel = new System.Windows.Forms.Label();
@@ -267,18 +273,12 @@
             this.headerRightNumberRadio = new System.Windows.Forms.RadioButton();
             this.headerRightTitleRadio = new System.Windows.Forms.RadioButton();
             this.headerRightOtherEnter = new System.Windows.Forms.TextBox();
-            this.headerCenterGroupBox = new System.Windows.Forms.GroupBox();
-            this.headerCenterEmptyRadio = new System.Windows.Forms.RadioButton();
-            this.headerCenterTitleEnter = new System.Windows.Forms.TextBox();
-            this.headerCenterTitleLabel = new System.Windows.Forms.Label();
-            this.headerCenterNumberEnter = new System.Windows.Forms.NumericUpDown();
-            this.headerCenterNumberLabel = new System.Windows.Forms.Label();
-            this.headerCenterOtherLabel = new System.Windows.Forms.Label();
-            this.headerCenterOtherRadio = new System.Windows.Forms.RadioButton();
-            this.headerCenterNumberRadio = new System.Windows.Forms.RadioButton();
-            this.headerCenterTitleRadio = new System.Windows.Forms.RadioButton();
-            this.headerCenterOtherEnter = new System.Windows.Forms.TextBox();
             this.headerLeftGroupBox = new System.Windows.Forms.GroupBox();
+            this.headerLeftFirstPageNumEnter = new System.Windows.Forms.NumericUpDown();
+            this.headerLeftFirstPageNumLabel = new System.Windows.Forms.Label();
+            this.headerLeftLastNameEnter = new System.Windows.Forms.TextBox();
+            this.headerLeftLastNameLabel = new System.Windows.Forms.Label();
+            this.headerLeftNumNameRadio = new System.Windows.Forms.RadioButton();
             this.headerLeftEmptyRadio = new System.Windows.Forms.RadioButton();
             this.headerLeftTitleEnter = new System.Windows.Forms.TextBox();
             this.headerLeftTitleLabel = new System.Windows.Forms.Label();
@@ -341,8 +341,6 @@
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.writeFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.titleOwnPageCheck = new System.Windows.Forms.RadioButton();
-            this.titleInfoTopFirstPageCheck = new System.Windows.Forms.RadioButton();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -391,16 +389,16 @@
             this.headerOptionsGroupBox.SuspendLayout();
             this.headerFirstPageGroupBox.SuspendLayout();
             this.headerFirstPageRightGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightFirstPageNumEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightNumberEnter)).BeginInit();
-            this.headerFirstPageCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerFirstCenterNumberEnter)).BeginInit();
             this.headerFirstPageLeftGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftFirstPageNumEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftNumberEnter)).BeginInit();
             this.headerRightGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerRightFirstPageNumEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerRightNumberEnter)).BeginInit();
-            this.headerCenterGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerCenterNumberEnter)).BeginInit();
             this.headerLeftGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerLeftFirstPageNumEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).BeginInit();
             this.summaryPanel.SuspendLayout();
             this.summaryOptionsGroupBox.SuspendLayout();
@@ -876,7 +874,7 @@
             this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 4896);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 4668);
             this.conclusionPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionPanel.Name = "conclusionPanel";
             this.conclusionPanel.Size = new System.Drawing.Size(1261, 407);
@@ -1279,7 +1277,7 @@
             this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(3, 4262);
+            this.sectionsPanel.Location = new System.Drawing.Point(3, 4036);
             this.sectionsPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sectionsPanel.Name = "sectionsPanel";
             this.sectionsPanel.Size = new System.Drawing.Size(1261, 632);
@@ -2020,7 +2018,7 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 5306);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 5075);
             this.referencesPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.referencesPanel.Name = "referencesPanel";
             this.referencesPanel.Size = new System.Drawing.Size(1261, 641);
@@ -2373,6 +2371,30 @@
             this.titlePagePositionGroupBox.TabIndex = 4;
             this.titlePagePositionGroupBox.TabStop = false;
             this.titlePagePositionGroupBox.Text = "Position";
+            // 
+            // titleInfoTopFirstPageCheck
+            // 
+            this.titleInfoTopFirstPageCheck.AutoSize = true;
+            this.titleInfoTopFirstPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleInfoTopFirstPageCheck.Location = new System.Drawing.Point(24, 96);
+            this.titleInfoTopFirstPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleInfoTopFirstPageCheck.Name = "titleInfoTopFirstPageCheck";
+            this.titleInfoTopFirstPageCheck.Size = new System.Drawing.Size(519, 36);
+            this.titleInfoTopFirstPageCheck.TabIndex = 2;
+            this.titleInfoTopFirstPageCheck.Text = "Title Information At Top Of First Page";
+            this.titleInfoTopFirstPageCheck.UseVisualStyleBackColor = true;
+            // 
+            // titleOwnPageCheck
+            // 
+            this.titleOwnPageCheck.AutoSize = true;
+            this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 46);
+            this.titleOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleOwnPageCheck.Name = "titleOwnPageCheck";
+            this.titleOwnPageCheck.Size = new System.Drawing.Size(304, 36);
+            this.titleOwnPageCheck.TabIndex = 1;
+            this.titleOwnPageCheck.Text = "Separate Title Page";
+            this.titleOwnPageCheck.UseVisualStyleBackColor = true;
             // 
             // titlePageAllignGroupBox
             // 
@@ -2876,21 +2898,20 @@
             this.headerPanel.Location = new System.Drawing.Point(0, 2900);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1261, 1359);
+            this.headerPanel.Size = new System.Drawing.Size(1261, 1133);
             this.headerPanel.TabIndex = 10;
             // 
             // headerOptionsGroupBox
             // 
             this.headerOptionsGroupBox.Controls.Add(this.headerFirstPageGroupBox);
             this.headerOptionsGroupBox.Controls.Add(this.headerRightGroupBox);
-            this.headerOptionsGroupBox.Controls.Add(this.headerCenterGroupBox);
             this.headerOptionsGroupBox.Controls.Add(this.headerLeftGroupBox);
             this.headerOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
             this.headerOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerOptionsGroupBox.Name = "headerOptionsGroupBox";
             this.headerOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerOptionsGroupBox.Size = new System.Drawing.Size(1216, 1178);
+            this.headerOptionsGroupBox.Size = new System.Drawing.Size(1216, 952);
             this.headerOptionsGroupBox.TabIndex = 1;
             this.headerOptionsGroupBox.TabStop = false;
             this.headerOptionsGroupBox.Text = "Options";
@@ -2898,13 +2919,12 @@
             // headerFirstPageGroupBox
             // 
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageRightGroupBox);
-            this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageCenterGroupBox);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageLeftGroupBox);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageMoreCheck);
             this.headerFirstPageGroupBox.Controls.Add(this.headerDiffFirstPageCheck);
             this.headerFirstPageGroupBox.Controls.Add(this.headerFirstPageUseRunningHeadCheck);
             this.headerFirstPageGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(24, 1049);
+            this.headerFirstPageGroupBox.Location = new System.Drawing.Point(24, 823);
             this.headerFirstPageGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstPageGroupBox.Name = "headerFirstPageGroupBox";
             this.headerFirstPageGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -2915,6 +2935,11 @@
             // 
             // headerFirstPageRightGroupBox
             // 
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightFirstPageNumEnter);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightPageNumLabel);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightLastNameEnter);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightLastNameLabel);
+            this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightPageNumberLastNameRadio);
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightEmptyRadio);
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleEnter);
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleLabel);
@@ -2926,21 +2951,73 @@
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightTitleRadio);
             this.headerFirstPageRightGroupBox.Controls.Add(this.headerFirstRightOtherEnter);
             this.headerFirstPageRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(24, 816);
+            this.headerFirstPageRightGroupBox.Location = new System.Drawing.Point(24, 599);
             this.headerFirstPageRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstPageRightGroupBox.Name = "headerFirstPageRightGroupBox";
             this.headerFirstPageRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(1120, 289);
+            this.headerFirstPageRightGroupBox.Size = new System.Drawing.Size(1120, 369);
             this.headerFirstPageRightGroupBox.TabIndex = 26;
             this.headerFirstPageRightGroupBox.TabStop = false;
             this.headerFirstPageRightGroupBox.Text = "First Page Right";
             this.headerFirstPageRightGroupBox.Visible = false;
             // 
+            // headerFirstRightFirstPageNumEnter
+            // 
+            this.headerFirstRightFirstPageNumEnter.Location = new System.Drawing.Point(651, 256);
+            this.headerFirstRightFirstPageNumEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightFirstPageNumEnter.Name = "headerFirstRightFirstPageNumEnter";
+            this.headerFirstRightFirstPageNumEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerFirstRightFirstPageNumEnter.TabIndex = 36;
+            this.headerFirstRightFirstPageNumEnter.Visible = false;
+            // 
+            // headerFirstRightPageNumLabel
+            // 
+            this.headerFirstRightPageNumLabel.AutoSize = true;
+            this.headerFirstRightPageNumLabel.Location = new System.Drawing.Point(401, 258);
+            this.headerFirstRightPageNumLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstRightPageNumLabel.Name = "headerFirstRightPageNumLabel";
+            this.headerFirstRightPageNumLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerFirstRightPageNumLabel.TabIndex = 35;
+            this.headerFirstRightPageNumLabel.Text = "1st Page Number:";
+            this.headerFirstRightPageNumLabel.Visible = false;
+            // 
+            // headerFirstRightLastNameEnter
+            // 
+            this.headerFirstRightLastNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstRightLastNameEnter.Location = new System.Drawing.Point(651, 205);
+            this.headerFirstRightLastNameEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightLastNameEnter.Name = "headerFirstRightLastNameEnter";
+            this.headerFirstRightLastNameEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstRightLastNameEnter.TabIndex = 34;
+            this.headerFirstRightLastNameEnter.Visible = false;
+            // 
+            // headerFirstRightLastNameLabel
+            // 
+            this.headerFirstRightLastNameLabel.AutoSize = true;
+            this.headerFirstRightLastNameLabel.Location = new System.Drawing.Point(485, 208);
+            this.headerFirstRightLastNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstRightLastNameLabel.Name = "headerFirstRightLastNameLabel";
+            this.headerFirstRightLastNameLabel.Size = new System.Drawing.Size(159, 32);
+            this.headerFirstRightLastNameLabel.TabIndex = 33;
+            this.headerFirstRightLastNameLabel.Text = "Last Name:";
+            this.headerFirstRightLastNameLabel.Visible = false;
+            // 
+            // headerFirstRightPageNumberLastNameRadio
+            // 
+            this.headerFirstRightPageNumberLastNameRadio.AutoSize = true;
+            this.headerFirstRightPageNumberLastNameRadio.Location = new System.Drawing.Point(24, 205);
+            this.headerFirstRightPageNumberLastNameRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstRightPageNumberLastNameRadio.Name = "headerFirstRightPageNumberLastNameRadio";
+            this.headerFirstRightPageNumberLastNameRadio.Size = new System.Drawing.Size(424, 36);
+            this.headerFirstRightPageNumberLastNameRadio.TabIndex = 32;
+            this.headerFirstRightPageNumberLastNameRadio.Text = "Page Number and Last Name";
+            this.headerFirstRightPageNumberLastNameRadio.UseVisualStyleBackColor = true;
+            // 
             // headerFirstRightEmptyRadio
             // 
             this.headerFirstRightEmptyRadio.AutoSize = true;
             this.headerFirstRightEmptyRadio.Checked = true;
-            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
+            this.headerFirstRightEmptyRadio.Location = new System.Drawing.Point(24, 305);
             this.headerFirstRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstRightEmptyRadio.Name = "headerFirstRightEmptyRadio";
             this.headerFirstRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
@@ -2953,7 +3030,7 @@
             // headerFirstRightTitleEnter
             // 
             this.headerFirstRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstRightTitleEnter.Location = new System.Drawing.Point(523, 43);
+            this.headerFirstRightTitleEnter.Location = new System.Drawing.Point(651, 43);
             this.headerFirstRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstRightTitleEnter.Name = "headerFirstRightTitleEnter";
             this.headerFirstRightTitleEnter.Size = new System.Drawing.Size(367, 39);
@@ -2964,7 +3041,7 @@
             // headerFirstRightTitleLabel
             // 
             this.headerFirstRightTitleLabel.AutoSize = true;
-            this.headerFirstRightTitleLabel.Location = new System.Drawing.Point(432, 50);
+            this.headerFirstRightTitleLabel.Location = new System.Drawing.Point(565, 50);
             this.headerFirstRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstRightTitleLabel.Name = "headerFirstRightTitleLabel";
             this.headerFirstRightTitleLabel.Size = new System.Drawing.Size(78, 32);
@@ -2974,18 +3051,17 @@
             // 
             // headerFirstRightNumberEnter
             // 
-            this.headerFirstRightNumberEnter.Location = new System.Drawing.Point(523, 100);
+            this.headerFirstRightNumberEnter.Location = new System.Drawing.Point(651, 100);
             this.headerFirstRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstRightNumberEnter.Name = "headerFirstRightNumberEnter";
             this.headerFirstRightNumberEnter.Size = new System.Drawing.Size(373, 39);
             this.headerFirstRightNumberEnter.TabIndex = 25;
             this.headerFirstRightNumberEnter.Visible = false;
-            this.headerFirstRightNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstRightNumberEnter_ValueChanged);
             // 
             // headerFirstRightNumberLabel
             // 
             this.headerFirstRightNumberLabel.AutoSize = true;
-            this.headerFirstRightNumberLabel.Location = new System.Drawing.Point(267, 105);
+            this.headerFirstRightNumberLabel.Location = new System.Drawing.Point(401, 105);
             this.headerFirstRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstRightNumberLabel.Name = "headerFirstRightNumberLabel";
             this.headerFirstRightNumberLabel.Size = new System.Drawing.Size(242, 32);
@@ -2996,7 +3072,7 @@
             // headerFirstRightOtherLabel
             // 
             this.headerFirstRightOtherLabel.AutoSize = true;
-            this.headerFirstRightOtherLabel.Location = new System.Drawing.Point(429, 160);
+            this.headerFirstRightOtherLabel.Location = new System.Drawing.Point(566, 160);
             this.headerFirstRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstRightOtherLabel.Name = "headerFirstRightOtherLabel";
             this.headerFirstRightOtherLabel.Size = new System.Drawing.Size(78, 32);
@@ -3046,7 +3122,7 @@
             // headerFirstRightOtherEnter
             // 
             this.headerFirstRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstRightOtherEnter.Location = new System.Drawing.Point(523, 153);
+            this.headerFirstRightOtherEnter.Location = new System.Drawing.Point(651, 153);
             this.headerFirstRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstRightOtherEnter.Name = "headerFirstRightOtherEnter";
             this.headerFirstRightOtherEnter.Size = new System.Drawing.Size(367, 39);
@@ -3054,149 +3130,13 @@
             this.headerFirstRightOtherEnter.Visible = false;
             this.headerFirstRightOtherEnter.TextChanged += new System.EventHandler(this.headerFirstRightOtherEnter_TextChanged);
             // 
-            // headerFirstPageCenterGroupBox
-            // 
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterEmptyRadio);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleEnter);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleLabel);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberEnter);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberLabel);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherLabel);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherRadio);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterNumberRadio);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterTitleRadio);
-            this.headerFirstPageCenterGroupBox.Controls.Add(this.headerFirstCenterOtherEnter);
-            this.headerFirstPageCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstPageCenterGroupBox.Location = new System.Drawing.Point(24, 513);
-            this.headerFirstPageCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageCenterGroupBox.Name = "headerFirstPageCenterGroupBox";
-            this.headerFirstPageCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageCenterGroupBox.Size = new System.Drawing.Size(1120, 289);
-            this.headerFirstPageCenterGroupBox.TabIndex = 26;
-            this.headerFirstPageCenterGroupBox.TabStop = false;
-            this.headerFirstPageCenterGroupBox.Text = "First Page Center";
-            this.headerFirstPageCenterGroupBox.Visible = false;
-            // 
-            // headerFirstCenterEmptyRadio
-            // 
-            this.headerFirstCenterEmptyRadio.AutoSize = true;
-            this.headerFirstCenterEmptyRadio.Checked = true;
-            this.headerFirstCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerFirstCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterEmptyRadio.Name = "headerFirstCenterEmptyRadio";
-            this.headerFirstCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
-            this.headerFirstCenterEmptyRadio.TabIndex = 30;
-            this.headerFirstCenterEmptyRadio.TabStop = true;
-            this.headerFirstCenterEmptyRadio.Text = "Empty";
-            this.headerFirstCenterEmptyRadio.UseVisualStyleBackColor = true;
-            this.headerFirstCenterEmptyRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
-            // 
-            // headerFirstCenterTitleEnter
-            // 
-            this.headerFirstCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerFirstCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterTitleEnter.Name = "headerFirstCenterTitleEnter";
-            this.headerFirstCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
-            this.headerFirstCenterTitleEnter.TabIndex = 29;
-            this.headerFirstCenterTitleEnter.Visible = false;
-            this.headerFirstCenterTitleEnter.TextChanged += new System.EventHandler(this.headerFirstCenterTitleEnter_TextChanged);
-            // 
-            // headerFirstCenterTitleLabel
-            // 
-            this.headerFirstCenterTitleLabel.AutoSize = true;
-            this.headerFirstCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerFirstCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerFirstCenterTitleLabel.Name = "headerFirstCenterTitleLabel";
-            this.headerFirstCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
-            this.headerFirstCenterTitleLabel.TabIndex = 28;
-            this.headerFirstCenterTitleLabel.Text = "Title:";
-            this.headerFirstCenterTitleLabel.Visible = false;
-            // 
-            // headerFirstCenterNumberEnter
-            // 
-            this.headerFirstCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerFirstCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterNumberEnter.Name = "headerFirstCenterNumberEnter";
-            this.headerFirstCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
-            this.headerFirstCenterNumberEnter.TabIndex = 25;
-            this.headerFirstCenterNumberEnter.Visible = false;
-            this.headerFirstCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerFirstCenterNumberEnter_ValueChanged);
-            // 
-            // headerFirstCenterNumberLabel
-            // 
-            this.headerFirstCenterNumberLabel.AutoSize = true;
-            this.headerFirstCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerFirstCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerFirstCenterNumberLabel.Name = "headerFirstCenterNumberLabel";
-            this.headerFirstCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
-            this.headerFirstCenterNumberLabel.TabIndex = 24;
-            this.headerFirstCenterNumberLabel.Text = "1st Page Number:";
-            this.headerFirstCenterNumberLabel.Visible = false;
-            // 
-            // headerFirstCenterOtherLabel
-            // 
-            this.headerFirstCenterOtherLabel.AutoSize = true;
-            this.headerFirstCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerFirstCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerFirstCenterOtherLabel.Name = "headerFirstCenterOtherLabel";
-            this.headerFirstCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
-            this.headerFirstCenterOtherLabel.TabIndex = 23;
-            this.headerFirstCenterOtherLabel.Text = "Text:";
-            this.headerFirstCenterOtherLabel.Visible = false;
-            // 
-            // headerFirstCenterOtherRadio
-            // 
-            this.headerFirstCenterOtherRadio.AutoSize = true;
-            this.headerFirstCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerFirstCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterOtherRadio.Name = "headerFirstCenterOtherRadio";
-            this.headerFirstCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
-            this.headerFirstCenterOtherRadio.TabIndex = 22;
-            this.headerFirstCenterOtherRadio.TabStop = true;
-            this.headerFirstCenterOtherRadio.Text = "Other Text";
-            this.headerFirstCenterOtherRadio.UseVisualStyleBackColor = true;
-            this.headerFirstCenterOtherRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
-            // 
-            // headerFirstCenterNumberRadio
-            // 
-            this.headerFirstCenterNumberRadio.AutoSize = true;
-            this.headerFirstCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerFirstCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterNumberRadio.Name = "headerFirstCenterNumberRadio";
-            this.headerFirstCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
-            this.headerFirstCenterNumberRadio.TabIndex = 21;
-            this.headerFirstCenterNumberRadio.TabStop = true;
-            this.headerFirstCenterNumberRadio.Text = "Page Number";
-            this.headerFirstCenterNumberRadio.UseVisualStyleBackColor = true;
-            this.headerFirstCenterNumberRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
-            // 
-            // headerFirstCenterTitleRadio
-            // 
-            this.headerFirstCenterTitleRadio.AutoSize = true;
-            this.headerFirstCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerFirstCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterTitleRadio.Name = "headerFirstCenterTitleRadio";
-            this.headerFirstCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
-            this.headerFirstCenterTitleRadio.TabIndex = 20;
-            this.headerFirstCenterTitleRadio.TabStop = true;
-            this.headerFirstCenterTitleRadio.Text = "Paper Title";
-            this.headerFirstCenterTitleRadio.UseVisualStyleBackColor = true;
-            this.headerFirstCenterTitleRadio.CheckedChanged += new System.EventHandler(this.headerFirstCenterChanged);
-            // 
-            // headerFirstCenterOtherEnter
-            // 
-            this.headerFirstCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerFirstCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstCenterOtherEnter.Name = "headerFirstCenterOtherEnter";
-            this.headerFirstCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
-            this.headerFirstCenterOtherEnter.TabIndex = 19;
-            this.headerFirstCenterOtherEnter.Visible = false;
-            this.headerFirstCenterOtherEnter.TextChanged += new System.EventHandler(this.headerFirstCenterOtherEnter_TextChanged);
-            // 
             // headerFirstPageLeftGroupBox
             // 
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftFirstPageNumEnter);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftPageNumLabel);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftLastNameEnter);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftLastNameLabel);
+            this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftPageNumberLastNameRadio);
             this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftEmptyRadio);
             this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleEnter);
             this.headerFirstPageLeftGroupBox.Controls.Add(this.headerFirstLeftTitleLabel);
@@ -3212,17 +3152,69 @@
             this.headerFirstPageLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstPageLeftGroupBox.Name = "headerFirstPageLeftGroupBox";
             this.headerFirstPageLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(1120, 289);
+            this.headerFirstPageLeftGroupBox.Size = new System.Drawing.Size(1120, 369);
             this.headerFirstPageLeftGroupBox.TabIndex = 21;
             this.headerFirstPageLeftGroupBox.TabStop = false;
             this.headerFirstPageLeftGroupBox.Text = "First Page Left";
             this.headerFirstPageLeftGroupBox.Visible = false;
             // 
+            // headerFirstLeftFirstPageNumEnter
+            // 
+            this.headerFirstLeftFirstPageNumEnter.Location = new System.Drawing.Point(651, 256);
+            this.headerFirstLeftFirstPageNumEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftFirstPageNumEnter.Name = "headerFirstLeftFirstPageNumEnter";
+            this.headerFirstLeftFirstPageNumEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerFirstLeftFirstPageNumEnter.TabIndex = 35;
+            this.headerFirstLeftFirstPageNumEnter.Visible = false;
+            // 
+            // headerFirstLeftPageNumLabel
+            // 
+            this.headerFirstLeftPageNumLabel.AutoSize = true;
+            this.headerFirstLeftPageNumLabel.Location = new System.Drawing.Point(401, 258);
+            this.headerFirstLeftPageNumLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstLeftPageNumLabel.Name = "headerFirstLeftPageNumLabel";
+            this.headerFirstLeftPageNumLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerFirstLeftPageNumLabel.TabIndex = 34;
+            this.headerFirstLeftPageNumLabel.Text = "1st Page Number:";
+            this.headerFirstLeftPageNumLabel.Visible = false;
+            // 
+            // headerFirstLeftLastNameEnter
+            // 
+            this.headerFirstLeftLastNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerFirstLeftLastNameEnter.Location = new System.Drawing.Point(651, 205);
+            this.headerFirstLeftLastNameEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftLastNameEnter.Name = "headerFirstLeftLastNameEnter";
+            this.headerFirstLeftLastNameEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerFirstLeftLastNameEnter.TabIndex = 33;
+            this.headerFirstLeftLastNameEnter.Visible = false;
+            // 
+            // headerFirstLeftLastNameLabel
+            // 
+            this.headerFirstLeftLastNameLabel.AutoSize = true;
+            this.headerFirstLeftLastNameLabel.Location = new System.Drawing.Point(485, 208);
+            this.headerFirstLeftLastNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerFirstLeftLastNameLabel.Name = "headerFirstLeftLastNameLabel";
+            this.headerFirstLeftLastNameLabel.Size = new System.Drawing.Size(159, 32);
+            this.headerFirstLeftLastNameLabel.TabIndex = 32;
+            this.headerFirstLeftLastNameLabel.Text = "Last Name:";
+            this.headerFirstLeftLastNameLabel.Visible = false;
+            // 
+            // headerFirstLeftPageNumberLastNameRadio
+            // 
+            this.headerFirstLeftPageNumberLastNameRadio.AutoSize = true;
+            this.headerFirstLeftPageNumberLastNameRadio.Location = new System.Drawing.Point(24, 205);
+            this.headerFirstLeftPageNumberLastNameRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerFirstLeftPageNumberLastNameRadio.Name = "headerFirstLeftPageNumberLastNameRadio";
+            this.headerFirstLeftPageNumberLastNameRadio.Size = new System.Drawing.Size(424, 36);
+            this.headerFirstLeftPageNumberLastNameRadio.TabIndex = 31;
+            this.headerFirstLeftPageNumberLastNameRadio.Text = "Page Number and Last Name";
+            this.headerFirstLeftPageNumberLastNameRadio.UseVisualStyleBackColor = true;
+            // 
             // headerFirstLeftEmptyRadio
             // 
             this.headerFirstLeftEmptyRadio.AutoSize = true;
             this.headerFirstLeftEmptyRadio.Checked = true;
-            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
+            this.headerFirstLeftEmptyRadio.Location = new System.Drawing.Point(24, 305);
             this.headerFirstLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstLeftEmptyRadio.Name = "headerFirstLeftEmptyRadio";
             this.headerFirstLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
@@ -3235,7 +3227,7 @@
             // headerFirstLeftTitleEnter
             // 
             this.headerFirstLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstLeftTitleEnter.Location = new System.Drawing.Point(523, 43);
+            this.headerFirstLeftTitleEnter.Location = new System.Drawing.Point(651, 43);
             this.headerFirstLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstLeftTitleEnter.Name = "headerFirstLeftTitleEnter";
             this.headerFirstLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
@@ -3246,7 +3238,7 @@
             // headerFirstLeftTitleLabel
             // 
             this.headerFirstLeftTitleLabel.AutoSize = true;
-            this.headerFirstLeftTitleLabel.Location = new System.Drawing.Point(432, 50);
+            this.headerFirstLeftTitleLabel.Location = new System.Drawing.Point(565, 50);
             this.headerFirstLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstLeftTitleLabel.Name = "headerFirstLeftTitleLabel";
             this.headerFirstLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
@@ -3256,7 +3248,7 @@
             // 
             // headerFirstLeftNumberEnter
             // 
-            this.headerFirstLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
+            this.headerFirstLeftNumberEnter.Location = new System.Drawing.Point(651, 100);
             this.headerFirstLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstLeftNumberEnter.Name = "headerFirstLeftNumberEnter";
             this.headerFirstLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
@@ -3267,7 +3259,7 @@
             // headerFirstLeftNumberLabel
             // 
             this.headerFirstLeftNumberLabel.AutoSize = true;
-            this.headerFirstLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
+            this.headerFirstLeftNumberLabel.Location = new System.Drawing.Point(401, 105);
             this.headerFirstLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstLeftNumberLabel.Name = "headerFirstLeftNumberLabel";
             this.headerFirstLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
@@ -3278,7 +3270,7 @@
             // headerFirstLeftOtherLabel
             // 
             this.headerFirstLeftOtherLabel.AutoSize = true;
-            this.headerFirstLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
+            this.headerFirstLeftOtherLabel.Location = new System.Drawing.Point(566, 160);
             this.headerFirstLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerFirstLeftOtherLabel.Name = "headerFirstLeftOtherLabel";
             this.headerFirstLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
@@ -3328,7 +3320,7 @@
             // headerFirstLeftOtherEnter
             // 
             this.headerFirstLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFirstLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
+            this.headerFirstLeftOtherEnter.Location = new System.Drawing.Point(651, 153);
             this.headerFirstLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerFirstLeftOtherEnter.Name = "headerFirstLeftOtherEnter";
             this.headerFirstLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
@@ -3379,6 +3371,11 @@
             // 
             // headerRightGroupBox
             // 
+            this.headerRightGroupBox.Controls.Add(this.headerRightFirstPageNumEnter);
+            this.headerRightGroupBox.Controls.Add(this.headerRightFirstPageNumLabel);
+            this.headerRightGroupBox.Controls.Add(this.headerRightLastNameEnter);
+            this.headerRightGroupBox.Controls.Add(this.headerRightLastNameLabel);
+            this.headerRightGroupBox.Controls.Add(this.headerRightNumNameRadio);
             this.headerRightGroupBox.Controls.Add(this.headerRightEmptyRadio);
             this.headerRightGroupBox.Controls.Add(this.headerRightTitleEnter);
             this.headerRightGroupBox.Controls.Add(this.headerRightTitleLabel);
@@ -3390,20 +3387,73 @@
             this.headerRightGroupBox.Controls.Add(this.headerRightTitleRadio);
             this.headerRightGroupBox.Controls.Add(this.headerRightOtherEnter);
             this.headerRightGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightGroupBox.Location = new System.Drawing.Point(24, 715);
+            this.headerRightGroupBox.Location = new System.Drawing.Point(24, 434);
             this.headerRightGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerRightGroupBox.Name = "headerRightGroupBox";
             this.headerRightGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerRightGroupBox.Size = new System.Drawing.Size(1168, 289);
+            this.headerRightGroupBox.Size = new System.Drawing.Size(1168, 369);
             this.headerRightGroupBox.TabIndex = 26;
             this.headerRightGroupBox.TabStop = false;
             this.headerRightGroupBox.Text = "Right";
+            // 
+            // headerRightFirstPageNumEnter
+            // 
+            this.headerRightFirstPageNumEnter.Location = new System.Drawing.Point(651, 256);
+            this.headerRightFirstPageNumEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightFirstPageNumEnter.Name = "headerRightFirstPageNumEnter";
+            this.headerRightFirstPageNumEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerRightFirstPageNumEnter.TabIndex = 35;
+            this.headerRightFirstPageNumEnter.Visible = false;
+            // 
+            // headerRightFirstPageNumLabel
+            // 
+            this.headerRightFirstPageNumLabel.AutoSize = true;
+            this.headerRightFirstPageNumLabel.Location = new System.Drawing.Point(401, 258);
+            this.headerRightFirstPageNumLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerRightFirstPageNumLabel.Name = "headerRightFirstPageNumLabel";
+            this.headerRightFirstPageNumLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerRightFirstPageNumLabel.TabIndex = 34;
+            this.headerRightFirstPageNumLabel.Text = "1st Page Number:";
+            this.headerRightFirstPageNumLabel.Visible = false;
+            // 
+            // headerRightLastNameEnter
+            // 
+            this.headerRightLastNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerRightLastNameEnter.Location = new System.Drawing.Point(651, 205);
+            this.headerRightLastNameEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightLastNameEnter.Name = "headerRightLastNameEnter";
+            this.headerRightLastNameEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerRightLastNameEnter.TabIndex = 33;
+            this.headerRightLastNameEnter.Visible = false;
+            // 
+            // headerRightLastNameLabel
+            // 
+            this.headerRightLastNameLabel.AutoSize = true;
+            this.headerRightLastNameLabel.Location = new System.Drawing.Point(485, 208);
+            this.headerRightLastNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerRightLastNameLabel.Name = "headerRightLastNameLabel";
+            this.headerRightLastNameLabel.Size = new System.Drawing.Size(159, 32);
+            this.headerRightLastNameLabel.TabIndex = 32;
+            this.headerRightLastNameLabel.Text = "Last Name:";
+            this.headerRightLastNameLabel.Visible = false;
+            // 
+            // headerRightNumNameRadio
+            // 
+            this.headerRightNumNameRadio.AutoSize = true;
+            this.headerRightNumNameRadio.Location = new System.Drawing.Point(24, 205);
+            this.headerRightNumNameRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerRightNumNameRadio.Name = "headerRightNumNameRadio";
+            this.headerRightNumNameRadio.Size = new System.Drawing.Size(424, 36);
+            this.headerRightNumNameRadio.TabIndex = 31;
+            this.headerRightNumNameRadio.Text = "Page Number and Last Name";
+            this.headerRightNumNameRadio.UseVisualStyleBackColor = true;
+            this.headerRightNumNameRadio.CheckedChanged += new System.EventHandler(this.headerRightChanged);
             // 
             // headerRightEmptyRadio
             // 
             this.headerRightEmptyRadio.AutoSize = true;
             this.headerRightEmptyRadio.Checked = true;
-            this.headerRightEmptyRadio.Location = new System.Drawing.Point(24, 210);
+            this.headerRightEmptyRadio.Location = new System.Drawing.Point(24, 305);
             this.headerRightEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerRightEmptyRadio.Name = "headerRightEmptyRadio";
             this.headerRightEmptyRadio.Size = new System.Drawing.Size(132, 36);
@@ -3415,7 +3465,7 @@
             // headerRightTitleEnter
             // 
             this.headerRightTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightTitleEnter.Location = new System.Drawing.Point(523, 43);
+            this.headerRightTitleEnter.Location = new System.Drawing.Point(651, 47);
             this.headerRightTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerRightTitleEnter.Name = "headerRightTitleEnter";
             this.headerRightTitleEnter.Size = new System.Drawing.Size(367, 39);
@@ -3426,7 +3476,7 @@
             // headerRightTitleLabel
             // 
             this.headerRightTitleLabel.AutoSize = true;
-            this.headerRightTitleLabel.Location = new System.Drawing.Point(432, 50);
+            this.headerRightTitleLabel.Location = new System.Drawing.Point(565, 50);
             this.headerRightTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerRightTitleLabel.Name = "headerRightTitleLabel";
             this.headerRightTitleLabel.Size = new System.Drawing.Size(78, 32);
@@ -3436,7 +3486,7 @@
             // 
             // headerRightNumberEnter
             // 
-            this.headerRightNumberEnter.Location = new System.Drawing.Point(523, 100);
+            this.headerRightNumberEnter.Location = new System.Drawing.Point(651, 103);
             this.headerRightNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerRightNumberEnter.Name = "headerRightNumberEnter";
             this.headerRightNumberEnter.Size = new System.Drawing.Size(373, 39);
@@ -3447,7 +3497,7 @@
             // headerRightNumberLabel
             // 
             this.headerRightNumberLabel.AutoSize = true;
-            this.headerRightNumberLabel.Location = new System.Drawing.Point(267, 105);
+            this.headerRightNumberLabel.Location = new System.Drawing.Point(401, 105);
             this.headerRightNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerRightNumberLabel.Name = "headerRightNumberLabel";
             this.headerRightNumberLabel.Size = new System.Drawing.Size(242, 32);
@@ -3458,7 +3508,7 @@
             // headerRightOtherLabel
             // 
             this.headerRightOtherLabel.AutoSize = true;
-            this.headerRightOtherLabel.Location = new System.Drawing.Point(429, 160);
+            this.headerRightOtherLabel.Location = new System.Drawing.Point(566, 160);
             this.headerRightOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerRightOtherLabel.Name = "headerRightOtherLabel";
             this.headerRightOtherLabel.Size = new System.Drawing.Size(78, 32);
@@ -3508,7 +3558,7 @@
             // headerRightOtherEnter
             // 
             this.headerRightOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerRightOtherEnter.Location = new System.Drawing.Point(523, 153);
+            this.headerRightOtherEnter.Location = new System.Drawing.Point(651, 157);
             this.headerRightOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerRightOtherEnter.Name = "headerRightOtherEnter";
             this.headerRightOtherEnter.Size = new System.Drawing.Size(367, 39);
@@ -3516,147 +3566,13 @@
             this.headerRightOtherEnter.Visible = false;
             this.headerRightOtherEnter.TextChanged += new System.EventHandler(this.headerRightOtherEnter_TextChanged);
             // 
-            // headerCenterGroupBox
-            // 
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterEmptyRadio);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleEnter);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleLabel);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberEnter);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberLabel);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherLabel);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherRadio);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterNumberRadio);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterTitleRadio);
-            this.headerCenterGroupBox.Controls.Add(this.headerCenterOtherEnter);
-            this.headerCenterGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterGroupBox.Location = new System.Drawing.Point(24, 374);
-            this.headerCenterGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterGroupBox.Name = "headerCenterGroupBox";
-            this.headerCenterGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterGroupBox.Size = new System.Drawing.Size(1168, 289);
-            this.headerCenterGroupBox.TabIndex = 26;
-            this.headerCenterGroupBox.TabStop = false;
-            this.headerCenterGroupBox.Text = "Center";
-            // 
-            // headerCenterEmptyRadio
-            // 
-            this.headerCenterEmptyRadio.AutoSize = true;
-            this.headerCenterEmptyRadio.Checked = true;
-            this.headerCenterEmptyRadio.Location = new System.Drawing.Point(24, 210);
-            this.headerCenterEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterEmptyRadio.Name = "headerCenterEmptyRadio";
-            this.headerCenterEmptyRadio.Size = new System.Drawing.Size(132, 36);
-            this.headerCenterEmptyRadio.TabIndex = 30;
-            this.headerCenterEmptyRadio.TabStop = true;
-            this.headerCenterEmptyRadio.Text = "Empty";
-            this.headerCenterEmptyRadio.UseVisualStyleBackColor = true;
-            // 
-            // headerCenterTitleEnter
-            // 
-            this.headerCenterTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterTitleEnter.Location = new System.Drawing.Point(523, 43);
-            this.headerCenterTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterTitleEnter.Name = "headerCenterTitleEnter";
-            this.headerCenterTitleEnter.Size = new System.Drawing.Size(367, 39);
-            this.headerCenterTitleEnter.TabIndex = 29;
-            this.headerCenterTitleEnter.Visible = false;
-            this.headerCenterTitleEnter.TextChanged += new System.EventHandler(this.headerCenterTitleEnter_TextChanged);
-            // 
-            // headerCenterTitleLabel
-            // 
-            this.headerCenterTitleLabel.AutoSize = true;
-            this.headerCenterTitleLabel.Location = new System.Drawing.Point(432, 50);
-            this.headerCenterTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerCenterTitleLabel.Name = "headerCenterTitleLabel";
-            this.headerCenterTitleLabel.Size = new System.Drawing.Size(78, 32);
-            this.headerCenterTitleLabel.TabIndex = 28;
-            this.headerCenterTitleLabel.Text = "Title:";
-            this.headerCenterTitleLabel.Visible = false;
-            // 
-            // headerCenterNumberEnter
-            // 
-            this.headerCenterNumberEnter.Location = new System.Drawing.Point(523, 100);
-            this.headerCenterNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterNumberEnter.Name = "headerCenterNumberEnter";
-            this.headerCenterNumberEnter.Size = new System.Drawing.Size(373, 39);
-            this.headerCenterNumberEnter.TabIndex = 25;
-            this.headerCenterNumberEnter.Visible = false;
-            this.headerCenterNumberEnter.ValueChanged += new System.EventHandler(this.headerCenterNumberEnter_ValueChanged);
-            // 
-            // headerCenterNumberLabel
-            // 
-            this.headerCenterNumberLabel.AutoSize = true;
-            this.headerCenterNumberLabel.Location = new System.Drawing.Point(267, 105);
-            this.headerCenterNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerCenterNumberLabel.Name = "headerCenterNumberLabel";
-            this.headerCenterNumberLabel.Size = new System.Drawing.Size(242, 32);
-            this.headerCenterNumberLabel.TabIndex = 24;
-            this.headerCenterNumberLabel.Text = "1st Page Number:";
-            this.headerCenterNumberLabel.Visible = false;
-            // 
-            // headerCenterOtherLabel
-            // 
-            this.headerCenterOtherLabel.AutoSize = true;
-            this.headerCenterOtherLabel.Location = new System.Drawing.Point(429, 160);
-            this.headerCenterOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.headerCenterOtherLabel.Name = "headerCenterOtherLabel";
-            this.headerCenterOtherLabel.Size = new System.Drawing.Size(78, 32);
-            this.headerCenterOtherLabel.TabIndex = 23;
-            this.headerCenterOtherLabel.Text = "Text:";
-            this.headerCenterOtherLabel.Visible = false;
-            // 
-            // headerCenterOtherRadio
-            // 
-            this.headerCenterOtherRadio.AutoSize = true;
-            this.headerCenterOtherRadio.Location = new System.Drawing.Point(24, 155);
-            this.headerCenterOtherRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterOtherRadio.Name = "headerCenterOtherRadio";
-            this.headerCenterOtherRadio.Size = new System.Drawing.Size(185, 36);
-            this.headerCenterOtherRadio.TabIndex = 22;
-            this.headerCenterOtherRadio.TabStop = true;
-            this.headerCenterOtherRadio.Text = "Other Text";
-            this.headerCenterOtherRadio.UseVisualStyleBackColor = true;
-            this.headerCenterOtherRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
-            // 
-            // headerCenterNumberRadio
-            // 
-            this.headerCenterNumberRadio.AutoSize = true;
-            this.headerCenterNumberRadio.Location = new System.Drawing.Point(24, 100);
-            this.headerCenterNumberRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterNumberRadio.Name = "headerCenterNumberRadio";
-            this.headerCenterNumberRadio.Size = new System.Drawing.Size(226, 36);
-            this.headerCenterNumberRadio.TabIndex = 21;
-            this.headerCenterNumberRadio.TabStop = true;
-            this.headerCenterNumberRadio.Text = "Page Number";
-            this.headerCenterNumberRadio.UseVisualStyleBackColor = true;
-            this.headerCenterNumberRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
-            // 
-            // headerCenterTitleRadio
-            // 
-            this.headerCenterTitleRadio.AutoSize = true;
-            this.headerCenterTitleRadio.Location = new System.Drawing.Point(24, 45);
-            this.headerCenterTitleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterTitleRadio.Name = "headerCenterTitleRadio";
-            this.headerCenterTitleRadio.Size = new System.Drawing.Size(190, 36);
-            this.headerCenterTitleRadio.TabIndex = 20;
-            this.headerCenterTitleRadio.TabStop = true;
-            this.headerCenterTitleRadio.Text = "Paper Title";
-            this.headerCenterTitleRadio.UseVisualStyleBackColor = true;
-            this.headerCenterTitleRadio.CheckedChanged += new System.EventHandler(this.headerCenterChanged);
-            // 
-            // headerCenterOtherEnter
-            // 
-            this.headerCenterOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerCenterOtherEnter.Location = new System.Drawing.Point(523, 153);
-            this.headerCenterOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerCenterOtherEnter.Name = "headerCenterOtherEnter";
-            this.headerCenterOtherEnter.Size = new System.Drawing.Size(367, 39);
-            this.headerCenterOtherEnter.TabIndex = 19;
-            this.headerCenterOtherEnter.Visible = false;
-            this.headerCenterOtherEnter.TextChanged += new System.EventHandler(this.headerCenterOtherEnter_TextChanged);
-            // 
             // headerLeftGroupBox
             // 
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftFirstPageNumEnter);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftFirstPageNumLabel);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftLastNameEnter);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftLastNameLabel);
+            this.headerLeftGroupBox.Controls.Add(this.headerLeftNumNameRadio);
             this.headerLeftGroupBox.Controls.Add(this.headerLeftEmptyRadio);
             this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleEnter);
             this.headerLeftGroupBox.Controls.Add(this.headerLeftTitleLabel);
@@ -3672,16 +3588,69 @@
             this.headerLeftGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerLeftGroupBox.Name = "headerLeftGroupBox";
             this.headerLeftGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.headerLeftGroupBox.Size = new System.Drawing.Size(1168, 289);
+            this.headerLeftGroupBox.Size = new System.Drawing.Size(1168, 369);
             this.headerLeftGroupBox.TabIndex = 20;
             this.headerLeftGroupBox.TabStop = false;
             this.headerLeftGroupBox.Text = "Left";
+            // 
+            // headerLeftFirstPageNumEnter
+            // 
+            this.headerLeftFirstPageNumEnter.Location = new System.Drawing.Point(651, 256);
+            this.headerLeftFirstPageNumEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftFirstPageNumEnter.Name = "headerLeftFirstPageNumEnter";
+            this.headerLeftFirstPageNumEnter.Size = new System.Drawing.Size(373, 39);
+            this.headerLeftFirstPageNumEnter.TabIndex = 33;
+            this.headerLeftFirstPageNumEnter.Visible = false;
+            // 
+            // headerLeftFirstPageNumLabel
+            // 
+            this.headerLeftFirstPageNumLabel.AutoSize = true;
+            this.headerLeftFirstPageNumLabel.Location = new System.Drawing.Point(401, 258);
+            this.headerLeftFirstPageNumLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerLeftFirstPageNumLabel.Name = "headerLeftFirstPageNumLabel";
+            this.headerLeftFirstPageNumLabel.Size = new System.Drawing.Size(242, 32);
+            this.headerLeftFirstPageNumLabel.TabIndex = 32;
+            this.headerLeftFirstPageNumLabel.Text = "1st Page Number:";
+            this.headerLeftFirstPageNumLabel.Visible = false;
+            // 
+            // headerLeftLastNameEnter
+            // 
+            this.headerLeftLastNameEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLeftLastNameEnter.Location = new System.Drawing.Point(651, 205);
+            this.headerLeftLastNameEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftLastNameEnter.Name = "headerLeftLastNameEnter";
+            this.headerLeftLastNameEnter.Size = new System.Drawing.Size(367, 39);
+            this.headerLeftLastNameEnter.TabIndex = 31;
+            this.headerLeftLastNameEnter.Visible = false;
+            // 
+            // headerLeftLastNameLabel
+            // 
+            this.headerLeftLastNameLabel.AutoSize = true;
+            this.headerLeftLastNameLabel.Location = new System.Drawing.Point(485, 208);
+            this.headerLeftLastNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.headerLeftLastNameLabel.Name = "headerLeftLastNameLabel";
+            this.headerLeftLastNameLabel.Size = new System.Drawing.Size(159, 32);
+            this.headerLeftLastNameLabel.TabIndex = 30;
+            this.headerLeftLastNameLabel.Text = "Last Name:";
+            this.headerLeftLastNameLabel.Visible = false;
+            // 
+            // headerLeftNumNameRadio
+            // 
+            this.headerLeftNumNameRadio.AutoSize = true;
+            this.headerLeftNumNameRadio.Location = new System.Drawing.Point(24, 205);
+            this.headerLeftNumNameRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.headerLeftNumNameRadio.Name = "headerLeftNumNameRadio";
+            this.headerLeftNumNameRadio.Size = new System.Drawing.Size(424, 36);
+            this.headerLeftNumNameRadio.TabIndex = 29;
+            this.headerLeftNumNameRadio.Text = "Page Number and Last Name";
+            this.headerLeftNumNameRadio.UseVisualStyleBackColor = true;
+            this.headerLeftNumNameRadio.CheckedChanged += new System.EventHandler(this.headerLeftChanged);
             // 
             // headerLeftEmptyRadio
             // 
             this.headerLeftEmptyRadio.AutoSize = true;
             this.headerLeftEmptyRadio.Checked = true;
-            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(24, 210);
+            this.headerLeftEmptyRadio.Location = new System.Drawing.Point(24, 305);
             this.headerLeftEmptyRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerLeftEmptyRadio.Name = "headerLeftEmptyRadio";
             this.headerLeftEmptyRadio.Size = new System.Drawing.Size(132, 36);
@@ -3693,7 +3662,7 @@
             // headerLeftTitleEnter
             // 
             this.headerLeftTitleEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLeftTitleEnter.Location = new System.Drawing.Point(523, 43);
+            this.headerLeftTitleEnter.Location = new System.Drawing.Point(651, 43);
             this.headerLeftTitleEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerLeftTitleEnter.Name = "headerLeftTitleEnter";
             this.headerLeftTitleEnter.Size = new System.Drawing.Size(367, 39);
@@ -3704,7 +3673,7 @@
             // headerLeftTitleLabel
             // 
             this.headerLeftTitleLabel.AutoSize = true;
-            this.headerLeftTitleLabel.Location = new System.Drawing.Point(432, 50);
+            this.headerLeftTitleLabel.Location = new System.Drawing.Point(565, 50);
             this.headerLeftTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerLeftTitleLabel.Name = "headerLeftTitleLabel";
             this.headerLeftTitleLabel.Size = new System.Drawing.Size(78, 32);
@@ -3714,7 +3683,7 @@
             // 
             // headerLeftNumberEnter
             // 
-            this.headerLeftNumberEnter.Location = new System.Drawing.Point(523, 100);
+            this.headerLeftNumberEnter.Location = new System.Drawing.Point(651, 100);
             this.headerLeftNumberEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerLeftNumberEnter.Name = "headerLeftNumberEnter";
             this.headerLeftNumberEnter.Size = new System.Drawing.Size(373, 39);
@@ -3725,7 +3694,7 @@
             // headerLeftNumberLabel
             // 
             this.headerLeftNumberLabel.AutoSize = true;
-            this.headerLeftNumberLabel.Location = new System.Drawing.Point(267, 105);
+            this.headerLeftNumberLabel.Location = new System.Drawing.Point(401, 105);
             this.headerLeftNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerLeftNumberLabel.Name = "headerLeftNumberLabel";
             this.headerLeftNumberLabel.Size = new System.Drawing.Size(242, 32);
@@ -3736,7 +3705,7 @@
             // headerLeftOtherLabel
             // 
             this.headerLeftOtherLabel.AutoSize = true;
-            this.headerLeftOtherLabel.Location = new System.Drawing.Point(429, 160);
+            this.headerLeftOtherLabel.Location = new System.Drawing.Point(566, 160);
             this.headerLeftOtherLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.headerLeftOtherLabel.Name = "headerLeftOtherLabel";
             this.headerLeftOtherLabel.Size = new System.Drawing.Size(78, 32);
@@ -3783,7 +3752,7 @@
             // headerLeftOtherEnter
             // 
             this.headerLeftOtherEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLeftOtherEnter.Location = new System.Drawing.Point(523, 153);
+            this.headerLeftOtherEnter.Location = new System.Drawing.Point(651, 153);
             this.headerLeftOtherEnter.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerLeftOtherEnter.Name = "headerLeftOtherEnter";
             this.headerLeftOtherEnter.Size = new System.Drawing.Size(367, 39);
@@ -3808,7 +3777,7 @@
             // headerDefaultButton
             // 
             this.headerDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerDefaultButton.Location = new System.Drawing.Point(24, 1276);
+            this.headerDefaultButton.Location = new System.Drawing.Point(24, 1050);
             this.headerDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerDefaultButton.Name = "headerDefaultButton";
             this.headerDefaultButton.Size = new System.Drawing.Size(251, 55);
@@ -4448,30 +4417,6 @@
             this.openFile.Filter = "WriteItEasy Project|*.write";
             this.openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
             // 
-            // titleOwnPageCheck
-            // 
-            this.titleOwnPageCheck.AutoSize = true;
-            this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 46);
-            this.titleOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titleOwnPageCheck.Name = "titleOwnPageCheck";
-            this.titleOwnPageCheck.Size = new System.Drawing.Size(304, 36);
-            this.titleOwnPageCheck.TabIndex = 1;
-            this.titleOwnPageCheck.Text = "Separate Title Page";
-            this.titleOwnPageCheck.UseVisualStyleBackColor = true;
-            // 
-            // titleInfoTopFirstPageCheck
-            // 
-            this.titleInfoTopFirstPageCheck.AutoSize = true;
-            this.titleInfoTopFirstPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleInfoTopFirstPageCheck.Location = new System.Drawing.Point(24, 96);
-            this.titleInfoTopFirstPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titleInfoTopFirstPageCheck.Name = "titleInfoTopFirstPageCheck";
-            this.titleInfoTopFirstPageCheck.Size = new System.Drawing.Size(519, 36);
-            this.titleInfoTopFirstPageCheck.TabIndex = 2;
-            this.titleInfoTopFirstPageCheck.Text = "Title Information At Top Of First Page";
-            this.titleInfoTopFirstPageCheck.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -4564,21 +4509,19 @@
             this.headerFirstPageGroupBox.PerformLayout();
             this.headerFirstPageRightGroupBox.ResumeLayout(false);
             this.headerFirstPageRightGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightFirstPageNumEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerFirstRightNumberEnter)).EndInit();
-            this.headerFirstPageCenterGroupBox.ResumeLayout(false);
-            this.headerFirstPageCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerFirstCenterNumberEnter)).EndInit();
             this.headerFirstPageLeftGroupBox.ResumeLayout(false);
             this.headerFirstPageLeftGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftFirstPageNumEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerFirstLeftNumberEnter)).EndInit();
             this.headerRightGroupBox.ResumeLayout(false);
             this.headerRightGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerRightFirstPageNumEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerRightNumberEnter)).EndInit();
-            this.headerCenterGroupBox.ResumeLayout(false);
-            this.headerCenterGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.headerCenterNumberEnter)).EndInit();
             this.headerLeftGroupBox.ResumeLayout(false);
             this.headerLeftGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headerLeftFirstPageNumEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).EndInit();
             this.summaryPanel.ResumeLayout(false);
             this.summaryOptionsGroupBox.ResumeLayout(false);
@@ -4749,14 +4692,6 @@
         private System.Windows.Forms.RadioButton headerFirstRightNumberRadio;
         private System.Windows.Forms.RadioButton headerFirstRightTitleRadio;
         private System.Windows.Forms.TextBox headerFirstRightOtherEnter;
-        private System.Windows.Forms.GroupBox headerFirstPageCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown headerFirstCenterNumberEnter;
-        private System.Windows.Forms.Label headerFirstCenterNumberLabel;
-        private System.Windows.Forms.Label headerFirstCenterOtherLabel;
-        private System.Windows.Forms.RadioButton headerFirstCenterOtherRadio;
-        private System.Windows.Forms.RadioButton headerFirstCenterNumberRadio;
-        private System.Windows.Forms.RadioButton headerFirstCenterTitleRadio;
-        private System.Windows.Forms.TextBox headerFirstCenterOtherEnter;
         private System.Windows.Forms.GroupBox headerFirstPageLeftGroupBox;
         private System.Windows.Forms.NumericUpDown headerFirstLeftNumberEnter;
         private System.Windows.Forms.Label headerFirstLeftNumberLabel;
@@ -4774,14 +4709,6 @@
         private System.Windows.Forms.RadioButton headerRightNumberRadio;
         private System.Windows.Forms.RadioButton headerRightTitleRadio;
         private System.Windows.Forms.TextBox headerRightOtherEnter;
-        private System.Windows.Forms.GroupBox headerCenterGroupBox;
-        private System.Windows.Forms.NumericUpDown headerCenterNumberEnter;
-        private System.Windows.Forms.Label headerCenterNumberLabel;
-        private System.Windows.Forms.Label headerCenterOtherLabel;
-        private System.Windows.Forms.RadioButton headerCenterOtherRadio;
-        private System.Windows.Forms.RadioButton headerCenterNumberRadio;
-        private System.Windows.Forms.RadioButton headerCenterTitleRadio;
-        private System.Windows.Forms.TextBox headerCenterOtherEnter;
         private System.Windows.Forms.GroupBox conclusionContentGroupBox;
         private System.Windows.Forms.RichTextBox conclusionContent;
         private System.Windows.Forms.GroupBox conclusionOptionsGroupBox;
@@ -4822,21 +4749,15 @@
         private System.Windows.Forms.TextBox section1LabelEnter;
         private System.Windows.Forms.TextBox headerFirstRightTitleEnter;
         private System.Windows.Forms.Label headerFirstRightTitleLabel;
-        private System.Windows.Forms.TextBox headerFirstCenterTitleEnter;
-        private System.Windows.Forms.Label headerFirstCenterTitleLabel;
         private System.Windows.Forms.TextBox headerFirstLeftTitleEnter;
         private System.Windows.Forms.Label headerFirstLeftTitleLabel;
         private System.Windows.Forms.TextBox headerRightTitleEnter;
         private System.Windows.Forms.Label headerRightTitleLabel;
-        private System.Windows.Forms.TextBox headerCenterTitleEnter;
-        private System.Windows.Forms.Label headerCenterTitleLabel;
         private System.Windows.Forms.TextBox headerLeftTitleEnter;
         private System.Windows.Forms.Label headerLeftTitleLabel;
         private System.Windows.Forms.RadioButton headerRightEmptyRadio;
-        private System.Windows.Forms.RadioButton headerCenterEmptyRadio;
         private System.Windows.Forms.RadioButton headerLeftEmptyRadio;
         private System.Windows.Forms.RadioButton headerFirstRightEmptyRadio;
-        private System.Windows.Forms.RadioButton headerFirstCenterEmptyRadio;
         private System.Windows.Forms.RadioButton headerFirstLeftEmptyRadio;
         private System.Windows.Forms.GroupBox subsectionLabelGroupBox;
         private System.Windows.Forms.GroupBox subsectionLabelStyleGroupBox;
@@ -4913,6 +4834,26 @@
         private System.Windows.Forms.Label paperTitle;
         private System.Windows.Forms.RadioButton titleOwnPageCheck;
         private System.Windows.Forms.RadioButton titleInfoTopFirstPageCheck;
+        private System.Windows.Forms.RadioButton headerLeftNumNameRadio;
+        private System.Windows.Forms.NumericUpDown headerFirstRightFirstPageNumEnter;
+        private System.Windows.Forms.Label headerFirstRightPageNumLabel;
+        private System.Windows.Forms.TextBox headerFirstRightLastNameEnter;
+        private System.Windows.Forms.Label headerFirstRightLastNameLabel;
+        private System.Windows.Forms.RadioButton headerFirstRightPageNumberLastNameRadio;
+        private System.Windows.Forms.NumericUpDown headerFirstLeftFirstPageNumEnter;
+        private System.Windows.Forms.Label headerFirstLeftPageNumLabel;
+        private System.Windows.Forms.TextBox headerFirstLeftLastNameEnter;
+        private System.Windows.Forms.Label headerFirstLeftLastNameLabel;
+        private System.Windows.Forms.RadioButton headerFirstLeftPageNumberLastNameRadio;
+        private System.Windows.Forms.NumericUpDown headerRightFirstPageNumEnter;
+        private System.Windows.Forms.Label headerRightFirstPageNumLabel;
+        private System.Windows.Forms.TextBox headerRightLastNameEnter;
+        private System.Windows.Forms.Label headerRightLastNameLabel;
+        private System.Windows.Forms.RadioButton headerRightNumNameRadio;
+        private System.Windows.Forms.NumericUpDown headerLeftFirstPageNumEnter;
+        private System.Windows.Forms.Label headerLeftFirstPageNumLabel;
+        private System.Windows.Forms.TextBox headerLeftLastNameEnter;
+        private System.Windows.Forms.Label headerLeftLastNameLabel;
     }
 }
 

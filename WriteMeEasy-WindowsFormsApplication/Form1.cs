@@ -57,9 +57,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
             myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftNumberEnter.Value);
             myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
-            myPaper.header.centerTitleText = headerCenterTitleEnter.Text;
-            myPaper.header.centerPageNumStart = Convert.ToInt32(headerCenterNumberEnter.Value);
-            myPaper.header.centerOtherText = headerCenterOtherEnter.Text;
             myPaper.header.rightTitleText = headerRightTitleEnter.Text;
             myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightNumberEnter.Value);
             myPaper.header.rightOtherText = headerRightOtherEnter.Text;
@@ -67,11 +64,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
             myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
             myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
-            myPaper.header.firstCenterTitleText = headerFirstCenterTitleEnter.Text;
-            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
-            myPaper.header.firstCenterOtherText = headerFirstCenterOtherEnter.Text;
             myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
-            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
             myPaper.header.firstRightOtherText = headerFirstRightOtherEnter.Text;
             myPaper.sectionsConfig.newPageBetween = newPageForEachSectionRadio.Checked;
             myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
@@ -131,18 +124,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.leftTitle = headerLeftTitleRadio.Checked;
             myPaper.header.leftPageNum = headerLeftNumberRadio.Checked;
             myPaper.header.leftOther = headerLeftOtherRadio.Checked;
-            myPaper.header.centerTitle = headerCenterTitleRadio.Checked;
-            myPaper.header.centerPageNum = headerCenterNumberRadio.Checked;
-            myPaper.header.centerOther = headerCenterOtherRadio.Checked;
             myPaper.header.rightTitle = headerRightTitleRadio.Checked;
             myPaper.header.rightPageNum = headerRightNumberRadio.Checked;
             myPaper.header.rightOther = headerRightOtherRadio.Checked;
             myPaper.header.firstLeftTitle = headerFirstLeftTitleRadio.Checked;
             myPaper.header.firstLeftPageNum = headerFirstLeftNumberRadio.Checked;
             myPaper.header.firstLeftOther = headerFirstLeftOtherRadio.Checked;
-            myPaper.header.firstCenterTitle = headerFirstCenterTitleRadio.Checked;
-            myPaper.header.firstCenterPageNum = headerFirstCenterNumberRadio.Checked;
-            myPaper.header.firstCenterOther = headerFirstCenterOtherRadio.Checked;
             myPaper.header.firstRightTitle = headerFirstRightTitleRadio.Checked;
             myPaper.header.firstRightPageNum = headerFirstRightNumberRadio.Checked;
             myPaper.header.firstRightOther = headerFirstRightOtherRadio.Checked;
@@ -1312,21 +1299,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
         }
 
-        private void headerCenterTitleEnter_TextChanged(object sender, EventArgs e)
-        {
-            myPaper.header.centerTitleText = headerCenterTitleEnter.Text;
-        }
-
-        private void headerCenterNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.centerPageNumStart = Convert.ToInt32(headerCenterNumberEnter.Value);
-        }
-
-        private void headerCenterOtherEnter_TextChanged(object sender, EventArgs e)
-        {
-            myPaper.header.centerOtherText = headerCenterOtherEnter.Text;
-        }
-
         private void headerRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.header.rightTitleText = headerRightTitleEnter.Text;
@@ -1362,29 +1334,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
         }
 
-        private void headerFirstCenterTitleEnter_TextChanged(object sender, EventArgs e)
-        {
-            myPaper.header.firstCenterTitleText = headerFirstCenterTitleEnter.Text;
-        }
-
-        private void headerFirstCenterNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
-        }
-
-        private void headerFirstCenterOtherEnter_TextChanged(object sender, EventArgs e)
-        {
-            myPaper.header.firstCenterOtherText = headerFirstCenterOtherEnter.Text;
-        }
-
         private void headerFirstRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
-        }
-
-        private void headerFirstRightNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
         }
 
         private void headerFirstRightOtherEnter_TextChanged(object sender, EventArgs e)
@@ -1627,8 +1579,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             abstractIncludeTitleCheck.Checked = true;
             abstractTitleAlignSelect.SelectedIndex = 1;
             abstractTitleBoldCheck.Checked = true;
-
-            headerCenterEmptyRadio.Checked = true;
+            
             headerLeftTitleRadio.Checked = true;
             headerRightNumberRadio.Checked = true;
             headerLeftTitleEnter.Text = "Researched Argument: Is the Robot Better than Me?";
@@ -2798,58 +2749,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
                                 break;
-                            case "HeaderCenterTitle":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerCenterTitleRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerCenterTitleRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderCenterPageNum":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerCenterNumberRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerCenterNumberRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderCenterOther":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerCenterOtherRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerCenterOtherRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderCenterNone":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerCenterEmptyRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerCenterEmptyRadio.Checked = false;
-                                    }
-                                }
-                                break;
                             case "HeaderRightTitle":
                                 if (reader.Read())
                                 {
@@ -2954,58 +2853,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
                                 break;
-                            case "HeaderFirstCenterTitle":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerFirstCenterTitleRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerFirstCenterTitleRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderFirstCenterPageNum":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerFirstCenterNumberRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerFirstCenterNumberRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderFirstCenterOther":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerFirstCenterOtherRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerFirstCenterOtherRadio.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "HeaderFirstCenterNone":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        headerFirstCenterEmptyRadio.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        headerFirstCenterEmptyRadio.Checked = false;
-                                    }
-                                }
-                                break;
                             case "HeaderFirstRightTitle":
                                 if (reader.Read())
                                 {
@@ -3076,24 +2923,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     headerLeftOtherEnter.Text = reader.Value;
                                 }
                                 break;
-                            case "HeaderEnterCenterTitle":
-                                if (reader.Read())
-                                {
-                                    headerCenterTitleEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterCenterPageStart":
-                                if (reader.Read())
-                                {
-                                    headerCenterNumberEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterCenterOther":
-                                if (reader.Read())
-                                {
-                                    headerCenterOtherEnter.Text = reader.Value;
-                                }
-                                break;
                             case "HeaderEnterRightTitle":
                                 if (reader.Read())
                                 {
@@ -3128,24 +2957,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 if (reader.Read())
                                 {
                                     headerFirstLeftOtherEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterFirstCenterTitle":
-                                if (reader.Read())
-                                {
-                                    headerFirstCenterTitleEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterFirstCenterPageStart":
-                                if (reader.Read())
-                                {
-                                    headerFirstCenterNumberEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterFirstCenterOther":
-                                if (reader.Read())
-                                {
-                                    headerFirstCenterOtherEnter.Text = reader.Value;
                                 }
                                 break;
                             case "HeaderEnterFirstRightTitle":

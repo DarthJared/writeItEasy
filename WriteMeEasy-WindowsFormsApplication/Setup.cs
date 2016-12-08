@@ -75,10 +75,10 @@ namespace WriteMeEasy_WindowsFormsApplication
             sections["ABSTRACT"] = 174;
 
             headerFirstPageGroupBox.Height = 40;
-            headerOptionsGroupBox.Height = 494;
-            headerDefaultButton.Location = new Point(9, 535);
-            headerPanel.Height = 571;
-            sections["HEADER"] = 571;
+            headerOptionsGroupBox.Height = 404;
+            headerDefaultButton.Location = new Point(9, 445);
+            headerPanel.Height = 481;
+            sections["HEADER"] = 481;
 
             sectionLabelGroupBox.Height = 45;
             sectionsDefaultButton.Location = new Point(9, 179);

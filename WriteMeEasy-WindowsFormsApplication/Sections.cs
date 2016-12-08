@@ -218,7 +218,14 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (!subsectionLabelGroupBox.Visible)
             {
-                addSpace("sectionsDefaultButton", 56, "sectionsPanel", "SECTIONS");
+                if (includeSubsectionLabelCheck.Checked)
+                {
+                    addSpace("sectionsDefaultButton", 296, "sectionsPanel", "SECTIONS");
+                }
+                else
+                {
+                    addSpace("sectionsDefaultButton", 56, "sectionsPanel", "SECTIONS");
+                }                
                 subsectionLabelGroupBox.Location = new Point(9, sectionLabelGroupBox.Location.Y + sectionLabelGroupBox.Height + 8);
                 subsectionLabelGroupBox.Visible = true;
             }
@@ -308,7 +315,14 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             if (!subsubsectionLabelGroupBox.Visible)
             {
-                addSpace("sectionsDefaultButton", 56, "sectionsPanel", "SECTIONS");
+                if (includeSubsubsectionLabelCheck.Checked)
+                {
+                    addSpace("sectionsDefaultButton", 296, "sectionsPanel", "SECTIONS");
+                }
+                else
+                {
+                    addSpace("sectionsDefaultButton", 56, "sectionsPanel", "SECTIONS");
+                }
                 subsubsectionLabelGroupBox.Location = new Point(9, subsectionLabelGroupBox.Location.Y + subsectionLabelGroupBox.Height + 8);
                 subsubsectionLabelGroupBox.Visible = true;
             }
