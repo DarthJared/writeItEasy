@@ -436,7 +436,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 titlePageTitleCheck.Checked = false;
                 titlePageSchoolCheck.Checked = false;
                 titlePageLeftAllignRadio.Checked = true;
-                titleOwnPageCheck.Checked = false;
+                titleInfoTopFirstPageCheck.Checked = true;
                 //TODO Make sure they are ordered correctly
                 
                 blankLineBetweenSectionsRadio.Checked = true;

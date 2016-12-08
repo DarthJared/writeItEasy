@@ -15,7 +15,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             WindowState = FormWindowState.Maximized;
 
             sections.Add("GENERAL", 410);
-            sections.Add("TITLE_PAGE", 475);
+            sections.Add("TITLE_PAGE", 458);
             sections.Add("SUMMARY", 545);
             sections.Add("ABSTRACT", 545);
             sections.Add("HEADER", 825);
@@ -120,6 +120,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             abstractContent.SelectionHangingIndent = -40;
             summaryContent.SelectionIndent = 40;
             summaryContent.SelectionHangingIndent = -40;
+
+            apaRadio.Checked = true;
         }
 
         private void resizeEvent(object sender, EventArgs e)

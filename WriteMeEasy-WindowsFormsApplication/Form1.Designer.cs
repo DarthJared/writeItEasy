@@ -181,7 +181,6 @@
             this.titlePagePanel = new System.Windows.Forms.Panel();
             this.titlePageDefaultButton = new System.Windows.Forms.Button();
             this.titlePagePositionGroupBox = new System.Windows.Forms.GroupBox();
-            this.titleOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.titlePageAllignGroupBox = new System.Windows.Forms.GroupBox();
             this.titlePageRightAllignRadio = new System.Windows.Forms.RadioButton();
             this.titlePageCenterRadio = new System.Windows.Forms.RadioButton();
@@ -342,6 +341,8 @@
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.writeFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.titleOwnPageCheck = new System.Windows.Forms.RadioButton();
+            this.titleInfoTopFirstPageCheck = new System.Windows.Forms.RadioButton();
             generalHeader = new System.Windows.Forms.Label();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -875,7 +876,7 @@
             this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 4936);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 4896);
             this.conclusionPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionPanel.Name = "conclusionPanel";
             this.conclusionPanel.Size = new System.Drawing.Size(1261, 407);
@@ -1262,14 +1263,12 @@
             // apaRadio
             // 
             this.apaRadio.AutoSize = true;
-            this.apaRadio.Checked = true;
             this.apaRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apaRadio.Location = new System.Drawing.Point(24, 45);
             this.apaRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.apaRadio.Name = "apaRadio";
             this.apaRadio.Size = new System.Drawing.Size(109, 36);
             this.apaRadio.TabIndex = 0;
-            this.apaRadio.TabStop = true;
             this.apaRadio.Text = "APA";
             this.apaRadio.UseVisualStyleBackColor = true;
             this.apaRadio.CheckedChanged += new System.EventHandler(this.apaMla_Changed);
@@ -1280,7 +1279,7 @@
             this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(3, 4302);
+            this.sectionsPanel.Location = new System.Drawing.Point(3, 4262);
             this.sectionsPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sectionsPanel.Name = "sectionsPanel";
             this.sectionsPanel.Size = new System.Drawing.Size(1261, 632);
@@ -2021,7 +2020,7 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 5346);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 5306);
             this.referencesPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.referencesPanel.Name = "referencesPanel";
             this.referencesPanel.Size = new System.Drawing.Size(1261, 641);
@@ -2160,7 +2159,7 @@
             // referencesTitleAlignLabel
             // 
             this.referencesTitleAlignLabel.AutoSize = true;
-            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(747, 48);
+            this.referencesTitleAlignLabel.Location = new System.Drawing.Point(743, 48);
             this.referencesTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.referencesTitleAlignLabel.Name = "referencesTitleAlignLabel";
             this.referencesTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
@@ -2346,13 +2345,13 @@
             this.titlePagePanel.Location = new System.Drawing.Point(0, 978);
             this.titlePagePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePagePanel.Name = "titlePagePanel";
-            this.titlePagePanel.Size = new System.Drawing.Size(1261, 1130);
+            this.titlePagePanel.Size = new System.Drawing.Size(1261, 1090);
             this.titlePagePanel.TabIndex = 5;
             // 
             // titlePageDefaultButton
             // 
             this.titlePageDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageDefaultButton.Location = new System.Drawing.Point(24, 1040);
+            this.titlePageDefaultButton.Location = new System.Drawing.Point(24, 993);
             this.titlePageDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePageDefaultButton.Name = "titlePageDefaultButton";
             this.titlePageDefaultButton.Size = new System.Drawing.Size(336, 55);
@@ -2363,27 +2362,17 @@
             // 
             // titlePagePositionGroupBox
             // 
+            this.titlePagePositionGroupBox.Controls.Add(this.titleInfoTopFirstPageCheck);
             this.titlePagePositionGroupBox.Controls.Add(this.titleOwnPageCheck);
             this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePagePositionGroupBox.Location = new System.Drawing.Point(24, 794);
             this.titlePagePositionGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
             this.titlePagePositionGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(1216, 103);
+            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(1216, 154);
             this.titlePagePositionGroupBox.TabIndex = 4;
             this.titlePagePositionGroupBox.TabStop = false;
             this.titlePagePositionGroupBox.Text = "Position";
-            // 
-            // titleOwnPageCheck
-            // 
-            this.titleOwnPageCheck.AutoSize = true;
-            this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 42);
-            this.titleOwnPageCheck.Name = "titleOwnPageCheck";
-            this.titleOwnPageCheck.Size = new System.Drawing.Size(718, 36);
-            this.titleOwnPageCheck.TabIndex = 0;
-            this.titleOwnPageCheck.Text = "Title Information On Own Page (Separate Title Page)";
-            this.titleOwnPageCheck.UseVisualStyleBackColor = true;
             // 
             // titlePageAllignGroupBox
             // 
@@ -2874,7 +2863,7 @@
             this.titlePageSectionLabel.Name = "titlePageSectionLabel";
             this.titlePageSectionLabel.Size = new System.Drawing.Size(1259, 72);
             this.titlePageSectionLabel.TabIndex = 1;
-            this.titlePageSectionLabel.Text = "TITLE";
+            this.titlePageSectionLabel.Text = "TITLE PAGE";
             this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // headerPanel
@@ -2884,7 +2873,7 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 2940);
+            this.headerPanel.Location = new System.Drawing.Point(0, 2900);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1261, 1359);
@@ -3834,7 +3823,7 @@
             this.summaryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.summaryPanel.Controls.Add(this.summaryOptionsGroupBox);
             this.summaryPanel.Controls.Add(this.summaryHeader);
-            this.summaryPanel.Location = new System.Drawing.Point(0, 2110);
+            this.summaryPanel.Location = new System.Drawing.Point(0, 2070);
             this.summaryPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.summaryPanel.Name = "summaryPanel";
             this.summaryPanel.Size = new System.Drawing.Size(1261, 412);
@@ -4051,7 +4040,7 @@
             this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
             this.abstractPanel.Controls.Add(this.abstractHeader);
-            this.abstractPanel.Location = new System.Drawing.Point(0, 2525);
+            this.abstractPanel.Location = new System.Drawing.Point(0, 2485);
             this.abstractPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractPanel.Name = "abstractPanel";
             this.abstractPanel.Size = new System.Drawing.Size(1261, 412);
@@ -4458,6 +4447,30 @@
             this.openFile.FileName = "openFile";
             this.openFile.Filter = "WriteItEasy Project|*.write";
             this.openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
+            // 
+            // titleOwnPageCheck
+            // 
+            this.titleOwnPageCheck.AutoSize = true;
+            this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 46);
+            this.titleOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleOwnPageCheck.Name = "titleOwnPageCheck";
+            this.titleOwnPageCheck.Size = new System.Drawing.Size(304, 36);
+            this.titleOwnPageCheck.TabIndex = 1;
+            this.titleOwnPageCheck.Text = "Separate Title Page";
+            this.titleOwnPageCheck.UseVisualStyleBackColor = true;
+            // 
+            // titleInfoTopFirstPageCheck
+            // 
+            this.titleInfoTopFirstPageCheck.AutoSize = true;
+            this.titleInfoTopFirstPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleInfoTopFirstPageCheck.Location = new System.Drawing.Point(24, 96);
+            this.titleInfoTopFirstPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.titleInfoTopFirstPageCheck.Name = "titleInfoTopFirstPageCheck";
+            this.titleInfoTopFirstPageCheck.Size = new System.Drawing.Size(519, 36);
+            this.titleInfoTopFirstPageCheck.TabIndex = 2;
+            this.titleInfoTopFirstPageCheck.Text = "Title Information At Top Of First Page";
+            this.titleInfoTopFirstPageCheck.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -4898,7 +4911,8 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label paperTitle;
-        private System.Windows.Forms.CheckBox titleOwnPageCheck;
+        private System.Windows.Forms.RadioButton titleOwnPageCheck;
+        private System.Windows.Forms.RadioButton titleInfoTopFirstPageCheck;
     }
 }
 
