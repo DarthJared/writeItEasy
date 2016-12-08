@@ -124,6 +124,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void resizeEvent(object sender, EventArgs e)
         {
+            mainToolStrip.Width = 800;
             int rightPanelWidth = tableLayoutPanel1.Width - 500;
             int rightPanelHeight = tableLayoutPanel1.Height;
 

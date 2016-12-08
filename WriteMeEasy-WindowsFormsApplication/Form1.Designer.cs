@@ -438,7 +438,7 @@
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tableLayoutPanel1);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(3408, 1609);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(3408, 1612);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -486,7 +486,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(3408, 1609);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(3408, 1612);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -501,14 +501,14 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(2059, 1385);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // finalizePanel
             // 
             this.finalizePanel.Controls.Add(this.writeButton);
-            this.finalizePanel.Location = new System.Drawing.Point(8, 1273);
+            this.finalizePanel.Location = new System.Drawing.Point(8, 1142);
             this.finalizePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.finalizePanel.Name = "finalizePanel";
             this.finalizePanel.Size = new System.Drawing.Size(2043, 105);
@@ -535,7 +535,7 @@
             this.previewPanel.Location = new System.Drawing.Point(8, 7);
             this.previewPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(2043, 1252);
+            this.previewPanel.Size = new System.Drawing.Size(2043, 1121);
             this.previewPanel.TabIndex = 0;
             // 
             // contentPanel
@@ -4333,17 +4333,17 @@
             this.mainToolStrip.Location = new System.Drawing.Point(3, 49);
             this.mainToolStrip.Name = "mainToolStrip";
             this.mainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mainToolStrip.Size = new System.Drawing.Size(733, 49);
+            this.mainToolStrip.Size = new System.Drawing.Size(562, 30);
             this.mainToolStrip.TabIndex = 1;
             // 
             // saveButton
             // 
-            this.saveButton.AutoSize = false;
             this.saveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.saveButton.Image = ((System.Drawing.Image)(resources.GetObject("saveButton.Image")));
+            this.saveButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.saveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(44, 46);
+            this.saveButton.Size = new System.Drawing.Size(23, 25);
             this.saveButton.Text = "toolStripButton1";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -4351,9 +4351,10 @@
             // 
             this.openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.openButton.Image = ((System.Drawing.Image)(resources.GetObject("openButton.Image")));
+            this.openButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.openButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(44, 46);
+            this.openButton.Size = new System.Drawing.Size(27, 25);
             this.openButton.Text = "toolStripButton2";
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
@@ -4361,9 +4362,10 @@
             // 
             this.settingsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.settingsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(44, 46);
+            this.settingsButton.Size = new System.Drawing.Size(24, 25);
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
@@ -4371,9 +4373,10 @@
             // 
             this.boldButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.boldButton.Image = ((System.Drawing.Image)(resources.GetObject("boldButton.Image")));
+            this.boldButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.boldButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.boldButton.Name = "boldButton";
-            this.boldButton.Size = new System.Drawing.Size(44, 46);
+            this.boldButton.Size = new System.Drawing.Size(23, 25);
             this.boldButton.Text = "toolStripButton4";
             this.boldButton.Click += new System.EventHandler(this.boldButton_Click);
             // 
@@ -4381,9 +4384,10 @@
             // 
             this.italicButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.italicButton.Image = ((System.Drawing.Image)(resources.GetObject("italicButton.Image")));
+            this.italicButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.italicButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.italicButton.Name = "italicButton";
-            this.italicButton.Size = new System.Drawing.Size(44, 46);
+            this.italicButton.Size = new System.Drawing.Size(23, 24);
             this.italicButton.Text = "toolStripButton5";
             this.italicButton.Click += new System.EventHandler(this.italicButton_Click);
             // 
@@ -4391,9 +4395,10 @@
             // 
             this.underlineButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.underlineButton.Image = ((System.Drawing.Image)(resources.GetObject("underlineButton.Image")));
+            this.underlineButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.underlineButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.underlineButton.Name = "underlineButton";
-            this.underlineButton.Size = new System.Drawing.Size(44, 46);
+            this.underlineButton.Size = new System.Drawing.Size(23, 24);
             this.underlineButton.Text = "toolStripButton6";
             this.underlineButton.Click += new System.EventHandler(this.underlineButton_Click);
             // 
