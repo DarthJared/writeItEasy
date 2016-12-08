@@ -181,9 +181,7 @@
             this.titlePagePanel = new System.Windows.Forms.Panel();
             this.titlePageDefaultButton = new System.Windows.Forms.Button();
             this.titlePagePositionGroupBox = new System.Windows.Forms.GroupBox();
-            this.titlePageMiddleRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageBottomRadio = new System.Windows.Forms.RadioButton();
-            this.titlePageTopRadio = new System.Windows.Forms.RadioButton();
+            this.titleOwnPageCheck = new System.Windows.Forms.CheckBox();
             this.titlePageAllignGroupBox = new System.Windows.Forms.GroupBox();
             this.titlePageRightAllignRadio = new System.Windows.Forms.RadioButton();
             this.titlePageCenterRadio = new System.Windows.Forms.RadioButton();
@@ -1205,9 +1203,9 @@
             this.titlePageIncludeCheck.Location = new System.Drawing.Point(24, 45);
             this.titlePageIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePageIncludeCheck.Name = "titlePageIncludeCheck";
-            this.titlePageIncludeCheck.Size = new System.Drawing.Size(281, 36);
+            this.titlePageIncludeCheck.Size = new System.Drawing.Size(207, 36);
             this.titlePageIncludeCheck.TabIndex = 2;
-            this.titlePageIncludeCheck.Text = "Include Title Page";
+            this.titlePageIncludeCheck.Text = "Include Title";
             this.titlePageIncludeCheck.UseVisualStyleBackColor = true;
             this.titlePageIncludeCheck.CheckedChanged += new System.EventHandler(this.titlePageIncludeCheck_CheckedChanged);
             // 
@@ -2365,56 +2363,27 @@
             // 
             // titlePagePositionGroupBox
             // 
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageMiddleRadio);
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageBottomRadio);
-            this.titlePagePositionGroupBox.Controls.Add(this.titlePageTopRadio);
+            this.titlePagePositionGroupBox.Controls.Add(this.titleOwnPageCheck);
             this.titlePagePositionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePagePositionGroupBox.Location = new System.Drawing.Point(24, 794);
             this.titlePagePositionGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePagePositionGroupBox.Name = "titlePagePositionGroupBox";
             this.titlePagePositionGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(1216, 219);
+            this.titlePagePositionGroupBox.Size = new System.Drawing.Size(1216, 103);
             this.titlePagePositionGroupBox.TabIndex = 4;
             this.titlePagePositionGroupBox.TabStop = false;
             this.titlePagePositionGroupBox.Text = "Position";
             // 
-            // titlePageMiddleRadio
+            // titleOwnPageCheck
             // 
-            this.titlePageMiddleRadio.AutoSize = true;
-            this.titlePageMiddleRadio.Checked = true;
-            this.titlePageMiddleRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageMiddleRadio.Location = new System.Drawing.Point(24, 100);
-            this.titlePageMiddleRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePageMiddleRadio.Name = "titlePageMiddleRadio";
-            this.titlePageMiddleRadio.Size = new System.Drawing.Size(242, 36);
-            this.titlePageMiddleRadio.TabIndex = 2;
-            this.titlePageMiddleRadio.TabStop = true;
-            this.titlePageMiddleRadio.Text = "Middle of Page";
-            this.titlePageMiddleRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageBottomRadio
-            // 
-            this.titlePageBottomRadio.AutoSize = true;
-            this.titlePageBottomRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageBottomRadio.Location = new System.Drawing.Point(24, 155);
-            this.titlePageBottomRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePageBottomRadio.Name = "titlePageBottomRadio";
-            this.titlePageBottomRadio.Size = new System.Drawing.Size(247, 36);
-            this.titlePageBottomRadio.TabIndex = 1;
-            this.titlePageBottomRadio.Text = "Bottom of Page";
-            this.titlePageBottomRadio.UseVisualStyleBackColor = true;
-            // 
-            // titlePageTopRadio
-            // 
-            this.titlePageTopRadio.AutoSize = true;
-            this.titlePageTopRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePageTopRadio.Location = new System.Drawing.Point(24, 45);
-            this.titlePageTopRadio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.titlePageTopRadio.Name = "titlePageTopRadio";
-            this.titlePageTopRadio.Size = new System.Drawing.Size(206, 36);
-            this.titlePageTopRadio.TabIndex = 0;
-            this.titlePageTopRadio.Text = "Top of Page";
-            this.titlePageTopRadio.UseVisualStyleBackColor = true;
+            this.titleOwnPageCheck.AutoSize = true;
+            this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 42);
+            this.titleOwnPageCheck.Name = "titleOwnPageCheck";
+            this.titleOwnPageCheck.Size = new System.Drawing.Size(718, 36);
+            this.titleOwnPageCheck.TabIndex = 0;
+            this.titleOwnPageCheck.Text = "Title Information On Own Page (Separate Title Page)";
+            this.titleOwnPageCheck.UseVisualStyleBackColor = true;
             // 
             // titlePageAllignGroupBox
             // 
@@ -2905,7 +2874,7 @@
             this.titlePageSectionLabel.Name = "titlePageSectionLabel";
             this.titlePageSectionLabel.Size = new System.Drawing.Size(1259, 72);
             this.titlePageSectionLabel.TabIndex = 1;
-            this.titlePageSectionLabel.Text = "TITLE PAGE";
+            this.titlePageSectionLabel.Text = "TITLE";
             this.titlePageSectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // headerPanel
@@ -4333,7 +4302,7 @@
             this.mainToolStrip.Location = new System.Drawing.Point(3, 49);
             this.mainToolStrip.Name = "mainToolStrip";
             this.mainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mainToolStrip.Size = new System.Drawing.Size(562, 30);
+            this.mainToolStrip.Size = new System.Drawing.Size(147, 30);
             this.mainToolStrip.TabIndex = 1;
             // 
             // saveButton
@@ -4343,7 +4312,7 @@
             this.saveButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.saveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(23, 25);
+            this.saveButton.Size = new System.Drawing.Size(23, 27);
             this.saveButton.Text = "toolStripButton1";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -4354,7 +4323,7 @@
             this.openButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.openButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(27, 25);
+            this.openButton.Size = new System.Drawing.Size(27, 27);
             this.openButton.Text = "toolStripButton2";
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
@@ -4365,7 +4334,7 @@
             this.settingsButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.settingsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(24, 25);
+            this.settingsButton.Size = new System.Drawing.Size(24, 27);
             this.settingsButton.Text = "toolStripButton3";
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
@@ -4376,7 +4345,7 @@
             this.boldButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.boldButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.boldButton.Name = "boldButton";
-            this.boldButton.Size = new System.Drawing.Size(23, 25);
+            this.boldButton.Size = new System.Drawing.Size(23, 27);
             this.boldButton.Text = "toolStripButton4";
             this.boldButton.Click += new System.EventHandler(this.boldButton_Click);
             // 
@@ -4672,9 +4641,6 @@
         private System.Windows.Forms.RadioButton titlePageRightAllignRadio;
         private System.Windows.Forms.RadioButton titlePageCenterRadio;
         private System.Windows.Forms.GroupBox titlePagePositionGroupBox;
-        private System.Windows.Forms.RadioButton titlePageMiddleRadio;
-        private System.Windows.Forms.RadioButton titlePageBottomRadio;
-        private System.Windows.Forms.RadioButton titlePageTopRadio;
         private System.Windows.Forms.Button schoolUpButton;
         private System.Windows.Forms.Button professorUpButton;
         private System.Windows.Forms.Button classUpButton;
@@ -4932,6 +4898,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label paperTitle;
+        private System.Windows.Forms.CheckBox titleOwnPageCheck;
     }
 }
 

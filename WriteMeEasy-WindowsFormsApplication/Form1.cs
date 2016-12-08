@@ -1262,30 +1262,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
         }
 
-        private void titlePageTopRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (titlePageTopRadio.Checked)
-            {
-                myPaper.titlePage.position = "top";
-            }
-        }
-
-        private void titlePageMiddleRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (titlePageMiddleRadio.Checked)
-            {
-                myPaper.titlePage.position = "middle";
-            }
-        }
-
-        private void titlePageBottomRadio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (titlePageBottomRadio.Checked)
-            {
-                myPaper.titlePage.position = "bottom";
-            }
-        }
-
         private void titlePageDefaultButton_Click(object sender, EventArgs e)
         {
             //Set default settings for title page
@@ -1646,9 +1622,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
             titlePageLeftAllignRadio.Checked = true;
             titlePageCenterRadio.Checked = true;
-
-            titlePageTopRadio.Checked = true;
-            titlePageMiddleRadio.Checked = true;
 
             abstractOwnPageCheck.Checked = true;
             abstractIncludeTitleCheck.Checked = true;
