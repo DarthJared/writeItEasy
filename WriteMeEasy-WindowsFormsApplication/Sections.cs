@@ -9,8 +9,6 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void includeSectionLabelsCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.sectionsConfig.includeSectionLabels = includeSectionLabelsCheck.Checked;
-
             int numSections = myPaper.sections.Count;
             int sectionMult = numSections * 27;
             int totalSpace = 243 + sectionMult;
@@ -54,7 +52,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void includeSubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.sectionsConfig.includeSubsectionLabels = includeSubsectionLabelCheck.Checked;
             if (includeSubsectionLabelCheck.Checked)
             {
                 addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");
@@ -98,7 +95,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void includeSubsubsectionLabelCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.sectionsConfig.includeSubsubsectionLabels = includeSubsubsectionLabelCheck.Checked;
             if (includeSubsubsectionLabelCheck.Checked)
             {
                 addSpace("sectionsDefaultButton", 243, "sectionsPanel", "SECTIONS");
@@ -579,8 +575,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsectionIndex = Convert.ToInt32(indexes[1]);
             RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Content", true)[0];
 
-            startSelection = subsectionContent.SelectionStart;
-            endSelection = subsectionContent.SelectionLength + subsectionContent.SelectionStart;
+            //startSelection = subsectionContent.SelectionStart;
+            //endSelection = subsectionContent.SelectionLength + subsectionContent.SelectionStart;
 
             foreach (Section section in myPaper.sections)
             {
@@ -696,8 +692,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             int subsubsectionIndex = Convert.ToInt32(indexes[2]);
             RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content", true)[0];
 
-            startSelection = subsubsectionContent.SelectionStart;
-            endSelection = subsubsectionContent.SelectionLength + subsubsectionContent.SelectionStart;
+            //startSelection = subsubsectionContent.SelectionStart;
+            //endSelection = subsubsectionContent.SelectionLength + subsubsectionContent.SelectionStart;
 
             foreach (Section section in myPaper.sections)
             {

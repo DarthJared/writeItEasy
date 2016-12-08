@@ -10,6 +10,844 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
+        private void saveToObject()
+        {
+            myPaper.summary.title = summaryTitleText.Text;
+            myPaper.abstractConfig.title = abstractTitleText.Text;
+            myPaper.conclusion.title = conclusionTitleEnter.Text;
+            saveSummaryContent();
+            saveAbstractContent();
+            saveConclusionContent();
+            myPaper.conclusion.onOwnPage = conclusionOwnPageCheck.Checked;
+            myPaper.sectionsConfig.sectionLabelOnOwnLine = sectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelInlineWithText = !sectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelInlineWithText = sectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelOnOwnLine = !sectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelOnOwnLine = subsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelInlineWithText = !subsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelInlineWithText = subsectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsectionLabelOnOwnLine = !subsectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = subsubsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelInlineWithText = !subsubsectionLabelBeforeRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelInlineWithText = subsubsectionLabelInLineRadio.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelOnOwnLine = !subsubsectionLabelInLineRadio.Checked;
+            myPaper.titleOfPaper = paperTitleEnter.Text;
+            myPaper.titlePage.title = titlePageTitleEnter.Text;
+            myPaper.titlePage.name = titlePageNameEnter.Text;
+            myPaper.titlePage.className = titlePageClassEnter.Text;
+            myPaper.titlePage.professor = titlePageProfessorEnter.Text;
+            myPaper.titlePage.school = titlePageSchoolEnter.Text;
+            myPaper.titlePage.date = titlePageDateEnter.Text;
+            if (titlePageLeftAllignRadio.Checked)
+            {
+                myPaper.titlePage.alignment = "left";
+            }
+            else if (titlePageCenterRadio.Checked)
+            {
+                myPaper.titlePage.alignment = "center";
+            }
+            else if (titlePageRightAllignRadio.Checked)
+            {
+                myPaper.titlePage.alignment = "right";
+            }
+            myPaper.summary.onOwnPage = summaryOwnPageCheck.Checked;
+            myPaper.summary.titleBold = summaryTitleBoldCheck.Checked;
+            myPaper.summary.titleFont = summaryTitleFontChoose.Text;
+            myPaper.summary.titleSize = Convert.ToInt32(summaryTitleSizeChoose.Text);
+            myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
+            myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftNumberEnter.Value);
+            myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
+            myPaper.header.centerTitleText = headerCenterTitleEnter.Text;
+            myPaper.header.centerPageNumStart = Convert.ToInt32(headerCenterNumberEnter.Value);
+            myPaper.header.centerOtherText = headerCenterOtherEnter.Text;
+            myPaper.header.rightTitleText = headerRightTitleEnter.Text;
+            myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightNumberEnter.Value);
+            myPaper.header.rightOtherText = headerRightOtherEnter.Text;
+            myPaper.header.useRunningHead = headerFirstPageUseRunningHeadCheck.Checked;
+            myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
+            myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
+            myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
+            myPaper.header.firstCenterTitleText = headerFirstCenterTitleEnter.Text;
+            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
+            myPaper.header.firstCenterOtherText = headerFirstCenterOtherEnter.Text;
+            myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
+            myPaper.header.firstCenterPageNumStart = Convert.ToInt32(headerFirstCenterNumberEnter.Value);
+            myPaper.header.firstRightOtherText = headerFirstRightOtherEnter.Text;
+            myPaper.sectionsConfig.newPageBetween = newPageForEachSectionRadio.Checked;
+            myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
+            myPaper.sectionsConfig.sectionLabelBold = sectionLabelBoldCheck.Checked;
+            myPaper.sectionsConfig.sectionLabelFont = sectionLabelFont.Text;
+            myPaper.sectionsConfig.sectionLabelSize = Convert.ToInt32(sectionLabelSize.Text);
+            myPaper.sectionsConfig.subsectionLabelSize = Convert.ToInt32(subsectionLabelSize.Text);
+            myPaper.sectionsConfig.subsectionLabelFont = subsectionLabelFont.Text;
+            myPaper.sectionsConfig.subsectionLabelBold = subsectionLabelBoldCheck.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelBold = subsubsectionLabelBoldCheck.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelFont = subsubsectionLabelFont.Text;
+            myPaper.sectionsConfig.subsubsectionLabelSize = Convert.ToInt32(subsubsectionLabelSize.Text);
+            myPaper.conclusion.boldTitle = conclusionTitleBoldCheck.Checked;
+            myPaper.conclusion.titleFont = conclusionTitleFontChoose.Text;
+            myPaper.conclusion.titleSize = Convert.ToInt32(conclusionTitleSizeChoose.Text);
+            myPaper.references.title = referencesTitleEnter.Text;
+            myPaper.references.boldTitle = referencesTitleBoldCheck.Checked;
+            myPaper.references.titleFont = referencesTitleFontChoose.Text;
+            myPaper.references.titleSize = Convert.ToInt32(referencesTitleSizeChoose.Text);
+            myPaper.references.tabsHangingIndent = Convert.ToInt32(referencesIndentTabsEnter.Value);
+            myPaper.references.emptyLineBetweenReferences = referencesEmptyLineBetweenCheck.Checked;
+            myPaper.references.orderBy = referencesOrderChoose.Text;
+            myPaper.abstractConfig.titleBold = abstractTitleBoldCheck.Checked;
+            myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
+            myPaper.summary.titleAlign = summaryTitleAlignSelect.Text;
+            myPaper.abstractConfig.titleAlign = abstractTitleAlignSelect.Text;
+            myPaper.sectionsConfig.sectionLabelAlignment = sectionLabelAlignChoose.Text;
+            myPaper.sectionsConfig.subsectionLabelAlignment = subsectionLabelAlignChoose.Text;
+            myPaper.sectionsConfig.subsubsectionLabelAlignment = subsubsectionLabelAlignChoose.Text;
+            myPaper.references.titleAlign = referencesTitleAlignChoose.Text;
+            myPaper.conclusion.titleAlign = conclusionTitleAlignChoose.Text;
+            myPaper.sectionsConfig.includeSectionLabels = includeSectionLabelsCheck.Checked;
+            myPaper.sectionsConfig.includeSubsectionLabels = includeSubsectionLabelCheck.Checked;
+            myPaper.sectionsConfig.includeSubsubsectionLabels = includeSubsubsectionLabelCheck.Checked;
+
+            for (int i = 0; i < myPaper.sections.Count; i++)
+            {
+                saveSectionContent(i + 1);
+                saveSectionTitle(i + 1);
+                for (int j = 0; j < myPaper.sections[i].subSections.Count; j++)
+                {
+                    saveSubsectionContent(i + 1, j + 1);
+                    saveSubsectionTitle(i + 1, j + 1);
+                    for (int k = 0; k < myPaper.sections[i].subSections[j].subsubSections.Count; k++)
+                    {
+                        saveSubsubsectionContent(i + 1, j + 1, k + 1);
+                        saveSubsubsectionTitle(i + 1, j + 1, k + 1);
+                    } 
+                }
+            }
+            myPaper.includeConclusion = conclusionIncludeCheck.Checked;
+            myPaper.conclusion.includeTitle = conclusionIncludeTitleCheck.Checked;
+            myPaper.isAPA = apaRadio.Checked;
+            myPaper.isMLA = mlaRadio.Checked;
+            myPaper.includeHeader = headerIncludeCheck.Checked;
+            myPaper.header.differentFirstPage = headerDiffFirstPageCheck.Checked;
+            myPaper.header.leftTitle = headerLeftTitleRadio.Checked;
+            myPaper.header.leftPageNum = headerLeftNumberRadio.Checked;
+            myPaper.header.leftOther = headerLeftOtherRadio.Checked;
+            myPaper.header.centerTitle = headerCenterTitleRadio.Checked;
+            myPaper.header.centerPageNum = headerCenterNumberRadio.Checked;
+            myPaper.header.centerOther = headerCenterOtherRadio.Checked;
+            myPaper.header.rightTitle = headerRightTitleRadio.Checked;
+            myPaper.header.rightPageNum = headerRightNumberRadio.Checked;
+            myPaper.header.rightOther = headerRightOtherRadio.Checked;
+            myPaper.header.firstLeftTitle = headerFirstLeftTitleRadio.Checked;
+            myPaper.header.firstLeftPageNum = headerFirstLeftNumberRadio.Checked;
+            myPaper.header.firstLeftOther = headerFirstLeftOtherRadio.Checked;
+            myPaper.header.firstCenterTitle = headerFirstCenterTitleRadio.Checked;
+            myPaper.header.firstCenterPageNum = headerFirstCenterNumberRadio.Checked;
+            myPaper.header.firstCenterOther = headerFirstCenterOtherRadio.Checked;
+            myPaper.header.firstRightTitle = headerFirstRightTitleRadio.Checked;
+            myPaper.header.firstRightPageNum = headerFirstRightNumberRadio.Checked;
+            myPaper.header.firstRightOther = headerFirstRightOtherRadio.Checked;
+            myPaper.includeReferences = referencesIncludeCheck.Checked;
+            myPaper.references.includeTitle = referencesTitleIncludeCheck.Checked;
+            myPaper.references.hangingIndent = referencesHangingIndentCheck.Checked;
+            myPaper.includeConclusion = conclusionIncludeCheck.Checked;
+            myPaper.includeSummary = summaryIncludeCheck.Checked;
+            myPaper.includeAbstract = abstractIncludeCheck.Checked;
+            myPaper.summary.includeTitle = summaryIncludeTitleCheck.Checked;
+            myPaper.abstractConfig.includeTitle = abstractIncludeTitleCheck.Checked;
+            myPaper.includeTitlePage = titlePageIncludeCheck.Checked;
+            myPaper.titlePage.includeTitle = titlePageTitleCheck.Checked;
+            myPaper.titlePage.includeName = titlePageNameCheck.Checked;
+            myPaper.titlePage.includeClass = titlePageClassCheck.Checked;
+            myPaper.titlePage.includeProfessor = titlePageProfessorCheck.Checked;
+            myPaper.titlePage.includeSchool = titlePageSchoolCheck.Checked;
+            myPaper.titlePage.includeDate = titlePageDateCheck.Checked;
+        }
+
+        private void saveSubsubsectionContent(int sectionIndex, int subsectionIndex, int subsubsectionIndex)
+        {
+            RichTextBox subsubsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "Content", true)[0];
+
+            //startSelection = subsubsectionContent.SelectionStart;
+            //endSelection = subsubsectionContent.SelectionLength + subsubsectionContent.SelectionStart;
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            foreach (SubSubSection subsubsection in subsection.subsubSections)
+                            {
+                                if (subsubsection.index == subsubsectionIndex)
+                                {
+                                    bool boldStarted = false;
+                                    bool italicStarted = false;
+                                    bool underlineStarted = false;
+                                    bool indentStarted = false;
+                                    string formattedSubsubsection = "";
+                                    string currentFont = "";
+                                    string currentSize = "";
+                                    for (int i = 0; i < subsubsectionContent.Text.Length; i++)
+                                    {
+                                        subsubsectionContent.Select(i, 1);
+                                        if (subsubsectionContent.SelectionIndent == 40 && subsubsectionContent.SelectionHangingIndent == 0 && !indentStarted)
+                                        {
+                                            formattedSubsubsection += '\v';
+                                            indentStarted = true;
+                                        }
+                                        else if ((subsubsectionContent.SelectionIndent != 40 || subsubsectionContent.SelectionHangingIndent == 0) && indentStarted)
+                                        {
+                                            formattedSubsubsection += '\v';
+                                            indentStarted = false;
+                                        }
+                                        if (subsubsectionContent.SelectionFont.Bold && !boldStarted)
+                                        {
+                                            formattedSubsubsection += '\b';
+                                            boldStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Bold && boldStarted)
+                                        {
+                                            formattedSubsubsection += '\b';
+                                            boldStarted = false;
+                                        }
+                                        if (subsubsectionContent.SelectionFont.Italic && !italicStarted)
+                                        {
+                                            formattedSubsubsection += '\a';
+                                            italicStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Italic && italicStarted)
+                                        {
+                                            formattedSubsubsection += '\a';
+                                            italicStarted = false;
+                                        }
+                                        if (subsubsectionContent.SelectionFont.Underline && !underlineStarted)
+                                        {
+                                            formattedSubsubsection += '\f';
+                                            underlineStarted = true;
+                                        }
+                                        else if (!subsubsectionContent.SelectionFont.Underline && underlineStarted)
+                                        {
+                                            formattedSubsubsection += '\f';
+                                            underlineStarted = false;
+                                        }
+                                        if (!subsubsectionContent.SelectionFont.Name.Equals(currentFont))
+                                        {
+                                            currentFont = subsubsectionContent.SelectionFont.Name;
+                                            formattedSubsubsection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                                        }
+                                        if (!subsubsectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                                        {
+                                            currentSize = subsubsectionContent.SelectionFont.Size.ToString();
+                                            formattedSubsubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                                        }
+                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        {
+                                            if (boldStarted)
+                                            {
+                                                formattedSubsubsection += '\b';
+                                            }
+                                            if (italicStarted)
+                                            {
+                                                formattedSubsubsection += '\a';
+                                            }
+                                            if (underlineStarted)
+                                            {
+                                                formattedSubsubsection += '\f';
+                                            }
+                                            if (indentStarted)
+                                            {
+                                                formattedSubsubsection += '\v';
+                                            }
+                                            indentStarted = false;
+                                            boldStarted = false;
+                                            italicStarted = false;
+                                            underlineStarted = false;
+                                        }
+                                        formattedSubsubsection += subsubsectionContent.Text[i];
+                                        if (subsubsectionContent.SelectedText.Equals('\n'.ToString()))
+                                        {
+                                            formattedSubsubsection += "\\ffffffffff\\" + subsubsectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                            formattedSubsubsection += "\\ssssssssss\\" + subsubsectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                        }
+                                    }
+                                    subsubsection.content = formattedSubsubsection;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    
+
+        private void saveSubsectionContent(int sectionIndex, int subsectionIndex)
+        {
+            RichTextBox subsectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Content", true)[0];
+
+            //startSelection = subsectionContent.SelectionStart;
+            //endSelection = subsectionContent.SelectionLength + subsectionContent.SelectionStart;
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            bool boldStarted = false;
+                            bool italicStarted = false;
+                            bool underlineStarted = false;
+                            bool indentStarted = false;
+                            string formattedSubsection = "";
+                            string currentFont = "";
+                            string currentSize = "";
+                            for (int i = 0; i < subsectionContent.Text.Length; i++)
+                            {
+                                subsectionContent.Select(i, 1);
+                                if (subsectionContent.SelectionIndent == 40 && subsectionContent.SelectionHangingIndent == 0 && !indentStarted)
+                                {
+                                    formattedSubsection += '\v';
+                                    indentStarted = true;
+                                }
+                                else if ((subsectionContent.SelectionIndent != 40 || subsectionContent.SelectionHangingIndent != 0) && indentStarted)
+                                {
+                                    formattedSubsection += '\v';
+                                    indentStarted = false;
+                                }
+                                if (subsectionContent.SelectionFont.Bold && !boldStarted)
+                                {
+                                    formattedSubsection += '\b';
+                                    boldStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Bold && boldStarted)
+                                {
+                                    formattedSubsection += '\b';
+                                    boldStarted = false;
+                                }
+                                if (subsectionContent.SelectionFont.Italic && !italicStarted)
+                                {
+                                    formattedSubsection += '\a';
+                                    italicStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Italic && italicStarted)
+                                {
+                                    formattedSubsection += '\a';
+                                    italicStarted = false;
+                                }
+                                if (subsectionContent.SelectionFont.Underline && !underlineStarted)
+                                {
+                                    formattedSubsection += '\f';
+                                    underlineStarted = true;
+                                }
+                                else if (!subsectionContent.SelectionFont.Underline && underlineStarted)
+                                {
+                                    formattedSubsection += '\f';
+                                    underlineStarted = false;
+                                }
+                                if (!subsectionContent.SelectionFont.Name.Equals(currentFont))
+                                {
+                                    currentFont = subsectionContent.SelectionFont.Name;
+                                    formattedSubsection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                                }
+                                if (!subsectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                                {
+                                    currentSize = subsectionContent.SelectionFont.Size.ToString();
+                                    formattedSubsection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                                }
+                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                {
+                                    if (boldStarted)
+                                    {
+                                        formattedSubsection += '\b';
+                                    }
+                                    if (italicStarted)
+                                    {
+                                        formattedSubsection += '\a';
+                                    }
+                                    if (underlineStarted)
+                                    {
+                                        formattedSubsection += '\f';
+                                    }
+                                    if (indentStarted)
+                                    {
+                                        formattedSubsection += '\v';
+                                    }
+                                    indentStarted = false;
+                                    boldStarted = false;
+                                    italicStarted = false;
+                                    underlineStarted = false;
+                                }
+                                formattedSubsection += subsectionContent.Text[i];
+                                if (subsectionContent.SelectedText.Equals('\n'.ToString()))
+                                {
+                                    formattedSubsection += "\\ffffffffff\\" + subsectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                                    formattedSubsection += "\\ssssssssss\\" + subsectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                                }
+                            }
+                            subsection.content = formattedSubsection;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void saveSubsubsectionTitle(int sectionIndex, int subsectionIndex, int subsubsectionIndex)
+        {
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            foreach (SubSubSection subsubsection in subsection.subsubSections)
+                            {
+                                if (subsubsection.index == subsubsectionIndex)
+                                {
+                                    TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "Subsubsection" + subsubsectionIndex + "LabelEnter", true)[0];
+                                    subsubsection.title = titleText.Text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void saveSubsectionTitle(int sectionIndex, int subsectionIndex)
+        {
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    foreach (SubSection subsection in section.subSections)
+                    {
+                        if (subsection.index == subsectionIndex)
+                        {
+                            TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "Subsection" + subsectionIndex + "LabelEnter", true)[0];
+                            subsection.title = titleText.Text;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void saveSectionTitle(int sectionIndex)
+        {
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    TextBox titleText = (TextBox)Controls.Find("section" + sectionIndex + "LabelEnter", true)[0];
+                    section.title = titleText.Text;
+                }
+            }
+        }
+
+        private void saveSectionContent(int sectionIndex)
+        {
+            RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + sectionIndex + "Content", true)[0];
+
+            startSelection = sectionContent.SelectionStart;
+            endSelection = sectionContent.SelectionLength + sectionContent.SelectionStart;
+
+            foreach (Section section in myPaper.sections)
+            {
+                if (section.index == sectionIndex)
+                {
+                    bool boldStarted = false;
+                    bool italicStarted = false;
+                    bool underlineStarted = false;
+                    bool indentStarted = false;
+                    string formattedSection = "";
+                    string currentFont = "";
+                    string currentSize = "";
+                    for (int i = 0; i < sectionContent.Text.Length; i++)
+                    {
+                        sectionContent.Select(i, 1);
+                        if (sectionContent.SelectionIndent == 40 && sectionContent.SelectionHangingIndent == 0 && !indentStarted)
+                        {
+                            formattedSection += '\v';
+                            indentStarted = true;
+                        }
+                        else if ((sectionContent.SelectionIndent != 40 || sectionContent.SelectionHangingIndent != 0) && indentStarted)
+                        {
+                            formattedSection += '\v';
+                            indentStarted = false;
+                        }
+                        if (sectionContent.SelectionFont.Bold && !boldStarted)
+                        {
+                            formattedSection += '\b';
+                            boldStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Bold && boldStarted)
+                        {
+                            formattedSection += '\b';
+                            boldStarted = false;
+                        }
+                        if (sectionContent.SelectionFont.Italic && !italicStarted)
+                        {
+                            formattedSection += '\a';
+                            italicStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Italic && italicStarted)
+                        {
+                            formattedSection += '\a';
+                            italicStarted = false;
+                        }
+                        if (sectionContent.SelectionFont.Underline && !underlineStarted)
+                        {
+                            formattedSection += '\f';
+                            underlineStarted = true;
+                        }
+                        else if (!sectionContent.SelectionFont.Underline && underlineStarted)
+                        {
+                            formattedSection += '\f';
+                            underlineStarted = false;
+                        }
+                        if (!sectionContent.SelectionFont.Name.Equals(currentFont))
+                        {
+                            currentFont = sectionContent.SelectionFont.Name;
+                            formattedSection += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                        }
+                        if (!sectionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                        {
+                            currentSize = sectionContent.SelectionFont.Size.ToString();
+                            formattedSection += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                        }
+                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        {
+                            if (boldStarted)
+                            {
+                                formattedSection += '\b';
+                            }
+                            if (italicStarted)
+                            {
+                                formattedSection += '\a';
+                            }
+                            if (underlineStarted)
+                            {
+                                formattedSection += '\f';
+                            }
+                            if (indentStarted)
+                            {
+                                formattedSection += '\v';
+                            }
+                            indentStarted = false;
+                            boldStarted = false;
+                            italicStarted = false;
+                            underlineStarted = false;
+                        }
+                        formattedSection += sectionContent.Text[i];
+                        if (sectionContent.SelectedText.Equals('\n'.ToString()))
+                        {
+                            formattedSection += "\\ffffffffff\\" + sectionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                            formattedSection += "\\ssssssssss\\" + sectionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                        }
+                    }
+                    section.content = formattedSection;
+                }
+            }
+        }
+
+        private void saveConclusionContent()
+        {
+            startSelection = conclusionContent.SelectionStart;
+            endSelection = conclusionContent.SelectionLength + conclusionContent.SelectionStart;
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            bool indentStarted = false;
+            string formattedConclusion = "";
+            string currentFont = "";
+            string currentSize = "";
+            for (int i = 0; i < conclusionContent.Text.Length; i++)
+            {
+                conclusionContent.Select(i, 1);
+                if (conclusionContent.SelectionIndent == 40 && conclusionContent.SelectionHangingIndent == 0 && !indentStarted)
+                {
+                    formattedConclusion += '\v';
+                    indentStarted = true;
+                }
+                else if ((conclusionContent.SelectionIndent != 40 || conclusionContent.SelectionHangingIndent != 0) && indentStarted)
+                {
+                    formattedConclusion += '\v';
+                    indentStarted = false;
+                }
+                if (conclusionContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedConclusion += '\b';
+                    boldStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedConclusion += '\b';
+                    boldStarted = false;
+                }
+                if (conclusionContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedConclusion += '\a';
+                    italicStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedConclusion += '\a';
+                    italicStarted = false;
+                }
+                if (conclusionContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedConclusion += '\f';
+                    underlineStarted = true;
+                }
+                else if (!conclusionContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedConclusion += '\f';
+                    underlineStarted = false;
+                }
+                if (!conclusionContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = conclusionContent.SelectionFont.Name;
+                    formattedConclusion += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                }
+                if (!conclusionContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = conclusionContent.SelectionFont.Size.ToString();
+                    formattedConclusion += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                }
+                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedConclusion += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedConclusion += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedConclusion += '\f';
+                    }
+                    if (indentStarted)
+                    {
+                        formattedConclusion += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedConclusion += conclusionContent.Text[i];
+                if (conclusionContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    formattedConclusion += "\\ffffffffff\\" + conclusionContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedConclusion += "\\ssssssssss\\" + conclusionContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
+            }
+            myPaper.conclusion.conclusionContent = formattedConclusion;
+        }
+
+        private void saveAbstractContent()
+        {
+            startSelection = abstractContent.SelectionStart;
+            endSelection = abstractContent.SelectionLength + abstractContent.SelectionStart;
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            bool indentStarted = false;
+            string formattedAbstract = "";
+            string currentFont = "";
+            string currentSize = "";
+            for (int i = 0; i < abstractContent.Text.Length; i++)
+            {
+                abstractContent.Select(i, 1);
+                if (abstractContent.SelectionIndent == 40 && abstractContent.SelectionHangingIndent == 0 && !indentStarted)
+                {
+                    formattedAbstract += '\v';
+                    indentStarted = true;
+                }
+                else if ((abstractContent.SelectionIndent != 40 || abstractContent.SelectionHangingIndent != 0) && indentStarted)
+                {
+                    formattedAbstract += '\v';
+                    indentStarted = false;
+                }
+                if (abstractContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedAbstract += '\b';
+                    boldStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedAbstract += '\b';
+                    boldStarted = false;
+                }
+                if (abstractContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedAbstract += '\a';
+                    italicStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedAbstract += '\a';
+                    italicStarted = false;
+                }
+                if (abstractContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedAbstract += '\f';
+                    underlineStarted = true;
+                }
+                else if (!abstractContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedAbstract += '\f';
+                    underlineStarted = false;
+                }
+                if (!abstractContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = abstractContent.SelectionFont.Name;
+                    formattedAbstract += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+
+                }
+                if (!abstractContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = abstractContent.SelectionFont.Size.ToString();
+                    formattedAbstract += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                }
+                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedAbstract += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedAbstract += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedAbstract += '\f';
+                    }
+                    if (indentStarted)
+                    {
+                        formattedAbstract += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedAbstract += abstractContent.Text[i];
+                if (abstractContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    formattedAbstract += "\\ffffffffff\\" + abstractContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedAbstract += "\\ssssssssss\\" + abstractContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
+            }
+            myPaper.abstractConfig.content = formattedAbstract;
+        }
+
+        private void saveSummaryContent()
+        {
+            startSelection = summaryContent.SelectionStart;
+            endSelection = summaryContent.SelectionLength + summaryContent.SelectionStart;
+
+            bool boldStarted = false;
+            bool italicStarted = false;
+            bool underlineStarted = false;
+            bool indentStarted = false;
+            string formattedSummary = "";
+            string currentFont = "";
+            string currentSize = "";
+
+            for (int i = 0; i < summaryContent.Text.Length; i++)
+            {
+                summaryContent.Select(i, 1);
+                if (summaryContent.SelectionIndent == 40 && summaryContent.SelectionHangingIndent == 0 && !indentStarted)
+                {
+                    formattedSummary += '\v';
+                    indentStarted = true;
+                }
+                else if ((summaryContent.SelectionIndent != 40 || summaryContent.SelectionHangingIndent != 0) && indentStarted)
+                {
+                    formattedSummary += '\v';
+                    indentStarted = false;
+                }
+                if (summaryContent.SelectionFont.Bold && !boldStarted)
+                {
+                    formattedSummary += '\b';
+                    boldStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Bold && boldStarted)
+                {
+                    formattedSummary += '\b';
+                    boldStarted = false;
+                }
+                if (summaryContent.SelectionFont.Italic && !italicStarted)
+                {
+                    formattedSummary += '\a';
+                    italicStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Italic && italicStarted)
+                {
+                    formattedSummary += '\a';
+                    italicStarted = false;
+                }
+                if (summaryContent.SelectionFont.Underline && !underlineStarted)
+                {
+                    formattedSummary += '\f';
+                    underlineStarted = true;
+                }
+                else if (!summaryContent.SelectionFont.Underline && underlineStarted)
+                {
+                    formattedSummary += '\f';
+                    underlineStarted = false;
+                }
+                if (!summaryContent.SelectionFont.Name.Equals(currentFont))
+                {
+                    currentFont = summaryContent.SelectionFont.Name;
+                    formattedSummary += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
+                }
+                if (!summaryContent.SelectionFont.Size.ToString().Equals(currentSize))
+                {
+                    currentSize = summaryContent.SelectionFont.Size.ToString();
+                    formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
+                }
+                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    if (boldStarted)
+                    {
+                        formattedSummary += '\b';
+                    }
+                    if (italicStarted)
+                    {
+                        formattedSummary += '\a';
+                    }
+                    if (underlineStarted)
+                    {
+                        formattedSummary += '\f';
+                    }
+                    if (indentStarted)
+                    {
+                        formattedSummary += '\v';
+                    }
+                    indentStarted = false;
+                    boldStarted = false;
+                    italicStarted = false;
+                    underlineStarted = false;
+                }
+                formattedSummary += summaryContent.Text[i];
+                if (summaryContent.SelectedText.Equals('\n'.ToString()))
+                {
+                    formattedSummary += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
+                    formattedSummary += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
+                }
+            }
+            myPaper.summary.content = formattedSummary;
+        }
+
         private void summaryTitleText_TextChanged(object sender, EventArgs e)
         {            
             myPaper.summary.title = summaryTitleText.Text;
@@ -362,7 +1200,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void paperTitleEnter_TextChanged(object sender, EventArgs e)
         {
-            myPaper.titleOfPaper = paperTitleEnter.Text;
             paperTitle.Text = paperTitleEnter.Text;
         }
 
@@ -1009,7 +1846,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void summaryLast(object sender, EventArgs e)
         {
             lastEntered = "summaryContent";
-
         }
 
         private void abstractLast(object sender, EventArgs e)
@@ -1115,6 +1951,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void saveFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            saveToObject();
             string fileName = saveFile.FileName;
             if (fileName.Length > 0)
             {
@@ -1907,7 +2744,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "AbstractContent":
                                 if (reader.Read())
                                 {
-                                    abstractContent.Text = reader.Value;
+                                    formatLoaded(reader.Value, abstractContent);
                                 }
                                 break;
                             case "HeaderDifferentFirst":
@@ -4051,17 +4888,17 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     if (inSubsubsection)
                                     {
                                         RichTextBox subsubsection = (RichTextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "Subsubsection" + numSubsubsections + "Content", true)[0];
-                                        subsubsection.Text = reader.Value;
+                                        formatLoaded(reader.Value, subsubsection);
                                     }
                                     else if (inSubsection)
                                     {
                                         RichTextBox subsection = (RichTextBox)Controls.Find("section" + numSections + "Subsection" + numSubsections + "Content", true)[0];
-                                        subsection.Text = reader.Value;
+                                        formatLoaded(reader.Value, subsection);
                                     }
                                     else if (inSection)
                                     {
                                         RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + numSections + "Content", true)[0];
-                                        sectionContent.Text = reader.Value;
+                                        formatLoaded(reader.Value, sectionContent);
                                     }
                                 }
                                 break;
@@ -4157,7 +4994,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "ConclusionContent":
                                 if (reader.Read())
                                 {
-                                    conclusionContent.Text = reader.Value;
+                                    formatLoaded(reader.Value, conclusionContent);
                                 }
                                 break;
 
@@ -4172,6 +5009,61 @@ namespace WriteMeEasy_WindowsFormsApplication
             string unformatted = Regex.Replace(Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
 
             intoControl.Text = unformatted;
+
+            string secondFontPattern = @".{1,20}\\ffffffffffff\\";
+            string[] splitFont = Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), sizePattern, "").Split(new string[] { "\\ffffffffff\\" }, StringSplitOptions.None); ;
+            for (int i = 0; i < splitFont.Length; i++)
+            {
+                if (splitFont[i].Length > 0)
+                {
+                    string[] fontParts = splitFont[i].Split(new string[] { "\\ffffffffffff\\" }, StringSplitOptions.None);
+                    string currentFont = fontParts[0];
+                    int previousSplitLength = 0;
+                    if (i > 0)
+                    {
+                        for (int j = i - 1; j >= 0; j--)
+                        {
+                            string unformattedContent = splitFont[j];
+                            string noFont = Regex.Replace(unformattedContent, secondFontPattern, "");
+                            previousSplitLength += noFont.Length;
+                        }
+                    }
+                    string unformattedSplit = fontParts[1];
+                    intoControl.Select(previousSplitLength, unformattedSplit.Length);
+                    intoControl.SelectionFont = new Font(currentFont, intoControl.SelectionFont.Size, intoControl.SelectionFont.Style);
+                }
+            }
+
+            string secondSizePattern = @".{1,20}\\ssssssssssss\\";
+            string[] splitSize = Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, "").Split(new string[] { "\\ssssssssss\\" }, StringSplitOptions.None); ;
+            for (int i = 0; i < splitSize.Length; i++)
+            {
+                if (splitSize[i].Length > 0)
+                {
+                    string[] sizeParts = splitSize[i].Split(new string[] { "\\ssssssssssss\\" }, StringSplitOptions.None);
+                    string currentSize = sizeParts[0];
+                    int previousSplitLength = 0;
+                    if (i > 0)
+                    {
+                        for (int j = i - 1; j >= 0; j--)
+                        {
+                            string unformattedContent = splitSize[j];
+                            string noSize = Regex.Replace(unformattedContent, secondSizePattern, "");
+                            previousSplitLength += noSize.Length;
+                        }
+                    }
+                    string unformattedSplit = sizeParts[1];
+                    intoControl.Select(previousSplitLength, unformattedSplit.Length);
+                    int selectStart = intoControl.SelectionStart;
+                    int selectLength = intoControl.SelectionLength;
+                    for (int j = 0; j < selectLength; j++)
+                    {
+                        intoControl.Select(selectStart + j, 1);
+                        intoControl.SelectionFont = new Font(intoControl.SelectionFont.FontFamily, (float)Convert.ToDouble(currentSize), intoControl.SelectionFont.Style);
+                    }
+                }
+            }
+
             string[] splitIndent = Regex.Replace(Regex.Replace(loadedText.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), ""), fontPattern, ""), sizePattern, "").Split('\v');
             for (int i = 0; i < splitIndent.Length; i++)
             {
@@ -4198,8 +5090,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         previousSplitLength += splitBold[j].Length;
                     }
-                    intoControl.Select(previousSplitLength, splitBold[i].Length);                
-                    intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold);
+                    intoControl.Select(previousSplitLength, splitBold[i].Length);
+                    int selectStart = intoControl.SelectionStart;
+                    int selectLength = intoControl.SelectionLength;
+                    for (int j = 0; j < selectLength; j++)
+                    {
+                        intoControl.Select(selectStart + j, 1);
+                        intoControl.SelectionFont = new Font(intoControl.SelectionFont, FontStyle.Bold);
+                    }
                 }
             }
 

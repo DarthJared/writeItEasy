@@ -9,7 +9,6 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void titlePageIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.includeTitlePage = titlePageIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("TITLE_PAGE", out sectionHeight)) { }
             int generalSectionHeight;
@@ -192,42 +191,36 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void titlePageTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeTitle = titlePageTitleCheck.Checked;
             titlePageTitleLabel.Visible = titlePageTitleCheck.Checked;
             titlePageTitleEnter.Visible = titlePageTitleCheck.Checked;
         }
 
         private void titlePageNameCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeName = titlePageNameCheck.Checked;
             titlePageNameLabel.Visible = titlePageNameCheck.Checked;
             titlePageNameEnter.Visible = titlePageNameCheck.Checked;
         }
 
         private void titlePageClassCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeClass = titlePageClassCheck.Checked;
             titlePageClassLabel.Visible = titlePageClassCheck.Checked;
             titlePageClassEnter.Visible = titlePageClassCheck.Checked;
         }
 
         private void titlePageProfessorCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeProfessor = titlePageProfessorCheck.Checked;
             titlePageProfessorLabel.Visible = titlePageProfessorCheck.Checked;
             titlePageProfessorEnter.Visible = titlePageProfessorCheck.Checked;
         }
 
         private void titlePageSchoolCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeSchool = titlePageSchoolCheck.Checked;
             titlePageSchoolLabel.Visible = titlePageSchoolCheck.Checked;
             titlePageSchoolEnter.Visible = titlePageSchoolCheck.Checked;
         }
 
         private void titlePageDateCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.titlePage.includeDate = titlePageDateCheck.Checked;
             titlePageDateLabel.Visible = titlePageDateCheck.Checked;
             titlePageDateEnter.Visible = titlePageDateCheck.Checked;
         }

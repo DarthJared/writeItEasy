@@ -9,7 +9,6 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void summaryIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.includeSummary = summaryIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("SUMMARY", out sectionHeight)) { }
             int generalSectionHeight;
@@ -65,7 +64,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.includeAbstract = abstractIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("ABSTRACT", out sectionHeight)) { }
 
@@ -114,7 +112,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void summaryIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.summary.includeTitle = summaryIncludeTitleCheck.Checked;
             if (summaryIncludeTitleCheck.Checked)
             {
                 summaryTitleGroupBox.Height = 150;
@@ -161,7 +158,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void abstractIncludeTitleCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.abstractConfig.includeTitle = abstractIncludeTitleCheck.Checked;
             if (abstractIncludeTitleCheck.Checked)
             {
                 abstractTitleGroupBox.Height = 150;

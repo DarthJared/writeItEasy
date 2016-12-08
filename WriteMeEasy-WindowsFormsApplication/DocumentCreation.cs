@@ -16,6 +16,8 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void writeFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            saveToObject();
+
             string fileName = writeFile.FileName;
             if (fileName.Length > 0)
             {

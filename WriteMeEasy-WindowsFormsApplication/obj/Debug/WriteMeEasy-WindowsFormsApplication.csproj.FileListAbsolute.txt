@@ -21,7 +21,6 @@ C:\Users\jbeagle\Desktop\Projects\WriteItEasy\WriteMeEasy-WindowsFormsApplicatio
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe.config
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.exe
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\bin\Debug\WriteMeEasy-WindowsFormsApplication.pdb
-C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy-WindowsFormsApplication.csprojResolveAssemblyReference.cache
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Form1.resources
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.Properties.Resources.resources
 C:\Users\Jbeag\Documents\WriteItEasy\WriteMeEasy-WindowsFormsApplication\obj\Debug\WriteMeEasy_WindowsFormsApplication.CitationAdder.resources

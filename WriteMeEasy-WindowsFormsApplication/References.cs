@@ -9,7 +9,6 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void referencesIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.includeReferences = referencesIncludeCheck.Checked;
             int sectionHeight;
             if (sections.TryGetValue("REFERENCES", out sectionHeight)) { }
 
@@ -57,7 +56,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (referencesIncludeCheck.Checked)
             {
-                myPaper.includeReferences = true;
                 referencesPanel.Visible = true;
                 lowerSection(sectionHeight, "REFERENCES");
                 referencesActive = true;
@@ -65,7 +63,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                myPaper.includeReferences = false;
                 referencesPanel.Visible = false;
                 raiseSection(sectionHeight, "REFERENCES");
                 referencesActive = false;
@@ -74,7 +71,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void referencesTitleIncludeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.references.includeTitle = referencesTitleIncludeCheck.Checked;
             if (referencesTitleIncludeCheck.Checked)
             {
                 lowerSection(105, "REFERENCES");
@@ -155,7 +151,6 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void referencesHangingIndentCheck_CheckedChanged(object sender, EventArgs e)
         {
-            myPaper.references.hangingIndent = referencesHangingIndentCheck.Checked;
             if (referencesHangingIndentCheck.Checked)
             {
                 referencesIndentationGroupBox.Height = 77;
