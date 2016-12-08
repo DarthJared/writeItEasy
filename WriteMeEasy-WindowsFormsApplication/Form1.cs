@@ -10,6 +10,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
+        Loading loading = new Loading();
         private void saveToObject()
         {
             myPaper.summary.title = summaryTitleText.Text;
@@ -53,15 +54,31 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.summary.onOwnPage = summaryOwnPageCheck.Checked;
             myPaper.summary.titleBold = summaryTitleBoldCheck.Checked;
             myPaper.summary.titleFont = summaryTitleFontChoose.Text;
+            if (summaryTitleSizeChoose.Text.Length < 1)
+            {
+                summaryTitleSizeChoose.Text = "0";
+            }
             myPaper.summary.titleSize = Convert.ToInt32(summaryTitleSizeChoose.Text);
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
+            if (headerLeftNumberEnter.Text.Length < 1)
+            {
+                headerLeftNumberEnter.Text = "0";
+            }
             myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftNumberEnter.Value);
             myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
             myPaper.header.rightTitleText = headerRightTitleEnter.Text;
+            if (headerRightNumberEnter.Text.Length < 1)
+            {
+                headerRightNumberEnter.Text = "0";
+            }
             myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightNumberEnter.Value);
             myPaper.header.rightOtherText = headerRightOtherEnter.Text;
             myPaper.header.useRunningHead = headerFirstPageUseRunningHeadCheck.Checked;
             myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
+            if (headerFirstLeftNumberEnter.Text.Length < 1)
+            {
+                headerFirstLeftNumberEnter.Text = "0";
+            }
             myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
             myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
             myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
@@ -70,20 +87,44 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
             myPaper.sectionsConfig.sectionLabelBold = sectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.sectionLabelFont = sectionLabelFont.Text;
+            if (sectionLabelSize.Text.Length < 1)
+            {
+                sectionLabelSize.Text = "0";
+            }
             myPaper.sectionsConfig.sectionLabelSize = Convert.ToInt32(sectionLabelSize.Text);
+            if (subsectionLabelSize.Text.Length < 1)
+            {
+                subsectionLabelSize.Text = "0";
+            }
             myPaper.sectionsConfig.subsectionLabelSize = Convert.ToInt32(subsectionLabelSize.Text);
             myPaper.sectionsConfig.subsectionLabelFont = subsectionLabelFont.Text;
             myPaper.sectionsConfig.subsectionLabelBold = subsectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.subsubsectionLabelBold = subsubsectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.subsubsectionLabelFont = subsubsectionLabelFont.Text;
+            if (subsubsectionLabelSize.Text.Length < 1)
+            {
+                subsubsectionLabelSize.Text = "0";
+            }
             myPaper.sectionsConfig.subsubsectionLabelSize = Convert.ToInt32(subsubsectionLabelSize.Text);
             myPaper.conclusion.boldTitle = conclusionTitleBoldCheck.Checked;
             myPaper.conclusion.titleFont = conclusionTitleFontChoose.Text;
+            if (conclusionTitleSizeChoose.Text.Length < 1)
+            {
+                conclusionTitleSizeChoose.Text = "0";
+            }
             myPaper.conclusion.titleSize = Convert.ToInt32(conclusionTitleSizeChoose.Text);
             myPaper.references.title = referencesTitleEnter.Text;
             myPaper.references.boldTitle = referencesTitleBoldCheck.Checked;
             myPaper.references.titleFont = referencesTitleFontChoose.Text;
+            if (referencesTitleSizeChoose.Text.Length < 1)
+            {
+                referencesTitleSizeChoose.Text = "0";
+            }
             myPaper.references.titleSize = Convert.ToInt32(referencesTitleSizeChoose.Text);
+            if (referencesIndentTabsEnter.Text.Length < 1)
+            {
+                referencesIndentTabsEnter.Text = "0";
+            }
             myPaper.references.tabsHangingIndent = Convert.ToInt32(referencesIndentTabsEnter.Value);
             myPaper.references.emptyLineBetweenReferences = referencesEmptyLineBetweenCheck.Checked;
             myPaper.references.orderBy = referencesOrderChoose.Text;
@@ -1875,6 +1916,10 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void saveFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            ProgressBar progress = (ProgressBar)loading.Controls.Find("progressBar", true)[0];
+            progress.Value = 0;
+            //loading.Show();
+            loading.Location = new Point(300, 300);
             saveToObject();
             string fileName = saveFile.FileName;
             if (fileName.Length > 0)
@@ -1895,6 +1940,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 XmlWriterSettings xmlWriterSettings = new XmlWriterSettings { CheckCharacters = false };
                 using (XmlWriter writer = XmlWriter.Create(fileName, xmlWriterSettings))
                 {
+                    progress.Value = 10;
                     writer.WriteStartDocument();
                     writer.WriteStartElement("Paper");
 
@@ -1936,6 +1982,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteElementString("TitlePageItem", item);
                     }
 
+                    progress.Value = 20;
                     /*Summary Configurations*/
                     writer.WriteElementString("SummaryOwnPage", myPaper.summary.onOwnPage.ToString());
                     writer.WriteElementString("SummaryIncludeTitle", myPaper.summary.includeTitle.ToString());
@@ -2004,6 +2051,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("HeaderEnterFirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
                     writer.WriteElementString("HeaderEnterFirstRightOther", myPaper.header.firstRightOtherText);
 
+                    progress.Value = 40;
+
                     /*References Configurations*/
                     writer.WriteElementString("ReferencesIncludeTitle", myPaper.references.includeTitle.ToString());
                     writer.WriteElementString("ReferencesTitle", myPaper.references.title);
@@ -2054,6 +2103,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteElementString("Season", reference.season);
                         writer.WriteElementString("Episode", reference.episode);
                         writer.WriteElementString("ArtistName", reference.artistName);
+
+                        progress.Value = 50;
+
                         foreach (Author author in reference.authors)
                         {
                             writer.WriteStartElement("Author");
@@ -2144,6 +2196,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         writer.WriteEndElement();
                     }
 
+                    progress.Value = 60;
                     /*Sections Configurations*/
                     writer.WriteElementString("SectionsBlankLineBetweem", myPaper.sectionsConfig.blankLineBetween.ToString());
                     writer.WriteElementString("SectionsNewPageBetween", myPaper.sectionsConfig.newPageBetween.ToString());
@@ -2171,7 +2224,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("SubsubsectionLabelAlign", myPaper.sectionsConfig.subsubsectionLabelAlignment);
                     writer.WriteElementString("SubsubsectionLabelFont", myPaper.sectionsConfig.subsubsectionLabelFont);
                     writer.WriteElementString("SubsubsectionLabelSize", myPaper.sectionsConfig.subsubsectionLabelSize.ToString());
-                    writer.WriteElementString("SubsubsectionLabelColor", myPaper.sectionsConfig.subsubsectionLabelColor);                    
+                    writer.WriteElementString("SubsubsectionLabelColor", myPaper.sectionsConfig.subsubsectionLabelColor);
+                    progress.Value = 70;
                     foreach (Section section in myPaper.sections)
                     {
                         writer.WriteStartElement("SectionElement");
@@ -2193,7 +2247,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                         }
                         writer.WriteEndElement();
                     }
-
+                    progress.Value = 90;
                     /*Conclusion Configurations*/
                     writer.WriteElementString("ConclusionOnOwnPage", myPaper.conclusion.onOwnPage.ToString());
                     writer.WriteElementString("ConclusionIncludeTitle", myPaper.conclusion.includeTitle.ToString());
@@ -2208,12 +2262,14 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteEndElement();
                     writer.WriteEndDocument();
                 }
+                progress.Value = 100;
+                loading.Hide();
                 MessageBox.Show("Your project has been saved!\n");
             }
             else
             {
                 MessageBox.Show("Enter the name you would like to use to store the file.\n");
-            }      
+            }            
         }
 
         private void openFile_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
