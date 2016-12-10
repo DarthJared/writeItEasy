@@ -19,6 +19,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool sectionLabelInlineWithText;
         public bool sectionLabelOnOwnLine;
         public bool sectionLabelBold;
+        public bool sectionLabelItalics;
         public string sectionLabelAlignment;
         public string sectionLabelFont;
         public int sectionLabelSize;
@@ -27,6 +28,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool subsectionLabelInlineWithText;
         public bool subsectionLabelOnOwnLine;
         public bool subsectionLabelBold;
+        public bool subsectionLabelItalics;
         public string subsectionLabelAlignment;
         public string subsectionLabelFont;
         public int subsectionLabelSize;
@@ -35,6 +37,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool subsubsectionLabelInlineWithText;
         public bool subsubsectionLabelOnOwnLine;
         public bool subsubsectionLabelBold;
+        public bool subsubsectionLabelItalics;
         public string subsubsectionLabelAlignment;
         public string subsubsectionLabelFont;
         public int subsubsectionLabelSize;
@@ -53,6 +56,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             sectionLabelInlineWithText = true;
             sectionLabelOnOwnLine = true;
             sectionLabelBold = true;
+            sectionLabelItalics = true;
             sectionLabelAlignment = "";
             sectionLabelFont = "";
             sectionLabelSize = 0;
@@ -61,6 +65,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionLabelInlineWithText = true;
             subsectionLabelOnOwnLine = true;
             subsectionLabelBold = true;
+            subsectionLabelItalics = true;
             subsectionLabelAlignment = "";
             subsectionLabelFont = "";
             subsectionLabelSize = 0;
@@ -69,6 +74,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionLabelInlineWithText = true;
             subsubsectionLabelOnOwnLine = true;
             subsubsectionLabelBold = true;
+            subsubsectionLabelItalics = true;
             subsubsectionLabelAlignment = "";
             subsubsectionLabelFont = "";
             subsubsectionLabelSize = 0;

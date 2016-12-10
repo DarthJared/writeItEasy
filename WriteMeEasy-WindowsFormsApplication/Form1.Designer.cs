@@ -57,11 +57,6 @@
             this.abstractTitleText = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.addSectionButton = new System.Windows.Forms.Button();
-            this.summaryContentGroupBox = new System.Windows.Forms.GroupBox();
-            this.summaryContent = new System.Windows.Forms.RichTextBox();
-            this.summaryTitleTextLabel = new System.Windows.Forms.Label();
-            this.summaryTitleText = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.conclusionPanel = new System.Windows.Forms.Panel();
             this.conclusionOptionsGroupBox = new System.Windows.Forms.GroupBox();
@@ -87,7 +82,6 @@
             this.conclusionIncludeCheck = new System.Windows.Forms.CheckBox();
             this.headerIncludeCheck = new System.Windows.Forms.CheckBox();
             this.abstractIncludeCheck = new System.Windows.Forms.CheckBox();
-            this.summaryIncludeCheck = new System.Windows.Forms.CheckBox();
             this.titlePageIncludeCheck = new System.Windows.Forms.CheckBox();
             this.paperTitleGroupBox = new System.Windows.Forms.GroupBox();
             this.paperTitleEnter = new System.Windows.Forms.TextBox();
@@ -101,6 +95,7 @@
             this.subsubsectionLabelAlignLabel = new System.Windows.Forms.Label();
             this.subsubsectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.subsubsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsubsectionLabelItalicizedCheck = new System.Windows.Forms.CheckBox();
             this.subsubsectionLabelButton = new System.Windows.Forms.Button();
             this.subsubsectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -108,7 +103,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.subsubsectionLabelFont = new System.Windows.Forms.ComboBox();
-            this.subsubsectionLabelBullettedCheck = new System.Windows.Forms.CheckBox();
             this.subsubsectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.subsubsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.subsubsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
@@ -118,6 +112,7 @@
             this.subsectionLabelAlignLabel = new System.Windows.Forms.Label();
             this.subsectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.subsectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.subsectionLabelItalicizedCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelColorButton = new System.Windows.Forms.Button();
             this.subsectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -125,7 +120,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.subsectionLabelFont = new System.Windows.Forms.ComboBox();
-            this.subsectionLabelBulletted = new System.Windows.Forms.CheckBox();
             this.subsectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.subsectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.subsectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
@@ -135,6 +129,7 @@
             this.sectionLabelAlignLabel = new System.Windows.Forms.Label();
             this.sectionLabelAlignChoose = new System.Windows.Forms.ComboBox();
             this.sectionLabelStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.sectionLabelItalicizedCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelColorButton = new System.Windows.Forms.Button();
             this.sectionLabelColorText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -142,7 +137,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.sectionLabelFont = new System.Windows.Forms.ComboBox();
-            this.sectionLabelBullettedCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelBoldCheck = new System.Windows.Forms.CheckBox();
             this.sectionLabelLocationGroupBox = new System.Windows.Forms.GroupBox();
             this.sectionLabelInLineRadio = new System.Windows.Forms.RadioButton();
@@ -291,23 +285,6 @@
             this.headerLeftOtherEnter = new System.Windows.Forms.TextBox();
             this.headerHeader = new System.Windows.Forms.Label();
             this.headerDefaultButton = new System.Windows.Forms.Button();
-            this.summaryPanel = new System.Windows.Forms.Panel();
-            this.summaryOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.summaryDefaultButton = new System.Windows.Forms.Button();
-            this.summaryTitleGroupBox = new System.Windows.Forms.GroupBox();
-            this.summaryTitleAlignLabel = new System.Windows.Forms.Label();
-            this.summaryTitleAlignSelect = new System.Windows.Forms.ComboBox();
-            this.summaryTitleColorButton = new System.Windows.Forms.Button();
-            this.summaryTitleColorText = new System.Windows.Forms.TextBox();
-            this.summaryTitleColorLabel = new System.Windows.Forms.Label();
-            this.summaryTitleSizeChoose = new System.Windows.Forms.ComboBox();
-            this.summaryTitleSizeLabel = new System.Windows.Forms.Label();
-            this.summaryTitleFontLabel = new System.Windows.Forms.Label();
-            this.summaryTitleFontChoose = new System.Windows.Forms.ComboBox();
-            this.summaryTitleBoldCheck = new System.Windows.Forms.CheckBox();
-            this.summaryIncludeTitleCheck = new System.Windows.Forms.CheckBox();
-            this.summaryOwnPageCheck = new System.Windows.Forms.CheckBox();
-            this.summaryHeader = new System.Windows.Forms.Label();
             this.abstractPanel = new System.Windows.Forms.Panel();
             this.abstractOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.abstractDefaultButton = new System.Windows.Forms.Button();
@@ -355,7 +332,6 @@
             this.conclusionContentGroupBox.SuspendLayout();
             this.section1groupBox.SuspendLayout();
             this.abstractContentGroupBox.SuspendLayout();
-            this.summaryContentGroupBox.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.conclusionPanel.SuspendLayout();
             this.conclusionOptionsGroupBox.SuspendLayout();
@@ -400,9 +376,6 @@
             this.headerLeftGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftFirstPageNumEnter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).BeginInit();
-            this.summaryPanel.SuspendLayout();
-            this.summaryOptionsGroupBox.SuspendLayout();
-            this.summaryTitleGroupBox.SuspendLayout();
             this.abstractPanel.SuspendLayout();
             this.abstractOptionsGroupBox.SuspendLayout();
             this.abstractTitleGroupBox.SuspendLayout();
@@ -544,11 +517,10 @@
             this.contentPanel.Controls.Add(this.section1groupBox);
             this.contentPanel.Controls.Add(this.abstractContentGroupBox);
             this.contentPanel.Controls.Add(this.addSectionButton);
-            this.contentPanel.Controls.Add(this.summaryContentGroupBox);
             this.contentPanel.Location = new System.Drawing.Point(19, 21);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1954, 3069);
+            this.contentPanel.Size = new System.Drawing.Size(1954, 2366);
             this.contentPanel.TabIndex = 10;
             // 
             // paperTitle
@@ -570,7 +542,7 @@
             this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleEnter);
             this.conclusionContentGroupBox.Controls.Add(this.label19);
             this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(24, 2330);
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(24, 1627);
             this.conclusionContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
             this.conclusionContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -636,7 +608,7 @@
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
             this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(24, 1493);
+            this.section1groupBox.Location = new System.Drawing.Point(24, 790);
             this.section1groupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1groupBox.Name = "section1groupBox";
             this.section1groupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -716,7 +688,7 @@
             this.abstractContentGroupBox.Controls.Add(this.abstractTitleText);
             this.abstractContentGroupBox.Controls.Add(this.label17);
             this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(24, 789);
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(24, 86);
             this.abstractContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContentGroupBox.Name = "abstractContentGroupBox";
             this.abstractContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -777,7 +749,7 @@
             // addSectionButton
             // 
             this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSectionButton.Location = new System.Drawing.Point(24, 2227);
+            this.addSectionButton.Location = new System.Drawing.Point(24, 1524);
             this.addSectionButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(347, 55);
@@ -785,71 +757,6 @@
             this.addSectionButton.Text = "Add Section";
             this.addSectionButton.UseVisualStyleBackColor = true;
             this.addSectionButton.Click += new System.EventHandler(this.addSectionButton_Click);
-            // 
-            // summaryContentGroupBox
-            // 
-            this.summaryContentGroupBox.Controls.Add(this.summaryContent);
-            this.summaryContentGroupBox.Controls.Add(this.summaryTitleTextLabel);
-            this.summaryContentGroupBox.Controls.Add(this.summaryTitleText);
-            this.summaryContentGroupBox.Controls.Add(this.label11);
-            this.summaryContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContentGroupBox.Location = new System.Drawing.Point(24, 86);
-            this.summaryContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryContentGroupBox.Name = "summaryContentGroupBox";
-            this.summaryContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryContentGroupBox.Size = new System.Drawing.Size(1901, 656);
-            this.summaryContentGroupBox.TabIndex = 10;
-            this.summaryContentGroupBox.TabStop = false;
-            this.summaryContentGroupBox.Text = "Summary";
-            this.summaryContentGroupBox.Visible = false;
-            // 
-            // summaryContent
-            // 
-            this.summaryContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryContent.Location = new System.Drawing.Point(24, 167);
-            this.summaryContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryContent.Name = "summaryContent";
-            this.summaryContent.Size = new System.Drawing.Size(1847, 428);
-            this.summaryContent.TabIndex = 0;
-            this.summaryContent.Text = "";
-            this.summaryContent.Enter += new System.EventHandler(this.summaryLast);
-            // 
-            // summaryTitleTextLabel
-            // 
-            this.summaryTitleTextLabel.AutoSize = true;
-            this.summaryTitleTextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.summaryTitleTextLabel.Enabled = false;
-            this.summaryTitleTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleTextLabel.Location = new System.Drawing.Point(16, 52);
-            this.summaryTitleTextLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryTitleTextLabel.Name = "summaryTitleTextLabel";
-            this.summaryTitleTextLabel.Size = new System.Drawing.Size(205, 32);
-            this.summaryTitleTextLabel.TabIndex = 13;
-            this.summaryTitleTextLabel.Tag = "1";
-            this.summaryTitleTextLabel.Text = "Summary Title:";
-            // 
-            // summaryTitleText
-            // 
-            this.summaryTitleText.Enabled = false;
-            this.summaryTitleText.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.summaryTitleText.Location = new System.Drawing.Point(253, 45);
-            this.summaryTitleText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleText.Name = "summaryTitleText";
-            this.summaryTitleText.Size = new System.Drawing.Size(487, 53);
-            this.summaryTitleText.TabIndex = 12;
-            this.summaryTitleText.Tag = "summary";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 117);
-            this.label11.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 32);
-            this.label11.TabIndex = 11;
-            this.label11.Tag = "1";
-            this.label11.Text = "Content:";
             // 
             // settingsPanel
             // 
@@ -860,7 +767,6 @@
             this.settingsPanel.Controls.Add(this.referencesPanel);
             this.settingsPanel.Controls.Add(this.titlePagePanel);
             this.settingsPanel.Controls.Add(this.headerPanel);
-            this.settingsPanel.Controls.Add(this.summaryPanel);
             this.settingsPanel.Controls.Add(this.abstractPanel);
             this.settingsPanel.Location = new System.Drawing.Point(8, 7);
             this.settingsPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -874,7 +780,7 @@
             this.conclusionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.conclusionPanel.Controls.Add(this.conclusionOptionsGroupBox);
             this.conclusionPanel.Controls.Add(this.conclusionHeader);
-            this.conclusionPanel.Location = new System.Drawing.Point(0, 4668);
+            this.conclusionPanel.Location = new System.Drawing.Point(0, 4165);
             this.conclusionPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionPanel.Name = "conclusionPanel";
             this.conclusionPanel.Size = new System.Drawing.Size(1261, 407);
@@ -1097,13 +1003,13 @@
             this.generalPanel.Location = new System.Drawing.Point(0, 0);
             this.generalPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(1261, 975);
+            this.generalPanel.Size = new System.Drawing.Size(1261, 895);
             this.generalPanel.TabIndex = 0;
             // 
             // generalDefaultButton
             // 
             this.generalDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generalDefaultButton.Location = new System.Drawing.Point(24, 880);
+            this.generalDefaultButton.Location = new System.Drawing.Point(24, 800);
             this.generalDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.generalDefaultButton.Name = "generalDefaultButton";
             this.generalDefaultButton.Size = new System.Drawing.Size(336, 55);
@@ -1118,14 +1024,13 @@
             this.includeInPapeGroupBox.Controls.Add(this.conclusionIncludeCheck);
             this.includeInPapeGroupBox.Controls.Add(this.headerIncludeCheck);
             this.includeInPapeGroupBox.Controls.Add(this.abstractIncludeCheck);
-            this.includeInPapeGroupBox.Controls.Add(this.summaryIncludeCheck);
             this.includeInPapeGroupBox.Controls.Add(this.titlePageIncludeCheck);
             this.includeInPapeGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.includeInPapeGroupBox.Location = new System.Drawing.Point(24, 482);
             this.includeInPapeGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.includeInPapeGroupBox.Name = "includeInPapeGroupBox";
             this.includeInPapeGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.includeInPapeGroupBox.Size = new System.Drawing.Size(1216, 379);
+            this.includeInPapeGroupBox.Size = new System.Drawing.Size(1216, 299);
             this.includeInPapeGroupBox.TabIndex = 18;
             this.includeInPapeGroupBox.TabStop = false;
             this.includeInPapeGroupBox.Text = "Include In Paper";
@@ -1134,7 +1039,7 @@
             // 
             this.referencesIncludeCheck.AutoSize = true;
             this.referencesIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referencesIncludeCheck.Location = new System.Drawing.Point(24, 320);
+            this.referencesIncludeCheck.Location = new System.Drawing.Point(24, 245);
             this.referencesIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.referencesIncludeCheck.Name = "referencesIncludeCheck";
             this.referencesIncludeCheck.Size = new System.Drawing.Size(371, 36);
@@ -1147,7 +1052,7 @@
             // 
             this.conclusionIncludeCheck.AutoSize = true;
             this.conclusionIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionIncludeCheck.Location = new System.Drawing.Point(24, 265);
+            this.conclusionIncludeCheck.Location = new System.Drawing.Point(24, 195);
             this.conclusionIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionIncludeCheck.Name = "conclusionIncludeCheck";
             this.conclusionIncludeCheck.Size = new System.Drawing.Size(294, 36);
@@ -1160,7 +1065,7 @@
             // 
             this.headerIncludeCheck.AutoSize = true;
             this.headerIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerIncludeCheck.Location = new System.Drawing.Point(24, 210);
+            this.headerIncludeCheck.Location = new System.Drawing.Point(24, 145);
             this.headerIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerIncludeCheck.Name = "headerIncludeCheck";
             this.headerIncludeCheck.Size = new System.Drawing.Size(245, 36);
@@ -1173,7 +1078,7 @@
             // 
             this.abstractIncludeCheck.AutoSize = true;
             this.abstractIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractIncludeCheck.Location = new System.Drawing.Point(24, 155);
+            this.abstractIncludeCheck.Location = new System.Drawing.Point(24, 95);
             this.abstractIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractIncludeCheck.Name = "abstractIncludeCheck";
             this.abstractIncludeCheck.Size = new System.Drawing.Size(256, 36);
@@ -1181,19 +1086,6 @@
             this.abstractIncludeCheck.Text = "Include Abstract";
             this.abstractIncludeCheck.UseVisualStyleBackColor = true;
             this.abstractIncludeCheck.CheckedChanged += new System.EventHandler(this.abstractIncludeCheck_CheckedChanged);
-            // 
-            // summaryIncludeCheck
-            // 
-            this.summaryIncludeCheck.AutoSize = true;
-            this.summaryIncludeCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryIncludeCheck.Location = new System.Drawing.Point(24, 100);
-            this.summaryIncludeCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryIncludeCheck.Name = "summaryIncludeCheck";
-            this.summaryIncludeCheck.Size = new System.Drawing.Size(272, 36);
-            this.summaryIncludeCheck.TabIndex = 8;
-            this.summaryIncludeCheck.Text = "Include Summary";
-            this.summaryIncludeCheck.UseVisualStyleBackColor = true;
-            this.summaryIncludeCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeCheck_CheckedChanged);
             // 
             // titlePageIncludeCheck
             // 
@@ -1277,7 +1169,7 @@
             this.sectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sectionsPanel.Controls.Add(this.sectionsOptionsGroupBox);
             this.sectionsPanel.Controls.Add(this.sectionsHeader);
-            this.sectionsPanel.Location = new System.Drawing.Point(3, 4036);
+            this.sectionsPanel.Location = new System.Drawing.Point(3, 3533);
             this.sectionsPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sectionsPanel.Name = "sectionsPanel";
             this.sectionsPanel.Size = new System.Drawing.Size(1261, 632);
@@ -1357,6 +1249,7 @@
             // 
             // subsubsectionLabelStyleGroupBox
             // 
+            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelItalicizedCheck);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelButton);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelColorText);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label7);
@@ -1364,7 +1257,6 @@
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label8);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.label9);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelFont);
-            this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBullettedCheck);
             this.subsubsectionLabelStyleGroupBox.Controls.Add(this.subsubsectionLabelBoldCheck);
             this.subsubsectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
             this.subsubsectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -1375,6 +1267,17 @@
             this.subsubsectionLabelStyleGroupBox.TabStop = false;
             this.subsubsectionLabelStyleGroupBox.Text = "Style";
             this.subsubsectionLabelStyleGroupBox.Visible = false;
+            // 
+            // subsubsectionLabelItalicizedCheck
+            // 
+            this.subsubsectionLabelItalicizedCheck.AutoSize = true;
+            this.subsubsectionLabelItalicizedCheck.Location = new System.Drawing.Point(19, 100);
+            this.subsubsectionLabelItalicizedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsubsectionLabelItalicizedCheck.Name = "subsubsectionLabelItalicizedCheck";
+            this.subsubsectionLabelItalicizedCheck.Size = new System.Drawing.Size(165, 36);
+            this.subsubsectionLabelItalicizedCheck.TabIndex = 11;
+            this.subsubsectionLabelItalicizedCheck.Text = "Italicized";
+            this.subsubsectionLabelItalicizedCheck.UseVisualStyleBackColor = true;
             // 
             // subsubsectionLabelButton
             // 
@@ -1444,18 +1347,6 @@
             this.subsubsectionLabelFont.Size = new System.Drawing.Size(377, 39);
             this.subsubsectionLabelFont.TabIndex = 6;
             this.subsubsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsubsectionLabelFont_SelectedIndexChanged);
-            // 
-            // subsubsectionLabelBullettedCheck
-            // 
-            this.subsubsectionLabelBullettedCheck.AutoSize = true;
-            this.subsubsectionLabelBullettedCheck.Location = new System.Drawing.Point(19, 100);
-            this.subsubsectionLabelBullettedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsubsectionLabelBullettedCheck.Name = "subsubsectionLabelBullettedCheck";
-            this.subsubsectionLabelBullettedCheck.Size = new System.Drawing.Size(166, 36);
-            this.subsubsectionLabelBullettedCheck.TabIndex = 1;
-            this.subsubsectionLabelBullettedCheck.Text = "Bulletted";
-            this.subsubsectionLabelBullettedCheck.UseVisualStyleBackColor = true;
-            this.subsubsectionLabelBullettedCheck.CheckedChanged += new System.EventHandler(this.subsubsectionLabelBullettedCheck_CheckedChanged);
             // 
             // subsubsectionLabelBoldCheck
             // 
@@ -1569,6 +1460,7 @@
             // 
             // subsectionLabelStyleGroupBox
             // 
+            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelItalicizedCheck);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelColorButton);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelColorText);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label4);
@@ -1576,7 +1468,6 @@
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label5);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.label6);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelFont);
-            this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBulletted);
             this.subsectionLabelStyleGroupBox.Controls.Add(this.subsectionLabelBoldCheck);
             this.subsectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
             this.subsectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -1587,6 +1478,17 @@
             this.subsectionLabelStyleGroupBox.TabStop = false;
             this.subsectionLabelStyleGroupBox.Text = "Style";
             this.subsectionLabelStyleGroupBox.Visible = false;
+            // 
+            // subsectionLabelItalicizedCheck
+            // 
+            this.subsectionLabelItalicizedCheck.AutoSize = true;
+            this.subsectionLabelItalicizedCheck.Location = new System.Drawing.Point(19, 100);
+            this.subsectionLabelItalicizedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.subsectionLabelItalicizedCheck.Name = "subsectionLabelItalicizedCheck";
+            this.subsectionLabelItalicizedCheck.Size = new System.Drawing.Size(165, 36);
+            this.subsectionLabelItalicizedCheck.TabIndex = 11;
+            this.subsectionLabelItalicizedCheck.Text = "Italicized";
+            this.subsectionLabelItalicizedCheck.UseVisualStyleBackColor = true;
             // 
             // subsectionLabelColorButton
             // 
@@ -1656,18 +1558,6 @@
             this.subsectionLabelFont.Size = new System.Drawing.Size(377, 39);
             this.subsectionLabelFont.TabIndex = 6;
             this.subsectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.subsectionLabelFont_SelectedIndexChanged);
-            // 
-            // subsectionLabelBulletted
-            // 
-            this.subsectionLabelBulletted.AutoSize = true;
-            this.subsectionLabelBulletted.Location = new System.Drawing.Point(19, 100);
-            this.subsectionLabelBulletted.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.subsectionLabelBulletted.Name = "subsectionLabelBulletted";
-            this.subsectionLabelBulletted.Size = new System.Drawing.Size(166, 36);
-            this.subsectionLabelBulletted.TabIndex = 1;
-            this.subsectionLabelBulletted.Text = "Bulletted";
-            this.subsectionLabelBulletted.UseVisualStyleBackColor = true;
-            this.subsectionLabelBulletted.CheckedChanged += new System.EventHandler(this.subsectionLabelBulletted_CheckedChanged);
             // 
             // subsectionLabelBoldCheck
             // 
@@ -1779,6 +1669,7 @@
             // 
             // sectionLabelStyleGroupBox
             // 
+            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelItalicizedCheck);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelColorButton);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelColorText);
             this.sectionLabelStyleGroupBox.Controls.Add(this.label3);
@@ -1786,7 +1677,6 @@
             this.sectionLabelStyleGroupBox.Controls.Add(this.label2);
             this.sectionLabelStyleGroupBox.Controls.Add(this.label1);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelFont);
-            this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBullettedCheck);
             this.sectionLabelStyleGroupBox.Controls.Add(this.sectionLabelBoldCheck);
             this.sectionLabelStyleGroupBox.Location = new System.Drawing.Point(24, 289);
             this.sectionLabelStyleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -1797,6 +1687,17 @@
             this.sectionLabelStyleGroupBox.TabStop = false;
             this.sectionLabelStyleGroupBox.Text = "Style";
             this.sectionLabelStyleGroupBox.Visible = false;
+            // 
+            // sectionLabelItalicizedCheck
+            // 
+            this.sectionLabelItalicizedCheck.AutoSize = true;
+            this.sectionLabelItalicizedCheck.Location = new System.Drawing.Point(19, 95);
+            this.sectionLabelItalicizedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.sectionLabelItalicizedCheck.Name = "sectionLabelItalicizedCheck";
+            this.sectionLabelItalicizedCheck.Size = new System.Drawing.Size(165, 36);
+            this.sectionLabelItalicizedCheck.TabIndex = 11;
+            this.sectionLabelItalicizedCheck.Text = "Italicized";
+            this.sectionLabelItalicizedCheck.UseVisualStyleBackColor = true;
             // 
             // sectionLabelColorButton
             // 
@@ -1866,18 +1767,6 @@
             this.sectionLabelFont.Size = new System.Drawing.Size(377, 39);
             this.sectionLabelFont.TabIndex = 6;
             this.sectionLabelFont.SelectedIndexChanged += new System.EventHandler(this.sectionLabelFont_SelectedIndexChanged);
-            // 
-            // sectionLabelBullettedCheck
-            // 
-            this.sectionLabelBullettedCheck.AutoSize = true;
-            this.sectionLabelBullettedCheck.Location = new System.Drawing.Point(19, 100);
-            this.sectionLabelBullettedCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.sectionLabelBullettedCheck.Name = "sectionLabelBullettedCheck";
-            this.sectionLabelBullettedCheck.Size = new System.Drawing.Size(166, 36);
-            this.sectionLabelBullettedCheck.TabIndex = 1;
-            this.sectionLabelBullettedCheck.Text = "Bulletted";
-            this.sectionLabelBullettedCheck.UseVisualStyleBackColor = true;
-            this.sectionLabelBullettedCheck.CheckedChanged += new System.EventHandler(this.sectionLabelBullettedCheck_CheckedChanged);
             // 
             // sectionLabelBoldCheck
             // 
@@ -2018,7 +1907,7 @@
             this.referencesPanel.Controls.Add(this.referencesOptionsGroupBox);
             this.referencesPanel.Controls.Add(this.referencesHeader);
             this.referencesPanel.Controls.Add(this.referencesDefaultButton);
-            this.referencesPanel.Location = new System.Drawing.Point(0, 5075);
+            this.referencesPanel.Location = new System.Drawing.Point(0, 4572);
             this.referencesPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.referencesPanel.Name = "referencesPanel";
             this.referencesPanel.Size = new System.Drawing.Size(1261, 641);
@@ -2340,7 +2229,7 @@
             this.titlePagePanel.Controls.Add(this.titlePageAllignGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageIncludeGroupBox);
             this.titlePagePanel.Controls.Add(this.titlePageSectionLabel);
-            this.titlePagePanel.Location = new System.Drawing.Point(0, 978);
+            this.titlePagePanel.Location = new System.Drawing.Point(0, 898);
             this.titlePagePanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titlePagePanel.Name = "titlePagePanel";
             this.titlePagePanel.Size = new System.Drawing.Size(1261, 1090);
@@ -2895,7 +2784,7 @@
             this.headerPanel.Controls.Add(this.headerOptionsGroupBox);
             this.headerPanel.Controls.Add(this.headerHeader);
             this.headerPanel.Controls.Add(this.headerDefaultButton);
-            this.headerPanel.Location = new System.Drawing.Point(0, 2900);
+            this.headerPanel.Location = new System.Drawing.Point(0, 2400);
             this.headerPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1261, 1133);
@@ -3786,230 +3675,13 @@
             this.headerDefaultButton.UseVisualStyleBackColor = true;
             this.headerDefaultButton.Click += new System.EventHandler(this.headerDefaultButton_Click);
             // 
-            // summaryPanel
-            // 
-            this.summaryPanel.BackColor = System.Drawing.Color.White;
-            this.summaryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.summaryPanel.Controls.Add(this.summaryOptionsGroupBox);
-            this.summaryPanel.Controls.Add(this.summaryHeader);
-            this.summaryPanel.Location = new System.Drawing.Point(0, 2070);
-            this.summaryPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Size = new System.Drawing.Size(1261, 412);
-            this.summaryPanel.TabIndex = 8;
-            // 
-            // summaryOptionsGroupBox
-            // 
-            this.summaryOptionsGroupBox.Controls.Add(this.summaryDefaultButton);
-            this.summaryOptionsGroupBox.Controls.Add(this.summaryTitleGroupBox);
-            this.summaryOptionsGroupBox.Controls.Add(this.summaryOwnPageCheck);
-            this.summaryOptionsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryOptionsGroupBox.Location = new System.Drawing.Point(24, 79);
-            this.summaryOptionsGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryOptionsGroupBox.Name = "summaryOptionsGroupBox";
-            this.summaryOptionsGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryOptionsGroupBox.Size = new System.Drawing.Size(1216, 298);
-            this.summaryOptionsGroupBox.TabIndex = 1;
-            this.summaryOptionsGroupBox.TabStop = false;
-            this.summaryOptionsGroupBox.Text = "Options";
-            // 
-            // summaryDefaultButton
-            // 
-            this.summaryDefaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryDefaultButton.Location = new System.Drawing.Point(24, 222);
-            this.summaryDefaultButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryDefaultButton.Name = "summaryDefaultButton";
-            this.summaryDefaultButton.Size = new System.Drawing.Size(251, 55);
-            this.summaryDefaultButton.TabIndex = 14;
-            this.summaryDefaultButton.Text = "APA Default";
-            this.summaryDefaultButton.UseVisualStyleBackColor = true;
-            this.summaryDefaultButton.Click += new System.EventHandler(this.summaryDefaultButton_Click);
-            // 
-            // summaryTitleGroupBox
-            // 
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleAlignLabel);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleAlignSelect);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorButton);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorText);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleColorLabel);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleSizeChoose);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleSizeLabel);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleFontLabel);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleFontChoose);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryTitleBoldCheck);
-            this.summaryTitleGroupBox.Controls.Add(this.summaryIncludeTitleCheck);
-            this.summaryTitleGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryTitleGroupBox.Location = new System.Drawing.Point(24, 100);
-            this.summaryTitleGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleGroupBox.Name = "summaryTitleGroupBox";
-            this.summaryTitleGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleGroupBox.Size = new System.Drawing.Size(1168, 107);
-            this.summaryTitleGroupBox.TabIndex = 4;
-            this.summaryTitleGroupBox.TabStop = false;
-            this.summaryTitleGroupBox.Text = "Summary Title";
-            // 
-            // summaryTitleAlignLabel
-            // 
-            this.summaryTitleAlignLabel.AutoSize = true;
-            this.summaryTitleAlignLabel.Location = new System.Drawing.Point(368, 48);
-            this.summaryTitleAlignLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryTitleAlignLabel.Name = "summaryTitleAlignLabel";
-            this.summaryTitleAlignLabel.Size = new System.Drawing.Size(88, 32);
-            this.summaryTitleAlignLabel.TabIndex = 23;
-            this.summaryTitleAlignLabel.Text = "Align:";
-            this.summaryTitleAlignLabel.Visible = false;
-            // 
-            // summaryTitleAlignSelect
-            // 
-            this.summaryTitleAlignSelect.FormattingEnabled = true;
-            this.summaryTitleAlignSelect.Items.AddRange(new object[] {
-            "Left",
-            "Center",
-            "Right"});
-            this.summaryTitleAlignSelect.Location = new System.Drawing.Point(459, 41);
-            this.summaryTitleAlignSelect.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleAlignSelect.Name = "summaryTitleAlignSelect";
-            this.summaryTitleAlignSelect.Size = new System.Drawing.Size(316, 39);
-            this.summaryTitleAlignSelect.TabIndex = 22;
-            this.summaryTitleAlignSelect.Visible = false;
-            this.summaryTitleAlignSelect.SelectedIndexChanged += new System.EventHandler(this.summaryTitleAlignSelect_SelectedIndexChanged);
-            // 
-            // summaryTitleColorButton
-            // 
-            this.summaryTitleColorButton.Location = new System.Drawing.Point(376, 272);
-            this.summaryTitleColorButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleColorButton.Name = "summaryTitleColorButton";
-            this.summaryTitleColorButton.Size = new System.Drawing.Size(195, 55);
-            this.summaryTitleColorButton.TabIndex = 13;
-            this.summaryTitleColorButton.Text = "Choose";
-            this.summaryTitleColorButton.UseVisualStyleBackColor = true;
-            this.summaryTitleColorButton.Visible = false;
-            this.summaryTitleColorButton.Click += new System.EventHandler(this.summaryTitleColorButton_Click);
-            // 
-            // summaryTitleColorText
-            // 
-            this.summaryTitleColorText.Location = new System.Drawing.Point(187, 277);
-            this.summaryTitleColorText.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleColorText.Name = "summaryTitleColorText";
-            this.summaryTitleColorText.Size = new System.Drawing.Size(185, 39);
-            this.summaryTitleColorText.TabIndex = 14;
-            this.summaryTitleColorText.Visible = false;
-            // 
-            // summaryTitleColorLabel
-            // 
-            this.summaryTitleColorLabel.AutoSize = true;
-            this.summaryTitleColorLabel.Location = new System.Drawing.Point(8, 284);
-            this.summaryTitleColorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryTitleColorLabel.Name = "summaryTitleColorLabel";
-            this.summaryTitleColorLabel.Size = new System.Drawing.Size(153, 32);
-            this.summaryTitleColorLabel.TabIndex = 19;
-            this.summaryTitleColorLabel.Text = "Title Color:";
-            this.summaryTitleColorLabel.Visible = false;
-            // 
-            // summaryTitleSizeChoose
-            // 
-            this.summaryTitleSizeChoose.FormattingEnabled = true;
-            this.summaryTitleSizeChoose.Location = new System.Drawing.Point(187, 215);
-            this.summaryTitleSizeChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleSizeChoose.Name = "summaryTitleSizeChoose";
-            this.summaryTitleSizeChoose.Size = new System.Drawing.Size(377, 39);
-            this.summaryTitleSizeChoose.TabIndex = 18;
-            this.summaryTitleSizeChoose.Visible = false;
-            this.summaryTitleSizeChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleSizeChoose_SelectedIndexChanged);
-            // 
-            // summaryTitleSizeLabel
-            // 
-            this.summaryTitleSizeLabel.AutoSize = true;
-            this.summaryTitleSizeLabel.Location = new System.Drawing.Point(8, 222);
-            this.summaryTitleSizeLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryTitleSizeLabel.Name = "summaryTitleSizeLabel";
-            this.summaryTitleSizeLabel.Size = new System.Drawing.Size(141, 32);
-            this.summaryTitleSizeLabel.TabIndex = 17;
-            this.summaryTitleSizeLabel.Text = "Title Size:";
-            this.summaryTitleSizeLabel.Visible = false;
-            // 
-            // summaryTitleFontLabel
-            // 
-            this.summaryTitleFontLabel.AutoSize = true;
-            this.summaryTitleFontLabel.Location = new System.Drawing.Point(8, 160);
-            this.summaryTitleFontLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryTitleFontLabel.Name = "summaryTitleFontLabel";
-            this.summaryTitleFontLabel.Size = new System.Drawing.Size(142, 32);
-            this.summaryTitleFontLabel.TabIndex = 16;
-            this.summaryTitleFontLabel.Text = "Title Font:";
-            this.summaryTitleFontLabel.Visible = false;
-            // 
-            // summaryTitleFontChoose
-            // 
-            this.summaryTitleFontChoose.FormattingEnabled = true;
-            this.summaryTitleFontChoose.Location = new System.Drawing.Point(187, 153);
-            this.summaryTitleFontChoose.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleFontChoose.Name = "summaryTitleFontChoose";
-            this.summaryTitleFontChoose.Size = new System.Drawing.Size(377, 39);
-            this.summaryTitleFontChoose.TabIndex = 15;
-            this.summaryTitleFontChoose.Visible = false;
-            this.summaryTitleFontChoose.SelectedIndexChanged += new System.EventHandler(this.summaryTitleFontChoose_SelectedIndexChanged);
-            // 
-            // summaryTitleBoldCheck
-            // 
-            this.summaryTitleBoldCheck.AutoSize = true;
-            this.summaryTitleBoldCheck.Location = new System.Drawing.Point(16, 100);
-            this.summaryTitleBoldCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryTitleBoldCheck.Name = "summaryTitleBoldCheck";
-            this.summaryTitleBoldCheck.Size = new System.Drawing.Size(173, 36);
-            this.summaryTitleBoldCheck.TabIndex = 11;
-            this.summaryTitleBoldCheck.Text = "Bold Title";
-            this.summaryTitleBoldCheck.UseVisualStyleBackColor = true;
-            this.summaryTitleBoldCheck.Visible = false;
-            this.summaryTitleBoldCheck.CheckedChanged += new System.EventHandler(this.summaryTitleBoldCheck_CheckedChanged);
-            // 
-            // summaryIncludeTitleCheck
-            // 
-            this.summaryIncludeTitleCheck.AutoSize = true;
-            this.summaryIncludeTitleCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryIncludeTitleCheck.Location = new System.Drawing.Point(16, 45);
-            this.summaryIncludeTitleCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryIncludeTitleCheck.Name = "summaryIncludeTitleCheck";
-            this.summaryIncludeTitleCheck.Size = new System.Drawing.Size(207, 36);
-            this.summaryIncludeTitleCheck.TabIndex = 1;
-            this.summaryIncludeTitleCheck.Text = "Include Title";
-            this.summaryIncludeTitleCheck.UseVisualStyleBackColor = true;
-            this.summaryIncludeTitleCheck.CheckedChanged += new System.EventHandler(this.summaryIncludeTitleCheck_CheckedChanged);
-            // 
-            // summaryOwnPageCheck
-            // 
-            this.summaryOwnPageCheck.AutoSize = true;
-            this.summaryOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryOwnPageCheck.Location = new System.Drawing.Point(24, 45);
-            this.summaryOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.summaryOwnPageCheck.Name = "summaryOwnPageCheck";
-            this.summaryOwnPageCheck.Size = new System.Drawing.Size(266, 36);
-            this.summaryOwnPageCheck.TabIndex = 0;
-            this.summaryOwnPageCheck.Text = "On Its Own Page";
-            this.summaryOwnPageCheck.UseVisualStyleBackColor = true;
-            this.summaryOwnPageCheck.CheckedChanged += new System.EventHandler(this.summaryOwnPageCheck_CheckedChanged);
-            // 
-            // summaryHeader
-            // 
-            this.summaryHeader.BackColor = System.Drawing.Color.MidnightBlue;
-            this.summaryHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.summaryHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.summaryHeader.Location = new System.Drawing.Point(0, 0);
-            this.summaryHeader.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.summaryHeader.Name = "summaryHeader";
-            this.summaryHeader.Size = new System.Drawing.Size(1259, 72);
-            this.summaryHeader.TabIndex = 0;
-            this.summaryHeader.Text = "SUMMARY";
-            this.summaryHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // abstractPanel
             // 
             this.abstractPanel.BackColor = System.Drawing.Color.White;
             this.abstractPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.abstractPanel.Controls.Add(this.abstractOptionsGroupBox);
             this.abstractPanel.Controls.Add(this.abstractHeader);
-            this.abstractPanel.Location = new System.Drawing.Point(0, 2485);
+            this.abstractPanel.Location = new System.Drawing.Point(0, 1988);
             this.abstractPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractPanel.Name = "abstractPanel";
             this.abstractPanel.Size = new System.Drawing.Size(1261, 412);
@@ -4451,8 +4123,6 @@
             this.section1groupBox.PerformLayout();
             this.abstractContentGroupBox.ResumeLayout(false);
             this.abstractContentGroupBox.PerformLayout();
-            this.summaryContentGroupBox.ResumeLayout(false);
-            this.summaryContentGroupBox.PerformLayout();
             this.settingsPanel.ResumeLayout(false);
             this.conclusionPanel.ResumeLayout(false);
             this.conclusionOptionsGroupBox.ResumeLayout(false);
@@ -4523,11 +4193,6 @@
             this.headerLeftGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftFirstPageNumEnter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerLeftNumberEnter)).EndInit();
-            this.summaryPanel.ResumeLayout(false);
-            this.summaryOptionsGroupBox.ResumeLayout(false);
-            this.summaryOptionsGroupBox.PerformLayout();
-            this.summaryTitleGroupBox.ResumeLayout(false);
-            this.summaryTitleGroupBox.PerformLayout();
             this.abstractPanel.ResumeLayout(false);
             this.abstractOptionsGroupBox.ResumeLayout(false);
             this.abstractOptionsGroupBox.PerformLayout();
@@ -4564,7 +4229,6 @@
         private System.Windows.Forms.CheckBox conclusionIncludeCheck;
         private System.Windows.Forms.CheckBox headerIncludeCheck;
         private System.Windows.Forms.CheckBox abstractIncludeCheck;
-        private System.Windows.Forms.CheckBox summaryIncludeCheck;
         private System.Windows.Forms.CheckBox titlePageIncludeCheck;
         private System.Windows.Forms.GroupBox sectionsOptionsGroupBox;
         private System.Windows.Forms.GroupBox betweenSectionsGroupBox;
@@ -4612,8 +4276,6 @@
         private System.Windows.Forms.Button generalDefaultButton;
         private System.Windows.Forms.Panel abstractPanel;
         private System.Windows.Forms.Label abstractHeader;
-        private System.Windows.Forms.Panel summaryPanel;
-        private System.Windows.Forms.Label summaryHeader;
         private System.Windows.Forms.Panel conclusionPanel;
         private System.Windows.Forms.Label conclusionHeader;
         private System.Windows.Forms.Panel referencesPanel;
@@ -4629,7 +4291,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox sectionLabelFont;
-        private System.Windows.Forms.CheckBox sectionLabelBullettedCheck;
         private System.Windows.Forms.CheckBox sectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox sectionLabelLocationGroupBox;
         private System.Windows.Forms.Panel headerPanel;
@@ -4649,21 +4310,6 @@
         private System.Windows.Forms.CheckBox abstractTitleBoldCheck;
         private System.Windows.Forms.CheckBox abstractIncludeTitleCheck;
         private System.Windows.Forms.CheckBox abstractOwnPageCheck;
-        private System.Windows.Forms.GroupBox summaryContentGroupBox;
-        private System.Windows.Forms.RichTextBox summaryContent;
-        private System.Windows.Forms.GroupBox summaryOptionsGroupBox;
-        private System.Windows.Forms.Button summaryDefaultButton;
-        private System.Windows.Forms.GroupBox summaryTitleGroupBox;
-        private System.Windows.Forms.Button summaryTitleColorButton;
-        private System.Windows.Forms.TextBox summaryTitleColorText;
-        private System.Windows.Forms.Label summaryTitleColorLabel;
-        private System.Windows.Forms.ComboBox summaryTitleSizeChoose;
-        private System.Windows.Forms.Label summaryTitleSizeLabel;
-        private System.Windows.Forms.Label summaryTitleFontLabel;
-        private System.Windows.Forms.ComboBox summaryTitleFontChoose;
-        private System.Windows.Forms.CheckBox summaryTitleBoldCheck;
-        private System.Windows.Forms.CheckBox summaryIncludeTitleCheck;
-        private System.Windows.Forms.CheckBox summaryOwnPageCheck;
         private System.Windows.Forms.RichTextBox section1Content;
         private System.Windows.Forms.Button dateUpButton;
         private System.Windows.Forms.Button dateDownButton;
@@ -4768,7 +4414,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox subsectionLabelFont;
-        private System.Windows.Forms.CheckBox subsectionLabelBulletted;
         private System.Windows.Forms.CheckBox subsectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox subsectionLabelLocationGroupBox;
         private System.Windows.Forms.RadioButton subsectionLabelInLineRadio;
@@ -4783,7 +4428,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox subsubsectionLabelFont;
-        private System.Windows.Forms.CheckBox subsubsectionLabelBullettedCheck;
         private System.Windows.Forms.CheckBox subsubsectionLabelBoldCheck;
         private System.Windows.Forms.GroupBox subsubsectionLabelLocationGroupBox;
         private System.Windows.Forms.RadioButton subsubsectionLabelInLineRadio;
@@ -4797,13 +4441,8 @@
         private System.Windows.Forms.Label abstractTitleLabel;
         private System.Windows.Forms.TextBox abstractTitleText;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label summaryTitleTextLabel;
-        private System.Windows.Forms.TextBox summaryTitleText;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox abstractTitleAlignSelect;
         private System.Windows.Forms.Label abstractTitleAlignLabel;
-        private System.Windows.Forms.Label summaryTitleAlignLabel;
-        private System.Windows.Forms.ComboBox summaryTitleAlignSelect;
         private System.Windows.Forms.Label sectionLabelAlignLabel;
         private System.Windows.Forms.ComboBox sectionLabelAlignChoose;
         private System.Windows.Forms.Label subsectionLabelAlignLabel;
@@ -4854,6 +4493,9 @@
         private System.Windows.Forms.Label headerLeftFirstPageNumLabel;
         private System.Windows.Forms.TextBox headerLeftLastNameEnter;
         private System.Windows.Forms.Label headerLeftLastNameLabel;
+        private System.Windows.Forms.CheckBox subsectionLabelItalicizedCheck;
+        private System.Windows.Forms.CheckBox sectionLabelItalicizedCheck;
+        private System.Windows.Forms.CheckBox subsubsectionLabelItalicizedCheck;
     }
 }
 

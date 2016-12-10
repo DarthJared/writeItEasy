@@ -187,7 +187,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             newSectionGroupBox.Controls.Add(newSectionContent);
             newSectionContent.Location = new Point(9, 70);
             newSectionContent.Tag = newSection.index;
-            newSectionContent.Leave += new EventHandler(sectionTextChanged);
             newSectionContent.Enter += new EventHandler(sectionLast);
             newSectionContent.SelectionIndent = 40;
             newSectionContent.SelectionHangingIndent = -40;
@@ -280,7 +279,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsectionContent.Font = new Font("Microsoft Sans Serif", (float)8.25, FontStyle.Regular);
             subsectionContent.Location = new Point(9, 70);
             subsectionContent.Tag = sectionIndex + "," + subsectionIndex;
-            subsectionContent.Leave += new EventHandler(subsectionTextChanged);
             subsectionContent.Enter += new EventHandler(subsectionLast);
             subsectionContent.SelectionIndent = 40;
             subsectionContent.SelectionHangingIndent = -40;
@@ -388,7 +386,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             subsubsectionContent.Font = new Font("Times New Roman", (float)12, FontStyle.Regular);
             subsubsectionContent.Location = new Point(9, 70);
             subsubsectionContent.Tag = sectionIndex + "," + subsectionIndex + "," + subsubsectionIndex;
-            subsubsectionContent.Leave += new EventHandler(subsubsectionTextChanged);
             subsubsectionContent.Enter += new EventHandler(subsubsectionLast);
             subsubsectionContent.SelectionIndent = 40;
             subsubsectionContent.SelectionHangingIndent = -40;

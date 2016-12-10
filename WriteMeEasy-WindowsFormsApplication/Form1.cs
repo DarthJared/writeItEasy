@@ -13,10 +13,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         Loading loading = new Loading();
         private void saveToObject()
         {
-            myPaper.summary.title = summaryTitleText.Text;
             myPaper.abstractConfig.title = abstractTitleText.Text;
             myPaper.conclusion.title = conclusionTitleEnter.Text;
-            saveSummaryContent();
             saveAbstractContent();
             saveConclusionContent();
             myPaper.conclusion.onOwnPage = conclusionOwnPageCheck.Checked;
@@ -51,14 +49,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 myPaper.titlePage.alignment = "right";
             }
-            myPaper.summary.onOwnPage = summaryOwnPageCheck.Checked;
-            myPaper.summary.titleBold = summaryTitleBoldCheck.Checked;
-            myPaper.summary.titleFont = summaryTitleFontChoose.Text;
-            if (summaryTitleSizeChoose.Text.Length < 1)
-            {
-                summaryTitleSizeChoose.Text = "0";
-            }
-            myPaper.summary.titleSize = Convert.ToInt32(summaryTitleSizeChoose.Text);
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
             if (headerLeftNumberEnter.Text.Length < 1)
             {
@@ -130,7 +120,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.references.orderBy = referencesOrderChoose.Text;
             myPaper.abstractConfig.titleBold = abstractTitleBoldCheck.Checked;
             myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
-            myPaper.summary.titleAlign = summaryTitleAlignSelect.Text;
             myPaper.abstractConfig.titleAlign = abstractTitleAlignSelect.Text;
             myPaper.sectionsConfig.sectionLabelAlignment = sectionLabelAlignChoose.Text;
             myPaper.sectionsConfig.subsectionLabelAlignment = subsectionLabelAlignChoose.Text;
@@ -178,9 +167,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.references.includeTitle = referencesTitleIncludeCheck.Checked;
             myPaper.references.hangingIndent = referencesHangingIndentCheck.Checked;
             myPaper.includeConclusion = conclusionIncludeCheck.Checked;
-            myPaper.includeSummary = summaryIncludeCheck.Checked;
             myPaper.includeAbstract = abstractIncludeCheck.Checked;
-            myPaper.summary.includeTitle = summaryIncludeTitleCheck.Checked;
             myPaper.abstractConfig.includeTitle = abstractIncludeTitleCheck.Checked;
             myPaper.includeTitlePage = titlePageIncludeCheck.Checked;
             myPaper.titlePage.includeTitle = titlePageTitleCheck.Checked;
@@ -776,111 +763,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             myPaper.abstractConfig.content = formattedAbstract;
         }
-
-        private void saveSummaryContent()
-        {
-            startSelection = summaryContent.SelectionStart;
-            endSelection = summaryContent.SelectionLength + summaryContent.SelectionStart;
-
-            bool boldStarted = false;
-            bool italicStarted = false;
-            bool underlineStarted = false;
-            bool indentStarted = false;
-            string formattedSummary = "";
-            string currentFont = "";
-            string currentSize = "";
-
-            for (int i = 0; i < summaryContent.Text.Length; i++)
-            {
-                summaryContent.Select(i, 1);
-                if (summaryContent.SelectionIndent == 40 && summaryContent.SelectionHangingIndent == 0 && !indentStarted)
-                {
-                    formattedSummary += '\v';
-                    indentStarted = true;
-                }
-                else if ((summaryContent.SelectionIndent != 40 || summaryContent.SelectionHangingIndent != 0) && indentStarted)
-                {
-                    formattedSummary += '\v';
-                    indentStarted = false;
-                }
-                if (summaryContent.SelectionFont.Bold && !boldStarted)
-                {
-                    formattedSummary += '\b';
-                    boldStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Bold && boldStarted)
-                {
-                    formattedSummary += '\b';
-                    boldStarted = false;
-                }
-                if (summaryContent.SelectionFont.Italic && !italicStarted)
-                {
-                    formattedSummary += '\a';
-                    italicStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Italic && italicStarted)
-                {
-                    formattedSummary += '\a';
-                    italicStarted = false;
-                }
-                if (summaryContent.SelectionFont.Underline && !underlineStarted)
-                {
-                    formattedSummary += '\f';
-                    underlineStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Underline && underlineStarted)
-                {
-                    formattedSummary += '\f';
-                    underlineStarted = false;
-                }
-                if (!summaryContent.SelectionFont.Name.Equals(currentFont))
-                {
-                    currentFont = summaryContent.SelectionFont.Name;
-                    formattedSummary += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
-                }
-                if (!summaryContent.SelectionFont.Size.ToString().Equals(currentSize))
-                {
-                    currentSize = summaryContent.SelectionFont.Size.ToString();
-                    formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
-                }
-                if (summaryContent.SelectedText.Equals('\n'.ToString()))
-                {
-                    if (boldStarted)
-                    {
-                        formattedSummary += '\b';
-                    }
-                    if (italicStarted)
-                    {
-                        formattedSummary += '\a';
-                    }
-                    if (underlineStarted)
-                    {
-                        formattedSummary += '\f';
-                    }
-                    if (indentStarted)
-                    {
-                        formattedSummary += '\v';
-                    }
-                    indentStarted = false;
-                    boldStarted = false;
-                    italicStarted = false;
-                    underlineStarted = false;
-                }
-                formattedSummary += summaryContent.Text[i];
-                if (summaryContent.SelectedText.Equals('\n'.ToString()))
-                {
-                    formattedSummary += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
-                    formattedSummary += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
-                }
-            }
-            myPaper.summary.content = formattedSummary;
-        }
-
-        private void summaryTitleText_TextChanged(object sender, EventArgs e)
-        {            
-            myPaper.summary.title = summaryTitleText.Text;
-        }
-
+                
         private void abstractTitleText_TextChanged(object sender, EventArgs e)
         {
             myPaper.abstractConfig.title = abstractTitleText.Text;
@@ -889,105 +772,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void conclusionTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.conclusion.title = conclusionTitleEnter.Text;
-        }
-
-        private void summaryContent_TextChanged(object sender, EventArgs e)
-        {
-            startSelection = summaryContent.SelectionStart;
-            endSelection = summaryContent.SelectionLength + summaryContent.SelectionStart;
-
-            bool boldStarted = false;
-            bool italicStarted = false;
-            bool underlineStarted = false;
-            bool indentStarted = false;
-            string formattedSummary = "";
-            string currentFont = "";
-            string currentSize = "";
-            
-            for (int i = 0; i < summaryContent.Text.Length; i++)
-            {
-                summaryContent.Select(i, 1);
-                if (summaryContent.SelectionIndent == 40 && summaryContent.SelectionHangingIndent == 0 && !indentStarted)
-                {
-                    formattedSummary += '\v';
-                    indentStarted = true;
-                }
-                else if ((summaryContent.SelectionIndent != 40 || summaryContent.SelectionHangingIndent != 0) && indentStarted)
-                {
-                    formattedSummary += '\v';
-                    indentStarted = false;
-                }
-                if (summaryContent.SelectionFont.Bold && !boldStarted)
-                {
-                    formattedSummary += '\b';
-                    boldStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Bold && boldStarted)
-                {
-                    formattedSummary += '\b';
-                    boldStarted = false;
-                }
-                if (summaryContent.SelectionFont.Italic && !italicStarted)
-                {
-                    formattedSummary += '\a';
-                    italicStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Italic && italicStarted)
-                {
-                    formattedSummary += '\a';
-                    italicStarted = false;
-                }
-                if (summaryContent.SelectionFont.Underline && !underlineStarted)
-                {
-                    formattedSummary += '\f';
-                    underlineStarted = true;
-                }
-                else if (!summaryContent.SelectionFont.Underline && underlineStarted)
-                {
-                    formattedSummary += '\f';
-                    underlineStarted = false;
-                }
-                if (!summaryContent.SelectionFont.Name.Equals(currentFont))
-                {
-                    currentFont = summaryContent.SelectionFont.Name;
-                    formattedSummary += "\\ffffffffff\\" + currentFont + "\\ffffffffffff\\";
-                }
-                if (!summaryContent.SelectionFont.Size.ToString().Equals(currentSize))
-                {
-                    currentSize = summaryContent.SelectionFont.Size.ToString();
-                    formattedSummary += "\\ssssssssss\\" + currentSize + "\\ssssssssssss\\";
-                }
-                if (summaryContent.SelectedText.Equals('\n'.ToString()))
-                {
-                    if (boldStarted)
-                    {
-                        formattedSummary += '\b';
-                    }
-                    if (italicStarted)
-                    {
-                        formattedSummary += '\a';
-                    }
-                    if (underlineStarted)
-                    {
-                        formattedSummary += '\f';
-                    }
-                    if (indentStarted)
-                    {
-                        formattedSummary += '\v';
-                    }
-                    indentStarted = false;
-                    boldStarted = false;
-                    italicStarted = false;
-                    underlineStarted = false;
-                }
-                formattedSummary += summaryContent.Text[i];
-                if (summaryContent.SelectedText.Equals('\n'.ToString()))
-                {
-                    formattedSummary += "\\ffffffffff\\" + summaryContent.SelectionFont.Name + "\\ffffffffffff\\";
-                    formattedSummary += "\\ssssssssss\\" + summaryContent.SelectionFont.Size.ToString() + "\\ssssssssssss\\";
-                }
-            }
-            myPaper.summary.content = formattedSummary;
         }
 
         private void abstractContent_TextChanged(object sender, EventArgs e)
@@ -1293,37 +1077,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void titlePageDefaultButton_Click(object sender, EventArgs e)
         {
             //Set default settings for title page
-        }
-
-        private void summaryOwnPageCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            myPaper.summary.onOwnPage = summaryOwnPageCheck.Checked;
-        }
-
-        private void summaryTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            myPaper.summary.titleBold = summaryTitleBoldCheck.Checked;
-        }
-
-        private void summaryTitleFontChoose_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            myPaper.summary.titleFont = summaryTitleFontChoose.Text;
-        }
-
-        private void summaryTitleSizeChoose_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            myPaper.summary.titleSize = Convert.ToInt32(summaryTitleSizeChoose.Text);
-        }
-
-        private void summaryTitleColorButton_Click(object sender, EventArgs e)
-        {
-            //Change Title Color
-        }
-
-        private void summaryDefaultButton_Click(object sender, EventArgs e)
-        {
-            //Set default settings for summary
-        }
+        }        
 
         private void headerLeftTitleEnter_TextChanged(object sender, EventArgs e)
         {
@@ -1555,11 +1309,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void abstractOwnPageCheck_CheckedChanged(object sender, EventArgs e)
         {
             myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
-        }
-
-        private void summaryTitleAlignSelect_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            myPaper.summary.titleAlign = summaryTitleAlignSelect.Text;
         }
 
         private void abstractTitleAlignSelect_SelectedIndexChanged(object sender, EventArgs e)
@@ -1983,16 +1732,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                     }
 
                     progress.Value = 20;
-                    /*Summary Configurations*/
-                    writer.WriteElementString("SummaryOwnPage", myPaper.summary.onOwnPage.ToString());
-                    writer.WriteElementString("SummaryIncludeTitle", myPaper.summary.includeTitle.ToString());
-                    writer.WriteElementString("SummaryTitle", myPaper.summary.title);
-                    writer.WriteElementString("SummaryBoldTitle", myPaper.summary.titleBold.ToString());
-                    writer.WriteElementString("SummaryTitleFont", myPaper.summary.titleFont);
-                    writer.WriteElementString("SummaryTitleSize", myPaper.summary.titleSize.ToString());
-                    writer.WriteElementString("SummaryTitleColor", myPaper.summary.titleColor);
-                    writer.WriteElementString("SummaryTitleAlign", myPaper.summary.titleAlign);
-                    writer.WriteElementString("SummaryContent", myPaper.summary.content);
 
                     /*Abstract Configurations*/
                     writer.WriteElementString("AbstractOwnPage", myPaper.abstractConfig.onOwnPage.ToString());
@@ -2207,6 +1946,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("SectionLabelInline", myPaper.sectionsConfig.sectionLabelInlineWithText.ToString());
                     writer.WriteElementString("SectionLabelOwnLine", myPaper.sectionsConfig.sectionLabelOnOwnLine.ToString());
                     writer.WriteElementString("SectionLabelBold", myPaper.sectionsConfig.sectionLabelBold.ToString());
+                    writer.WriteElementString("SectionLabelItalics", myPaper.sectionsConfig.sectionLabelItalics.ToString());
                     writer.WriteElementString("SectionLabelAlign", myPaper.sectionsConfig.sectionLabelAlignment);
                     writer.WriteElementString("SectionLabelFont", myPaper.sectionsConfig.sectionLabelFont);
                     writer.WriteElementString("SectionLabelSize", myPaper.sectionsConfig.sectionLabelSize.ToString());
@@ -2214,6 +1954,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("SubsectionLabelInline", myPaper.sectionsConfig.subsectionLabelInlineWithText.ToString());
                     writer.WriteElementString("SubsectionLabelOwnLine", myPaper.sectionsConfig.subsectionLabelOnOwnLine.ToString());
                     writer.WriteElementString("SubsectionLabelBold", myPaper.sectionsConfig.subsectionLabelBold.ToString());
+                    writer.WriteElementString("SubsectionLabelItalics", myPaper.sectionsConfig.subsectionLabelItalics.ToString());
                     writer.WriteElementString("SubsectionLabelAlign", myPaper.sectionsConfig.subsectionLabelAlignment);
                     writer.WriteElementString("SubsectionLabelFont", myPaper.sectionsConfig.subsectionLabelFont);
                     writer.WriteElementString("SubsectionLabelSize", myPaper.sectionsConfig.subsectionLabelSize.ToString());
@@ -2221,6 +1962,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("SubsubsectionLabelInline", myPaper.sectionsConfig.subsubsectionLabelInlineWithText.ToString());
                     writer.WriteElementString("SubsubsectionLabelOwnLine", myPaper.sectionsConfig.subsubsectionLabelOnOwnLine.ToString());
                     writer.WriteElementString("SubsubsectionLabelBold", myPaper.sectionsConfig.subsubsectionLabelBold.ToString());
+                    writer.WriteElementString("SubsubectionLabelItalics", myPaper.sectionsConfig.subsubsectionLabelItalics.ToString());
                     writer.WriteElementString("SubsubsectionLabelAlign", myPaper.sectionsConfig.subsubsectionLabelAlignment);
                     writer.WriteElementString("SubsubsectionLabelFont", myPaper.sectionsConfig.subsubsectionLabelFont);
                     writer.WriteElementString("SubsubsectionLabelSize", myPaper.sectionsConfig.subsubsectionLabelSize.ToString());
@@ -2370,19 +2112,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else
                                     {
                                         titlePageIncludeCheck.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "IncludeSummary":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        summaryIncludeCheck.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        summaryIncludeCheck.Checked = false;
                                     }
                                 }
                                 break;
@@ -2576,81 +2305,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 //{
                                 //    myPaper.titlePage.titlePageOrder.Add(reader.Value);
                                 //}
-                                break;
-                            case "SummaryOwnPage":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        summaryOwnPageCheck.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        summaryOwnPageCheck.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "SummaryIncludeTitle":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        summaryIncludeTitleCheck.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        summaryIncludeTitleCheck.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "SummaryTitle":
-                                if (reader.Read())
-                                {
-                                    summaryTitleText.Text = reader.Value;
-                                }
-                                break;
-                            case "SummaryBoldTitle":
-                                if (reader.Read())
-                                {
-                                    if (reader.Value.Equals("True"))
-                                    {
-                                        summaryTitleBoldCheck.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        summaryTitleBoldCheck.Checked = false;
-                                    }
-                                }
-                                break;
-                            case "SummaryTitleFont":
-                                if (reader.Read())
-                                {
-                                    summaryTitleFontChoose.Text = reader.Value;
-                                }
-                                break;
-                            case "SummaryTitleSize":
-                                if (reader.Read())
-                                {
-                                    summaryTitleSizeChoose.Text = reader.Value;
-                                }
-                                break;
-                            case "SummaryTitleColor":
-                                if (reader.Read())
-                                {
-                                    summaryTitleColorText.Text = reader.Value;
-                                }
-                                break;
-                            case "SummaryTitleAlign":
-                                if (reader.Read())
-                                {
-                                    summaryTitleAlignSelect.Text = reader.Value;
-                                }
-                                break;
-                            case "SummaryContent":
-                                if (reader.Read())
-                                {
-                                    formatLoaded(reader.Value, summaryContent);
-                                }
                                 break;
                             case "AbstractOwnPage":
                                 if (reader.Read())
@@ -4531,6 +4185,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
                                 break;
+                            case "SectionLabelItalics":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        sectionLabelItalicizedCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        sectionLabelItalicizedCheck.Checked = false;
+                                    }
+                                }
+                                break;
                             case "SectionLabelAlign":
                                 if (reader.Read())
                                 {
@@ -4594,6 +4261,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     }
                                 }
                                 break;
+                            case "SubsectionLabelItalics":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsectionLabelItalicizedCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsectionLabelItalicizedCheck.Checked = false;
+                                    }
+                                }
+                                break;
                             case "SubsectionLabelAlign":
                                 if (reader.Read())
                                 {
@@ -4654,6 +4334,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else
                                     {
                                         subsubsectionLabelBoldCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "SubsubsectionLabelItalics":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        subsubsectionLabelItalicizedCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        subsubsectionLabelItalicizedCheck.Checked = false;
                                     }
                                 }
                                 break;

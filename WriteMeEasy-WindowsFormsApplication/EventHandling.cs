@@ -29,10 +29,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y + pixelsDown);
                 }
-                if (summaryActive)
-                {
-                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y + pixelsDown);
-                }
                 if (abstractActive)
                 {
                     abstractPanel.Location = new Point(0, abstractPanel.Location.Y + pixelsDown);
@@ -52,30 +48,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
             else if (startSection.Equals("TITLE_PAGE"))
-            {
-                if (summaryActive)
-                {
-                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y + pixelsDown);
-                }
-                if (abstractActive)
-                {
-                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y + pixelsDown);
-                }
-                if (headerActive)
-                {
-                    headerPanel.Location = new Point(0, headerPanel.Location.Y + pixelsDown);
-                }
-                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y + pixelsDown);
-                if (conclusionActive)
-                {
-                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y + pixelsDown);
-                }
-                if (referencesActive)
-                {
-                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y + pixelsDown);
-                }
-            }
-            else if (startSection.Equals("SUMMARY"))
             {
                 if (abstractActive)
                 {
@@ -163,10 +135,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 {
                     titlePagePanel.Location = new Point(0, titlePagePanel.Location.Y - pixelsUp);
                 }
-                if (summaryActive)
-                {
-                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y - pixelsUp);
-                }
                 if (abstractActive)
                 {
                     abstractPanel.Location = new Point(0, abstractPanel.Location.Y - pixelsUp);
@@ -186,30 +154,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }
             else if (startSection.Equals("TITLE_PAGE"))
-            {
-                if (summaryActive)
-                {
-                    summaryPanel.Location = new Point(0, summaryPanel.Location.Y - pixelsUp);
-                }
-                if (abstractActive)
-                {
-                    abstractPanel.Location = new Point(0, abstractPanel.Location.Y - pixelsUp);
-                }
-                if (headerActive)
-                {
-                    headerPanel.Location = new Point(0, headerPanel.Location.Y - pixelsUp);
-                }
-                sectionsPanel.Location = new Point(0, sectionsPanel.Location.Y - pixelsUp);
-                if (conclusionActive)
-                {
-                    conclusionPanel.Location = new Point(0, conclusionPanel.Location.Y - pixelsUp);
-                }
-                if (referencesActive)
-                {
-                    referencesPanel.Location = new Point(0, referencesPanel.Location.Y - pixelsUp);
-                }
-            }
-            else if (startSection.Equals("SUMMARY"))
             {
                 if (abstractActive)
                 {
@@ -333,7 +277,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 newButtonText = "APA Defaults";
                 titlePageIncludeCheck.Checked = true;
-                summaryIncludeCheck.Checked = false;
                 abstractIncludeCheck.Checked = true;
                 headerIncludeCheck.Checked = true;
                 conclusionIncludeCheck.Checked = true;
@@ -374,7 +317,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionLabelAlignChoose.Text = "Center";
                 sectionLabelBeforeRadio.Checked = true;
                 sectionLabelBoldCheck.Checked = true;
-                sectionLabelBullettedCheck.Checked = false;
+                sectionLabelItalicizedCheck.Checked = false;
                 sectionLabelFont.Text = "Times New Roman";
                 sectionLabelSize.Text = "12";
                 //TODO Add color for section label
@@ -383,7 +326,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelAlignChoose.Text = "Left";
                 subsectionLabelBeforeRadio.Checked = true;
                 subsectionLabelBoldCheck.Checked = true;
-                subsectionLabelBulletted.Checked = false;
+                subsectionLabelItalicizedCheck.Checked = false;
                 subsectionLabelFont.Text = "Times New Roman";
                 subsectionLabelSize.Text = "12";
                 //TODO Add color for subsection label
@@ -392,7 +335,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelAlignChoose.Text = "";
                 subsubsectionLabelInLineRadio.Checked = true;
                 subsubsectionLabelBoldCheck.Checked = true;
-                subsubsectionLabelBullettedCheck.Checked = false;
+                subsubsectionLabelItalicizedCheck.Checked = false;
                 subsubsectionLabelFont.Text = "Times New Roman";
                 subsubsectionLabelSize.Text = "12";
                 //TODO Add color for subsubsection label
@@ -443,7 +386,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 newButtonText = "MLA Defaults";
                 titlePageIncludeCheck.Checked = true;
-                summaryIncludeCheck.Checked = false;
                 abstractIncludeCheck.Checked = false;
                 headerIncludeCheck.Checked = true;
                 conclusionIncludeCheck.Checked = true;
@@ -470,7 +412,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sectionLabelAlignChoose.Text = "Center";
                 sectionLabelBeforeRadio.Checked = true;
                 sectionLabelBoldCheck.Checked = false;
-                sectionLabelBullettedCheck.Checked = false;
+                sectionLabelItalicizedCheck.Checked = false;
                 sectionLabelFont.Text = "Times New Roman";
                 sectionLabelSize.Text = "12";
                 //TODO Add color for section label
@@ -479,7 +421,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsectionLabelAlignChoose.Text = "Left";
                 subsectionLabelBeforeRadio.Checked = true;
                 subsectionLabelBoldCheck.Checked = false;
-                subsectionLabelBulletted.Checked = false;
+                subsectionLabelItalicizedCheck.Checked = false;
                 subsectionLabelFont.Text = "All Caps";
                 subsectionLabelSize.Text = "12";
                 //TODO Add color for subsection label
@@ -488,7 +430,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                 subsubsectionLabelAlignChoose.Text = "";
                 subsubsectionLabelInLineRadio.Checked = true;
                 subsubsectionLabelBoldCheck.Checked = false;
-                subsubsectionLabelBullettedCheck.Checked = false;
+                subsubsectionLabelItalicizedCheck.Checked = true;
                 subsubsectionLabelFont.Text = "Times New Roman";
                 subsubsectionLabelSize.Text = "12";
                 //TODO Add color for subsubsection label
@@ -537,7 +479,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             generalDefaultButton.Text = newButtonText;
             titlePageDefaultButton.Text = newButtonText;
-            summaryDefaultButton.Text = newButtonText;
             abstractDefaultButton.Text = newButtonText;
             headerDefaultButton.Text = newButtonText;
             sectionsDefaultButton.Text = newButtonText;

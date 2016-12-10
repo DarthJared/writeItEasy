@@ -1,11 +1,9 @@
 ISSUES:
--Fix centering with no label problem
 -Get bold, italics, underline, font, and size to show when selected
 -Redo UI
 -Fix Tabing
 -Add Managing references
 -Add placeholders
--Enter APA and MLA defaults
 -Make section heads right font and size
 -Add Page Numbers
 -Add different first page header
@@ -14,8 +12,5 @@ ISSUES:
 -Fix title page to work for same page or separate
 -Make able to create MLA paper
 -Remove summary
--Only allow sections and subsections for MLA?
 -Add fonts and sizes for labels
 -Add color picking
--Add italicizing for MLA level C section labels
-

@@ -19,10 +19,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool includeConclusion;
         public bool includeReferences;
         public TitlePageConfig titlePage;
-        public SummaryAbstractConfig summary;
         public SummaryAbstractConfig abstractConfig;
         public HeaderFooterConfig header;
-        public HeaderFooterConfig footer;
         public SectionsConfig sectionsConfig;
         public List<Section> sections;
         public ConclusionConfig conclusion;
@@ -31,13 +29,11 @@ namespace WriteMeEasy_WindowsFormsApplication
         public PaperConfig()
         {
             titlePage = new TitlePageConfig();
-            summary = new SummaryAbstractConfig();
             abstractConfig = new SummaryAbstractConfig();
             sections = new List<Section>();
             conclusion = new ConclusionConfig();
             sectionsConfig = new SectionsConfig();
             header = new HeaderFooterConfig();
-            footer = new HeaderFooterConfig();
             sections = new List<Section>();
             references = new ReferencesConfig();
             titleOfPaper = "";

@@ -14,9 +14,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             Width = 1000;
             WindowState = FormWindowState.Maximized;
 
-            sections.Add("GENERAL", 410);
+            sections.Add("GENERAL", 376);
             sections.Add("TITLE_PAGE", 458);
-            sections.Add("SUMMARY", 545);
             sections.Add("ABSTRACT", 545);
             sections.Add("HEADER", 825);
             sections.Add("SECTIONS", 865);
@@ -54,19 +53,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             referencesActive = false;
 
             titlePagePanel.Visible = false;
-            summaryPanel.Visible = false;
             abstractPanel.Visible = false;
             headerPanel.Visible = false;
             conclusionPanel.Visible = false;
             referencesPanel.Visible = false;
 
-            sectionsPanel.Location = new Point(0, generalPanel.Location.Y + generalPanel.Height);
-
-            summaryTitleGroupBox.Height = 45;
-            summaryDefaultButton.Location = new Point(9, 93);
-            summaryOptionsGroupBox.Height = 125;
-            summaryPanel.Height = 174;
-            sections["SUMMARY"] = 174;
+            sectionsPanel.Location = new Point(0, generalPanel.Location.Y + generalPanel.Height);            
 
             abstractTitleGroupBox.Height = 45;
             abstractDefaultButton.Location = new Point(9, 93);
@@ -118,8 +110,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             conclusionContent.SelectionHangingIndent = -40;
             abstractContent.SelectionIndent = 40;
             abstractContent.SelectionHangingIndent = -40;
-            summaryContent.SelectionIndent = 40;
-            summaryContent.SelectionHangingIndent = -40;
 
             apaRadio.Checked = true;
         }
@@ -141,8 +131,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             finalizePanel.Width = rightPanelWidth - 12;
             writeButton.Location = new Point(rightPanelWidth - 132, writeButton.Location.Y);
             contentPanel.Width = rightPanelWidth - 44;
-            summaryContentGroupBox.Width = rightPanelWidth - 67;
-            summaryContent.Width = rightPanelWidth - 85;
             abstractContentGroupBox.Width = rightPanelWidth - 67;
             abstractContent.Width = rightPanelWidth - 85;
             
