@@ -9,8 +9,8 @@ ISSUES:
 -Add different first page header
 -Add manually adjusting indented
 -Add title page ordering on load
--Fix title page to work for same page or separate
 -Make able to create MLA paper
 -Remove summary
 -Add fonts and sizes for labels
 -Add color picking
+-Add title to first page of paper

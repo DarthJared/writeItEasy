@@ -42,40 +42,23 @@ namespace WriteMeEasy_WindowsFormsApplication
                     object missing = System.Reflection.Missing.Value;
 
                     Document document = wordApp.Documents.Add(ref missing);
-                    //foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
-                    //{
-                    //    Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    //    headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
-                    //    headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                    //    headerRange.Font.ColorIndex = WdColorIndex.wdBlue;
-                    //    headerRange.Font.Size = 10;
-                    //    headerRange.Text = "Header text goes here";
-                    //}
-
-                    //foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
-                    //{
-                    //    Range footerRange = wordSection.Footers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    //    footerRange.Font.ColorIndex = WdColorIndex.wdDarkRed;
-                    //    footerRange.Font.Size = 10;
-                    //    footerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                    //    footerRange.Text = "Footer text goes here";
-                    //}
-
-                    //document.Content.SetRange(0, 0);
-                    //document.Content.Text = "This is test document " + Environment.NewLine;
 
                     if (myPaper.includeTitlePage)
                     {
-                        Paragraph blankLines1 = document.Content.Paragraphs.Add(ref missing);
-                        blankLines1.Range.InsertParagraphAfter();
-                        Paragraph blankLines2 = document.Content.Paragraphs.Add(ref missing);
-                        blankLines2.Range.InsertParagraphAfter();
-                        Paragraph blankLines3 = document.Content.Paragraphs.Add(ref missing);
-                        blankLines3.Range.InsertParagraphAfter();
-                        Paragraph blankLines4 = document.Content.Paragraphs.Add(ref missing);
-                        blankLines4.Range.InsertParagraphAfter();
-                        Paragraph blankLines5 = document.Content.Paragraphs.Add(ref missing);
-                        blankLines5.Range.InsertParagraphAfter();
+                        if (myPaper.titlePage.ownPage)
+                        {
+                            Paragraph blankLines1 = document.Content.Paragraphs.Add(ref missing);
+                            blankLines1.Range.InsertParagraphAfter();
+                            Paragraph blankLines2 = document.Content.Paragraphs.Add(ref missing);
+                            blankLines2.Range.InsertParagraphAfter();
+                            Paragraph blankLines3 = document.Content.Paragraphs.Add(ref missing);
+                            blankLines3.Range.InsertParagraphAfter();
+                            Paragraph blankLines4 = document.Content.Paragraphs.Add(ref missing);
+                            blankLines4.Range.InsertParagraphAfter();
+                            Paragraph blankLines5 = document.Content.Paragraphs.Add(ref missing);
+                            blankLines5.Range.InsertParagraphAfter();
+                        }
+                        
                         foreach (string titleItem in myPaper.titlePage.titlePageOrder)
                         {
                             string textToAdd = "";
@@ -127,8 +110,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 lineToAdd.Range.InsertParagraphAfter();
                             }
                         }
-                        Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
-                        pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                        if (myPaper.titlePage.ownPage)
+                        {
+                            Paragraph pagebreak = document.Content.Paragraphs.Add(ref missing);
+                            pagebreak.Range.InsertBreak(WdBreakType.wdPageBreak);
+                        }
                     }
 
                     if (myPaper.includeAbstract)

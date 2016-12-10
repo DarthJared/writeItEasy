@@ -14,6 +14,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool includeProfessor;
         public bool includeSchool;
         public bool includeDate;
+        public bool ownPage;
 
         public string title;
         public string name;
@@ -35,6 +36,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             includeProfessor = false;
             includeSchool = false;
             includeDate = false;
+            ownPage = false;
 
             title = "";
             name = "";

@@ -49,6 +49,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 myPaper.titlePage.alignment = "right";
             }
+            myPaper.titlePage.ownPage = titleOwnPageCheck.Checked;
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
             if (headerLeftNumberEnter.Text.Length < 1)
             {
@@ -1726,6 +1727,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("TitlePageSchool", myPaper.titlePage.school.ToString());
                     writer.WriteElementString("TitlePageDate", myPaper.titlePage.date.ToString());
                     writer.WriteElementString("TitlePageAlignment", myPaper.titlePage.alignment);
+                    writer.WriteElementString("TitlePageOwnPage", myPaper.titlePage.ownPage.ToString());
                     foreach (string item in myPaper.titlePage.titlePageOrder)
                     {
                         writer.WriteElementString("TitlePageItem", item);
@@ -2296,6 +2298,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else if (alignment.Equals("right"))
                                     {
                                         titlePageRightAllignRadio.Checked = true;
+                                    }
+                                }
+                                break;
+                            case "TitlePageOwnPage":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value == "True")
+                                    {
+                                        titleOwnPageCheck.Checked = true;
+                                    }
+                                    else if (reader.Value == "False")
+                                    {
+                                        titleInfoTopFirstPageCheck.Checked = true;
                                     }
                                 }
                                 break;

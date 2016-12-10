@@ -2276,12 +2276,14 @@
             // titleOwnPageCheck
             // 
             this.titleOwnPageCheck.AutoSize = true;
+            this.titleOwnPageCheck.Checked = true;
             this.titleOwnPageCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleOwnPageCheck.Location = new System.Drawing.Point(24, 46);
             this.titleOwnPageCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.titleOwnPageCheck.Name = "titleOwnPageCheck";
             this.titleOwnPageCheck.Size = new System.Drawing.Size(304, 36);
             this.titleOwnPageCheck.TabIndex = 1;
+            this.titleOwnPageCheck.TabStop = true;
             this.titleOwnPageCheck.Text = "Separate Title Page";
             this.titleOwnPageCheck.UseVisualStyleBackColor = true;
             // 
