@@ -12,10 +12,8 @@ namespace WriteMeEasy_WindowsFormsApplication
         public bool isAPA;
         public bool isMLA;
         public bool includeTitlePage;
-        public bool includeSummary;
         public bool includeAbstract;
         public bool includeHeader;
-        public bool includeFooter;
         public bool includeConclusion;
         public bool includeReferences;
         public TitlePageConfig titlePage;
@@ -40,10 +38,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             isAPA = true;
             isMLA = false;
             includeTitlePage = false;
-            includeSummary = false;
             includeAbstract = false;
             includeHeader = false;
-            includeFooter = false;
             includeConclusion = false;
             includeReferences = false;
         }

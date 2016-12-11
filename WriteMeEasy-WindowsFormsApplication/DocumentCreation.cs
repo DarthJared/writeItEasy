@@ -3137,19 +3137,22 @@ namespace WriteMeEasy_WindowsFormsApplication
                         foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
                         {
                             Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                            //if (myPaper.header.)
+                            headerRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+
                             headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
-                            headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-                            headerRange.Font.Size = 12;
-                            string headerText = constructHeader();
-                            headerRange.Text = headerText;
+                            //Paragraph pageNum = headerRange.Paragraphs.Add();
+
+
+
+                            //headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                            //headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            //headerRange.Font.Size = 12;
+                            //string headerText = constructHeader();
+                            //headerRange.Text = headerText;
+                            
                         }
                     }
-
-                    if (myPaper.includeFooter)
-                    {
-
-                    }
-
 
                     //TODO Make this dependent upon the setting
                     object beginDoc = document.Content.Start;

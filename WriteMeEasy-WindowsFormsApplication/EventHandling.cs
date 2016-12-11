@@ -403,7 +403,7 @@ namespace WriteMeEasy_WindowsFormsApplication
 
                 headerLeftEmptyRadio.Checked = true;
                 headerLeftTitleEnter.Text = paperTitleEnter.Text;
-                headerFirstRightPageNumberLastNameRadio.Checked = true;
+                headerRightNumNameRadio.Checked = true;
                 headerRightNumberEnter.Value = 1;
                 headerDiffFirstPageCheck.Checked = false;
 
