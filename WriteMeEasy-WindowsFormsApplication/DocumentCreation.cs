@@ -107,6 +107,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 {
                                     lineToAdd.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
                                 }
+                                lineToAdd.Range.Font.Name = "Times New Roman";
+                                lineToAdd.Range.Font.Size = 12;
                                 lineToAdd.Range.InsertParagraphAfter();
                             }
                         }
@@ -149,6 +151,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     text.Range.ParagraphFormat.FirstLineIndent = 0;
+                                    text.Range.Font.Name = myPaper.abstractConfig.titleFont;
+                                    text.Range.Font.Size = myPaper.abstractConfig.titleSize;
                                     text.Range.InsertParagraphAfter();
                                 }
 
@@ -456,6 +460,12 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     {
                                         string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                         sectiontext.Range.Text = section.title + ". " + unformatted;
+
+                                        Range rangeForFontSize = sectiontext.Range.Duplicate;
+                                        rangeForFontSize.SetRange(sectiontext.Range.Start, sectiontext.Range.Start + section.title.Length + 2);
+                                        rangeForFontSize.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
+                                        rangeForFontSize.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
+
                                         sectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
@@ -639,6 +649,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         {
                                             sectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                         }
+                                        sectiontext.Range.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
+                                        sectiontext.Range.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
+
                                         sectiontext.Range.InsertParagraphAfter();
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         sectiontext.Range.Bold = 0;
@@ -785,6 +798,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         sectiontext.Range.Text = section.title + ". " + unformatted;
                                         sectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                        Range rangeForFontSize = sectiontext.Range.Duplicate;
+                                        rangeForFontSize.SetRange(sectiontext.Range.Start, sectiontext.Range.Start + section.title.Length + 2);
+                                        rangeForFontSize.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
+                                        rangeForFontSize.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
 
                                         string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -1234,6 +1252,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             subsectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                             subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
+                                            Range rangeForFontSize = subsectiontext.Range.Duplicate;
+                                            rangeForFontSize.SetRange(subsectiontext.Range.Start, subsectiontext.Range.Start + subsection.title.Length + 2);
+                                            rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
+                                            rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
+
                                             string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
                                             string[] splitIndent = noFontSize.Split('\v');
@@ -1404,6 +1427,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             {
                                                 subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             }
+                                            subsectiontext.Range.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
+                                            subsectiontext.Range.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
+
                                             subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                             subsectiontext.Range.InsertParagraphAfter();
                                             subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
@@ -1550,6 +1576,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             subsectiontext.Range.Text = subsection.title + ". " + unformatted;
                                             subsectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                             subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                            Range rangeForFontSize = subsectiontext.Range.Duplicate;
+                                            rangeForFontSize.SetRange(subsectiontext.Range.Start, subsectiontext.Range.Start + subsection.title.Length + 2);
+                                            rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
+                                            rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
 
                                             string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -2001,6 +2032,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 subsubsectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                                 subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
 
+                                                Range rangeForFontSize = subsubsectiontext.Range.Duplicate;
+                                                rangeForFontSize.SetRange(subsubsectiontext.Range.Start, subsubsectiontext.Range.Start + subsubsection.title.Length + 2);
+                                                rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
+                                                rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
+
                                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
                                                 string[] splitIndent = noFontSize.Split('\v');
@@ -2173,6 +2209,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                     subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                                 }
                                                 subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
+                                                subsubsectiontext.Range.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
+                                                subsubsectiontext.Range.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
+
                                                 subsubsectiontext.Range.InsertParagraphAfter();
                                                 subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                                 subsubsectiontext.Range.Bold = 0;
@@ -2319,6 +2358,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 subsubsectiontext.Range.Text = subsubsection.title + ". " + unformatted;
                                                 subsubsectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                                 subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                                Range rangeForFontSize = subsubsectiontext.Range.Duplicate;
+                                                rangeForFontSize.SetRange(subsubsectiontext.Range.Start, subsubsectiontext.Range.Start + subsubsection.title.Length + 2);
+                                                rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
+                                                rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
 
                                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -2789,6 +2833,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     text.Range.ParagraphFormat.FirstLineIndent = 0;
+                                    text.Range.Font.Name = myPaper.conclusion.titleFont;
+                                    text.Range.Font.Size = myPaper.conclusion.titleSize;
                                     text.Range.InsertParagraphAfter();
                                 }
                                 string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
@@ -3097,6 +3143,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             text.Range.ParagraphFormat.FirstLineIndent = 0;
+                            text.Range.Font.Name = myPaper.references.titleFont;
+                            text.Range.Font.Size = myPaper.references.titleSize;
                             text.Range.InsertParagraphAfter();
                         }
                         foreach (Reference reference in myPaper.references.references)
@@ -3104,6 +3152,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             string formattedReference = reference.formattedReference;
                             string unformattedReference = formattedReference.Replace('\a'.ToString(), "");
                             text.Range.Text = unformattedReference;
+                            text.Range.Font.Name = myPaper.references.titleFont;
+                            text.Range.Font.Size = myPaper.references.titleSize;
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             text.Range.Bold = 0;
                             string[] splitReference = formattedReference.Split('\a');
@@ -3145,10 +3195,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     firstHeaderRange.Collapse(WdCollapseDirection.wdCollapseEnd);
                                     if (myPaper.header.firstRightLastPageNum)
                                     {
-                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
-                                        
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);                                        
                                         Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                         lastName.Range.Text = "\t\t" + myPaper.header.firstRightLastName + " ";
+                                        lastName.Range.Font.Name = myPaper.references.titleFont;
+                                        lastName.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstRightPageNum)
@@ -3156,18 +3207,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph spacer = firstHeaderRange.Paragraphs.Add();
                                         spacer.Range.Text = "\t\t";
+                                        spacer.Range.Font.Name = myPaper.references.titleFont;
+                                        spacer.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstRightOther)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "\t\t" + myPaper.header.firstRightOtherText;
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstRightTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText.ToUpper();
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     if (myPaper.header.firstLeftLastPageNum)
@@ -3175,6 +3232,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                         lastName.Range.Text = "Running head: " + myPaper.header.firstLeftLastName + " ";
+                                        lastName.Range.Font.Name = myPaper.references.titleFont;
+                                        lastName.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstLeftPageNum)
@@ -3182,20 +3241,28 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph text = firstHeaderRange.Paragraphs.Add();
                                         text.Range.Text = "Running head: ";
+                                        text.Range.Font.Name = myPaper.references.titleFont;
+                                        text.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstLeftOther)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "Running head: " + myPaper.header.firstLeftOtherText;
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.firstLeftTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "Running head: " + myPaper.header.firstLeftTitleText.ToUpper();
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
+                                    firstHeaderRange.Font.Name = myPaper.references.titleFont;
+                                    firstHeaderRange.Font.Size = myPaper.references.titleSize;
                                 }
                                 else
                                 {
@@ -3207,6 +3274,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                         lastName.Range.Text = "\t\t" + myPaper.header.rightLastName + " ";
+                                        lastName.Range.Font.Name = myPaper.references.titleFont;
+                                        lastName.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.rightPageNum)
@@ -3214,18 +3283,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph spacer = firstHeaderRange.Paragraphs.Add();
                                         spacer.Range.Text = "\t\t";
+                                        spacer.Range.Font.Name = myPaper.references.titleFont;
+                                        spacer.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.rightOther)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "\t\t" + myPaper.header.rightOtherText;
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.rightTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "\t\t" + myPaper.header.rightTitleText.ToUpper();
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     if (myPaper.header.leftLastPageNum)
@@ -3233,6 +3308,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                         lastName.Range.Text = "Running head: " + myPaper.header.leftLastName + " ";
+                                        lastName.Range.Font.Name = myPaper.references.titleFont;
+                                        lastName.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.leftPageNum)
@@ -3240,20 +3317,28 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                         Paragraph text = firstHeaderRange.Paragraphs.Add();
                                         text.Range.Text = "Running head: ";
+                                        text.Range.Font.Name = myPaper.references.titleFont;
+                                        text.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.leftOther)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "Running head: " + myPaper.header.leftOtherText;
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     else if (myPaper.header.leftTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
                                         other.Range.Text = "Running head: " + myPaper.header.leftTitleText.ToUpper();
+                                        other.Range.Font.Name = myPaper.references.titleFont;
+                                        other.Range.Font.Size = myPaper.references.titleSize;
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
+                                    firstHeaderRange.Font.Name = myPaper.references.titleFont;
+                                    firstHeaderRange.Font.Size = myPaper.references.titleSize;
                                 }
                             }
                             if (myPaper.header.differentFirstPage && myPaper.header.moreDifferent)
@@ -3266,6 +3351,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                     Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                     lastName.Range.Text = "\t\t" + myPaper.header.firstRightLastName + " ";
+                                    lastName.Range.Font.Name = myPaper.references.titleFont;
+                                    lastName.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstRightPageNum)
@@ -3273,18 +3360,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                     Paragraph spacer = firstHeaderRange.Paragraphs.Add();
                                     spacer.Range.Text = "\t\t";
+                                    spacer.Range.Font.Name = myPaper.references.titleFont;
+                                    spacer.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstRightOther)
                                 {
                                     Paragraph other = firstHeaderRange.Paragraphs.Add();
                                     other.Range.Text = "\t\t" + myPaper.header.firstRightOtherText;
+                                    other.Range.Font.Name = myPaper.references.titleFont;
+                                    other.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstRightTitle)
                                 {
                                     Paragraph other = firstHeaderRange.Paragraphs.Add();
                                     other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText;
+                                    other.Range.Font.Name = myPaper.references.titleFont;
+                                    other.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 if (myPaper.header.firstLeftLastPageNum)
@@ -3292,25 +3385,37 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
                                     Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                     lastName.Range.Text = myPaper.header.firstLeftLastName + " ";
+                                    lastName.Range.Font.Name = myPaper.references.titleFont;
+                                    lastName.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstLeftPageNum)
                                 {
                                     firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                    Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                    lastName.Range.Text = "";
+                                    lastName.Range.Font.Name = myPaper.references.titleFont;
+                                    lastName.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstLeftOther)
                                 {
                                     Paragraph other = firstHeaderRange.Paragraphs.Add();
                                     other.Range.Text = myPaper.header.firstLeftOtherText;
+                                    other.Range.Font.Name = myPaper.references.titleFont;
+                                    other.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                                 else if (myPaper.header.firstLeftTitle)
                                 {
                                     Paragraph other = firstHeaderRange.Paragraphs.Add();
                                     other.Range.Text = myPaper.header.firstLeftTitleText.ToUpper();
+                                    other.Range.Font.Name = myPaper.references.titleFont;
+                                    other.Range.Font.Size = myPaper.references.titleSize;
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
+                                firstHeaderRange.Font.Name = myPaper.references.titleFont;
+                                firstHeaderRange.Font.Size = myPaper.references.titleSize;
                             }
 
                             Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
@@ -3320,6 +3425,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
                                 Paragraph lastName = headerRange.Paragraphs.Add();
                                 lastName.Range.Text = "\t\t" + myPaper.header.rightLastName + " ";
+                                lastName.Range.Font.Name = myPaper.references.titleFont;
+                                lastName.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.rightPageNum)
@@ -3327,18 +3434,24 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
                                 Paragraph spacer = headerRange.Paragraphs.Add();
                                 spacer.Range.Text = "\t\t";
+                                spacer.Range.Font.Name = myPaper.references.titleFont;
+                                spacer.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.rightOther)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
                                 other.Range.Text = "\t\t" + myPaper.header.rightOtherText;
+                                other.Range.Font.Name = myPaper.references.titleFont;
+                                other.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.rightTitle)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
                                 other.Range.Text = "\t\t" + myPaper.header.rightTitleText.ToUpper();
+                                other.Range.Font.Name = myPaper.references.titleFont;
+                                other.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             if (myPaper.header.leftLastPageNum)
@@ -3346,26 +3459,37 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
                                 Paragraph lastName = headerRange.Paragraphs.Add();
                                 lastName.Range.Text = myPaper.header.leftLastName + " ";
+                                lastName.Range.Font.Name = myPaper.references.titleFont;
+                                lastName.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.leftPageNum)
                             {
                                 headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                                Paragraph lastName = headerRange.Paragraphs.Add();
+                                lastName.Range.Text = "";
+                                lastName.Range.Font.Name = myPaper.references.titleFont;
+                                lastName.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.leftOther)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
                                 other.Range.Text = myPaper.header.leftOtherText;
+                                other.Range.Font.Name = myPaper.references.titleFont;
+                                other.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             else if (myPaper.header.leftTitle)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
                                 other.Range.Text = myPaper.header.leftTitleText.ToUpper();
+                                other.Range.Font.Name = myPaper.references.titleFont;
+                                other.Range.Font.Size = myPaper.references.titleSize;
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
-
+                            headerRange.Font.Name = myPaper.references.titleFont;
+                            headerRange.Font.Size = myPaper.references.titleSize;
 
 
                             //Paragraph pageNum = headerRange.Paragraphs.Add();

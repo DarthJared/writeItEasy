@@ -126,8 +126,13 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.references.emptyLineBetweenReferences = referencesEmptyLineBetweenCheck.Checked;
             myPaper.references.orderBy = referencesOrderChoose.Text;
             myPaper.abstractConfig.titleBold = abstractTitleBoldCheck.Checked;
+            myPaper.abstractConfig.titleSize = Convert.ToInt32(abstractTitleSizeChoose.Text);
+            myPaper.abstractConfig.titleFont = abstractTitleFontChoose.Text;
             myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
             myPaper.abstractConfig.titleAlign = abstractTitleAlignSelect.Text;
+            myPaper.sectionsConfig.sectionLabelItalics = sectionLabelItalicizedCheck.Checked;
+            myPaper.sectionsConfig.subsectionLabelItalics = subsectionLabelItalicizedCheck.Checked;
+            myPaper.sectionsConfig.subsubsectionLabelItalics = subsubsectionLabelItalicizedCheck.Checked;
             myPaper.sectionsConfig.sectionLabelAlignment = sectionLabelAlignChoose.Text;
             myPaper.sectionsConfig.subsectionLabelAlignment = subsectionLabelAlignChoose.Text;
             myPaper.sectionsConfig.subsubsectionLabelAlignment = subsubsectionLabelAlignChoose.Text;

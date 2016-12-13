@@ -10,3 +10,5 @@ ISSUES:
 -Add color picking
 -Add title to first page of paper
 -Add short name recommendation for title in header
+-Add dropdown for title page and references and header size and font
+-Add options to font and size dropdowns
