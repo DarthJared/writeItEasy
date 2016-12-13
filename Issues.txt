@@ -4,10 +4,9 @@ ISSUES:
 -Fix Tabing
 -Add Managing references
 -Add placeholders
--Make section heads right font and size
 -Add manually adjusting indented
 -Add title page ordering on load
--Add color picking
+-Add color picking for normal text
 -Add title to first page of paper
 -Add short name recommendation for title in header
 -Add dropdown for title page and references and header size and font
