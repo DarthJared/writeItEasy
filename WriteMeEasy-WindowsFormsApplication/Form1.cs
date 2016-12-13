@@ -50,6 +50,27 @@ namespace WriteMeEasy_WindowsFormsApplication
                 myPaper.titlePage.alignment = "right";
             }
             myPaper.titlePage.ownPage = titleOwnPageCheck.Checked;
+            myPaper.header.leftTitle = headerLeftTitleRadio.Checked;
+            myPaper.header.leftPageNum = headerLeftNumberRadio.Checked;
+            myPaper.header.leftOther = headerLeftOtherRadio.Checked;
+            myPaper.header.leftLastPageNum = headerLeftNumNameRadio.Checked;
+            myPaper.header.rightTitle = headerRightTitleRadio.Checked;
+            myPaper.header.rightPageNum = headerRightNumberRadio.Checked;
+            myPaper.header.rightOther = headerRightOtherRadio.Checked;
+            myPaper.header.rightLastPageNum = headerRightNumNameRadio.Checked;
+            myPaper.header.firstLeftTitle = headerFirstLeftTitleRadio.Checked;
+            myPaper.header.firstLeftPageNum = headerFirstLeftNumberRadio.Checked;
+            myPaper.header.firstLeftOther = headerFirstLeftOtherRadio.Checked;
+            myPaper.header.firstLeftLastPageNum = headerFirstLeftPageNumberLastNameRadio.Checked;
+            myPaper.header.firstRightTitle = headerFirstRightTitleRadio.Checked;
+            myPaper.header.firstRightPageNum = headerFirstRightNumberRadio.Checked;
+            myPaper.header.firstRightOther = headerFirstRightOtherRadio.Checked;
+            myPaper.header.firstRightLastPageNum = headerFirstRightPageNumberLastNameRadio.Checked;
+            myPaper.header.leftLastName = headerLeftLastNameEnter.Text;
+            myPaper.header.rightLastName = headerRightLastNameEnter.Text;
+            myPaper.header.firstLeftLastName = headerFirstLeftLastNameEnter.Text;
+            myPaper.header.firstRightLastName = headerFirstRightLastNameEnter.Text;
+            myPaper.header.moreDifferent = headerFirstPageMoreCheck.Checked;
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
             if (headerLeftNumberEnter.Text.Length < 1)
             {
@@ -1777,6 +1798,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     /*Header Configurations*/
                     writer.WriteElementString("HeaderDifferentFirst", myPaper.header.differentFirstPage.ToString());
                     writer.WriteElementString("HeaderUseRunningHead", myPaper.header.useRunningHead.ToString());
+                    writer.WriteElementString("HeaderFirstPageMore", myPaper.header.moreDifferent.ToString());
                     writer.WriteElementString("HeaderLeftTitle", myPaper.header.leftTitle.ToString());
                     writer.WriteElementString("HeaderLeftPageNum", myPaper.header.leftPageNum.ToString());
                     writer.WriteElementString("HeaderLeftOther", myPaper.header.leftOther.ToString());
@@ -2441,6 +2463,19 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else
                                     {
                                         headerFirstPageUseRunningHeadCheck.Checked = false;
+                                    }
+                                }
+                                break;
+                            case "HeaderFirstPageMore":
+                                if (reader.Read())
+                                {
+                                    if (reader.Value.Equals("True"))
+                                    {
+                                        headerFirstPageMoreCheck.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        headerFirstPageMoreCheck.Checked = false;
                                     }
                                 }
                                 break;

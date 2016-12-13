@@ -12,3 +12,5 @@ ISSUES:
 -Add fonts and sizes for labels
 -Add color picking
 -Add title to first page of paper
+-Add short name recommendation for title in header
+-Only have one start page number

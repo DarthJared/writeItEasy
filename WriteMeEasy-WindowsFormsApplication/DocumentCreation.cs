@@ -3136,11 +3136,237 @@ namespace WriteMeEasy_WindowsFormsApplication
                     {
                         foreach (Microsoft.Office.Interop.Word.Section section in document.Sections)
                         {
-                            Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                            //if (myPaper.header.)
-                            headerRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+                            if (myPaper.header.differentFirstPage && myPaper.header.useRunningHead)
+                            {
+                                if (myPaper.header.moreDifferent)
+                                {
+                                    document.PageSetup.DifferentFirstPageHeaderFooter = -1;
+                                    Range firstHeaderRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
+                                    firstHeaderRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+                                    if (myPaper.header.firstRightLastPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                        lastName.Range.Text = "\t\t" + myPaper.header.firstRightLastName + " ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstRightPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph spacer = firstHeaderRange.Paragraphs.Add();
+                                        spacer.Range.Text = "\t\t";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstRightOther)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "\t\t" + myPaper.header.firstRightOtherText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstRightTitle)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    if (myPaper.header.firstLeftLastPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                        lastName.Range.Text = "Running head: " + myPaper.header.firstLeftLastName + " ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstLeftPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph text = firstHeaderRange.Paragraphs.Add();
+                                        text.Range.Text = "Running head: ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstLeftOther)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "Running head: " + myPaper.header.firstLeftOtherText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.firstLeftTitle)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "Running head: " + myPaper.header.firstLeftTitleText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                }
+                                else
+                                {
+                                    document.PageSetup.DifferentFirstPageHeaderFooter = -1;
+                                    Range firstHeaderRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
+                                    firstHeaderRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+                                    if (myPaper.header.rightLastPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                        lastName.Range.Text = "\t\t" + myPaper.header.rightLastName + " ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.rightPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph spacer = firstHeaderRange.Paragraphs.Add();
+                                        spacer.Range.Text = "\t\t";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.rightOther)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "\t\t" + myPaper.header.rightOtherText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.rightTitle)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "\t\t" + myPaper.header.rightTitleText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    if (myPaper.header.leftLastPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                        lastName.Range.Text = "Running head: " + myPaper.header.leftLastName + " ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.leftPageNum)
+                                    {
+                                        firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        Paragraph text = firstHeaderRange.Paragraphs.Add();
+                                        text.Range.Text = "Running head: ";
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.leftOther)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "Running head: " + myPaper.header.leftOtherText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                    else if (myPaper.header.leftTitle)
+                                    {
+                                        Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                        other.Range.Text = "Running head: " + myPaper.header.leftTitleText;
+                                        firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                    }
+                                }
+                            }
+                            if (myPaper.header.differentFirstPage && myPaper.header.moreDifferent)
+                            {
+                                document.PageSetup.DifferentFirstPageHeaderFooter = -1;
+                                Range firstHeaderRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
+                                firstHeaderRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+                                if (myPaper.header.firstRightLastPageNum)
+                                {
+                                    firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                    Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                    lastName.Range.Text = "\t\t" + myPaper.header.firstRightLastName + " ";
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstRightPageNum)
+                                {
+                                    firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                    Paragraph spacer = firstHeaderRange.Paragraphs.Add();
+                                    spacer.Range.Text = "\t\t";
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstRightOther)
+                                {
+                                    Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                    other.Range.Text = "\t\t" + myPaper.header.firstRightOtherText;
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstRightTitle)
+                                {
+                                    Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                    other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText;
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                if (myPaper.header.firstLeftLastPageNum)
+                                {
+                                    firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                    Paragraph lastName = firstHeaderRange.Paragraphs.Add();
+                                    lastName.Range.Text = myPaper.header.firstLeftLastName + " ";
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstLeftPageNum)
+                                {
+                                    firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstLeftOther)
+                                {
+                                    Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                    other.Range.Text = myPaper.header.firstLeftOtherText;
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                                else if (myPaper.header.firstLeftTitle)
+                                {
+                                    Paragraph other = firstHeaderRange.Paragraphs.Add();
+                                    other.Range.Text = myPaper.header.firstLeftTitleText;
+                                    firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                }
+                            }
 
-                            headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                            Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                            headerRange.Collapse(WdCollapseDirection.wdCollapseEnd);
+                            if (myPaper.header.rightLastPageNum)
+                            {
+                                headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                                Paragraph lastName = headerRange.Paragraphs.Add();
+                                lastName.Range.Text = "\t\t" + myPaper.header.rightLastName + " ";
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.rightPageNum)
+                            {
+                                headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                                Paragraph spacer = headerRange.Paragraphs.Add();
+                                spacer.Range.Text = "\t\t";
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.rightOther)
+                            {
+                                Paragraph other = headerRange.Paragraphs.Add();
+                                other.Range.Text = "\t\t" + myPaper.header.rightOtherText;
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.rightTitle)
+                            {
+                                Paragraph other = headerRange.Paragraphs.Add();
+                                other.Range.Text = "\t\t" + myPaper.header.rightTitleText;
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            if (myPaper.header.leftLastPageNum)
+                            {
+                                headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                                Paragraph lastName = headerRange.Paragraphs.Add();
+                                lastName.Range.Text = myPaper.header.leftLastName + " ";
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.leftPageNum)
+                            {
+                                headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.leftOther)
+                            {
+                                Paragraph other = headerRange.Paragraphs.Add();
+                                other.Range.Text = myPaper.header.leftOtherText;
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else if (myPaper.header.leftTitle)
+                            {
+                                Paragraph other = headerRange.Paragraphs.Add();
+                                other.Range.Text = myPaper.header.leftTitleText;
+                                headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+
+
+
                             //Paragraph pageNum = headerRange.Paragraphs.Add();
 
 
@@ -3150,7 +3376,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             //headerRange.Font.Size = 12;
                             //string headerText = constructHeader();
                             //headerRange.Text = headerText;
-                            
+
                         }
                     }
 

@@ -10,6 +10,7 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         public bool differentFirstPage;
         public bool useRunningHead;
+        public bool moreDifferent;
 
         public bool leftTitle;
         public bool leftPageNum;
@@ -59,6 +60,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             differentFirstPage = false;
             useRunningHead = false;
+            moreDifferent = false;
 
             leftTitle = false;
             leftPageNum = false;
