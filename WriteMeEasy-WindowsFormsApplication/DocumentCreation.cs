@@ -153,6 +153,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     text.Range.ParagraphFormat.FirstLineIndent = 0;
                                     text.Range.Font.Name = myPaper.abstractConfig.titleFont;
                                     text.Range.Font.Size = myPaper.abstractConfig.titleSize;
+                                    string[] colors = myPaper.abstractConfig.titleColor.Split(',');
+                                    Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                    text.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
                                     text.Range.InsertParagraphAfter();
                                 }
 
@@ -161,6 +164,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 text.Range.ParagraphFormat.LeftIndent = 0;
                                 text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 text.Range.Bold = 0;
+                                text.Range.Font.Color = WdColor.wdColorBlack;
 
                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -465,10 +469,13 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         rangeForFontSize.SetRange(sectiontext.Range.Start, sectiontext.Range.Start + section.title.Length + 2);
                                         rangeForFontSize.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
                                         rangeForFontSize.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
+                                        string[] colors = myPaper.sectionsConfig.sectionLabelColor.Split(',');
+                                        Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                        rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                         sectiontext.Range.ParagraphFormat.LeftIndent = 0;
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
-
+                                        
                                         string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
                                         string[] splitIndent = noFontSize.Split('\v');
@@ -651,11 +658,15 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         }
                                         sectiontext.Range.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
                                         sectiontext.Range.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
+                                        string[] colors = myPaper.sectionsConfig.sectionLabelColor.Split(',');
+                                        Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                        sectiontext.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                         sectiontext.Range.InsertParagraphAfter();
                                         sectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                         sectiontext.Range.Bold = 0;
                                         sectiontext.Range.Italic = 0;
+                                        sectiontext.Range.Font.Color = WdColor.wdColorBlack;
 
                                         string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                         sectiontext.Range.Text = unformatted;
@@ -803,6 +814,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                         rangeForFontSize.SetRange(sectiontext.Range.Start, sectiontext.Range.Start + section.title.Length + 2);
                                         rangeForFontSize.Font.Name = myPaper.sectionsConfig.sectionLabelFont;
                                         rangeForFontSize.Font.Size = myPaper.sectionsConfig.sectionLabelSize;
+                                        string[] colors = myPaper.sectionsConfig.sectionLabelColor.Split(',');
+                                        Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                        rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                         string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -1256,6 +1270,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             rangeForFontSize.SetRange(subsectiontext.Range.Start, subsectiontext.Range.Start + subsection.title.Length + 2);
                                             rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
                                             rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
+                                            string[] colors = myPaper.sectionsConfig.subsectionLabelColor.Split(',');
+                                            Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                            rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                             string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -1429,12 +1446,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             }
                                             subsectiontext.Range.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
                                             subsectiontext.Range.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
+                                            string[] colors = myPaper.sectionsConfig.subsectionLabelColor.Split(',');
+                                            Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                            subsectiontext.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                             subsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                             subsectiontext.Range.InsertParagraphAfter();
                                             subsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                             subsectiontext.Range.Bold = 0;
                                             subsectiontext.Range.Italic = 0;
+                                            subsectiontext.Range.Font.Color = WdColor.wdColorBlack;
 
                                             string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                             subsectiontext.Range.Text = unformatted;
@@ -1581,6 +1602,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                             rangeForFontSize.SetRange(subsectiontext.Range.Start, subsectiontext.Range.Start + subsection.title.Length + 2);
                                             rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsectionLabelFont;
                                             rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsectionLabelSize;
+                                            string[] colors = myPaper.sectionsConfig.subsectionLabelColor.Split(',');
+                                            Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                            rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                             string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -2036,6 +2060,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 rangeForFontSize.SetRange(subsubsectiontext.Range.Start, subsubsectiontext.Range.Start + subsubsection.title.Length + 2);
                                                 rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
                                                 rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
+                                                string[] colors = myPaper.sectionsConfig.subsubsectionLabelColor.Split(',');
+                                                Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                                rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -2211,11 +2238,15 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 subsubsectiontext.Range.ParagraphFormat.FirstLineIndent = 0;
                                                 subsubsectiontext.Range.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
                                                 subsubsectiontext.Range.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
+                                                string[] colors = myPaper.sectionsConfig.subsubsectionLabelColor.Split(',');
+                                                Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                                subsubsectiontext.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                                 subsubsectiontext.Range.InsertParagraphAfter();
                                                 subsubsectiontext.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                                 subsubsectiontext.Range.Bold = 0;
                                                 subsubsectiontext.Range.Italic = 0;
+                                                subsubsectiontext.Range.Font.Color = WdColor.wdColorBlack;
 
                                                 string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
                                                 subsubsectiontext.Range.Text = unformatted;
@@ -2363,6 +2394,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                                 rangeForFontSize.SetRange(subsubsectiontext.Range.Start, subsubsectiontext.Range.Start + subsubsection.title.Length + 2);
                                                 rangeForFontSize.Font.Name = myPaper.sectionsConfig.subsubsectionLabelFont;
                                                 rangeForFontSize.Font.Size = myPaper.sectionsConfig.subsubsectionLabelSize;
+                                                string[] colors = myPaper.sectionsConfig.subsubsectionLabelColor.Split(',');
+                                                Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                                rangeForFontSize.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
 
                                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -2835,6 +2869,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     text.Range.ParagraphFormat.FirstLineIndent = 0;
                                     text.Range.Font.Name = myPaper.conclusion.titleFont;
                                     text.Range.Font.Size = myPaper.conclusion.titleSize;
+                                    string[] colors = myPaper.conclusion.titleColor.Split(',');
+                                    Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                                    text.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
                                     text.Range.InsertParagraphAfter();
                                 }
                                 string unformatted = Regex.Replace(Regex.Replace(splitPara.Replace('\b'.ToString(), "").Replace('\a'.ToString(), "").Replace('\f'.ToString(), "").Replace('\v'.ToString(), ""), fontPattern, ""), sizePattern, "");
@@ -2842,6 +2879,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 text.Range.ParagraphFormat.LeftIndent = 0;
                                 text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 text.Range.Bold = 0;
+                                text.Range.Font.Color = WdColor.wdColorBlack;
 
                                 string noFontSize = Regex.Replace(Regex.Replace(splitPara, fontPattern, ""), sizePattern, "");
 
@@ -3145,6 +3183,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                             text.Range.ParagraphFormat.FirstLineIndent = 0;
                             text.Range.Font.Name = myPaper.references.titleFont;
                             text.Range.Font.Size = myPaper.references.titleSize;
+                            string[] colors = myPaper.references.titleColor.Split(',');
+                            Color color = Color.FromArgb(Convert.ToInt32(colors[3]), Convert.ToInt32(colors[0]), Convert.ToInt32(colors[1]), Convert.ToInt32(colors[2]));
+                            text.Range.Font.Color = (WdColor)(color.R + 0x100 * color.G + 0x10000 * color.B);
                             text.Range.InsertParagraphAfter();
                         }
                         foreach (Reference reference in myPaper.references.references)
@@ -3154,6 +3195,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             text.Range.Text = unformattedReference;
                             text.Range.Font.Name = myPaper.references.titleFont;
                             text.Range.Font.Size = myPaper.references.titleSize;
+                            text.Range.Font.Color = WdColor.wdColorBlack;                           
                             text.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             text.Range.Bold = 0;
                             string[] splitReference = formattedReference.Split('\a');

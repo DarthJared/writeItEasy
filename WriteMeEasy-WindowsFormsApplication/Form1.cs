@@ -10,7 +10,8 @@ namespace WriteMeEasy_WindowsFormsApplication
 {
     public partial class Form1 : Form
     {
-        Loading loading = new Loading();
+        Loading loading = new Loading();        
+
         private void saveToObject()
         {
             myPaper.abstractConfig.title = abstractTitleText.Text;
@@ -84,6 +85,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
             myPaper.sectionsConfig.sectionLabelBold = sectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.sectionLabelFont = sectionLabelFont.Text;
+            myPaper.sectionsConfig.sectionLabelColor = sectionLabelColorText.BackColor.R + "," + sectionLabelColorText.BackColor.G + "," + sectionLabelColorText.BackColor.B + "," + sectionLabelColorText.BackColor.A;
             if (sectionLabelSize.Text.Length < 1)
             {
                 sectionLabelSize.Text = "0";
@@ -95,9 +97,11 @@ namespace WriteMeEasy_WindowsFormsApplication
             }
             myPaper.sectionsConfig.subsectionLabelSize = Convert.ToInt32(subsectionLabelSize.Text);
             myPaper.sectionsConfig.subsectionLabelFont = subsectionLabelFont.Text;
+            myPaper.sectionsConfig.subsectionLabelColor = subsectionLabelColorText.BackColor.R + "," + subsectionLabelColorText.BackColor.G + "," + subsectionLabelColorText.BackColor.B + "," + subsectionLabelColorText.BackColor.A;
             myPaper.sectionsConfig.subsectionLabelBold = subsectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.subsubsectionLabelBold = subsubsectionLabelBoldCheck.Checked;
             myPaper.sectionsConfig.subsubsectionLabelFont = subsubsectionLabelFont.Text;
+            myPaper.sectionsConfig.subsubsectionLabelColor = subsubsectionLabelColorText.BackColor.R + "," + subsubsectionLabelColorText.BackColor.G + "," + subsubsectionLabelColorText.BackColor.B + "," + subsubsectionLabelColorText.BackColor.A;
             if (subsubsectionLabelSize.Text.Length < 1)
             {
                 subsubsectionLabelSize.Text = "0";
@@ -105,6 +109,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.sectionsConfig.subsubsectionLabelSize = Convert.ToInt32(subsubsectionLabelSize.Text);
             myPaper.conclusion.boldTitle = conclusionTitleBoldCheck.Checked;
             myPaper.conclusion.titleFont = conclusionTitleFontChoose.Text;
+            myPaper.conclusion.titleColor = conclusionTitleColorText.BackColor.R + "," + conclusionTitleColorText.BackColor.G + "," + conclusionTitleColorText.BackColor.B + "," + conclusionTitleColorText.BackColor.A;
             if (conclusionTitleSizeChoose.Text.Length < 1)
             {
                 conclusionTitleSizeChoose.Text = "0";
@@ -113,6 +118,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.references.title = referencesTitleEnter.Text;
             myPaper.references.boldTitle = referencesTitleBoldCheck.Checked;
             myPaper.references.titleFont = referencesTitleFontChoose.Text;
+            myPaper.references.titleColor = referencesTitleColorText.BackColor.R + "," + referencesTitleColorText.BackColor.G + "," + referencesTitleColorText.BackColor.B + "," + referencesTitleColorText.BackColor.A;
             if (referencesTitleSizeChoose.Text.Length < 1)
             {
                 referencesTitleSizeChoose.Text = "0";
@@ -128,6 +134,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.abstractConfig.titleBold = abstractTitleBoldCheck.Checked;
             myPaper.abstractConfig.titleSize = Convert.ToInt32(abstractTitleSizeChoose.Text);
             myPaper.abstractConfig.titleFont = abstractTitleFontChoose.Text;
+            myPaper.abstractConfig.titleColor = abstractTitleColorText.BackColor.R + "," + abstractTitleColorText.BackColor.G + "," + abstractTitleColorText.BackColor.B + "," + abstractTitleColorText.BackColor.A;
             myPaper.abstractConfig.onOwnPage = abstractOwnPageCheck.Checked;
             myPaper.abstractConfig.titleAlign = abstractTitleAlignSelect.Text;
             myPaper.sectionsConfig.sectionLabelItalics = sectionLabelItalicizedCheck.Checked;
@@ -1029,7 +1036,14 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void generalDefaultButton_Click(object sender, EventArgs e)
         {
-            //Set default settings for general section
+            if (apaRadio.Checked)
+            {
+                apaGeneral();
+            }
+            else
+            {
+                mlaGeneral();
+            }
         }
 
         private void titlePageTitleEnter_TextChanged(object sender, EventArgs e)
@@ -1088,7 +1102,14 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void titlePageDefaultButton_Click(object sender, EventArgs e)
         {
-            //Set default settings for title page
+            if (apaRadio.Checked)
+            {
+                apaTitlePage();
+            }
+            else
+            {
+                mlaTitlePage();
+            }
         }        
 
         private void headerLeftTitleEnter_TextChanged(object sender, EventArgs e)
@@ -1138,7 +1159,14 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void headerDefaultButton_Click(object sender, EventArgs e)
         {
-            //Set default settings for header
+            if (apaRadio.Checked)
+            {
+                apaHeader();
+            }
+            else
+            {
+                mlaHeader();
+            }
         }
         
         private void newPageForEachSectionRadio_CheckedChanged(object sender, EventArgs e)
@@ -1158,11 +1186,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.sectionsConfig.sectionLabelBold = sectionLabelBoldCheck.Checked;
         }
 
-        private void sectionLabelBullettedCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            //Not sure I want to even make this an option
-        }
-
         private void sectionLabelFont_SelectedIndexChanged(object sender, EventArgs e)
         {
             myPaper.sectionsConfig.sectionLabelFont = sectionLabelFont.Text;
@@ -1175,12 +1198,20 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void sectionLabelColorButton_Click(object sender, EventArgs e)
         {
-            //Choose Section Label Color
+            DialogResult result = sectionLabelColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                sectionLabelColorText.BackColor = sectionLabelColor.Color;
+            }
         }
 
         private void subsectionLabelColorButton_Click(object sender, EventArgs e)
         {
-            //Choose Subsection Label Color
+            DialogResult result = subsectionLabelColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                subsectionLabelColorText.BackColor = subsectionLabelColor.Color;
+            }
         }
 
         private void subsectionLabelSize_SelectedIndexChanged(object sender, EventArgs e)
@@ -1193,11 +1224,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.sectionsConfig.subsectionLabelFont = subsectionLabelFont.Text;
         }
 
-        private void subsectionLabelBulletted_CheckedChanged(object sender, EventArgs e)
-        {
-            //Not sure I want to even make this an option
-        }
-
         private void subsectionLabelBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
             myPaper.sectionsConfig.subsectionLabelBold = subsectionLabelBoldCheck.Checked;
@@ -1206,12 +1232,7 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void subsubsectionLabelBoldCheck_CheckedChanged(object sender, EventArgs e)
         {
             myPaper.sectionsConfig.subsubsectionLabelBold = subsubsectionLabelBoldCheck.Checked;
-        }
-
-        private void subsubsectionLabelBullettedCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            //Not sure I want to even make this an option
-        }
+        }       
 
         private void subsubsectionLabelFont_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1225,7 +1246,11 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void subsubsectionLabelButton_Click(object sender, EventArgs e)
         {
-            //Choose Subsubsection Label Color
+            DialogResult result = subsubsectionLabelColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                subsubsectionLabelColorText.BackColor = subsubsectionLabelColor.Color;
+            }
         }
 
         private void conclusionTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
@@ -1245,12 +1270,23 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void conclusionTitleColorButton_Click(object sender, EventArgs e)
         {
-            //Choose Conclusion Label Color
+            DialogResult result = conclusionLabelColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                conclusionTitleColorText.BackColor = conclusionLabelColor.Color;
+            }
         }
 
         private void conclusionDefaultButton_Click(object sender, EventArgs e)
         {
-            //Set default settings for conclusion
+            if (apaRadio.Checked)
+            {
+                apaConclusion();
+            }
+            else
+            {
+                mlaConclusion();
+            }
         }
 
         private void referencesTitleEnter_TextChanged(object sender, EventArgs e)
@@ -1275,7 +1311,11 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void referencesTitleColorButton_Click(object sender, EventArgs e)
         {
-            //Choose References Label Color
+            DialogResult result = referencesLabelColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                referencesTitleColorText.BackColor = referencesLabelColor.Color;
+            }
         }
 
         private void referencesIndentTabsEnter_ValueChanged(object sender, EventArgs e)
@@ -1295,7 +1335,14 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private void referencesDefaultButton_Click(object sender, EventArgs e)
         {
-            //Set default settings for references
+            if (apaRadio.Checked)
+            {
+                apaReferences();
+            }
+            else
+            {
+                mlaReferences();
+            }
         }
 
         private void abstractTitleBoldCheck_CheckedChanged(object sender, EventArgs e)
@@ -1597,32 +1644,32 @@ namespace WriteMeEasy_WindowsFormsApplication
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             boxToEdit.Focus();
-            boxToEdit.SelectionStart = startSelection;
-            boxToEdit.SelectionLength = endSelection - startSelection;
+            int startedIndex = boxToEdit.SelectionStart;
+            int selectLength = boxToEdit.SelectionLength;
 
-            for (int i = 0; i < endSelection - startSelection; i++)
+            for (int i = 0; i < selectLength; i++)
             {
-                boxToEdit.Select(startSelection + i, 1);
+                boxToEdit.Select(startedIndex + i, 1);
                 boxToEdit.SelectionFont = new Font(fontSelect.SelectedItem.ToString(), boxToEdit.SelectionFont.Size, boxToEdit.SelectionFont.Style);                
             }
-            boxToEdit.SelectionStart = startSelection;
-            boxToEdit.SelectionLength = endSelection - startSelection;
+            boxToEdit.SelectionStart = startedIndex;
+            boxToEdit.SelectionLength = selectLength;
         }
 
         private void changeSize(object sender, EventArgs e)
         {
             RichTextBox boxToEdit = (RichTextBox)Controls.Find(lastEntered, true)[0];
             boxToEdit.Focus();
-            boxToEdit.SelectionStart = startSelection;
-            boxToEdit.SelectionLength = endSelection - startSelection;
+            int startedIndex = boxToEdit.SelectionStart;
+            int selectLength = boxToEdit.SelectionLength;
 
-            for (int i = 0; i < endSelection - startSelection; i++)
+            for (int i = 0; i < selectLength; i++)
             {
-                boxToEdit.Select(startSelection + i, 1);
+                boxToEdit.Select(startedIndex + i, 1);
                 boxToEdit.SelectionFont = new Font(boxToEdit.SelectionFont.FontFamily.Name, (float)Convert.ToDouble(fontSize.SelectedItem), boxToEdit.SelectionFont.Style);
             }
-            boxToEdit.SelectionStart = startSelection;
-            boxToEdit.SelectionLength = endSelection - startSelection;
+            boxToEdit.SelectionStart = startedIndex;
+            boxToEdit.SelectionLength = selectLength;
         }
 
         private void addReferenceButton_Click(object sender, EventArgs e)
@@ -2366,7 +2413,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "AbstractTitleColor":
                                 if (reader.Read())
                                 {
-                                    abstractTitleColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    abstractTitleColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));
                                 }
                                 break;
                             case "AbstractTitleAlign":
@@ -2805,7 +2853,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "ReferencesTitleColor":
                                 if (reader.Read())
                                 {
-                                    referencesTitleColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    referencesTitleColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));               
                                 }
                                 break;
                             case "ReferencesHangingIndent":
@@ -4284,7 +4333,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "SectionLabelColor":
                                 if (reader.Read())
                                 {
-                                    sectionLabelColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    sectionLabelColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));
                                 }
                                 break;
                             case "SubsectionLabelInline":
@@ -4360,7 +4410,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "SubsectionLabelColor":
                                 if (reader.Read())
                                 {
-                                    subsectionLabelColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    subsectionLabelColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));
                                 }
                                 break;
                             case "SubsubsectionLabelInline":
@@ -4436,7 +4487,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "SubsubsectionLabelColor":
                                 if (reader.Read())
                                 {
-                                    subsubsectionLabelColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    subsubsectionLabelColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));
                                 }
                                 break;
                             case "SectionElement":
@@ -4586,7 +4638,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                             case "ConclusionTitleColor":
                                 if (reader.Read())
                                 {
-                                    conclusionTitleColorText.Text = reader.Value;
+                                    string[] rgba = reader.Value.Split(',');
+                                    conclusionTitleColorText.BackColor = Color.FromArgb(Convert.ToInt32(rgba[3]), Convert.ToInt32(rgba[0]), Convert.ToInt32(rgba[1]), Convert.ToInt32(rgba[2]));
                                 }
                                 break;
                             case "ConclusionContent":
@@ -4768,6 +4821,39 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void openButton_Click(object sender, EventArgs e)
         {
             openFile.ShowDialog();
+        }
+
+        private void abstractDefaultButton_Click(object sender, EventArgs e)
+        {
+            if (apaRadio.Checked)
+            {
+                apaAbstract();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void sectionsDefaultButton_Click(object sender, EventArgs e)
+        {
+            if (apaRadio.Checked)
+            {
+                apaSections();
+            }
+            else
+            {
+                mlaSections();
+            }
+        }
+
+        private void abstractTitleColorButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = abstractColor.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                abstractTitleColorText.BackColor = abstractColor.Color;
+            }
         }
     }
 }

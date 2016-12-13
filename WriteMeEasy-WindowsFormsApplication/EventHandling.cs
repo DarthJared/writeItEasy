@@ -270,75 +270,216 @@ namespace WriteMeEasy_WindowsFormsApplication
 
         private bool adjusted = false;
 
+        private void apaGeneral()
+        {
+            titlePageIncludeCheck.Checked = true;
+            abstractIncludeCheck.Checked = true;
+            headerIncludeCheck.Checked = true;
+            conclusionIncludeCheck.Checked = true;
+            referencesIncludeCheck.Checked = true;
+        }
+
+        private void apaTitlePage()
+        {
+            titlePageTitleCheck.Checked = true;
+            titlePageNameCheck.Checked = true;
+            titlePageSchoolCheck.Checked = true;
+            titlePageClassCheck.Checked = false;
+            titlePageProfessorCheck.Checked = false;
+            titlePageDateCheck.Checked = false;
+            titlePageCenterRadio.Checked = true;
+            titleOwnPageCheck.Checked = true;
+            //TODO Make sure they are ordered correctly
+        }
+
+        private void apaAbstract()
+        {
+            abstractOwnPageCheck.Checked = true;
+            abstractIncludeTitleCheck.Checked = true;
+            abstractTitleAlignSelect.Text = "Center";
+            abstractTitleBoldCheck.Checked = false;
+            abstractTitleFontChoose.Text = "Times New Roman";
+            abstractTitleSizeChoose.Text = "12";
+            abstractTitleColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+            if (abstractTitleText.Text.Length < 1)
+            {
+                abstractTitleText.Text = "Abstract";
+            }
+        }
+
+        private void apaHeader()
+        {
+            headerLeftTitleRadio.Checked = true;
+            headerLeftTitleEnter.Text = paperTitleEnter.Text;
+            headerRightNumberRadio.Checked = true;
+            headerDiffFirstPageCheck.Checked = true;
+            headerFirstPageUseRunningHeadCheck.Checked = true;
+            headerFirstPageMoreCheck.Checked = false;
+        }
+
+        private void apaSections()
+        {
+            noSpaceBetweenSectionsRadio.Checked = true;
+            includeSectionLabelsCheck.Checked = true;
+            sectionLabelAlignChoose.Text = "Center";
+            sectionLabelBeforeRadio.Checked = true;
+            sectionLabelBoldCheck.Checked = true;
+            sectionLabelItalicizedCheck.Checked = false;
+            sectionLabelFont.Text = "Times New Roman";
+            sectionLabelSize.Text = "12";
+            sectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+
+            includeSubsectionLabelCheck.Checked = true;
+            subsectionLabelAlignChoose.Text = "Left";
+            subsectionLabelBeforeRadio.Checked = true;
+            subsectionLabelBoldCheck.Checked = true;
+            subsectionLabelItalicizedCheck.Checked = false;
+            subsectionLabelFont.Text = "Times New Roman";
+            subsectionLabelSize.Text = "12";
+            subsectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+
+            includeSubsubsectionLabelCheck.Checked = true;
+            subsubsectionLabelAlignChoose.Text = "";
+            subsubsectionLabelInLineRadio.Checked = true;
+            subsubsectionLabelBoldCheck.Checked = true;
+            subsubsectionLabelItalicizedCheck.Checked = false;
+            subsubsectionLabelFont.Text = "Times New Roman";
+            subsubsectionLabelSize.Text = "12";
+            subsubsectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+        }
+
+        private void apaConclusion()
+        {
+            conclusionOwnPageCheck.Checked = false;
+            conclusionIncludeTitleCheck.Checked = true;
+            conclusionTitleAlignChoose.Text = "Center";
+            conclusionTitleBoldCheck.Checked = true;
+            conclusionTitleFontChoose.Text = "Times New Roman";
+            conclusionTitleSizeChoose.Text = "12";
+            conclusionTitleColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+            if (conclusionTitleEnter.Text.Length < 1)
+            {
+                conclusionTitleEnter.Text = "Conclusion";
+            }
+        }
+
+        private void apaReferences()
+        {
+            referencesTitleIncludeCheck.Checked = true;
+            referencesTitleAlignChoose.Text = "Center";
+            referencesTitleBoldCheck.Checked = false;
+            referencesTitleEnter.Text = "References";
+            referencesTitleFontChoose.Text = "Times New Roman";
+            referencesTitleSizeChoose.Text = "12";
+            referencesTitleColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+            referencesHangingIndentCheck.Checked = true;
+            referencesIndentTabsEnter.Value = 1;
+            referencesEmptyLineBetweenCheck.Checked = false;
+            referencesOrderChoose.Text = "Alphabetically A-Z";
+        }
+        private void mlaGeneral()
+        {
+            titlePageIncludeCheck.Checked = true;
+            abstractIncludeCheck.Checked = false;
+            headerIncludeCheck.Checked = true;
+            conclusionIncludeCheck.Checked = true;
+            referencesIncludeCheck.Checked = true;
+        }
+
+        private void mlaTitlePage()
+        {
+            titlePageNameCheck.Checked = true;
+            titlePageProfessorCheck.Checked = true;
+            titlePageClassCheck.Checked = true;
+            titlePageDateCheck.Checked = true;
+            titlePageTitleCheck.Checked = false;
+            titlePageSchoolCheck.Checked = false;
+            titlePageLeftAllignRadio.Checked = true;
+            titleInfoTopFirstPageCheck.Checked = true;
+            //TODO Make sure they are ordered correctly
+        }
+
+        private void mlaHeader()
+        {
+            headerLeftEmptyRadio.Checked = true;
+            headerLeftTitleEnter.Text = paperTitleEnter.Text;
+            headerRightNumNameRadio.Checked = true;
+            headerDiffFirstPageCheck.Checked = false;
+        }
+
+        private void mlaSections()
+        {
+            blankLineBetweenSectionsRadio.Checked = true;
+            includeSectionLabelsCheck.Checked = true;
+            sectionLabelAlignChoose.Text = "Center";
+            sectionLabelBeforeRadio.Checked = true;
+            sectionLabelBoldCheck.Checked = false;
+            sectionLabelItalicizedCheck.Checked = false;
+            sectionLabelFont.Text = "Times New Roman";
+            sectionLabelSize.Text = "12";
+            sectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+
+            includeSubsectionLabelCheck.Checked = true;
+            subsectionLabelAlignChoose.Text = "Left";
+            subsectionLabelBeforeRadio.Checked = true;
+            subsectionLabelBoldCheck.Checked = false;
+            subsectionLabelItalicizedCheck.Checked = false;
+            subsectionLabelFont.Text = "Book Antiqua";
+            subsectionLabelSize.Text = "12";
+            subsectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+
+            includeSubsubsectionLabelCheck.Checked = true;
+            subsubsectionLabelAlignChoose.Text = "";
+            subsubsectionLabelInLineRadio.Checked = true;
+            subsubsectionLabelBoldCheck.Checked = false;
+            subsubsectionLabelItalicizedCheck.Checked = true;
+            subsubsectionLabelFont.Text = "Times New Roman";
+            subsubsectionLabelSize.Text = "12";
+            subsubsectionLabelColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+        }
+
+        private void mlaConclusion()
+        {
+            conclusionOwnPageCheck.Checked = false;
+            conclusionIncludeTitleCheck.Checked = true;
+            conclusionTitleAlignChoose.Text = "Left";
+            conclusionTitleBoldCheck.Checked = false;
+            conclusionTitleFontChoose.Text = "Book Antiqua";
+            conclusionTitleSizeChoose.Text = "12";
+            if (conclusionTitleEnter.Text.Length < 1)
+            {
+                conclusionTitleEnter.Text = "Conclusion";
+            }
+            conclusionTitleColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+        }
+
+        private void mlaReferences()
+        {
+            referencesTitleIncludeCheck.Checked = true;
+            referencesTitleAlignChoose.Text = "Left";
+            referencesTitleBoldCheck.Checked = false;
+            referencesTitleEnter.Text = "Works Cited";
+            referencesTitleFontChoose.Text = "Times New Roman";
+            referencesTitleSizeChoose.Text = "12";
+            referencesTitleColorText.BackColor = Color.FromArgb(255, 0, 0, 0);
+            referencesHangingIndentCheck.Checked = true;
+            referencesIndentTabsEnter.Value = 1;
+            referencesEmptyLineBetweenCheck.Checked = false;
+            referencesOrderChoose.Text = "Alphabetically A-Z";
+        }
+
         private void apaMla_Changed(object sender, EventArgs e)
         {
             string newButtonText;
             if (apaRadio.Checked)
             {
                 newButtonText = "APA Defaults";
-                titlePageIncludeCheck.Checked = true;
-                abstractIncludeCheck.Checked = true;
-                headerIncludeCheck.Checked = true;
-                conclusionIncludeCheck.Checked = true;
-                referencesIncludeCheck.Checked = true;
-
-                titlePageTitleCheck.Checked = true;
-                titlePageNameCheck.Checked = true;
-                titlePageSchoolCheck.Checked = true;
-                titlePageClassCheck.Checked = false;
-                titlePageProfessorCheck.Checked = false;
-                titlePageDateCheck.Checked = false;
-                titlePageCenterRadio.Checked = true;
-                titleOwnPageCheck.Checked = true;
-                //TODO Make sure they are ordered correctly
-
-                abstractOwnPageCheck.Checked = true;
-                abstractIncludeTitleCheck.Checked = true;
-                abstractTitleAlignSelect.Text = "Center";
-                abstractTitleBoldCheck.Checked = false;
-                abstractTitleFontChoose.Text = "Times New Roman";
-                abstractTitleSizeChoose.Text = "12";
-                if (abstractTitleText.Text.Length < 1)
-                {
-                    abstractTitleText.Text = "Abstract";
-                }
-                //TODO Add color for abstract title
-
-                headerLeftTitleRadio.Checked = true;
-                headerLeftTitleEnter.Text = paperTitleEnter.Text;
-                headerRightNumberRadio.Checked = true;
-                headerDiffFirstPageCheck.Checked = true;
-                headerFirstPageUseRunningHeadCheck.Checked = true;
-                headerFirstPageMoreCheck.Checked = false;
-
-                noSpaceBetweenSectionsRadio.Checked = true;
-                includeSectionLabelsCheck.Checked = true;
-                sectionLabelAlignChoose.Text = "Center";
-                sectionLabelBeforeRadio.Checked = true;
-                sectionLabelBoldCheck.Checked = true;
-                sectionLabelItalicizedCheck.Checked = false;
-                sectionLabelFont.Text = "Times New Roman";
-                sectionLabelSize.Text = "12";
-                //TODO Add color for section label
-
-                includeSubsectionLabelCheck.Checked = true;
-                subsectionLabelAlignChoose.Text = "Left";
-                subsectionLabelBeforeRadio.Checked = true;
-                subsectionLabelBoldCheck.Checked = true;
-                subsectionLabelItalicizedCheck.Checked = false;
-                subsectionLabelFont.Text = "Times New Roman";
-                subsectionLabelSize.Text = "12";
-                //TODO Add color for subsection label
-
-                includeSubsubsectionLabelCheck.Checked = true;
-                subsubsectionLabelAlignChoose.Text = "";
-                subsubsectionLabelInLineRadio.Checked = true;
-                subsubsectionLabelBoldCheck.Checked = true;
-                subsubsectionLabelItalicizedCheck.Checked = false;
-                subsubsectionLabelFont.Text = "Times New Roman";
-                subsubsectionLabelSize.Text = "12";
-                //TODO Add color for subsubsection label
-
+                apaGeneral();
+                apaTitlePage();
+                apaAbstract();
+                apaHeader();
+                apaSections();
+                
                 if (!adjusted && !subsectionLabelGroupBox.Visible && !subsubsectionLabelGroupBox.Visible)
                 {
                     adjusted = true;
@@ -357,81 +498,16 @@ namespace WriteMeEasy_WindowsFormsApplication
                     raiseSection(240, "SECTIONS");
                 }
 
-                conclusionOwnPageCheck.Checked = false;
-                conclusionIncludeTitleCheck.Checked = true;
-                conclusionTitleAlignChoose.Text = "Center";
-                conclusionTitleBoldCheck.Checked = true;
-                conclusionTitleFontChoose.Text = "Times New Roman";
-                conclusionTitleSizeChoose.Text = "12";
-                if (conclusionTitleEnter.Text.Length < 1)
-                {
-                    conclusionTitleEnter.Text = "Conclusion";
-                }
-                //TODO Add color for conclusion label
-
-                referencesTitleIncludeCheck.Checked = true;
-                referencesTitleAlignChoose.Text = "Center";
-                referencesTitleBoldCheck.Checked = false;
-                referencesTitleEnter.Text = "References";
-                referencesTitleFontChoose.Text = "Times New Roman";
-                referencesTitleSizeChoose.Text = "12";
-                //TODO Add color for references title
-                referencesHangingIndentCheck.Checked = true;
-                referencesIndentTabsEnter.Value = 1;
-                referencesEmptyLineBetweenCheck.Checked = false;
-                referencesOrderChoose.Text = "Alphabetically A-Z";
+                apaConclusion();
+                apaReferences();
             }
             else
             {
                 newButtonText = "MLA Defaults";
-                titlePageIncludeCheck.Checked = true;
-                abstractIncludeCheck.Checked = false;
-                headerIncludeCheck.Checked = true;
-                conclusionIncludeCheck.Checked = true;
-                referencesIncludeCheck.Checked = true;
-
-                titlePageNameCheck.Checked = true;
-                titlePageProfessorCheck.Checked = true;
-                titlePageClassCheck.Checked = true;
-                titlePageDateCheck.Checked = true;
-                titlePageTitleCheck.Checked = false;
-                titlePageSchoolCheck.Checked = false;
-                titlePageLeftAllignRadio.Checked = true;
-                titleInfoTopFirstPageCheck.Checked = true;
-                //TODO Make sure they are ordered correctly
-
-                headerLeftEmptyRadio.Checked = true;
-                headerLeftTitleEnter.Text = paperTitleEnter.Text;
-                headerRightNumNameRadio.Checked = true;
-                headerDiffFirstPageCheck.Checked = false;
-
-                blankLineBetweenSectionsRadio.Checked = true;
-                includeSectionLabelsCheck.Checked = true;
-                sectionLabelAlignChoose.Text = "Center";
-                sectionLabelBeforeRadio.Checked = true;
-                sectionLabelBoldCheck.Checked = false;
-                sectionLabelItalicizedCheck.Checked = false;
-                sectionLabelFont.Text = "Times New Roman";
-                sectionLabelSize.Text = "12";
-                //TODO Add color for section label
-
-                includeSubsectionLabelCheck.Checked = true;
-                subsectionLabelAlignChoose.Text = "Left";
-                subsectionLabelBeforeRadio.Checked = true;
-                subsectionLabelBoldCheck.Checked = false;
-                subsectionLabelItalicizedCheck.Checked = false;
-                subsectionLabelFont.Text = "All Caps";
-                subsectionLabelSize.Text = "12";
-                //TODO Add color for subsection label
-
-                includeSubsubsectionLabelCheck.Checked = true;
-                subsubsectionLabelAlignChoose.Text = "";
-                subsubsectionLabelInLineRadio.Checked = true;
-                subsubsectionLabelBoldCheck.Checked = false;
-                subsubsectionLabelItalicizedCheck.Checked = true;
-                subsubsectionLabelFont.Text = "Times New Roman";
-                subsubsectionLabelSize.Text = "12";
-                //TODO Add color for subsubsection label
+                mlaGeneral();
+                mlaTitlePage();
+                mlaHeader();
+                mlaSections();
 
                 if (!adjusted && !subsectionLabelGroupBox.Visible && !subsubsectionLabelGroupBox.Visible)
                 {
@@ -451,29 +527,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                     raiseSection(240, "SECTIONS");
                 }
 
-                conclusionOwnPageCheck.Checked = false;
-                conclusionIncludeTitleCheck.Checked = true;
-                conclusionTitleAlignChoose.Text = "Left";
-                conclusionTitleBoldCheck.Checked = false;
-                conclusionTitleFontChoose.Text = "All Caps";
-                conclusionTitleSizeChoose.Text = "12";
-                if (conclusionTitleEnter.Text.Length < 1)
-                {
-                    conclusionTitleEnter.Text = "Conclusion";
-                }
-                //TODO Add color for conclusion label
-
-                referencesTitleIncludeCheck.Checked = true;
-                referencesTitleAlignChoose.Text = "Left";
-                referencesTitleBoldCheck.Checked = false;
-                referencesTitleEnter.Text = "Works Cited";
-                referencesTitleFontChoose.Text = "Times New Roman";
-                referencesTitleSizeChoose.Text = "12";
-                //TODO Add color for references title
-                referencesHangingIndentCheck.Checked = true;
-                referencesIndentTabsEnter.Value = 1;
-                referencesEmptyLineBetweenCheck.Checked = false;
-                referencesOrderChoose.Text = "Alphabetically A-Z";
+                mlaConclusion();
+                mlaReferences();
             }
             generalDefaultButton.Text = newButtonText;
             titlePageDefaultButton.Text = newButtonText;
