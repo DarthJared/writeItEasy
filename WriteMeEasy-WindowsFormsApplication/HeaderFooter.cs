@@ -135,12 +135,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerLeftTitleLabel.Visible = true;
                 headerLeftTitleEnter.Visible = true;
-                headerLeftNumberLabel.Visible = false;
-                headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
-                headerLeftFirstPageNumLabel.Visible = false;
-                headerLeftFirstPageNumEnter.Visible = false;
                 headerLeftLastNameLabel.Visible = false;
                 headerLeftLastNameEnter.Visible = false;
             }
@@ -148,12 +144,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
-                headerLeftNumberLabel.Visible = true;
-                headerLeftNumberEnter.Visible = true;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
-                headerLeftFirstPageNumLabel.Visible = false;
-                headerLeftFirstPageNumEnter.Visible = false;
                 headerLeftLastNameLabel.Visible = false;
                 headerLeftLastNameEnter.Visible = false;
             }
@@ -161,12 +153,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
-                headerLeftNumberLabel.Visible = false;
-                headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = true;
                 headerLeftOtherEnter.Visible = true;
-                headerLeftFirstPageNumLabel.Visible = false;
-                headerLeftFirstPageNumEnter.Visible = false;
                 headerLeftLastNameLabel.Visible = false;
                 headerLeftLastNameEnter.Visible = false;
             }
@@ -174,12 +162,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
-                headerLeftNumberLabel.Visible = false;
-                headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
-                headerLeftFirstPageNumLabel.Visible = true;
-                headerLeftFirstPageNumEnter.Visible = true;
                 headerLeftLastNameLabel.Visible = true;
                 headerLeftLastNameEnter.Visible = true;
             }
@@ -187,12 +171,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerLeftTitleLabel.Visible = false;
                 headerLeftTitleEnter.Visible = false;
-                headerLeftNumberLabel.Visible = false;
-                headerLeftNumberEnter.Visible = false;
                 headerLeftOtherLabel.Visible = false;
                 headerLeftOtherEnter.Visible = false;
-                headerLeftFirstPageNumLabel.Visible = false;
-                headerLeftFirstPageNumEnter.Visible = false;
                 headerLeftLastNameLabel.Visible = false;
                 headerLeftLastNameEnter.Visible = false;
             }
@@ -204,12 +184,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerRightTitleLabel.Visible = true;
                 headerRightTitleEnter.Visible = true;
-                headerRightNumberLabel.Visible = false;
-                headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
-                headerRightFirstPageNumLabel.Visible = false;
-                headerRightFirstPageNumEnter.Visible = false;
                 headerRightLastNameLabel.Visible = false;
                 headerRightLastNameEnter.Visible = false;
             }
@@ -217,12 +193,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
-                headerRightNumberLabel.Visible = true;
-                headerRightNumberEnter.Visible = true;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
-                headerRightFirstPageNumLabel.Visible = false;
-                headerRightFirstPageNumEnter.Visible = false;
                 headerRightLastNameLabel.Visible = false;
                 headerRightLastNameEnter.Visible = false;
             }
@@ -230,12 +202,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
-                headerRightNumberLabel.Visible = false;
-                headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = true;
                 headerRightOtherEnter.Visible = true;
-                headerRightFirstPageNumLabel.Visible = false;
-                headerRightFirstPageNumEnter.Visible = false;
                 headerRightLastNameLabel.Visible = false;
                 headerRightLastNameEnter.Visible = false;
             }
@@ -243,12 +211,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
-                headerRightNumberLabel.Visible = false;
-                headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
-                headerRightFirstPageNumLabel.Visible = true;
-                headerRightFirstPageNumEnter.Visible = true;
                 headerRightLastNameLabel.Visible = true;
                 headerRightLastNameEnter.Visible = true;
             }
@@ -256,12 +220,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerRightTitleLabel.Visible = false;
                 headerRightTitleEnter.Visible = false;
-                headerRightNumberLabel.Visible = false;
-                headerRightNumberEnter.Visible = false;
                 headerRightOtherLabel.Visible = false;
                 headerRightOtherEnter.Visible = false;
-                headerRightFirstPageNumLabel.Visible = false;
-                headerRightFirstPageNumEnter.Visible = false;
                 headerRightLastNameLabel.Visible = false;
                 headerRightLastNameEnter.Visible = false;
             }
@@ -273,12 +233,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstLeftTitleLabel.Visible = true;
                 headerFirstLeftTitleEnter.Visible = true;
-                headerFirstLeftNumberLabel.Visible = false;
-                headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
-                headerFirstLeftPageNumLabel.Visible = false;
-                headerFirstLeftFirstPageNumEnter.Visible = false;
                 headerFirstLeftLastNameLabel.Visible = false;
                 headerFirstLeftLastNameEnter.Visible = false;
             }
@@ -286,12 +242,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
-                headerFirstLeftNumberLabel.Visible = true;
-                headerFirstLeftNumberEnter.Visible = true;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
-                headerFirstLeftPageNumLabel.Visible = false;
-                headerFirstLeftFirstPageNumEnter.Visible = false;
                 headerFirstLeftLastNameLabel.Visible = false;
                 headerFirstLeftLastNameEnter.Visible = false;
             }
@@ -299,12 +251,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
-                headerFirstLeftNumberLabel.Visible = false;
-                headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = true;
                 headerFirstLeftOtherEnter.Visible = true;
-                headerFirstLeftPageNumLabel.Visible = false;
-                headerFirstLeftFirstPageNumEnter.Visible = false;
                 headerFirstLeftLastNameLabel.Visible = false;
                 headerFirstLeftLastNameEnter.Visible = false;
             }
@@ -312,12 +260,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
-                headerFirstLeftNumberLabel.Visible = false;
-                headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
-                headerFirstLeftPageNumLabel.Visible = true;
-                headerFirstLeftFirstPageNumEnter.Visible = true;
                 headerFirstLeftLastNameLabel.Visible = true;
                 headerFirstLeftLastNameEnter.Visible = true;
             }
@@ -325,12 +269,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstLeftTitleLabel.Visible = false;
                 headerFirstLeftTitleEnter.Visible = false;
-                headerFirstLeftNumberLabel.Visible = false;
-                headerFirstLeftNumberEnter.Visible = false;
                 headerFirstLeftOtherLabel.Visible = false;
                 headerFirstLeftOtherEnter.Visible = false;
-                headerFirstLeftPageNumLabel.Visible = false;
-                headerFirstLeftFirstPageNumEnter.Visible = false;
                 headerFirstLeftLastNameLabel.Visible = false;
                 headerFirstLeftLastNameEnter.Visible = false;
             }
@@ -342,12 +282,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstRightTitleLabel.Visible = true;
                 headerFirstRightTitleEnter.Visible = true;
-                headerFirstRightNumberLabel.Visible = false;
-                headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
-                headerFirstRightPageNumLabel.Visible = false;
-                headerFirstRightFirstPageNumEnter.Visible = false;
                 headerFirstRightLastNameLabel.Visible = false;
                 headerFirstRightLastNameEnter.Visible = false;
             }
@@ -355,12 +291,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
-                headerFirstRightNumberLabel.Visible = true;
-                headerFirstRightNumberEnter.Visible = true;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
-                headerFirstRightPageNumLabel.Visible = false;
-                headerFirstRightFirstPageNumEnter.Visible = false;
                 headerFirstRightLastNameLabel.Visible = false;
                 headerFirstRightLastNameEnter.Visible = false;
             }
@@ -368,12 +300,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
-                headerFirstRightNumberLabel.Visible = false;
-                headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = true;
                 headerFirstRightOtherEnter.Visible = true;
-                headerFirstRightPageNumLabel.Visible = false;
-                headerFirstRightFirstPageNumEnter.Visible = false;
                 headerFirstRightLastNameLabel.Visible = false;
                 headerFirstRightLastNameEnter.Visible = false;
             }
@@ -381,12 +309,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
-                headerFirstRightNumberLabel.Visible = false;
-                headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
-                headerFirstRightPageNumLabel.Visible = true;
-                headerFirstRightFirstPageNumEnter.Visible = true;
                 headerFirstRightLastNameLabel.Visible = true;
                 headerFirstRightLastNameEnter.Visible = true;
             }
@@ -394,12 +318,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             {
                 headerFirstRightTitleLabel.Visible = false;
                 headerFirstRightTitleEnter.Visible = false;
-                headerFirstRightNumberLabel.Visible = false;
-                headerFirstRightNumberEnter.Visible = false;
                 headerFirstRightOtherLabel.Visible = false;
                 headerFirstRightOtherEnter.Visible = false;
-                headerFirstRightPageNumLabel.Visible = false;
-                headerFirstRightFirstPageNumEnter.Visible = false;
                 headerFirstRightLastNameLabel.Visible = false;
                 headerFirstRightLastNameEnter.Visible = false;
             }

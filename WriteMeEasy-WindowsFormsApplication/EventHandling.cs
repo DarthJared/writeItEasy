@@ -307,7 +307,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerLeftTitleRadio.Checked = true;
                 headerLeftTitleEnter.Text = paperTitleEnter.Text;
                 headerRightNumberRadio.Checked = true;
-                headerRightNumberEnter.Value = 1;
                 headerDiffFirstPageCheck.Checked = true;
                 headerFirstPageUseRunningHeadCheck.Checked = true;
                 headerFirstPageMoreCheck.Checked = false;
@@ -404,7 +403,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                 headerLeftEmptyRadio.Checked = true;
                 headerLeftTitleEnter.Text = paperTitleEnter.Text;
                 headerRightNumNameRadio.Checked = true;
-                headerRightNumberEnter.Value = 1;
                 headerDiffFirstPageCheck.Checked = false;
 
                 blankLineBetweenSectionsRadio.Checked = true;

@@ -3146,6 +3146,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     if (myPaper.header.firstRightLastPageNum)
                                     {
                                         firstHeaderRange.Fields.Add(firstHeaderRange, WdFieldType.wdFieldPage);
+                                        
                                         Paragraph lastName = firstHeaderRange.Paragraphs.Add();
                                         lastName.Range.Text = "\t\t" + myPaper.header.firstRightLastName + " ";
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
@@ -3166,7 +3167,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else if (myPaper.header.firstRightTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
-                                        other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText;
+                                        other.Range.Text = "\t\t" + myPaper.header.firstRightTitleText.ToUpper();
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     if (myPaper.header.firstLeftLastPageNum)
@@ -3192,7 +3193,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else if (myPaper.header.firstLeftTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
-                                        other.Range.Text = "Running head: " + myPaper.header.firstLeftTitleText;
+                                        other.Range.Text = "Running head: " + myPaper.header.firstLeftTitleText.ToUpper();
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                 }
@@ -3224,7 +3225,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else if (myPaper.header.rightTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
-                                        other.Range.Text = "\t\t" + myPaper.header.rightTitleText;
+                                        other.Range.Text = "\t\t" + myPaper.header.rightTitleText.ToUpper();
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                     if (myPaper.header.leftLastPageNum)
@@ -3250,7 +3251,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     else if (myPaper.header.leftTitle)
                                     {
                                         Paragraph other = firstHeaderRange.Paragraphs.Add();
-                                        other.Range.Text = "Running head: " + myPaper.header.leftTitleText;
+                                        other.Range.Text = "Running head: " + myPaper.header.leftTitleText.ToUpper();
                                         firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                     }
                                 }
@@ -3307,7 +3308,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 else if (myPaper.header.firstLeftTitle)
                                 {
                                     Paragraph other = firstHeaderRange.Paragraphs.Add();
-                                    other.Range.Text = myPaper.header.firstLeftTitleText;
+                                    other.Range.Text = myPaper.header.firstLeftTitleText.ToUpper();
                                     firstHeaderRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                                 }
                             }
@@ -3337,7 +3338,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             else if (myPaper.header.rightTitle)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
-                                other.Range.Text = "\t\t" + myPaper.header.rightTitleText;
+                                other.Range.Text = "\t\t" + myPaper.header.rightTitleText.ToUpper();
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
                             if (myPaper.header.leftLastPageNum)
@@ -3361,7 +3362,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                             else if (myPaper.header.leftTitle)
                             {
                                 Paragraph other = headerRange.Paragraphs.Add();
-                                other.Range.Text = myPaper.header.leftTitleText;
+                                other.Range.Text = myPaper.header.leftTitleText.ToUpper();
                                 headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                             }
 
@@ -3395,8 +3396,7 @@ namespace WriteMeEasy_WindowsFormsApplication
                     wordApp.Quit(ref missing, ref missing, ref missing);
                     wordApp = null;
                     MessageBox.Show("Document created successfully!");
-                    Process.Start("WINWORD.EXE", (string)filename);
-                    //8525
+                    Process.Start("WINWORD.EXE", (string)filename);                    
                 }
                 catch (Exception ex)
                 {

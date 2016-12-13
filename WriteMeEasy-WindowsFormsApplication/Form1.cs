@@ -71,58 +71,14 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.firstLeftLastName = headerFirstLeftLastNameEnter.Text;
             myPaper.header.firstRightLastName = headerFirstRightLastNameEnter.Text;
             myPaper.header.moreDifferent = headerFirstPageMoreCheck.Checked;
-            myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
-            if (headerLeftNumberEnter.Text.Length < 1)
-            {
-                headerLeftNumberEnter.Text = "0";
-            }
-            if (headerLeftNumNameRadio.Checked)
-            {
-                myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftFirstPageNumEnter.Value);
-            }
-            else if (headerLeftNumberRadio.Checked)
-            {
-                myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftNumberEnter.Value);
-            }            
+            myPaper.header.leftTitleText = headerLeftTitleEnter.Text;                       
             myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
             myPaper.header.rightTitleText = headerRightTitleEnter.Text;
-            if (headerRightNumberEnter.Text.Length < 1)
-            {
-                headerRightNumberEnter.Text = "0";
-            }
-            if (headerRightNumNameRadio.Checked)
-            {
-                myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightFirstPageNumEnter.Value);
-            }
-            else if (headerRightNumberRadio.Checked)
-            {
-                myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightNumberEnter.Value);
-            }
             myPaper.header.rightOtherText = headerRightOtherEnter.Text;
             myPaper.header.useRunningHead = headerFirstPageUseRunningHeadCheck.Checked;
             myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
-            if (headerFirstLeftNumberEnter.Text.Length < 1)
-            {
-                headerFirstLeftNumberEnter.Text = "0";
-            }
-            if (headerFirstLeftPageNumberLastNameRadio.Checked)
-            {
-                myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftFirstPageNumEnter.Value);
-            }
-            else if (headerFirstLeftNumberRadio.Checked)
-            {
-                myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
-            }
             myPaper.header.firstLeftOtherText = headerFirstLeftOtherEnter.Text;
             myPaper.header.firstRightTitleText = headerFirstRightTitleEnter.Text;
-            if (headerFirstRightPageNumberLastNameRadio.Checked)
-            {
-                myPaper.header.firstRightPageNumStart = Convert.ToInt32(headerFirstRightFirstPageNumEnter.Value);
-            }
-            else if (headerFirstLeftNumberRadio.Checked)
-            {
-                myPaper.header.firstRightPageNumStart = Convert.ToInt32(headerFirstRightNumberEnter.Value);
-            }
             myPaper.header.firstRightOtherText = headerFirstRightOtherEnter.Text;
             myPaper.sectionsConfig.newPageBetween = newPageForEachSectionRadio.Checked;
             myPaper.sectionsConfig.noSpaceBetween = !newPageForEachSectionRadio.Checked;
@@ -1135,11 +1091,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             myPaper.header.leftTitleText = headerLeftTitleEnter.Text;
         }
 
-        private void headerLeftNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.leftPageNumStart = Convert.ToInt32(headerLeftNumberEnter.Value);
-        }
-
         private void headerLeftOtherEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.header.leftOtherText = headerLeftOtherEnter.Text;
@@ -1148,11 +1099,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void headerRightTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.header.rightTitleText = headerRightTitleEnter.Text;
-        }
-
-        private void headerRightNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.rightPageNumStart = Convert.ToInt32(headerRightNumberEnter.Value);
         }
 
         private void headerRightOtherEnter_TextChanged(object sender, EventArgs e)
@@ -1168,11 +1114,6 @@ namespace WriteMeEasy_WindowsFormsApplication
         private void headerFirstLeftTitleEnter_TextChanged(object sender, EventArgs e)
         {
             myPaper.header.firstLeftTitleText = headerFirstLeftTitleEnter.Text;
-        }
-
-        private void headerFirstLeftNumberEnter_ValueChanged(object sender, EventArgs e)
-        {
-            myPaper.header.firstLeftPageNumStart = Convert.ToInt32(headerFirstLeftNumberEnter.Value);
         }
 
         private void headerFirstLeftOtherEnter_TextChanged(object sender, EventArgs e)
@@ -1424,7 +1365,6 @@ namespace WriteMeEasy_WindowsFormsApplication
             headerLeftTitleRadio.Checked = true;
             headerRightNumberRadio.Checked = true;
             headerLeftTitleEnter.Text = "Researched Argument: Is the Robot Better than Me?";
-            headerRightNumberEnter.Value = 1;
             headerDiffFirstPageCheck.Checked = true;
             headerFirstPageUseRunningHeadCheck.Checked = true;
 
@@ -1820,19 +1760,15 @@ namespace WriteMeEasy_WindowsFormsApplication
                     writer.WriteElementString("HeaderFirstRightLastPage", myPaper.header.firstRightLastPageNum.ToString());
                     writer.WriteElementString("HeaderFirstRightNone", myPaper.header.firstRightNone.ToString());
                     writer.WriteElementString("HeaderEnterLeftTitle", myPaper.header.leftTitleText);
-                    writer.WriteElementString("HeaderEnterLeftPageStart", myPaper.header.leftPageNumStart.ToString());
                     writer.WriteElementString("HeaderEnterLeftLastName", myPaper.header.leftLastName);
                     writer.WriteElementString("HeaderEnterLeftOther", myPaper.header.leftOtherText);
                     writer.WriteElementString("HeaderEnterRightTitle", myPaper.header.rightTitleText);
-                    writer.WriteElementString("HeaderEnterRightPageStart", myPaper.header.rightPageNumStart.ToString());
                     writer.WriteElementString("HeaderEnterRightLastName", myPaper.header.rightLastName);
                     writer.WriteElementString("HeaderEnterRightOther", myPaper.header.rightOtherText);
                     writer.WriteElementString("HeaderEnterFirstLeftTitle", myPaper.header.firstLeftTitleText);
-                    writer.WriteElementString("HeaderEnterFirstLeftPageStart", myPaper.header.firstLeftPageNumStart.ToString());
                     writer.WriteElementString("HeaderEnterFirstLeftLastName", myPaper.header.firstLeftLastName);
                     writer.WriteElementString("HeaderEnterFirstLeftOther", myPaper.header.firstLeftOtherText);                                                 
                     writer.WriteElementString("HeaderEnterFirstRightTitle", myPaper.header.firstRightTitleText);
-                    writer.WriteElementString("HeaderEnterFirstRightPageStart", myPaper.header.firstRightPageNumStart.ToString());
                     writer.WriteElementString("HeaderEnterFirstRightLastName", myPaper.header.firstRightLastName);
                     writer.WriteElementString("HeaderEnterFirstRightOther", myPaper.header.firstRightOtherText);
 
@@ -2745,13 +2681,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     headerLeftTitleEnter.Text = reader.Value;
                                 }
                                 break;
-                            case "HeaderEnterLeftPageStart":
-                                if (reader.Read())
-                                {
-                                    headerLeftNumberEnter.Text = reader.Value;
-                                    headerLeftFirstPageNumEnter.Text = reader.Value;
-                                }
-                                break;
                             case "HeaderEnterLeftLastName":
                                 if (reader.Read())
                                 {
@@ -2768,13 +2697,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 if (reader.Read())
                                 {
                                     headerRightTitleEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterRightPageStart":
-                                if (reader.Read())
-                                {
-                                    headerRightNumberEnter.Text = reader.Value;
-                                    headerRightFirstPageNumEnter.Text = reader.Value;
                                 }
                                 break;
                             case "HeaderEnterRightLastName":
@@ -2795,13 +2717,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                     headerFirstLeftTitleEnter.Text = reader.Value;
                                 }
                                 break;
-                            case "HeaderEnterFirstLeftPageStart":
-                                if (reader.Read())
-                                {
-                                    headerFirstLeftNumberEnter.Text = reader.Value;
-                                    headerFirstLeftFirstPageNumEnter.Text = reader.Value;
-                                }
-                                break;
                             case "HeaderEnterFirstLeftLastName":
                                 if (reader.Read())
                                 {
@@ -2818,13 +2733,6 @@ namespace WriteMeEasy_WindowsFormsApplication
                                 if (reader.Read())
                                 {
                                     headerFirstRightTitleEnter.Text = reader.Value;
-                                }
-                                break;
-                            case "HeaderEnterFirstRightPageStart":
-                                if (reader.Read())
-                                {
-                                    headerFirstRightNumberEnter.Text = reader.Value;
-                                    headerFirstRightFirstPageNumEnter.Text = reader.Value;
                                 }
                                 break;
                             case "HeaderEnterFirstRightLastName":
