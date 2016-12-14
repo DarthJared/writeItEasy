@@ -594,7 +594,7 @@
             // 
             // addReferenceButton
             // 
-            this.addReferenceButton.Location = new System.Drawing.Point(1579, 1276);
+            this.addReferenceButton.Location = new System.Drawing.Point(1296, 1276);
             this.addReferenceButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.addReferenceButton.Name = "addReferenceButton";
             this.addReferenceButton.Size = new System.Drawing.Size(267, 55);
@@ -605,7 +605,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(1296, 1276);
+            this.cancelButton.Location = new System.Drawing.Point(1579, 1276);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(267, 55);
