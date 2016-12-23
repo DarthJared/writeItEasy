@@ -82,18 +82,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(translatorFirstEnter);
             translatorFirstEnter.Location = new Point(firstTranslator.Location.X, Convert.ToInt32(numAuth) * 25 + 50);
             translatorFirstEnter.Width = 100;
+            translatorFirstEnter.Text = "First";
+            translatorFirstEnter.ForeColor = Color.DimGray;
+            translatorFirstEnter.Tag = "First";
+            translatorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            translatorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox translatorMiddleEnter = new TextBox();
             translatorMiddleEnter.Name = "translatorMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(translatorMiddleEnter);
             translatorMiddleEnter.Location = new Point(middleTranslator.Location.X, Convert.ToInt32(numAuth) * 25 + 50);
             translatorMiddleEnter.Width = 100;
+            translatorMiddleEnter.Text = "Middle";
+            translatorMiddleEnter.ForeColor = Color.DimGray;
+            translatorMiddleEnter.Tag = "Middle";
+            translatorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            translatorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox translatorLastEnter = new TextBox();
             translatorLastEnter.Name = "translatorLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(translatorLastEnter);
             translatorLastEnter.Location = new Point(lastTranslator.Location.X, Convert.ToInt32(numAuth) * 25 + 50);
             translatorLastEnter.Width = 100;
+            translatorLastEnter.Text = "Last";
+            translatorLastEnter.ForeColor = Color.DimGray;
+            translatorLastEnter.Tag = "Last";
+            translatorLastEnter.Enter += new EventHandler(removePlaceholderText);
+            translatorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = numAuth + "," + newPieces + "," + newIndex;
         }
@@ -123,18 +138,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(intervieweeFirstEnter);
             intervieweeFirstEnter.Location = new Point(firstInterviewee.Location.X, Convert.ToInt32(numInterviewer) * 25);
             intervieweeFirstEnter.Width = 100;
+            intervieweeFirstEnter.Text = "First";
+            intervieweeFirstEnter.ForeColor = Color.DimGray;
+            intervieweeFirstEnter.Tag = "First";
+            intervieweeFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            intervieweeFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox intervieweeMiddleEnter = new TextBox();
             intervieweeMiddleEnter.Name = "intervieweeMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(intervieweeMiddleEnter);
             intervieweeMiddleEnter.Location = new Point(middleInterviewee.Location.X, Convert.ToInt32(numInterviewer) * 25);
             intervieweeMiddleEnter.Width = 100;
+            intervieweeMiddleEnter.Text = "Middle";
+            intervieweeMiddleEnter.ForeColor = Color.DimGray;
+            intervieweeMiddleEnter.Tag = "Middle";
+            intervieweeMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            intervieweeMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox intervieweeLastEnter = new TextBox();
             intervieweeLastEnter.Name = "intervieweeLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(intervieweeLastEnter);
             intervieweeLastEnter.Location = new Point(lastInterviewee.Location.X, Convert.ToInt32(numInterviewer) * 25);
             intervieweeLastEnter.Width = 100;
+            intervieweeLastEnter.Text = "Last";
+            intervieweeLastEnter.ForeColor = Color.DimGray;
+            intervieweeLastEnter.Tag = "Last";
+            intervieweeLastEnter.Enter += new EventHandler(removePlaceholderText);
+            intervieweeLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = numInterviewer + "," + newPieces + "," + newIndex;
         }
@@ -164,18 +194,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(interviewerFirstEnter);
             interviewerFirstEnter.Location = new Point(firstInterviewer.Location.X, 0);
             interviewerFirstEnter.Width = 100;
+            interviewerFirstEnter.Text = "First";
+            interviewerFirstEnter.ForeColor = Color.DimGray;
+            interviewerFirstEnter.Tag = "First";
+            interviewerFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            interviewerFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox interviewerMiddleEnter = new TextBox();
             interviewerMiddleEnter.Name = "interviewerMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(interviewerMiddleEnter);
             interviewerMiddleEnter.Location = new Point(middleInterviewer.Location.X, 0);
             interviewerMiddleEnter.Width = 100;
+            interviewerMiddleEnter.Text = "Middle";
+            interviewerMiddleEnter.ForeColor = Color.DimGray;
+            interviewerMiddleEnter.Tag = "Middle";
+            interviewerMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            interviewerMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox interviewerLastEnter = new TextBox();
             interviewerLastEnter.Name = "interviewerLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(interviewerLastEnter);
             interviewerLastEnter.Location = new Point(lastInterviewer.Location.X, 0);
             interviewerLastEnter.Width = 100;
+            interviewerLastEnter.Text = "Last";
+            interviewerLastEnter.ForeColor = Color.DimGray;
+            interviewerLastEnter.Tag = "Last";
+            interviewerLastEnter.Enter += new EventHandler(removePlaceholderText);
+            interviewerLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = newIndex + "," + newPieces + "," + numInterviewee;
         }
@@ -204,18 +249,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(presenterFirstEnter);
             presenterFirstEnter.Location = new Point(firstPresenter.Location.X, 0);
             presenterFirstEnter.Width = 100;
+            presenterFirstEnter.Text = "First";
+            presenterFirstEnter.ForeColor = Color.DimGray;
+            presenterFirstEnter.Tag = "First";
+            presenterFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            presenterFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox presenterMiddleEnter = new TextBox();
             presenterMiddleEnter.Name = "presenterMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(presenterMiddleEnter);
             presenterMiddleEnter.Location = new Point(middlePresenter.Location.X, 0);
             presenterMiddleEnter.Width = 100;
+            presenterMiddleEnter.Text = "Middle";
+            presenterMiddleEnter.ForeColor = Color.DimGray;
+            presenterMiddleEnter.Tag = "Middle";
+            presenterMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            presenterMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox presenterLastEnter = new TextBox();
             presenterLastEnter.Name = "presenterLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(presenterLastEnter);
             presenterLastEnter.Location = new Point(lastPresenter.Location.X, 0);
             presenterLastEnter.Width = 100;
+            presenterLastEnter.Text = "Last";
+            presenterLastEnter.ForeColor = Color.DimGray;
+            presenterLastEnter.Tag = "Last";
+            presenterLastEnter.Enter += new EventHandler(removePlaceholderText);
+            presenterLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = newIndex + "," + newPieces;
         }
@@ -244,18 +304,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(authorFirstEnter);
             authorFirstEnter.Location = new Point(firstAuthor.Location.X, 0);
             authorFirstEnter.Width = 100;
+            authorFirstEnter.Text = "First";
+            authorFirstEnter.ForeColor = Color.DimGray;
+            authorFirstEnter.Tag = "First";
+            authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorMiddleEnter = new TextBox();
             authorMiddleEnter.Name = "authorMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorMiddleEnter);
             authorMiddleEnter.Location = new Point(middleAuthor.Location.X, 0);
             authorMiddleEnter.Width = 100;
+            authorMiddleEnter.Text = "Middle";
+            authorMiddleEnter.ForeColor = Color.DimGray;
+            authorMiddleEnter.Tag = "Middle";
+            authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorLastEnter = new TextBox();
             authorLastEnter.Name = "authorLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorLastEnter);
             authorLastEnter.Location = new Point(lastAuthor.Location.X, 0);
             authorLastEnter.Width = 100;
+            authorLastEnter.Text = "Last";
+            authorLastEnter.ForeColor = Color.DimGray;
+            authorLastEnter.Tag = "Last";
+            authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+            authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = newIndex + "," + newPieces;
         }
@@ -284,18 +359,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(authorFirstEnter);
             authorFirstEnter.Location = new Point(firstAuthor.Location.X, 0);
             authorFirstEnter.Width = 100;
+            authorFirstEnter.Text = "First";
+            authorFirstEnter.ForeColor = Color.DimGray;
+            authorFirstEnter.Tag = "First";
+            authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorMiddleEnter = new TextBox();
             authorMiddleEnter.Name = "authorMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorMiddleEnter);
             authorMiddleEnter.Location = new Point(middleAuthor.Location.X, 0);
             authorMiddleEnter.Width = 100;
+            authorMiddleEnter.Text = "Middle";
+            authorMiddleEnter.ForeColor = Color.DimGray;
+            authorMiddleEnter.Tag = "Middle";
+            authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorLastEnter = new TextBox();
             authorLastEnter.Name = "authorLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorLastEnter);
             authorLastEnter.Location = new Point(lastAuthor.Location.X, 0);
             authorLastEnter.Width = 100;
+            authorLastEnter.Text = "Last";
+            authorLastEnter.ForeColor = Color.DimGray;
+            authorLastEnter.Tag = "Last";
+            authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+            authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = newIndex + "," + newPieces + "," + numTrans;
         }
@@ -326,18 +416,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(authorFirstEnter);
             authorFirstEnter.Location = new Point(firstAuthor.Location.X, Convert.ToInt32(numRev) * 25 + 75);
             authorFirstEnter.Width = 100;
+            authorFirstEnter.Text = "First";
+            authorFirstEnter.ForeColor = Color.DimGray;
+            authorFirstEnter.Tag = "First";
+            authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorMiddleEnter = new TextBox();
             authorMiddleEnter.Name = "authorMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorMiddleEnter);
             authorMiddleEnter.Location = new Point(middleAuthor.Location.X, Convert.ToInt32(numRev) * 25 + 75);
             authorMiddleEnter.Width = 100;
+            authorMiddleEnter.Text = "Middle";
+            authorMiddleEnter.ForeColor = Color.DimGray;
+            authorMiddleEnter.Tag = "Middle";
+            authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox authorLastEnter = new TextBox();
             authorLastEnter.Name = "authorLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(authorLastEnter);
             authorLastEnter.Location = new Point(lastAuthor.Location.X, Convert.ToInt32(numRev) * 25 + 75);
             authorLastEnter.Width = 100;
+            authorLastEnter.Text = "Last";
+            authorLastEnter.ForeColor = Color.DimGray;
+            authorLastEnter.Tag = "Last";
+            authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+            authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = numRev + "," + newPieces + "," + newIndex;
         }
@@ -367,18 +472,33 @@ namespace WriteMeEasy_WindowsFormsApplication
             sourceInfoPanel.Controls.Add(reviewerFirstEnter);
             reviewerFirstEnter.Location = new Point(firstReviewer.Location.X, 0);
             reviewerFirstEnter.Width = 100;
+            reviewerFirstEnter.Text = "First";
+            reviewerFirstEnter.ForeColor = Color.DimGray;
+            reviewerFirstEnter.Tag = "First";
+            reviewerFirstEnter.Enter += new EventHandler(removePlaceholderText);
+            reviewerFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox reviewerMiddleEnter = new TextBox();
             reviewerMiddleEnter.Name = "reviewerMiddleEnter" + newIndex;
             sourceInfoPanel.Controls.Add(reviewerMiddleEnter);
             reviewerMiddleEnter.Location = new Point(middleReviewer.Location.X, 0);
             reviewerMiddleEnter.Width = 100;
+            reviewerMiddleEnter.Text = "Middle";
+            reviewerMiddleEnter.ForeColor = Color.DimGray;
+            reviewerMiddleEnter.Tag = "Middle";
+            reviewerMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+            reviewerMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
             TextBox reviewerLastEnter = new TextBox();
             reviewerLastEnter.Name = "reviewerLastEnter" + newIndex;
             sourceInfoPanel.Controls.Add(reviewerLastEnter);
             reviewerLastEnter.Location = new Point(lastReviewer.Location.X, 0);
             reviewerLastEnter.Width = 100;
+            reviewerLastEnter.Text = "Last";
+            reviewerLastEnter.ForeColor = Color.DimGray;
+            reviewerLastEnter.Tag = "Last";
+            reviewerLastEnter.Enter += new EventHandler(removePlaceholderText);
+            reviewerLastEnter.Leave += new EventHandler(addPlaceholderText);
 
             sourceInfoGroupBox.Tag = newIndex + "," + newPieces + "," + numOrigAuth;
         }
@@ -469,18 +589,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -493,24 +628,34 @@ namespace WriteMeEasy_WindowsFormsApplication
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Year of Publication:";
                 sourceInfoPanel.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(0, 25);
+                publishDateLabel.Location = new Point(0, 25);                
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
                 sourceInfoPanel.Controls.Add(bookTitleLabel);
                 bookTitleLabel.Location = new Point(0, 50);
-
+                
                 TextBox titleEnter = new TextBox();
                 titleEnter.Name = "titleEnter";
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
@@ -522,6 +667,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publisherEnter);
                 publisherEnter.Location = new Point(109, 75);
                 publisherEnter.Width = 150;
+                publisherEnter.Text = "Publisher";
+                publisherEnter.ForeColor = Color.DimGray;
+                publisherEnter.Tag = "Publisher";
+                publisherEnter.Enter += new EventHandler(removePlaceholderText);
+                publisherEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publishLocationLabel = new Label();
                 publishLocationLabel.Text = "Publication Location:";
@@ -534,6 +684,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishLocationEnter);
                 publishLocationEnter.Location = new Point(109, 100);
                 publishLocationEnter.Width = 150;
+                publishLocationEnter.Text = "Location";
+                publishLocationEnter.ForeColor = Color.DimGray;
+                publishLocationEnter.Tag = "Location";
+                publishLocationEnter.Enter += new EventHandler(removePlaceholderText);
+                publishLocationEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
@@ -545,6 +700,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(editionEnter);
                 editionEnter.Location = new Point(109, 125);
                 editionEnter.Width = 150;
+                editionEnter.Text = "i.e. 1st";
+                editionEnter.ForeColor = Color.DimGray;
+                editionEnter.Tag = "i.e. 1st";
+                editionEnter.Enter += new EventHandler(removePlaceholderText);
+                editionEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (bookNoAuth.Checked)
             {
@@ -4499,6 +4659,37 @@ namespace WriteMeEasy_WindowsFormsApplication
             else
             {
 
+            }
+        }
+
+        public void addPlaceholderText(object sender, EventArgs e)
+        {
+            Control control = ((TextBox)sender);
+            string placeholder = control.Tag.ToString();
+            if (control.Text.Length < 1)
+            {
+                control.Text = placeholder;
+                control.ForeColor = Color.DimGray;
+            }
+        }
+
+        public void removePlaceholderText(object sender, EventArgs e)
+        {
+            Control control = ((TextBox)sender);
+            string placeholder = control.Tag.ToString();
+            if (control.Text.Equals(placeholder))
+            {
+                control.Text = "";
+                control.ForeColor = Color.Black;
+            }
+        }
+
+        public void removeTextForSave(TextBox textBox)
+        {
+            string placeholder = textBox.Tag.ToString();
+            if (textBox.Text.Equals(placeholder))
+            {
+                textBox.Text = "";
             }
         }
     }

@@ -11,6 +11,14 @@ namespace WriteMeEasy_WindowsFormsApplication
     {
         private void addReferenceButton_Click(object sender, EventArgs e)
         {
+            foreach (Control child in sourceInfoPanel.Controls)
+            {
+                if (child is TextBox)
+                {
+                    removeTextForSave((TextBox)child);
+                }                
+            }
+
             RichTextBox insertInto = (RichTextBox)mainForm.Controls.Find(mainForm.lastEntered, true)[0];
             int whereToInser = insertInto.SelectionStart;
             string quoteText = quoteContent.Text;
