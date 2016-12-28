@@ -700,9 +700,9 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(editionEnter);
                 editionEnter.Location = new Point(109, 125);
                 editionEnter.Width = 150;
-                editionEnter.Text = "i.e. 1st";
+                editionEnter.Text = "ex. 1st";
                 editionEnter.ForeColor = Color.DimGray;
-                editionEnter.Tag = "i.e. 1st";
+                editionEnter.Tag = "ex. 1st";
                 editionEnter.Enter += new EventHandler(removePlaceholderText);
                 editionEnter.Leave += new EventHandler(addPlaceholderText);
             }
@@ -730,13 +730,18 @@ namespace WriteMeEasy_WindowsFormsApplication
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Year of Publication:";
                 sourceInfoPanel.Controls.Add(publishDateLabel);
-                publishDateLabel.Location = new Point(0, 0);
+                publishDateLabel.Location = new Point(0, 0);                
 
                 TextBox publishDateEnter = new TextBox();
                 publishDateEnter.Name = "publishDateEnter";
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 0);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
@@ -748,6 +753,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 25);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
@@ -759,6 +769,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publisherEnter);
                 publisherEnter.Location = new Point(109, 50);
                 publisherEnter.Width = 150;
+                publisherEnter.Text = "Publisher";
+                publisherEnter.ForeColor = Color.DimGray;
+                publisherEnter.Tag = "Publisher";
+                publisherEnter.Enter += new EventHandler(removePlaceholderText);
+                publisherEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publishLocationLabel = new Label();
                 publishLocationLabel.Text = "Publication Location:";
@@ -771,6 +786,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishLocationEnter);
                 publishLocationEnter.Location = new Point(109, 75);
                 publishLocationEnter.Width = 150;
+                publishLocationEnter.Text = "Location";
+                publishLocationEnter.ForeColor = Color.DimGray;
+                publishLocationEnter.Tag = "Location";
+                publishLocationEnter.Enter += new EventHandler(removePlaceholderText);
+                publishLocationEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
@@ -782,6 +802,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(editionEnter);
                 editionEnter.Location = new Point(109, 100);
                 editionEnter.Width = 150;
+                editionEnter.Text = "ex. 1st";
+                editionEnter.ForeColor = Color.DimGray;
+                editionEnter.Tag = "ex. 1st";
+                editionEnter.Enter += new EventHandler(removePlaceholderText);
+                editionEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (bookByOrg.Checked)
             {
@@ -815,6 +840,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorEnter);
                 authorEnter.Location = new Point(109, 0);
                 authorEnter.Width = 150;
+                authorEnter.Text = "Organization";
+                authorEnter.ForeColor = Color.DimGray;
+                authorEnter.Tag = "Organization";
+                authorEnter.Enter += new EventHandler(removePlaceholderText);
+                authorEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publishDateLabel = new Label();
                 publishDateLabel.Text = "Year of Publication:";
@@ -826,6 +856,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
@@ -837,6 +872,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
@@ -848,6 +888,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publisherEnter);
                 publisherEnter.Location = new Point(109, 75);
                 publisherEnter.Width = 150;
+                publisherEnter.Text = "Publisher";
+                publisherEnter.ForeColor = Color.DimGray;
+                publisherEnter.Tag = "Publisher";
+                publisherEnter.Enter += new EventHandler(removePlaceholderText);
+                publisherEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publishLocationLabel = new Label();
                 publishLocationLabel.Text = "Publication Location:";
@@ -860,6 +905,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishLocationEnter);
                 publishLocationEnter.Location = new Point(109, 100);
                 publishLocationEnter.Width = 150;
+                publishLocationEnter.Text = "Location";
+                publishLocationEnter.ForeColor = Color.DimGray;
+                publishLocationEnter.Tag = "Location";
+                publishLocationEnter.Enter += new EventHandler(removePlaceholderText);
+                publishLocationEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
@@ -871,6 +921,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(editionEnter);
                 editionEnter.Location = new Point(109, 125);
                 editionEnter.Width = 150;
+                editionEnter.Text = "ex. 1st";
+                editionEnter.ForeColor = Color.DimGray;
+                editionEnter.Tag = "ex. 1st";
+                editionEnter.Enter += new EventHandler(removePlaceholderText);
+                editionEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (encyclopedia.Checked)
             {
@@ -905,18 +960,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(180, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(295, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(410, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -936,6 +1006,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publicationYearEnter);
                 publicationYearEnter.Location = new Point(180, 25);
                 publicationYearEnter.Width = 150;
+                publicationYearEnter.Text = "YYYY";
+                publicationYearEnter.ForeColor = Color.DimGray;
+                publicationYearEnter.Tag = "YYYY";
+                publicationYearEnter.Enter += new EventHandler(removePlaceholderText);
+                publicationYearEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label sectionNameLabel = new Label();
                 sectionNameLabel.Text = "Section or Word Referenced:";
@@ -948,6 +1023,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(sectionNameEnter);
                 sectionNameEnter.Location = new Point(180, 50);
                 sectionNameEnter.Width = 150;
+                sectionNameEnter.Text = "ex. History";
+                sectionNameEnter.ForeColor = Color.DimGray;
+                sectionNameEnter.Tag = "ex. History";
+                sectionNameEnter.Enter += new EventHandler(removePlaceholderText);
+                sectionNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookNameLabel = new Label();
                 bookNameLabel.Text = "Title of Encyclopedia/Dictionary:";
@@ -960,6 +1040,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(bookNameEnter);
                 bookNameEnter.Location = new Point(180, 75);
                 bookNameEnter.Width = 150;
+                bookNameEnter.Text = "ex. Webster Dictionary";
+                bookNameEnter.ForeColor = Color.DimGray;
+                bookNameEnter.Tag = "ex. Webster Dictionary";
+                bookNameEnter.Enter += new EventHandler(removePlaceholderText);
+                bookNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeLabel = new Label();
                 volumeLabel.Text = "Volume:";
@@ -971,6 +1056,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeEnter);
                 volumeEnter.Location = new Point(180, 100);
                 volumeEnter.Width = 150;
+                volumeEnter.Text = "Volume Number";
+                volumeEnter.ForeColor = Color.DimGray;
+                volumeEnter.Tag = "Volume Number";
+                volumeEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -982,6 +1072,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(180, 125);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -993,6 +1088,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(180, 150);
                 pageEndEnter.Width = 150;
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publishLocationLabel = new Label();
                 publishLocationLabel.Text = "Publication Location:";
@@ -1005,6 +1105,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publicationLocationEnter);
                 publicationLocationEnter.Location = new Point(180, 175);
                 publicationLocationEnter.Width = 150;
+                publicationLocationEnter.Text = "Location";
+                publicationLocationEnter.ForeColor = Color.DimGray;
+                publicationLocationEnter.Tag = "Location";
+                publicationLocationEnter.Enter += new EventHandler(removePlaceholderText);
+                publicationLocationEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
@@ -1016,6 +1121,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publisherEnter);
                 publisherEnter.Location = new Point(180, 200);
                 publisherEnter.Width = 150;
+                publisherEnter.Text = "Publisher";
+                publisherEnter.ForeColor = Color.DimGray;
+                publisherEnter.Tag = "Publisher";
+                publisherEnter.Enter += new EventHandler(removePlaceholderText);
+                publisherEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (translated.Checked)
             {
@@ -1050,18 +1160,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(180, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(295, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(410, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorTransAdder = new Button();
                 authorTransAdder.Name = "authorTransAdderButton";
@@ -1081,6 +1206,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(180, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Title:";
@@ -1092,6 +1222,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(180, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label translatorLabel = new Label();
                 translatorLabel.Text = "Translator Name:";
@@ -1103,18 +1238,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(translatorFirstEnter);
                 translatorFirstEnter.Location = new Point(180, 75);
                 translatorFirstEnter.Width = 100;
+                translatorFirstEnter.Text = "First";
+                translatorFirstEnter.ForeColor = Color.DimGray;
+                translatorFirstEnter.Tag = "First";
+                translatorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                translatorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox translatorMiddleEnter = new TextBox();
                 translatorMiddleEnter.Name = "translatorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(translatorMiddleEnter);
                 translatorMiddleEnter.Location = new Point(295, 75);
                 translatorMiddleEnter.Width = 100;
+                translatorMiddleEnter.Text = "Middle";
+                translatorMiddleEnter.ForeColor = Color.DimGray;
+                translatorMiddleEnter.Tag = "Middle";
+                translatorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                translatorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox translatorLastEnter = new TextBox();
                 translatorLastEnter.Name = "translatorLastEnter1";
                 sourceInfoPanel.Controls.Add(translatorLastEnter);
                 translatorLastEnter.Location = new Point(410, 75);
                 translatorLastEnter.Width = 100;
+                translatorLastEnter.Text = "Last";
+                translatorLastEnter.ForeColor = Color.DimGray;
+                translatorLastEnter.Tag = "Last";
+                translatorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                translatorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button translatorAdder = new Button();
                 translatorAdder.Name = "translatorAdderButton";
@@ -1135,6 +1285,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishLocationEnter);
                 publishLocationEnter.Location = new Point(180, 100);
                 publishLocationEnter.Width = 150;
+                publishLocationEnter.Text = "Location";
+                publishLocationEnter.ForeColor = Color.DimGray;
+                publishLocationEnter.Tag = "Location";
+                publishLocationEnter.Enter += new EventHandler(removePlaceholderText);
+                publishLocationEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label publisherLabel = new Label();
                 publisherLabel.Text = "Publisher Name:";
@@ -1146,6 +1301,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publisherEnter);
                 publisherEnter.Location = new Point(180, 125);
                 publisherEnter.Width = 150;
+                publisherEnter.Text = "Publisher";
+                publisherEnter.ForeColor = Color.DimGray;
+                publisherEnter.Tag = "Publisher";
+                publisherEnter.Enter += new EventHandler(removePlaceholderText);
+                publisherEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label originalPublishDateLabel = new Label();
                 originalPublishDateLabel.Text = "Original Publication Year:";
@@ -1158,6 +1318,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(originalPublishDateEnter);
                 originalPublishDateEnter.Location = new Point(180, 150);
                 originalPublishDateEnter.Width = 150;
+                originalPublishDateEnter.Text = "YYYY";
+                originalPublishDateEnter.ForeColor = Color.DimGray;
+                originalPublishDateEnter.Tag = "YYYY";
+                originalPublishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                originalPublishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label editionLabel = new Label();
                 editionLabel.Text = "Edition:";
@@ -1169,7 +1334,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(editionEnter);
                 editionEnter.Location = new Point(180, 175);
                 editionEnter.Width = 150;
-
+                editionEnter.Text = "ex. 1st";
+                editionEnter.ForeColor = Color.DimGray;
+                editionEnter.Tag = "ex. 1st";
+                editionEnter.Enter += new EventHandler(removePlaceholderText);
+                editionEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (magazine.Checked)
             {
@@ -1204,18 +1373,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -1235,6 +1419,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY, Mmmm DD or YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY, Mmmm DD or YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Article Title:";
@@ -1246,6 +1435,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label magazineNameLabel = new Label();
                 magazineNameLabel.Text = "Magazine Name:";
@@ -1257,6 +1451,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(magazineNameEnter);
                 magazineNameEnter.Location = new Point(109, 75);
                 magazineNameEnter.Width = 150;
+                magazineNameEnter.Text = "Name";
+                magazineNameEnter.ForeColor = Color.DimGray;
+                magazineNameEnter.Tag = "Name";
+                magazineNameEnter.Enter += new EventHandler(removePlaceholderText);
+                magazineNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeNumberLabel = new Label();
                 volumeNumberLabel.Text = "Volume Number:";
@@ -1268,6 +1467,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeNumberEnter);
                 volumeNumberEnter.Location = new Point(109, 100);
                 volumeNumberEnter.Width = 150;
+                volumeNumberEnter.Text = "Volume";
+                volumeNumberEnter.ForeColor = Color.DimGray;
+                volumeNumberEnter.Tag = "Volume";
+                volumeNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label issueNumberLabel = new Label();
                 issueNumberLabel.Text = "Issue Number:";
@@ -1279,6 +1483,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(issueNumberEnter);
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
+                issueNumberEnter.Text = "Issue";
+                issueNumberEnter.ForeColor = Color.DimGray;
+                issueNumberEnter.Tag = "Issue";
+                issueNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                issueNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -1290,6 +1499,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -1301,6 +1515,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (newspaper.Checked)
             {
@@ -1335,18 +1554,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -1366,6 +1600,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY, Mmmm DD or YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY, Mmmm DD or YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Article Title:";
@@ -1377,6 +1616,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label newspaperNameLabel = new Label();
                 newspaperNameLabel.Text = "Newspaper Name:";
@@ -1388,6 +1632,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(newspaperNameEnter);
                 newspaperNameEnter.Location = new Point(109, 75);
                 newspaperNameEnter.Width = 150;
+                newspaperNameEnter.Text = "Name";
+                newspaperNameEnter.ForeColor = Color.DimGray;
+                newspaperNameEnter.Tag = "Name";
+                newspaperNameEnter.Enter += new EventHandler(removePlaceholderText);
+                newspaperNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeNumberLabel = new Label();
                 volumeNumberLabel.Text = "Volume Number:";
@@ -1399,6 +1648,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeNumberEnter);
                 volumeNumberEnter.Location = new Point(109, 100);
                 volumeNumberEnter.Width = 150;
+                volumeNumberEnter.Text = "Volume";
+                volumeNumberEnter.ForeColor = Color.DimGray;
+                volumeNumberEnter.Tag = "Volume";
+                volumeNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label issueNumberLabel = new Label();
                 issueNumberLabel.Text = "Issue Number:";
@@ -1410,6 +1664,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(issueNumberEnter);
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
+                issueNumberEnter.Text = "Issue";
+                issueNumberEnter.ForeColor = Color.DimGray;
+                issueNumberEnter.Tag = "Issue";
+                issueNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                issueNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -1421,6 +1680,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -1432,7 +1696,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
-
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (journal.Checked)
             {
@@ -1467,18 +1735,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -1498,6 +1781,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Article Title:";
@@ -1509,6 +1797,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label journalNameLabel = new Label();
                 journalNameLabel.Text = "Journal Name:";
@@ -1520,6 +1813,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(journalNameEnter);
                 journalNameEnter.Location = new Point(109, 75);
                 journalNameEnter.Width = 150;
+                journalNameEnter.Text = "Name";
+                journalNameEnter.ForeColor = Color.DimGray;
+                journalNameEnter.Tag = "Name";
+                journalNameEnter.Enter += new EventHandler(removePlaceholderText);
+                journalNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeNumberLabel = new Label();
                 volumeNumberLabel.Text = "Volume Number:";
@@ -1531,6 +1829,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeNumberEnter);
                 volumeNumberEnter.Location = new Point(109, 100);
                 volumeNumberEnter.Width = 150;
+                volumeNumberEnter.Text = "Volume";
+                volumeNumberEnter.ForeColor = Color.DimGray;
+                volumeNumberEnter.Tag = "Volume";
+                volumeNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label issueNumberLabel = new Label();
                 issueNumberLabel.Text = "Issue Number:";
@@ -1542,6 +1845,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(issueNumberEnter);
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
+                issueNumberEnter.Text = "Issue";
+                issueNumberEnter.ForeColor = Color.DimGray;
+                issueNumberEnter.Tag = "Issue";
+                issueNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                issueNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -1553,6 +1861,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -1564,7 +1877,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
-
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (onlineJournal.Checked)
             {
@@ -1599,18 +1916,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -1630,6 +1962,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Article Title:";
@@ -1641,6 +1978,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label journalNameLabel = new Label();
                 journalNameLabel.Text = "Journal Name:";
@@ -1652,6 +1994,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(journalNameEnter);
                 journalNameEnter.Location = new Point(109, 75);
                 journalNameEnter.Width = 150;
+                journalNameEnter.Text = "Name";
+                journalNameEnter.ForeColor = Color.DimGray;
+                journalNameEnter.Tag = "Name";
+                journalNameEnter.Enter += new EventHandler(removePlaceholderText);
+                journalNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeNumberLabel = new Label();
                 volumeNumberLabel.Text = "Volume Number:";
@@ -1663,6 +2010,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeNumberEnter);
                 volumeNumberEnter.Location = new Point(109, 100);
                 volumeNumberEnter.Width = 150;
+                volumeNumberEnter.Text = "Volume";
+                volumeNumberEnter.ForeColor = Color.DimGray;
+                volumeNumberEnter.Tag = "Volume";
+                volumeNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label issueNumberLabel = new Label();
                 issueNumberLabel.Text = "Issue Number:";
@@ -1674,6 +2026,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(issueNumberEnter);
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
+                issueNumberEnter.Text = "Issue";
+                issueNumberEnter.ForeColor = Color.DimGray;
+                issueNumberEnter.Tag = "Issue";
+                issueNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                issueNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -1685,6 +2042,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -1696,6 +2058,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
@@ -1707,6 +2074,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
                 retrievedFromEnter.Location = new Point(109, 200);
                 retrievedFromEnter.Width = 150;
+                retrievedFromEnter.Text = "ex. www.journals.com/journal";
+                retrievedFromEnter.ForeColor = Color.DimGray;
+                retrievedFromEnter.Tag = "ex. www.journals.com/journal";
+                retrievedFromEnter.Enter += new EventHandler(removePlaceholderText);
+                retrievedFromEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label doiLabel = new Label();
                 doiLabel.Text = "DOI:";
@@ -1718,6 +2090,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(doiEnter);
                 doiEnter.Location = new Point(109, 225);
                 doiEnter.Width = 150;
+                doiEnter.Text = "ex. 10.1108/03090560710821161 or http://dx.doi.org/10.1016/j.appdev.2012.05.005";
+                doiEnter.ForeColor = Color.DimGray;
+                doiEnter.Tag = "ex. 10.1108/03090560710821161 or http://dx.doi.org/10.1016/j.appdev.2012.05.005";
+                doiEnter.Enter += new EventHandler(removePlaceholderText);
+                doiEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (onlinePeriodical.Checked)
             {
@@ -1752,18 +2129,33 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(authorFirstEnter);
                 authorFirstEnter.Location = new Point(109, 0);
                 authorFirstEnter.Width = 100;
+                authorFirstEnter.Text = "First";
+                authorFirstEnter.ForeColor = Color.DimGray;
+                authorFirstEnter.Tag = "First";
+                authorFirstEnter.Enter += new EventHandler(removePlaceholderText);
+                authorFirstEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorMiddleEnter = new TextBox();
                 authorMiddleEnter.Name = "authorMiddleEnter1";
                 sourceInfoPanel.Controls.Add(authorMiddleEnter);
                 authorMiddleEnter.Location = new Point(224, 0);
                 authorMiddleEnter.Width = 100;
+                authorMiddleEnter.Text = "Middle";
+                authorMiddleEnter.ForeColor = Color.DimGray;
+                authorMiddleEnter.Tag = "Middle";
+                authorMiddleEnter.Enter += new EventHandler(removePlaceholderText);
+                authorMiddleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 TextBox authorLastEnter = new TextBox();
                 authorLastEnter.Name = "authorLastEnter1";
                 sourceInfoPanel.Controls.Add(authorLastEnter);
                 authorLastEnter.Location = new Point(339, 0);
                 authorLastEnter.Width = 100;
+                authorLastEnter.Text = "Last";
+                authorLastEnter.ForeColor = Color.DimGray;
+                authorLastEnter.Tag = "Last";
+                authorLastEnter.Enter += new EventHandler(removePlaceholderText);
+                authorLastEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Button authorAdder = new Button();
                 authorAdder.Name = "authorAdderButton";
@@ -1783,6 +2175,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(publishDateEnter);
                 publishDateEnter.Location = new Point(109, 25);
                 publishDateEnter.Width = 150;
+                publishDateEnter.Text = "YYYY";
+                publishDateEnter.ForeColor = Color.DimGray;
+                publishDateEnter.Tag = "YYYY";
+                publishDateEnter.Enter += new EventHandler(removePlaceholderText);
+                publishDateEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label bookTitleLabel = new Label();
                 bookTitleLabel.Text = "Article Title:";
@@ -1794,6 +2191,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(titleEnter);
                 titleEnter.Location = new Point(109, 50);
                 titleEnter.Width = 150;
+                titleEnter.Text = "Title";
+                titleEnter.ForeColor = Color.DimGray;
+                titleEnter.Tag = "Title";
+                titleEnter.Enter += new EventHandler(removePlaceholderText);
+                titleEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label periodicalNameLabel = new Label();
                 periodicalNameLabel.Text = "Periodical Name:";
@@ -1805,6 +2207,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(periodicalNameEnter);
                 periodicalNameEnter.Location = new Point(109, 75);
                 periodicalNameEnter.Width = 150;
+                periodicalNameEnter.Text = "Name";
+                periodicalNameEnter.ForeColor = Color.DimGray;
+                periodicalNameEnter.Tag = "Name";
+                periodicalNameEnter.Enter += new EventHandler(removePlaceholderText);
+                periodicalNameEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label volumeNumberLabel = new Label();
                 volumeNumberLabel.Text = "Volume Number:";
@@ -1816,6 +2223,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(volumeNumberEnter);
                 volumeNumberEnter.Location = new Point(109, 100);
                 volumeNumberEnter.Width = 150;
+                volumeNumberEnter.Text = "Volume";
+                volumeNumberEnter.ForeColor = Color.DimGray;
+                volumeNumberEnter.Tag = "Volume";
+                volumeNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                volumeNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label issueNumberLabel = new Label();
                 issueNumberLabel.Text = "Issue Number:";
@@ -1827,6 +2239,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(issueNumberEnter);
                 issueNumberEnter.Location = new Point(109, 125);
                 issueNumberEnter.Width = 150;
+                issueNumberEnter.Text = "Issue";
+                issueNumberEnter.ForeColor = Color.DimGray;
+                issueNumberEnter.Tag = "Issue";
+                issueNumberEnter.Enter += new EventHandler(removePlaceholderText);
+                issueNumberEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageStartLabel = new Label();
                 pageStartLabel.Text = "Start Page:";
@@ -1838,6 +2255,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageStartEnter);
                 pageStartEnter.Location = new Point(109, 150);
                 pageStartEnter.Width = 150;
+                pageStartEnter.Text = "Start Page";
+                pageStartEnter.ForeColor = Color.DimGray;
+                pageStartEnter.Tag = "Start Page";
+                pageStartEnter.Enter += new EventHandler(removePlaceholderText);
+                pageStartEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label pageEndLabel = new Label();
                 pageEndLabel.Text = "End Page:";
@@ -1849,6 +2271,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(pageEndEnter);
                 pageEndEnter.Location = new Point(109, 175);
                 pageEndEnter.Width = 150;
+                pageEndEnter.Text = "End Page";
+                pageEndEnter.ForeColor = Color.DimGray;
+                pageEndEnter.Tag = "End Page";
+                pageEndEnter.Enter += new EventHandler(removePlaceholderText);
+                pageEndEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label retrievedFromLabel = new Label();
                 retrievedFromLabel.Text = "Retrieved From:";
@@ -1860,6 +2287,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(retrievedFromEnter);
                 retrievedFromEnter.Location = new Point(109, 200);
                 retrievedFromEnter.Width = 150;
+                retrievedFromEnter.Text = "ex. www.journals.com/journal";
+                retrievedFromEnter.ForeColor = Color.DimGray;
+                retrievedFromEnter.Tag = "ex. www.journals.com/journal";
+                retrievedFromEnter.Enter += new EventHandler(removePlaceholderText);
+                retrievedFromEnter.Leave += new EventHandler(addPlaceholderText);
 
                 Label doiLabel = new Label();
                 doiLabel.Text = "DOI:";
@@ -1871,6 +2303,11 @@ namespace WriteMeEasy_WindowsFormsApplication
                 sourceInfoPanel.Controls.Add(doiEnter);
                 doiEnter.Location = new Point(109, 225);
                 doiEnter.Width = 150;
+                doiEnter.Text = "ex. 10.1108/03090560710821161 or http://dx.doi.org/10.1016/j.appdev.2012.05.005";
+                doiEnter.ForeColor = Color.DimGray;
+                doiEnter.Tag = "ex. 10.1108/03090560710821161 or http://dx.doi.org/10.1016/j.appdev.2012.05.005";
+                doiEnter.Enter += new EventHandler(removePlaceholderText);
+                doiEnter.Leave += new EventHandler(addPlaceholderText);
             }
             else if (onlineNewspaper.Checked)
             {

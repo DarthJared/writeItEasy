@@ -537,6 +537,7 @@
             // conclusionContent
             // 
             this.conclusionContent.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.conclusionContent.HideSelection = false;
             this.conclusionContent.Location = new System.Drawing.Point(24, 167);
             this.conclusionContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionContent.Name = "conclusionContent";
@@ -603,6 +604,7 @@
             // section1Content
             // 
             this.section1Content.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.section1Content.HideSelection = false;
             this.section1Content.Location = new System.Drawing.Point(24, 167);
             this.section1Content.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1Content.Name = "section1Content";
@@ -683,6 +685,7 @@
             // abstractContent
             // 
             this.abstractContent.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.abstractContent.HideSelection = false;
             this.abstractContent.Location = new System.Drawing.Point(24, 167);
             this.abstractContent.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContent.Name = "abstractContent";
@@ -4202,7 +4205,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
-            this.Text = "Write It Easy";
             this.Resize += new System.EventHandler(this.resizeEvent);
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();

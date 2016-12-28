@@ -11,3 +11,4 @@ ISSUES:
 -Add short name recommendation for title in header
 -Add dropdown for title page and references and header size and font
 -Add reference ordering
+-Add right click
