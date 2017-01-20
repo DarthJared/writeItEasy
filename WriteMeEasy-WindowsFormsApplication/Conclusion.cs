@@ -50,9 +50,9 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (conclusionIncludeCheck.Checked)
             {
-                contentPanel.Height += 295;
-                int newY = addSectionButton.Location.Y + addSectionButton.Height + 20;
-                conclusionContentGroupBox.Location = new Point(9, newY);
+                contentPanel.Height += 706;
+                int newY = addSectionButton.Location.Y + addSectionButton.Height + 50;
+                conclusionContentGroupBox.Location = new Point(24, newY);
                 conclusionContentGroupBox.Visible = true;
 
                 conclusionPanel.Visible = true;
@@ -62,7 +62,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                contentPanel.Height -= 295;
+                contentPanel.Height -= 706;
                 conclusionContentGroupBox.Visible = false;
 
                 conclusionPanel.Visible = false;

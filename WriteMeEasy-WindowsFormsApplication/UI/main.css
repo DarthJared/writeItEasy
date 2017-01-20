@@ -1,0 +1,27 @@
+﻿body{
+
+}
+
+h1 {
+    color: red;
+}
+
+.left {
+    background-color: blue;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+}
+
+.right {
+    background-color: red;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+}

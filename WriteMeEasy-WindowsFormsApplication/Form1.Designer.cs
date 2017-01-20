@@ -502,7 +502,7 @@
             this.contentPanel.Location = new System.Drawing.Point(19, 21);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1954, 2366);
+            this.contentPanel.Size = new System.Drawing.Size(1954, 2406);
             this.contentPanel.TabIndex = 8;
             // 
             // paperTitle
@@ -512,7 +512,7 @@
             this.paperTitle.Location = new System.Drawing.Point(0, 0);
             this.paperTitle.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.paperTitle.Name = "paperTitle";
-            this.paperTitle.Size = new System.Drawing.Size(1952, 57);
+            this.paperTitle.Size = new System.Drawing.Size(1952, 97);
             this.paperTitle.TabIndex = 13;
             this.paperTitle.Text = "Your Paper";
             this.paperTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -524,7 +524,7 @@
             this.conclusionContentGroupBox.Controls.Add(this.conclusionTitleEnter);
             this.conclusionContentGroupBox.Controls.Add(this.label19);
             this.conclusionContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conclusionContentGroupBox.Location = new System.Drawing.Point(24, 1627);
+            this.conclusionContentGroupBox.Location = new System.Drawing.Point(24, 1667);
             this.conclusionContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.conclusionContentGroupBox.Name = "conclusionContentGroupBox";
             this.conclusionContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -591,7 +591,7 @@
             this.section1groupBox.Controls.Add(this.section1AddSubsectionButton);
             this.section1groupBox.Controls.Add(this.section1contentLabel);
             this.section1groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.section1groupBox.Location = new System.Drawing.Point(24, 790);
+            this.section1groupBox.Location = new System.Drawing.Point(24, 830);
             this.section1groupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.section1groupBox.Name = "section1groupBox";
             this.section1groupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -672,7 +672,7 @@
             this.abstractContentGroupBox.Controls.Add(this.abstractTitleText);
             this.abstractContentGroupBox.Controls.Add(this.label17);
             this.abstractContentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abstractContentGroupBox.Location = new System.Drawing.Point(24, 86);
+            this.abstractContentGroupBox.Location = new System.Drawing.Point(24, 126);
             this.abstractContentGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.abstractContentGroupBox.Name = "abstractContentGroupBox";
             this.abstractContentGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -734,7 +734,7 @@
             // addSectionButton
             // 
             this.addSectionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSectionButton.Location = new System.Drawing.Point(24, 1524);
+            this.addSectionButton.Location = new System.Drawing.Point(24, 1564);
             this.addSectionButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(347, 55);

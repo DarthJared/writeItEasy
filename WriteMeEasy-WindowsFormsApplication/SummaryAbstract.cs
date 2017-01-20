@@ -35,8 +35,8 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Checked*/
             if (abstractIncludeCheck.Checked)
             {
-                addSpace("section1GroupBox", 295, "contentPanel", "CONTENT");
-                abstractContentGroupBox.Location = new Point(9, section1groupBox.Location.Y - 295);
+                addSpace("section1GroupBox", 706, "contentPanel", "CONTENT");
+                abstractContentGroupBox.Location = new Point(24, section1groupBox.Location.Y - 706);
                 abstractContentGroupBox.Visible = true;
 
                 abstractPanel.Visible = true;
@@ -46,7 +46,7 @@ namespace WriteMeEasy_WindowsFormsApplication
             /*Unchecked*/
             else
             {
-                addSpace("section1GroupBox", -295, "contentPanel", "CONTENT");
+                addSpace("section1GroupBox", -706, "contentPanel", "CONTENT");
                 abstractContentGroupBox.Visible = false;
 
                 abstractPanel.Visible = false;

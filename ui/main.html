@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="quill.min.js"></script>
+    <link href="quill.snow.css" rel="stylesheet">
+    <link href="quill.bubble.css" rel="stylesheet">
+    <link href="quill.core.css" rel="stylesheet">
+    <script src="quill.core.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <select class="ql-size">
+            <option value="small">Small</option>
+            <option selected>Normal</option>
+            <option value="large">Large</option>
+            <option value="huge">Huge</option>
+        </select>
+        <select class="ql-font">
+            <option selected>Aref Ruqaa</option>
+            <option value="Mirza">Mirza</option>
+            <option value="Serif">Serif</option>
+            <option value="Monospace">Monospace</option>
+            <option value="Roboto">Roboto</option>
+        </select>
+        <button class="ql-bold">Bold</button>
+        <button class="ql-script" value="sub">Sub</button>
+        <button class="ql-script" value="super">Super</button>
+    </div>
+    <div id="editor">
+       
+    </div>
+    <script src="quill.js"></script>
+    <script>       
+        var Font = Quill.import('formats/font');
+        // We do not add Aref Ruqaa since it is the default
+        Font.whitelist = ['mirza', 'roboto', 'serif', 'monospace'];
+        Quill.register(Font, true);
+
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: '#toolbar'
+            }
+        });
+    </script>
+</body>
+</html>

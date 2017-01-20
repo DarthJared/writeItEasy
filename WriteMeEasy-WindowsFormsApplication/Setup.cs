@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WriteMeEasy_WindowsFormsApplication
@@ -92,12 +93,12 @@ namespace WriteMeEasy_WindowsFormsApplication
             referencesPanel.Height = 270;
             sections["REFERENCES"] = 270;
 
-            section1groupBox.Location = new Point(9, 36);
-            section1contentLabel.Location = new Point(6, 49);
-            section1AddSubsectionButton.Location = new Point(9, 260);
-            section1groupBox.Height = 298;
-            addSectionButton.Location = new Point(9, 346);
-            contentPanel.Height = 441;
+            section1groupBox.Location = new Point(24, 126);
+            section1contentLabel.Location = new Point(16, 117);
+            section1AddSubsectionButton.Location = new Point(24, 620);
+            section1groupBox.Height = 711;
+            addSectionButton.Location = new Point(24, 860);
+            contentPanel.Height = 994;
             lastEntered = "";
 
             startSelection = 0;
@@ -112,34 +113,37 @@ namespace WriteMeEasy_WindowsFormsApplication
             abstractContent.SelectionHangingIndent = -40;
 
             apaRadio.Checked = true;
+
+            UI ui = new UI();
+            //ui.ShowDialog();            
         }
 
         private void resizeEvent(object sender, EventArgs e)
         {
             mainToolStrip.Width = 800;
-            int rightPanelWidth = tableLayoutPanel1.Width - 500;
+            int rightPanelWidth = tableLayoutPanel1.Width - 1333;
             int rightPanelHeight = tableLayoutPanel1.Height;
 
-            tableLayoutPanel2.Width = rightPanelWidth - 6;
-            tableLayoutPanel2.Height = rightPanelHeight - 6;
+            tableLayoutPanel2.Width = rightPanelWidth - 16;
+            tableLayoutPanel2.Height = rightPanelHeight - 14;
 
-            previewPanel.Width = rightPanelWidth - 12;
+            previewPanel.Width = rightPanelWidth - 16;
 
             int innerHeight = tableLayoutPanel2.Height - 50;
             previewPanel.Height = innerHeight - 6;
 
             finalizePanel.Width = rightPanelWidth - 12;
             writeButton.Location = new Point(rightPanelWidth - 132, writeButton.Location.Y);
-            contentPanel.Width = rightPanelWidth - 44;
-            abstractContentGroupBox.Width = rightPanelWidth - 67;
-            abstractContent.Width = rightPanelWidth - 85;
+            contentPanel.Width = rightPanelWidth - 105;
+            abstractContentGroupBox.Width = rightPanelWidth - 158;
+            abstractContent.Width = rightPanelWidth - 212;
             
             for (int i = 1; i <= myPaper.sections.Count; i++)
             {
                 GroupBox sectionGroupBox = (GroupBox)Controls.Find("section" + i + "groupBox", true)[0];
-                sectionGroupBox.Width = rightPanelWidth - 67;
+                sectionGroupBox.Width = rightPanelWidth - 158;
                 RichTextBox sectionContent = (RichTextBox)Controls.Find("section" + i + "Content", true)[0];
-                sectionContent.Width = rightPanelWidth - 85;
+                sectionContent.Width = rightPanelWidth - 212;
                 for (int j = 1; j <= myPaper.sections[i - 1].subSections.Count; j++)
                 {
                     GroupBox subsectionGroupBox = (GroupBox)Controls.Find("section" + i + "Subsection" + j + "GroupBox", true)[0];
@@ -156,8 +160,8 @@ namespace WriteMeEasy_WindowsFormsApplication
                 }
             }           
 
-            conclusionContentGroupBox.Width = rightPanelWidth - 67;
-            conclusionContent.Width = rightPanelWidth - 85;
+            conclusionContentGroupBox.Width = rightPanelWidth - 158;
+            conclusionContent.Width = rightPanelWidth - 212;
 
             settingsPanel.Height = tableLayoutPanel1.Height - 9;
 
